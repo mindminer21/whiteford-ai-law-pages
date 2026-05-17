@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import { LeadMagnetFlow } from "@/components/lead-magnet-flow";
+import { complianceText, magnetConfigs } from "@/lib/magnets/finalization";
 
 export const metadata: Metadata = {
   title: "Outside Counsel Playbook for Tech Companies",
@@ -20,7 +22,7 @@ const pageStyles = `
   --ink-hover: #154E73;
   --ink-deep: #002B45;
   --accent: #632DDD;
-  --accent-soft: #9D74FF;
+  --accent-soft: #C9B8FF;
   --paper: #FFFFFF;
   --paper-soft: #F7F8FA;
   --line: rgba(0,55,86,0.12);
@@ -426,62 +428,6 @@ const pageStyles = `
 }
 `;
 
-const pdfRequestScript = `
-(function () {
-  var form = document.querySelector('[data-pdf-request-form]');
-  if (!form) return;
-  var emailInput = form.querySelector('input[name="email"]');
-  var button = form.querySelector('button[type="submit"]');
-  var error = document.querySelector('[data-pdf-request-error]');
-  var success = document.querySelector('[data-pdf-request-success]');
-  var successEmail = document.querySelector('[data-pdf-request-success-email]');
-
-  form.addEventListener('submit', function (event) {
-    event.preventDefault();
-    var email = emailInput && emailInput.value ? emailInput.value.trim() : '';
-
-    if (!email) {
-      if (error) {
-        error.textContent = 'Enter a work email address.';
-        error.hidden = false;
-      }
-      return;
-    }
-
-    if (button) {
-      button.disabled = true;
-      button.setAttribute('aria-busy', 'true');
-      button.querySelector('span').textContent = 'Sending...';
-    }
-    if (error) {
-      error.hidden = true;
-      error.textContent = '';
-    }
-
-    fetch('/api/pdf-request', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ email: email, magnet: 'outside-counsel-playbook' })
-    }).then(function (response) {
-      if (!response.ok) throw new Error('Request failed');
-      if (successEmail) successEmail.textContent = email;
-      form.hidden = true;
-      if (success) success.hidden = false;
-    }).catch(function () {
-      if (button) {
-        button.disabled = false;
-        button.removeAttribute('aria-busy');
-        button.querySelector('span').textContent = 'Send me the PDF';
-      }
-      if (error) {
-        error.textContent = 'We could not send the playbook just now. Please try again.';
-        error.hidden = false;
-      }
-    });
-  });
-})();
-`;
-
 function ArrowIcon() {
   return (
     <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true">
@@ -534,35 +480,9 @@ export default function OutsideCounselPlaybookPage() {
               Get the 11-page framework for patent value, investment readiness, clean governance,
               and the fixed-fee monthly structure built for technology-company outside counsel work.
             </p>
-            <form className="hero-form" data-pdf-request-form>
-              <label className="sr-only" htmlFor="outside-counsel-playbook-email">
-                Work email
-              </label>
-              <input
-                id="outside-counsel-playbook-email"
-                name="email"
-                type="email"
-                placeholder="Your work email"
-                autoComplete="email"
-                required
-                aria-describedby="outside-counsel-playbook-error"
-              />
-              <button type="submit">
-                <span>Send me the PDF</span>
-                <ArrowIcon />
-              </button>
-              <p
-                className="hero-form-error"
-                id="outside-counsel-playbook-error"
-                data-pdf-request-error
-                hidden
-              />
-            </form>
-            <div className="hero-success" data-pdf-request-success hidden role="status">
-              Check <span data-pdf-request-success-email /> — the playbook is on its way.
-            </div>
+            <LeadMagnetFlow config={magnetConfigs["outside-counsel-playbook"]} />
             <span className="hero-meta">
-              11-page PDF · arrives in your inbox · no follow-up unless you want it
+              11-page PDF · arrives in your inbox · public link delivered by email
             </span>
           </div>
           <div className="hero-visual">
@@ -583,7 +503,7 @@ export default function OutsideCounselPlaybookPage() {
 
       <section className="inside">
         <div className="container">
-          <div className="section-eyebrow">What's inside the playbook</div>
+          <div className="section-eyebrow">What&apos;s inside the playbook</div>
           <h2 className="section-title">
             Three pillars of continuous <em>outside counsel work.</em>
           </h2>
@@ -720,7 +640,7 @@ export default function OutsideCounselPlaybookPage() {
         </div>
       </section>
 
-      <section className="bio">
+      <section className="bio" id="bio">
         <div className="container">
           <div className="bio-grid">
             <div className="bio-photo">
@@ -786,9 +706,7 @@ export default function OutsideCounselPlaybookPage() {
                 />
               </div>
               <p className="footer-disclaimer">
-                This page and the playbook are for general informational purposes only and are not
-                legal advice. Use of this tool does not create an attorney-client relationship. Any
-                engagement is subject to a conflicts check and formal engagement terms.
+                {complianceText}
               </p>
             </div>
             <div>
@@ -804,7 +722,6 @@ export default function OutsideCounselPlaybookPage() {
           </p>
         </div>
       </footer>
-      <script dangerouslySetInnerHTML={{ __html: pdfRequestScript }} />
     </main>
   );
 }

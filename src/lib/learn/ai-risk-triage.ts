@@ -310,7 +310,7 @@ img, svg { max-width: 100%; }
           Start the 5-minute triage
           <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3 9h12M10 4l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/></svg>
         </a>
-        <span class="hero-meta">12 questions · No login · Email at midpoint</span>
+        <span class="hero-meta">12 questions · No login · Inline result</span>
       </div>
     </div>
     <div class="hero-visual">
@@ -355,8 +355,8 @@ img, svg { max-width: 100%; }
       </div>
       <div class="how-step">
         <div class="how-step-num">STEP 02</div>
-        <h3 class="how-step-title">Email at midpoint</h3>
-        <p class="how-step-body">After question seven, enter your work email to continue. Your responses are scored privately. No marketing pressure, ever.</p>
+        <h3 class="how-step-title">Add contact details</h3>
+        <p class="how-step-body">After the categorical questions, add your contact details and permission acknowledgment so the report summary can be routed correctly.</p>
       </div>
       <div class="how-step">
         <div class="how-step-num">STEP 03</div>
@@ -365,8 +365,8 @@ img, svg { max-width: 100%; }
       </div>
       <div class="how-step">
         <div class="how-step-num">STEP 04</div>
-        <h3 class="how-step-title">Download the brief</h3>
-        <p class="how-step-body">A printable, personalized brief arrives in your inbox. Share it with your team or use it to direct a follow-up consultation.</p>
+        <h3 class="how-step-title">Receive the summary</h3>
+        <p class="how-step-body">Your score, tier, and three prioritized posture actions render inline and are queued for email follow-up through HighLevel.</p>
       </div>
     </div>
   </div>
@@ -412,25 +412,18 @@ img, svg { max-width: 100%; }
         <ul class="output-features">
           <li>Risk score across four areas, color-coded by exposure level</li>
           <li>Three highest-priority actions ranked by likelihood of surfacing in diligence</li>
-          <li>Personalized brief delivered as PDF to your inbox</li>
+          <li>Report summary delivered through the approved HighLevel workflow</li>
           <li>Optional follow-up consultation scheduled in two clicks</li>
         </ul>
-        <p class="launch-note">Interactive tool launching once Whiteford compliance review is complete. Schedule time with Jeff if you want to discuss the assessment before it goes live.</p>
-        <button class="btn-primary btn-schedule"
-        data-cal-link="jeffschell/meeting-with-jeff-schell"
-        data-cal-namespace="meeting-with-jeff-schell"
-        data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'>
-        Schedule a time to speak with Jeff
-        <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3 9h12M10 4l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/></svg>
-      </button>
+        <div data-learn-report-slot="ai-risk-triage"></div>
       </div>
       <div class="report-mock">
         <div class="report-mock-header">
           <span class="report-mock-brand">WHITEFORD · SCHELL IP</span>
-          <span class="report-mock-date">CONFIDENTIAL · DRAFT</span>
+          <span class="report-mock-date">SAMPLE RESULT</span>
         </div>
         <div class="report-mock-title">AI Legal Risk Profile</div>
-        <div class="report-mock-subtitle">Prepared for [your company] · 5 pages · PDF</div>
+        <div class="report-mock-subtitle">Prepared for [your company] · inline result + email summary</div>
         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 24px;">
           <div style="border-left: 3px solid var(--risk-high); padding: 12px 16px; background: rgba(177,75,61,0.06);">
             <div style="font-family: var(--mono); font-size: 10px; letter-spacing: 0.1em; color: var(--risk-high);">DATA RIGHTS</div>
@@ -491,7 +484,7 @@ img, svg { max-width: 100%; }
           <span class="footer-divider"></span>
           <img class="footer-logo-schellip" src="/logos/schellip-white.png" alt="Schell IP" width="982" height="149">
         </div>
-        <p class="footer-disclaimer">This page is for general informational purposes only and is not legal advice. Use of this tool, including submitting your responses, does not create an attorney-client relationship. Any engagement is subject to a conflicts check and formal engagement terms.</p>
+        <p class="footer-disclaimer">This tool is for general informational purposes only and is not legal advice. Use of this tool does not create an attorney-client relationship between you, your company, and Whiteford Taylor &amp; Preston LLP or Schell IP. Do not submit confidential, privileged, or trade-secret information through this tool. Any engagement is subject to a conflicts check and a written engagement letter. Attorney advertising. Prior results do not guarantee a similar outcome.</p>
       </div>
       <div>
         <p class="footer-meta">LEARN.SCHELLIP.COM</p>

@@ -183,8 +183,8 @@ export default function Home() {
           </h1>
           <p>
             Preview the marketing surface for the AI risk, patent moat, governance, and outside
-            counsel lead magnets. The interactive tools and PDF delivery flow are launching after
-            Whiteford compliance review.
+            counsel lead magnets. The approved tools now render inline results and route follow-up
+            through HighLevel.
           </p>
         </div>
       </section>
@@ -233,9 +233,10 @@ export default function Home() {
                 />
               </div>
               <p className="footer-disclaimer">
-                This page is for general informational purposes only and is not legal advice. Use of
-                these tools does not create an attorney-client relationship. Any engagement is subject
-                to a conflicts check and formal engagement terms.
+                These tools are for general informational purposes only and are not legal advice. Use
+                of these tools does not create an attorney-client relationship. Do not submit
+                confidential, privileged, or trade-secret information. Any engagement is subject to a
+                conflicts check and a written engagement letter.
               </p>
             </div>
             <div>

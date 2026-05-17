@@ -341,8 +341,8 @@ img, svg { max-width: 100%; }
         <span class="scorecard-mock-corner-br"></span>
         <div class="score-label">— Sample output</div>
         <div class="score-display">
-          <span class="score-big">68</span>
-          <span class="score-out">/ 100</span>
+          <span class="score-big">31</span>
+          <span class="score-out">/ 45</span>
         </div>
         <div class="score-tier">TIER: <strong>SERIES A-READY</strong></div>
         <svg viewBox="0 0 320 280" width="100%">
@@ -379,7 +379,7 @@ img, svg { max-width: 100%; }
   <div class="container">
     <div class="section-eyebrow">— Scored across five dimensions</div>
     <h2 class="section-title">The five questions investors actually <em>care about.</em></h2>
-    <p class="section-lede">Sophisticated acquirers and Series B leads do not ask whether you have patents. They ask whether the IP supports the financing story, the product roadmap, and the exit. Each dimension here is scored 0–20 against observed venture-stage benchmarks.</p>
+    <p class="section-lede">Sophisticated acquirers and Series B leads do not ask whether you have patents. They ask whether the IP supports the financing story, the product roadmap, and the exit. Each dimension here is scored 0–9 against observed venture-stage benchmarks.</p>
     <div class="dim-grid">
       <div class="dim-cell">
         <div class="dim-num">01</div>
@@ -442,22 +442,22 @@ img, svg { max-width: 100%; }
     <p class="section-lede">Tier benchmarks reflect observed IP profiles at typical Series A and Series B financings and at recent strategic exits in deep tech and AI. Your score includes a written explanation of the tier and the gap to the next.</p>
     <div class="tier-bar">
       <div class="tier tier-1">
-        <div class="tier-range">0 — 30</div>
+        <div class="tier-range">0 — 13</div>
         <h3 class="tier-name">Early-stage gap</h3>
         <p class="tier-body">Pre-foundation. Diligence-blocking gaps. Foundational filing and IP-assignment work needed first.</p>
       </div>
       <div class="tier tier-2">
-        <div class="tier-range">31 — 55</div>
+        <div class="tier-range">14 — 23</div>
         <h3 class="tier-name">Building</h3>
         <p class="tier-body">Foundational. Filings exist but rhythm, allocation, and claim breadth need focused attention.</p>
       </div>
       <div class="tier tier-3">
-        <div class="tier-range">56 — 75</div>
+        <div class="tier-range">24 — 35</div>
         <h3 class="tier-name">Series A-ready</h3>
         <p class="tier-body">Strong. Filings and rhythm in place; tighten alignment to product and exit-horizon fit.</p>
       </div>
       <div class="tier tier-4">
-        <div class="tier-range">76 — 100</div>
+        <div class="tier-range">36 — 45</div>
         <h3 class="tier-name">Defensible moat</h3>
         <p class="tier-body">Exit-ready. Portfolio is organized, mapped, monitored, and aligned. Maintain rhythm.</p>
       </div>
@@ -467,15 +467,8 @@ img, svg { max-width: 100%; }
 
 <section class="cta-banner" id="start">
   <div class="container">
-    <h2>Five minutes. Fifteen questions. <em>One defensible score.</em></h2>
-    <p class="launch-note">Interactive tool launching once Whiteford compliance review is complete. Schedule time with Jeff if you want to discuss the assessment before it goes live.</p>
-    <button class="btn-primary btn-schedule"
-        data-cal-link="jeffschell/meeting-with-jeff-schell"
-        data-cal-namespace="meeting-with-jeff-schell"
-        data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'>
-        Schedule a time to speak with Jeff
-        <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3 9h12M10 4l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/></svg>
-      </button>
+    <h2>Run the scorecard. <em>One defensible score.</em></h2>
+    <div data-learn-report-slot="patent-moat-scorecard"></div>
   </div>
 </section>
 
@@ -510,7 +503,7 @@ img, svg { max-width: 100%; }
           <span class="footer-divider"></span>
           <img class="footer-logo-schellip" src="/logos/schellip-white.png" alt="Schell IP" width="982" height="149">
         </div>
-        <p class="footer-disclaimer">This page and the scorecard are for general informational purposes only and are not legal advice. Use of the scorecard does not create an attorney-client relationship. Benchmarks reflect Whiteford methodology and observed venture-stage IP profiles. Any engagement is subject to a conflicts check and formal engagement terms.</p>
+        <p class="footer-disclaimer">This tool is for general informational purposes only and is not legal advice. Use of this tool does not create an attorney-client relationship between you, your company, and Whiteford Taylor &amp; Preston LLP or Schell IP. Do not submit confidential, privileged, or trade-secret information through this tool. Any engagement is subject to a conflicts check and a written engagement letter. Attorney advertising. Prior results do not guarantee a similar outcome.</p>
       </div>
       <div>
         <p class="footer-meta">LEARN.SCHELLIP.COM</p>

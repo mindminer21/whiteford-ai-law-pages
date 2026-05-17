@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { LearnHtmlPage } from "@/components/learn-html-page";
 import { patentMoatScorecardContent } from "@/lib/learn/patent-moat-scorecard";
+import { magnetConfigs } from "@/lib/magnets/finalization";
 
 export const metadata: Metadata = {
   title: "Patent Moat Scorecard",
@@ -14,5 +15,5 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  return <LearnHtmlPage content={patentMoatScorecardContent} />;
+  return <LearnHtmlPage content={patentMoatScorecardContent} magnet={magnetConfigs["patent-moat-scorecard"]} />;
 }

@@ -38,35 +38,35 @@ const pages = [
     source: read("src/app/page.tsx"),
     brandMarker: 'className="brand-lockup"',
     footerMarker: 'className="footer-lockup"',
-    needsCalButton: false,
+    needsReportSlot: false,
   },
   {
     name: "AI Legal Risk Triage",
     source: read("src/lib/learn/ai-risk-triage.ts"),
     brandMarker: '<div class="brand-lockup">',
     footerMarker: '<div class="footer-lockup">',
-    needsCalButton: true,
+    needsReportSlot: true,
   },
   {
     name: "Patent Moat Scorecard",
     source: read("src/lib/learn/patent-moat-scorecard.ts"),
     brandMarker: '<div class="brand-lockup">',
     footerMarker: '<div class="footer-lockup">',
-    needsCalButton: true,
+    needsReportSlot: true,
   },
   {
     name: "AI Governance Readiness Plan",
     source: read("src/lib/learn/governance-plan.ts"),
     brandMarker: '<div class="brand-lockup">',
     footerMarker: '<div class="footer-lockup">',
-    needsCalButton: true,
+    needsReportSlot: true,
   },
   {
     name: "Outside Counsel Playbook",
     source: read("src/app/outside-counsel-playbook/page.tsx"),
     brandMarker: 'className="brand-lockup"',
     footerMarker: 'className="footer-lockup"',
-    needsCalButton: false,
+    needsReportSlot: false,
     hasEmailPdfForm: true,
   },
 ];
@@ -87,13 +87,13 @@ for (const asset of [
 const globals = read("src/app/globals.css");
 const layout = read("src/app/layout.tsx");
 const rootPage = read("src/app/page.tsx");
-const pdfRequestRoute = read("src/app/api/pdf-request/route.ts");
+const learnHtmlPage = read("src/components/learn-html-page.tsx");
+const learnHtmlWithFlow = read("src/components/learn-html-with-flow.tsx");
+const leadMagnetFlow = read("src/components/lead-magnet-flow.tsx");
+const magnetConfig = read("src/lib/magnets/finalization.ts");
+const leadRoute = read("src/app/api/leads/route.ts");
 const outsideCounselRoute = read("src/app/outside-counsel-playbook/page.tsx");
-const outsideCounselFormSource = sliceFrom(
-  outsideCounselRoute,
-  'data-pdf-request-form',
-  "Outside Counsel PDF form",
-);
+const finalComplianceText = "This tool is for general informational purposes only and is not legal advice. Use of this tool does not create an attorney-client relationship between you, your company, and Whiteford Taylor & Preston LLP or Schell IP. Do not submit confidential, privileged, or trade-secret information through this tool. Any engagement is subject to a conflicts check and a written engagement letter. Attorney advertising. Prior results do not guarantee a similar outcome.";
 
 assert.ok(layout.includes("<Script id=\"cal-embed\""), "Cal.com loader must live in root layout");
 assert.ok(layout.includes("Cal(\"init\", \"meeting-with-jeff-schell\""), "Cal.com namespace must initialize once in root layout");
@@ -108,7 +108,7 @@ assert.doesNotMatch(rootPage, /governance-matrix/, "Directory must not use old g
 
 for (const page of pages) {
   const source = page.source;
-  const normalizedSource = source.replace(/\s+/g, " ");
+  const normalizedSource = `${source} ${magnetConfig}`.replace(/\s+/g, " ");
 
   assert.ok(normalizedSource.includes("not legal advice"), `${page.name} missing legal-advice disclaimer`);
   assert.ok(normalizedSource.includes("does not create an attorney-client relationship"), `${page.name} missing attorney-client disclaimer`);
@@ -120,6 +120,7 @@ for (const page of pages) {
     assert.doesNotMatch(source, /<form|<input/i, `${page.name} must not request user-entered confidential information`);
   }
   assert.doesNotMatch(source, /href=["']\/start|href=["'][^"']*\/start/i, `${page.name} must not link to /start placeholder routes`);
+  assert.doesNotMatch(source, /Interactive tool launching once Whiteford compliance review is complete/, `${page.name} must not show compliance-review pending language`);
 
   assertOrder(
     sliceFrom(source, page.brandMarker, `${page.name} brand bar`),
@@ -132,32 +133,63 @@ for (const page of pages) {
     `${page.name} footer lockup`,
   );
 
-  if (page.needsCalButton) {
+  if (page.needsReportSlot) {
+    assert.ok(source.includes("data-learn-report-slot="), `${page.name} missing report form slot`);
     assert.ok(source.includes("data-cal-link=\"jeffschell/meeting-with-jeff-schell\""), `${page.name} missing Cal.com button link`);
-    assert.ok(source.includes("Interactive tool launching once Whiteford compliance review is complete"), `${page.name} missing launch-soon CTA copy`);
     assert.doesNotMatch(source, /Cal\("init"|app\.cal\.com\/embed\/embed\.js/i, `${page.name} must not embed per-page Cal.com script`);
   }
 }
 
+assert.ok(learnHtmlPage.includes("LearnHtmlWithFlow"), "Learn HTML renderer must delegate to the portal wrapper");
+assert.ok(learnHtmlWithFlow.includes("LeadMagnetFlow"), "Learn HTML portal wrapper must mount the finalized lead magnet flow");
+assert.ok(learnHtmlWithFlow.includes("data-learn-report-slot"), "Learn HTML portal wrapper must target the stable report request slot");
+for (const token of [
+  "Name",
+  "Work email",
+  "Company name",
+  "type=\"radio\"",
+  "type=\"checkbox\"",
+  "permission_acknowledged",
+  "qualifying_status",
+  "magnet_slug",
+  "/api/leads",
+  "data-assessment-question",
+  "All answers are categorical",
+  "not submitted confidential",
+]) {
+  assert.ok(`${leadMagnetFlow} ${magnetConfig}`.includes(token), `Final lead magnet flow missing token: ${token}`);
+}
+assert.ok(magnetConfig.includes("Get my AI risk profile"), "AI risk route must use the finalized button");
+assert.ok(magnetConfig.includes("Build my governance plan"), "Governance route must use the finalized button");
+assert.ok(magnetConfig.includes("Score my moat"), "Patent route must use a scorecard-specific button");
+assert.ok(magnetConfig.includes("Send me the playbook"), "Outside counsel route must use the finalized playbook button");
+assert.ok(magnetConfig.includes("I need help with my company's AI compliance immediately."), "AI compliance immediate status must be present");
+assert.ok(magnetConfig.includes("I'm just starting to explore whether we need AI compliance."), "AI compliance exploratory status must be present");
+assert.doesNotMatch(leadMagnetFlow, /<textarea|workflow:[a-z0-9-]+|\/api\/pdf-request/i, "Final flow must not collect free-text confidential detail, call pdf-request, or hard-code workflow tags");
 for (const token of [
   "outside-counsel-playbook",
-  "type=\"email\"",
-  "/api/pdf-request",
-  "data-pdf-request-form",
-  "data-pdf-request-success",
-  "— the playbook is on its way.",
+  "kind: \"download\"",
+  "Send me the playbook",
+  "the playbook is on its way",
 ]) {
-  assert.ok(outsideCounselRoute.includes(token), `PDF request form missing token: ${token}`);
+  assert.ok(`${outsideCounselRoute} ${magnetConfig} ${leadMagnetFlow}`.includes(token), `Outside counsel flow missing token: ${token}`);
 }
-assert.doesNotMatch(outsideCounselFormSource, /<textarea|Company name|company|type=\"radio\"|workflow:[a-z0-9-]+/i, "PDF request form must stay single-step email-only and not hard-code workflow tags");
 for (const token of [
-  "campaign-4-patent-forward-ogc",
-  "/pdfs/outside-counsel-playbook.pdf",
-  "CONCEPT_WEBHOOK_URL",
-  "supabase: \"deferred\"",
+  "magnet-ai-risk-triage",
+  "magnet-patent-moat-scorecard",
+  "magnet-governance-plan",
+  "magnet-outside-counsel-playbook",
+  "last_magnet_slug",
+  "last_magnet_score",
+  "last_magnet_score_max",
+  "last_magnet_tier",
+  "last_magnet_completed_at",
+  "magnet_history",
+  "outsideCounselPdfUrl",
 ]) {
-  assert.ok(pdfRequestRoute.includes(token), `PDF request API missing token: ${token}`);
+  assert.ok(`${leadRoute} ${magnetConfig}`.includes(token), `Final /api/leads route missing token: ${token}`);
 }
+assert.ok(magnetConfig.includes(finalComplianceText), "Shared final compliance block must be verbatim");
 
 for (const source of [
   globals,

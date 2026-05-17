@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { LearnHtmlPage } from "@/components/learn-html-page";
 import { governancePlanContent } from "@/lib/learn/governance-plan";
+import { magnetConfigs } from "@/lib/magnets/finalization";
 
 export const metadata: Metadata = {
   title: "AI Governance Readiness Plan",
@@ -14,5 +15,5 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  return <LearnHtmlPage content={governancePlanContent} />;
+  return <LearnHtmlPage content={governancePlanContent} magnet={magnetConfigs["governance-plan"]} />;
 }

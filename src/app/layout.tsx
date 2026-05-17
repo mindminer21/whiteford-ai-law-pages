@@ -7,14 +7,12 @@ const jost = Jost({
   variable: "--font-display",
   subsets: ["latin"],
   display: "optional",
-  preload: false,
 });
 
 const dmSans = DM_Sans({
   variable: "--font-body",
   subsets: ["latin"],
   display: "optional",
-  preload: false,
 });
 
 const plexMono = IBM_Plex_Mono({
@@ -22,7 +20,6 @@ const plexMono = IBM_Plex_Mono({
   subsets: ["latin"],
   weight: ["400", "500"],
   display: "optional",
-  preload: false,
 });
 
 export const metadata: Metadata = {

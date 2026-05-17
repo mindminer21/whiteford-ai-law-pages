@@ -308,7 +308,7 @@ img, svg { max-width: 100%; }
       <p class="hero-sub">A five-minute diagnostic produces a one-page plan mapping nine governance areas by readiness. The output is engineered to drop into a leadership memo or board deck. Quarter-ready. Practical.</p>
       <div class="hero-cta-row">
         <a href="#start" class="btn-primary">
-          Map my governance
+          Build my governance plan
           <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3 9h12M10 4l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/></svg>
         </a>
         <span class="hero-meta">9 questions · 5 minutes · Board-ready output</span>
@@ -440,15 +440,8 @@ img, svg { max-width: 100%; }
 
 <section class="cta-banner" id="start">
   <div class="container">
-    <h2>Nine questions. Five minutes. <em>A board-ready plan.</em></h2>
-    <p class="launch-note">Interactive tool launching once Whiteford compliance review is complete. Schedule time with Jeff if you want to discuss the assessment before it goes live.</p>
-    <button class="btn-primary btn-schedule"
-        data-cal-link="jeffschell/meeting-with-jeff-schell"
-        data-cal-namespace="meeting-with-jeff-schell"
-        data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'>
-        Schedule a time to speak with Jeff
-        <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3 9h12M10 4l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/></svg>
-      </button>
+    <h2>Build my plan. <em>A board-ready governance map.</em></h2>
+    <div data-learn-report-slot="governance-plan"></div>
   </div>
 </section>
 
@@ -483,7 +476,7 @@ img, svg { max-width: 100%; }
           <span class="footer-divider"></span>
           <img class="footer-logo-schellip" src="/logos/schellip-white.png" alt="Schell IP" width="982" height="149">
         </div>
-        <p class="footer-disclaimer">This page and the readiness plan are for general informational purposes only and are not legal advice. Use of this tool does not create an attorney-client relationship. Any engagement is subject to a conflicts check and formal engagement terms.</p>
+        <p class="footer-disclaimer">This tool is for general informational purposes only and is not legal advice. Use of this tool does not create an attorney-client relationship between you, your company, and Whiteford Taylor &amp; Preston LLP or Schell IP. Do not submit confidential, privileged, or trade-secret information through this tool. Any engagement is subject to a conflicts check and a written engagement letter. Attorney advertising. Prior results do not guarantee a similar outcome.</p>
       </div>
       <div>
         <p class="footer-meta">LEARN.SCHELLIP.COM</p>
