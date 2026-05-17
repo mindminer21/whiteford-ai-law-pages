@@ -242,6 +242,11 @@ export default function Home() {
             <div>
               <p className="footer-meta">LEARN.SCHELLIP.COM</p>
               <p className="footer-meta">DENVER · WASHINGTON · MOUNTAIN WEST</p>
+              <p>
+                <a className="footer-meta" href="/legacy">
+                  LEGACY CAMPAIGN HUB
+                </a>
+              </p>
             </div>
           </div>
           <p className="footer-meta">

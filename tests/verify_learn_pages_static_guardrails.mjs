@@ -87,6 +87,7 @@ for (const asset of [
 const globals = read("src/app/globals.css");
 const layout = read("src/app/layout.tsx");
 const rootPage = read("src/app/page.tsx");
+const legacyPage = read("src/app/legacy/page.tsx");
 const learnHtmlPage = read("src/components/learn-html-page.tsx");
 const learnHtmlWithFlow = read("src/components/learn-html-with-flow.tsx");
 const leadMagnetFlow = read("src/components/lead-magnet-flow.tsx");
@@ -104,7 +105,11 @@ assert.match(globals, /--font-mono:\s*"IBM Plex Mono"/, "Tailwind font-mono shou
 assert.ok(rootPage.includes('href: "/governance-plan"'), "Directory must link to /governance-plan");
 assert.ok(rootPage.includes('href: "/outside-counsel-playbook"'), "Directory must link to /outside-counsel-playbook");
 assert.ok(rootPage.includes("PDF · 11 pages"), "Directory must show the outside counsel PDF meta line");
+assert.ok(rootPage.includes('href="/legacy"'), "Directory root must link to the moved legacy campaign hub");
 assert.doesNotMatch(rootPage, /governance-matrix/, "Directory must not use old governance-matrix slug");
+assert.ok(exists("src/app/legacy/page.tsx"), "Legacy route must exist at /legacy");
+assert.ok(legacyPage.includes("AI law pages built to convert executive interest into a legal gameplan."), "Legacy route must preserve the old root campaign hub headline");
+assert.ok(legacyPage.includes("Open current directory"), "Legacy route must link back to the root directory page");
 
 for (const page of pages) {
   const source = page.source;
