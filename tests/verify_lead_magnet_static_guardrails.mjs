@@ -279,7 +279,7 @@ for (const source of [
 const rootPage = read("src/app/page.tsx");
 assert.ok(rootPage.includes('href: "/governance-plan"'), "Directory must link to /governance-plan");
 assert.ok(rootPage.includes('href: "/outside-counsel-playbook"'), "Directory must link to /outside-counsel-playbook");
-assert.ok(rootPage.includes("PDF · 11 pages"), "Directory must show the outside counsel PDF meta line");
+assert.ok(rootPage.includes("PDF · 5 pages"), "Directory must show the outside counsel PDF meta line");
 assert.doesNotMatch(rootPage, /governance-matrix/, "Directory must not use old governance-matrix slug");
 
 const route = read("src/app/api/leads/route.ts");

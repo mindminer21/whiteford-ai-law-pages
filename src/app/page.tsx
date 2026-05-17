@@ -55,7 +55,7 @@ const tools = [
   },
   {
     href: "/outside-counsel-playbook",
-    meta: "PDF · 11 pages",
+    meta: "PDF · 5 pages",
     title: (
       <>
         Outside Counsel <em>Playbook</em>

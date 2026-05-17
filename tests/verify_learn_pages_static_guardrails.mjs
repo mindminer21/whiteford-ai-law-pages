@@ -104,7 +104,7 @@ assert.match(globals, /--font-sans:\s*"DM Sans"/, "Tailwind font-sans should use
 assert.match(globals, /--font-mono:\s*"IBM Plex Mono"/, "Tailwind font-mono should use IBM Plex Mono");
 assert.ok(rootPage.includes('href: "/governance-plan"'), "Directory must link to /governance-plan");
 assert.ok(rootPage.includes('href: "/outside-counsel-playbook"'), "Directory must link to /outside-counsel-playbook");
-assert.ok(rootPage.includes("PDF · 11 pages"), "Directory must show the outside counsel PDF meta line");
+assert.ok(rootPage.includes("PDF · 5 pages"), "Directory must show the outside counsel PDF meta line");
 assert.ok(rootPage.includes('href="/legacy"'), "Directory root must link to the moved legacy campaign hub");
 assert.doesNotMatch(rootPage, /governance-matrix/, "Directory must not use old governance-matrix slug");
 assert.ok(exists("src/app/legacy/page.tsx"), "Legacy route must exist at /legacy");

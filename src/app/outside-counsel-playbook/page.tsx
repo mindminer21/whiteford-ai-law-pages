@@ -6,11 +6,11 @@ import { complianceText, magnetConfigs } from "@/lib/magnets/finalization";
 export const metadata: Metadata = {
   title: "Outside Counsel Playbook for Tech Companies",
   description:
-    "An 11-page playbook on how technology companies maximize patent value, position for investment, and preserve corporate value with a fixed-fee outside counsel structure.",
+    "A 5-page playbook on how technology companies maximize patent value, position for investment, and preserve corporate value with a fixed-fee outside counsel structure.",
   openGraph: {
     title: "Outside Counsel Playbook for Tech Companies",
     description:
-      "An 11-page playbook on how technology companies maximize patent value, position for investment, and preserve corporate value.",
+      "A 5-page playbook on how technology companies maximize patent value, position for investment, and preserve corporate value.",
     url: "/outside-counsel-playbook",
     images: ["/logos/playbook-cover.png"],
   },
@@ -477,17 +477,17 @@ export default function OutsideCounselPlaybookPage() {
               The patent-forward outside counsel playbook <em>for tech companies.</em>
             </h1>
             <p className="hero-sub">
-              Get the 11-page framework for patent value, investment readiness, clean governance,
+              Get the 5-page framework for patent value, investment readiness, clean governance,
               and the fixed-fee monthly structure built for technology-company outside counsel work.
             </p>
             <LeadMagnetFlow config={magnetConfigs["outside-counsel-playbook"]} />
             <span className="hero-meta">
-              11-page PDF · arrives in your inbox · public link delivered by email
+              5-page PDF · arrives in your inbox · public link delivered by email
             </span>
           </div>
           <div className="hero-visual">
             <div className="pdf-thumb">
-              <span className="pdf-thumb-label">11-page PDF</span>
+              <span className="pdf-thumb-label">5-page PDF</span>
               <Image
                 src="/logos/playbook-cover.png"
                 alt="Outside Counsel Playbook PDF cover"
