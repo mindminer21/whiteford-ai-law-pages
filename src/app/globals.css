@@ -1,26 +1,372 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --ink: #003756;
+  --ink-hover: #154e73;
+  --ink-deep: #002b45;
+  --accent: #632ddd;
+  --accent-soft: #9d74ff;
+  --accent-deep: #4a1fb0;
+  --paper: #ffffff;
+  --paper-soft: #f7f8fa;
+  --paper-deep: #eaecef;
+  --line: rgba(0, 55, 86, 0.12);
+  --line-strong: rgba(0, 55, 86, 0.22);
+  --risk-low: #4f8c5b;
+  --risk-mid: #c99334;
+  --risk-high: #b14b3d;
+  --background: var(--paper);
+  --foreground: var(--ink);
+  --display: var(--font-display), system-ui, sans-serif;
+  --body: var(--font-body), system-ui, sans-serif;
+  --mono: var(--font-mono), ui-monospace, monospace;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
+  min-height: 100vh;
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--body);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+a {
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+::selection {
+  background: rgba(99, 45, 221, 0.18);
+}
+
+.learn-directory {
+  color: var(--ink);
+  background: var(--paper);
+  font-size: 17px;
+  line-height: 1.55;
+}
+
+.learn-directory .container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+.brand-bar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(10px);
+}
+
+.brand-bar .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand-lockup,
+.footer-lockup {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.brand-lockup img,
+.footer-lockup img {
+  display: block;
+  width: auto;
+}
+
+.brand-logo-whiteford {
+  height: 28px;
+}
+
+.brand-logo-schellip {
+  height: 22px;
+}
+
+.brand-divider {
+  width: 1px;
+  height: 28px;
+  background: var(--line-strong);
+}
+
+.brand-bar-meta,
+.directory-eyebrow,
+.directory-meta,
+.footer-meta {
+  font-family: var(--mono);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.brand-bar-meta {
+  color: var(--ink-hover);
+  font-size: 11px;
+}
+
+.directory-hero {
+  padding: 88px 0 76px;
+  border-bottom: 1px solid var(--line);
+  background:
+    radial-gradient(ellipse at 84% 14%, rgba(99, 45, 221, 0.12) 0%, transparent 52%),
+    linear-gradient(180deg, #ffffff 0%, #f7f8fa 100%);
+}
+
+.directory-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+  color: var(--accent);
+  font-size: 12px;
+  letter-spacing: 0.18em;
+}
+
+.directory-eyebrow::before {
+  width: 32px;
+  height: 1px;
+  background: var(--accent);
+  content: "";
+}
+
+.directory-hero h1 {
+  max-width: 850px;
+  margin: 0;
+  font-family: var(--display);
+  font-size: clamp(38px, 5.2vw, 66px);
+  font-weight: 400;
+  letter-spacing: -0.012em;
+  line-height: 1.04;
+}
+
+.directory-hero h1 em {
+  color: var(--ink-hover);
+  font-style: italic;
+  font-weight: 300;
+}
+
+.directory-hero p {
+  max-width: 710px;
+  margin: 28px 0 0;
+  color: var(--ink-hover);
+  font-size: 19px;
+  line-height: 1.6;
+}
+
+.directory-grid-section {
+  padding: 82px 0 100px;
+}
+
+.directory-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
+}
+
+.directory-card {
+  position: relative;
+  min-height: 420px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid var(--line-strong);
+  background: var(--paper);
+  color: inherit;
+  text-decoration: none;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+}
+
+.directory-card:hover {
+  border-color: rgba(99, 45, 221, 0.42);
+  box-shadow: 0 24px 70px -42px rgba(0, 55, 86, 0.48);
+  transform: translateY(-2px);
+}
+
+.directory-card-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 32px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.86) 100%);
+}
+
+.directory-meta {
+  margin-bottom: 18px;
+  color: var(--accent);
+  font-size: 11px;
+}
+
+.directory-card h2 {
+  margin: 0;
+  font-family: var(--display);
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 1.1;
+}
+
+.directory-card h2 em {
+  color: var(--ink-hover);
+  font-style: italic;
+  font-weight: 300;
+}
+
+.directory-card p {
+  margin: 22px 0 0;
+  color: var(--ink-hover);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.directory-card-action {
+  margin-top: auto;
+  padding-top: 32px;
+  color: var(--ink);
+  font-family: var(--display);
+  font-weight: 500;
+}
+
+.directory-card-action span {
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
+
+.directory-card:hover .directory-card-action span {
+  transform: translateX(4px);
+}
+
+.directory-card-visual {
+  min-height: 160px;
+  padding: 24px 32px 0;
+  background: var(--paper-soft);
+  border-top: 1px solid var(--line);
+  opacity: 0.76;
+  transition: opacity 0.2s ease;
+}
+
+.directory-card:hover .directory-card-visual {
+  opacity: 1;
+}
+
+.directory-card-visual svg {
+  width: 100%;
+  height: 132px;
+}
+
+.directory-footer {
+  padding: 60px 0 40px;
+  background: var(--ink-deep);
+  color: rgba(255, 255, 255, 0.64);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.directory-footer .footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 60px;
+  margin-bottom: 24px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.directory-footer .footer-lockup {
+  margin-bottom: 16px;
+}
+
+.directory-footer .footer-lockup img {
+  height: 22px;
+}
+
+.directory-footer .footer-lockup .footer-logo-schellip {
+  height: 17px;
+}
+
+.footer-divider {
+  width: 1px;
+  height: 22px;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.footer-disclaimer {
+  max-width: 760px;
+  font-family: var(--display);
+  font-size: 14px;
+  font-style: italic;
+  font-weight: 300;
+}
+
+.footer-meta {
+  font-size: 11px;
+}
+
+@media (max-width: 900px) {
+  .learn-directory .container {
+    padding: 0 20px;
+  }
+
+  .directory-hero {
+    padding: 60px 0 58px;
+  }
+
+  .directory-grid-section {
+    padding: 60px 0 76px;
+  }
+
+  .directory-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .directory-footer .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .brand-logo-whiteford {
+    height: 22px;
+  }
+
+  .brand-logo-schellip {
+    height: 17px;
+  }
+
+  .brand-divider {
+    height: 22px;
+  }
+
+  .brand-bar-meta {
+    display: none;
+  }
 }
