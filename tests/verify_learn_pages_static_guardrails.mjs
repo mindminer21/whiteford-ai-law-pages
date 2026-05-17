@@ -61,6 +61,14 @@ const pages = [
     footerMarker: '<div class="footer-lockup">',
     needsCalButton: true,
   },
+  {
+    name: "Outside Counsel Playbook",
+    source: read("src/app/outside-counsel-playbook/page.tsx"),
+    brandMarker: 'className="brand-lockup"',
+    footerMarker: 'className="footer-lockup"',
+    needsCalButton: false,
+    hasEmailPdfForm: true,
+  },
 ];
 
 for (const asset of [
@@ -70,6 +78,8 @@ for (const asset of [
   "public/logos/schellip-color.png",
   "public/logos/schellip-white.png",
   "public/logos/jeff-schell.jpg",
+  "public/logos/playbook-cover.png",
+  "public/pdfs/outside-counsel-playbook.pdf",
 ]) {
   assert.ok(exists(asset), `Missing learn.schellip logo asset: ${asset}`);
 }
@@ -77,6 +87,13 @@ for (const asset of [
 const globals = read("src/app/globals.css");
 const layout = read("src/app/layout.tsx");
 const rootPage = read("src/app/page.tsx");
+const pdfRequestRoute = read("src/app/api/pdf-request/route.ts");
+const outsideCounselRoute = read("src/app/outside-counsel-playbook/page.tsx");
+const outsideCounselFormSource = sliceFrom(
+  outsideCounselRoute,
+  'data-pdf-request-form',
+  "Outside Counsel PDF form",
+);
 
 assert.ok(layout.includes("<Script id=\"cal-embed\""), "Cal.com loader must live in root layout");
 assert.ok(layout.includes("Cal(\"init\", \"meeting-with-jeff-schell\""), "Cal.com namespace must initialize once in root layout");
@@ -85,17 +102,23 @@ assert.match(globals, /--accent:\s*#632ddd/i, "Learn design system must expose S
 assert.match(globals, /--font-sans:\s*"DM Sans"/, "Tailwind font-sans should use DM Sans");
 assert.match(globals, /--font-mono:\s*"IBM Plex Mono"/, "Tailwind font-mono should use IBM Plex Mono");
 assert.ok(rootPage.includes('href: "/governance-plan"'), "Directory must link to /governance-plan");
+assert.ok(rootPage.includes('href: "/outside-counsel-playbook"'), "Directory must link to /outside-counsel-playbook");
+assert.ok(rootPage.includes("PDF · 11 pages"), "Directory must show the outside counsel PDF meta line");
 assert.doesNotMatch(rootPage, /governance-matrix/, "Directory must not use old governance-matrix slug");
 
 for (const page of pages) {
   const source = page.source;
+  const normalizedSource = source.replace(/\s+/g, " ");
 
-  assert.ok(source.includes("not legal advice"), `${page.name} missing legal-advice disclaimer`);
-  assert.ok(source.includes("does not create an attorney-client relationship"), `${page.name} missing attorney-client disclaimer`);
-  assert.ok(source.includes("conflicts check"), `${page.name} missing conflicts-check disclaimer`);
+  assert.ok(normalizedSource.includes("not legal advice"), `${page.name} missing legal-advice disclaimer`);
+  assert.ok(normalizedSource.includes("does not create an attorney-client relationship"), `${page.name} missing attorney-client disclaimer`);
+  assert.ok(normalizedSource.includes("conflicts check"), `${page.name} missing conflicts-check disclaimer`);
   assert.ok(source.includes("Attorney advertising"), `${page.name} missing attorney advertising notation`);
   assert.doesNotMatch(source, /workflow:[a-z0-9-]+/i, `${page.name} must not hard-code workflow trigger tags`);
-  assert.doesNotMatch(source, /<form|<input|<textarea/i, `${page.name} must not request user-entered confidential information`);
+  assert.doesNotMatch(source, /<textarea/i, `${page.name} must not request confidential free text`);
+  if (!page.hasEmailPdfForm) {
+    assert.doesNotMatch(source, /<form|<input/i, `${page.name} must not request user-entered confidential information`);
+  }
   assert.doesNotMatch(source, /href=["']\/start|href=["'][^"']*\/start/i, `${page.name} must not link to /start placeholder routes`);
 
   assertOrder(
@@ -116,11 +139,32 @@ for (const page of pages) {
   }
 }
 
+for (const token of [
+  "outside-counsel-playbook",
+  "type=\"email\"",
+  "/api/pdf-request",
+  "data-pdf-request-form",
+  "data-pdf-request-success",
+  "— the playbook is on its way.",
+]) {
+  assert.ok(outsideCounselRoute.includes(token), `PDF request form missing token: ${token}`);
+}
+assert.doesNotMatch(outsideCounselFormSource, /<textarea|Company name|company|type=\"radio\"|workflow:[a-z0-9-]+/i, "PDF request form must stay single-step email-only and not hard-code workflow tags");
+for (const token of [
+  "campaign-4-patent-forward-ogc",
+  "/pdfs/outside-counsel-playbook.pdf",
+  "CONCEPT_WEBHOOK_URL",
+  "supabase: \"deferred\"",
+]) {
+  assert.ok(pdfRequestRoute.includes(token), `PDF request API missing token: ${token}`);
+}
+
 for (const source of [
   globals,
   read("src/lib/learn/ai-risk-triage.ts"),
   read("src/lib/learn/patent-moat-scorecard.ts"),
   read("src/lib/learn/governance-plan.ts"),
+  read("src/app/outside-counsel-playbook/page.tsx"),
 ]) {
   assert.match(source, /\.brand-logo-whiteford\s*\{\s*height:\s*28px;/, "Desktop Whiteford logo height must be 28px");
   assert.match(source, /\.brand-logo-schellip\s*\{\s*height:\s*22px;/, "Desktop Schell IP logo height must be 22px");

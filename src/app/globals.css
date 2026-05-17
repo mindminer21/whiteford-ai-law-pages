@@ -135,9 +135,7 @@ textarea {
 .directory-hero {
   padding: 88px 0 76px;
   border-bottom: 1px solid var(--line);
-  background:
-    radial-gradient(ellipse at 84% 14%, rgba(99, 45, 221, 0.12) 0%, transparent 52%),
-    linear-gradient(180deg, #ffffff 0%, #f7f8fa 100%);
+  background: #f7f8fa;
 }
 
 .directory-eyebrow {
@@ -161,9 +159,9 @@ textarea {
   max-width: 850px;
   margin: 0;
   font-family: var(--display);
-  font-size: clamp(38px, 5.2vw, 66px);
+  font-size: 66px;
   font-weight: 400;
-  letter-spacing: -0.012em;
+  letter-spacing: 0;
   line-height: 1.04;
 }
 
@@ -187,7 +185,7 @@ textarea {
 
 .directory-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 28px;
 }
 
@@ -285,6 +283,20 @@ textarea {
   height: 132px;
 }
 
+.directory-cover-preview {
+  display: flex;
+  justify-content: center;
+  height: 132px;
+  overflow: hidden;
+}
+
+.directory-cover-preview img {
+  width: auto;
+  height: 160px;
+  border: 1px solid rgba(0, 55, 86, 0.14);
+  box-shadow: 0 18px 40px -28px rgba(0, 55, 86, 0.52);
+}
+
 .directory-footer {
   padding: 60px 0 40px;
   background: var(--ink-deep);
@@ -332,6 +344,12 @@ textarea {
   font-size: 11px;
 }
 
+@media (max-width: 1180px) {
+  .directory-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
 @media (max-width: 900px) {
   .learn-directory .container {
     padding: 0 20px;
@@ -339,6 +357,10 @@ textarea {
 
   .directory-hero {
     padding: 60px 0 58px;
+  }
+
+  .directory-hero h1 {
+    font-size: 42px;
   }
 
   .directory-grid-section {

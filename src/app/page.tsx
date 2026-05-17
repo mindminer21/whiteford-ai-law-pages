@@ -3,11 +3,11 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Interactive Legal Readiness Tools",
   description:
-    "Three marketing-only lead magnet previews from Schell IP and Whiteford for AI risk, patent moat, and AI governance readiness.",
+    "Four marketing-only lead magnet previews from Schell IP and Whiteford for AI risk, patent moat, AI governance readiness, and patent-forward outside counsel.",
   openGraph: {
     title: "Interactive Legal Readiness Tools",
     description:
-      "Three marketing-only lead magnet previews from Schell IP and Whiteford for AI risk, patent moat, and AI governance readiness.",
+      "Four marketing-only lead magnet previews from Schell IP and Whiteford for AI risk, patent moat, AI governance readiness, and patent-forward outside counsel.",
     url: "/",
     images: ["/logos/whiteford-white-on-navy-full.png"],
   },
@@ -53,6 +53,19 @@ const tools = [
     visual: "plan",
     action: "Open the plan",
   },
+  {
+    href: "/outside-counsel-playbook",
+    meta: "PDF · 11 pages",
+    title: (
+      <>
+        Outside Counsel <em>Playbook</em>
+      </>
+    ),
+    description:
+      "Download the patent-forward outside counsel framework for technology companies balancing patent value, market readiness, and clean governance.",
+    visual: "playbook",
+    action: "Open the playbook",
+  },
 ] as const;
 
 function ArrowIcon() {
@@ -69,6 +82,20 @@ function ArrowIcon() {
 }
 
 function PreviewVisual({ type }: { type: (typeof tools)[number]["visual"] }) {
+  if (type === "playbook") {
+    return (
+      <div className="directory-cover-preview" role="img" aria-label="Outside Counsel Playbook cover preview">
+        <img
+          src="/logos/playbook-cover.png"
+          alt=""
+          width={600}
+          height={776}
+          aria-hidden="true"
+        />
+      </div>
+    );
+  }
+
   if (type === "plan") {
     return (
       <svg viewBox="0 0 320 132" role="img" aria-label="AI governance plan preview">
@@ -152,11 +179,12 @@ export default function Home() {
         <div className="container">
           <div className="directory-eyebrow">Whiteford · Schell IP learning tools</div>
           <h1>
-            Three practical legal readiness tools for <em>AI-era technology companies.</em>
+            Four practical legal readiness tools for <em>AI-era technology companies.</em>
           </h1>
           <p>
-            Preview the marketing surface for the AI risk, patent moat, and governance lead magnets.
-            The interactive tools are launching after Whiteford compliance review.
+            Preview the marketing surface for the AI risk, patent moat, governance, and outside
+            counsel lead magnets. The interactive tools and PDF delivery flow are launching after
+            Whiteford compliance review.
           </p>
         </div>
       </section>
