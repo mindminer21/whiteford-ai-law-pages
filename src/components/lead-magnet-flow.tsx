@@ -19,6 +19,7 @@ type ContactState = {
   name: string;
   email: string;
   company: string;
+  phone: string;
   qualifyingStatus: string;
   permissionAcknowledged: boolean;
 };
@@ -46,6 +47,7 @@ function AssessmentFlow({ config }: { config: AssessmentMagnetConfig }) {
     name: "",
     email: "",
     company: "",
+    phone: "",
     qualifyingStatus: config.statusOptions[0] ?? "",
     permissionAcknowledged: false,
   });
@@ -65,6 +67,7 @@ function AssessmentFlow({ config }: { config: AssessmentMagnetConfig }) {
     Boolean(contact.name.trim()) &&
     Boolean(contact.email.trim()) &&
     Boolean(contact.company.trim()) &&
+    (!config.requirePhone || Boolean(contact.phone.trim())) &&
     Boolean(contact.qualifyingStatus) &&
     contact.permissionAcknowledged &&
     answeredCount === config.questions.length &&
@@ -94,6 +97,7 @@ function AssessmentFlow({ config }: { config: AssessmentMagnetConfig }) {
           name: contact.name.trim(),
           email: contact.email.trim(),
           company: contact.company.trim(),
+          ...(config.requirePhone ? { phone: contact.phone.trim() } : {}),
           qualifying_status: contact.qualifyingStatus,
           permission_acknowledged: contact.permissionAcknowledged,
           magnet_slug: config.slug,
@@ -215,6 +219,7 @@ function DownloadFlow({ config }: { config: DownloadMagnetConfig }) {
     name: "",
     email: "",
     company: "",
+    phone: "",
     qualifyingStatus: config.statusOptions[0] ?? "",
     permissionAcknowledged: false,
   });
@@ -342,6 +347,15 @@ function ContactPermissionBlock({
           value={contact.company}
           onChange={(company) => setContact((current) => ({ ...current, company }))}
         />
+        {config.requirePhone ? (
+          <TextField
+            label="Phone*"
+            type="tel"
+            inputMode="tel"
+            value={contact.phone}
+            onChange={(phone) => setContact((current) => ({ ...current, phone }))}
+          />
+        ) : null}
       </div>
 
       <fieldset className="learn-report-status">
@@ -393,8 +407,8 @@ function TextField({
   label: string;
   value: string;
   onChange: (value: string) => void;
-  type?: "text" | "email";
-  inputMode?: "email";
+  type?: "text" | "email" | "tel";
+  inputMode?: "email" | "tel";
 }) {
   return (
     <label className="learn-report-field">
@@ -405,7 +419,15 @@ function TextField({
         onChange={(event) => onChange(event.target.value)}
         required
         inputMode={inputMode}
-        autoComplete={inputMode === "email" ? "email" : label === "Name" ? "name" : "organization"}
+        autoComplete={
+          inputMode === "email"
+            ? "email"
+            : inputMode === "tel"
+              ? "tel"
+              : label === "Name"
+                ? "name"
+                : "organization"
+        }
       />
     </label>
   );
