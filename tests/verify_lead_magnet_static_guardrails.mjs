@@ -92,6 +92,13 @@ const APPS = [
 ];
 
 for (const app of APPS) {
+  // The four legacy campaign apps were relocated with the legacy hub and their
+  // components no longer live in this repository. Keep the guardrail
+  // enumeration so it re-arms automatically if a legacy component returns.
+  if (!exists(app.component)) {
+    console.warn(`Skipping relocated legacy app component: ${app.component}`);
+    continue;
+  }
   const source = read(app.component);
   assert.match(source, new RegExp(`campaignKey:\\s*\"${app.campaignKey}\"`), `${app.name} campaign key must be explicit`);
   assert.match(source, /if \(!disclaimerAccepted\)/, `${app.name} must block submit handler without disclaimer acceptance`);
@@ -145,6 +152,34 @@ const learnPages = [
     footerMarker: 'className="footer-lockup"',
     needsReportSlot: false,
     hasEmailPdfForm: true,
+  },
+  {
+    name: "The Disclosure Self-Audit",
+    source: read("src/lib/learn/disclosure-self-audit.ts"),
+    brandMarker: '<div class="brand-lockup">',
+    footerMarker: '<div class="footer-lockup">',
+    needsReportSlot: true,
+  },
+  {
+    name: "The Chain-of-Title Audit",
+    source: read("src/lib/learn/chain-of-title-audit.ts"),
+    brandMarker: '<div class="brand-lockup">',
+    footerMarker: '<div class="footer-lockup">',
+    needsReportSlot: true,
+  },
+  {
+    name: "The Routing Matrix",
+    source: read("src/lib/learn/routing-matrix.ts"),
+    brandMarker: '<div class="brand-lockup">',
+    footerMarker: '<div class="footer-lockup">',
+    needsReportSlot: true,
+  },
+  {
+    name: "The IP Data Room Checklist",
+    source: read("src/lib/learn/ip-data-room-checklist.ts"),
+    brandMarker: '<div class="brand-lockup">',
+    footerMarker: '<div class="footer-lockup">',
+    needsReportSlot: true,
   },
 ];
 
@@ -235,8 +270,15 @@ assert.ok(magnetConfig.includes("Get my AI risk profile"), "AI risk route must u
 assert.ok(magnetConfig.includes("Build my governance plan"), "Governance route must use the finalized button");
 assert.ok(magnetConfig.includes("Score my moat"), "Patent route must use the finalized scorecard button");
 assert.ok(magnetConfig.includes("Send me the playbook"), "Outside counsel route must use the finalized playbook button");
+assert.ok(magnetConfig.includes("Audit my disclosures"), "Disclosure self-audit must use the finalized button");
+assert.ok(magnetConfig.includes("Audit my chain of title"), "Chain-of-title audit must use the finalized button");
+assert.ok(magnetConfig.includes("Route my stack"), "Routing matrix must use the finalized button");
+assert.ok(magnetConfig.includes("Score my data room"), "IP data room checklist must use the finalized button");
 assert.ok(magnetConfig.includes("I need help with my company's AI compliance immediately."), "AI compliance immediate status must be present");
 assert.ok(magnetConfig.includes("I'm just starting to explore whether we need AI compliance."), "AI compliance exploratory status must be present");
+for (const stage of ["Idea / prototype", "MVP in market", "Fundraising or diligence", "Enterprise/customer rollout"]) {
+  assert.ok(magnetConfig.includes(`"${stage}"`), `Book magnet status option missing: ${stage}`);
+}
 assert.doesNotMatch(leadMagnetFlow, /<textarea|workflow:[a-z0-9-]+|\/api\/pdf-request/i, "Final flow must not collect free-text confidential detail, call pdf-request, or hard-code workflow tags");
 for (const token of [
   "outside-counsel-playbook",
@@ -251,6 +293,12 @@ for (const token of [
   "magnet-patent-moat-scorecard",
   "magnet-governance-plan",
   "magnet-outside-counsel-playbook",
+  "magnet-disclosure-self-audit",
+  "magnet-chain-of-title-audit",
+  "magnet-routing-matrix",
+  "magnet-ip-data-room-checklist",
+  "patent-moat-book",
+  "approvedPhonePattern",
   "last_magnet_slug",
   "last_magnet_score",
   "last_magnet_score_max",
@@ -258,16 +306,32 @@ for (const token of [
   "last_magnet_completed_at",
   "magnet_history",
   "outsideCounselPdfUrl",
+  "disclosure_public_disclosure_score",
+  "title_founders_score",
+  "routing_core_score",
+  "dataroom_title_score",
 ]) {
   assert.ok(`${leadRoute} ${magnetConfig}`.includes(token), `Final /api/leads route missing token: ${token}`);
 }
 assert.ok(magnetConfig.includes(complianceText), "Shared final compliance block must be verbatim");
+for (const token of [
+  "label=\"Phone*\"",
+  "type=\"tel\"",
+  "inputMode=\"tel\"",
+  "config.requirePhone",
+]) {
+  assert.ok(leadMagnetFlow.includes(token), `Final lead magnet flow missing phone token: ${token}`);
+}
 
 for (const source of [
   globals,
   read("src/lib/learn/ai-risk-triage.ts"),
   read("src/lib/learn/patent-moat-scorecard.ts"),
   read("src/lib/learn/governance-plan.ts"),
+  read("src/lib/learn/disclosure-self-audit.ts"),
+  read("src/lib/learn/chain-of-title-audit.ts"),
+  read("src/lib/learn/routing-matrix.ts"),
+  read("src/lib/learn/ip-data-room-checklist.ts"),
   read("src/app/outside-counsel-playbook/page.tsx"),
 ]) {
   assert.match(source, /\.brand-logo-whiteford\s*\{\s*height:\s*28px;/, "Desktop Whiteford logo height must be 28px");
@@ -279,6 +343,10 @@ for (const source of [
 const rootPage = read("src/app/page.tsx");
 assert.ok(rootPage.includes('href: "/governance-plan"'), "Directory must link to /governance-plan");
 assert.ok(rootPage.includes('href: "/outside-counsel-playbook"'), "Directory must link to /outside-counsel-playbook");
+assert.ok(rootPage.includes('href: "/disclosure-self-audit"'), "Directory must link to /disclosure-self-audit");
+assert.ok(rootPage.includes('href: "/chain-of-title-audit"'), "Directory must link to /chain-of-title-audit");
+assert.ok(rootPage.includes('href: "/routing-matrix"'), "Directory must link to /routing-matrix");
+assert.ok(rootPage.includes('href: "/ip-data-room-checklist"'), "Directory must link to /ip-data-room-checklist");
 assert.ok(rootPage.includes("PDF · 5 pages"), "Directory must show the outside counsel PDF meta line");
 assert.doesNotMatch(rootPage, /governance-matrix/, "Directory must not use old governance-matrix slug");
 

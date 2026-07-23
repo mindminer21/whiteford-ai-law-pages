@@ -296,19 +296,28 @@ await rejectLead(
   assert.equal(customField(data, "ai_recommended_offer"), undefined);
 }
 
+const PATENT_MOAT_BOOK_SLUGS = [
+  "disclosure-self-audit",
+  "chain-of-title-audit",
+  "routing-matrix",
+  "ip-data-room-checklist",
+];
+
 function buildFinalPayload(magnet_slug, answers = null, extra = {}) {
   return {
     name: "Ada Lovelace",
     email: `final-${magnet_slug}@test.invalid`,
     company: "Example Test Co",
-    qualifying_status:
-      magnet_slug === "patent-moat-scorecard"
+    qualifying_status: PATENT_MOAT_BOOK_SLUGS.includes(magnet_slug)
+      ? "Fundraising or diligence"
+      : magnet_slug === "patent-moat-scorecard"
         ? "We are preparing for fundraising, customer diligence, or an exit."
         : magnet_slug === "outside-counsel-playbook"
           ? "I want the playbook for planning."
           : "I need help with my company's AI compliance immediately.",
     permission_acknowledged: true,
     magnet_slug,
+    ...(PATENT_MOAT_BOOK_SLUGS.includes(magnet_slug) ? { phone: "(303) 555-0142" } : {}),
     ...(answers ? { answers } : {}),
     ...extra,
   };
@@ -411,6 +420,102 @@ await rejectLead(
   /Permission acknowledgment is required/,
 );
 
+const disclosureAnswers = { q1: 0, q2: 1, q3: 0, q4: 0, q5: 1, q6: 0, q7: 0, q8: 1, q9: 0 };
+const chainOfTitleAnswers = { q1: 3, q2: 3, q3: 2, q4: 3, q5: 3, q6: 2, q7: 2, q8: 2, q9: 2, q10: 2 };
+const routingAnswers = { q1: 2, q2: 2, q3: 0, q4: 1, q5: 0, q6: 1 };
+const dataRoomAnswers = { q1: 0, q2: 0, q3: 1, q4: 0, q5: 0, q6: 2, q7: 1, q8: 0, q9: 0, q10: 0 };
+
+const BOOK_MAGNET_CASES = [
+  {
+    magnet_slug: "disclosure-self-audit",
+    answers: disclosureAnswers,
+    score: 3,
+    score_max: 22,
+    tierTag: "disclosure-red",
+    subScoreField: "disclosure_public_disclosure_score",
+    subScoreValue: 1,
+  },
+  {
+    magnet_slug: "chain-of-title-audit",
+    answers: chainOfTitleAnswers,
+    score: 24,
+    score_max: 24,
+    tierTag: "title-green",
+    subScoreField: "title_founders_score",
+    subScoreValue: 8,
+  },
+  {
+    magnet_slug: "routing-matrix",
+    answers: routingAnswers,
+    score: 6,
+    score_max: 10,
+    tierTag: "routing-orange",
+    subScoreField: "routing_core_score",
+    subScoreValue: 4,
+  },
+  {
+    magnet_slug: "ip-data-room-checklist",
+    answers: dataRoomAnswers,
+    score: 4,
+    score_max: 20,
+    tierTag: "dataroom-red",
+    subScoreField: "dataroom_fto_score",
+    subScoreValue: 2,
+  },
+];
+
+for (const testCase of BOOK_MAGNET_CASES) {
+  const data = await postLead(buildFinalPayload(testCase.magnet_slug, testCase.answers));
+  assert.equal(data.ok, true);
+  assert.equal(data.magnet_slug, testCase.magnet_slug);
+  assert.equal(data.score, testCase.score);
+  assert.equal(data.score_max, testCase.score_max);
+  assert.equal(data.tier.tag, testCase.tierTag);
+  assert.equal(data.payload.tags.includes(`magnet-${testCase.magnet_slug}`), true);
+  assert.equal(data.payload.tags.includes("patent-moat-book"), true);
+  assert.equal(data.payload.tags.includes(testCase.tierTag), true);
+  assert.equal(data.payload.phone, "(303) 555-0142");
+  assert.equal(fieldValue(data, "last_magnet_slug"), testCase.magnet_slug);
+  assert.equal(fieldValue(data, "qualifying_status"), "Fundraising or diligence");
+  assert.equal(fieldValue(data, testCase.subScoreField), testCase.subScoreValue);
+  assert.equal(data.actions.length, 3);
+
+  await rejectLead(
+    { ...buildFinalPayload(testCase.magnet_slug, testCase.answers), phone: undefined },
+    /phone number is required/,
+  );
+  await rejectLead(
+    { ...buildFinalPayload(testCase.magnet_slug, testCase.answers), phone: "   " },
+    /phone number is required/,
+  );
+  await rejectLead(
+    { ...buildFinalPayload(testCase.magnet_slug, testCase.answers), phone: "call-me-maybe" },
+    /phone number is required/,
+  );
+  await rejectLead(
+    { ...buildFinalPayload(testCase.magnet_slug, testCase.answers), phone: "123" },
+    /phone number is required/,
+  );
+}
+
+{
+  const data = await postLead(
+    buildFinalPayload("ai-risk-triage", riskAnswers, { phone: "(303) 555-0142" }),
+  );
+  assert.equal(data.ok, true);
+  assert.equal(data.payload.phone, undefined, "phone must be ignored for pre-book magnets");
+  assert.equal(data.payload.tags.includes("patent-moat-book"), false);
+}
+
+{
+  const data = await postLead(
+    buildFinalPayload("outside-counsel-playbook", null, { phone: "(303) 555-0142" }),
+  );
+  assert.equal(data.ok, true);
+  assert.equal(data.payload.phone, undefined, "phone must be ignored for the download magnet");
+  assert.equal(data.payload.tags.includes("patent-moat-book"), false);
+}
+
 console.log(
-  "API guardrail behavior passed in no-token preview mode: legacy consent routing, final magnet scoring, final tags/custom fields, download payload validation, and opt-in-only legacy workflows.",
+  "API guardrail behavior passed in no-token preview mode: legacy consent routing, final magnet scoring, final tags/custom fields, download payload validation, opt-in-only legacy workflows, and Patent Moat book magnets with required-phone validation.",
 );

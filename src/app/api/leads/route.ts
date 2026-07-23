@@ -140,6 +140,7 @@ type FinalLeadPayload = {
   name?: unknown;
   email?: unknown;
   company?: unknown;
+  phone?: unknown;
   qualifying_status?: unknown;
   permission_acknowledged?: unknown;
   magnet_slug?: unknown;
@@ -152,6 +153,7 @@ type HighLevelPayload = {
   firstName: string;
   lastName: string;
   email: string;
+  phone?: string;
   companyName: string | undefined;
   tags: string[];
   customFields: { key: string; field_value: unknown }[];
@@ -162,7 +164,20 @@ const finalMagnetTags: Record<MagnetSlug, string> = {
   "patent-moat-scorecard": "magnet-patent-moat-scorecard",
   "governance-plan": "magnet-governance-plan",
   "outside-counsel-playbook": "magnet-outside-counsel-playbook",
+  "disclosure-self-audit": "magnet-disclosure-self-audit",
+  "chain-of-title-audit": "magnet-chain-of-title-audit",
+  "routing-matrix": "magnet-routing-matrix",
+  "ip-data-room-checklist": "magnet-ip-data-room-checklist",
 };
+
+const patentMoatBookSlugs = new Set<MagnetSlug>([
+  "disclosure-self-audit",
+  "chain-of-title-audit",
+  "routing-matrix",
+  "ip-data-room-checklist",
+]);
+
+const approvedPhonePattern = /^[\d\s()+.\-]{7,25}$/;
 
 const subScoreFieldKeys: Record<Exclude<MagnetSlug, "outside-counsel-playbook">, Record<string, string>> = {
   "ai-risk-triage": {
@@ -179,6 +194,30 @@ const subScoreFieldKeys: Record<Exclude<MagnetSlug, "outside-counsel-playbook">,
     exit_fit: "moat_exit_fit",
   },
   "governance-plan": {},
+  "disclosure-self-audit": {
+    public_disclosure: "disclosure_public_disclosure_score",
+    on_sale: "disclosure_on_sale_score",
+    filing: "disclosure_filing_score",
+    process: "disclosure_process_score",
+  },
+  "chain-of-title-audit": {
+    founders: "title_founders_score",
+    contributors: "title_contributors_score",
+    institutions: "title_institutions_score",
+    records: "title_records_score",
+  },
+  "routing-matrix": {
+    core: "routing_core_score",
+    secrecy: "routing_secrecy_score",
+    discipline: "routing_discipline_score",
+  },
+  "ip-data-room-checklist": {
+    title: "dataroom_title_score",
+    scope: "dataroom_scope_score",
+    fto: "dataroom_fto_score",
+    hygiene: "dataroom_hygiene_score",
+    encumbrances: "dataroom_encumbrances_score",
+  },
 };
 
 function splitName(name = "") {
@@ -378,6 +417,15 @@ function validateFinalPayload(payload: FinalLeadPayload) {
     return { error: "Permission acknowledgment is required." };
   }
 
+  let phone: string | undefined;
+  if ("requirePhone" in config && config.requirePhone) {
+    const phoneValue = typeof payload.phone === "string" ? payload.phone.trim() : "";
+    if (!phoneValue || !approvedPhonePattern.test(phoneValue)) {
+      return { error: "A valid phone number is required for this tool." };
+    }
+    phone = phoneValue;
+  }
+
   if (config.kind === "download") {
     if (payload.answers !== undefined || payload.mode !== undefined) {
       return { error: "The outside counsel playbook does not accept assessment answers." };
@@ -405,7 +453,7 @@ function validateFinalPayload(payload: FinalLeadPayload) {
         : "founder"
       : undefined;
 
-  return { config, name, email, company, qualifyingStatus, answers: payload.answers, mode };
+  return { config, name, email, company, phone, qualifyingStatus, answers: payload.answers, mode };
 }
 
 function finalCustomFields({
@@ -512,6 +560,7 @@ async function handleFinalMagnetSubmission(payload: FinalLeadPayload) {
   const { config, name, email, company, qualifyingStatus } = validation;
   const { firstName, lastName } = splitName(name);
   const answers = "answers" in validation ? validation.answers : undefined;
+  const phone = "phone" in validation ? validation.phone : undefined;
   let result: AssessmentResult | DownloadResult;
   try {
     result =
@@ -527,6 +576,7 @@ async function handleFinalMagnetSubmission(payload: FinalLeadPayload) {
   const tags = [
     "whiteford-mountain-west",
     finalMagnetTags[config.slug],
+    ...(patentMoatBookSlugs.has(config.slug) ? ["patent-moat-book"] : []),
     ...(result.magnet_slug === "outside-counsel-playbook" ? [] : [result.tier.tag]),
     ...(result.magnet_slug === "patent-moat-scorecard" ? [`moat-mode-${result.mode ?? "founder"}`] : []),
     "newsletter:ai",
@@ -536,6 +586,7 @@ async function handleFinalMagnetSubmission(payload: FinalLeadPayload) {
     firstName,
     lastName,
     email,
+    ...(phone ? { phone } : {}),
     companyName: company,
     tags,
     customFields: finalCustomFields({
