@@ -69,6 +69,38 @@ const pages = [
     needsReportSlot: false,
     hasEmailPdfForm: true,
   },
+  {
+    name: "The Disclosure Self-Audit",
+    source: read("src/lib/learn/disclosure-self-audit.ts"),
+    brandMarker: '<div class="brand-lockup">',
+    footerMarker: '<div class="footer-lockup">',
+    needsReportSlot: true,
+    isPatentMoatBookTool: true,
+  },
+  {
+    name: "The Chain-of-Title Audit",
+    source: read("src/lib/learn/chain-of-title-audit.ts"),
+    brandMarker: '<div class="brand-lockup">',
+    footerMarker: '<div class="footer-lockup">',
+    needsReportSlot: true,
+    isPatentMoatBookTool: true,
+  },
+  {
+    name: "The Routing Matrix",
+    source: read("src/lib/learn/routing-matrix.ts"),
+    brandMarker: '<div class="brand-lockup">',
+    footerMarker: '<div class="footer-lockup">',
+    needsReportSlot: true,
+    isPatentMoatBookTool: true,
+  },
+  {
+    name: "The IP Data Room Checklist",
+    source: read("src/lib/learn/ip-data-room-checklist.ts"),
+    brandMarker: '<div class="brand-lockup">',
+    footerMarker: '<div class="footer-lockup">',
+    needsReportSlot: true,
+    isPatentMoatBookTool: true,
+  },
 ];
 
 for (const asset of [
@@ -104,6 +136,10 @@ assert.match(globals, /--font-sans:\s*"DM Sans"/, "Tailwind font-sans should use
 assert.match(globals, /--font-mono:\s*"IBM Plex Mono"/, "Tailwind font-mono should use IBM Plex Mono");
 assert.ok(rootPage.includes('href: "/governance-plan"'), "Directory must link to /governance-plan");
 assert.ok(rootPage.includes('href: "/outside-counsel-playbook"'), "Directory must link to /outside-counsel-playbook");
+assert.ok(rootPage.includes('href: "/disclosure-self-audit"'), "Directory must link to /disclosure-self-audit");
+assert.ok(rootPage.includes('href: "/chain-of-title-audit"'), "Directory must link to /chain-of-title-audit");
+assert.ok(rootPage.includes('href: "/routing-matrix"'), "Directory must link to /routing-matrix");
+assert.ok(rootPage.includes('href: "/ip-data-room-checklist"'), "Directory must link to /ip-data-room-checklist");
 assert.ok(rootPage.includes("PDF · 5 pages"), "Directory must show the outside counsel PDF meta line");
 assert.ok(rootPage.includes('href="/legacy"'), "Directory root must link to the moved legacy campaign hub");
 assert.doesNotMatch(rootPage, /governance-matrix/, "Directory must not use old governance-matrix slug");
@@ -142,6 +178,17 @@ for (const page of pages) {
     assert.ok(source.includes("data-learn-report-slot="), `${page.name} missing report form slot`);
     assert.ok(source.includes("data-cal-link=\"jeffschell/meeting-with-jeff-schell\""), `${page.name} missing Cal.com button link`);
     assert.doesNotMatch(source, /Cal\("init"|app\.cal\.com\/embed\/embed\.js/i, `${page.name} must not embed per-page Cal.com script`);
+  }
+
+  if (page.isPatentMoatBookTool) {
+    assert.ok(
+      source.includes("From &quot;The Patent Moat: How Startup Founders Turn Ideas Into Defensible, Fundable Companies&quot; by Jeff Schell"),
+      `${page.name} missing Patent Moat book attribution`,
+    );
+    assert.ok(
+      source.includes('href="https://www.schellip.com"'),
+      `${page.name} missing schellip.com consultation CTA`,
+    );
   }
 }
 
@@ -184,6 +231,11 @@ for (const token of [
   "magnet-patent-moat-scorecard",
   "magnet-governance-plan",
   "magnet-outside-counsel-playbook",
+  "magnet-disclosure-self-audit",
+  "magnet-chain-of-title-audit",
+  "magnet-routing-matrix",
+  "magnet-ip-data-room-checklist",
+  "patent-moat-book",
   "last_magnet_slug",
   "last_magnet_score",
   "last_magnet_score_max",
@@ -195,12 +247,25 @@ for (const token of [
   assert.ok(`${leadRoute} ${magnetConfig}`.includes(token), `Final /api/leads route missing token: ${token}`);
 }
 assert.ok(magnetConfig.includes(finalComplianceText), "Shared final compliance block must be verbatim");
+for (const token of [
+  "label=\"Phone*\"",
+  "type=\"tel\"",
+  "inputMode=\"tel\"",
+  "config.requirePhone",
+]) {
+  assert.ok(leadMagnetFlow.includes(token), `Final lead magnet flow missing phone token: ${token}`);
+}
+assert.ok(leadRoute.includes("approvedPhonePattern"), "API route must validate the approved phone pattern for book magnets");
 
 for (const source of [
   globals,
   read("src/lib/learn/ai-risk-triage.ts"),
   read("src/lib/learn/patent-moat-scorecard.ts"),
   read("src/lib/learn/governance-plan.ts"),
+  read("src/lib/learn/disclosure-self-audit.ts"),
+  read("src/lib/learn/chain-of-title-audit.ts"),
+  read("src/lib/learn/routing-matrix.ts"),
+  read("src/lib/learn/ip-data-room-checklist.ts"),
   read("src/app/outside-counsel-playbook/page.tsx"),
 ]) {
   assert.match(source, /\.brand-logo-whiteford\s*\{\s*height:\s*28px;/, "Desktop Whiteford logo height must be 28px");
