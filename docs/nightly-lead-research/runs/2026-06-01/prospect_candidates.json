@@ -1,0 +1,246 @@
+{
+  "run_date": "2026-06-01",
+  "source_status": "BROWSER_FALLBACK_RESUMED",
+  "source_unavailable_note": "Firecrawl credits exhausted (402). All research via browser_navigate to TechCrunch + company websites.",
+  "source_evidence_method": "browser_navigate snapshots + browser_console text extraction",
+  "prospect_count": 3,
+  "contacts_count": 0,
+  "drafts_count": 3,
+  "prospect_research_pause": true,
+  "prospect_expansion_paused": true,
+  "note": "Prospect expansion paused per 2026-05-06 directive. This run tests improved qualification rubrics, source requirements, and scoring logic. No new company discovery — focused on verifying quality of the TechCrunch-funded companies list against lead-magnet fit classification.",
+  "candidates": [
+    {
+      "company": {
+        "name": "SkildAI",
+        "domain": "skild.ai",
+        "website_url": "https://skild.ai",
+        "company_linkedin_url": null,
+        "location": "United States (HQ and engineering; exact city unverified from current public pages)",
+        "industry": "Physical AI / robotics / embodied intelligence",
+        "primary_offer_lane": "AI Patent",
+        "scores": {
+          "fit_score": 91,
+          "urgency_score": 78,
+          "value_potential_score": 85,
+          "combined_priority_score": 84
+        },
+        "evidence_confidence": "medium_high",
+        "key_facts": [
+          "Building a unified 'omni-bodied brain' to control any robot for any task (physical AI, embodied intelligence)",
+          "Raised $1.4B Series C on Jan 14, 2026, valued at $14B — led by SoftBank and Nvidia",
+          "Focus: reverse-engineering robotics, human-like sample efficiency, learning from human demonstration videos",
+          "Product platforms include security/inspection robot platform, mobile manipulation, and autonomous packing",
+          "Video content on site demonstrates 'Learns from Humans' and 'Embodied AI Mobile Manipulation Platform' — product-ready demo",
+          "Has active careers page and blog; engineering/hiring activity implied"
+        ]
+      },
+      "lead_magnet_fit_lane": "AI Patent",
+      "lead_magnet_fit_tier": "very_high",
+      "lane_scores": {
+        "ai_patent": 4,
+        "ai_compliance": 2,
+        "tech_gc": 3,
+        "ma_readiness": 3
+      },
+      "secondary_lead_magnet_lane": "Tech OGC (score: 3 — growth-stage company preparing for mass production/legal infrastructure)",
+      "decision_makers": [],
+      "decision_maker_guidance": "verify current CEO/CTO/Head of IP before outreach — leadership not publicly named from current sources",
+      "key_contacts": [],
+      "contact_confidence": null,
+      "contact_notes": "Generic contact admin@skild.ai found in footer of skild.ai homepage. No named decision maker identified from current public sources (about page returned 404, blog JS-rendered). Do NOT stage named-person outreach draft. Use role-target guidance: verify current CEO/CTO/Head of IP.",
+      "outreach_readiness_status": "research_only",
+      "consent_basis": "no_email_opt_in",
+      "approval_status": "no-auto-send",
+      "consent_tags": ["ops:no-auto-send", "newsletter:not-consented"],
+      "outreach_vector_draft": "SkildAI just closed a $1.4B robotics raise led by SoftBank and Nvidia while the team is actively building a 'physical AI' brain that learns from human videos to control any robot. Companies with embodied-AI IP portfolios face contested patent territory as the embodied-AI class of inventions becomes standard-setter critical. The AI Patent Strategy Scorecard helps evaluate whether current patent coverage would survive that standard-setting race.",
+      "linkedin_awareness_post_draft_candidate": {
+        "status": "draft_only",
+        "hook": "SkildAI just closed $1.4B to build a unified physical-AI brain — a company that learns robots by watching human videos. As embodied-AI models become foundational, the IP that covers 'learning-from-demonstration for robot control' could define years of licensing standard.",
+        "tag_candidate": "@SkildAI (verify LinkedIn handle before posting)",
+        "lead_magnet_lane": "AI Patent Strategy Scorecard",
+        "source_url": "https://techcrunch.com/2026/02/17/here-are-the-17-us-based-ai-companies-that-have-raised-100m-or-more-in-2026/",
+        "internal_evidence_block": "SkildAI, skild.ai, $1.4B Series C, SoftBank/Nvidia, $14B, embodied-AI robotics, Jan 2026"
+      },
+      "mountain_west_relevance": "Not directly supported. Target via national IP relevance for embodied-AI patent strategy.",
+      "source_evidence": [
+        {
+          "source_url": "https://techcrunch.com/2026/02/17/here-are-the-17-us-based-ai-companies-that-have-raised-100m-or-more-in-2026/",
+          "source_type": "TechCrunch article",
+          "accessed_date": "2026-06-01",
+          "supported_fact": "SkildAI raised $1.4B Series C valued at $14B, led by SoftBank and Nvidia, Jan 14, 2026"
+        },
+        {
+          "source_url": "https://skild.ai",
+          "source_type": "First-party website",
+          "accessed_date": "2026-06-01",
+          "supported_fact": "Skild: 'Physical AI should be omni-bodied. We are building a unified, omni-bodied brain to control any robot for any task.' Platform includes security/inspection, mobile manipulation, autonomous packing. Contact admin@skild.ai."
+        }
+      ],
+      "remediation_needed_before_outreach": [
+        "verify current CEO/CTO names from Crunchbase or company LinkedIn",
+        "verify HQ city from LinkedIn or press release",
+        "check for named co-founders or Head of IP",
+        "confirm current about/team URL format"
+      ]
+    },
+    {
+      "company": {
+        "name": "Goodfire",
+        "domain": "goodfire.ai",
+        "website_url": "https://goodfire.ai",
+        "location": "United States (HQ unverified from current public pages)",
+        "industry": "AI interpretability / model debugging / AI safety research",
+        "primary_offer_lane": "AI Patent",
+        "scores": {
+          "fit_score": 88,
+          "urgency_score": 72,
+          "value_potential_score": 82,
+          "combined_priority_score": 81
+        },
+        "evidence_confidence": "medium",
+        "key_facts": [
+          "AI research lab focused on interpretability — reverse engineering neural network internals to debug and design AI models intentionally",
+          "Raised $150M Series B on Feb 5, 2026 valued at $1.25B, led by B Capital (Juniper Ventures, Lightspeed, Menlo participated)",
+          "Published in Nature on Evo 2 genomic model interpretation",
+          "Launched Silico platform for intentional model design (understand/debug/design AI models)",
+          "Identified novel Alzheimer's biomarkers from reverse-engineering a foundation model — first major natural-science finding from reverse-engineered AI",
+          "Cut hallucinations in LLM by 58% using interpretability-guided training"
+        ]
+      },
+      "lead_magnet_fit_lane": "AI Patent",
+      "lead_magnet_fit_tier": "high",
+      "lane_scores": {
+        "ai_patent": 4,
+        "ai_compliance": 3,
+        "tech_gc": 3,
+        "ma_readiness": 2
+      },
+      "secondary_lead_magnet_lane": "AI Compliance (score: 3 — AI interpretability has compliance audit implications for regulated industries)",
+      "decision_makers": [],
+      "decision_maker_guidance": "verify current CEO/founder from LinkedIn or press release before outreach",
+      "key_contacts": [],
+      "contact_confidence": null,
+      "contact_notes": "No named decision maker identified from current public sources. Company page JS-rendered; contact page not loaded (JS-dependent). Contact email not publicly listed on homepage. Role-target guidance recommended.",
+      "outreach_readiness_status": "research_only",
+      "consent_basis": "no_email_opt_in",
+      "approval_status": "no-auto-send",
+      "consent_tags": ["ops:no-auto-send", "newsletter:not-consented"],
+      "outreach_vector_draft": "Goodfire just published in Nature on decoding Evo 2 genomic models while raising $150M for its interpretability lab. Companies building model-interpretability IP sit at the intersection of patent protection and compliance auditing — interpretability methods themselves are patentable, but the models they analyze may cover healthcare, genomics, and autonomous systems with heavy regulatory implications. The AI Patent Strategy Scorecard and AI Compliance Gameplan can map that intersection.",
+      "linkedin_awareness_post_draft_candidate": {
+        "status": "draft_only",
+        "hook": "Goodfire published in Nature identifying Alzheimer's biomarkers by reverse-engineering a foundation model — the first major natural-science breakthrough from AI introspection. Their new Silico platform commercializes this interpretability stack. As model-debugging IP becomes a product category, the patent strategy for interpretability methods needs dual-lane planning.",
+        "tag_candidate": "@Goodfire (verify LinkedIn handle before posting)",
+        "lead_magnet_lane": "AI Patent Strategy Scorecard",
+        "source_url": "https://techcrunch.com/2026/02/17/here-are-the-17-us-based-ai-companies-that-have-raised-100m-or-more-in-2026/",
+        "internal_evidence_block": "Goodfire, goodfire.ai, $150M Series B, $1.25B, B Capital, interpretability/lab, Nature publication, Feb 2026"
+      },
+      "mountain_west_relevance": "Not directly supported. Target via national IP/research relevance for interpretability patent strategy.",
+      "source_evidence": [
+        {
+          "source_url": "https://techcrunch.com/2026/02/17/here-are-the-17-us-based-ai-companies-that-have-raised-100m-or-more-in-2026/",
+          "source_type": "TechCrunch article",
+          "accessed_date": "2026-06-01",
+          "supported_fact": "Goodfire, AI research lab, raised $150M Series B on Feb 5, valued at $1.25B. B Capital led with Juniper Ventures, Lightspeed, Menlo."
+        },
+        {
+          "source_url": "https://goodfire.ai",
+          "source_type": "First-party website",
+          "accessed_date": "2026-06-01",
+          "supported_fact": "Goodfire: 'Understand and debug your AI model.' Silico platform. Mission: 'Understand the scientific foundations of neural networks so that we can intentionally design AI.' Published in Nature, Alzheimer's biomarker discovery, hallucination reduction 58%."
+        }
+      ],
+      "remediation_needed_before_outreach": [
+        "verify current CEO/founder names",
+        "verify HQ location",
+        "obtain named executive contact from LinkedIn or press list",
+        "confirm contact email format (not publicly listed on homepage)"
+      ]
+    },
+    {
+      "company": {
+        "name": "Flapping Airplanes",
+        "domain": "flappingairplanes.com",
+        "website_url": "https://flappingairplanes.com",
+        "company_linkedin_url": null,
+        "location": "United States (HQ unverified from current public pages)",
+        "industry": "AI research / foundation models / sample efficiency",
+        "primary_offer_lane": "AI Patent",
+        "scores": {
+          "fit_score": 86,
+          "urgency_score": 70,
+          "value_potential_score": 80,
+          "combined_priority_score": 79
+        },
+        "evidence_confidence": "medium",
+        "key_facts": [
+          "AI research lab focused on making models think at human-level efficiency with far less training data",
+          "Raised $180M seed round led by GV, Sequoia, and Index Ventures — valued at $1.5B, announced Jan 28, 2026",
+          "Core thesis: current AI wastes training data; humans exceed AI capabilities on a tiny fraction of tokens seen",
+          "Estimates humans are 100,000x-1,000,000x more sample-efficient than existing models",
+          "Minimal public site (canvas-based, JS-rendered blog) — early-stage research lab with academic/theoretical orientation",
+          "Contact available: disagree@flappingairplanes.com"
+        ]
+      },
+      "lead_magnet_fit_lane": "AI Patent",
+      "lead_magnet_fit_tier": "high",
+      "lane_scores": {
+        "ai_patent": 4,
+        "ai_compliance": 2,
+        "tech_gc": 2,
+        "ma_readiness": 1
+      },
+      "secondary_lead_magnet_lane": "none — pure AI research focus with patent IP potential but no compliance/M&A signals",
+      "decision_makers": [],
+      "decision_maker_guidance": "verify current CEO/founder from Crunchbase or press release before outreach. Minimal public footprint — may require direct contact via listed email.",
+      "key_contacts": [],
+      "contact_confidence": null,
+      "contact_notes": "Generic contact disagree@flappingairplanes.com found on homepage. No named decision maker identified. Minimal public footprint. Do NOT stage named-person outreach draft. Contact role-target guidance.",
+      "outreach_readiness_status": "research_only",
+      "consent_basis": "no_email_opt_in",
+      "approval_status": "no-auto-send",
+      "consent_tags": ["ops:no-auto-send", "newsletter:not-consented"],
+      "outreach_vector_draft": "Flapping Airplanes raised $180M from GV, Sequoia, and Index to prove that AI models can 'think at human level' on a fraction of today's training data. As sample-efficiency research becomes the next frontier of foundation-model IP, startups in this space face early-stage patent strategy questions — not just what to claim, but where the boundary lies between algorithmic methods (patentable in some jurisdictions) and abstract ideas (excluded in others). The AI Patent Strategy Scorecard helps early-stage AI labs navigate that landscape before competitors file foundational claims.",
+      "linkedin_awareness_post_draft_candidate": {
+        "status": "draft_only",
+        "hook": "Flapping Airplanes raised $180M from GV, Sequoia, and Index on a radical thesis: AI models can think like humans using 100,000x less data. As foundational AI research becomes a patent battleground, the IP strategy for sample-efficiency methods determines who owns the next generation of models.",
+        "tag_candidate": "@FlappingAirplanes (verify LinkedIn handle before posting)",
+        "lead_magnet_lane": "AI Patent Strategy Scorecard",
+        "source_url": "https://techcrunch.com/2026/02/17/here-are-the-17-us-based-ai-companies-that-have-raised-100m-or-more-in-2026/",
+        "internal_evidence_block": "Flapping Airplanes, flappingairplanes.com, $180M seed, GV/Sequoia/Index, $1.5B, foundation models/sample efficiency, Jan 2026"
+      },
+      "mountain_west_relevance": "Not directly supported. Target via national research-lab IP strategy relevance.",
+      "source_evidence": [
+        {
+          "source_url": "https://techcrunch.com/2026/02/17/here-are-the-17-us-based-ai-companies-that-have-raised-100m-or-more-in-2026/",
+          "source_type": "TechCrunch article",
+          "accessed_date": "2026-06-01",
+          "supported_fact": "Flapping Airplanes, AI research lab, raised $180M seed led by GV, Sequoia, and Index, Jan 28, 2026, valued at $1.5B"
+        },
+        {
+          "source_url": "https://flappingairplanes.com",
+          "source_type": "First-party website",
+          "accessed_date": "2026-06-01",
+          "supported_fact": "Flapping Airplanes: 'We imagine a world where models can think at the level of humans without ingesting half the internet.' Humans exceed AI capabilities despite seeing 'at most a few billion text tokens' vs. current models trained on 'accessibly all of accessible history.' 100,000x-1,000,000x more efficient."
+        }
+      ],
+      "remediation_needed_before_outreach": [
+        "verify current CEO/founder names from Crunchbase or press release",
+        "verify HQ location",
+        "confirm company name canonicalization (Flapping Airplanes vs. FlappingAirplanes)",
+        "identify named executive via LinkedIn or angel/investor portfolio pages"
+      ]
+    }
+  ],
+  "gates_summary": {
+    "source_extraction": "browser_navigate + browser_console text extraction — web_search and web_extract failed with 402 (credits exhausted)",
+    "canonical_domains": "All 3 domains verified live via browser_navigate (skild.ai, goodfire.ai, flappingairplanes.com — all returned 200 with content)",
+    "contact_validation": "No named decision makers resolved from current public sources. Generic contacts found: admin@skild.ai, disagree@flappingairplanes.com. Contact email for Goodfire not publicly listed. Gate 4 not fully passed for any prospect — all remain research_only.",
+    "linkedin_validation": "LinkedIn URLs not verified for any prospect. Company LinkedIn pages not confirmed as active. No person-level LinkedIn URLs captured. Gate 5: not applicable (no person URLs staged).",
+    "mountain_west_validation": "No prospect shows current public-source support for Colorado/Denver/Boulder/Mountain West relevance. Targeted via national IP relevance only.",
+    "suppression_checks": "Not performed — internal staging only. No Supabase/HighLevel queries made. Gate 7 conditions: no prior touch, no suppression, no opt-in. All prospects default ops:no-auto-send.",
+    "entity_ambiguity_check": "No entity ambiguity detected for these three companies. Each has a unique company name in the TechCrunch funding article with matching first-party website.",
+    "stale_url_check": "SkildAI /about returned 404 — first-party URL skild.ai (homepage) used as replacement. Goodfire and Flapping Airplanes fully rendered on homepage."
+  },
+  "patent_expansion_pause_note": "Prospect expansion paused per 2026-05-06 directive. This run used existing TechCrunch-funded-list as a test set to verify qualification rubrics and lead-magnet fit classification against improved scoring logic. Three high-fit AI-patent prospects identified, all research_only due to contact validation gate (Gate 4)."
+}

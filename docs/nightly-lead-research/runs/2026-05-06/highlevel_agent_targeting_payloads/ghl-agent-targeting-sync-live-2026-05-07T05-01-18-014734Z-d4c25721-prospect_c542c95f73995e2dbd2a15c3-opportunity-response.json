@@ -1,0 +1,39 @@
+{
+  "body": {
+    "opportunity": {
+      "contact": {
+        "companyName": "Nexar",
+        "followers": [],
+        "id": "W4Nl8orLw9XRbxuqFSvu",
+        "name": "Nexar Agent Targeting",
+        "tags": []
+      },
+      "contactId": "W4Nl8orLw9XRbxuqFSvu",
+      "createdAt": "2026-05-07T05:01:21.219Z",
+      "followers": [],
+      "id": "NzoQ2XJ4biAJWiUhKHgT",
+      "internalSource": {
+        "apiVersion": "2021-07-28",
+        "channel": "OAUTH",
+        "id": "69f97a4042f2b054fe684553",
+        "source": "INTEGRATION",
+        "type": "CREATED"
+      },
+      "isAttribute": false,
+      "lastActionDate": "2026-05-07T05:01:21.219Z",
+      "lastStageChangeAt": "2026-05-07T05:01:21.219Z",
+      "lastStatusChangeAt": "2026-05-07T05:01:21.219Z",
+      "locationId": "tm68WWMrcAa3TqQbEAMa",
+      "monetaryValue": 0,
+      "name": "Nexar \u2014 Agent Targeting",
+      "pipelineId": "Tbx4tA6wHv5lTwZPSHyZ",
+      "pipelineStageId": "fd569cf4-979b-43b8-bd0f-78e807e80ff1",
+      "source": "Growth OS nightly prospect research - Agent Targeting (prospect_c542c95f73995e2dbd2a15c3)",
+      "status": "open",
+      "updatedAt": "2026-05-07T05:01:21.219Z"
+    },
+    "traceId": "89d6c430-28f9-4532-88eb-8879496395f7"
+  },
+  "ok": true,
+  "status": 201
+}

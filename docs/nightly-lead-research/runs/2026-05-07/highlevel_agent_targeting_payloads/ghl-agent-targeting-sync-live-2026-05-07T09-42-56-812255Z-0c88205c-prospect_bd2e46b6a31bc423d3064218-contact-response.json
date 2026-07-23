@@ -1,0 +1,55 @@
+{
+  "body": {
+    "contact": {
+      "companyName": "PickNik Robotics",
+      "country": "US",
+      "createdBy": {
+        "channel": "OAUTH",
+        "source": "INTEGRATION",
+        "sourceId": "69f97a4042f2b054fe684553",
+        "timestamp": "2026-05-07T09:43:00.709Z"
+      },
+      "customFields": [],
+      "dateAdded": "2026-05-07T09:43:00.710Z",
+      "dateUpdated": "2026-05-07T09:43:00.710Z",
+      "deleted": false,
+      "dnd": true,
+      "dndDate": "2026-05-07T09:43:00.710Z",
+      "dndSettings": {
+        "Call": {
+          "message": "Internal agent targeting placeholder; no outreach until Jeff approval.",
+          "status": "active"
+        },
+        "SMS": {
+          "message": "Internal agent targeting placeholder; no outreach until Jeff approval.",
+          "status": "active"
+        },
+        "WhatsApp": {
+          "message": "Internal agent targeting placeholder; no outreach until Jeff approval.",
+          "status": "active"
+        }
+      },
+      "firstName": "PickNik",
+      "firstNameLowerCase": "picknik",
+      "fullNameLowerCase": "picknik robotics agent targeting",
+      "id": "r3pniC1hx2ej8N3QmPDQ",
+      "lastName": "Robotics Agent Targeting",
+      "lastNameLowerCase": "robotics agent targeting",
+      "lastSessionActivityAt": "2026-05-07T09:43:00.710Z",
+      "lastUpdatedBy": {
+        "channel": "OAUTH",
+        "source": "INTEGRATION",
+        "sourceId": "69f97a4042f2b054fe684553",
+        "timestamp": "2026-05-07T09:43:00.709Z"
+      },
+      "locationId": "tm68WWMrcAa3TqQbEAMa",
+      "source": "Growth OS nightly prospect research - Agent Targeting (prospect_bd2e46b6a31bc423d3064218)",
+      "tags": [],
+      "type": "lead",
+      "website": "https://picknik.ai"
+    },
+    "traceId": "471a2b1d-8f88-4b83-b776-eaede7622122"
+  },
+  "ok": true,
+  "status": 201
+}

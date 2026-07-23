@@ -1,0 +1,279 @@
+{
+  "fixtureBundle": "tech_gc_synthetic_no_token_qa_fixture_bundle_2026-05-10",
+  "status": "prepared_not_executed",
+  "scope": "local_no_token_synthetic_only",
+  "guardrailVersion": "lead-magnet-guardrail-v2",
+  "publicFormInputType": "categorical_non_confidential",
+  "campaignKey": "tech-gc",
+  "sourcePage": "test-tech-gc#lead-magnet",
+  "sourceChannel": "local-no-token-fixture-bundle",
+  "fixtures": [
+    {
+      "id": "TGC-01",
+      "name": "opted_in_valid_preview_payload",
+      "purpose": "Confirm affirmative opt-in produces preview-only Tech GC routing metadata without live mode when tokens are absent.",
+      "payload": {
+        "campaignKey": "tech-gc",
+        "sourcePage": "test-tech-gc#lead-magnet",
+        "sourceChannel": "local-no-token-fixture-bundle",
+        "disclaimerAccepted": true,
+        "reportRequested": true,
+        "privacyGuardrailVersion": "lead-magnet-guardrail-v2",
+        "publicFormInputType": "categorical_non_confidential",
+        "contact": {
+          "name": "Ada Lovelace",
+          "email": "test-tech-gc-optin@test.invalid",
+          "company": "Example Test Co",
+          "role": "Founder",
+          "roleCategory": "Founder / CEO",
+          "subscribe": true
+        },
+        "assessment": {
+          "readinessScore": 42,
+          "band": {
+            "label": "Good foundation with visible gaps",
+            "cta": "Tech Company OGC Launchpad"
+          },
+          "tags": [
+            "workflow:malicious-client-tag",
+            "test:kept"
+          ]
+        },
+        "techLegalHealth": {
+          "score": 42,
+          "band": "Good foundation with visible gaps",
+          "companyMoment": "Enterprise sales motion",
+          "categoryScores": {
+            "contracts": 1,
+            "ip": 2,
+            "workforce": 1,
+            "dataAi": 1,
+            "deals": 2
+          },
+          "lowestCategory": "Contract Stack",
+          "topActions": [
+            "Refresh contract stack",
+            "Assign contract approval owner"
+          ],
+          "branchSignals": [
+            "signal:ai-compliance"
+          ],
+          "answers": [
+            "contract-templates:1",
+            "contract-ownership:0"
+          ],
+          "reportVersion": "tech-legal-health-privacy-guardrail-v2"
+        }
+      },
+      "expected": {
+        "httpStatus": 200,
+        "mode": "preview",
+        "payloadLocationId": "undefined",
+        "mustIncludeTags": [
+          "whiteford-mountain-west",
+          "leadmagnet:tech-gc-checklist",
+          "interest:tech-ogc",
+          "workflow:tech-gc-launchpad",
+          "newsletter:ai"
+        ],
+        "mustNotIncludeTags": [
+          "workflow:malicious-client-tag",
+          "test:kept",
+          "newsletter:not-consented"
+        ],
+        "campaignRouting": {
+          "triggerTag": "workflow:tech-gc-launchpad",
+          "emailSequenceLength": 4,
+          "consentBasis": "lead_magnet_email_opt_in:tech-gc"
+        },
+        "customFields": {
+          "consent_basis": "lead_magnet_email_opt_in:tech-gc",
+          "approval_status": "pending",
+          "campaign_key": "tech-gc",
+          "tech_legal_health_report_version": "tech-legal-health-privacy-guardrail-v2"
+        }
+      }
+    },
+    {
+      "id": "TGC-02",
+      "name": "non_opted_valid_preview_payload",
+      "purpose": "Confirm browser-only non-opted result receives no workflow trigger, no newsletter opt-in tag, and no email sequence.",
+      "payload": {
+        "campaignKey": "tech-gc",
+        "sourcePage": "test-tech-gc#lead-magnet",
+        "sourceChannel": "local-no-token-fixture-bundle",
+        "disclaimerAccepted": true,
+        "reportRequested": true,
+        "privacyGuardrailVersion": "lead-magnet-guardrail-v2",
+        "publicFormInputType": "categorical_non_confidential",
+        "contact": {
+          "name": "Ada Lovelace",
+          "email": "test-tech-gc-noopt@test.invalid",
+          "company": "Example Test Co",
+          "role": "Founder",
+          "roleCategory": "Founder / CEO",
+          "subscribe": false
+        },
+        "assessment": {
+          "readinessScore": 66,
+          "band": {
+            "label": "Operational legal drag",
+            "cta": "Tech Company OGC Launchpad"
+          },
+          "tags": [
+            "workflow:evil",
+            "newsletter:ai",
+            "leadmagnet:forged"
+          ]
+        },
+        "techLegalHealth": {
+          "score": 66,
+          "band": "Operational legal drag",
+          "companyMoment": "Enterprise sales motion",
+          "categoryScores": {
+            "contracts": 2
+          },
+          "lowestCategory": "Contracts",
+          "topActions": [
+            "Standardize sales paper"
+          ],
+          "branchSignals": [
+            "enterprise-readiness"
+          ],
+          "answers": [
+            "contracts-basic"
+          ],
+          "reportVersion": "test"
+        }
+      },
+      "expected": {
+        "httpStatus": 200,
+        "mode": "preview",
+        "payloadLocationId": "undefined",
+        "mustIncludeTags": [
+          "whiteford-mountain-west",
+          "leadmagnet:tech-gc-checklist",
+          "interest:tech-ogc",
+          "newsletter:not-consented"
+        ],
+        "mustNotIncludeTags": [
+          "workflow:tech-gc-launchpad",
+          "workflow:evil",
+          "newsletter:ai",
+          "leadmagnet:forged"
+        ],
+        "campaignRouting": {
+          "triggerTag": null,
+          "emailSequenceLength": 0,
+          "consentBasis": "no_email_opt_in"
+        },
+        "customFields": {
+          "consent_basis": "no_email_opt_in",
+          "approval_status": "no-auto-send"
+        }
+      }
+    },
+    {
+      "id": "TGC-03",
+      "name": "subscribe_omitted_treated_as_non_opted",
+      "purpose": "Confirm absent consent is not inferred as opt-in.",
+      "payloadFrom": "TGC-02",
+      "mutation": "delete payload.contact.subscribe and set contact.email to test-tech-gc-subscribe-omitted@test.invalid",
+      "expected": {
+        "httpStatus": 200,
+        "mode": "preview",
+        "mustIncludeTags": ["newsletter:not-consented"],
+        "mustNotIncludeTags": ["workflow:tech-gc-launchpad", "newsletter:ai"],
+        "campaignRouting": { "triggerTag": null, "emailSequenceLength": 0, "consentBasis": "no_email_opt_in" },
+        "customFields": { "consent_basis": "no_email_opt_in", "approval_status": "no-auto-send" }
+      }
+    },
+    {
+      "id": "TGC-04",
+      "name": "disclaimer_not_accepted_rejected",
+      "purpose": "Confirm report request cannot proceed without the educational/no-confidential/no-ACR gate.",
+      "payloadFrom": "TGC-02",
+      "mutation": "set disclaimerAccepted to false and contact.email to test-tech-gc-disclaimer@test.invalid",
+      "expected": {
+        "httpStatus": 400,
+        "errorIncludes": "Disclaimer acceptance is required before requesting an interactive lead-magnet report."
+      }
+    },
+    {
+      "id": "TGC-05A",
+      "name": "missing_guardrail_version_rejected",
+      "payloadFrom": "TGC-02",
+      "mutation": "delete privacyGuardrailVersion and set contact.email to test-tech-gc-missing-guardrail@test.invalid",
+      "expected": { "httpStatus": 400, "errorIncludes": "approved privacy guardrail version" }
+    },
+    {
+      "id": "TGC-05B",
+      "name": "wrong_guardrail_version_rejected",
+      "payloadFrom": "TGC-02",
+      "mutation": "set privacyGuardrailVersion to client-bypass-v0 and contact.email to test-tech-gc-wrong-guardrail@test.invalid",
+      "expected": { "httpStatus": 400, "errorIncludes": "approved privacy guardrail version" }
+    },
+    {
+      "id": "TGC-06",
+      "name": "wrong_public_input_type_rejected",
+      "payloadFrom": "TGC-02",
+      "mutation": "set publicFormInputType to free_text_confidential and contact.email to test-tech-gc-input-type@test.invalid",
+      "expected": { "httpStatus": 400, "errorIncludes": "public form input type must match the approved categorical schema" }
+    },
+    {
+      "id": "TGC-07",
+      "name": "malicious_client_tags_stripped",
+      "payloadFrom": "TGC-02",
+      "mutation": "set assessment.tags to workflow:evil, client:arbitrary, newsletter:ai, leadmagnet:forged and contact.email to test-tech-gc-malicious-tags@test.invalid",
+      "expected": {
+        "httpStatus": 200,
+        "mode": "preview",
+        "mustIncludeTags": ["newsletter:not-consented"],
+        "mustNotIncludeTags": ["workflow:evil", "client:arbitrary", "newsletter:ai", "leadmagnet:forged"],
+        "campaignRouting": { "triggerTag": null, "emailSequenceLength": 0 }
+      }
+    },
+    {
+      "id": "TGC-08A",
+      "name": "unexpected_tech_payload_key_rejected",
+      "payloadFrom": "TGC-02",
+      "mutation": "add techLegalHealth.confidentialNarrative and set contact.email to test-tech-gc-unexpected-key@test.invalid",
+      "expected": { "httpStatus": 400, "errorIncludes": "tech legal health payload must use the approved compact schema" }
+    },
+    {
+      "id": "TGC-08B",
+      "name": "html_tech_payload_rejected",
+      "payloadFrom": "TGC-02",
+      "mutation": "set techLegalHealth.lowestCategory to <script>alert(1)</script> and contact.email to test-tech-gc-html@test.invalid",
+      "expected": { "httpStatus": 400, "errorIncludes": "tech legal health payload must use the approved compact schema" }
+    },
+    {
+      "id": "TGC-08C",
+      "name": "out_of_range_score_rejected",
+      "payloadFrom": "TGC-02",
+      "mutation": "set techLegalHealth.score to 101 and contact.email to test-tech-gc-score@test.invalid",
+      "expected": { "httpStatus": 400, "errorIncludes": "tech legal health payload must use the approved compact schema" }
+    },
+    {
+      "id": "TGC-08D",
+      "name": "oversized_array_rejected",
+      "payloadFrom": "TGC-02",
+      "mutation": "set techLegalHealth.topActions to 13 compact strings and contact.email to test-tech-gc-array-cap@test.invalid",
+      "expected": { "httpStatus": 400, "errorIncludes": "tech legal health payload must use the approved compact schema" }
+    }
+  ],
+  "preparedButNotExecutedChecks": [
+    "P-01 no-token posture",
+    "P-02 static frontend guardrail parity",
+    "P-03 opted-in routing preview",
+    "P-04 non-opted routing",
+    "P-05 subscribe omitted",
+    "P-06 disclaimer enforcement",
+    "P-07 guardrail version enforcement",
+    "P-08 public input type enforcement",
+    "P-09 malicious tag stripping",
+    "P-10 compact schema enforcement",
+    "P-11 browser-only fulfillment screenshots",
+    "P-12 copy/legal safety review"
+  ]
+}

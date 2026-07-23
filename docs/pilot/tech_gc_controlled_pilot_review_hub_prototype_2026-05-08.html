@@ -1,0 +1,409 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tech GC Controlled-Pilot Review Hub — Internal Prototype</title>
+  <style>
+    :root {
+      --ink: #121827;
+      --navy: #213f77;
+      --navy-2: #172b52;
+      --cream: #f7f5ef;
+      --paper: #fffdf8;
+      --white: #ffffff;
+      --line: #d8d0c3;
+      --line-strong: #b9ad9c;
+      --muted: #5d6678;
+      --gold: #b99057;
+      --gold-soft: #f4eadb;
+      --sage: #55776a;
+      --sage-soft: #eef5f1;
+      --amber: #76541a;
+      --amber-soft: #fff8e8;
+      --red: #8d332d;
+      --red-soft: #fff0ed;
+      --blue-soft: #eef3fb;
+      --shadow: 0 24px 70px rgba(18, 24, 39, 0.09);
+      --radius: 0px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        linear-gradient(90deg, rgba(18, 24, 39, 0.045) 1px, transparent 1px),
+        linear-gradient(180deg, rgba(18, 24, 39, 0.035) 1px, transparent 1px),
+        var(--cream);
+      background-size: 72px 72px;
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      line-height: 1.48;
+    }
+
+    a { color: var(--navy); text-decoration-thickness: 1px; text-underline-offset: 4px; }
+    a:focus-visible, button:focus-visible { outline: 3px solid rgba(185, 144, 87, 0.55); outline-offset: 3px; }
+    code { background: #f0ebe2; border: 1px solid rgba(216, 208, 195, 0.8); padding: 2px 5px; font-size: 0.92em; }
+
+    .shell { max-width: 1440px; margin: 0 auto; padding: 28px 20px 64px; }
+    .topline {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 18px;
+      align-items: start;
+      border: 1px solid var(--line-strong);
+      background: rgba(255, 253, 248, 0.88);
+      padding: 16px;
+      box-shadow: var(--shadow);
+    }
+    .classification {
+      color: var(--amber);
+      background: var(--amber-soft);
+      border: 1px solid #d8c08b;
+      padding: 10px 12px;
+      font-size: 13px;
+      font-weight: 750;
+    }
+    .date-block {
+      min-width: 210px;
+      border: 1px solid var(--line);
+      background: var(--white);
+      padding: 12px;
+      text-align: right;
+      font-size: 13px;
+      color: var(--muted);
+    }
+    .date-block strong { display: block; color: var(--ink); font-size: 16px; }
+
+    header.hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.35fr) minmax(310px, 0.65fr);
+      gap: 22px;
+      margin-top: 24px;
+      align-items: stretch;
+    }
+    .hero-main, .hero-side, .panel, .card, .rail-card {
+      border: 1px solid var(--line);
+      background: var(--paper);
+      box-shadow: var(--shadow);
+    }
+    .hero-main { padding: clamp(26px, 4vw, 44px); background: linear-gradient(135deg, var(--paper), #fbf5ea); }
+    .eyebrow {
+      color: var(--navy);
+      font-size: 12px;
+      font-weight: 850;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+    h1, h2, h3, p { margin: 0; }
+    h1 { margin-top: 12px; font-size: clamp(36px, 5.2vw, 72px); line-height: 0.96; letter-spacing: -0.045em; max-width: 1000px; }
+    h2 { font-size: clamp(24px, 2.2vw, 34px); line-height: 1.08; letter-spacing: -0.028em; }
+    h3 { font-size: 18px; line-height: 1.15; }
+    .lead { margin-top: 18px; color: #354054; max-width: 880px; font-size: clamp(17px, 1.55vw, 21px); }
+    .hero-meta { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; }
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      min-height: 34px;
+      border: 1px solid var(--line-strong);
+      background: var(--white);
+      padding: 7px 10px;
+      color: #354054;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .pill.blocked { border-color: #d9aaa5; background: var(--red-soft); color: var(--red); }
+    .pill.safe { border-color: #a9bdae; background: var(--sage-soft); color: #365f51; }
+    .pill.pending { border-color: #d8c08b; background: var(--amber-soft); color: var(--amber); }
+
+    .hero-side { padding: 22px; background: var(--navy-2); color: var(--white); display: grid; gap: 18px; }
+    .verdict-label { color: #e7d2ad; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 850; }
+    .verdict { font-size: clamp(28px, 4vw, 42px); line-height: 1; letter-spacing: -0.035em; font-weight: 850; }
+    .verdict-copy { color: #d8dfed; font-size: 15px; }
+    .mini-table { border-top: 1px solid rgba(255,255,255,0.22); display: grid; }
+    .mini-row { display: grid; grid-template-columns: 120px 1fr; gap: 10px; border-bottom: 1px solid rgba(255,255,255,0.18); padding: 10px 0; font-size: 13px; }
+    .mini-row span:first-child { color: #cbd6ea; }
+    .mini-row strong { color: #fff; }
+
+    .section { margin-top: 24px; }
+    .section-head { display: flex; justify-content: space-between; gap: 18px; align-items: end; margin-bottom: 12px; }
+    .section-head p { max-width: 760px; color: var(--muted); font-size: 14px; }
+
+    .status-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; }
+    .card { padding: 18px; min-height: 190px; position: relative; overflow: hidden; }
+    .card::before { content: ""; position: absolute; inset: 0 0 auto; height: 5px; background: var(--gold); }
+    .card.open::before, .card.blocked::before { background: var(--red); }
+    .card.pending::before { background: var(--amber); }
+    .card.safe::before { background: var(--sage); }
+    .status-top { display: flex; justify-content: space-between; gap: 10px; align-items: start; margin-top: 6px; }
+    .status-kicker { color: var(--muted); font-size: 12px; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; }
+    .status-word { font-size: 12px; font-weight: 850; padding: 4px 7px; border: 1px solid var(--line); background: #fff; white-space: nowrap; }
+    .status-word.open { color: var(--red); border-color: #d9aaa5; background: var(--red-soft); }
+    .status-word.safe { color: #365f51; border-color: #a9bdae; background: var(--sage-soft); }
+    .status-word.pending { color: var(--amber); border-color: #d8c08b; background: var(--amber-soft); }
+    .card h3 { margin-top: 13px; }
+    .card p { margin-top: 9px; color: #354054; font-size: 14px; }
+    .metric { display: flex; align-items: baseline; gap: 6px; margin-top: 15px; }
+    .metric strong { font-size: 30px; letter-spacing: -0.04em; }
+    .metric span { color: var(--muted); font-size: 13px; }
+
+    .decision-layout { display: grid; grid-template-columns: minmax(0, 1fr) minmax(330px, 0.38fr); gap: 18px; align-items: start; }
+    .panel { padding: 22px; }
+    .matrix { display: grid; gap: 10px; margin-top: 16px; }
+    .gate {
+      display: grid;
+      grid-template-columns: 210px minmax(0, 1fr) 148px;
+      gap: 14px;
+      align-items: start;
+      border: 1px solid var(--line);
+      background: var(--white);
+      padding: 13px;
+    }
+    .gate strong { display: block; }
+    .gate small { color: var(--muted); display: block; margin-top: 3px; }
+    .gate .ask { color: #354054; font-size: 14px; }
+    .checkboxes { display: grid; gap: 8px; margin-top: 14px; }
+    .checkline { display: grid; grid-template-columns: 18px 1fr; gap: 9px; align-items: start; color: #354054; font-size: 14px; }
+    .box { width: 16px; height: 16px; border: 2px solid var(--line-strong); background: #fff; margin-top: 2px; }
+
+    .evidence-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+    .evidence { border: 1px solid var(--line); background: var(--white); padding: 16px; min-height: 160px; }
+    .evidence .path { margin-top: 10px; color: var(--muted); font-size: 12px; overflow-wrap: anywhere; }
+    .evidence ul { margin: 12px 0 0 18px; padding: 0; color: #354054; font-size: 14px; }
+
+    .rail { display: grid; gap: 14px; }
+    .rail-card { padding: 18px; box-shadow: none; }
+    .rail-card h3 { margin-bottom: 10px; }
+    .rail-card ol, .rail-card ul { margin: 0 0 0 20px; padding: 0; color: #354054; font-size: 14px; display: grid; gap: 8px; }
+    .no-action { background: var(--navy-2); color: white; border-color: var(--navy-2); }
+    .no-action p, .no-action li { color: #d8dfed; }
+    .no-action h3 { color: white; }
+
+    .timeline { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 10px; margin-top: 16px; }
+    .step { border: 1px solid var(--line); background: #fff; padding: 14px; min-height: 140px; }
+    .step-number { width: 30px; height: 30px; display: grid; place-items: center; border: 1px solid var(--navy); color: var(--navy); font-weight: 850; margin-bottom: 12px; }
+    .step p { color: #354054; font-size: 13px; margin-top: 7px; }
+
+    footer { margin-top: 28px; border: 1px solid var(--line); background: rgba(255,253,248,0.88); padding: 16px; color: var(--muted); font-size: 13px; }
+
+    @media (max-width: 1120px) {
+      .status-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .evidence-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .timeline { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      header.hero, .decision-layout { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 760px) {
+      .shell { padding: 16px 12px 42px; }
+      .topline { grid-template-columns: 1fr; }
+      .date-block { text-align: left; }
+      .status-grid, .evidence-grid, .timeline { grid-template-columns: 1fr; }
+      .gate { grid-template-columns: 1fr; }
+      .hero-main, .panel { padding: 18px; }
+      h1 { font-size: 38px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+    }
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <div class="topline" role="note" aria-label="Internal-only classification">
+      <div class="classification"><strong>Internal/local review artifact only.</strong> This prototype does not publish a page, send messages, activate HighLevel, enroll contacts, mutate CRM/Supabase/Clio records, or authorize client/prospect-facing use.</div>
+      <div class="date-block"><strong>2026-05-08</strong> Tech GC controlled-pilot review hub<br />Whiteford Schell IP · private artifact</div>
+    </div>
+
+    <header class="hero">
+      <section class="hero-main" aria-labelledby="page-title">
+        <div class="eyebrow">Tech Company Legal Health Checklist · go/no-go command view</div>
+        <h1 id="page-title">A single review hub for the controlled-pilot decision.</h1>
+        <p class="lead">Jeff can use this local file to review the Tech GC pilot posture, unresolved blockers, evidence links, and exact approvals without confusing internal readiness with launch permission.</p>
+        <div class="hero-meta" aria-label="Key posture labels">
+          <span class="pill safe">Recommended lane: Tech GC</span>
+          <span class="pill pending">Allowed: internal/local/preview QA planning</span>
+          <span class="pill blocked">No-go: launch/live CRM/external action</span>
+          <span class="pill pending">Trigger tag: workflow:tech-gc-launchpad only after opt-in</span>
+        </div>
+      </section>
+      <aside class="hero-side" aria-label="Executive verdict">
+        <div>
+          <div class="verdict-label">Executive verdict</div>
+          <div class="verdict">Go only for internal prep.</div>
+        </div>
+        <p class="verdict-copy">The drafting tranche is coherent enough for Jeff/Whiteford decision review. Launch remains blocked by approval, HighLevel, Supabase, privacy/terms, route, and copy gates.</p>
+        <div class="mini-table" aria-label="Operating posture summary">
+          <div class="mini-row"><span>Mode</span><strong>Local/private file</strong></div>
+          <div class="mini-row"><span>Pipeline</span><strong>Whiteford Schell IP Pipeline</strong></div>
+          <div class="mini-row"><span>HighLevel</span><strong>31 missing / 37 expected fields</strong></div>
+          <div class="mini-row"><span>Supabase</span><strong>Expanded schema blocked</strong></div>
+          <div class="mini-row"><span>External action</span><strong>Not authorized</strong></div>
+        </div>
+      </aside>
+    </header>
+
+    <section class="section" aria-labelledby="status-title">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Status cards</div>
+          <h2 id="status-title">What is ready, blocked, or waiting on Jeff.</h2>
+        </div>
+        <p>Cards reflect the 2026-05-08 decision packet, final prep review, consent/terms copy packet, final gap matrix, and Growth OS dashboard plan.</p>
+      </div>
+      <div class="status-grid">
+        <article class="card pending">
+          <div class="status-top"><span class="status-kicker">Launch blockers</span><span class="status-word pending">Open</span></div>
+          <h3>Drafting blockers are mostly closed; launch blockers are not.</h3>
+          <p>Tech GC is suitable for internal/local/preview QA planning only. Public route, live HighLevel, sends, workflow reliance, Supabase reliance, and named-company use still need separate approvals.</p>
+          <div class="metric"><strong>15</strong><span>gap-matrix items</span></div>
+        </article>
+        <article class="card pending">
+          <div class="status-top"><span class="status-kicker">Jeff approvals</span><span class="status-word pending">Needed</span></div>
+          <h3>Jeff must choose lane, mode, non-subscriber policy, and field path.</h3>
+          <p>Default recommendation: Tech GC for internal local/preview QA, browser/on-page value for non-subscribers, hold public URL/email until final review.</p>
+          <div class="metric"><strong>12</strong><span>approval checks</span></div>
+        </article>
+        <article class="card blocked">
+          <div class="status-top"><span class="status-kicker">HighLevel fields</span><span class="status-word open">Blocked</span></div>
+          <h3>31 Contact fields remain missing before CRM/workflow reliance.</h3>
+          <p>Read-only evidence: 6 of 37 expected guardrail/mapped fields exist. Manual creation requires Jeff approval, then 37/37 read-only verification.</p>
+          <div class="metric"><strong>6/37</strong><span>verified present</span></div>
+        </article>
+        <article class="card blocked">
+          <div class="status-top"><span class="status-kicker">Supabase schema</span><span class="status-word open">Blocked</span></div>
+          <h3>Expanded Growth OS mirror evidence is not launch-reliable.</h3>
+          <p>Use local/core/file-backed evidence unless a database operator separately installs phase 6–11 schema, reruns sync, and verifies results.</p>
+          <div class="metric"><strong>0</strong><span>DDL approvals here</span></div>
+        </article>
+        <article class="card pending">
+          <div class="status-top"><span class="status-kicker">Privacy / terms / copy</span><span class="status-word pending">Review</span></div>
+          <h3>Exact Privacy Policy and Terms/Disclaimer references are open.</h3>
+          <p>Copy packets include safer placeholders, no-confidential warnings, no-advice/no-ACR language, attorney-advertising placeholders, and footer/unsubscribe placeholders.</p>
+          <div class="metric"><strong>2</strong><span>exact URL gaps</span></div>
+        </article>
+        <article class="card pending">
+          <div class="status-top"><span class="status-kicker">Route / CTA</span><span class="status-word pending">Verify</span></div>
+          <h3>Route and anchor are specified, but final production URL is not.</h3>
+          <p>Final review route: <code>/colorado-tech-general-counsel#lead-magnet</code>. Keep preview/internal labels until final domain, anchor, UTM, CTA, and footer visibility are approved.</p>
+          <div class="metric"><strong>1</strong><span>primary route</span></div>
+        </article>
+        <article class="card safe">
+          <div class="status-top"><span class="status-kicker">No-external-action posture</span><span class="status-word safe">Preserved</span></div>
+          <h3>This artifact is review-only and performs no external operation.</h3>
+          <p>No send, post, workflow activation, enrollment, CRM mutation, Supabase DDL/sync, Clio write, public deploy, production credential change, or named-prospect action is authorized.</p>
+          <div class="metric"><strong>0</strong><span>live changes</span></div>
+        </article>
+        <article class="card safe">
+          <div class="status-top"><span class="status-kicker">Non-subscriber value</span><span class="status-word safe">Draft ready</span></div>
+          <h3>Browser-only educational value is the recommended default.</h3>
+          <p>Non-opted users receive on-page value; no report email, no nurture, no workflow trigger, no attorney-review task unless a separate packet approves it.</p>
+          <div class="metric"><strong>0</strong><span>opt-in default</span></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section decision-layout" aria-labelledby="approval-title">
+      <article class="panel">
+        <div class="eyebrow">Exact approvals</div>
+        <h2 id="approval-title">Decision boxes for Jeff / Whiteford review.</h2>
+        <div class="matrix">
+          <div class="gate"><div><strong>A. Pilot lane + mode</strong><small>Default: Tech GC internal QA</small></div><div class="ask">Approve Tech GC for internal local/preview QA only, select AI Compliance instead, or hold both.</div><span class="pill pending">Jeff decision</span></div>
+          <div class="gate"><div><strong>B. Non-subscriber policy</strong><small>Default: on-page value</small></div><div class="ask">Approve browser-only educational value with no outbound delivery, no nurture, and no workflow trigger.</div><span class="pill pending">Jeff / privacy</span></div>
+          <div class="gate"><div><strong>C. Privacy + terms</strong><small>Open launch blocker</small></div><div class="ask">Name exact approved Privacy Policy and Terms/Disclaimer URLs or approve route-level replacement text.</div><span class="pill blocked">Open</span></div>
+          <div class="gate"><div><strong>D. Route / domain / UTM</strong><small>Preview only until final</small></div><div class="ask">Approve canonical URL, <code>#lead-magnet</code> behavior, CTA language, no-PII UTM policy, and footer visibility.</div><span class="pill pending">Product / Jeff</span></div>
+          <div class="gate"><div><strong>E. HighLevel fields</strong><small>31 missing fields</small></div><div class="ask">Approve exact manual UI creation of Contact fields only, then require read-only 37/37 verification before reliance.</div><span class="pill blocked">Blocked</span></div>
+          <div class="gate"><div><strong>F. Workflow guard evidence</strong><small>Draft/Off only</small></div><div class="ask">Verify Draft/Off and message-step guard logic without saving, publishing, testing, starting, or enrolling.</div><span class="pill blocked">Incomplete</span></div>
+          <div class="gate"><div><strong>G. Email / nurture</strong><small>No loading or sending</small></div><div class="ask">Approve sender, reply-to, footer, address, attorney-ad language, unsubscribe/preferences, suppression/DND, and exact copy before any email asset work.</div><span class="pill blocked">No-go</span></div>
+          <div class="gate"><div><strong>H. Supabase evidence</strong><small>Expanded schema blocked</small></div><div class="ask">Either exclude expanded Supabase from pilot reliance or separately approve DDL + sync verification by a database operator.</div><span class="pill pending">Choose path</span></div>
+        </div>
+      </article>
+
+      <aside class="rail">
+        <div class="rail-card no-action">
+          <h3>No-external-action wall</h3>
+          <ul>
+            <li>No email, SMS, DM, LinkedIn, social, ad, or newsletter send.</li>
+            <li>No HighLevel activation, test, manual start, enrollment, field creation, contact/opportunity/tag/note/task mutation.</li>
+            <li>No public page publish/deploy, production credential change, Supabase DDL/sync, Clio write, or client/prospect-facing action.</li>
+          </ul>
+        </div>
+        <div class="rail-card">
+          <h3>Recommended next sequence</h3>
+          <ol>
+            <li>Jeff marks Tech GC internal/local/preview QA or hold.</li>
+            <li>Jeff approves or edits browser-only non-subscriber value.</li>
+            <li>Whiteford approves privacy/terms/disclaimer approach.</li>
+            <li>Jeff decides whether to authorize 31-field HighLevel manual path.</li>
+            <li>Only after approvals, create separate operator packets for any live/test-record scope.</li>
+          </ol>
+        </div>
+      </aside>
+    </section>
+
+    <section class="section" aria-labelledby="timeline-title">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Operating sequence</div>
+          <h2 id="timeline-title">Safe path from review hub to a later activation packet.</h2>
+        </div>
+        <p>This artifact intentionally stops before any external action. It makes the next decision explicit rather than blending review with execution.</p>
+      </div>
+      <div class="timeline">
+        <div class="step"><div class="step-number">1</div><h3>Lane decision</h3><p>Approve Tech GC as the internal local/preview QA lane, select AI Compliance, or hold.</p></div>
+        <div class="step"><div class="step-number">2</div><h3>Copy/legal gates</h3><p>Approve no-confidential, no-advice, no-ACR, privacy, terms, attorney-ad, CTA, and source-current copy.</p></div>
+        <div class="step"><div class="step-number">3</div><h3>HighLevel field path</h3><p>If approved, manually create exactly 31 Contact fields, then run 37/37 read-only verification.</p></div>
+        <div class="step"><div class="step-number">4</div><h3>Route/CTA QA</h3><p>Verify final route, anchor, CTA, UTM policy, footer/disclaimer visibility, and preview/internal labels.</p></div>
+        <div class="step"><div class="step-number">5</div><h3>Separate activation packet</h3><p>Only then draft exact live TEST-record or activation packet naming scope, timing, rollback, and no-send safeguards.</p></div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="evidence-title">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Evidence links</div>
+          <h2 id="evidence-title">Parent artifacts Jeff can open for source detail.</h2>
+        </div>
+        <p>Links are local relative paths from this HTML file. They point to internal files only.</p>
+      </div>
+      <div class="evidence-grid">
+        <article class="evidence">
+          <h3><a href="controlled_lead_magnet_pilot_decision_packet_2026-05-08.md">Controlled pilot decision packet</a></h3>
+          <p class="path">docs/pilot/controlled_lead_magnet_pilot_decision_packet_2026-05-08.md</p>
+          <ul><li>Tech GC recommended first lane.</li><li>No-send/no-enroll/no-publish gate.</li><li>Morning checklist for Jeff.</li></ul>
+        </article>
+        <article class="evidence">
+          <h3><a href="../reviews/tech_gc_controlled_pilot_final_prep_review_2026-05-08.md">Final prep review</a></h3>
+          <p class="path">docs/reviews/tech_gc_controlled_pilot_final_prep_review_2026-05-08.md</p>
+          <ul><li>One go/no-go table.</li><li>Unresolved blockers.</li><li>Exact manual actions.</li></ul>
+        </article>
+        <article class="evidence">
+          <h3><a href="tech_gc_controlled_pilot_consent_terms_copy_packet_2026-05-08.md">Consent + terms copy packet</a></h3>
+          <p class="path">docs/pilot/tech_gc_controlled_pilot_consent_terms_copy_packet_2026-05-08.md</p>
+          <ul><li>Non-confidential warning.</li><li>Privacy/terms placeholders.</li><li>Opt-in and non-opt-in copy.</li></ul>
+        </article>
+        <article class="evidence">
+          <h3><a href="tech_gc_controlled_pilot_final_approval_gap_matrix_2026-05-08.md">Final approval gap matrix</a></h3>
+          <p class="path">docs/pilot/tech_gc_controlled_pilot_final_approval_gap_matrix_2026-05-08.md</p>
+          <ul><li>15 launch gaps.</li><li>HighLevel 31/37 gate.</li><li>Supabase blocker.</li></ul>
+        </article>
+        <article class="evidence">
+          <h3><a href="../highlevel_31_field_dry_run_approval_packet_2026-05-08.md">31-field dry-run approval packet</a></h3>
+          <p class="path">docs/highlevel_31_field_dry_run_approval_packet_2026-05-08.md</p>
+          <ul><li>Manual Contact-field scope.</li><li>Generated-key expectations.</li><li>37/37 verification criteria.</li></ul>
+        </article>
+        <article class="evidence">
+          <h3><a href="../../../../../../../../.openclaw/projects/mountain-west-growth-os/dashboards/growth-os-dashboard/docs/WHITEFORD_AI_GROWTH_OS_INTEGRATION_PLAN.md">Growth OS integration plan</a></h3>
+          <p class="path">growth-os-dashboard/docs/WHITEFORD_AI_GROWTH_OS_INTEGRATION_PLAN.md</p>
+          <ul><li>Private dashboard governance.</li><li>CRM/HighLevel/agent layers.</li><li>No autonomous sends rule.</li></ul>
+        </article>
+      </div>
+    </section>
+
+    <footer>
+      Built as a self-contained local HTML prototype for Kanban task t_50fa906d. It synthesizes review evidence into a decision surface; it is not a source of new legal, privacy, campaign, CRM, Supabase, or publication approval.
+    </footer>
+  </main>
+</body>
+</html>

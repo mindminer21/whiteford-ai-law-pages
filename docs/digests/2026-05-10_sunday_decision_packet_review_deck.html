@@ -1,0 +1,445 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sunday Decision Packet Review Deck — Internal / Local Only</title>
+  <style>
+    :root {
+      --ink: #121827;
+      --navy: #213f77;
+      --navy-2: #172b52;
+      --cream: #f7f5ef;
+      --paper: #fffdf8;
+      --white: #ffffff;
+      --line: #d8d0c3;
+      --line-strong: #b9ad9c;
+      --muted: #5d6678;
+      --gold: #b99057;
+      --gold-soft: #f4eadb;
+      --sage: #55776a;
+      --sage-soft: #eef5f1;
+      --amber: #76541a;
+      --amber-soft: #fff8e8;
+      --red: #8d332d;
+      --red-soft: #fff0ed;
+      --blue-soft: #eef3fb;
+      --shadow: 0 24px 70px rgba(18, 24, 39, 0.09);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        linear-gradient(90deg, rgba(18, 24, 39, 0.045) 1px, transparent 1px),
+        linear-gradient(180deg, rgba(18, 24, 39, 0.035) 1px, transparent 1px),
+        var(--cream);
+      background-size: 72px 72px;
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      line-height: 1.48;
+    }
+    a { color: var(--navy); text-decoration-thickness: 1px; text-underline-offset: 4px; }
+    a:focus-visible { outline: 3px solid rgba(185, 144, 87, 0.55); outline-offset: 3px; }
+    code { background: #f0ebe2; border: 1px solid rgba(216, 208, 195, 0.8); padding: 2px 5px; font-size: 0.92em; overflow-wrap: anywhere; }
+    h1, h2, h3, p { margin: 0; }
+    ul, ol { margin: 0; padding-left: 1.15rem; }
+    li + li { margin-top: 0.35rem; }
+
+    .shell { max-width: 1440px; margin: 0 auto; padding: 28px 20px 64px; }
+    .topline {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 18px;
+      align-items: start;
+      border: 1px solid var(--line-strong);
+      background: rgba(255, 253, 248, 0.9);
+      padding: 16px;
+      box-shadow: var(--shadow);
+    }
+    .classification {
+      color: var(--red);
+      background: var(--red-soft);
+      border: 1px solid #d9aaa5;
+      padding: 10px 12px;
+      font-size: 13px;
+      font-weight: 780;
+    }
+    .date-block {
+      min-width: 260px;
+      border: 1px solid var(--line);
+      background: var(--white);
+      padding: 12px;
+      text-align: right;
+      font-size: 13px;
+      color: var(--muted);
+    }
+    .date-block strong { display: block; color: var(--ink); font-size: 16px; }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.28fr) minmax(320px, 0.72fr);
+      gap: 22px;
+      margin-top: 24px;
+      align-items: stretch;
+    }
+    .hero-main, .hero-side, .panel, .decision-card, .evidence-card, .note-card {
+      border: 1px solid var(--line);
+      background: var(--paper);
+      box-shadow: var(--shadow);
+    }
+    .hero-main { padding: clamp(28px, 4vw, 48px); background: linear-gradient(135deg, var(--paper), #fbf5ea); }
+    .hero-side { padding: 22px; background: var(--navy-2); color: var(--white); display: grid; gap: 18px; align-content: start; }
+    .eyebrow { color: var(--navy); font-size: 12px; font-weight: 850; letter-spacing: 0.16em; text-transform: uppercase; }
+    .hero-side .eyebrow { color: #e7d2ad; }
+    h1 { margin-top: 12px; font-size: clamp(38px, 5.3vw, 74px); line-height: 0.96; letter-spacing: -0.045em; max-width: 1040px; }
+    h2 { font-size: clamp(24px, 2.2vw, 34px); line-height: 1.08; letter-spacing: -0.028em; }
+    h3 { font-size: 18px; line-height: 1.15; }
+    .lead { margin-top: 18px; color: #354054; max-width: 920px; font-size: clamp(17px, 1.55vw, 21px); }
+    .hero-meta { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; }
+    .pill { display: inline-flex; align-items: center; min-height: 34px; border: 1px solid var(--line-strong); background: var(--white); padding: 7px 10px; color: #354054; font-size: 12px; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; }
+    .pill.blocked { border-color: #d9aaa5; background: var(--red-soft); color: var(--red); }
+    .pill.safe { border-color: #a9bdae; background: var(--sage-soft); color: #365f51; }
+    .pill.pending { border-color: #d8c08b; background: var(--amber-soft); color: var(--amber); }
+    .verdict { font-size: clamp(30px, 4vw, 44px); line-height: 1; letter-spacing: -0.035em; font-weight: 850; }
+    .verdict-copy { color: #d8dfed; font-size: 15px; }
+    .mini-table { border-top: 1px solid rgba(255,255,255,0.22); display: grid; }
+    .mini-row { display: grid; grid-template-columns: 122px 1fr; gap: 10px; border-bottom: 1px solid rgba(255,255,255,0.18); padding: 10px 0; font-size: 13px; }
+    .mini-row span:first-child { color: #cbd6ea; }
+    .mini-row strong { color: #fff; }
+
+    .section { margin-top: 24px; }
+    .section-head { display: flex; justify-content: space-between; gap: 18px; align-items: end; margin-bottom: 12px; }
+    .section-head p { max-width: 760px; color: var(--muted); font-size: 14px; }
+    .panel { padding: 22px; }
+
+    .summary-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; }
+    .summary-card { border: 1px solid var(--line); background: var(--white); padding: 16px; min-height: 172px; position: relative; overflow: hidden; }
+    .summary-card::before { content: ""; position: absolute; inset: 0 0 auto; height: 5px; background: var(--gold); }
+    .summary-card.safe::before { background: var(--sage); }
+    .summary-card.blocked::before { background: var(--red); }
+    .summary-card.pending::before { background: var(--amber); }
+    .status-top { display: flex; justify-content: space-between; gap: 10px; align-items: start; margin-top: 6px; }
+    .kicker { color: var(--muted); font-size: 12px; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; }
+    .tag { font-size: 12px; font-weight: 850; padding: 4px 7px; border: 1px solid var(--line); background: #fff; white-space: nowrap; }
+    .tag.safe { color: #365f51; border-color: #a9bdae; background: var(--sage-soft); }
+    .tag.pending { color: var(--amber); border-color: #d8c08b; background: var(--amber-soft); }
+    .tag.blocked { color: var(--red); border-color: #d9aaa5; background: var(--red-soft); }
+    .summary-card h3 { margin-top: 14px; }
+    .summary-card p { margin-top: 9px; color: #354054; font-size: 14px; }
+
+    .decision-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+    .decision-card { padding: 16px; min-height: 286px; display: grid; grid-template-rows: auto auto 1fr auto; gap: 10px; position: relative; overflow: visible; }
+    .decision-card::before { content: ""; position: absolute; inset: 0 0 auto; height: 5px; background: var(--amber); }
+    .decision-card.safe::before { background: var(--sage); }
+    .decision-card.blocked::before { background: var(--red); }
+    .letter { width: 34px; height: 34px; display: grid; place-items: center; border: 1px solid var(--navy); color: var(--navy); background: #fff; font-weight: 900; }
+    .decision-card p, .decision-card li { color: #354054; font-size: 13px; }
+    .decision-card ul { margin-top: 2px; }
+    .decision-call { border: 1px solid var(--line); background: #fff; padding: 9px; font-size: 12px; font-weight: 800; color: var(--ink); }
+
+    .wall { background: var(--navy-2); color: #fff; border-color: var(--navy-2); }
+    .wall .eyebrow { color: #e7d2ad; }
+    .wall p, .wall li { color: #d8dfed; }
+    .wall-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin-top: 16px; }
+    .wall-card { border: 1px solid rgba(255,255,255,0.18); background: rgba(255,255,255,0.05); padding: 14px; }
+    .wall-card strong { display: block; margin-bottom: 7px; color: #fff; }
+
+    .lineage { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 16px; align-items: stretch; }
+    .flow { display: grid; gap: 10px; }
+    .flow-row { display: grid; grid-template-columns: 150px 1fr; gap: 12px; border: 1px solid var(--line); background: #fff; padding: 13px; }
+    .flow-row strong { display: block; }
+    .flow-row span { color: var(--muted); font-size: 13px; }
+    .flow-row p { color: #354054; font-size: 14px; margin-top: 2px; }
+    .blocker-box { border: 1px solid #d9aaa5; background: var(--red-soft); padding: 16px; }
+    .blocker-box code { background: rgba(255,255,255,0.72); }
+    .blocker-box p, .blocker-box li { color: #4b2a28; font-size: 14px; }
+
+    .evidence-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+    .evidence-card { padding: 16px; min-height: 184px; }
+    .evidence-card h3 { margin-bottom: 10px; }
+    .path { color: var(--muted); font-size: 12px; overflow-wrap: anywhere; margin-top: 8px; }
+    .evidence-card ul { color: #354054; font-size: 14px; }
+
+    .bd-box { border: 1px solid var(--line); background: linear-gradient(135deg, #fff, var(--gold-soft)); padding: 16px; }
+    .bd-box p { color: #354054; margin-top: 8px; }
+
+    .notes-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+    .note-card { padding: 16px; box-shadow: none; }
+    .note-card p, .note-card li { color: #354054; font-size: 14px; }
+    footer { margin-top: 28px; border: 1px solid var(--line); background: rgba(255,253,248,0.9); padding: 16px; color: var(--muted); font-size: 13px; }
+
+    @media (max-width: 1180px) {
+      .summary-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .decision-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .evidence-grid, .wall-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .hero, .lineage { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 760px) {
+      .shell { padding: 16px 12px 42px; }
+      .topline, .summary-grid, .decision-grid, .evidence-grid, .wall-grid, .notes-grid { grid-template-columns: 1fr; }
+      .date-block { text-align: left; }
+      .hero-main, .panel { padding: 18px; }
+      .flow-row { grid-template-columns: 1fr; }
+      h1 { font-size: 38px; }
+    }
+    @media print {
+      html { scroll-behavior: auto; }
+      body { background: #fff; color: #000; font-size: 12pt; }
+      .shell { max-width: none; padding: 0; }
+      .hero-main, .hero-side, .panel, .decision-card, .evidence-card, .note-card, .topline { box-shadow: none; break-inside: avoid; }
+      .hero-side, .wall { background: #fff; color: #000; border-color: #000; }
+      .hero-side .eyebrow, .wall .eyebrow, .wall p, .wall li, .hero-side p, .mini-row span:first-child, .mini-row strong { color: #000; }
+      .section { break-inside: avoid; page-break-inside: avoid; }
+      a { color: #000; text-decoration: underline; }
+    }
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <div class="topline" role="note" aria-label="Internal-only classification">
+      <div class="classification"><strong>Internal/local review artifact only.</strong> This deck is not an approval record, not a signature page, and not an execution surface. It does not authorize or perform email, SMS, DM, LinkedIn/social posting, ads, public publish/deploy, HighLevel/CRM mutation, workflow action, Supabase DDL/sync/backfill/row mutation, Clio action, credential use, or client/prospect-facing action.</div>
+      <div class="date-block"><strong>2026-05-10</strong> Sunday decision packet review deck<br />Whiteford Schell IP · private/local file</div>
+    </div>
+
+    <header class="hero">
+      <section class="hero-main" aria-labelledby="page-title">
+        <div class="eyebrow">Sunday command-center readout</div>
+        <h1 id="page-title">One safe lane; every live or external lane stays held.</h1>
+        <p class="lead">Use this local deck to review the Sunday packet, the re-review verdict, and the QMD refresh evidence without confusing internal readiness with permission to act. The recommendation is intentionally narrow: optional Tech GC local/no-token QA only, if Jeff affirmatively approves that exact lane.</p>
+        <div class="hero-meta" aria-label="Key posture labels">
+          <span class="pill safe">Optional lane: Tech GC local/no-token QA</span>
+          <span class="pill blocked">Held: Supabase / source / HighLevel / authority / public</span>
+          <span class="pill pending">Decision prep only</span>
+          <span class="pill blocked">No approval capture</span>
+        </div>
+      </section>
+      <aside class="hero-side" aria-label="Executive verdict">
+        <div>
+          <div class="eyebrow">Executive recommendation</div>
+          <div class="verdict">Approve only the narrow local QA lane, or hold all.</div>
+        </div>
+        <p class="verdict-copy">The Sunday packet and re-review pass for internal Jeff/Whiteford decision prep. No external, public, CRM, HighLevel, Supabase, Clio, social, email, or prospect action is approved by this deck.</p>
+        <div class="mini-table" aria-label="Operating posture summary">
+          <div class="mini-row"><span>Mode</span><strong>Static local HTML</strong></div>
+          <div class="mini-row"><span>Packet</span><strong>2026-05-10 decision prep</strong></div>
+          <div class="mini-row"><span>Review</span><strong>PASS for internal prep only</strong></div>
+          <div class="mini-row"><span>QMD</span><strong>188 files / 2681 vectors</strong></div>
+          <div class="mini-row"><span>External action</span><strong>Not authorized</strong></div>
+        </div>
+      </aside>
+    </header>
+
+    <section class="section" aria-labelledby="summary-title">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">One-screen executive summary</div>
+          <h2 id="summary-title">Sunday posture in four cards.</h2>
+        </div>
+        <p>Source synthesis from the Sunday decision packet, re-review, QMD refresh report, and private command-center evidence referenced by the packet.</p>
+      </div>
+      <div class="summary-grid">
+        <article class="summary-card safe">
+          <div class="status-top"><span class="kicker">Safest progress</span><span class="tag safe">Optional</span></div>
+          <h3>Tech GC local/no-token QA can be the only Jeff-approved progress lane.</h3>
+          <p>Scope is synthetic `.invalid` payloads, local/static/no-token browser/API checks, no production credentials, no real prospects, and evidence capture only.</p>
+        </article>
+        <article class="summary-card blocked">
+          <div class="status-top"><span class="kicker">Live systems</span><span class="tag blocked">Held</span></div>
+          <h3>Supabase, HighLevel, Clio, source access, and external communications stay blocked.</h3>
+          <p>Any later action needs exact operator, scope, stop condition, evidence path, rollback rule, and Jeff/Whiteford approval.</p>
+        </article>
+        <article class="summary-card pending">
+          <div class="status-top"><span class="kicker">Decision use</span><span class="tag pending">Review only</span></div>
+          <h3>The private command center remains local/static, not an approval record.</h3>
+          <p>Use it for orientation only. It has no forms, approval capture widgets, sends, publish controls, activation controls, syncs, or API mutations.</p>
+        </article>
+        <article class="summary-card safe">
+          <div class="status-top"><span class="kicker">BD principle</span><span class="tag safe">Preserved</span></div>
+          <h3>Narrow diagnostic value first; follow-up remains opt-in-only.</h3>
+          <p>Keep the buyer problem-aware, educational, non-hypey, non-confidential, no-advice/no-ACR, and attorney-review-gated.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="decisions-title">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Five decision boxes</div>
+          <h2 id="decisions-title">What Jeff can decide, and what each decision still does not authorize.</h2>
+        </div>
+        <p>These are review summaries of the packet's copy/paste boxes, not approval controls. Do not treat this HTML file as a signed approval record.</p>
+      </div>
+      <div class="decision-grid">
+        <article class="decision-card safe">
+          <div class="letter">A</div>
+          <h3>Tech GC local/no-token QA</h3>
+          <p><strong>Recommended if Jeff wants one safe internal step today.</strong></p>
+          <ul>
+            <li>Use only synthetic `.invalid` emails and generic TEST companies.</li>
+            <li>Run local/static/no-token API and browser evidence checks.</li>
+            <li>Stop on any live mode, production credential, CRM upsert, send, enrollment, schema bypass, or guardrail failure.</li>
+          </ul>
+          <div class="decision-call">Does not approve: live HighLevel, workflow activation, test send, public launch, real prospects, Supabase, Clio, email/social/ad action.</div>
+        </article>
+        <article class="decision-card blocked">
+          <div class="letter">B</div>
+          <h3>Supabase SQL/admin unblock</h3>
+          <p><strong>Human/admin only; not agent-run.</strong></p>
+          <ul>
+            <li>Expanded-schema DDL blocker: <code>t_fa6eb9c1</code>.</li>
+            <li>Gated backfill/sync follow-through: <code>t_53d470c6</code>.</li>
+            <li>Only Jeff or a named authorized Supabase admin may run prepared SQL and post-DDL sync with verification.</li>
+          </ul>
+          <div class="decision-call">Default posture: hold DDL, mirror sync, gated backfill/sync, row mutation, credential use, and dashboard-data mutation.</div>
+        </article>
+        <article class="decision-card blocked">
+          <div class="letter">C</div>
+          <h3>Source-access recovery</h3>
+          <p><strong>Restore or replace source access only after neutral smoke tests.</strong></p>
+          <ul>
+            <li>Firecrawl/web extraction was blocked.</li>
+            <li>2026-05-09 produced zero prospects.</li>
+            <li>No new discovery until neutral source-discovery, extraction, official-page, and evidence-logging checks pass.</li>
+          </ul>
+          <div class="decision-call">Does not approve: prospect scoring, staging, enrichment, outreach, CRM/Supabase writes, LinkedIn/social, ads, or workflow action.</div>
+        </article>
+        <article class="decision-card blocked">
+          <div class="letter">D</div>
+          <h3>HighLevel posture</h3>
+          <p><strong>Default hold; possible no-mutation/read-only or sandbox-only semantics check.</strong></p>
+          <ul>
+            <li>Read-only may inspect current field/workflow/sender/footer/unsubscribe posture without changing anything.</li>
+            <li>Sandbox-only may test one Draft/Off dummy workflow condition pattern if specifically approved.</li>
+            <li>Real workflows remain unchanged unless an exact scope is later approved.</li>
+          </ul>
+          <div class="decision-call">No publish/activate, Test Workflow, manual start, enrollment, send, import, pipeline movement, field/tag/contact/opportunity/task/note mutation.</div>
+        </article>
+        <article class="decision-card blocked">
+          <div class="letter">E</div>
+          <h3>Authority route / CTA / UTM</h3>
+          <p><strong>Internal-review alignment only.</strong></p>
+          <ul>
+            <li>AI Patent: <code>/ai-patent-strategy-scorecard</code>.</li>
+            <li>AI Compliance: <code>/ai-compliance-gameplan</code>.</li>
+            <li>Tech GC: <code>/colorado-tech-general-counsel</code>; anchor needs later approval.</li>
+            <li>M&amp;A route, CTA labels, warning placement, and UTM posture remain review decisions.</li>
+          </ul>
+          <div class="decision-call">Does not approve: public web, email/newsletter, YouTube/social, HighLevel/CRM, ads, workflow, prospect, or external use.</div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section panel wall" aria-labelledby="wall-title">
+      <div class="eyebrow">Hard no-external-action wall</div>
+      <h2 id="wall-title">This deck authorizes nothing outside local review.</h2>
+      <p style="margin-top:10px; max-width:980px;">Until a later packet explicitly approves a narrower operator scope, the following remain not authorized. This list is intentionally redundant so the local review artifact cannot be mistaken for a launch or operations approval.</p>
+      <div class="wall-grid">
+        <div class="wall-card"><strong>No communications.</strong><p>No email, newsletter, SMS, DM, LinkedIn message, LinkedIn post, social post, tag, comment, boost, ad, public/client/prospect-facing communication, or YouTube action.</p></div>
+        <div class="wall-card"><strong>No HighLevel/CRM mutation.</strong><p>No API call, real workflow UI edit, publish/activate/test/manual start, contact enrollment, campaign/template/newsletter creation, tag/field/contact/opportunity/task/note mutation, import, or pipeline movement.</p></div>
+        <div class="wall-card"><strong>No Supabase/Clio live action.</strong><p>No Supabase DDL, gated backfill/sync, mirror sync, row mutation, dashboard-data mutation, credential guessing, production secret use, Clio write, conflicts-record mutation, or matter/client/prospect-record mutation.</p></div>
+        <div class="wall-card"><strong>No public route change.</strong><p>No public page publish/deploy, route/domain/CTA/UTM production change, social planner action, or public authority route use.</p></div>
+        <div class="wall-card"><strong>No prospect action.</strong><p>No prospect discovery, enrichment, staging, source-current claim, named-company draft-to-public action, or outreach based on the source-blocked 2026-05-09 nightly packet.</p></div>
+        <div class="wall-card"><strong>No sensitive data in QA.</strong><p>No real prospects, clients, imported contacts, researched leads, third-party contacts, confidential facts, privileged facts, invention disclosures, transaction details, or regulated data in local QA.</p></div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="lineage-title">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Blocker lineage</div>
+          <h2 id="lineage-title">Supabase and source blockers stay separated from the Tech GC local QA lane.</h2>
+        </div>
+        <p>The re-review confirms the revised packet now explicitly names both Supabase blocker tasks and preserves the no-external-action wall.</p>
+      </div>
+      <div class="lineage">
+        <div class="flow" aria-label="Evidence lineage">
+          <div class="flow-row"><strong>Packet</strong><p><code>docs/digests/2026-05-10_sunday_morning_decision_packet.md</code><span>Recommends only optional Tech GC local/no-token QA and holds all public/external/live-system steps.</span></p></div>
+          <div class="flow-row"><strong>Review</strong><p><code>docs/reviews/2026-05-10_sunday_morning_decision_packet_rereview.md</code><span>PASS for internal decision prep only after blocker-lineage revision.</span></p></div>
+          <div class="flow-row"><strong>QMD refresh</strong><p><code>docs/ops/qmd_sunday_decision_refresh_2026-05-10.md</code><span>Confirms Sunday packet/review/re-review and blocker-lineage docs are retrievable.</span></p></div>
+        </div>
+        <div class="blocker-box">
+          <h3>Named blocker chain</h3>
+          <p style="margin-top:10px;">Expanded-schema DDL task <code>t_fa6eb9c1</code> blocks complete Supabase phase 6-11 evidence. Gated backfill/sync task <code>t_53d470c6</code> remains blocked unless the human/admin DDL gate is satisfied and exact approval exists.</p>
+          <ul style="margin-top:12px;">
+            <li>Dashboard references are status/evidence aids only, not proof that expanded tables are live.</li>
+            <li>Agents must not guess credentials or use production secrets.</li>
+            <li>Backfill/sync cannot leapfrog DDL verification.</li>
+            <li>Source-access recovery is separate from prospecting; no source-blocked prospect inference.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="evidence-title">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Evidence links</div>
+          <h2 id="evidence-title">Local paths Jeff can open next.</h2>
+        </div>
+        <p>All evidence is local/private. Paths are included for orientation only; opening this deck does not run commands or call APIs.</p>
+      </div>
+      <div class="evidence-grid">
+        <article class="evidence-card">
+          <h3>Sunday packet</h3>
+          <ul><li>Executive recommendation and five copy/paste decision boxes.</li><li>Hard no-external-action wall.</li><li>Business-development principle adapted for legal ethics posture.</li></ul>
+          <div class="path">docs/digests/2026-05-10_sunday_morning_decision_packet.md</div>
+        </article>
+        <article class="evidence-card">
+          <h3>Re-review verdict</h3>
+          <ul><li>PASS for internal Jeff/Whiteford decision prep only.</li><li>Confirms <code>t_fa6eb9c1</code> and <code>t_53d470c6</code> are named.</li><li>Confirms no-external-action wall remains intact.</li></ul>
+          <div class="path">docs/reviews/2026-05-10_sunday_morning_decision_packet_rereview.md</div>
+        </article>
+        <article class="evidence-card">
+          <h3>QMD refresh evidence</h3>
+          <ul><li><code>whiteford-ai-law-pages</code> increased from 179 to 182 indexed files.</li><li>Vectors increased from 2629 to 2681.</li><li>Search now retrieves Sunday packet, review, re-review, blocker lineage, and Tech GC local/no-token QA docs.</li></ul>
+          <div class="path">docs/ops/qmd_sunday_decision_refresh_2026-05-10.md</div>
+        </article>
+        <article class="evidence-card">
+          <h3>Private command-center QA</h3>
+          <ul><li>Local route <code>/approval-command-center</code> returned 200.</li><li>Browser console had 0 errors.</li><li>No route-local fetch/API/client mutation code found.</li></ul>
+          <div class="path">/Users/jeff/.openclaw/projects/mountain-west-growth-os/dashboards/growth-os-dashboard/docs/2026-05-09_approval_command_center_qa_evidence.md</div>
+        </article>
+        <article class="evidence-card">
+          <h3>Command-center plan</h3>
+          <ul><li>Private/local dashboard posture.</li><li>Consolidates Tech GC, source, Supabase, HighLevel, authority route/CTA/UTM blockers.</li><li>No forms, approval capture, sends, publish controls, or live integrations.</li></ul>
+          <div class="path">/Users/jeff/.openclaw/projects/mountain-west-growth-os/dashboards/growth-os-dashboard/docs/2026-05-09_approval_command_center_dashboard_plan.md</div>
+        </article>
+        <article class="evidence-card">
+          <h3>Business-development reference synthesis</h3>
+          <ul><li>Use lead magnets to expose a narrow problem and deliver a complete diagnostic promise.</li><li>Earn engaged time/trust before consultation asks.</li><li>For Whiteford/Schell IP, preserve opt-in-only follow-up and legal-review gates.</li></ul>
+          <div class="path">Local business-development corpus search: 100M Leads pp. 49-54 principles synthesized; no long copyrighted text reproduced.</div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="notes-title">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Implementation notes</div>
+          <h2 id="notes-title">Static artifact constraints and review posture.</h2>
+        </div>
+      </div>
+      <div class="notes-grid">
+        <article class="note-card">
+          <h3>What this file is</h3>
+          <p style="margin-top:10px;">A self-contained HTML/CSS review deck designed for local browser reading and printing. It uses no remote fonts, no remote scripts, no forms, no storage, no API calls, no credentials, and no automation hooks.</p>
+        </article>
+        <article class="note-card">
+          <h3>What Jeff should decide next</h3>
+          <p style="margin-top:10px;">Choose whether to approve Box A for Tech GC local/no-token QA only, or hold it. Keep Supabase/source/HighLevel/authority/public/email/social decisions in review or human-only posture until exact later approvals exist.</p>
+        </article>
+      </div>
+      <div class="bd-box" style="margin-top:14px;">
+        <h3>Business-development principle preserved</h3>
+        <p>The only optional progress lane supports a narrow diagnostic learning loop. It does not convert education into legal advice, it does not create an attorney-client relationship, it does not request confidential information, and it does not trigger follow-up unless a user later affirmatively opts in under approved consent/suppression/conflicts gates.</p>
+      </div>
+    </section>
+
+    <footer>
+      Built for Kanban task <code>t_7df38ec8</code> from the Sunday packet and re-review. Private/local artifact only; not an approval record; no external or live-system action authorized.
+    </footer>
+  </main>
+</body>
+</html>

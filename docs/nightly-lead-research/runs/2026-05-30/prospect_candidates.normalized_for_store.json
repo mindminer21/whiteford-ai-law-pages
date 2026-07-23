@@ -1,0 +1,422 @@
+{
+  "candidates": [
+    {
+      "prospect_id": "groq-inc-20260530",
+      "company": {
+        "prospect_id": "prospect_groq_20260530",
+        "name": "Groq, Inc.",
+        "domain": "groq.com",
+        "website_url": "https://groq.com/",
+        "location": "Santa Cruz, CA (inferred from TechCrunch coverage; headquarters unverified in this run)",
+        "state_region": null,
+        "industry": "AI inference hardware / semiconductor / cloud",
+        "segment": "ai-patent",
+        "primary_offer_lane": "ai-patent",
+        "source_type": "nightly_public_source_research",
+        "source_url": "https://techcrunch.com/2026/05/29/after-nvidias-20b-not-acqui-hire-ai-chip-startup-groq-reportedly-raising-650m/",
+        "source_note": "Groq designs custom silicon (LPU - Language Processing Unit) and operates a cloud inference platform (GroqCloud) serving 3M+ developers and teams. The company specializes in ultra-low-latency AI inference for LLM workloads. Inferred CEO: Adam Winter (interim). CFO: Matt Eng. Backed by Disruptive Capital and Infinitium.\nGate status: normalized from parent nightly qwen-local browser-fallback payload; no live enrichment performed by ops staging.",
+        "pipeline_stage": "research_staged",
+        "scores": {
+          "fit_score": 93,
+          "urgency_score": 92,
+          "value_potential_score": 95,
+          "combined_priority_score": 93
+        },
+        "lead_magnet": "AI Patent Strategy Scorecard",
+        "recommended_offer": "AI IP Protection & Patent Strategy",
+        "risk_level": "attorney_review_required",
+        "suppression_status": "consent_gap_no_auto_send",
+        "conflicts_status": "required_before_send",
+        "owner": "qwen-local",
+        "notes": "Research-only nightly candidate. No outreach authorization; attorney review, conflicts, suppression, source-current checks, and Jeff exact approval required before external use.\nUpstream description: Groq designs custom silicon (LPU - Language Processing Unit) and operates a cloud inference platform (GroqCloud) serving 3M+ developers and teams. The company specializes in ultra-low-latency AI inference for LLM workloads. Inferred CEO: Adam Winter (interim). CFO: Matt Eng. Backed by Disruptive Capital and Infinitium.\nRecent events: Reporting raise of $650M from existing investors (May 29, 2026, Axios via TechCrunch); December 2025: Nvidia $20B licensing agreement that transferred senior Groq employees to Nvidia and licensed Groq hardware technology; McLaren F1 Team chose Groq for global inference deployment; Raised $750M previously (Sep 17, 2025)\nIP signals: Custom silicon / LPU architecture is a novel IP asset worth protecting (patents on LPU design, streaming inference methodology); Recent $20B Nvidia deal involved licensing of Groq's proprietary hardware technology — demonstrates existing IP portfolio; Competing with Nvidia/AMD in accelerator space; patent strategy critical for chip design differentiation; Massive inference scale (3M developers) creates novel IP around distributed inference architecture\nAI compliance signals: Enterprise AI inference service handles customer model data — privacy and data governance implications for AI governance compliance; McLaren F1 deployment signals mission-critical deployment scenarios increasing regulatory exposure\nOutreach readiness: research_only; consent basis: no_email_opt_in\nValidation caveat: Ops normalized the parent qwen-local/browser-fallback payload only; no new external enrichment or source-current verification was performed during this staging task."
+      },
+      "contacts": [
+        {
+          "name": "Adam Winter",
+          "title": "Interim CEO",
+          "role_category": "ceo",
+          "email": null,
+          "linkedin_url": null,
+          "phone": null,
+          "source_url": "https://techcrunch.com/2026/05/29/after-nvidias-20b-not-acqui-hire-ai-chip-startup-groq-reportedly-raising-650m/",
+          "source_type": "news_payload_unverified_contact",
+          "permission_basis": "public-source research; attorney review required before outreach",
+          "confidence": 45,
+          "suppression_status": "not_checked"
+        },
+        {
+          "name": "Matt Eng",
+          "title": "CFO",
+          "role_category": "cfo",
+          "email": null,
+          "linkedin_url": null,
+          "phone": null,
+          "source_url": "https://techcrunch.com/2026/05/29/after-nvidias-20b-not-acqui-hire-ai-chip-startup-groq-reportedly-raising-650m/",
+          "source_type": "news_payload_unverified_contact",
+          "permission_basis": "public-source research; attorney review required before outreach",
+          "confidence": 45,
+          "suppression_status": "not_checked"
+        }
+      ],
+      "evidence": [
+        {
+          "evidence_id": "evidence_f6f5e0d5462aca7d807b2920",
+          "source_url": "https://techcrunch.com/2026/05/29/after-nvidias-20b-not-acqui-hire-ai-chip-startup-groq-reportedly-raising-650m/",
+          "accessed_at": "2026-05-30",
+          "source_type": "news",
+          "fact_classification": "public",
+          "evidence_snippet": "Groq raising $650M from existing investors for inference neocloud; Nvidia $20B licensing deal transferred senior employees and licensed Groq hardware tech",
+          "supported_fact": "Groq raising $650M from existing investors for inference neocloud; Nvidia $20B licensing deal transferred senior employees and licensed Groq hardware tech",
+          "confidence": "high",
+          "corroboration": "parent qwen-local browser-fallback research; source-current refresh required before external use",
+          "safe_for_outreach": "conditional",
+          "safe_fact_for_copy": "Groq raising $650M from existing investors for inference neocloud; Nvidia $20B licensing deal transferred senior employees and licensed Groq hardware tech"
+        },
+        {
+          "evidence_id": "evidence_a39ccdd0cf90c7006c1d3f23",
+          "source_url": "https://groq.com/",
+          "accessed_at": "2026-05-30",
+          "source_type": "first_party_website",
+          "fact_classification": "public",
+          "evidence_snippet": "Groq operates LPU-based inference platform, 3M+ developers and teams, GroqCloud, custom silicon, McLaren F1 customer",
+          "supported_fact": "Groq operates LPU-based inference platform, 3M+ developers and teams, GroqCloud, custom silicon, McLaren F1 customer",
+          "confidence": "high",
+          "corroboration": "parent qwen-local browser-fallback research; source-current refresh required before external use",
+          "safe_for_outreach": "conditional",
+          "safe_fact_for_copy": "Groq operates LPU-based inference platform, 3M+ developers and teams, GroqCloud, custom silicon, McLaren F1 customer"
+        }
+      ],
+      "outreach_drafts": [
+        {
+          "draft_type": "educational",
+          "channel": "manual_email_review",
+          "title": "AI Patent Strategy Scorecard attorney-review angle: Groq, Inc.",
+          "subject": "Attorney-review-only AI Patent Strategy Scorecard angle for Groq, Inc.",
+          "body": "ATTORNEY REVIEW ONLY — DO NOT SEND/POST.\nTarget: Adam Winter\nProspect: Groq, Inc.\nInternal hypothesis: Groq raising $650M from existing investors for inference neocloud; Nvidia $20B licensing deal transferred senior employees and licensed Groq hardware tech\nSuggested lead magnet: AI Patent Strategy Scorecard\n\nUpstream draft text retained for review context only; it is not approved final copy:\nSubject: Protecting your LPU architecture as a licensed asset\n\nAdam,\n\nWith Groq's $20B Nvidia technology licensing deal and the company scaling to 3M+ developers on GroqCloud, your custom LPU architecture is now one of the most commercially significant inference patents in AI.\n\nAs inference becomes the primary compute bottleneck post-training, the IP landscape around streaming inference, low-latency silicon, and distributed inference deployment is becoming increasingly crowded. Companies at the intersection of custom silicon and cloud inference are typically the first to face patent challenges and defensive filing urgency.\n\nIf you're evaluating your IP posture as Groq scales its inference cloud, we published an AI Patent Strategy Scorecard that walks through 15 critical gaps in inference-hardware IP portfolios. It covers streaming inference methodology claims, distributed cache architecture IP, and licensing-readiness for silicon designs.\n\nHappy to review it with you as you shape your IP strategy alongside the inference scaling push.\n\nEducational content only — not legal advice. Attended for attorney review.\n\nRequired before any external use: source-current verification, correct contact validation, conflicts check, suppression/opt-out/prior-touch checks, attorney review, and Jeff exact approval.",
+          "source_facts": [
+            "Groq raising $650M from existing investors for inference neocloud; Nvidia $20B licensing deal transferred senior employees and licensed Groq hardware tech",
+            "Groq operates LPU-based inference platform, 3M+ developers and teams, GroqCloud, custom silicon, McLaren F1 customer"
+          ],
+          "source_urls": [
+            "https://techcrunch.com/2026/05/29/after-nvidias-20b-not-acqui-hire-ai-chip-startup-groq-reportedly-raising-650m/",
+            "https://groq.com/"
+          ],
+          "risk_level": "attorney_review_required",
+          "internal_review_notes": "Not approved for sending or posting. Research-only local staging; requires attorney review, conflicts, suppression, source-current checks, and Jeff exact approval before external use."
+        }
+      ],
+      "validation_gates": {
+        "gate_1_live_source": "PARENT_BROWSER_FALLBACK_PAYLOAD_ONLY",
+        "source_status": "Parent qwen-local used browser fallback after Firecrawl/search/extract quota failures; ops staging did not re-browse or enrich.",
+        "contact_validation": "contacts require source-current validation and enrichment before outreach",
+        "outreach_readiness": "attorney-review-only; no external action authorized"
+      },
+      "consent_gating": {
+        "ops_no_auto_send": true,
+        "consent_basis": "no_email_opt_in",
+        "approval_status": "no-auto-send",
+        "workflow_trigger_tags": [],
+        "suppression_tags": [
+          "newsletter:not-consented"
+        ]
+      },
+      "source_candidate_path": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-30/prospect_candidates.json",
+      "normalized_store_path": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-30/prospect_candidates.normalized_for_store.json",
+      "source_packet_prospect_id": "groq-inc-20260530",
+      "local_growth_os_prospect_id": "prospect_groq_20260530",
+      "task": "prepare_internal_attorney_review_agent_targeting_packet",
+      "guardrails": {
+        "external_action_allowed": false,
+        "approval_required": true,
+        "no_outreach_no_workflows_no_social_no_clio_no_live_sync": true,
+        "required_before_external_use": [
+          "Jeff exact approval",
+          "attorney review",
+          "conflicts check",
+          "suppression/opt-out/prior-touch check",
+          "source-current verification",
+          "contact identity correction/enrichment where flagged"
+        ]
+      }
+    },
+    {
+      "prospect_id": "xcena-20260530",
+      "company": {
+        "prospect_id": "prospect_xcena_20260530",
+        "name": "XCENA",
+        "domain": "xcena.com",
+        "website_url": "https://xcena.com/",
+        "location": "Seongnam-si, Gyeonggi-do, South Korea (HQ); U.S. offices",
+        "state_region": null,
+        "industry": "AI chip design / computational memory / semiconductor",
+        "segment": "ai-patent",
+        "primary_offer_lane": "ai-patent",
+        "source_type": "nightly_public_source_research",
+        "source_url": "https://techcrunch.com/2026/05/29/xcena-secures-135m-at-570m-valuation-betting-on-memory-as-ais-real-bottleneck/",
+        "source_note": "XCENA (formerly MetisX) designs computational memory chips that integrate processing directly into DRAM modules. The MX1 prototype chip uses CXL (Compute Express Link) to connect compute close to memory, reducing CPU-GPU round trips for AI inference workloads. Raised $135M Series B at $570M valuation (total raised: $185M). Co-founded in 2022 by Samsung and SK Hynix veterans.\nGate status: normalized from parent nightly qwen-local browser-fallback payload; no live enrichment performed by ops staging.",
+        "pipeline_stage": "research_staged",
+        "scores": {
+          "fit_score": 88,
+          "urgency_score": 85,
+          "value_potential_score": 82,
+          "combined_priority_score": 85
+        },
+        "lead_magnet": "AI Patent Strategy Scorecard",
+        "recommended_offer": "AI IP Protection & Patent Strategy",
+        "risk_level": "attorney_review_required",
+        "suppression_status": "consent_gap_no_auto_send",
+        "conflicts_status": "required_before_send",
+        "owner": "qwen-local",
+        "notes": "Research-only nightly candidate. No outreach authorization; attorney review, conflicts, suppression, source-current checks, and Jeff exact approval required before external use.\nUpstream description: XCENA (formerly MetisX) designs computational memory chips that integrate processing directly into DRAM modules. The MX1 prototype chip uses CXL (Compute Express Link) to connect compute close to memory, reducing CPU-GPU round trips for AI inference workloads. Raised $135M Series B at $570M valuation (total raised: $185M). Co-founded in 2022 by Samsung and SK Hynix veterans.\nRecent events: Raised $135M Series B at $570M valuation (May 29, 2026, TechCrunch/Kate Park); Rebranded from MetisX to XCENA (strategic rebranding); Named 'Investment Company of the Year' at Korea VC Awards 2024; MX1 prototype; mass production expected end of 2026 via Samsung foundry; Revenue expected starting 2027\nIP signals: Computational memory architecture is a highly patentable domain (RISC-V cores within memory, compute-in-memory methodology); Co-founded by Samsung/SK Hynix veterans with deep patent experience in memory chip design; Competes with Astera Labs and Marvell in next-gen memory connectivity — IP space is contested; Founding team of 3 (Jin Kim, Dohun Kim, Harry Juhyun Kim) — small team with concentrated IP risk; Mass production via Samsung foundry creates cross-border IP transfer considerations\nOutreach readiness: draft_ready; consent basis: no_email_opt_in\nValidation caveat: Ops normalized the parent qwen-local/browser-fallback payload only; no new external enrichment or source-current verification was performed during this staging task."
+      },
+      "contacts": [
+        {
+          "name": "Jin Kim",
+          "title": "CEO & Co-founder",
+          "role_category": "ceo",
+          "email": null,
+          "linkedin_url": null,
+          "phone": null,
+          "source_url": "https://techcrunch.com/2026/05/29/xcena-secures-135m-at-570m-valuation-betting-on-memory-as-ais-real-bottleneck/",
+          "source_type": "public_source_contact_reference",
+          "permission_basis": "public-source research; attorney review required before outreach",
+          "confidence": 75,
+          "suppression_status": "not_checked"
+        },
+        {
+          "name": "Dohun Kim",
+          "title": "CTO & Co-founder",
+          "role_category": "cto",
+          "email": null,
+          "linkedin_url": null,
+          "phone": null,
+          "source_url": "https://techcrunch.com/2026/05/29/xcena-secures-135m-at-570m-valuation-betting-on-memory-as-ais-real-bottleneck/",
+          "source_type": "public_source_contact_reference",
+          "permission_basis": "public-source research; attorney review required before outreach",
+          "confidence": 75,
+          "suppression_status": "not_checked"
+        }
+      ],
+      "evidence": [
+        {
+          "evidence_id": "evidence_3d87f231f477edd397e6df4a",
+          "source_url": "https://techcrunch.com/2026/05/29/xcena-secures-135m-at-570m-valuation-betting-on-memory-as-ais-real-bottleneck/",
+          "accessed_at": "2026-05-30",
+          "source_type": "news",
+          "fact_classification": "public",
+          "evidence_snippet": "XCENA raised $135M Series B at $570M; MX1 compute-in-memory chip uses CXL; mass production end 2026 via Samsung foundry; revenue 2027",
+          "supported_fact": "XCENA raised $135M Series B at $570M; MX1 compute-in-memory chip uses CXL; mass production end 2026 via Samsung foundry; revenue 2027",
+          "confidence": "high",
+          "corroboration": "parent qwen-local browser-fallback research; source-current refresh required before external use",
+          "safe_for_outreach": "conditional",
+          "safe_fact_for_copy": "XCENA raised $135M Series B at $570M; MX1 compute-in-memory chip uses CXL; mass production end 2026 via Samsung foundry; revenue 2027"
+        },
+        {
+          "evidence_id": "evidence_b23f7f9b6dd90003f65ee006",
+          "source_url": "https://xcena.com/",
+          "accessed_at": "2026-05-30",
+          "source_type": "first_party_website",
+          "fact_classification": "public",
+          "evidence_snippet": "Company name: XCENA; CEO: Jin Kim; Address: Seongnam-si, South Korea; Product: MX1 SDK; Rebranded from MetisX",
+          "supported_fact": "Company name: XCENA; CEO: Jin Kim; Address: Seongnam-si, South Korea; Product: MX1 SDK; Rebranded from MetisX",
+          "confidence": "high",
+          "corroboration": "parent qwen-local browser-fallback research; source-current refresh required before external use",
+          "safe_for_outreach": "conditional",
+          "safe_fact_for_copy": "Company name: XCENA; CEO: Jin Kim; Address: Seongnam-si, South Korea; Product: MX1 SDK; Rebranded from MetisX"
+        }
+      ],
+      "outreach_drafts": [
+        {
+          "draft_type": "educational",
+          "channel": "manual_email_review",
+          "title": "AI Patent Strategy Scorecard attorney-review angle: XCENA",
+          "subject": "Attorney-review-only AI Patent Strategy Scorecard angle for XCENA",
+          "body": "ATTORNEY REVIEW ONLY — DO NOT SEND/POST.\nTarget: Jin Kim\nProspect: XCENA\nInternal hypothesis: XCENA raised $135M Series B at $570M; MX1 compute-in-memory chip uses CXL; mass production end 2026 via Samsung foundry; revenue 2027\nSuggested lead magnet: AI Patent Strategy Scorecard\n\nUpstream draft text retained for review context only; it is not approved final copy:\nSubject: Securing computational memory IP ahead of Samsung production\n\nJin,\n\nCongrats on the $570M valuation. As XCENA moves the MX1 from prototype to Samsung foundry production at end 2026, your computational memory architecture patents are entering a critical filing window.\n\nThe IP space around compute-in-memory (CXL-based, RISC-V cores within DRAM) is rapidly becoming contested — Astera Labs, Marvell, and memory giants like Samsung and SK Hynix are all investing heavily in overlapping areas.\n\nFor companies at the nexus of custom silicon and hyperscaler infrastructure, a comprehensive IP strategy typically covers:\n- Compute-in-memory methodology claims\n- CXL-based data orchestration architecture\n- Memory-level KV cache management innovations\n- Cross-border IP considerations for Korean HQ / US market sales\n\nWe published an AI Patent Strategy Scorecard that walks through these and 11 other critical gaps in compute-hardware IP portfolios. Worth a look as you finalize your production timeline.\n\nEducational content only — not legal advice. Attended for attorney review.\n\nRequired before any external use: source-current verification, correct contact validation, conflicts check, suppression/opt-out/prior-touch checks, attorney review, and Jeff exact approval.",
+          "source_facts": [
+            "XCENA raised $135M Series B at $570M; MX1 compute-in-memory chip uses CXL; mass production end 2026 via Samsung foundry; revenue 2027",
+            "Company name: XCENA; CEO: Jin Kim; Address: Seongnam-si, South Korea; Product: MX1 SDK; Rebranded from MetisX"
+          ],
+          "source_urls": [
+            "https://techcrunch.com/2026/05/29/xcena-secures-135m-at-570m-valuation-betting-on-memory-as-ais-real-bottleneck/",
+            "https://xcena.com/"
+          ],
+          "risk_level": "attorney_review_required",
+          "internal_review_notes": "Not approved for sending or posting. Research-only local staging; requires attorney review, conflicts, suppression, source-current checks, and Jeff exact approval before external use."
+        }
+      ],
+      "validation_gates": {
+        "gate_1_live_source": "PARENT_BROWSER_FALLBACK_PAYLOAD_ONLY",
+        "source_status": "Parent qwen-local used browser fallback after Firecrawl/search/extract quota failures; ops staging did not re-browse or enrich.",
+        "contact_validation": "contacts require source-current validation and enrichment before outreach",
+        "outreach_readiness": "attorney-review-only; no external action authorized"
+      },
+      "consent_gating": {
+        "ops_no_auto_send": true,
+        "consent_basis": "no_email_opt_in",
+        "approval_status": "no-auto-send",
+        "workflow_trigger_tags": [],
+        "suppression_tags": [
+          "newsletter:not-consented"
+        ]
+      },
+      "source_candidate_path": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-30/prospect_candidates.json",
+      "normalized_store_path": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-30/prospect_candidates.normalized_for_store.json",
+      "source_packet_prospect_id": "xcena-20260530",
+      "local_growth_os_prospect_id": "prospect_xcena_20260530",
+      "task": "prepare_internal_attorney_review_agent_targeting_packet",
+      "guardrails": {
+        "external_action_allowed": false,
+        "approval_required": true,
+        "no_outreach_no_workflows_no_social_no_clio_no_live_sync": true,
+        "required_before_external_use": [
+          "Jeff exact approval",
+          "attorney review",
+          "conflicts check",
+          "suppression/opt-out/prior-touch check",
+          "source-current verification",
+          "contact identity correction/enrichment where flagged"
+        ]
+      }
+    },
+    {
+      "prospect_id": "cognition-labs-inc-cognition-20260530",
+      "company": {
+        "prospect_id": "prospect_cognition_20260530",
+        "name": "Cognition Labs, Inc. (Cognition)",
+        "domain": "cognition.ai",
+        "website_url": "https://www.cognition.ai/",
+        "location": "San Francisco, CA (inferred); HQ unverified in this run",
+        "state_region": null,
+        "industry": "AI software / autonomous agents / developer tools",
+        "segment": "ai-patent",
+        "primary_offer_lane": "ai-patent",
+        "source_type": "nightly_public_source_research",
+        "source_url": "https://techcrunch.com/2026/05/29/cognitions-scott-wu-says-ai-coding-agents-shouldnt-replace-humans/",
+        "source_note": "Cognition operates Devin, the first autonomous software engineer. The company raised $1B at a $26B valuation (2-year-old startup). Devin now powers 89% of code committed by Cognition engineers and is integrated into Windsurf (acquired competitor). Customers include Citigroup, Mercedes-Benz, Goldman Sachs, US Army, NASA, Lowe's, Rivian, Cisco, Dell, Zillow, Anduril, and Cloudflare (all public-facing via the Cognition website). Launched Cognition for Government (Feb 2026). CEO is Scott Wu (co-founder, age ~24).\nGate status: normalized from parent nightly qwen-local browser-fallback payload; no live enrichment performed by ops staging.",
+        "pipeline_stage": "research_staged",
+        "scores": {
+          "fit_score": 86,
+          "urgency_score": 90,
+          "value_potential_score": 91,
+          "combined_priority_score": 89
+        },
+        "lead_magnet": "AI Patent Strategy Scorecard",
+        "recommended_offer": "AI IP Protection & Patent Strategy",
+        "risk_level": "attorney_review_required",
+        "suppression_status": "consent_gap_no_auto_send",
+        "conflicts_status": "required_before_send",
+        "owner": "qwen-local",
+        "notes": "Research-only nightly candidate. No outreach authorization; attorney review, conflicts, suppression, source-current checks, and Jeff exact approval required before external use.\nUpstream description: Cognition operates Devin, the first autonomous software engineer. The company raised $1B at a $26B valuation (2-year-old startup). Devin now powers 89% of code committed by Cognition engineers and is integrated into Windsurf (acquired competitor). Customers include Citigroup, Mercedes-Benz, Goldman Sachs, US Army, NASA, Lowe's, Rivian, Cisco, Dell, Zillow, Anduril, and Cloudflare (all public-facing via the Cognition website). Launched Cognition for Government (Feb 2026). CEO is Scott Wu (co-founder, age ~24).\nRecent events: Raised $1B at $26B valuation (TechCrunch, Scott Wu says Devin shouldn't replace humans — May 29, 2026); Devin in Windsurf integration (April 15, 2026); Cognition for Government launch (Feb 25, 2026); Devin 2.2 release (Feb 24, 2026); SWE-1.6 research preview (March 1, 2026); Windsurf acquisition earlier in 2026\nIP signals: Autonomous agent architecture (Devin self-driving software development) is a highly novel IP domain; Government deployment (Cognition for Government) increases IP protection urgency for national security applications; Acquired Windsurf — IP integration and licensing implications; Patent strategy increasingly critical for AI agent companies as the autonomous coding space fills with competitors (OpenAI Codex, Claude Code, Cursor, Replit, etc.); 26B valuation puts Cognition in unicorn territory — potential M&A target or IPO pipeline, increasing IP due diligence pressure\nAI compliance signals: Government deployment (Cognition for Government, US Army, Navy) increases AI governance and compliance exposure; Autonomous software development agents operate in high-risk domains (defense, finance, healthcare) — AI compliance frameworks increasingly relevant; Customer base includes regulated industries: financial services (Goldman Sachs, Citigroup), defense (US Army, Anduril), real estate (Zillow, Lowe's), government\nOutreach readiness: research_only; consent basis: no_email_opt_in\nValidation caveat: Ops normalized the parent qwen-local/browser-fallback payload only; no new external enrichment or source-current verification was performed during this staging task."
+      },
+      "contacts": [
+        {
+          "name": "Scott Wu",
+          "title": "CEO & Co-founder",
+          "role_category": "ceo",
+          "email": null,
+          "linkedin_url": null,
+          "phone": null,
+          "source_url": "https://techcrunch.com/2026/05/29/cognitions-scott-wu-says-ai-coding-agents-shouldnt-replace-humans/",
+          "source_type": "public_source_contact_reference",
+          "permission_basis": "public-source research; attorney review required before outreach",
+          "confidence": 75,
+          "suppression_status": "not_checked"
+        }
+      ],
+      "evidence": [
+        {
+          "evidence_id": "evidence_25a988bde458550d96141695",
+          "source_url": "https://techcrunch.com/2026/05/29/cognitions-scott-wu-says-ai-coding-agents-shouldnt-replace-humans/",
+          "accessed_at": "2026-05-30",
+          "source_type": "news",
+          "fact_classification": "public",
+          "evidence_snippet": "Cognition raised $1B; maker of Devin AI coding agent; 89% of code committed by Devin; CEO Scott Wu; acquired Windsurf; Government launch Feb 2026",
+          "supported_fact": "Cognition raised $1B; maker of Devin AI coding agent; 89% of code committed by Devin; CEO Scott Wu; acquired Windsurf; Government launch Feb 2026",
+          "confidence": "high",
+          "corroboration": "parent qwen-local browser-fallback research; source-current refresh required before external use",
+          "safe_for_outreach": "conditional",
+          "safe_fact_for_copy": "Cognition raised $1B; maker of Devin AI coding agent; 89% of code committed by Devin; CEO Scott Wu; acquired Windsurf; Government launch Feb 2026"
+        },
+        {
+          "evidence_id": "evidence_04d754e557e1c7a76c154b42",
+          "source_url": "https://www.cognition.ai/",
+          "accessed_at": "2026-05-30",
+          "source_type": "first_party_website",
+          "fact_classification": "public",
+          "evidence_snippet": "Cognition operates Devin, autonomous software engineer; customers include Citigroup, Mercedes, Goldman Sachs, US Army, NASA, Lowe's, Anduril, Cisco, Dell, Zillow, Rivian, Cloudflare; LinkedIn and X presence",
+          "supported_fact": "Cognition operates Devin, autonomous software engineer; customers include Citigroup, Mercedes, Goldman Sachs, US Army, NASA, Lowe's, Anduril, Cisco, Dell, Zillow, Rivian, Cloudflare; LinkedIn and X presence",
+          "confidence": "high",
+          "corroboration": "parent qwen-local browser-fallback research; source-current refresh required before external use",
+          "safe_for_outreach": "conditional",
+          "safe_fact_for_copy": "Cognition operates Devin, autonomous software engineer; customers include Citigroup, Mercedes, Goldman Sachs, US Army, NASA, Lowe's, Anduril, Cisco, Dell, Zillow, Rivian, Cloudflare; LinkedIn and X presence"
+        }
+      ],
+      "outreach_drafts": [
+        {
+          "draft_type": "educational",
+          "channel": "manual_email_review",
+          "title": "AI Patent Strategy Scorecard attorney-review angle: Cognition Labs, Inc. (Cognition)",
+          "subject": "Attorney-review-only AI Patent Strategy Scorecard angle for Cognition Labs, Inc. (Cognition)",
+          "body": "ATTORNEY REVIEW ONLY — DO NOT SEND/POST.\nTarget: Scott Wu\nProspect: Cognition Labs, Inc. (Cognition)\nInternal hypothesis: Cognition raised $1B; maker of Devin AI coding agent; 89% of code committed by Devin; CEO Scott Wu; acquired Windsurf; Government launch Feb 2026\nSuggested lead magnet: AI Patent Strategy Scorecard\n\nUpstream draft text retained for review context only; it is not approved final copy:\nSubject: Devin's IP posture at $26B valuation\n\nScott,\n\nCognition's $26B valuation and the government deployment of Devin puts your autonomous agent IP in one of the most contested spaces in all of AI. As the line between \"agent\" and \"autonomous software engineer\" blurs, patent claims around self-driving development, recursive agent design, and multi-agent code generation are becoming the primary battleground.\n\nWith Windsurf acquired, US government deployment, and customers spanning defense (US Army, Anduril), finance (Goldman Sachs), and enterprise (Cisco, Dell) — your IP portfolio is both the company's crown jewel and its most scrutinized asset.\n\nWe published an AI Patent Strategy Scorecard that covers 15 critical gaps in autonomous-agent IP portfolios, including:\n- Agent orchestration architecture claims\n- Autonomous planning/execution methodology\n- Multi-agent handoff and context management\n- Licensing considerations for acquired agent products\n\nAt your scale, IP strategy transitions from a defensive exercise to a core valuation driver. Worth reviewing as Devin 2.2 ships.\n\nEducational content only — not legal advice. Attended for attorney review.\n\nRequired before any external use: source-current verification, correct contact validation, conflicts check, suppression/opt-out/prior-touch checks, attorney review, and Jeff exact approval.",
+          "source_facts": [
+            "Cognition raised $1B; maker of Devin AI coding agent; 89% of code committed by Devin; CEO Scott Wu; acquired Windsurf; Government launch Feb 2026",
+            "Cognition operates Devin, autonomous software engineer; customers include Citigroup, Mercedes, Goldman Sachs, US Army, NASA, Lowe's, Anduril, Cisco, Dell, Zillow, Rivian, Cloudflare; LinkedIn and X presence"
+          ],
+          "source_urls": [
+            "https://techcrunch.com/2026/05/29/cognitions-scott-wu-says-ai-coding-agents-shouldnt-replace-humans/",
+            "https://www.cognition.ai/"
+          ],
+          "risk_level": "attorney_review_required",
+          "internal_review_notes": "Not approved for sending or posting. Research-only local staging; requires attorney review, conflicts, suppression, source-current checks, and Jeff exact approval before external use."
+        }
+      ],
+      "validation_gates": {
+        "gate_1_live_source": "PARENT_BROWSER_FALLBACK_PAYLOAD_ONLY",
+        "source_status": "Parent qwen-local used browser fallback after Firecrawl/search/extract quota failures; ops staging did not re-browse or enrich.",
+        "contact_validation": "contacts require source-current validation and enrichment before outreach",
+        "outreach_readiness": "attorney-review-only; no external action authorized"
+      },
+      "consent_gating": {
+        "ops_no_auto_send": true,
+        "consent_basis": "no_email_opt_in",
+        "approval_status": "no-auto-send",
+        "workflow_trigger_tags": [],
+        "suppression_tags": [
+          "newsletter:not-consented"
+        ]
+      },
+      "source_candidate_path": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-30/prospect_candidates.json",
+      "normalized_store_path": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-30/prospect_candidates.normalized_for_store.json",
+      "source_packet_prospect_id": "cognition-labs-inc-cognition-20260530",
+      "local_growth_os_prospect_id": "prospect_cognition_20260530",
+      "task": "prepare_internal_attorney_review_agent_targeting_packet",
+      "guardrails": {
+        "external_action_allowed": false,
+        "approval_required": true,
+        "no_outreach_no_workflows_no_social_no_clio_no_live_sync": true,
+        "required_before_external_use": [
+          "Jeff exact approval",
+          "attorney review",
+          "conflicts check",
+          "suppression/opt-out/prior-touch check",
+          "source-current verification",
+          "contact identity correction/enrichment where flagged"
+        ]
+      }
+    }
+  ],
+  "source_payload": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-30/prospect_candidates.json",
+  "task": "t_c53fa8ec",
+  "run_date": "2026-05-30",
+  "normalization_warnings": [
+    "Groq, Inc.: Adam Winter has no email/opt-in; no-send/no-workflow guard remains.",
+    "Groq, Inc.: Matt Eng has no email/opt-in; no-send/no-workflow guard remains.",
+    "Groq, Inc.: upstream draft typo 'Attended for attorney review' preserved only in source payload; normalized draft uses ATTORNEY REVIEW ONLY wrapper.",
+    "XCENA: Jin Kim has no email/opt-in; no-send/no-workflow guard remains.",
+    "XCENA: Dohun Kim has no email/opt-in; no-send/no-workflow guard remains.",
+    "XCENA: upstream draft typo 'Attended for attorney review' preserved only in source payload; normalized draft uses ATTORNEY REVIEW ONLY wrapper.",
+    "Cognition Labs, Inc. (Cognition): Scott Wu has no email/opt-in; no-send/no-workflow guard remains.",
+    "Cognition Labs, Inc. (Cognition): upstream draft typo 'Attended for attorney review' preserved only in source payload; normalized draft uses ATTORNEY REVIEW ONLY wrapper."
+  ],
+  "skipped": []
+}

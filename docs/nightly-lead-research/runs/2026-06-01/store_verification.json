@@ -1,0 +1,56 @@
+{
+  "counts": {
+    "prospects": 62,
+    "contacts": 57,
+    "opportunities": 73,
+    "source_evidence": 126,
+    "outreach_drafts": 44,
+    "approval_items": 76,
+    "crm_sync_records": 55,
+    "suppression_checks": 44,
+    "work_items": 39
+  },
+  "row_checks": [
+    {
+      "company": "SkildAI",
+      "prospect_id": "prospect_skildai_20260601",
+      "prospect_rows": 1,
+      "contact_rows": 0,
+      "evidence_rows": 2,
+      "draft_rows": 1,
+      "approval_rows": 1,
+      "suppression_rows": 1,
+      "sync_rows": 1,
+      "work_item_rows": 1,
+      "external_action_allowed_sum": 0
+    },
+    {
+      "company": "Goodfire",
+      "prospect_id": "prospect_goodfire_20260601",
+      "prospect_rows": 1,
+      "contact_rows": 0,
+      "evidence_rows": 2,
+      "draft_rows": 1,
+      "approval_rows": 1,
+      "suppression_rows": 1,
+      "sync_rows": 1,
+      "work_item_rows": 1,
+      "external_action_allowed_sum": 0
+    },
+    {
+      "company": "Flapping Airplanes",
+      "prospect_id": "prospect_flapping_airplanes_20260601",
+      "prospect_rows": 1,
+      "contact_rows": 0,
+      "evidence_rows": 2,
+      "draft_rows": 1,
+      "approval_rows": 1,
+      "suppression_rows": 1,
+      "sync_rows": 1,
+      "work_item_rows": 1,
+      "external_action_allowed_sum": 0
+    }
+  ],
+  "inserted_work_item_rows": 3,
+  "safety_external_action_allowed_total": 0
+}

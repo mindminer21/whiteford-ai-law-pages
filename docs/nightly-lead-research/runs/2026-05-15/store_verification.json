@@ -1,0 +1,21 @@
+{
+  "status": "verified_noop",
+  "db": "/Users/jeff/.openclaw/projects/mountain-west-growth-os/data/growth-os.sqlite",
+  "table_counts_after_apply": {
+    "prospects": 39,
+    "contacts": 20,
+    "opportunities": 50,
+    "source_evidence": 44,
+    "outreach_drafts": 20,
+    "approval_items": 52,
+    "crm_sync_records": 32,
+    "suppression_checks": 20
+  },
+  "work_items_table_exists": true,
+  "work_items_matching_2026_05_15": 0,
+  "external_actions": 0,
+  "live_highlevel_writes": 0,
+  "live_supabase_writes": 0,
+  "clio_writes": 0,
+  "linkedin_actions": 0
+}

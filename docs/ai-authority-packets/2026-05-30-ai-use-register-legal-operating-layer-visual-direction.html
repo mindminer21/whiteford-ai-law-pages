@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>AI Use Register — Whiteford/Schell IP Visual Direction</title>
+<style>
+:root {
+  --bg:#f7f5ef;
+  --paper:#fffdf8;
+  --ink:#121827;
+  --muted:#5d6678;
+  --blue:#213f77;
+  --violet:#683ab7;
+  --gold:#b99057;
+  --sage:#55776a;
+  --line:#d8d0c3;
+  --shadow: 0 22px 60px rgba(18,24,39,.10);
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background:
+    linear-gradient(rgba(216,208,195,.22) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(216,208,195,.22) 1px, transparent 1px),
+    var(--bg);
+  background-size: 28px 28px;
+  color: var(--ink);
+  font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+main { min-height: 100vh; display: grid; place-items: center; padding: clamp(24px, 4vw, 60px); }
+.board {
+  width: min(1180px, 100%);
+  background: rgba(255,253,248,.92);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+  padding: clamp(26px, 4vw, 54px);
+  position: relative;
+  overflow: hidden;
+}
+.board:before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 10px;
+  background: linear-gradient(90deg, var(--blue), var(--violet), var(--gold), var(--sage));
+}
+header { display: grid; grid-template-columns: 1.15fr .85fr; gap: 32px; align-items: end; border-bottom: 1px solid var(--line); padding-bottom: 28px; }
+.kicker { color: var(--blue); letter-spacing: .14em; font-size: 13px; font-weight: 760; text-transform: uppercase; }
+h1 { font-family: ui-serif, Georgia, "Times New Roman", serif; font-size: clamp(42px, 6vw, 76px); line-height: .95; margin: 10px 0 0; text-wrap: balance; }
+.subhead { color: var(--muted); font-size: clamp(17px, 2vw, 22px); line-height: 1.45; margin: 0; text-wrap: pretty; }
+.content { display: grid; grid-template-columns: minmax(0, 1fr) 290px; gap: 28px; margin-top: 32px; }
+.register { border: 1px solid var(--line); background: var(--paper); padding: 22px; }
+.register-head { display:flex; justify-content:space-between; gap:18px; align-items:center; margin-bottom:18px; }
+.register-title { font-weight: 820; color: var(--blue); font-size: 18px; }
+.register-note { color: var(--muted); font-size: 13px; }
+.lanes { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+.lane { border: 1px solid var(--line); min-height: 310px; padding: 18px; background: linear-gradient(180deg, #fffdf8, #fbf7ee); display:flex; flex-direction:column; }
+.lane b { display:block; font-size: 16px; line-height:1.25; color: var(--ink); margin-bottom: 14px; }
+.lane span { display:inline-flex; width: 30px; height: 30px; align-items:center; justify-content:center; border-radius: 50%; background: var(--blue); color:#fff; font-weight:800; margin-bottom:16px; }
+.lane:nth-child(2) span { background: var(--violet); }
+.lane:nth-child(3) span { background: var(--gold); }
+.lane:nth-child(4) span { background: var(--sage); }
+ul { margin: 0; padding-left: 18px; color: var(--muted); line-height: 1.65; font-size: 14px; }
+.rail { background: #f3efe6; border: 1px solid var(--line); padding: 22px; display:flex; flex-direction:column; justify-content:space-between; }
+.rail h2 { font-family: ui-serif, Georgia, serif; font-size: 28px; line-height:1.05; margin:0 0 16px; }
+.askers { display:grid; gap: 10px; }
+.asker { border-bottom: 1px solid var(--line); padding: 9px 0; font-weight: 720; color: var(--blue); }
+.cta { margin-top: 28px; border-top: 1px solid var(--line); padding-top: 22px; display:flex; justify-content:space-between; gap:20px; align-items:center; }
+.cta strong { font-size: 18px; }
+.cta a { color: var(--paper); background: var(--blue); text-decoration:none; padding: 13px 18px; min-height:44px; display:inline-flex; align-items:center; font-weight:800; }
+.caveat { color: var(--muted); font-size: 12px; margin-top: 18px; }
+@media (max-width: 920px) {
+  header, .content { grid-template-columns: 1fr; }
+  .lanes { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 560px) {
+  main { padding: 16px; }
+  .lanes { grid-template-columns: 1fr; }
+  .cta { align-items:flex-start; flex-direction:column; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .lane, .rail, .cta a { transition: transform .18s ease, box-shadow .18s ease; }
+  .lane:hover, .cta a:hover { transform: translateY(-2px); }
+}
+</style>
+</head>
+<body>
+<main>
+  <section class="board" aria-label="AI Use Register visual direction">
+    <header>
+      <div>
+        <div class="kicker">Whiteford / Schell IP · AI Legal Operating System</div>
+        <h1>AI Use Register</h1>
+      </div>
+      <p class="subhead">Make AI adoption visible before launch, renewal, financing, procurement, or diligence.</p>
+    </header>
+    <div class="content">
+      <article class="register">
+        <div class="register-head">
+          <div class="register-title">Control layer for practical AI governance</div>
+          <div class="register-note">Working record, not policy theater</div>
+        </div>
+        <div class="lanes">
+          <section class="lane"><span>1</span><b>Use case + owner</b><ul><li>Tool or feature</li><li>Business function</li><li>Accountable owner</li></ul></section>
+          <section class="lane"><span>2</span><b>Data + decision exposure</b><ul><li>Input categories</li><li>Output users</li><li>Customer / employee / regulated impact</li></ul></section>
+          <section class="lane"><span>3</span><b>Vendor / IP / contract terms</b><ul><li>Confidentiality</li><li>Ownership and data rights</li><li>Security, audit, indemnity</li></ul></section>
+          <section class="lane"><span>4</span><b>Human review + evidence trail</b><ul><li>Review path</li><li>Escalation triggers</li><li>Records for diligence</li></ul></section>
+        </div>
+      </article>
+      <aside class="rail">
+        <div>
+          <h2>Who asks later?</h2>
+          <div class="askers">
+            <div class="asker">Enterprise procurement</div>
+            <div class="asker">Investors and lenders</div>
+            <div class="asker">Buyer diligence</div>
+            <div class="asker">Board / management</div>
+            <div class="asker">Regulators / customers</div>
+          </div>
+        </div>
+      </aside>
+    </div>
+    <div class="cta">
+      <strong>Start with visibility. Then sequence the legal work.</strong>
+      <a href="/colorado-tech-general-counsel">/colorado-tech-general-counsel</a>
+    </div>
+    <p class="caveat">Draft educational framework — not legal advice. Do not collect confidential facts through public forms.</p>
+  </section>
+</main>
+</body>
+</html>

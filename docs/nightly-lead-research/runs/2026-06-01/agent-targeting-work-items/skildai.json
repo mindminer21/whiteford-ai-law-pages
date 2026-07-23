@@ -1,0 +1,123 @@
+{
+  "prospect_id": "skildai-20260601",
+  "company": {
+    "prospect_id": "prospect_skildai_20260601",
+    "name": "SkildAI",
+    "domain": "skild.ai",
+    "website_url": "https://skild.ai",
+    "company_linkedin_url": null,
+    "location": "United States (HQ and engineering; exact city unverified from current public pages)",
+    "state_region": null,
+    "industry": "Physical AI / robotics / embodied intelligence",
+    "segment": "ai-patent",
+    "primary_offer_lane": "ai-patent",
+    "source_type": "nightly_public_source_research",
+    "source_url": "https://techcrunch.com/2026/02/17/here-are-the-17-us-based-ai-companies-that-have-raised-100m-or-more-in-2026/",
+    "source_note": "Building a unified 'omni-bodied brain' to control any robot for any task (physical AI, embodied intelligence)\nRaised $1.4B Series C on Jan 14, 2026, valued at $14B — led by SoftBank and Nvidia\nFocus: reverse-engineering robotics, human-like sample efficiency, learning from human demonstration videos\nProduct platforms include security/inspection robot platform, mobile manipulation, and autonomous packing\nVideo content on site demonstrates 'Learns from Humans' and 'Embodied AI Mobile Manipulation Platform' — product-ready demo\nHas active careers page and blog; engineering/hiring activity implied\nGate status: BROWSER_FALLBACK_RESUMED via browser_navigate snapshots + browser_console text extraction.",
+    "pipeline_stage": "research_staged",
+    "scores": {
+      "fit_score": 91,
+      "urgency_score": 78,
+      "value_potential_score": 85,
+      "combined_priority_score": 84
+    },
+    "lead_magnet": "AI Patent Strategy Scorecard",
+    "recommended_offer": "AI IP Protection & Patent Strategy",
+    "risk_level": "attorney_review_required",
+    "suppression_status": "consent_gap_no_auto_send",
+    "conflicts_status": "required_before_send",
+    "owner": "qwen-local",
+    "notes": "Research-only nightly candidate. No outreach authorization; attorney review, conflicts, suppression, source-current checks, contact validation, and Jeff exact approval required before external use.\nGate status: normalized from parent nightly qwen-local browser-fallback payload; ops staging did not perform live enrichment or external source refresh.\nOutreach readiness: research_only; consent basis: no_email_opt_in; approval status: no-auto-send\nDecision-maker guidance: verify current CEO/CTO/Head of IP before outreach — leadership not publicly named from current sources\nContact notes: Generic contact admin@skild.ai found in footer of skild.ai homepage. No named decision maker identified from current public sources (about page returned 404, blog JS-rendered). Do NOT stage named-person outreach draft. Use role-target guidance: verify current CEO/CTO/Head of IP.\nKey facts: Building a unified 'omni-bodied brain' to control any robot for any task (physical AI, embodied intelligence); Raised $1.4B Series C on Jan 14, 2026, valued at $14B — led by SoftBank and Nvidia; Focus: reverse-engineering robotics, human-like sample efficiency, learning from human demonstration videos; Product platforms include security/inspection robot platform, mobile manipulation, and autonomous packing; Video content on site demonstrates 'Learns from Humans' and 'Embodied AI Mobile Manipulation Platform' — product-ready demo; Has active careers page and blog; engineering/hiring activity implied\nRemediation before outreach: verify current CEO/CTO names from Crunchbase or company LinkedIn; verify HQ city from LinkedIn or press release; check for named co-founders or Head of IP; confirm current about/team URL format\nMountain West relevance: Not directly supported. Target via national IP relevance for embodied-AI patent strategy.\nValidation caveat: parent research used browser_navigate snapshots after Firecrawl/search/extract quota failures; source-current checks remain required before external use."
+  },
+  "contacts": [],
+  "evidence": [
+    {
+      "evidence_id": "evidence_a9161050e4d9f0ce5acde27e",
+      "source_url": "https://techcrunch.com/2026/02/17/here-are-the-17-us-based-ai-companies-that-have-raised-100m-or-more-in-2026/",
+      "accessed_at": "2026-06-01",
+      "source_type": "techcrunch_article",
+      "fact_classification": "public",
+      "evidence_snippet": "SkildAI raised $1.4B Series C valued at $14B, led by SoftBank and Nvidia, Jan 14, 2026",
+      "supported_fact": "SkildAI raised $1.4B Series C valued at $14B, led by SoftBank and Nvidia, Jan 14, 2026",
+      "confidence": "medium_high",
+      "corroboration": "parent qwen-local browser-fallback research; source-current refresh required before external use",
+      "safe_for_outreach": "conditional",
+      "safe_fact_for_copy": "SkildAI raised $1.4B Series C valued at $14B, led by SoftBank and Nvidia, Jan 14, 2026"
+    },
+    {
+      "evidence_id": "evidence_3e38dd60fb61059db9108453",
+      "source_url": "https://skild.ai",
+      "accessed_at": "2026-06-01",
+      "source_type": "first-party_website",
+      "fact_classification": "public",
+      "evidence_snippet": "Skild: 'Physical AI should be omni-bodied. We are building a unified, omni-bodied brain to control any robot for any task.' Platform includes security/inspection, mobile manipulation, autonomous packing. Contact admin@skild.ai.",
+      "supported_fact": "Skild: 'Physical AI should be omni-bodied. We are building a unified, omni-bodied brain to control any robot for any task.' Platform includes security/inspection, mobile manipulation, autonomous packing. Contact admin@skild.ai.",
+      "confidence": "medium_high",
+      "corroboration": "parent qwen-local browser-fallback research; source-current refresh required before external use",
+      "safe_for_outreach": "conditional",
+      "safe_fact_for_copy": "Skild: 'Physical AI should be omni-bodied. We are building a unified, omni-bodied brain to control any robot for any task.' Platform includes security/inspection, mobile manipulation, autonomous packing. Contact admin@skild.ai."
+    }
+  ],
+  "outreach_drafts": [
+    {
+      "draft_type": "educational",
+      "channel": "manual_email_review",
+      "title": "AI Patent Strategy Scorecard attorney-review angle: SkildAI",
+      "subject": "Attorney-review-only AI Patent Strategy Scorecard angle for SkildAI",
+      "body": "ATTORNEY REVIEW ONLY — DO NOT SEND/POST.\nTarget: role to verify before outreach (CEO/CTO/Head of IP or equivalent; no named decision maker verified).\nProspect: SkildAI\nInternal hypothesis: SkildAI raised $1.4B Series C valued at $14B, led by SoftBank and Nvidia, Jan 14, 2026\nSuggested lead magnet: AI Patent Strategy Scorecard\n\nUpstream draft text retained for review context only; it is not approved final copy:\nSkildAI just closed a $1.4B robotics raise led by SoftBank and Nvidia while the team is actively building a 'physical AI' brain that learns from human videos to control any robot. Companies with embodied-AI IP portfolios face contested patent territory as the embodied-AI class of inventions becomes standard-setter critical. The AI Patent Strategy Scorecard helps evaluate whether current patent coverage would survive that standard-setting race.\n\nRequired before any external use: source-current verification, named contact validation, conflicts check, suppression/opt-out/prior-touch checks, attorney review, and Jeff exact approval.",
+      "source_facts": [
+        "SkildAI raised $1.4B Series C valued at $14B, led by SoftBank and Nvidia, Jan 14, 2026",
+        "Skild: 'Physical AI should be omni-bodied. We are building a unified, omni-bodied brain to control any robot for any task.' Platform includes security/inspection, mobile manipulation, autonomous packing. Contact admin@skild.ai."
+      ],
+      "source_urls": [
+        "https://techcrunch.com/2026/02/17/here-are-the-17-us-based-ai-companies-that-have-raised-100m-or-more-in-2026/",
+        "https://skild.ai"
+      ],
+      "risk_level": "attorney_review_required",
+      "internal_review_notes": "Not approved for sending or posting. Research-only local staging; requires attorney review, conflicts, suppression, source-current checks, named contact validation, and Jeff exact approval before external use."
+    }
+  ],
+  "validation_gates": {
+    "gate_1_live_source": "PARENT_BROWSER_FALLBACK_PAYLOAD_ONLY",
+    "source_status": "browser_navigate snapshots + browser_console text extraction",
+    "contact_validation": "Gate 4 failed: no named decision makers verified; no person-level contact staged.",
+    "linkedin_validation": "No company or person LinkedIn URLs verified; no LinkedIn action authorized.",
+    "outreach_readiness": "attorney-review-only research_only; no external action authorized"
+  },
+  "consent_gating": {
+    "ops_no_auto_send": true,
+    "consent_basis": "no_email_opt_in",
+    "approval_status": "no-auto-send",
+    "workflow_trigger_tags": [],
+    "suppression_tags": [
+      "newsletter:not-consented"
+    ]
+  },
+  "source_candidate_path": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-06-01/prospect_candidates.json",
+  "normalized_store_path": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-06-01/prospect_candidates.normalized_for_store.json",
+  "source_packet_prospect_id": "skildai-20260601",
+  "local_growth_os_prospect_id": "prospect_skildai_20260601",
+  "task": "prepare_internal_attorney_review_agent_targeting_packet",
+  "guardrails": {
+    "external_action_allowed": false,
+    "approval_required": true,
+    "no_outreach_no_workflows_no_social_no_clio_no_live_sync": true,
+    "required_before_external_use": [
+      "Jeff exact approval",
+      "attorney review",
+      "conflicts check",
+      "suppression/opt-out/prior-touch check",
+      "source-current verification",
+      "named decision-maker/contact validation"
+    ]
+  },
+  "work_item_id": "work_nightly_agent_targeting_20260601_851f22b6e49baead7c710fe0",
+  "input_path": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-06-01/agent-targeting-work-items/skildai.json",
+  "output_path": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-06-01/agent-targeting-packets/skildai-agent-targeting-packet.md",
+  "remediation_checklist": [
+    "Attorney review required before external use.",
+    "Named decision-maker/contact validation required before any outreach.",
+    "Conflicts, suppression/opt-out, prior-touch, and source-current checks required before any outreach.",
+    "Do not send, post, tag, trigger workflows, sync live CRM/Supabase, or write Clio without Jeff exact approval."
+  ]
+}

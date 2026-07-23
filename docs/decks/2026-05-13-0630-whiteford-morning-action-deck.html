@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>2026-05-13 Morning Action Deck — Whiteford / Schell IP</title>
+<style>
+  :root {
+    --ink: #f5f2ea;
+    --muted: #b8b2a7;
+    --dim: #837d72;
+    --bg: #11100e;
+    --panel: #191713;
+    --panel-2: #211f1a;
+    --line: #3a342a;
+    --accent: #c9a55b;
+    --accent-2: #8fb6c9;
+    --hold: #e58b74;
+    --pass: #8fbe9b;
+    --paper: #fbfaf7;
+    --paper-ink: #161410;
+    --slide-w: 1920;
+    --slide-h: 1080;
+  }
+
+  * { box-sizing: border-box; }
+  html, body { height: 100%; margin: 0; }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    overflow: hidden;
+  }
+
+  .viewport {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    padding: 40px 40px 84px;
+  }
+
+  .stage {
+    width: calc(var(--slide-w) * 1px);
+    height: calc(var(--slide-h) * 1px);
+    transform-origin: center center;
+    position: relative;
+  }
+
+  .slide {
+    display: none;
+    position: absolute;
+    inset: 0;
+    padding: 92px 112px 82px;
+    background:
+      linear-gradient(135deg, rgba(201,165,91,.08), transparent 34%),
+      radial-gradient(circle at 88% 12%, rgba(143,182,201,.09), transparent 28%),
+      var(--panel);
+    border: 1px solid var(--line);
+    box-shadow: 0 28px 80px rgba(0,0,0,.38);
+  }
+  .slide.active { display: block; }
+
+  .eyebrow {
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: .16em;
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0 0 26px;
+  }
+  h1 {
+    margin: 0;
+    font-size: 82px;
+    line-height: .98;
+    letter-spacing: -.045em;
+    max-width: 1420px;
+  }
+  h2 {
+    margin: 0 0 34px;
+    font-size: 58px;
+    line-height: 1.02;
+    letter-spacing: -.035em;
+  }
+  h3 {
+    margin: 0 0 12px;
+    font-size: 31px;
+    line-height: 1.15;
+  }
+  p, li, td, th { font-size: 29px; line-height: 1.34; }
+  p { margin: 0 0 24px; }
+  .muted { color: var(--muted); }
+  .dim { color: var(--dim); }
+  .accent { color: var(--accent); }
+  .hold { color: var(--hold); }
+  .pass { color: var(--pass); }
+  code {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: .86em;
+    color: var(--ink);
+  }
+
+  .topline {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 28px;
+    margin-bottom: 42px;
+    color: var(--muted);
+    font-size: 24px;
+  }
+  .seal {
+    border: 1px solid rgba(201,165,91,.45);
+    color: var(--accent);
+    padding: 12px 18px;
+    font-size: 20px;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+  }
+
+  .cover-title { margin-top: 120px; }
+  .cover-subtitle {
+    margin-top: 34px;
+    max-width: 1200px;
+    color: var(--muted);
+    font-size: 34px;
+  }
+  .status-strip {
+    position: absolute;
+    left: 112px;
+    right: 112px;
+    bottom: 82px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 18px;
+  }
+  .status-cell {
+    border-top: 1px solid var(--line);
+    padding-top: 18px;
+    color: var(--muted);
+    font-size: 24px;
+  }
+  .status-cell strong { display: block; color: var(--ink); font-size: 30px; margin-bottom: 4px; }
+
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 34px; }
+  .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px; }
+  .card {
+    background: rgba(17,16,14,.62);
+    border: 1px solid var(--line);
+    padding: 28px 30px;
+    min-height: 170px;
+  }
+  .card.compact { min-height: auto; padding: 22px 24px; }
+  .card strong { color: var(--ink); }
+  .card p, .card li { font-size: 25px; }
+  .card .label {
+    display: inline-block;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: .12em;
+    font-weight: 800;
+    font-size: 17px;
+    margin-bottom: 14px;
+  }
+
+  .decision-callout {
+    background: rgba(201,165,91,.09);
+    border: 2px solid rgba(201,165,91,.42);
+    padding: 30px 34px;
+    margin-top: 26px;
+  }
+  .decision-callout h3 { color: var(--accent); }
+  .choice-row {
+    display: grid;
+    grid-template-columns: 34px 1fr;
+    gap: 15px;
+    align-items: start;
+    margin: 13px 0;
+    font-size: 27px;
+  }
+  .boxmark {
+    width: 28px;
+    height: 28px;
+    border: 2px solid var(--muted);
+    margin-top: 5px;
+  }
+
+  .priority-list { counter-reset: lane; display: grid; gap: 20px; }
+  .priority {
+    counter-increment: lane;
+    display: grid;
+    grid-template-columns: 74px 1fr;
+    gap: 22px;
+    align-items: start;
+    background: rgba(17,16,14,.48);
+    border: 1px solid var(--line);
+    padding: 24px 28px;
+  }
+  .priority::before {
+    content: counter(lane);
+    width: 58px;
+    height: 58px;
+    display: grid;
+    place-items: center;
+    border: 1px solid rgba(201,165,91,.55);
+    color: var(--accent);
+    font-weight: 800;
+    font-size: 30px;
+  }
+  .priority p { margin: 0; font-size: 25px; }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background: rgba(17,16,14,.42);
+    border: 1px solid var(--line);
+  }
+  th, td { padding: 20px 22px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+  th { color: var(--accent); text-transform: uppercase; letter-spacing: .10em; font-size: 17px; }
+  td { font-size: 25px; }
+  tr:last-child td { border-bottom: 0; }
+
+  .wall {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+  }
+  .forbidden {
+    border: 1px solid rgba(229,139,116,.42);
+    background: rgba(229,139,116,.075);
+    padding: 22px 24px;
+    font-size: 24px;
+    color: var(--muted);
+  }
+  .forbidden strong { color: var(--hold); display: block; font-size: 27px; margin-bottom: 6px; }
+
+  .nav {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 50;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    background: rgba(17,16,14,.94);
+    border-top: 1px solid var(--line);
+    color: var(--muted);
+    font-size: 15px;
+  }
+  .nav button {
+    min-width: 92px;
+    height: 38px;
+    border: 1px solid var(--line);
+    background: var(--panel-2);
+    color: var(--ink);
+    cursor: pointer;
+  }
+  .nav button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .nav button:disabled { opacity: .4; cursor: default; }
+  #slideCount { min-width: 88px; text-align: center; font-variant-numeric: tabular-nums; }
+
+  .slide-id {
+    position: absolute;
+    right: 112px;
+    bottom: 80px;
+    color: var(--dim);
+    font-size: 18px;
+    letter-spacing: .10em;
+    text-transform: uppercase;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .slide.active { animation: fadeIn .16s ease-out; }
+    @keyframes fadeIn { from { opacity: .25; transform: translateY(4px); } to { opacity: 1; transform: none; } }
+  }
+
+  @media print {
+    body { overflow: visible; background: white; color: var(--paper-ink); }
+    .viewport { display: block; width: auto; height: auto; padding: 0; }
+    .stage { transform: none !important; width: auto; height: auto; }
+    .slide {
+      display: block !important;
+      position: relative;
+      width: 16in;
+      height: 9in;
+      page-break-after: always;
+      background: var(--paper);
+      color: var(--paper-ink);
+      box-shadow: none;
+      border: 1px solid #ddd;
+    }
+    .nav { display: none; }
+    .card, table, .priority, .decision-callout { background: #fff; }
+    .muted, .dim { color: #555; }
+    code { color: #000; }
+  }
+</style>
+</head>
+<body>
+  <main class="viewport" aria-label="2026-05-13 Whiteford morning action deck">
+    <section class="stage" id="stage">
+      <article class="slide active" id="slide-cover" data-title="Cover">
+        <div class="topline"><span>Whiteford / Schell IP</span><span class="seal">Private decision prep</span></div>
+        <div class="cover-title">
+          <p class="eyebrow">2026-05-13 · 06:30 MDT</p>
+          <h1>Morning action deck: decision-ready, not launch-ready.</h1>
+          <p class="cover-subtitle">A sparse local deck from the morning action brief. It authorizes no live-system, public, outreach, CRM, Supabase, Clio, workflow, social, email, ad, or prospect/client-facing action.</p>
+        </div>
+        <div class="status-strip">
+          <div class="status-cell"><strong>Default</strong>HOLD unless a named narrow internal lane is approved.</div>
+          <div class="status-cell"><strong>Two blockers</strong>Supabase DDL and HighLevel token/location access.</div>
+          <div class="status-cell"><strong>Safest lane</strong>Tech GC local/no-token QA packet with synthetic inputs.</div>
+        </div>
+        <div class="slide-id">slide-cover</div>
+      </article>
+
+      <article class="slide" id="slide-sixty-second-brief" data-title="60-second brief">
+        <p class="eyebrow">Read this first</p>
+        <h2>The 60-second posture</h2>
+        <div class="grid-3">
+          <div class="card"><span class="label">1 · Hold</span><h3>System is blocked, not broken.</h3><p class="muted">Expanded Supabase schema and HighLevel Agent Targeting access remain human/admin gates. Do not force-start gated tasks.</p></div>
+          <div class="card"><span class="label">2 · Decide</span><h3>Pick HOLD or one narrow internal lane.</h3><p class="muted">The safe progress path is private review, local/no-token QA planning, or attorney-review-only copy work.</p></div>
+          <div class="card"><span class="label">3 · Preserve</span><h3>No external-action wall remains intact.</h3><p class="muted">No sends, enrollments, public publishing, prospecting, CRM/HighLevel/Supabase/Clio mutation, or live workflow action.</p></div>
+        </div>
+        <div class="decision-callout">
+          <h3>Manual morning decision</h3>
+          <p>Jeff should choose one of: continue HOLD; approve named Supabase admin exact-SQL review/install; approve HighLevel token refresh + read-only probe + dry-run only; or approve Tech GC local/no-token QA prep.</p>
+        </div>
+        <div class="slide-id">slide-sixty-second-brief</div>
+      </article>
+
+      <article class="slide" id="slide-supabase-blocker" data-title="Supabase blocker">
+        <p class="eyebrow">Human blocker 1</p>
+        <h2>Supabase expanded schema: admin DDL only.</h2>
+        <div class="grid-2">
+          <div class="card">
+            <span class="label">Current state</span>
+            <p><strong>Task:</strong> <code>t_fa6eb9c1</code></p>
+            <p><strong>Project:</strong> <code>yidxnmxvtohaldkbypcv</code></p>
+            <p><strong>Prepared SQL:</strong> <code>/Users/jeff/.openclaw/projects/mountain-west-growth-os/supabase/phase6-11-combined-growth-os-schema.sql</code></p>
+            <p class="muted">Read-only checks still show expanded phase 6–11 mirror tables missing. Agents must not run DDL, sync, or backfill.</p>
+          </div>
+          <div class="decision-callout" style="margin-top:0;">
+            <h3>Manual unblock callout</h3>
+            <div class="choice-row"><span class="boxmark" aria-hidden="true"></span><span>HOLD Supabase DDL, sync, and backfill.</span></div>
+            <div class="choice-row"><span class="boxmark" aria-hidden="true"></span><span>APPROVE authorized human/admin DDL review/install only.</span></div>
+            <p class="muted">If approved: name operator, capture non-secret evidence path, verify correct project, successful SQL execution, and expected tables present.</p>
+          </div>
+        </div>
+        <div class="slide-id">slide-supabase-blocker</div>
+      </article>
+
+      <article class="slide" id="slide-highlevel-blocker" data-title="HighLevel blocker">
+        <p class="eyebrow">Human blocker 2</p>
+        <h2>HighLevel Agent Targeting: token/location gate.</h2>
+        <div class="grid-2">
+          <div class="card">
+            <span class="label">Current state</span>
+            <p><strong>Task:</strong> <code>t_7884ab57</code></p>
+            <p><strong>Location:</strong> Whiteford Schell IP / <code>tm68WWMrcAa3TqQbEAMa</code></p>
+            <p><strong>Pipeline:</strong> <code>Tbx4tA6wHv5lTwZPSHyZ</code></p>
+            <p><strong>Prior failures:</strong> 401 / 403 / location binding / Cloudflare denial variants.</p>
+            <p class="muted">No contact/opportunity mutation is safe while access is ambiguous.</p>
+          </div>
+          <div class="decision-callout" style="margin-top:0;">
+            <h3>Manual unblock callout</h3>
+            <div class="choice-row"><span class="boxmark" aria-hidden="true"></span><span>HOLD token/probe/dry-run/live work.</span></div>
+            <div class="choice-row"><span class="boxmark" aria-hidden="true"></span><span>APPROVE token refresh + read-only <code>/workflows</code> probe + dry-run only.</span></div>
+            <p class="muted">Hard stop on wrong location, missing scope, 401, 403, Cloudflare 1010, token exposure, or any dry-run output implying mutation.</p>
+          </div>
+        </div>
+        <div class="slide-id">slide-highlevel-blocker</div>
+      </article>
+
+      <article class="slide" id="slide-gated-dependencies" data-title="Gated dependencies">
+        <p class="eyebrow">Do not force-start</p>
+        <h2>Mirror/backfill tasks stay gated behind schema verification.</h2>
+        <table aria-label="Current blocker dependency map">
+          <thead><tr><th>Lane</th><th>Current state</th><th>Safe next decision</th></tr></thead>
+          <tbody>
+            <tr><td>Supabase schema <code>t_fa6eb9c1</code></td><td class="hold">BLOCKED on human/admin DDL.</td><td>HOLD or authorized exact-SQL install with evidence.</td></tr>
+            <tr><td>HighLevel Agent Targeting <code>t_7884ab57</code></td><td class="hold">BLOCKED on token/location/API access.</td><td>HOLD or token refresh + read-only probe + dry-run only.</td></tr>
+            <tr><td>Mirror tasks <code>t_7d361e6b</code>, <code>t_cf8c4471</code>, <code>t_77403651</code></td><td>TODO, dependency-gated.</td><td>Wait for verified DDL; do not unlink or force-start.</td></tr>
+            <tr><td>Consolidated backfill <code>t_53d470c6</code></td><td>TODO, dependency-gated.</td><td>Start only after schema install and separate sync/backfill approval.</td></tr>
+          </tbody>
+        </table>
+        <div class="slide-id">slide-gated-dependencies</div>
+      </article>
+
+      <article class="slide" id="slide-safe-internal-lanes" data-title="Safe internal lanes">
+        <p class="eyebrow">If Jeff wants progress today</p>
+        <h2>Ranked internal lanes that do not touch live systems.</h2>
+        <div class="priority-list">
+          <div class="priority"><div><h3><code>/colorado-tech-general-counsel</code> local/no-token QA</h3><p class="muted">Use synthetic TEST companies, <code>.invalid</code> emails, non-confidential inputs, local evidence, no production credentials, no public route change, no live lead submission.</p></div></div>
+          <div class="priority"><div><h3><code>/ai-compliance-gameplan</code> attorney-review-only outline</h3><p class="muted">Draft a non-confidential governance diagnostic outline; no current-law claims, compliance conclusions, live form/workflow/CRM wiring, email, social, or public use.</p></div></div>
+          <div class="priority"><div><h3><code>/ai-law-youtube</code> internal recording prep</h3><p class="muted">Prepare one attorney-review-only script packet tied to AI patent records or AI/data/IP diligence. No upload, schedule, publish, Shorts, social, newsletter, or HighLevel action.</p></div></div>
+        </div>
+        <div class="slide-id">slide-safe-internal-lanes</div>
+      </article>
+
+      <article class="slide" id="slide-no-external-action-wall" data-title="No external action wall">
+        <p class="eyebrow">Safety boundary</p>
+        <h2>No-action wall: this deck is not permission to execute.</h2>
+        <div class="wall">
+          <div class="forbidden"><strong>No outreach or publishing</strong>Email, SMS, DMs, LinkedIn/social/YouTube, ads, newsletters, public pages, and client/prospect-facing use remain held.</div>
+          <div class="forbidden"><strong>No CRM / HighLevel mutation</strong>No contact/opportunity create/update/link, tags, owner changes, tasks, notes, custom fields, workflow activation, tests, manual starts, or enrollment.</div>
+          <div class="forbidden"><strong>No Supabase / Clio writes</strong>No DDL, sync, backfill, SQLite mutation, Clio write, credential guessing, or service-role experiments.</div>
+          <div class="forbidden"><strong>No source/prospecting shortcuts</strong>QMD/internal docs are memory, not public-source proof, consent, conflicts clearance, CRM state, or approval authority.</div>
+        </div>
+        <div class="decision-callout">
+          <h3>Approval standard</h3>
+          <p>Any external or live-system action requires exact recipient/system, final copy/config, timing, suppression/conflicts status, evidence path, and explicit Jeff/authorized approval.</p>
+        </div>
+        <div class="slide-id">slide-no-external-action-wall</div>
+      </article>
+
+      <article class="slide" id="slide-read-order-next-actions" data-title="Read order and next action">
+        <p class="eyebrow">Close</p>
+        <h2>Recommended read order and next decision.</h2>
+        <div class="grid-2">
+          <div class="card">
+            <span class="label">Read order</span>
+            <p>1. Morning action brief.</p>
+            <p>2. Supabase schema human-unblock operator packet.</p>
+            <p>3. HighLevel token refresh dry-run packet.</p>
+            <p>4. Approval Command Center exact-unblock visibility spec.</p>
+            <p>5. Controlled-pilot authority packet if choosing a safe internal lane.</p>
+          </div>
+          <div class="decision-callout" style="margin-top:0;">
+            <h3>Bottom line</h3>
+            <p>The system is not launch-ready; it is decision-ready.</p>
+            <p>Choose HOLD, or choose one narrow internal/manual lane with named operator and local evidence path. If no named operator or approval scope exists, keep HOLD.</p>
+          </div>
+        </div>
+        <div class="slide-id">slide-read-order-next-actions</div>
+      </article>
+    </section>
+  </main>
+
+  <nav class="nav" aria-label="Deck navigation">
+    <button type="button" id="prevBtn">Previous</button>
+    <span id="slideCount" aria-live="polite">1 / 8</span>
+    <button type="button" id="nextBtn">Next</button>
+    <span>Keyboard: ← → Home End</span>
+  </nav>
+
+<script>
+(function () {
+  const slides = Array.from(document.querySelectorAll('.slide'));
+  const stage = document.getElementById('stage');
+  const prevBtn = document.getElementById('prevBtn');
+  const nextBtn = document.getElementById('nextBtn');
+  const slideCount = document.getElementById('slideCount');
+  const storageKey = 'whiteford-2026-05-13-morning-action-deck-slide';
+  let current = Number.parseInt(localStorage.getItem(storageKey) || '0', 10);
+  if (!Number.isInteger(current) || current < 0 || current >= slides.length) current = 0;
+
+  function scaleStage() {
+    const navReserve = 84;
+    const scale = Math.min((window.innerWidth - 80) / 1920, (window.innerHeight - navReserve - 40) / 1080);
+    stage.style.transform = `scale(${Math.max(0.25, scale)})`;
+  }
+
+  function show(index) {
+    current = Math.max(0, Math.min(slides.length - 1, index));
+    slides.forEach((slide, i) => slide.classList.toggle('active', i === current));
+    slideCount.textContent = `${current + 1} / ${slides.length}`;
+    prevBtn.disabled = current === 0;
+    nextBtn.disabled = current === slides.length - 1;
+    localStorage.setItem(storageKey, String(current));
+  }
+
+  prevBtn.addEventListener('click', () => show(current - 1));
+  nextBtn.addEventListener('click', () => show(current + 1));
+  window.addEventListener('resize', scaleStage);
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'ArrowLeft' || event.key === 'PageUp') show(current - 1);
+    if (event.key === 'ArrowRight' || event.key === 'PageDown' || event.key === ' ') show(current + 1);
+    if (event.key === 'Home') show(0);
+    if (event.key === 'End') show(slides.length - 1);
+  });
+
+  scaleStage();
+  show(current);
+})();
+</script>
+</body>
+</html>

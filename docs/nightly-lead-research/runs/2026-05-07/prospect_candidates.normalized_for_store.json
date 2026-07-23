@@ -1,0 +1,405 @@
+{
+  "candidates": [
+    {
+      "company": {
+        "name": "PickNik Robotics",
+        "domain": "picknik.ai",
+        "website_url": "https://picknik.ai",
+        "location": "Boulder, Colorado, United States",
+        "state_region": "Mountain West / Colorado",
+        "industry": "Robotics Software / Industrial Automation / AI",
+        "segment": "ai-patent",
+        "primary_offer_lane": "ai-patent",
+        "lead_magnet": "AI Patent Strategy Scorecard",
+        "recommended_offer": "PickNik has patented drive-by-wire control (per team page), a commercial MoveIt Pro platform, SpaceWERX defense contracts, and active AI/ML-based motion planning R&D. The company demonstrates technical depth and proprietary robot software IP, but no visible public patent strategy communications — a signal that foundational IP documentation may benefit from structured scoring before the next funding round or enterprise sales cycle.",
+        "source_type": "nightly_public_source_research",
+        "source_url": "https://picknik.ai/team/",
+        "source_note": "Source packet picknik-robotics-boulder-co; consent basis no_email_opt_in; next action attorney_review. Local staging only.",
+        "pipeline_stage": "research_staged",
+        "opportunity_stage": "research_staged",
+        "scores": {
+          "fit_score": 92,
+          "urgency_score": 50,
+          "value_potential_score": 55,
+          "combined_priority_score": 67,
+          "contact_confidence": 85
+        },
+        "risk_level": "attorney_review_required",
+        "suppression_status": "consent_gap_no_auto_send",
+        "conflicts_status": "required_before_send",
+        "owner": "qwen-local",
+        "created_at": "2026-05-07T09:00:00Z",
+        "notes": "Commercial-grade robotics software platform (MoveIt Pro, MoveIt Studio). Enables organizations to develop and deploy robotic arm applications with motion planning, perception, and behavior control. Customers include aerospace, industrial, and defense sectors.\nRaw source packet id: picknik-robotics-boulder-co\nSize signal: 51-100 employees (Crunchbase); company site says '234+ years combined experience' with 11 Masters (8 PhDs) in robotics; Crunchbase lists 51-100 headcount\nMaturity signal: Founded 2015; 11 funding rounds total; pre-seed/stage; moved to Dave Grant as CEO (non-founder) in recent leadership\nLead magnet route: /ai-patent-strategy-scorecard\nConsent gate: no-auto-send / no_email_opt_in\nNext action notes: High-fit AI Patent Strategy lane (score 4). Contact confidence 85 (Nathan Brooks CTO via LinkedIn). 5 evidence records from 3 source types. Combined priority score 67 — below threshold for draft_ready outreach but strong enough for attorney review packet. Consider drafting outreach vector after Jeff approval."
+      },
+      "contacts": [
+        {
+          "name": "Nathan Brooks",
+          "title": "CTO",
+          "role_category": "cto",
+          "email": null,
+          "linkedin_url": "https://www.linkedin.com/in/nathan-b-brooks",
+          "phone": null,
+          "source_type": "public_source_or_client_input",
+          "source_url": "https://www.linkedin.com/in/nathan-b-brooks",
+          "confidence": 85,
+          "permission_basis": "public-source research; LinkedIn profile confirmed through web search; attorney review required before outreach",
+          "suppression_status": "not_checked"
+        },
+        {
+          "name": "Dave Grant",
+          "title": "CEO",
+          "role_category": "ceo",
+          "email": null,
+          "linkedin_url": null,
+          "phone": null,
+          "source_type": "public_source_or_client_input",
+          "source_url": "https://picknik.ai/team/",
+          "confidence": 82,
+          "permission_basis": "public-source research; confirmed through company team page; attorney review required before outreach",
+          "suppression_status": "not_checked"
+        }
+      ],
+      "evidence": [
+        {
+          "source_url": "https://picknik.ai/team/",
+          "accessed_at": "2026-05-07",
+          "source_type": "company_website",
+          "fact_classification": "public",
+          "evidence_snippet": "Current leadership team: Dave Grant (CEO), Nathan Brooks (CTO/PhD Robotics CMU), Dave Coleman (CPO/Founder). 11 Masters, 8 PhDs in robotics.",
+          "supported_fact": "Current leadership team: Dave Grant (CEO), Nathan Brooks (CTO/PhD Robotics CMU), Dave Coleman (CPO/Founder). 11 Masters, 8 PhDs in robotics.",
+          "confidence": "high",
+          "corroboration": "single public source; attorney review required before outreach",
+          "safe_for_outreach": "conditional",
+          "safe_fact_for_copy": "Current leadership team: Dave Grant (CEO), Nathan Brooks (CTO/PhD Robotics CMU), Dave Coleman (CPO/Founder). 11 Masters, 8 PhDs in robotics."
+        },
+        {
+          "source_url": "https://www.crunchbase.com/organization/picknik-robotics",
+          "accessed_at": "2026-05-07",
+          "source_type": "other_public",
+          "fact_classification": "public",
+          "evidence_snippet": "PickNik is Boulder-based; founded 2015; 11 funding rounds; led by Cypress Growth Capital and Stellar Ventures; Heat Score 71; CB Rank 14,620.",
+          "supported_fact": "PickNik is Boulder-based; founded 2015; 11 funding rounds; led by Cypress Growth Capital and Stellar Ventures; Heat Score 71; CB Rank 14,620.",
+          "confidence": "high",
+          "corroboration": "single public source; attorney review required before outreach",
+          "safe_for_outreach": "conditional",
+          "safe_fact_for_copy": "PickNik is Boulder-based; founded 2015; 11 funding rounds; led by Cypress Growth Capital and Stellar Ventures; Heat Score 71; CB Rank 14,620."
+        },
+        {
+          "source_url": "https://picknik.ai/news-releases/PickNik-Robotics-Wins-Space-Force-Contract.html",
+          "accessed_at": "2026-05-07",
+          "source_type": "press_release",
+          "fact_classification": "public",
+          "evidence_snippet": "Won SpaceWERX contract for on-orbit captured robotics — demonstrates real-world defense/aerospace deployment.",
+          "supported_fact": "Won SpaceWERX contract for on-orbit captured robotics — demonstrates real-world defense/aerospace deployment.",
+          "confidence": "high",
+          "corroboration": "single public source; attorney review required before outreach",
+          "safe_for_outreach": "conditional",
+          "safe_fact_for_copy": "Won SpaceWERX contract for on-orbit captured robotics — demonstrates real-world defense/aerospace deployment."
+        },
+        {
+          "source_url": "https://picknik.ai/news-releases/Stellar_Ventures_and_Cypress_Growth_Capital_Commit_to_Fueling_the_Future_of_Robotics_Software.html",
+          "accessed_at": "2026-05-07",
+          "source_type": "press_release",
+          "fact_classification": "public",
+          "evidence_snippet": "Stellar Ventures and Cypress Growth Capital committed capital to further develop MoveIt Studio platform.",
+          "supported_fact": "Stellar Ventures and Cypress Growth Capital committed capital to further develop MoveIt Studio platform.",
+          "confidence": "high",
+          "corroboration": "single public source; attorney review required before outreach",
+          "safe_for_outreach": "conditional",
+          "safe_fact_for_copy": "Stellar Ventures and Cypress Growth Capital committed capital to further develop MoveIt Studio platform."
+        },
+        {
+          "source_url": "https://www.linkedin.com/in/nathan-b-brooks",
+          "accessed_at": "2026-05-07",
+          "source_type": "public_linkedin_profile",
+          "fact_classification": "public",
+          "evidence_snippet": "Nathan Brooks confirmed as CTO at PickNik Robotics; CMU Robotics PhD; public LinkedIn profile.",
+          "supported_fact": "Nathan Brooks confirmed as CTO at PickNik Robotics; CMU Robotics PhD; public LinkedIn profile.",
+          "confidence": "high",
+          "corroboration": "single public source; attorney review required before outreach",
+          "safe_for_outreach": "conditional",
+          "safe_fact_for_copy": "Nathan Brooks confirmed as CTO at PickNik Robotics; CMU Robotics PhD; public LinkedIn profile."
+        }
+      ],
+      "outreach_drafts": [
+        {
+          "draft_type": "linkedin_awareness_post",
+          "title": "Attorney-review LinkedIn awareness draft: PickNik Robotics",
+          "channel": "linkedin_manual_review_only",
+          "subject": null,
+          "body": "PickNik Robotics' MoveIt Pro is a useful signal for a bigger AI patent question:\n\nRobotics software is becoming faster to build than it is to legally organize.\n\nThat sounds like a patent filing problem.\n\nIt isn't only that.\n\nThe harder question is whether robotic companies can later explain:\n\n1. what humans contributed to motion-planning algorithms,\n2. what the AI training data contributed,\n3. what should be patented vs. trade secret,\n4. what was publicly demonstrated before the strategy was set, and\n5. whether open-source dependencies create IP ambiguity.\n\nFor #founders: move fast, document the foundation.\nFor #investors: robotics diligence will increasingly ask whether the moat is documented, not just whether the demo works.\nFor #productleaders: patent strategy and open-source policy need to move together.\n\nEducational starting point: AI Patent Strategy Scorecard\nhttps://whiteford-ai-law-pages.vercel.app/ai-patent-strategy-scorecard\n\nInternal review notes, not for post:\n- Tagged company: @[PickNik Robotics - verify LinkedIn handle]\n- Optional person tag: @[Nathan Brooks - verify LinkedIn profile/tag]\n- Source URLs: picknik.ai/team/ (leadership/tech depth), crunchbase.com (funding history), picknik.ai/news-releases/ (SpaceWERX contract)\n- Lead magnet lane: ai-patent\n- Legal/ethics flags: No implication of non-compliance; purely educational awareness post about patent documentation for robotics founders",
+          "source_facts": [
+            "Current leadership team: Dave Grant (CEO), Nathan Brooks (CTO/PhD Robotics CMU), Dave Coleman (CPO/Founder). 11 Masters, 8 PhDs in robotics.",
+            "PickNik is Boulder-based; founded 2015; 11 funding rounds; led by Cypress Growth Capital and Stellar Ventures; Heat Score 71; CB Rank 14,620.",
+            "Won SpaceWERX contract for on-orbit captured robotics — demonstrates real-world defense/aerospace deployment.",
+            "Stellar Ventures and Cypress Growth Capital committed capital to further develop MoveIt Studio platform.",
+            "Nathan Brooks confirmed as CTO at PickNik Robotics; CMU Robotics PhD; public LinkedIn profile."
+          ],
+          "source_urls": [
+            "https://picknik.ai/team/",
+            "https://www.crunchbase.com/organization/picknik-robotics",
+            "https://picknik.ai/news-releases/PickNik-Robotics-Wins-Space-Force-Contract.html",
+            "https://picknik.ai/news-releases/Stellar_Ventures_and_Cypress_Growth_Capital_Commit_to_Fueling_the_Future_of_Robotics_Software.html",
+            "https://www.linkedin.com/in/nathan-b-brooks"
+          ],
+          "risk_level": "attorney_review_required",
+          "internal_review_notes": "Draft-only internal awareness copy. No LinkedIn action, tagging, posting, email send, workflow enrollment, or external action authorized."
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "Electra",
+        "domain": "electra.earth",
+        "website_url": "https://www.electra.earth",
+        "location": "Boulder, Colorado, United States",
+        "state_region": "Mountain West / Colorado",
+        "industry": "Deep Tech / Clean Iron Production / Industrial Decarbonization / Electrochemistry",
+        "segment": "tech-gc",
+        "primary_offer_lane": "tech-gc",
+        "lead_magnet": "Tech Company Legal Health Checklist",
+        "recommended_offer": "Electra raised $186M Series B in April 2025, is constructing a demonstration plant in Colorado, and has built out a full C-suite in 2025-2026. The company has patented technology, complex investor obligations (BHP Ventures, RT Primary, Pacific, etc.), multi-industry partnerships (steel, mining, energy), and needs legal infrastructure across IP, financing, employment, and government contracts. No visible full-time GC. The Tech Company Legal Health Checklist offers a structured way to identify where legal infrastructure needs to scale before the next round or partnership milestone.",
+        "source_type": "nightly_public_source_research",
+        "source_url": "https://www.electra.earth/our-team/",
+        "source_note": "Source packet electra-green-steel-boulder; consent basis no_email_opt_in; next action attorney_review. Local staging only.",
+        "pipeline_stage": "research_staged",
+        "opportunity_stage": "research_staged",
+        "scores": {
+          "fit_score": 91,
+          "urgency_score": 65,
+          "value_potential_score": 85,
+          "combined_priority_score": 83,
+          "contact_confidence": 82
+        },
+        "risk_level": "attorney_review_required",
+        "suppression_status": "consent_gap_no_auto_send",
+        "conflicts_status": "required_before_send",
+        "owner": "qwen-local",
+        "created_at": "2026-05-07T09:00:00Z",
+        "notes": "Electra uses electrolytic clean-iron technology to decarbonize steel production by replacing blast furnaces with a low-temperature electrochemical process. Technology is patented. Building a demonstration plant in Colorado. Investors include BHP Ventures, Hancock Iron Ore, RT Primary, Yamato Group, and others.\nRaw source packet id: electra-green-steel-boulder\nSize signal: Series B ($186M); growing construction of demonstration plant; multiple executive hires in 2025-2026\nMaturity signal: Founded 2020; $186M Series B completed April 2025; new 200M+ demonstration facility construction (Oct 2025); multiple new executive leadership hires (COO, CFO, CHRO, CCO, VP Product, VP Projects)\nLead magnet route: /colorado-tech-general-counsel\nConsent gate: no-auto-send / no_email_opt_in\nNext action notes: Very-high tech-GC fit (score 4), M&A readiness also at score 3. High urgency score (65) from Series B news + construction + hiring surge. Combined priority 83 — qualifies for draft_ready. Contact confidence 82 for CEO (Sandeep Nijhawan), 78 for CFO (James Rutland). 4 evidence records from 3 source types. Strong Mountain West relevance confirmed by multiple Boulder-focused sources. Recommended for attorney review packet with high combined priority."
+      },
+      "contacts": [
+        {
+          "name": "Sandeep Nijhawan",
+          "title": "Co-Founder & CEO",
+          "role_category": "ceo",
+          "email": null,
+          "linkedin_url": null,
+          "phone": null,
+          "source_type": "public_source_or_client_input",
+          "source_url": "https://www.electra.earth/our-team/",
+          "confidence": 82,
+          "permission_basis": "public-source research; confirmed through company team page and multiple press articles; LinkedIn profile confirmed via web search",
+          "suppression_status": "not_checked"
+        },
+        {
+          "name": "James Rutland",
+          "title": "CFO",
+          "role_category": "cfo",
+          "email": null,
+          "linkedin_url": null,
+          "phone": null,
+          "source_type": "public_source_or_client_input",
+          "source_url": "https://www.electra.earth/our-team/",
+          "confidence": 78,
+          "permission_basis": "public-source research; confirmed through company team page; FCA, BSc Chemistry, MBA; attorney review required before outreach",
+          "suppression_status": "not_checked"
+        }
+      ],
+      "evidence": [
+        {
+          "source_url": "https://www.electra.earth/our-team/",
+          "accessed_at": "2026-05-07",
+          "source_type": "company_website",
+          "fact_classification": "public",
+          "evidence_snippet": "Full executive leadership team on public team page including CEO Sandeep Nijhawan, CFO James Rutland, COO David Swisher, CHRO Karen Robertson, CCO Keith Shuttlesworth, VP Product Kevin Galloway, VP Projects Ben Ruben.",
+          "supported_fact": "Full executive leadership team on public team page including CEO Sandeep Nijhawan, CFO James Rutland, COO David Swisher, CHRO Karen Robertson, CCO Keith Shuttlesworth, VP Product Kevin Galloway, VP Projects Ben Ruben.",
+          "confidence": "high",
+          "corroboration": "single public source; attorney review required before outreach",
+          "safe_for_outreach": "conditional",
+          "safe_fact_for_copy": "Full executive leadership team on public team page including CEO Sandeep Nijhawan, CFO James Rutland, COO David Swisher, CHRO Karen Robertson, CCO Keith Shuttlesworth, VP Product Kevin Galloway, VP Projects Ben Ruben."
+        },
+        {
+          "source_url": "https://www.globenewswire.com/news-release/2025/04/24/3067528/0/en/electra-announces-186m-series-b-funding-round-to-scale-clean-iron-production.html",
+          "accessed_at": "2026-05-07",
+          "source_type": "press_release",
+          "fact_classification": "public",
+          "evidence_snippet": "Electra announced $186M Series B funding round on April 24, 2025 to scale clean iron production.",
+          "supported_fact": "Electra announced $186M Series B funding round on April 24, 2025 to scale clean iron production.",
+          "confidence": "high",
+          "corroboration": "single public source; attorney review required before outreach",
+          "safe_for_outreach": "conditional",
+          "safe_fact_for_copy": "Electra announced $186M Series B funding round on April 24, 2025 to scale clean iron production."
+        },
+        {
+          "source_url": "https://www.bizjournals.com/denver/news/2026/03/10/jp-morgan-financing-electra-green-steel-boulder.html",
+          "accessed_at": "2026-05-07",
+          "source_type": "public_news",
+          "fact_classification": "public",
+          "evidence_snippet": "J.P. Morgan financed Electra's green iron project in Boulder — local economic development story confirming Boulder HQ.",
+          "supported_fact": "J.P. Morgan financed Electra's green iron project in Boulder — local economic development story confirming Boulder HQ.",
+          "confidence": "high",
+          "corroboration": "single public source; attorney review required before outreach",
+          "safe_for_outreach": "conditional",
+          "safe_fact_for_copy": "J.P. Morgan financed Electra's green iron project in Boulder — local economic development story confirming Boulder HQ."
+        },
+        {
+          "source_url": "https://www.linkedin.com/posts/nijhawan_electra-series-b-activity-7322811386630197248-9z1M",
+          "accessed_at": "2026-05-07",
+          "source_type": "public_linkedin_profile",
+          "fact_classification": "public",
+          "evidence_snippet": "CEO Sandeep Nijhawan posted Series B announcement on LinkedIn; public profile URL confirmed.",
+          "supported_fact": "CEO Sandeep Nijhawan posted Series B announcement on LinkedIn; public profile URL confirmed.",
+          "confidence": "high",
+          "corroboration": "single public source; attorney review required before outreach",
+          "safe_for_outreach": "conditional",
+          "safe_fact_for_copy": "CEO Sandeep Nijhawan posted Series B announcement on LinkedIn; public profile URL confirmed."
+        }
+      ],
+      "outreach_drafts": [
+        {
+          "draft_type": "linkedin_awareness_post",
+          "title": "Attorney-review LinkedIn awareness draft: Electra",
+          "channel": "linkedin_manual_review_only",
+          "subject": null,
+          "body": "Electra's $186M Series B for clean iron is a useful signal for how deep-tech companies scale legal infrastructure.\n\nThat sounds like a fundraising story.\n\nIt is.\n\nBut it's also a legal operations story.\n\nWhen a company raises $186M, patents technology, constructs billion-dollar facilities, and hires a full C-suite — the legal work multiplies faster than most founders expect:\n\n1. IP: patent strategy for electrochemical processes, trade secret controls, government contract disclosures\n2. Financing: investor agreements, milestone reporting, board governance\n3. Employment: multi-disciplinary hiring (mining, chemistry, engineering, operations)\n4. Commercial: off-take agreements, partnerships with steel/energy companies, government contracts\n5. Corporate: entity structure across investors (BHP, RT Primary, Yamato)\n\nThe legal operating system should match the business milestone, not the other way around.\n\nFor #founders: the first billion is a capital story. The second billion is a legal story.\nFor #investors: legal infrastructure quality correlates with deal execution speed.\nFor #operators: map legal work to the next 18 months, not today.\n\nEducational starting point: Tech Company Legal Health Checklist\nhttps://whiteford-ai-law-pages.vercel.app/colorado-tech-general-counsel\n\nInternal review notes, not for post:\n- Tagged company: @[Electra - verify LinkedIn handle]\n- Optional person tag: @[Sandeep Nijhawan - verify LinkedIn profile/tag]\n- Source URLs: electra.earth/our-team/ (leadership), globenewswire.com (Series B), bizjournals.com (Boulder HQ)\n- Lead magnet lane: tech-gc\n- Legal/ethics flags: No implication of non-compliance; purely educational awareness regarding legal infrastructure at scale for deep tech founders",
+          "source_facts": [
+            "Full executive leadership team on public team page including CEO Sandeep Nijhawan, CFO James Rutland, COO David Swisher, CHRO Karen Robertson, CCO Keith Shuttlesworth, VP Product Kevin Galloway, VP Projects Ben Ruben.",
+            "Electra announced $186M Series B funding round on April 24, 2025 to scale clean iron production.",
+            "J.P. Morgan financed Electra's green iron project in Boulder — local economic development story confirming Boulder HQ.",
+            "CEO Sandeep Nijhawan posted Series B announcement on LinkedIn; public profile URL confirmed."
+          ],
+          "source_urls": [
+            "https://www.electra.earth/our-team/",
+            "https://www.globenewswire.com/news-release/2025/04/24/3067528/0/en/electra-announces-186m-series-b-funding-round-to-scale-clean-iron-production.html",
+            "https://www.bizjournals.com/denver/news/2026/03/10/jp-morgan-financing-electra-green-steel-boulder.html",
+            "https://www.linkedin.com/posts/nijhawan_electra-series-b-activity-7322811386630197248-9z1M"
+          ],
+          "risk_level": "attorney_review_required",
+          "internal_review_notes": "Draft-only internal awareness copy. No LinkedIn action, tagging, posting, email send, workflow enrollment, or external action authorized."
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "Flatfile (also rebranded company name: Obvious)",
+        "domain": "flatfile.com",
+        "website_url": "https://flatfile.com",
+        "location": "Denver, Colorado, United States",
+        "state_region": "Mountain West / Colorado",
+        "industry": "AI-Powered Data Exchange / SaaS / Embedded Integration Platform",
+        "segment": "tech-gc",
+        "primary_offer_lane": "tech-gc",
+        "lead_magnet": "Tech Company Legal Health Checklist",
+        "recommended_offer": "Flatfile (Obvious) has grown to $10.9M revenue with 65 employees and 500+ enterprise customers including Square and AstraZeneca. The AI-assisted data exchange platform raises AI governance/compliance questions (consumer data, enterprise contracts, AI vendor terms). The company is 8 years old, has $94.6M in funding, and needs legal infrastructure across commercial contracts, AI compliance, IP ownership for embedded integration, and scaling ops. No visible full-time GC. The Tech GC checklist maps legal priorities to the next business milestone — whether that's Series C, market expansion, or enterprise customer requirements.",
+        "source_type": "nightly_public_source_research",
+        "source_url": "https://flatfile.com/news/flatfile-fall-release-2024/",
+        "source_note": "Source packet flatfile-obvious-denver; consent basis no_email_opt_in; next action attorney_review. Local staging only.",
+        "pipeline_stage": "research_staged",
+        "opportunity_stage": "research_staged",
+        "scores": {
+          "fit_score": 90,
+          "urgency_score": 50,
+          "value_potential_score": 70,
+          "combined_priority_score": 74,
+          "contact_confidence": 80
+        },
+        "risk_level": "attorney_review_required",
+        "suppression_status": "consent_gap_no_auto_send",
+        "conflicts_status": "required_before_send",
+        "owner": "qwen-local",
+        "created_at": "2026-05-07T09:00:00Z",
+        "notes": "AI-powered data exchange platform enabling companies and software teams to collect, clean, validate, and migrate data at scale. Features AI-driven mapping, project intelligence, and code generation. Serves enterprise customers across banking, financial services, HR, and healthcare.\nRaw source packet id: flatfile-obvious-denver\nSize signal: ~65 employees; 500+ customers ($10.9M revenue in 2024, 64% YoY); $94.6M total funding\nMaturity signal: Founded 2018; 8 years old; Series B funding; revenue-generating ($10.9M 2024); enterprise customers (Square, AstraZeneca, Spotify, HubSpot, Sage); Denver HQ; rebranded to Obvious for the AI agent platform (Nov 2024)\nLead magnet route: /colorado-tech-general-counsel\nConsent gate: no-auto-send / no_email_opt_in\nNext action notes: High tech-GC fit (score 4). Secondary: AI compliance moderate (score 2) given AI-powered data processing. Combined priority 74 — meets draft_ready threshold (>=70). Contact confidence 80 for CEO (David Boskovic), 65 for media contact. 3 evidence records from 3 source types. Strong Denver/Mountain West relevance confirmed by Built In Colorado and getlatka. Rebrand to Obvious (Nov 2024) provides a timely hook for LinkedIn awareness post."
+      },
+      "contacts": [
+        {
+          "name": "David Boskovic",
+          "title": "Founder & CEO",
+          "role_category": "ceo",
+          "email": null,
+          "linkedin_url": null,
+          "phone": null,
+          "source_type": "public_source_or_client_input",
+          "source_url": "https://getlatka.com/companies/flatfile",
+          "confidence": 80,
+          "permission_basis": "public-source research; confirmed through getlatka profile and flatfile.com press; attorney review required before outreach",
+          "suppression_status": "not_checked"
+        },
+        {
+          "name": "pr@flatfile.com",
+          "title": "Media Contact (department email)",
+          "role_category": "other",
+          "email": "pr@flatfile.com",
+          "linkedin_url": null,
+          "phone": null,
+          "source_type": "public_source_or_client_input",
+          "source_url": "https://flatfile.com/news/flatfile-fall-release-2024/",
+          "confidence": 65,
+          "permission_basis": "public-source research; media contact listed on press release page; only usable for inbound/PR outreach, not CEO/decision-maker level",
+          "suppression_status": "not_checked"
+        }
+      ],
+      "evidence": [
+        {
+          "source_url": "https://flatfile.com/news/flatfile-fall-release-2024/",
+          "accessed_at": "2026-05-07",
+          "source_type": "company_website",
+          "fact_classification": "public",
+          "evidence_snippet": "Flatfile announced Fall 2024 release; rebranded AI data agent to 'Obvious'; David Boskovic is Founder & CEO; enterprise customers include AstraZeneca, Square, Sage, etc.",
+          "supported_fact": "Flatfile announced Fall 2024 release; rebranded AI data agent to 'Obvious'; David Boskovic is Founder & CEO; enterprise customers include AstraZeneca, Square, Sage, etc.",
+          "confidence": "high",
+          "corroboration": "single public source; attorney review required before outreach",
+          "safe_for_outreach": "conditional",
+          "safe_fact_for_copy": "Flatfile announced Fall 2024 release; rebranded AI data agent to 'Obvious'; David Boskovic is Founder & CEO; enterprise customers include AstraZeneca, Square, Sage, etc."
+        },
+        {
+          "source_url": "https://getlatka.com/companies/flatfile",
+          "accessed_at": "2026-05-07",
+          "source_type": "other_public",
+          "fact_classification": "public",
+          "evidence_snippet": "Flatfile (Denver, CO); founded 2018; $94.6M total funding; $10.9M revenue (2024); 65 employees; CEO David Boskovic (age 36); 500+ customers.",
+          "supported_fact": "Flatfile (Denver, CO); founded 2018; $94.6M total funding; $10.9M revenue (2024); 65 employees; CEO David Boskovic (age 36); 500+ customers.",
+          "confidence": "high",
+          "corroboration": "single public source; attorney review required before outreach",
+          "safe_for_outreach": "conditional",
+          "safe_fact_for_copy": "Flatfile (Denver, CO); founded 2018; $94.6M total funding; $10.9M revenue (2024); 65 employees; CEO David Boskovic (age 36); 500+ customers."
+        },
+        {
+          "source_url": "https://www.builtin.com/awards/colorado/2026/best-startup-places-to-work",
+          "accessed_at": "2026-05-07",
+          "source_type": "other_public",
+          "fact_classification": "public",
+          "evidence_snippet": "Flatfile listed in Built In Colorado Best Startups to Work for 2026 as the 'pioneer of AI-assisted data exchange' headquartered in Denver.",
+          "supported_fact": "Flatfile listed in Built In Colorado Best Startups to Work for 2026 as the 'pioneer of AI-assisted data exchange' headquartered in Denver.",
+          "confidence": "high",
+          "corroboration": "single public source; attorney review required before outreach",
+          "safe_for_outreach": "conditional",
+          "safe_fact_for_copy": "Flatfile listed in Built In Colorado Best Startups to Work for 2026 as the 'pioneer of AI-assisted data exchange' headquartered in Denver."
+        }
+      ],
+      "outreach_drafts": [
+        {
+          "draft_type": "linkedin_awareness_post",
+          "title": "Attorney-review LinkedIn awareness draft: Flatfile (also rebranded company name: Obvious)",
+          "channel": "linkedin_manual_review_only",
+          "subject": null,
+          "body": "Flatfile's rebrand to Obvious is a useful signal for how SaaS companies scale legal infrastructure:\n\nThey can grow from 0 to $10.9M revenue in 6 years. That scale brings unexpected legal complexity.\n\nPatents, sure.\n\nBut so does the contract stack: enterprise SOWs, data transfer agreements, AI vendor terms, customer data processing, contractor assignments, investor agreements, board governance.\n\nThat's a long list.\n\nIt should be treated as an operating system.\n\nFor #founders: the issue is sequencing, not doing everything at once.\nFor #COOs: legal work should map to the next business milestone.\nFor #investors: clean operating infrastructure reduces diligence drag.\n\nThe Tech Company Legal Health Checklist maps legal priorities so they match your next business event — not your oldest legal problem.\n\nEducational starting point: Tech Company Legal Health Checklist\nhttps://whiteford-ai-law-pages.vercel.app/colorado-tech-general-counsel\n\nInternal review notes, not for post:\n- Tagged company: @[Obvious/Flatfile - verify LinkedIn handle]\n- Optional person tag: @[David Boskovic - verify LinkedIn profile/tag]\n- Source URLs: flatfile.com (company site/rebrand), getlatka.com (company profile/funding), builtin.com (Best Startups CO 2026)\n- Lead magnet lane: tech-gc\n- Legal/ethics flags: No implication of non-compliance; purely educational about scaling legal infrastructure for revenue-growth SaaS companies",
+          "source_facts": [
+            "Flatfile announced Fall 2024 release; rebranded AI data agent to 'Obvious'; David Boskovic is Founder & CEO; enterprise customers include AstraZeneca, Square, Sage, etc.",
+            "Flatfile (Denver, CO); founded 2018; $94.6M total funding; $10.9M revenue (2024); 65 employees; CEO David Boskovic (age 36); 500+ customers.",
+            "Flatfile listed in Built In Colorado Best Startups to Work for 2026 as the 'pioneer of AI-assisted data exchange' headquartered in Denver."
+          ],
+          "source_urls": [
+            "https://flatfile.com/news/flatfile-fall-release-2024/",
+            "https://getlatka.com/companies/flatfile",
+            "https://www.builtin.com/awards/colorado/2026/best-startup-places-to-work"
+          ],
+          "risk_level": "attorney_review_required",
+          "internal_review_notes": "Draft-only internal awareness copy. No LinkedIn action, tagging, posting, email send, workflow enrollment, or external action authorized."
+        }
+      ]
+    }
+  ],
+  "source_file": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-07/prospect_candidates.json",
+  "normalized_at": "2026-05-07T09:39:52+00:00"
+}

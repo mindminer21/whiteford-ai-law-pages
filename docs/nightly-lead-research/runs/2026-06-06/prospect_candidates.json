@@ -1,0 +1,49 @@
+{
+  "run_label": "2026-06-06",
+  "run_directory": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-06-06",
+  "run_status": "halted_source_block",
+  "gate_status": {
+    "gate_1_live_source_extraction": {
+      "status": "FAIL",
+      "reason": "web_search and web_extract both return Payment Required / insufficient Firecrawl credits. Browser fallback tool not available in session. Basic HTTP (curl) to https://example.com returns 200 but is insufficient for prospect discovery."
+    }
+  },
+  "preflight": {
+    "live_source_search_status": "FAIL",
+    "live_source_extract_status": "FAIL",
+    "browser_fallback_status": "NOT_AVAILABLE",
+    "qmd_status": "available_for_strategy_only",
+    "business_dev_rag_status": "available_for_strategy_only",
+    "local_rag_note": "QMD and business-development RAG available for internal strategy/rubric support only. Cannot satisfy Gate 1 live-source evidence."
+  },
+  "prospects": [],
+  "contacts": [],
+  "source_evidence": [],
+  "outreach_drafts": [],
+  "approval_items": [],
+  "duplicate_candidates": [],
+  "suppression_checks": [],
+  "crm_sync_records": [],
+  "supabase_sync_records": [],
+  "agent_targeting_packets": [],
+  "counts": {
+    "prospects_researched": 0,
+    "contacts_identified": 0,
+    "evidence_records": 0,
+    "outreach_drafts_created": 0,
+    "approval_items_created": 0,
+    "crm_sync_records": 0,
+    "supabase_sync_records": 0,
+    "agent_targeting_packets": 0
+  },
+  "external_action_allowed": false,
+  "notes": [
+    "No prospects discovered, scored, or staged.",
+    "No contacts identified or validated.",
+    "No source evidence created.",
+    "No outreach vectors drafted.",
+    "No external outreach, live CRM write, workflow activation, or social action occurred.",
+    "Prospect expansion remains paused until Firecrawl credits restored or approved alternative backend configured.",
+    "Recommended next step: Jeff restores Firecrawl or approves replacement backend, runs neutral smoke tests, then reruns nightly prospect workflow under Gates 1-7."
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "body": {
+    "opportunity": {
+      "contact": {
+        "companyName": "Sereact",
+        "followers": [],
+        "id": "1a2gBW9IhpZfgnh6bT2K",
+        "name": "Sereact Agent Targeting",
+        "tags": []
+      },
+      "contactId": "1a2gBW9IhpZfgnh6bT2K",
+      "createdAt": "2026-05-08T08:39:23.707Z",
+      "followers": [],
+      "id": "hUevEZZwjvyALchVzSzv",
+      "internalSource": {
+        "apiVersion": "2021-07-28",
+        "channel": "OAUTH",
+        "id": "69f97a4042f2b054fe684553",
+        "source": "INTEGRATION",
+        "type": "CREATED"
+      },
+      "isAttribute": false,
+      "lastActionDate": "2026-05-08T08:39:23.707Z",
+      "lastStageChangeAt": "2026-05-08T08:39:23.707Z",
+      "lastStatusChangeAt": "2026-05-08T08:39:23.707Z",
+      "locationId": "tm68WWMrcAa3TqQbEAMa",
+      "monetaryValue": 0,
+      "name": "Sereact \u2014 Agent Targeting",
+      "pipelineId": "Tbx4tA6wHv5lTwZPSHyZ",
+      "pipelineStageId": "fd569cf4-979b-43b8-bd0f-78e807e80ff1",
+      "source": "Growth OS nightly prospect research - Agent Targeting (prospect_ef30df45ad62c93981758ca3)",
+      "status": "open",
+      "updatedAt": "2026-05-08T08:39:23.707Z"
+    },
+    "traceId": "55f87621-953e-4c50-ac92-2cb2b728143f"
+  },
+  "ok": true,
+  "status": 201
+}

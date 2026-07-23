@@ -1,0 +1,39 @@
+{
+  "body": {
+    "opportunity": {
+      "contact": {
+        "companyName": "Manifest OS",
+        "followers": [],
+        "id": "bEuSTw2QeCCF43JihiW8",
+        "name": "Manifest OS Agent Targeting",
+        "tags": []
+      },
+      "contactId": "bEuSTw2QeCCF43JihiW8",
+      "createdAt": "2026-05-08T08:39:19.935Z",
+      "followers": [],
+      "id": "JYNAZFRcioNguDNdz7tm",
+      "internalSource": {
+        "apiVersion": "2021-07-28",
+        "channel": "OAUTH",
+        "id": "69f97a4042f2b054fe684553",
+        "source": "INTEGRATION",
+        "type": "CREATED"
+      },
+      "isAttribute": false,
+      "lastActionDate": "2026-05-08T08:39:19.936Z",
+      "lastStageChangeAt": "2026-05-08T08:39:19.936Z",
+      "lastStatusChangeAt": "2026-05-08T08:39:19.935Z",
+      "locationId": "tm68WWMrcAa3TqQbEAMa",
+      "monetaryValue": 0,
+      "name": "Manifest OS \u2014 Agent Targeting",
+      "pipelineId": "Tbx4tA6wHv5lTwZPSHyZ",
+      "pipelineStageId": "fd569cf4-979b-43b8-bd0f-78e807e80ff1",
+      "source": "Growth OS nightly prospect research - Agent Targeting (prospect_647f303b12467f9d88c68da4)",
+      "status": "open",
+      "updatedAt": "2026-05-08T08:39:19.935Z"
+    },
+    "traceId": "fb167e22-dc1f-4da3-95ea-d170c0c3ecd3"
+  },
+  "ok": true,
+  "status": 201
+}

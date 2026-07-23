@@ -1,0 +1,67 @@
+{
+  "verified_at": "2026-05-28T08:35:43+00:00",
+  "db": "/Users/jeff/.openclaw/projects/mountain-west-growth-os/data/growth-os.sqlite",
+  "table_counts": {
+    "prospects": 52,
+    "contacts": 48,
+    "opportunities": 63,
+    "source_evidence": 98,
+    "outreach_drafts": 34,
+    "approval_items": 66,
+    "crm_sync_records": 45,
+    "suppression_checks": 34,
+    "work_items": 29
+  },
+  "staged_prospects": [
+    {
+      "prospect_id": "prospect_cognition_labs_20260528",
+      "company_name": "Cognition Labs",
+      "domain": "cognition.com",
+      "segment": "tech-gc",
+      "pipeline_stage": "research_staged",
+      "suppression_status": "consent_gap_no_auto_send",
+      "conflicts_status": "required_before_send"
+    },
+    {
+      "prospect_id": "prospect_simplexai_20260528",
+      "company_name": "SimplexAI",
+      "domain": "simplexai.com",
+      "segment": "ai-compliance",
+      "pipeline_stage": "research_staged",
+      "suppression_status": "consent_gap_no_auto_send",
+      "conflicts_status": "required_before_send"
+    },
+    {
+      "prospect_id": "prospect_triomics_20260528",
+      "company_name": "Triomics",
+      "domain": "triomics.com",
+      "segment": "ai-compliance",
+      "pipeline_stage": "research_staged",
+      "suppression_status": "consent_gap_no_auto_send",
+      "conflicts_status": "required_before_send"
+    }
+  ],
+  "work_items": [
+    {
+      "work_item_id": "work_nightly_agent_targeting_20260528_3c9ae85ed6048fd96deff71e",
+      "company": "Cognition Labs",
+      "priority": 93,
+      "input_path": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-28/agent-targeting-work-items/cognition-labs.json",
+      "local_growth_os_prospect_id": "prospect_cognition_labs_20260528"
+    },
+    {
+      "work_item_id": "work_nightly_agent_targeting_20260528_a088a1f1fdefa7a8428b01cc",
+      "company": "SimplexAI",
+      "priority": 79,
+      "input_path": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-28/agent-targeting-work-items/simplexai.json",
+      "local_growth_os_prospect_id": "prospect_simplexai_20260528"
+    },
+    {
+      "work_item_id": "work_nightly_agent_targeting_20260528_28e60f10d0578fbe8e3ed051",
+      "company": "Triomics",
+      "priority": 68,
+      "input_path": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-28/agent-targeting-work-items/triomics.json",
+      "local_growth_os_prospect_id": "prospect_triomics_20260528"
+    }
+  ]
+}

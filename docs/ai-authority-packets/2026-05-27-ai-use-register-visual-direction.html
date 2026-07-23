@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Whiteford / Schell IP — AI Use Register Visual Direction</title>
+  <style>
+    :root {
+      --bg: #f7f5ef;
+      --paper: #fffdf8;
+      --ink: #121827;
+      --muted: #5d6678;
+      --blue: #213f77;
+      --violet: #683ab7;
+      --gold: #b99057;
+      --sage: #55776a;
+      --line: #d8d0c3;
+      --soft-blue: #e8edf8;
+      --soft-gold: #f4eadb;
+      --soft-violet: #eee8f7;
+      --soft-sage: #e8efeb;
+      --shadow: 0 24px 70px rgba(18, 24, 39, 0.12);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background:
+        linear-gradient(rgba(216, 208, 195, 0.34) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(216, 208, 195, 0.26) 1px, transparent 1px),
+        var(--bg);
+      background-size: 34px 34px;
+      color: var(--ink);
+      font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      display: grid;
+      place-items: center;
+      padding: 36px;
+    }
+
+    .canvas {
+      width: min(1120px, 100%);
+      background: rgba(255, 253, 248, 0.92);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+      padding: clamp(26px, 4vw, 54px);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .canvas::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 12% 8%, rgba(185,144,87,0.12), transparent 30%),
+                  radial-gradient(circle at 88% 18%, rgba(33,63,119,0.10), transparent 34%);
+      pointer-events: none;
+    }
+
+    header, .map, footer { position: relative; z-index: 1; }
+
+    .eyebrow {
+      color: var(--blue);
+      font-size: 12px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      font-weight: 800;
+      margin-bottom: 14px;
+    }
+
+    h1 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-weight: 520;
+      font-size: clamp(40px, 7vw, 78px);
+      line-height: 0.96;
+      letter-spacing: -0.055em;
+      max-width: 850px;
+      margin: 0;
+      text-wrap: balance;
+    }
+
+    .subhead {
+      max-width: 760px;
+      color: var(--muted);
+      font-size: clamp(17px, 2vw, 21px);
+      line-height: 1.55;
+      margin: 22px 0 34px;
+    }
+
+    .map {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 16px;
+      align-items: stretch;
+    }
+
+    .register {
+      grid-column: 1 / -1;
+      display: grid;
+      grid-template-columns: 1.1fr 1.9fr;
+      gap: 22px;
+      align-items: center;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      padding: clamp(20px, 3vw, 34px);
+      margin-bottom: 4px;
+    }
+
+    .register-label {
+      border-left: 5px solid var(--gold);
+      padding-left: 18px;
+    }
+
+    .register-label h2 {
+      margin: 0 0 10px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(28px, 4vw, 46px);
+      line-height: 1.02;
+      letter-spacing: -0.035em;
+    }
+
+    .register-label p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.5;
+      font-size: 16px;
+    }
+
+    .register-table {
+      border: 1px solid var(--line);
+      background: #fffaf0;
+    }
+
+    .row {
+      display: grid;
+      grid-template-columns: 1.2fr 0.9fr 0.9fr 0.9fr;
+      min-height: 46px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .row:last-child { border-bottom: 0; }
+    .cell {
+      padding: 12px 14px;
+      border-right: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 13px;
+    }
+    .cell:last-child { border-right: 0; }
+    .head .cell {
+      color: var(--ink);
+      font-weight: 800;
+      background: rgba(185,144,87,0.12);
+    }
+
+    .lane {
+      border: 1px solid var(--line);
+      background: var(--paper);
+      min-height: 185px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+    }
+
+    .lane::before {
+      content: "";
+      width: 36px;
+      height: 4px;
+      background: var(--accent);
+      position: absolute;
+      top: -1px;
+      left: 20px;
+    }
+
+    .lane strong {
+      display: block;
+      font-size: 18px;
+      line-height: 1.15;
+      letter-spacing: -0.015em;
+      margin-bottom: 12px;
+    }
+
+    .lane p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.45;
+      font-size: 14px;
+    }
+
+    .lane .num {
+      font-family: Georgia, "Times New Roman", serif;
+      color: var(--accent);
+      font-size: 34px;
+      line-height: 1;
+      margin-top: 18px;
+    }
+
+    .blue { --accent: var(--blue); background: linear-gradient(180deg, var(--paper), var(--soft-blue)); }
+    .sage { --accent: var(--sage); background: linear-gradient(180deg, var(--paper), var(--soft-sage)); }
+    .violet { --accent: var(--violet); background: linear-gradient(180deg, var(--paper), var(--soft-violet)); }
+    .gold { --accent: var(--gold); background: linear-gradient(180deg, var(--paper), var(--soft-gold)); }
+
+    footer {
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      align-items: end;
+      border-top: 1px solid var(--line);
+      margin-top: 30px;
+      padding-top: 22px;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.4;
+    }
+
+    .brand {
+      color: var(--blue);
+      font-weight: 900;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .cta {
+      color: var(--ink);
+      font-weight: 800;
+      text-align: right;
+    }
+
+    @media (max-width: 820px) {
+      body { padding: 18px; }
+      .register { grid-template-columns: 1fr; }
+      .map { grid-template-columns: 1fr 1fr; }
+      .row { grid-template-columns: 1fr; }
+      .cell { border-right: 0; border-bottom: 1px solid var(--line); }
+      .cell:last-child { border-bottom: 0; }
+      footer { flex-direction: column; align-items: start; }
+      .cta { text-align: left; }
+    }
+
+    @media (max-width: 520px) {
+      .map { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <main class="canvas" aria-label="Whiteford Schell IP AI Use Register visual direction">
+    <header>
+      <div class="eyebrow">Whiteford / Schell IP · AI Legal Operating System</div>
+      <h1>The AI Use Register is the control layer.</h1>
+      <p class="subhead">A calm executive visual for founders, GCs, CFOs, product, HR, and risk leaders: make AI use visible before launch, renewal, financing, or diligence.</p>
+    </header>
+
+    <section class="map" aria-label="AI use register control map">
+      <div class="register">
+        <div class="register-label">
+          <h2>One register. Four legal conversations.</h2>
+          <p>Not a policy theater artifact — a working inventory that routes AI use to the right owner, contract, review path, and evidence trail.</p>
+        </div>
+        <div class="register-table" role="img" aria-label="Stylized AI use register table">
+          <div class="row head"><div class="cell">AI use case</div><div class="cell">Owner</div><div class="cell">Data</div><div class="cell">Review</div></div>
+          <div class="row"><div class="cell">Customer support assist</div><div class="cell">Product</div><div class="cell">Customer text</div><div class="cell">Human approve</div></div>
+          <div class="row"><div class="cell">Hiring screen aid</div><div class="cell">HR / Risk</div><div class="cell">Candidate info</div><div class="cell">Escalate</div></div>
+          <div class="row"><div class="cell">R&D ideation tool</div><div class="cell">Engineering</div><div class="cell">Invention notes</div><div class="cell">Record source</div></div>
+        </div>
+      </div>
+
+      <article class="lane blue">
+        <div><strong>Use case + owner</strong><p>Who uses the tool, what business workflow it touches, and who can approve changes.</p></div>
+        <div class="num">01</div>
+      </article>
+      <article class="lane sage">
+        <div><strong>Data + decision exposure</strong><p>What data enters the system and whether outputs affect customers, employees, investors, or regulated decisions.</p></div>
+        <div class="num">02</div>
+      </article>
+      <article class="lane violet">
+        <div><strong>Vendor / IP / contract terms</strong><p>Where confidentiality, ownership, indemnity, security, audit, and renewal obligations are controlled.</p></div>
+        <div class="num">03</div>
+      </article>
+      <article class="lane gold">
+        <div><strong>Human review + evidence trail</strong><p>How leadership proves review, escalation, and recordkeeping before launch, financing, or diligence.</p></div>
+        <div class="num">04</div>
+      </article>
+    </section>
+
+    <footer>
+      <div><span class="brand">Draft visual direction</span><br />For Figma / Claude Design handoff. No legal advice; no attorney-client relationship.</div>
+      <div class="cta">Lead magnet route: /colorado-tech-general-counsel</div>
+    </footer>
+  </main>
+</body>
+</html>

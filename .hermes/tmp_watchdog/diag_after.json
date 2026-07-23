@@ -1,0 +1,43 @@
+[
+  {
+    "task_id": "t_fa6eb9c1",
+    "title": "Apply expanded Supabase Growth OS mirror schema",
+    "status": "blocked",
+    "assignee": "ops",
+    "diagnostics": [
+      {
+        "kind": "repeated_failures",
+        "severity": "error",
+        "title": "Agent crash x4: pid 28381 not alive",
+        "detail": "This task has failed 4 times in a row (most recent: crash). Full last error:\n\npid 28381 not alive\n\nThe dispatcher will keep retrying until the consecutive-failures counter trips the circuit breaker (default 5), at which point the task auto-blocks. Fix the root cause and reclaim to retry.",
+        "actions": [
+          {
+            "kind": "cli_hint",
+            "label": "Check logs: hermes kanban log t_fa6eb9c1",
+            "payload": {
+              "command": "hermes kanban log t_fa6eb9c1"
+            },
+            "suggested": true
+          },
+          {
+            "kind": "reassign",
+            "label": "Reassign to different profile",
+            "payload": {
+              "reclaim_first": false
+            },
+            "suggested": false
+          }
+        ],
+        "first_seen_at": 1778395169,
+        "last_seen_at": 1778395169,
+        "count": 4,
+        "run_id": null,
+        "data": {
+          "consecutive_failures": 4,
+          "most_recent_outcome": "crashed",
+          "last_error": "pid 28381 not alive"
+        }
+      }
+    ]
+  }
+]

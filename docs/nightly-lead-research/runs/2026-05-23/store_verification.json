@@ -1,0 +1,92 @@
+{
+  "task_id": "t_820f6f30",
+  "run_date": "2026-05-23",
+  "source_payload": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-23/prospect_candidates.json",
+  "normalized_payload": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-23/prospect_candidates.normalized_for_store.json",
+  "db": "/Users/jeff/.openclaw/projects/mountain-west-growth-os/data/growth-os.sqlite",
+  "dry_run": {
+    "status": "dry_run",
+    "candidates": 3
+  },
+  "apply": {
+    "status": "applied",
+    "counts": {
+      "prospects": 3,
+      "contacts": 5,
+      "opportunities": 3,
+      "source_evidence": 8,
+      "outreach_drafts": 3,
+      "approval_items": 3,
+      "crm_sync_records": 3,
+      "suppression_checks": 3
+    }
+  },
+  "prospects": [
+    {
+      "company": "Josh.ai",
+      "domain": "josh.ai",
+      "prospect_id": "prospect_c6b77ec2cbafac9396d2dae4",
+      "lane": "ai-patent",
+      "contacts": 2,
+      "evidence": 3,
+      "drafts": 1,
+      "approval_items": 1,
+      "suppression_checks_not_cleared": 1,
+      "pending_sync_records": 1,
+      "work_item_id": "work_nightly_agent_targeting_20260523_25dde26a6ede343ae57579c8"
+    },
+    {
+      "company": "AKASA",
+      "domain": "akasa.com",
+      "prospect_id": "prospect_2b8b3cc887bb4779073633a5",
+      "lane": "ai-compliance",
+      "contacts": 2,
+      "evidence": 3,
+      "drafts": 1,
+      "approval_items": 1,
+      "suppression_checks_not_cleared": 1,
+      "pending_sync_records": 1,
+      "work_item_id": "work_nightly_agent_targeting_20260523_33e3c8f239583f68482dd34e"
+    },
+    {
+      "company": "Deepwatch",
+      "domain": "deepwatch.com",
+      "prospect_id": "prospect_902418419fe01ca4f3c36f4b",
+      "lane": "tech-gc",
+      "contacts": 1,
+      "evidence": 2,
+      "drafts": 1,
+      "approval_items": 1,
+      "suppression_checks_not_cleared": 1,
+      "pending_sync_records": 1,
+      "work_item_id": "work_nightly_agent_targeting_20260523_52f646589f4647261c4e909b"
+    }
+  ],
+  "guardrails": {
+    "external_action_allowed": false,
+    "approval_required": true,
+    "no_live_crm_or_supabase_sync": true,
+    "no_highlevel_workflow_or_send": true,
+    "no_linkedin_or_social_action": true,
+    "no_clio_write": true,
+    "remaining_required_before_external_use": [
+      "Jeff exact approval",
+      "attorney review",
+      "conflicts check",
+      "suppression/opt-out check",
+      "source-current verification"
+    ]
+  },
+  "patch_task_id": "t_ae1d6444",
+  "patched_payloads": {
+    "source_payload": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-23/prospect_candidates.json",
+    "normalized_payload": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-23/prospect_candidates.normalized_for_store.json",
+    "agent_targeting_inputs": [
+      "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-23/agent-targeting-work-items/josh-ai.json",
+      "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-23/agent-targeting-work-items/akasa.json",
+      "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-23/agent-targeting-work-items/deepwatch.json"
+    ],
+    "correction_report": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-23/correction_report_t_ae1d6444.md"
+  },
+  "patch_note": "Original local SQLite staging counts are retained for audit. t_ae1d6444 patched file payloads and Agent Targeting inputs after reviewer changes requested; no external/live systems touched. Downstream users must use patched payloads and hold AKASA/Deepwatch as documented."
+}

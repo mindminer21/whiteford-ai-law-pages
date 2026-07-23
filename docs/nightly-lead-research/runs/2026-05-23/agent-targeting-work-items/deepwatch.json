@@ -1,0 +1,142 @@
+{
+  "company": {
+    "name": "Deepwatch",
+    "domain": "deepwatch.com",
+    "website_url": "https://www.deepwatch.com",
+    "location": "Tampa, FL per Crunchbase 2023; no current Denver/Mountain West nexus verified",
+    "industry": "Cybersecurity / MDR",
+    "company_size": "~100-250 employees estimated",
+    "founded": "2019 (Crunchbase News)",
+    "funding": "$256M total raised per Crunchbase News; $180M 2023 financing included equity investments and strategic financing with no debt/equity breakdown",
+    "description": "Managed detection and response cybersecurity company. Current packet is on HOLD for Mountain West targeting because checked sources do not support Denver geography; Crunchbase News describes Tampa, Florida HQ and first-party 2024 source names John DiLullo CEO based in Silicon Valley.",
+    "ai_usage": "Likely AI/ML for threat detection and anomaly detection. Cybersecurity increasingly ML-dependent.",
+    "primary_offer_lane": "tech-gc",
+    "secondary_offer_lanes": [
+      "ai-patent",
+      "ma-readiness"
+    ],
+    "scores": {
+      "fit_score": 74,
+      "urgency_score": 70,
+      "value_potential_score": 68,
+      "combined_priority_score": 0
+    },
+    "lead_magnet_fit_lane": "tech-gc",
+    "lead_magnet_fit_tier": "hold_not_mountain_west_queue",
+    "lead_magnet_consented": false,
+    "outreach_readiness_status": "hold_geography_current_source_correction_required",
+    "external_action_allowed": false,
+    "notes": "Description: Managed detection and response cybersecurity company. HOLD for Mountain West targeting.\nCompany size: ~100-250 employees estimated\nFounded: 2019 per Crunchbase News\nFunding: $256M total raised per Crunchbase News; $180M 2023 financing included equity and strategic financing with no debt/equity breakdown\nAI usage: Deepwatch first-party 2024 release mentions AI/automation in its managed security platform.\nOutreach readiness: hold_geography_current_source_correction_required\nLead magnet fit tier: hold_not_mountain_west_queue\nGeo relevance: not verified for Denver/Mountain West; remove from Denver queue unless new current source supports nexus\nResearch confidence: low for Mountain West targeting",
+    "pipeline_stage": "research_staged",
+    "risk_level": "attorney_review_required",
+    "suppression_status": "consent_gap_no_auto_send",
+    "conflicts_status": "required_before_send",
+    "source_type": "nightly_public_source_research",
+    "source_note": "Nightly Qwen public-source research run 2026-05-23 patched after review; local/internal staging only; no external action authorized.",
+    "owner": "qwen-local"
+  },
+  "contacts": [
+    {
+      "name": "John DiLullo",
+      "title": "CEO",
+      "role_category": "ceo",
+      "confidence": "medium",
+      "email_source": "public_not_available",
+      "linkedin_url": "",
+      "linkedin_confidence": "unverified",
+      "source_url": "https://www.deepwatch.com/deepwatch-names-john-dilullo-as-chief-executive-officer/",
+      "notes": "First-party Deepwatch announcement dated 2024-07-02 says John DiLullo was appointed CEO effective immediately and will be based in Silicon Valley; not evidence of Denver/Mountain West nexus."
+    }
+  ],
+  "evidence": [
+    {
+      "source_url": "https://news.crunchbase.com/cybersecurity/startup-venture-funding-deepwatch/",
+      "source_type": "third_party",
+      "accessed_date": "2026-05-23",
+      "supported_fact": "Crunchbase News describes Deepwatch as Tampa, Florida-based, founded in 2019, with $180M financing and $256M total raised; CEO in that 2023 article was Charlie Thomas.",
+      "accessed_at": "2026-05-23T00:00:00+00:00",
+      "confidence": "medium",
+      "corroboration": "single public source from nightly research or patch verification",
+      "safe_for_outreach": "conditional",
+      "fact_classification": "public",
+      "safe_fact_for_copy": "Attorney-review-only factual support; do not use externally without approval."
+    },
+    {
+      "source_url": "https://www.deepwatch.com/deepwatch-names-john-dilullo-as-chief-executive-officer/",
+      "source_type": "first_party",
+      "accessed_date": "2026-05-23",
+      "supported_fact": "Deepwatch first-party 2024 announcement names John DiLullo CEO effective July 2, 2024 and says he will be based in Silicon Valley.",
+      "accessed_at": "2026-05-23T00:00:00+00:00",
+      "confidence": "medium",
+      "corroboration": "single public source from nightly research or patch verification",
+      "safe_for_outreach": "conditional",
+      "fact_classification": "public",
+      "safe_fact_for_copy": "Attorney-review-only factual support; do not use externally without approval."
+    },
+    {
+      "source_url": "https://www.deepwatch.com/cybersecurity-startup-deepwatch-just-nabbed-a-goldman-sachs-led-53-million-funding-round/",
+      "source_type": "first_party_historical",
+      "accessed_date": "2026-05-23",
+      "supported_fact": "Historical Deepwatch/Goldman $53M funding item; stale for current geography and not support for Denver queue without additional current corroboration.",
+      "accessed_at": "2026-05-23T00:00:00+00:00",
+      "confidence": "medium",
+      "corroboration": "single public source from nightly research or patch verification",
+      "safe_for_outreach": "conditional",
+      "fact_classification": "public",
+      "safe_fact_for_copy": "Attorney-review-only factual support; do not use externally without approval."
+    }
+  ],
+  "confidence": "low_for_mountain_west",
+  "entity_ambiguity": false,
+  "geo_relevance": "not verified - remove from Denver/Mountain West queue unless new current source supports Colorado nexus",
+  "notes": "Removed from Denver/Mountain West queue pending current source support. First-party 2024 CEO source added; Crunchbase facts corrected.",
+  "run_date": "2026-05-23",
+  "outreach_vectors": [
+    {
+      "lane": "tech-gc",
+      "lead_magnet": "Tech Company Legal Health Checklist",
+      "lead_magnet_route": "/colorado-tech-general-counsel",
+      "vector": "HOLD — remove from Denver/Mountain West queue unless a current reliable source supports a Colorado nexus. If later revived, use corrected facts: Tampa, FL in Crunchbase News; founded 2019; $256M total raised per Crunchbase; John DiLullo CEO per first-party 2024 announcement based in Silicon Valley.",
+      "value_note": "Do not use for Agent Targeting or outreach prep until geography/current-source review clears; attorney-review-only internal note.",
+      "draft_type": "agent_targeting_vector",
+      "channel": "attorney_review_only",
+      "title": "Deepwatch tech-gc attorney-review targeting vector",
+      "subject": null,
+      "body": "Internal attorney-review targeting vector only. Not approved for sending.\n\nProspect: Deepwatch\nLane: tech-gc\nLead magnet/resource: Tech Company Legal Health Checklist /colorado-tech-general-counsel\n\nVector: HOLD — remove from Denver/Mountain West queue unless a current reliable source supports a Colorado nexus. If later revived, use corrected facts: Tampa, FL in Crunchbase News; founded 2019; $256M total raised per Crunchbase; John DiLullo CEO per first-party 2024 announcement based in Silicon Valley.\n\nValue note: Do not use for Agent Targeting or outreach prep until geography/current-source review clears; attorney-review-only internal note.\n\nGuardrail: no outreach, LinkedIn action, workflow enrollment, CRM/Supabase live sync, Clio write, public/client-facing use, or external use without Jeff exact approval, attorney review, suppression/conflicts clearance, and source-current verification.",
+      "source_facts": [
+        "Crunchbase News describes Deepwatch as Tampa, Florida-based, founded in 2019, with $180M financing and $256M total raised; CEO in that 2023 article was Charlie Thomas.",
+        "Deepwatch first-party 2024 announcement names John DiLullo CEO effective July 2, 2024 and says he will be based in Silicon Valley.",
+        "Historical Deepwatch/Goldman $53M funding item; stale for current geography and not support for Denver queue without additional current corroboration."
+      ],
+      "source_urls": [
+        "https://news.crunchbase.com/cybersecurity/startup-venture-funding-deepwatch/",
+        "https://www.deepwatch.com/deepwatch-names-john-dilullo-as-chief-executive-officer/",
+        "https://www.deepwatch.com/cybersecurity-startup-deepwatch-just-nabbed-a-goldman-sachs-led-53-million-funding-round/"
+      ],
+      "risk_level": "attorney_review_required",
+      "internal_review_notes": "Patched after reviewer changes requested; attorney-review only; no external action authorized; no tags/manual/no-post for social copy."
+    }
+  ],
+  "work_item_guardrails": {
+    "external_action_allowed": false,
+    "approval_required": true,
+    "research_only": true,
+    "manual_no_post_social_only": true,
+    "blocked_actions": [
+      "outreach",
+      "email_or_sms_send",
+      "workflow_activation_or_enrollment",
+      "linkedin_or_social_action",
+      "live_crm_or_supabase_sync",
+      "clio_write",
+      "public/client-facing use"
+    ],
+    "required_before_external_use": [
+      "Jeff exact approval",
+      "attorney review",
+      "conflicts check",
+      "suppression/opt-out check",
+      "source-current verification"
+    ]
+  }
+}

@@ -1,0 +1,156 @@
+{
+  "apply": false,
+  "customFields": {
+    "approval_status": {
+      "dataType": "TEXT",
+      "fieldKey": "contact.approval_status",
+      "id": "PZQ4DD5Dy4qJG9pTsNM3",
+      "name": "Approval Status",
+      "status": "existing"
+    },
+    "consent_basis": {
+      "dataType": "TEXT",
+      "fieldKey": "contact.consent_basis",
+      "id": "TvCAwsNbVg94JrEBM3e0",
+      "name": "Consent Basis",
+      "status": "existing"
+    },
+    "decision_maker_priority": {
+      "dataType": "TEXT",
+      "fieldKey": "contact.decision_maker_priority",
+      "id": "sxb5burpn9gj6Su9UHjh",
+      "name": "Decision Maker Priority",
+      "status": "existing"
+    },
+    "decision_maker_role": {
+      "dataType": "TEXT",
+      "fieldKey": "contact.decision_maker_role",
+      "id": "M4EqfbzqtpbZ7iokYiZt",
+      "name": "Decision Maker Role",
+      "status": "existing"
+    },
+    "enrichment_confidence": {
+      "dataType": "NUMERICAL",
+      "fieldKey": "contact.enrichment_confidence",
+      "id": "QVtRYlJ0KXfrawxb6uZv",
+      "name": "Enrichment Confidence",
+      "status": "existing"
+    },
+    "enrichment_source_url": {
+      "dataType": "TEXT",
+      "fieldKey": "contact.enrichment_source_url",
+      "id": "iGk7SSq6CtsZbLPyuB9i",
+      "name": "Enrichment Source URL",
+      "status": "existing"
+    },
+    "last_human_review_at": {
+      "dataType": "TEXT",
+      "fieldKey": "contact.last_human_review_at",
+      "id": "hYph7No8j1yDAbX1K4g7",
+      "name": "Last Human Review At",
+      "status": "existing"
+    },
+    "linkedin_draft_status": {
+      "dataType": "TEXT",
+      "fieldKey": "contact.linkedin_draft_status",
+      "id": "1dnBYpzcllC3f3Hp9O1j",
+      "name": "LinkedIn Draft Status",
+      "status": "existing"
+    },
+    "linkedin_profile_url": {
+      "dataType": "TEXT",
+      "fieldKey": "contact.linkedin_profile_url",
+      "id": "CwiY3lYPwAsHlaMb1on3",
+      "name": "LinkedIn Profile URL",
+      "status": "existing"
+    },
+    "outreach_hypothesis": {
+      "dataType": "LARGE_TEXT",
+      "fieldKey": "contact.outreach_hypothesis",
+      "id": "Mh63JQKArJIIK6dV0b2k",
+      "name": "Outreach Hypothesis",
+      "status": "existing"
+    },
+    "personalized_content_angle": {
+      "dataType": "LARGE_TEXT",
+      "fieldKey": "contact.personalized_content_angle",
+      "id": "qat9gBfJHUk0LTrqozZx",
+      "name": "Personalized Content Angle",
+      "status": "existing"
+    },
+    "pipeline_next_action": {
+      "dataType": "TEXT",
+      "fieldKey": "contact.pipeline_next_action",
+      "id": "JRtUG5UvKRPGyqCydBUp",
+      "name": "Pipeline Next Action",
+      "status": "existing"
+    },
+    "suggested_offer_lane": {
+      "dataType": "TEXT",
+      "fieldKey": "contact.suggested_offer_lane",
+      "id": "tZxdA0AeQ2YuJO5gy8t7",
+      "name": "Suggested Offer Lane",
+      "status": "existing"
+    }
+  },
+  "locationId": "tm68WWMrcAa3TqQbEAMa",
+  "safeScope": "tags and contact custom fields only",
+  "tags": {
+    "brand:whiteford-schellip": {
+      "id": "MxzqQUAAeGriKBueipfq",
+      "status": "existing"
+    },
+    "enrichment:needs-research": {
+      "id": "3nRTFHptUVsDFMTedMIz",
+      "status": "existing"
+    },
+    "enrichment:public-source": {
+      "id": "36GlfxjuLWR55FPsltsQ",
+      "status": "existing"
+    },
+    "newsletter:daily-ai-authority": {
+      "id": "b5VVbfvd8b2NKsVC8MYr",
+      "status": "existing"
+    },
+    "ops:approval-approved": {
+      "id": "bu16A0s2sRH6exC76L1n",
+      "status": "existing"
+    },
+    "ops:approval-required": {
+      "id": "bCLd2Y9Jzbzqrua1AhkR",
+      "status": "existing"
+    },
+    "ops:approval-revise": {
+      "id": "64eUrZMlpVPdoxmZ2Caw",
+      "status": "existing"
+    },
+    "ops:no-auto-send": {
+      "id": "LdM5qIWsDwLvVCfrq0uw",
+      "status": "existing"
+    },
+    "outreach:do-not-send": {
+      "id": "wvmJlzZHsWnGok6dsgGs",
+      "status": "existing"
+    },
+    "outreach:personalized-draft-ready": {
+      "id": "VnOEdpHqNLxVePLM1EPm",
+      "status": "existing"
+    },
+    "social:attorney-review-required": {
+      "id": "ndibHiKrITYMwK0R2RMf",
+      "status": "existing"
+    },
+    "social:linkedin-draft": {
+      "id": "hOh6qwPRf06R9FoB10lg",
+      "status": "existing"
+    },
+    "workflow:draft-only": {
+      "id": "KLeXxBMdVCFhFI3fkyTr",
+      "status": "existing"
+    },
+    "workflow:manual-start": {
+      "id": "OyNFjnYsvxfH3xBXcAhS",
+      "status": "existing"
+    }
+  }
+}

@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { LearnHtmlPage } from "@/components/learn-html-page";
 import { aiRiskTriageContent } from "@/lib/learn/ai-risk-triage";
-import { magnetConfigs } from "@/lib/magnets/finalization";
 
 export const metadata: Metadata = {
   title: "AI Legal Risk Triage",
@@ -15,5 +14,5 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  return <LearnHtmlPage content={aiRiskTriageContent} magnet={magnetConfigs["ai-risk-triage"]} />;
+  return <LearnHtmlPage content={aiRiskTriageContent} />;
 }

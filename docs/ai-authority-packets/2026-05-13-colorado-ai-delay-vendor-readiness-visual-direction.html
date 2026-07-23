@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Whiteford AI Readiness Window Visual Direction — 2026-05-13</title>
+  <style>
+    :root {
+      --bg: #f7f5ef;
+      --paper: #fffdf8;
+      --ink: #121827;
+      --muted: #5d6678;
+      --blue: #213f77;
+      --violet: #683ab7;
+      --gold: #b99057;
+      --sage: #55776a;
+      --line: #d8d0c3;
+      --shadow: 0 24px 80px rgba(18, 24, 39, 0.10);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--ink);
+      background:
+        linear-gradient(rgba(33,63,119,0.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(33,63,119,0.035) 1px, transparent 1px),
+        var(--bg);
+      background-size: 36px 36px;
+      min-height: 100vh;
+    }
+    main { width: min(1180px, calc(100vw - 32px)); margin: 0 auto; padding: 48px 0; }
+    .board {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+      padding: clamp(24px, 4vw, 56px);
+    }
+    .eyebrow {
+      color: var(--gold);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+    }
+    h1 {
+      color: var(--blue);
+      font-size: clamp(38px, 6vw, 76px);
+      line-height: .94;
+      letter-spacing: -0.055em;
+      margin: 18px 0 18px;
+      max-width: 930px;
+      text-wrap: balance;
+    }
+    .lede {
+      max-width: 760px;
+      color: var(--muted);
+      font-size: clamp(18px, 2vw, 23px);
+      line-height: 1.45;
+      margin-bottom: 36px;
+    }
+    .map {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+      margin: 28px 0 32px;
+    }
+    .card {
+      min-height: 260px;
+      border: 1px solid var(--line);
+      background: linear-gradient(180deg, #fffefa, #fbf7ef);
+      padding: 22px;
+      position: relative;
+    }
+    .num {
+      width: 34px; height: 34px; border-radius: 50%;
+      display: grid; place-items: center;
+      background: rgba(185,144,87,.14);
+      color: #7b5730;
+      font-weight: 800;
+      margin-bottom: 34px;
+    }
+    h2 { margin: 0 0 12px; color: var(--ink); font-size: 24px; letter-spacing: -.03em; }
+    ul { margin: 0; padding-left: 18px; color: var(--muted); line-height: 1.55; font-size: 15px; }
+    .connector {
+      display: grid; grid-template-columns: 1fr auto; gap: 22px; align-items: center;
+      border-top: 1px solid var(--line);
+      padding-top: 26px;
+    }
+    .note { color: var(--muted); line-height: 1.5; max-width: 720px; font-size: 15px; }
+    .cta {
+      min-height: 48px; display: inline-flex; align-items: center; justify-content: center;
+      padding: 0 20px; background: var(--blue); color: white; text-decoration: none;
+      font-weight: 800; letter-spacing: -.01em; border: 1px solid var(--blue);
+    }
+    .footer {
+      margin-top: 24px; display: flex; justify-content: space-between; gap: 18px;
+      color: var(--muted); font-size: 12px; border-top: 1px solid var(--line); padding-top: 18px;
+    }
+    @media (max-width: 860px) {
+      .map { grid-template-columns: 1fr; }
+      .card { min-height: auto; }
+      .connector, .footer { grid-template-columns: 1fr; display: grid; }
+      .cta { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="board" aria-labelledby="title">
+      <div class="eyebrow">Whiteford AI Compliance Briefing Concept · Draft Only</div>
+      <h1 id="title">Use the AI compliance delay to build the record.</h1>
+      <p class="lede">A calm executive visual for Colorado and Mountain West technology companies: turn a moving legal deadline into a lightweight AI legal operating system.</p>
+      <div class="map" aria-label="AI readiness operating system map">
+        <article class="card"><div class="num">1</div><h2>Inventory</h2><ul><li>AI use cases by department</li><li>Data touched and business purpose</li><li>Product, HR, finance, support, security</li></ul></article>
+        <article class="card"><div class="num">2</div><h2>Vendor / Contract Review</h2><ul><li>Confidentiality and usage rights</li><li>IP ownership and training restrictions</li><li>Security, audit, indemnity terms</li></ul></article>
+        <article class="card"><div class="num">3</div><h2>Decision & Launch Gates</h2><ul><li>Important-decision exposure</li><li>Human review and escalation</li><li>Release checkpoints before market</li></ul></article>
+        <article class="card"><div class="num">4</div><h2>Records & Reporting</h2><ul><li>Approval trail and owner map</li><li>Customer / board-ready summary</li><li>Diligence and product-risk evidence</li></ul></article>
+      </div>
+      <div class="connector">
+        <p class="note"><strong>Positioning:</strong> This should feel like an executive legal operating-system card, not a generic SaaS dashboard. No confidential facts requested; business-level descriptions only. Not legal advice.</p>
+        <a class="cta" href="/ai-compliance-gameplan">Get the AI Compliance Gameplan</a>
+      </div>
+      <div class="footer"><span>Palette: paper, ink, Whiteford/Schell blue, restrained gold, sage.</span><span>2026-05-13 · Figma / Claude Design direction</span></div>
+    </section>
+  </main>
+</body>
+</html>

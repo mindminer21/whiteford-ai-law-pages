@@ -1,0 +1,39 @@
+{
+  "body": {
+    "opportunity": {
+      "contact": {
+        "companyName": "RADICL (Radicl Defense LLC)",
+        "followers": [],
+        "id": "PngYMpg9XtRzFutqkzKH",
+        "name": "RADICL (Radicl Defense LLC) Agent Targeting",
+        "tags": []
+      },
+      "contactId": "PngYMpg9XtRzFutqkzKH",
+      "createdAt": "2026-05-08T08:39:21.759Z",
+      "followers": [],
+      "id": "7Ckk70HMCvAKBuMH5QBu",
+      "internalSource": {
+        "apiVersion": "2021-07-28",
+        "channel": "OAUTH",
+        "id": "69f97a4042f2b054fe684553",
+        "source": "INTEGRATION",
+        "type": "CREATED"
+      },
+      "isAttribute": false,
+      "lastActionDate": "2026-05-08T08:39:21.759Z",
+      "lastStageChangeAt": "2026-05-08T08:39:21.759Z",
+      "lastStatusChangeAt": "2026-05-08T08:39:21.759Z",
+      "locationId": "tm68WWMrcAa3TqQbEAMa",
+      "monetaryValue": 0,
+      "name": "RADICL (Radicl Defense LLC) \u2014 Agent Targeting",
+      "pipelineId": "Tbx4tA6wHv5lTwZPSHyZ",
+      "pipelineStageId": "fd569cf4-979b-43b8-bd0f-78e807e80ff1",
+      "source": "Growth OS nightly prospect research - Agent Targeting (prospect_2180fd85f6085ebc2a595f72)",
+      "status": "open",
+      "updatedAt": "2026-05-08T08:39:21.759Z"
+    },
+    "traceId": "dc91e766-8ba5-4071-befb-8002539be7c0"
+  },
+  "ok": true,
+  "status": 201
+}

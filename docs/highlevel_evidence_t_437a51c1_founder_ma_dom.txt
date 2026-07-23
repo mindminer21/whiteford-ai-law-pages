@@ -1,0 +1,49 @@
+HighLevel DOM evidence — t_437a51c1 — Founder M&A Readiness
+Captured: 2026-05-06 15:08 MDT via Chrome CDP iframe text extraction
+URL: https://app.gohighlevel.com/location/tm68WWMrcAa3TqQbEAMa/workflow/4be5ea96-b497-4149-be72-f38aa136da35
+
+Observed text excerpt:
+Skip to main content
+Back to Workflows
+
+WF | Intake | Whiteford | Founder M&A Readiness | Draft
+
+Saved
+Standard Builder
+
+Builder
+
+Settings
+
+Enrollment History
+
+Execution Logs
+
+Test Workflow
+
+Draft
+
+Publish
+
+Consent Gate — lead magnet email opt-in required before nurture
+Opted in / eligible for fut...
+
+If "Tags" includes "newsletter:ai"
+
+Not opted in / suppressed /...
+When none of the conditions are met
+M&A Readiness Intake Safety + Review Note
+END
+END
+Contact TagContact Tag Added - workflow:ma-readiness
+Tag Added includes "workflow:ma-readiness"
+Stats
+Add New Trigger
+Add
+100%
+
+Panel notes:
+- Existing branch verified: If "Tags" includes "newsletter:ai".
+- Opened consent-gate panel and confirmed `Add Segment` is exposed, but did not attempt another save/edit because AI Compliance and Tech GC probes already showed the blank-segment ambiguity and remaining fields require unverified custom-field/DND/suppression mappings.
+- Closed the panel without saving.
+- Workflow header remained Draft/Saved; Publish was not clicked.

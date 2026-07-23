@@ -1,0 +1,55 @@
+{
+  "body": {
+    "contact": {
+      "companyName": "Sereact",
+      "country": "US",
+      "createdBy": {
+        "channel": "OAUTH",
+        "source": "INTEGRATION",
+        "sourceId": "69f97a4042f2b054fe684553",
+        "timestamp": "2026-05-08T08:39:22.996Z"
+      },
+      "customFields": [],
+      "dateAdded": "2026-05-08T08:39:22.996Z",
+      "dateUpdated": "2026-05-08T08:39:22.996Z",
+      "deleted": false,
+      "dnd": true,
+      "dndDate": "2026-05-08T08:39:22.996Z",
+      "dndSettings": {
+        "Call": {
+          "message": "Internal agent targeting placeholder; no outreach until Jeff approval.",
+          "status": "active"
+        },
+        "SMS": {
+          "message": "Internal agent targeting placeholder; no outreach until Jeff approval.",
+          "status": "active"
+        },
+        "WhatsApp": {
+          "message": "Internal agent targeting placeholder; no outreach until Jeff approval.",
+          "status": "active"
+        }
+      },
+      "firstName": "Sereact",
+      "firstNameLowerCase": "sereact",
+      "fullNameLowerCase": "sereact agent targeting",
+      "id": "1a2gBW9IhpZfgnh6bT2K",
+      "lastName": "Agent Targeting",
+      "lastNameLowerCase": "agent targeting",
+      "lastSessionActivityAt": "2026-05-08T08:39:22.996Z",
+      "lastUpdatedBy": {
+        "channel": "OAUTH",
+        "source": "INTEGRATION",
+        "sourceId": "69f97a4042f2b054fe684553",
+        "timestamp": "2026-05-08T08:39:22.996Z"
+      },
+      "locationId": "tm68WWMrcAa3TqQbEAMa",
+      "source": "Growth OS nightly prospect research - Agent Targeting (prospect_ef30df45ad62c93981758ca3)",
+      "tags": [],
+      "type": "lead",
+      "website": "https://sereact.de"
+    },
+    "traceId": "a94749df-2d1a-4429-8faf-f47d3467c671"
+  },
+  "ok": true,
+  "status": 201
+}

@@ -1,0 +1,66 @@
+COMMAND: qmd status
+QMD Status
+
+Index: /Users/jeff/.cache/qmd/index.sqlite
+Size:  49.7 MB
+
+Documents
+  Total:    388 files indexed
+  Vectors:  8726 embedded
+  Updated:  1d ago
+
+AST Chunking
+  Status:   active
+  Languages: typescript, tsx, javascript, python, go, rust
+
+Collections
+  whiteford-ai-law-pages (qmd://whiteford-ai-law-pages/)
+    Pattern:  **/*.md
+    Files:    382 (updated 1d ago)
+    Contexts: 1
+      /: Schell IP / Whiteford AI authority, SEO, YouTube, HighLev...
+  business-development-books (qmd://business-development-books/)
+    Pattern:  **/*.md
+    Files:    6 (updated 11d ago)
+    Contexts: 1
+      /: Private local business-development book corpus for Jeff S...
+
+Examples
+  # List files in a collection
+  qmd ls whiteford-ai-law-pages
+  # Get a document
+  qmd get qmd://whiteford-ai-law-pages/path/to/file.md
+  # Search within a collection
+  qmd search "query" -c whiteford-ai-law-pages
+
+Models
+  Embedding:   https://huggingface.co/ggml-org/embeddinggemma-300M-GGUF
+  Reranking:   https://huggingface.co/ggml-org/Qwen3-Reranker-0.6B-Q8_0-GGUF
+  Generation:  https://huggingface.co/tobil/qmd-query-expansion-1.7B-gguf
+
+Device
+  GPU:      metal (offloading: yes)
+  Devices:  Apple M5 Max
+  VRAM:     107.5 GB free / 107.5 GB total
+  CPU:      6 math cores
+
+Tips
+  Add update commands to keep collections fresh: whiteford-ai-law-pages, business-development-books
+    qmd collection update-cmd <name> 'git stash && git pull --rebase --ff-only && git stash pop'
+
+---
+COMMAND: qmd search -n 5 --files "t_f447c8e1 Crusoe LinkedIn awareness review"
+---
+COMMAND: qmd search -n 5 --files "t_9938ab69 nightly Qwen prospect digest review"
+---
+COMMAND: qmd search -n 5 --files "highlevel_agent_targeting_sync_noop_report 2026-05-16"
+---
+COMMAND: qmd search -n 5 --files "validation_report 2026-05-16"
+---
+COMMAND: qmd search -n 5 --files "t_f447c8e1"
+---
+COMMAND: qmd search -n 5 --files "t_b3f743fe"
+---
+COMMAND: qmd search -n 5 --files "t_8b5d48e2"
+---
+COMMAND: qmd search -n 5 --files "t_9938ab69"

@@ -1,0 +1,19 @@
+{
+  "status": "verified_noop",
+  "run_label": "2026-05-20",
+  "db": "/Users/jeff/.openclaw/projects/mountain-west-growth-os/data/growth-os.sqlite",
+  "table_counts_after_apply": {
+    "prospects": 39,
+    "contacts": 20,
+    "opportunities": 50,
+    "source_evidence": 44,
+    "outreach_drafts": 20,
+    "approval_items": 52,
+    "crm_sync_records": 32,
+    "suppression_checks": 20
+  },
+  "agent_targeting_work_item_count_for_run": 0,
+  "agent_targeting_work_items": [],
+  "work_item_query_error": null,
+  "safety": "local SQLite read/write only via prospect_research_store.py; no live CRM/Supabase/HighLevel/Clio/outreach/social/public action"
+}

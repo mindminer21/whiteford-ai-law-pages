@@ -1,0 +1,55 @@
+{
+  "body": {
+    "contact": {
+      "companyName": "Flatfile (also rebranded company name: Obvious)",
+      "country": "US",
+      "createdBy": {
+        "channel": "OAUTH",
+        "source": "INTEGRATION",
+        "sourceId": "69f97a4042f2b054fe684553",
+        "timestamp": "2026-05-07T09:42:59.050Z"
+      },
+      "customFields": [],
+      "dateAdded": "2026-05-07T09:42:59.050Z",
+      "dateUpdated": "2026-05-07T09:42:59.050Z",
+      "deleted": false,
+      "dnd": true,
+      "dndDate": "2026-05-07T09:42:59.051Z",
+      "dndSettings": {
+        "Call": {
+          "message": "Internal agent targeting placeholder; no outreach until Jeff approval.",
+          "status": "active"
+        },
+        "SMS": {
+          "message": "Internal agent targeting placeholder; no outreach until Jeff approval.",
+          "status": "active"
+        },
+        "WhatsApp": {
+          "message": "Internal agent targeting placeholder; no outreach until Jeff approval.",
+          "status": "active"
+        }
+      },
+      "firstName": "Flatfile",
+      "firstNameLowerCase": "flatfile",
+      "fullNameLowerCase": "flatfile (also rebranded company name: obvious) agent targeting",
+      "id": "T8ClRbxV70PDP5IKmgUg",
+      "lastName": "(also rebranded company name: Obvious) Agent Targeting",
+      "lastNameLowerCase": "(also rebranded company name: obvious) agent targeting",
+      "lastSessionActivityAt": "2026-05-07T09:42:59.051Z",
+      "lastUpdatedBy": {
+        "channel": "OAUTH",
+        "source": "INTEGRATION",
+        "sourceId": "69f97a4042f2b054fe684553",
+        "timestamp": "2026-05-07T09:42:59.050Z"
+      },
+      "locationId": "tm68WWMrcAa3TqQbEAMa",
+      "source": "Growth OS nightly prospect research - Agent Targeting (prospect_bea9dbd287cb8fcf077720d0)",
+      "tags": [],
+      "type": "lead",
+      "website": "https://flatfile.com"
+    },
+    "traceId": "7250f7ec-9d0d-4a4d-b67a-72c705964984"
+  },
+  "ok": true,
+  "status": 201
+}

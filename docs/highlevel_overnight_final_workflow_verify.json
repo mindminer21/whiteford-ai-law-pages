@@ -1,0 +1,47 @@
+{
+  "locationId": "tm68WWMrcAa3TqQbEAMa",
+  "workflowCount": 7,
+  "workflows": [
+    {
+      "id": "bd952a80-46d3-419f-900d-e9add46ca003",
+      "name": "1. New Lead Nurture (Fast 5) - Claim Offer",
+      "status": "draft"
+    },
+    {
+      "id": "0a1749da-af77-4d51-ba2e-8a1027ca66b5",
+      "name": "2. Appointment Confirmation + Reminders",
+      "status": "draft"
+    },
+    {
+      "id": "dcf4b664-4d02-4465-bf88-1be1a1e6ea34",
+      "name": "3. Appt No Show",
+      "status": "draft"
+    },
+    {
+      "id": "622a2611-afe0-4d02-b848-f5c3e81130e1",
+      "name": "4. New Sale - Send Review Request",
+      "status": "draft"
+    },
+    {
+      "id": "28cfdf24-11ec-47b6-9830-3aa3bc827cf0",
+      "name": "5. Long-Term Nurture",
+      "status": "draft"
+    },
+    {
+      "id": "39b5c831-10d4-4005-89f5-64307403158f",
+      "name": "6. Stale Leads",
+      "status": "draft"
+    },
+    {
+      "id": "424fd134-b34b-494f-a337-2aba0dec3060",
+      "name": "AI Patent Strategy Campaign",
+      "status": "draft"
+    }
+  ],
+  "safety": {
+    "sentEmails": false,
+    "sentSms": false,
+    "activatedWorkflows": false,
+    "enrolledContacts": false
+  }
+}

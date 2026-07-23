@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pre-Wake Whiteford Decision Deck — 2026-05-13</title>
+  <style>
+    :root {
+      --ink: #121827;
+      --navy: #1f3f73;
+      --navy-dark: #152b4f;
+      --paper: #fffdf8;
+      --cream: #f4efe7;
+      --line: #d7cec0;
+      --line-strong: #b8ab99;
+      --muted: #5d6675;
+      --gold: #b88c50;
+      --gold-soft: #f7ecd9;
+      --red: #8d332d;
+      --red-soft: #fff0ed;
+      --sage: #557568;
+      --sage-soft: #edf5f0;
+      --amber: #7a581f;
+      --amber-soft: #fff7e6;
+      --white: #ffffff;
+      --shadow: 0 26px 80px rgba(18, 24, 39, 0.16);
+    }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      overflow: hidden;
+      color: var(--ink);
+      background:
+        linear-gradient(90deg, rgba(18,24,39,0.05) 1px, transparent 1px),
+        linear-gradient(180deg, rgba(18,24,39,0.035) 1px, transparent 1px),
+        var(--cream);
+      background-size: 72px 72px;
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+    }
+    button { font: inherit; }
+    button:focus-visible, a:focus-visible { outline: 4px solid rgba(184,140,80,0.55); outline-offset: 4px; }
+    code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      background: #f0ebe2;
+      border: 1px solid rgba(216,208,195,0.9);
+      padding: 2px 7px;
+      overflow-wrap: anywhere;
+    }
+    .viewport { position: fixed; inset: 0; display: grid; place-items: center; padding: 24px; }
+    .deck {
+      width: 1920px;
+      height: 1080px;
+      position: relative;
+      transform-origin: center center;
+      background: var(--paper);
+      border: 1px solid var(--line-strong);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+    .slide {
+      position: absolute;
+      inset: 0;
+      display: none;
+      padding: 78px 96px 84px;
+      background: var(--paper);
+      opacity: 0;
+      transform: translateX(18px);
+      transition: opacity 160ms ease, transform 160ms ease;
+    }
+    .slide.active { display: block; opacity: 1; transform: translateX(0); }
+    .slide::before { content: ""; position: absolute; inset: 0 0 auto 0; height: 13px; background: linear-gradient(90deg, var(--navy-dark), var(--navy), var(--gold)); }
+    .slide.hold::before, .slide.boundary::before { background: linear-gradient(90deg, var(--red), var(--navy-dark)); }
+    .slide.safe::before { background: linear-gradient(90deg, var(--sage), var(--navy)); }
+    .texture { position: absolute; right: -190px; top: -245px; width: 670px; height: 670px; border-radius: 50%; border: 1px solid rgba(184,140,80,0.26); background: radial-gradient(circle, rgba(184,140,80,0.13), rgba(184,140,80,0.03) 58%, transparent 60%); pointer-events: none; }
+    h1, h2, h3, p { margin: 0; }
+    h1 { font-size: 94px; line-height: 0.98; letter-spacing: -0.055em; max-width: 1260px; text-wrap: balance; }
+    h2 { font-size: 62px; line-height: 1; letter-spacing: -0.045em; max-width: 1500px; text-wrap: balance; }
+    h3 { font-size: 29px; line-height: 1.1; letter-spacing: -0.02em; }
+    .eyebrow { color: var(--navy); font-size: 22px; font-weight: 900; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 22px; }
+    .lead { margin-top: 30px; max-width: 1290px; color: #354054; font-size: 32px; line-height: 1.28; text-wrap: pretty; }
+    .small { color: var(--muted); font-size: 22px; line-height: 1.36; }
+    .micro { color: var(--muted); font-size: 18px; line-height: 1.34; }
+    .hero-grid { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(500px, 0.8fr); gap: 48px; align-items: stretch; height: calc(100% - 20px); }
+    .hero-main { padding-top: 34px; }
+    .side-panel { background: var(--navy-dark); color: #fff; border: 1px solid rgba(255,255,255,0.12); padding: 42px; display: grid; gap: 28px; align-content: start; }
+    .side-panel p { color: #dce4f1; }
+    .verdict { font-size: 50px; line-height: 1; letter-spacing: -0.04em; font-weight: 900; }
+    .meta-table { border-top: 1px solid rgba(255,255,255,0.22); display: grid; }
+    .meta-row { display: grid; grid-template-columns: 170px 1fr; gap: 18px; border-bottom: 1px solid rgba(255,255,255,0.18); padding: 17px 0; font-size: 20px; }
+    .meta-row span { color: #cbd6ea; } .meta-row strong { color: #fff; }
+    .pill-row { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 38px; }
+    .pill { min-height: 48px; display: inline-flex; align-items: center; border: 1px solid var(--line-strong); background: var(--white); padding: 10px 16px; font-size: 18px; font-weight: 900; letter-spacing: 0.075em; text-transform: uppercase; }
+    .pill.blocked { border-color: #d9aaa5; background: var(--red-soft); color: var(--red); }
+    .pill.safe { border-color: #a9bdae; background: var(--sage-soft); color: #365f51; }
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 26px; margin-top: 34px; }
+    .three-col { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 34px; }
+    .card, .gate, .decision-box { border: 1px solid var(--line); background: var(--white); padding: 25px; position: relative; min-height: 172px; }
+    .card::before, .gate::before, .decision-box::before { content: ""; position: absolute; inset: 0 0 auto 0; height: 8px; background: var(--gold); }
+    .card.blocked::before, .gate.blocked::before, .decision-box.blocked::before { background: var(--red); }
+    .card.safe::before, .gate.safe::before, .decision-box.safe::before { background: var(--sage); }
+    .card.warn::before, .gate.warn::before, .decision-box.warn::before { background: var(--amber); }
+    .card p, .gate p, .decision-box p { margin-top: 13px; color: #354054; font-size: 21px; line-height: 1.31; }
+    .tag { display: inline-flex; margin-bottom: 17px; padding: 7px 10px; border: 1px solid var(--line); background: #fff; font-size: 16px; font-weight: 900; text-transform: uppercase; letter-spacing: 0.08em; }
+    .tag.blocked { color: var(--red); border-color: #d9aaa5; background: var(--red-soft); }
+    .tag.safe { color: #365f51; border-color: #a9bdae; background: var(--sage-soft); }
+    .tag.warn { color: var(--amber); border-color: #e3c783; background: var(--amber-soft); }
+    ul { margin: 15px 0 0; padding-left: 1.15em; }
+    li { margin-top: 8px; color: #354054; font-size: 21px; line-height: 1.26; }
+    .status-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; margin-top: 34px; }
+    .status { border: 1px solid var(--line); background: #fff; min-height: 218px; display: grid; grid-template-rows: auto 1fr; }
+    .status .label { padding: 16px 18px; color: #fff; background: var(--navy-dark); font-size: 18px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 900; }
+    .status.blocked .label { background: var(--red); }
+    .status.safe .label { background: var(--sage); }
+    .status.warn .label { background: var(--amber); }
+    .status .body { padding: 21px; }
+    .status h3 { font-size: 27px; }
+    .status p { margin-top: 12px; color: #354054; font-size: 20px; line-height: 1.28; }
+    .box-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; margin-top: 30px; }
+    .decision-box { min-height: 246px; padding: 23px; }
+    .decision-box h3 { font-size: 27px; }
+    .choice { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 17px; line-height: 1.35; margin-top: 15px; color: #243047; background: #fbf7ef; border: 1px solid var(--line); padding: 14px; white-space: pre-wrap; }
+    .next-list { display: grid; gap: 15px; margin-top: 32px; counter-reset: next; }
+    .next-item { counter-increment: next; display: grid; grid-template-columns: 76px 1fr 245px; gap: 20px; align-items: stretch; border: 1px solid var(--line); background: #fff; min-height: 92px; }
+    .next-item::before { content: counter(next); display: grid; place-items: center; background: var(--navy-dark); color: #fff; font-size: 38px; font-weight: 900; }
+    .next-copy { padding: 17px 0; }
+    .next-copy h3 { font-size: 26px; }
+    .next-copy p { margin-top: 6px; color: #354054; font-size: 20px; line-height: 1.28; }
+    .next-tag { display: grid; place-items: center; padding: 14px; border-left: 1px solid var(--line); color: var(--amber); background: var(--amber-soft); font-size: 18px; line-height: 1.12; font-weight: 900; text-align: center; text-transform: uppercase; letter-spacing: 0.04em; }
+    .next-tag.safe { color: #365f51; background: var(--sage-soft); }
+    .next-tag.blocked { color: var(--red); background: var(--red-soft); }
+    .callout { border: 1px solid #d9aaa5; background: var(--red-soft); color: var(--red); padding: 21px; font-size: 23px; line-height: 1.28; font-weight: 850; margin-top: 24px; }
+    .footer-note { position: absolute; left: 96px; right: 96px; bottom: 40px; border-top: 1px solid var(--line); padding-top: 16px; color: var(--muted); font-size: 18px; line-height: 1.34; }
+    .source-path { display: block; margin-top: 18px; padding: 14px 16px; border: 1px solid var(--line); background: #fbf7ef; color: #354054; font-size: 18px; line-height: 1.34; overflow-wrap: anywhere; }
+    .controls { position: fixed; left: 50%; bottom: 22px; transform: translateX(-50%); display: flex; align-items: center; gap: 10px; z-index: 10; background: rgba(255,253,248,0.94); border: 1px solid var(--line-strong); padding: 10px 12px; box-shadow: 0 12px 36px rgba(18,24,39,0.12); }
+    .controls button { min-width: 46px; min-height: 42px; border: 1px solid var(--line-strong); background: var(--white); color: var(--ink); cursor: pointer; font-weight: 900; }
+    .controls button:disabled { cursor: not-allowed; opacity: 0.45; }
+    .slide-count { min-width: 106px; text-align: center; color: var(--muted); font-size: 18px; font-weight: 900; letter-spacing: 0.08em; }
+    .skip { position: fixed; left: 18px; top: 18px; z-index: 20; background: #fff; color: var(--navy-dark); border: 1px solid var(--line-strong); padding: 10px 12px; transform: translateY(-140%); }
+    .skip:focus { transform: translateY(0); }
+    @media (prefers-reduced-motion: reduce) { .slide { transition: none; } }
+    @media print {
+      body { overflow: visible; background: #fff; }
+      .viewport { position: static; display: block; padding: 0; }
+      .deck { transform: none !important; width: auto; height: auto; border: 0; box-shadow: none; overflow: visible; }
+      .slide { display: block !important; position: relative; width: 100%; min-height: 100vh; opacity: 1; transform: none; page-break-after: always; }
+      .controls, .skip { display: none; }
+      h1 { font-size: 54pt; } h2 { font-size: 38pt; } .lead { font-size: 20pt; } li, .card p, .gate p, .decision-box p { font-size: 14pt; }
+    }
+  </style>
+</head>
+<body>
+  <a href="#slide-1" class="skip">Skip to deck</a>
+  <main class="viewport" aria-label="Pre-wake Whiteford decision deck">
+    <section class="deck" id="deck" aria-live="polite">
+      <article class="slide active safe" id="slide-1" data-title="Cover">
+        <div class="texture"></div>
+        <div class="hero-grid">
+          <div class="hero-main">
+            <div class="eyebrow">Private / local pre-wake decision deck</div>
+            <h1>Whiteford posture: hold live systems; choose zero or one narrow lane.</h1>
+            <p class="lead">A 2026-05-13 review aid for Jeff: see the blockers, preserve the no-external-action boundary, and decide whether any single internal/manual lane should move.</p>
+            <div class="pill-row">
+              <span class="pill blocked">No live action authorized</span>
+              <span class="pill safe">Decision prep only</span>
+              <span class="pill blocked">No CRM / sends / social / source tests</span>
+            </div>
+          </div>
+          <aside class="side-panel">
+            <p class="verdict">The safe move is still not a launch.</p>
+            <div class="meta-table">
+              <div class="meta-row"><span>Task</span><strong>t_38aa6253</strong></div>
+              <div class="meta-row"><span>Parent brief</span><strong>t_0813b2e5 / pre-wake action brief</strong></div>
+              <div class="meta-row"><span>Location</span><strong>Whiteford Schell IP</strong></div>
+              <div class="meta-row"><span>Best action</span><strong>HOLD or one exact approval box</strong></div>
+            </div>
+          </aside>
+        </div>
+      </article>
+
+      <article class="slide boundary" id="slide-2" data-title="No-action wall">
+        <div class="eyebrow">Hard boundary</div>
+        <h2>This is a decision-prep artifact, not an execution UI.</h2>
+        <p class="lead">The deck has no forms, approval capture, API calls, secrets, mutation controls, external sends, prospecting actions, workflow starts, or publishing paths.</p>
+        <div class="three-col">
+          <div class="card blocked"><span class="tag blocked">Do not contact</span><h3>No external touch</h3><p>No email, SMS, DM, LinkedIn/social/YouTube post, comment, ad, public publish, workflow enrollment, or client/prospect-facing action.</p></div>
+          <div class="card blocked"><span class="tag blocked">Do not mutate</span><h3>Systems stay unchanged</h3><p>No HighLevel/CRM/Supabase/SQLite/Clio writes, workflow activation/test/manual start, tags, stage moves, DDL, sync, or backfill.</p></div>
+          <div class="card safe"><span class="tag safe">Allowed</span><h3>Manual decision hygiene</h3><p>Jeff may read the source-path references, choose HOLD, or approve one tightly scoped human/internal lane with evidence and stop rules.</p></div>
+        </div>
+        <p class="footer-note">QMD and the business-development corpus are internal memory and quality guardrails only. They are not source-current public proof, consent, legal approval, or live-system state.</p>
+      </article>
+
+      <article class="slide" id="slide-3" data-title="Current blockers">
+        <div class="eyebrow">Current blockers</div>
+        <h2>All meaningful risk is still at the gate layer.</h2>
+        <div class="status-grid">
+          <div class="status blocked"><div class="label">Supabase</div><div class="body"><h3>Blocked</h3><p>Expanded-schema DDL needs authorized human/admin access for project <code>yidxnmxvtohaldkbypcv</code>. Agents should not retry DDL or force dependencies.</p></div></div>
+          <div class="status blocked"><div class="label">HighLevel</div><div class="body"><h3>Blocked</h3><p>Agent Targeting remains token/location/API blocked for <code>tm68WWMrcAa3TqQbEAMa</code>. Safe path is token refresh, read-only probe, dry-run only.</p></div></div>
+          <div class="status blocked"><div class="label">Sources</div><div class="body"><h3>Held</h3><p>Source access failed before candidate discovery. QMD and memory cannot substitute for current public-source evidence.</p></div></div>
+          <div class="status warn"><div class="label">Backfills</div><div class="body"><h3>Gated</h3><p>Mirror/backfill tasks remain dependency-gated behind verified expanded-schema completion. Do not unlink or force-start them.</p></div></div>
+        </div>
+        <div class="callout">Recommended pre-wake posture: HOLD all public/live/client-facing work; allow only private/internal review and one optional local/no-token QA lane.</div>
+      </article>
+
+      <article class="slide safe" id="slide-4" data-title="Safe lanes">
+        <div class="eyebrow">Safe lanes</div>
+        <h2>Safe progress means narrower, not louder.</h2>
+        <div class="three-col">
+          <div class="card safe"><span class="tag safe">Default safest</span><h3>Continue HOLD</h3><p>Keep all live systems, public surfaces, sources, workflows, sends, social, ads, and client/prospect-facing work stopped.</p></div>
+          <div class="card safe"><span class="tag safe">Optional</span><h3>Tech GC local/no-token QA</h3><p>Separate QA task only; use synthetic TEST companies, <code>.invalid</code> emails, non-confidential inputs, preview/local routes, and no production credentials.</p></div>
+          <div class="card safe"><span class="tag safe">Internal only</span><h3>Attorney-review copy</h3><p>Draft narrow diagnostic value internally. Legal-services follow-up stays opt-in-only, non-confidential, non-hypey, and attorney-review-gated.</p></div>
+        </div>
+        <div class="two-col">
+          <div class="gate safe"><span class="tag safe">Visibility</span><h3>Dashboard / QMD review</h3><p>Use <code>/approval-command-center#exact-unblock-visibility</code> and QMD only to remember blockers and find private artifacts, not as approval records or source proof.</p></div>
+          <div class="gate warn"><span class="tag warn">Manual only</span><h3>Human unblock packets</h3><p>Supabase, HighLevel, and source access each require a named operator, evidence path, stop rules, and separate current approval before any execution step.</p></div>
+        </div>
+      </article>
+
+      <article class="slide hold" id="slide-5" data-title="Forbidden actions">
+        <div class="eyebrow">Hard forbidden actions</div>
+        <h2>If it touches a person, a public surface, or a live system, it remains HOLD.</h2>
+        <div class="two-col">
+          <div class="gate blocked"><span class="tag blocked">External</span><h3>No sends or publishing</h3><ul><li>No email, SMS, DM, LinkedIn, social, YouTube, ads, or public page launch.</li><li>No client/prospect-facing collateral, consultation prompt, or outreach sequence.</li><li>No workflow/campaign/newsletter activation, enrollment, or test send.</li></ul></div>
+          <div class="gate blocked"><span class="tag blocked">Systems</span><h3>No mutation or live sync</h3><ul><li>No Supabase DDL/sync/backfill or SQLite edits.</li><li>No HighLevel contact, opportunity, tag, note, task, owner, or stage changes.</li><li>No Clio writes, token guessing, credential exposure, or API bypass.</li></ul></div>
+        </div>
+        <div class="callout">Separate exact approval must name operator, scope, timing, evidence path, stop rules, suppression/conflict status where relevant, and the final copy/channel if anything external is ever proposed.</div>
+      </article>
+
+      <article class="slide" id="slide-6" data-title="Approval boxes A-C">
+        <div class="eyebrow">Exact approval boxes / A-C</div>
+        <h2>These are manual decision boxes, not executable controls.</h2>
+        <div class="box-grid">
+          <div class="decision-box blocked"><span class="tag blocked">Box A</span><h3>Supabase DDL human/admin gate</h3><p>Run only the exact prepared SQL in the correct project, capture non-secret evidence, then let dependencies promote normally.</p><div class="choice">[ ] HOLD Supabase DDL/sync/backfill.
+[ ] APPROVE authorized human/admin DDL review/install only.
+Operator: ____________________________
+Evidence path: _______________________</div></div>
+          <div class="decision-box blocked"><span class="tag blocked">Box B</span><h3>HighLevel token/location gate</h3><p>Refresh token privately, run read-only <code>/workflows</code> probe first, then documented dry-run only if probe passes.</p><div class="choice">[ ] HOLD HighLevel Agent Targeting work.
+[ ] APPROVE token refresh + read-only probe + dry-run only.
+Operator: ____________________________
+Dry-run evidence path: _______________</div></div>
+          <div class="decision-box blocked"><span class="tag blocked">Box C</span><h3>Source-access / prospecting hold</h3><p>Choose HOLD, Firecrawl restore, replacement backend, or manual official-source seed queue. Neutral smoke tests only before target work.</p><div class="choice">[ ] Continue HOLD.
+[ ] Restore Firecrawl for neutral smoke testing only.
+[ ] Approve replacement backend for neutral smoke testing only: ______
+[ ] Prepare manual official-source seed queue only.
+Operator/evidence path: ______________</div></div>
+          <div class="decision-box safe"><span class="tag safe">Default</span><h3>If unsure, choose HOLD</h3><p>None of Boxes A-C authorize public, client/prospect-facing, CRM, workflow, email/social, Clio, or source-targeting action. Each is a narrow gate decision.</p><div class="choice">No live action authorized: confirmed [ ]
+Separate approval required for any next task: confirmed [ ]</div></div>
+        </div>
+      </article>
+
+      <article class="slide" id="slide-7" data-title="Approval boxes D-F">
+        <div class="eyebrow">Exact approval boxes / D-F</div>
+        <h2>Private review can move; public/legal-marketing action cannot.</h2>
+        <div class="box-grid">
+          <div class="decision-box safe"><span class="tag safe">Box D</span><h3>Tech GC local/no-token QA</h3><p>Only a separate synthetic local QA task for the Tech Company Legal Health Checklist or route; no live HighLevel or real lead use.</p><div class="choice">[ ] HOLD Tech GC QA.
+[ ] APPROVE separate local/no-token synthetic QA task only.
+Preferred evidence path: _____________</div></div>
+          <div class="decision-box warn"><span class="tag warn">Box E</span><h3>Lead-magnet / authority copy lane</h3><p>Choose one narrow internal copy lane. Drafts remain attorney-review-only and cannot route to public/email/social/workflow surfaces.</p><div class="choice">[ ] HOLD copy lane.
+[ ] Approve one internal attorney-review-only copy lane: ____________
+Reviewer/evidence path: ______________</div></div>
+          <div class="decision-box safe"><span class="tag safe">Box F</span><h3>Dashboard / QMD visibility</h3><p>Use dashboard and QMD only as private memory/search support. Stale visibility gets a separate internal refresh task.</p><div class="choice">[ ] Use dashboard/QMD only for internal review.
+[ ] Request separate internal refresh task for stale visibility: _____
+No live action authorized: confirmed [ ]</div></div>
+          <div class="decision-box blocked"><span class="tag blocked">Review gate</span><h3>External action is not bundled</h3><p>Any future recipient, final copy, channel, timing, suppression/conflict status, evidence, and Jeff approval must be present before delivery preparation proceeds.</p><div class="choice">No posting / sending / enrolling / publishing: confirmed [ ]
+No CRM / HighLevel / Supabase / Clio mutation: confirmed [ ]</div></div>
+        </div>
+      </article>
+
+      <article class="slide safe" id="slide-8" data-title="Read order">
+        <div class="eyebrow">Suggested read order</div>
+        <h2>Open the source paths, then decide HOLD or exactly one narrow lane.</h2>
+        <div class="next-list">
+          <div class="next-item"><div class="next-copy"><h3>Start with the parent brief</h3><p>Use it as the canonical 2026-05-13 pre-wake decision record.</p></div><div class="next-tag safe">Source path</div></div>
+          <div class="next-item"><div class="next-copy"><h3>If Supabase is the lane, use the operator packet</h3><p>Only an authorized human/admin runs exact prepared SQL and captures non-secret evidence.</p></div><div class="next-tag blocked">Human gate</div></div>
+          <div class="next-item"><div class="next-copy"><h3>If HighLevel is the lane, use token refresh + read-only + dry-run</h3><p>Token values remain secret; no mutation and no live targeting run.</p></div><div class="next-tag blocked">API gate</div></div>
+          <div class="next-item"><div class="next-copy"><h3>If sources are the lane, choose backend first</h3><p>Only neutral smoke testing comes before any named-company prospect work.</p></div><div class="next-tag blocked">Source gate</div></div>
+          <div class="next-item"><div class="next-copy"><h3>If no lane is ready, keep HOLD</h3><p>Private/local review, internal planning, and attorney/legal/ethics/privacy/source-current review remain safe.</p></div><div class="next-tag safe">Safest</div></div>
+        </div>
+        <span class="source-path">Parent brief: /Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/digests/2026-05-13_prewake_whiteford_action_brief.md</span>
+      </article>
+    </section>
+  </main>
+  <nav class="controls" aria-label="Deck navigation">
+    <button type="button" id="prev" aria-label="Previous slide">‹</button>
+    <span class="slide-count" id="count">1 / 8</span>
+    <button type="button" id="next" aria-label="Next slide">›</button>
+  </nav>
+  <script>
+    (function () {
+      const deck = document.getElementById('deck');
+      const slides = Array.from(document.querySelectorAll('.slide'));
+      const prev = document.getElementById('prev');
+      const next = document.getElementById('next');
+      const count = document.getElementById('count');
+      const storageKey = 'whiteford-prewake-2026-05-13-slide';
+      let current = Number.parseInt(localStorage.getItem(storageKey) || '0', 10);
+      if (!Number.isFinite(current) || current < 0 || current >= slides.length) current = 0;
+
+      function scaleDeck() {
+        const margin = 48;
+        const sx = (window.innerWidth - margin) / 1920;
+        const sy = (window.innerHeight - margin) / 1080;
+        deck.style.transform = `scale(${Math.max(0.1, Math.min(sx, sy))})`;
+      }
+      function render() {
+        slides.forEach((slide, index) => {
+          slide.classList.toggle('active', index === current);
+          slide.setAttribute('aria-hidden', index === current ? 'false' : 'true');
+        });
+        prev.disabled = current === 0;
+        next.disabled = current === slides.length - 1;
+        count.textContent = `${current + 1} / ${slides.length}`;
+        localStorage.setItem(storageKey, String(current));
+        history.replaceState(null, '', `#slide-${current + 1}`);
+      }
+      function go(delta) {
+        current = Math.max(0, Math.min(slides.length - 1, current + delta));
+        render();
+      }
+      prev.addEventListener('click', () => go(-1));
+      next.addEventListener('click', () => go(1));
+      window.addEventListener('keydown', (event) => {
+        if (event.key === 'ArrowRight' || event.key === 'PageDown' || event.key === ' ') { event.preventDefault(); go(1); }
+        if (event.key === 'ArrowLeft' || event.key === 'PageUp') { event.preventDefault(); go(-1); }
+        if (event.key === 'Home') { event.preventDefault(); current = 0; render(); }
+        if (event.key === 'End') { event.preventDefault(); current = slides.length - 1; render(); }
+      });
+      window.addEventListener('resize', scaleDeck);
+      const hashMatch = window.location.hash.match(/^#slide-(\d+)$/);
+      if (hashMatch) {
+        const hashSlide = Number.parseInt(hashMatch[1], 10) - 1;
+        if (hashSlide >= 0 && hashSlide < slides.length) current = hashSlide;
+      }
+      scaleDeck();
+      render();
+    })();
+  </script>
+</body>
+</html>

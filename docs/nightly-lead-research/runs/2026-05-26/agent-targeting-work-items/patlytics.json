@@ -1,0 +1,170 @@
+{
+  "prospect_id": "patlytics-20260526",
+  "company": {
+    "prospect_id": "prospect_patlytics_20260526",
+    "name": "Patlytics",
+    "domain": "patlytics.ai",
+    "website_url": "https://www.patlytics.ai/",
+    "location": "San Francisco, CA",
+    "state_region": "CA",
+    "industry": "AI patent automation platform",
+    "segment": "ai-patent",
+    "primary_offer_lane": "ai-patent",
+    "source_type": "nightly_public_source_research",
+    "source_url": "https://www.patlytics.ai/",
+    "source_note": "Patlytics is an AI-powered end-to-end patent platform — drafting, litigation, portfolio management. Saves attorneys up to 15 hours per patent application, $30,000 per claim chart. Clients include Rivian (converts raw data into attorney-editable drafts collaboratively), Xerox, Canon. 40%+ of AmLaw 100 firms use the platform. Series B launched autonomous AI agent roadmap for drafting, research, and portfolio triage.\n~$65M total raised ($4.5M Seed + $14M Series A + $40M Series B) in <3 years; 40%+ of AmLaw 100 firms as clients\nFounded 2024 (re-launched from earlier seed); 2010 founding origin for founders Paul Lee & Arthur Jen; corporate clients include Rivian, Xerox, Canon",
+    "pipeline_stage": "research_staged",
+    "scores": {
+      "fit_score": 86,
+      "urgency_score": 60,
+      "value_potential_score": 70,
+      "combined_priority_score": 74,
+      "contact_confidence": 65
+    },
+    "lead_magnet": "AI Patent Strategy Scorecard",
+    "recommended_offer": "AI Patent Strategy Scorecard / attorney-review Agent Targeting packet (/ai-patent-strategy-scorecard)",
+    "risk_level": "attorney_review_required",
+    "suppression_status": "consent_gap_no_auto_send",
+    "conflicts_status": "required_before_send",
+    "owner": "qwen-local",
+    "notes": "Research-only nightly candidate. No outreach authorization; attorney review, conflicts, suppression, source-current checks, and Jeff exact approval required before external use.\nPatlytics is an AI-powered end-to-end patent platform — drafting, litigation, portfolio management. Saves attorneys up to 15 hours per patent application, $30,000 per claim chart. Clients include Rivian (converts raw data into attorney-editable drafts collaboratively), Xerox, Canon. 40%+ of AmLaw 100 firms use the platform. Series B launched autonomous AI agent roadmap for drafting, research, and portfolio triage.\nSize signal: ~$65M total raised ($4.5M Seed + $14M Series A + $40M Series B) in <3 years; 40%+ of AmLaw 100 firms as clients\nMaturity signal: Founded 2024 (re-launched from earlier seed); 2010 founding origin for founders Paul Lee & Arthur Jen; corporate clients include Rivian, Xerox, Canon\nValidation gates: {\"gate_1_live_source\": \"PASS — web_search and web_extract both operational\", \"gate_2_domain_canonical\": \"PASS — patlytics.ai verified as official domain\", \"gate_3_current_urls\": \"PASS — patlytics.ai/about and techfundingnews.com returned content\", \"gate_4_contact_validation\": \"MODERATE — Paul Lee (CEO) confirmed via patlytics.ai/about; LinkedIn URL found via search but not verified for content (LinkedIn access limitation). Arthur Jen (CTO) confirmed via company website.\", \"gate_5_linkedin_hygiene\": \"CAUTION — Paul Lee LinkedIn URL https://www.linkedin.com/in/paul-lee-in found via search but web_extract failed (LinkedIn access limitation). Need manual verification.\", \"gate_6_geographic_support\": \"HQ is San Francisco, CA. No Mountain West claim. Industry-wide relevance.\", \"gate_7_outreach_readiness\": \"draft_ready for attorney review only. ops:no-auto-send = true.\"}\nNext action: {'recommended': 'attorney_review', 'notes': \"Most delicate prospect — adjacent to Whiteford practice. Unique 'meta' angle could be compelling (they get it because they live it). Patent Patent Strategy is perfectly aligned. Attorney should first resolve competitor adjacency before deciding on outreach approach.\"}"
+  },
+  "contacts": [
+    {
+      "name": "Paul Lee",
+      "title": "Co-founder & CEO",
+      "role_category": "ceo",
+      "email": null,
+      "email_confidence": 0,
+      "linkedin_url": "https://www.linkedin.com/in/paul-lee-in",
+      "linkedin_url_verified": false,
+      "phone": null,
+      "source_url": "https://www.patlytics.ai/about",
+      "source_type": "company_website",
+      "permission_basis": "public-source research; attorney review required before outreach",
+      "confidence": 65,
+      "verified_from": "patlytics.ai/about confirms Paul Lee as co-founder/CEO; formerly Partner at Tribe Capital. Studied engineering with co-founder Arthur Jen at Univ. of Waterloo (2010).",
+      "suppression_status": "not_checked",
+      "notes": "patlytics.ai/about confirms Paul Lee as co-founder/CEO; formerly Partner at Tribe Capital. Studied engineering with co-founder Arthur Jen at Univ. of Waterloo (2010)."
+    },
+    {
+      "name": "Arthur Jen",
+      "title": "Co-founder & CTO",
+      "role_category": "cto",
+      "email": null,
+      "email_confidence": 0,
+      "linkedin_url": null,
+      "phone": null,
+      "source_url": "https://www.patlytics.ai/about",
+      "source_type": "company_website",
+      "permission_basis": "public-source research; attorney review required before outreach",
+      "confidence": 65,
+      "verified_from": "patlytics.ai/about confirms Arthur Jen as co-founder/CTO; formerly co-founder and CTO at Magic",
+      "suppression_status": "not_checked",
+      "notes": "patlytics.ai/about confirms Arthur Jen as co-founder/CTO; formerly co-founder and CTO at Magic"
+    }
+  ],
+  "evidence": [
+    {
+      "evidence_id": "evidence_d0d86eba2a0a3931dfdb291d",
+      "source_url": "https://www.patlytics.ai/about",
+      "accessed_at": "2026-05-26",
+      "source_type": "company_website",
+      "fact_classification": "public",
+      "evidence_snippet": "Founded 2024 by Paul Lee & Arthur Jen; Waterloo connection (2010); former Tribe Capital / Magic backgrounds",
+      "supported_fact": "Founded 2024 by Paul Lee & Arthur Jen; Waterloo connection (2010); former Tribe Capital / Magic backgrounds",
+      "confidence": "high",
+      "corroboration": "public source cited in nightly research packet",
+      "safe_for_outreach": "conditional",
+      "safe_fact_for_copy": "Founded 2024 by Paul Lee & Arthur Jen; Waterloo connection (2010); former Tribe Capital / Magic backgrounds"
+    },
+    {
+      "evidence_id": "evidence_4c1499a855bfa6107cabd58d",
+      "source_url": "https://techfundingnews.com/patlytics-40m-series-b-ai-patent-software/",
+      "accessed_at": "2026-05-26",
+      "source_type": "news",
+      "fact_classification": "public",
+      "evidence_snippet": "$40M Series B led by SignalFire; clients include Rivian, Xerox, Canon; 40%+ of AmLaw 100 firms; AI agents for drafting, research, portfolio triage",
+      "supported_fact": "$40M Series B led by SignalFire; clients include Rivian, Xerox, Canon; 40%+ of AmLaw 100 firms; AI agents for drafting, research, portfolio triage",
+      "confidence": "high",
+      "corroboration": "public source cited in nightly research packet",
+      "safe_for_outreach": "conditional",
+      "safe_fact_for_copy": "$40M Series B led by SignalFire; clients include Rivian, Xerox, Canon; 40%+ of AmLaw 100 firms; AI agents for drafting, research, portfolio triage"
+    },
+    {
+      "evidence_id": "evidence_a2794cea6e6d3e0dc30ebf35",
+      "source_url": "https://ipwatchdog.com/press/patlytics-secures-4-5-million-led-gradient-googles-ai-fund-transform-patent-intelligence-ai/",
+      "accessed_at": "2026-05-26",
+      "source_type": "news",
+      "fact_classification": "public",
+      "evidence_snippet": "Early seed round: $4.5M led by Gradient (Google's AI fund); Paul Lee (ex-Tribe Capital) and Arthur Jen (ex-Magic CTO) confirmed as founders",
+      "supported_fact": "Early seed round: $4.5M led by Gradient (Google's AI fund); Paul Lee (ex-Tribe Capital) and Arthur Jen (ex-Magic CTO) confirmed as founders",
+      "confidence": "high",
+      "corroboration": "public source cited in nightly research packet",
+      "safe_for_outreach": "conditional",
+      "safe_fact_for_copy": "Early seed round: $4.5M led by Gradient (Google's AI fund); Paul Lee (ex-Tribe Capital) and Arthur Jen (ex-Magic CTO) confirmed as founders"
+    }
+  ],
+  "outreach_drafts": [
+    {
+      "draft_type": "email",
+      "channel": "manual_email_review",
+      "title": "AI Patent Strategy Scorecard attorney-review angle: Patlytics",
+      "subject": "Attorney-review-only AI Patent Strategy Scorecard angle for Patlytics",
+      "body": "ATTORNEY REVIEW ONLY — DO NOT SEND/POST.\nTarget: Paul Lee\nPublic fact hook / hypothesis: Patlytics is the most ironic prospect of the night — they build AI for patents, so they're simultaneously a potential client (needing their own IP strategy) and in the same industry as Whiteford's target practice. Their $40M Series B and expanding autonomous AI agent roadmap suggests they're actively filing their own patents. Rivian is a Patlytics client but also a Patlytics co-founder (RJ Scaringe) connection — interesting overlap. Attorney should evaluate whether Patlytics is a 'beachhead' prospect (they use AI patent tools, so Whiteford's education resonates directly with their product mission) or a competitor adjacency concern.\nSuggested lead magnet: AI Patent Strategy Scorecard — /ai-patent-strategy-scorecard\nLinkedIn awareness draft exists for internal review only; do not post, tag, or trigger workflows without exact approval.\n\nInternal LinkedIn awareness draft:\nThere's a funny irony at Patlytics.\n\nThey build AI that automates patent drafting. They save attorneys 15 hours per application. They're used by 40% of AmLaw 100 firms.\n\nBut here's the thing nobody asks: Who's protecting the IP that makes Patlytics work?\n\nWhen your core product IS AI-generated patent applications — your own patent portfolio strategy is your product's foundation. And the more advanced you get, the harder that question becomes:\n\nIf your platform's AI generates novel claims, who is the inventor? Did the human engineer define the invention? The data scientist train the model? The customer who provided the raw data?\n\nThe company that sells patent automation can't skip its own patent strategy.\n\nFor #patent-professionals: the tools change. The fundamentals of who contributed what don't.\n\nEducational starting point: AI Patent Strategy Scorecard\nhttps://whiteford-ai-law-pages.vercel.app/ai-patent-strategy-scorecard\n\nGuardrail: no outreach, email/SMS, workflow enrollment, trigger tags, LinkedIn/social action, Clio writes, public/client-facing changes, or live CRM/Supabase sync without Jeff exact approval.",
+      "source_facts": [
+        "Founded 2024 by Paul Lee & Arthur Jen; Waterloo connection (2010); former Tribe Capital / Magic backgrounds",
+        "$40M Series B led by SignalFire; clients include Rivian, Xerox, Canon; 40%+ of AmLaw 100 firms; AI agents for drafting, research, portfolio triage",
+        "Early seed round: $4.5M led by Gradient (Google's AI fund); Paul Lee (ex-Tribe Capital) and Arthur Jen (ex-Magic CTO) confirmed as founders"
+      ],
+      "source_urls": [
+        "https://www.patlytics.ai/about",
+        "https://techfundingnews.com/patlytics-40m-series-b-ai-patent-software/",
+        "https://ipwatchdog.com/press/patlytics-secures-4-5-million-led-gradient-googles-ai-fund-transform-patent-intelligence-ai/"
+      ],
+      "risk_level": "attorney_review_required",
+      "internal_review_notes": "Not approved for sending or posting. Research-only local staging; requires attorney review, conflicts, suppression, source-current checks, and Jeff exact approval before external use."
+    }
+  ],
+  "validation_gates": {
+    "gate_1_live_source": "PASS — web_search and web_extract both operational",
+    "gate_2_domain_canonical": "PASS — patlytics.ai verified as official domain",
+    "gate_3_current_urls": "PASS — patlytics.ai/about and techfundingnews.com returned content",
+    "gate_4_contact_validation": "MODERATE — Paul Lee (CEO) confirmed via patlytics.ai/about; LinkedIn URL found via search but not verified for content (LinkedIn access limitation). Arthur Jen (CTO) confirmed via company website.",
+    "gate_5_linkedin_hygiene": "CAUTION — Paul Lee LinkedIn URL https://www.linkedin.com/in/paul-lee-in found via search but web_extract failed (LinkedIn access limitation). Need manual verification.",
+    "gate_6_geographic_support": "HQ is San Francisco, CA. No Mountain West claim. Industry-wide relevance.",
+    "gate_7_outreach_readiness": "draft_ready for attorney review only. ops:no-auto-send = true."
+  },
+  "consent_gating": {
+    "ops_no_auto_send": true,
+    "consent_basis": "no_email_opt_in",
+    "approval_status": "no-auto-send",
+    "workflow_trigger_tags": [],
+    "suppression_tags": [
+      "newsletter:not-consented"
+    ]
+  },
+  "source_candidate_path": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-26/prospect_candidates.json",
+  "normalized_store_path": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-26/prospect_candidates.normalized_for_store.json",
+  "source_packet_prospect_id": "patlytics-20260526",
+  "local_growth_os_prospect_id": "prospect_patlytics_20260526",
+  "task": "prepare_internal_attorney_review_agent_targeting_packet",
+  "guardrails": {
+    "external_action_allowed": false,
+    "approval_required": true,
+    "no_outreach_no_workflows_no_social_no_clio_no_live_sync": true,
+    "required_before_external_use": [
+      "Jeff exact approval",
+      "attorney review",
+      "conflicts check",
+      "suppression/opt-out check",
+      "source-current verification"
+    ]
+  },
+  "work_item_id": "work_nightly_agent_targeting_20260526_1158240c96050fec237f9e78",
+  "remediation_checklist": [
+    "Attorney review required before external use.",
+    "Conflicts, suppression/opt-out, prior-touch, and source-current checks required before any outreach.",
+    "Do not send, post, tag, trigger workflows, sync live CRM/Supabase, or write Clio without Jeff exact approval."
+  ]
+}

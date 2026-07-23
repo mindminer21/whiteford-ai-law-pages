@@ -1,0 +1,39 @@
+{
+  "body": {
+    "opportunity": {
+      "contact": {
+        "companyName": "Flatfile (also rebranded company name: Obvious)",
+        "followers": [],
+        "id": "T8ClRbxV70PDP5IKmgUg",
+        "name": "Flatfile (also rebranded company name: Obvious) Agent Targeting",
+        "tags": []
+      },
+      "contactId": "T8ClRbxV70PDP5IKmgUg",
+      "createdAt": "2026-05-07T09:42:59.564Z",
+      "followers": [],
+      "id": "zkLaplnieSaJbsk5bXId",
+      "internalSource": {
+        "apiVersion": "2021-07-28",
+        "channel": "OAUTH",
+        "id": "69f97a4042f2b054fe684553",
+        "source": "INTEGRATION",
+        "type": "CREATED"
+      },
+      "isAttribute": false,
+      "lastActionDate": "2026-05-07T09:42:59.564Z",
+      "lastStageChangeAt": "2026-05-07T09:42:59.564Z",
+      "lastStatusChangeAt": "2026-05-07T09:42:59.564Z",
+      "locationId": "tm68WWMrcAa3TqQbEAMa",
+      "monetaryValue": 0,
+      "name": "Flatfile (also rebranded company name: Obvious) \u2014 Agent Targeting",
+      "pipelineId": "Tbx4tA6wHv5lTwZPSHyZ",
+      "pipelineStageId": "fd569cf4-979b-43b8-bd0f-78e807e80ff1",
+      "source": "Growth OS nightly prospect research - Agent Targeting (prospect_bea9dbd287cb8fcf077720d0)",
+      "status": "open",
+      "updatedAt": "2026-05-07T09:42:59.564Z"
+    },
+    "traceId": "a63b807d-f985-4db1-807c-da3627b7fa93"
+  },
+  "ok": true,
+  "status": 201
+}

@@ -1,0 +1,72 @@
+{
+  "task": {
+    "id": "t_fb43fa2b",
+    "title": "Draft Sunday authority recording cold-open packet - 2026-05-10",
+    "body": "Use the source-independent authority backlog and business-development principles to draft restrained attorney-review-only cold opens for Jeff's next recording session.\n\nSource anchors:\n- /Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/growth-os/authority-content/2026-05-09-youtube-recording-brief-backlog.md\n- /Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/growth-os/authority-content/2026-05-09-authority-supporting-copy-no-acr-redline.md\n- /Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/growth-os/authority-content/2026-05-09-authority-route-cta-utm-decision-matrix.md\n- Business-development principle from the local corpus: narrow diagnostic promise, problem-awareness, earned trust before consultation ask, opt-in-only follow-up.\n\nDeliverable expected:\n- /Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/growth-os/authority-content/2026-05-10_sunday_recording_cold_open_packet.md\n\nCreate 2 cold-open options each for: AI Patent Strategy Scorecard, AI Compliance Gameplan, Colorado Tech GC, and Founder/M&A Readiness. Keep copy original, non-hypey, no legal advice, no attorney-client relationship, no guarantees, non-confidential, and clearly marked attorney-review-only. Map each to one of the approved routes.\n\n\nGuardrails for this task:\n- Internal/draft/local documentation or local prototype work only.\n- Do not send emails/SMS/DMs, enroll contacts, activate/test/start workflows, publish pages, post or tag/comment/message on LinkedIn/social, launch ads, write to Clio, or make public/client-facing changes.\n- Do not run Supabase DDL, gated backfill/sync, or mirror sync; keep t_fa6eb9c1/t_53d470c6 as human-only blockers.\n- Do not mutate live HighLevel/CRM/Supabase records. If any credential, approval, browser login, or live-system action is required, block with exact manual unblock steps instead of proceeding.\n- Update docs/KANBAN_DELIVERABLE_INDEX.md and leave the standard Deliverable/Summary/Next action Kanban comment when complete.",
+    "assignee": "writer",
+    "status": "running",
+    "priority": 79,
+    "tenant": "whiteford-mountain-west",
+    "workspace_kind": "dir",
+    "workspace_path": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages",
+    "created_by": "overnight-watchdog",
+    "created_at": 1778395149,
+    "started_at": 1778395169,
+    "completed_at": null,
+    "result": null,
+    "skills": []
+  },
+  "latest_summary": null,
+  "parents": [],
+  "children": [
+    "t_5f6eb002"
+  ],
+  "comments": [],
+  "events": [
+    {
+      "kind": "created",
+      "payload": {
+        "assignee": "writer",
+        "status": "ready",
+        "parents": [],
+        "tenant": "whiteford-mountain-west",
+        "skills": null
+      },
+      "created_at": 1778395149,
+      "run_id": null
+    },
+    {
+      "kind": "claimed",
+      "payload": {
+        "lock": "Jeffs-MacBook-Pro-2.local:40522",
+        "expires": 1778396069,
+        "run_id": 404
+      },
+      "created_at": 1778395169,
+      "run_id": 404
+    },
+    {
+      "kind": "spawned",
+      "payload": {
+        "pid": 40526
+      },
+      "created_at": 1778395169,
+      "run_id": 404
+    }
+  ],
+  "runs": [
+    {
+      "id": 404,
+      "profile": "writer",
+      "step_key": null,
+      "status": "running",
+      "outcome": null,
+      "summary": null,
+      "error": null,
+      "metadata": null,
+      "worker_pid": 40526,
+      "started_at": 1778395169,
+      "ended_at": null
+    }
+  ]
+}

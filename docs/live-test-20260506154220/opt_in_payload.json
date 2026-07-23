@@ -1,0 +1,22 @@
+{
+  "campaignKey": "ai-compliance",
+  "sourcePage": "/ai-compliance-gameplan",
+  "sourceChannel": "jeff-preview-test",
+  "contact": {
+    "name": "TEST Jeff AI Compliance",
+    "email": "jeff+whiteford-ai-compliance-test@schellip.com",
+    "company": "Whiteford Test Company",
+    "role": "Internal test",
+    "subscribe": true
+  },
+  "assessment": {
+    "riskScore": 42,
+    "readinessScore": 78,
+    "tags": ["internal-test"]
+  },
+  "aiComplianceGameplan": {
+    "maturityLevel": "Pilot readiness",
+    "topGaps": ["Vendor review", "Governance owner"],
+    "recommendedNextStep": "Internal review only"
+  }
+}

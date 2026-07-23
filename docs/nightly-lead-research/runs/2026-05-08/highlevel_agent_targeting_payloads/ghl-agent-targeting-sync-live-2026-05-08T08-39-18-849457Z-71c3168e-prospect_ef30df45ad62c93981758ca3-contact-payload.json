@@ -1,0 +1,28 @@
+{
+  "companyName": "Sereact",
+  "dnd": true,
+  "dndSettings": {
+    "Call": {
+      "message": "Internal agent targeting placeholder; no outreach until Jeff approval.",
+      "status": "active"
+    },
+    "Email": {
+      "message": "Internal agent targeting placeholder; no outreach until Jeff approval.",
+      "status": "active"
+    },
+    "SMS": {
+      "message": "Internal agent targeting placeholder; no outreach until Jeff approval.",
+      "status": "active"
+    },
+    "WhatsApp": {
+      "message": "Internal agent targeting placeholder; no outreach until Jeff approval.",
+      "status": "active"
+    }
+  },
+  "firstName": "Sereact",
+  "lastName": "Agent Targeting",
+  "locationId": "tm68WWMrcAa3TqQbEAMa",
+  "name": "Sereact Agent Targeting",
+  "source": "Growth OS nightly prospect research - Agent Targeting (prospect_ef30df45ad62c93981758ca3)",
+  "website": "https://sereact.de"
+}

@@ -1,0 +1,57 @@
+{
+  "task": {
+    "id": "t_53d470c6",
+    "title": "Backfill expanded Supabase mirror after schema install",
+    "body": "After expanded Supabase schema task t_fa6eb9c1 is completed, run the internal Growth OS mirror backfill once for all nightly runs now represented only by partial reports (2026-05-06 through 2026-05-09).\n\nDeliverables expected:\n- A dated backfill report under /Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/ or /Users/jeff/.openclaw/projects/mountain-west-growth-os/reports/ confirming the phase 6-11 expanded tables are present and that `node scripts/sync-sqlite-to-supabase.mjs` completed against them.\n- Update /Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/KANBAN_DELIVERABLE_INDEX.md with the report.\n- Leave a Kanban deliverable comment in the standard format.\n\nGuardrails:\n- Internal Supabase mirror/backfill only after schema exists; do not attempt DDL without DDL-capable credentials.\n- No email sends, workflow activation, contact enrollment, LinkedIn/social action, Clio writes, public page publish, ad launch, or client-facing changes.\n- If expanded tables are still missing or credentials are insufficient, block with exact manual unblock steps instead of retrying unsafe actions.\n\nContext: partial reports already exist for t_61df202d (2026-05-06), t_539e8920 (2026-05-07), t_0c197c43 (2026-05-08), and t_03f9aebc (2026-05-09). This single gated backfill replaces keeping all four partial mirror tasks blocked indefinitely.",
+    "assignee": "ops",
+    "status": "todo",
+    "priority": 89,
+    "tenant": "whiteford-mountain-west",
+    "workspace_kind": "dir",
+    "workspace_path": "/Users/jeff/.openclaw/projects/mountain-west-growth-os",
+    "created_by": "overnight-watchdog",
+    "created_at": 1778319110,
+    "started_at": null,
+    "completed_at": null,
+    "result": null,
+    "skills": []
+  },
+  "latest_summary": null,
+  "parents": [
+    "t_fa6eb9c1"
+  ],
+  "children": [],
+  "comments": [
+    {
+      "author": "overnight-watchdog",
+      "body": "2026-05-09 03:30 MDT watchdog control: this task is intentionally gated behind schema task t_fa6eb9c1 and replaces keeping the 2026-05-06/07/08/09 partial mirror tasks blocked indefinitely. Start only after the expanded schema is installed. Internal Supabase mirror/backfill only; if expanded tables are still missing or credentials are insufficient, block with exact manual steps. No email sends, workflow activation, contact enrollment, LinkedIn/social/ad/Clio/public/client-facing action.",
+      "created_at": 1778319224
+    }
+  ],
+  "events": [
+    {
+      "kind": "created",
+      "payload": {
+        "assignee": "ops",
+        "status": "todo",
+        "parents": [
+          "t_fa6eb9c1"
+        ],
+        "tenant": "whiteford-mountain-west",
+        "skills": null
+      },
+      "created_at": 1778319110,
+      "run_id": null
+    },
+    {
+      "kind": "commented",
+      "payload": {
+        "author": "overnight-watchdog",
+        "len": 491
+      },
+      "created_at": 1778319224,
+      "run_id": null
+    }
+  ],
+  "runs": []
+}

@@ -1,0 +1,54 @@
+{
+  "capturedAt": "2026-05-07T12:37:53.708Z",
+  "url": "https://client-app-automation-workflows.leadconnectorhq.com/location/tm68WWMrcAa3TqQbEAMa/workflow/dee4450a-1b7b-4597-9fa4-9c7b7423b848",
+  "title": "Workflow",
+  "bodyText": "Skip to main content\nWorkflows list\n\nWF | Intake | Whiteford | Tech GC Launchpad | Draft\n\nSaved\nStandard Builder\n\nBuilder\n\nSettings\n\nEnrollment History\n\nExecution Logs\n\nTest Workflow\n\nDraft\n\nPublish\n\nTech GC Launchpad Safety + Review Note\nConsent Gate — lead magnet email opt-in required before nurture\nOpted in / eligible for fut...\n\nIf \"Tags\" includes \"newsletter:ai\"\n\nNot opted in / suppressed /...\nWhen none of the conditions are met\nEND\nEND\nContact TagContact Tag Added - workflow:tech-gc-launchpad\nTag Added includes \"workflow:tech-gc-launchpad\"\nStats\nAdd New Trigger\nAdd\n124%\n\nLearn more\n\nIf / Else\n\nFork the Contact journey through this workflow based on conditions\n\nACTION NAME\n63\nSCENARIO RECIPE\nSelect from one of the pre-built condition templates\nBuild Your Own\nBRANCHES\n50\nIncludes\nnewsletter:ai\nThe condition will be true if all of the selected tags are added to the Contact\nAND\nAdd Segment\nAdd Branch\nReorder Branches\nNone Branch\nWhen no condition is met\n48\nDelete\nCancel\nSave action",
+  "selected": [
+    {
+      "className": "vue-flow__node vue-flow__node-branch selected selectable",
+      "text": "Opted in / eligible for fut...\n\nIf \"Tags\" includes \"newsletter:ai\""
+    }
+  ],
+  "nodes": [
+    {
+      "i": 0,
+      "className": "vue-flow__node vue-flow__node-action selectable",
+      "text": "Tech GC Launchpad Safety + Review Note"
+    },
+    {
+      "i": 1,
+      "className": "vue-flow__node vue-flow__node-action selectable",
+      "text": "Consent Gate — lead magnet email opt-in required before nurture"
+    },
+    {
+      "i": 2,
+      "className": "vue-flow__node vue-flow__node-branch selected selectable",
+      "text": "Opted in / eligible for fut...\n\nIf \"Tags\" includes \"newsletter:ai\""
+    },
+    {
+      "i": 3,
+      "className": "vue-flow__node vue-flow__node-none selectable",
+      "text": "Not opted in / suppressed /...\nWhen none of the conditions are met"
+    },
+    {
+      "i": 4,
+      "className": "vue-flow__node vue-flow__node-end selectable",
+      "text": "END"
+    },
+    {
+      "i": 5,
+      "className": "vue-flow__node vue-flow__node-end selectable",
+      "text": "END"
+    },
+    {
+      "i": 6,
+      "className": "vue-flow__node vue-flow__node-trigger selectable",
+      "text": "Contact TagContact Tag Added - workflow:tech-gc-launchpad\nTag Added includes \"workflow:tech-gc-launchpad\"\nStats"
+    },
+    {
+      "i": 7,
+      "className": "vue-flow__node vue-flow__node-newTrigger selectable",
+      "text": "Add New Trigger"
+    }
+  ]
+}

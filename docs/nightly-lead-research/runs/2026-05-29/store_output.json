@@ -1,0 +1,14 @@
+{
+  "status": "applied",
+  "counts": {
+    "prospects": 4,
+    "contacts": 4,
+    "opportunities": 4,
+    "source_evidence": 16,
+    "outreach_drafts": 4,
+    "approval_items": 4,
+    "crm_sync_records": 4,
+    "suppression_checks": 4
+  },
+  "db": "/Users/jeff/.openclaw/projects/mountain-west-growth-os/data/growth-os.sqlite"
+}

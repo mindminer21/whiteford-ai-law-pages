@@ -1,0 +1,667 @@
+{
+  "task": {
+    "id": "t_fa6eb9c1",
+    "title": "Apply expanded Supabase Growth OS mirror schema",
+    "body": "Supabase currently mirrors core tables but is missing expanded Growth OS tables such as source_evidence, suppression_checks, outreach_drafts, crm_sync_batches, ghl_sync_links, and content tables. Apply the SQL files under /Users/jeff/.openclaw/projects/mountain-west-growth-os/supabase/phase6-draft-factory-schema.sql, phase7-outreach-execution-schema.sql, phase8-crm-highlevel-integration-schema.sql, and phase9-11-growth-engine-schema.sql, then rerun sync-sqlite-to-supabase.mjs. Until then the nightly loop reports Supabase status partial.",
+    "assignee": "ops",
+    "status": "blocked",
+    "priority": 90,
+    "tenant": "whiteford-mountain-west",
+    "workspace_kind": "dir",
+    "workspace_path": "/Users/jeff/.openclaw/projects/mountain-west-growth-os",
+    "created_by": "codex",
+    "created_at": 1778050612,
+    "started_at": 1778128360,
+    "completed_at": null,
+    "result": null,
+    "skills": []
+  },
+  "latest_summary": "Need DDL-capable Supabase access for project yidxnmxvtohaldkbypcv: login to SQL Editor, provide DB connection string/password, or provide a Supabase management token; current service-role API key cannot run CREATE TABLE.",
+  "parents": [],
+  "children": [
+    "t_53d470c6"
+  ],
+  "comments": [
+    {
+      "author": "ops",
+      "body": "Verified project `yidxnmxvtohaldkbypcv` via service-role PostgREST: 6 core tables are present and all 33 phase 6–11 expanded mirror tables are still missing. I prepared `/Users/jeff/.openclaw/projects/mountain-west-growth-os/supabase/phase6-11-combined-growth-os-schema.sql` from the four requested SQL files and copied it to the Mac clipboard. Direct application is blocked because available credentials are API/service-role only; no logged-in Supabase browser session, `supabase`/`psql` CLI config, DB connection string/password, or Supabase management access token was available. Full blocker report: `/Users/jeff/.openclaw/projects/mountain-west-growth-os/reports/2026-05-06-supabase-expanded-schema-blocker.md`.",
+      "created_at": 1778128781
+    },
+    {
+      "author": "overnight-watchdog",
+      "body": "2026-05-07 00:30 MDT watchdog recheck: latest run is blocked (not actively running) and the prior repeated-crash diagnostic is historical. I rechecked current local DDL prerequisites: no supabase CLI, no psql, no DATABASE_URL/DB_URL/POSTGRES/PGPASSWORD/SUPABASE_ACCESS_TOKEN-style key in the checked project env/secrets. Blocker remains human/credential-only: run the prepared SQL in Supabase SQL Editor for project yidxnmxvtohaldkbypcv or provide DDL-capable DB/management access.",
+      "created_at": 1778135567
+    },
+    {
+      "author": "overnight-watchdog",
+      "body": "2026-05-07 01:32 MDT watchdog recheck: latest run remains blocked, not active; repeated-crash diagnostic is historical. Reverified safe local prerequisites: supabase CLI not installed, psql not installed, and checked project env files expose no DDL-capable DATABASE_URL/PGPASSWORD/SUPABASE_ACCESS_TOKEN-style access. Prepared SQL and blocker report still exist. Manual unblock: run /Users/jeff/.openclaw/projects/mountain-west-growth-os/supabase/phase6-11-combined-growth-os-schema.sql in Supabase project yidxnmxvtohaldkbypcv, or provide DDL-capable DB/management credentials.",
+      "created_at": 1778139367
+    },
+    {
+      "author": "default",
+      "body": "2026-05-07 02:31 MDT watchdog recheck: latest run remains blocked, not active; repeated-crash diagnostic is historical from pre-block attempts. Reverified prepared SQL + blocker report exist, but local DDL path is still unavailable: no supabase CLI, no psql, and checked project env exposes no DATABASE_URL/PGPASSWORD/SUPABASE_ACCESS_TOKEN-style DDL access. Manual unblock remains: run /Users/jeff/.openclaw/projects/mountain-west-growth-os/supabase/phase6-11-combined-growth-os-schema.sql in Supabase project yidxnmxvtohaldkbypcv, or provide DDL-capable DB/management credentials.",
+      "created_at": 1778142715
+    },
+    {
+      "author": "overnight-watchdog",
+      "body": "date: illegal time format\nusage: date [-jnRu] [-I[date|hours|minutes|seconds|ns]] [-f input_fmt]\n            [ -z output_zone ] [-r filename|seconds] [-v[+|-]val[y|m|w|d|H|M|S]]\n            [[[[mm]dd]HH]MM[[cc]yy][.SS] | new_date] [+output_fmt] watchdog recheck: latest substantive run is blocked, not active; repeated-crash diagnostic is historical noise. Reverified local prerequisites: no supabase CLI, no psql, and no DDL-capable DATABASE_URL/PGPASSWORD/SUPABASE_ACCESS_TOKEN-style access in checked project env files. Prepared SQL/report still exist. Manual unblock remains: run /Users/jeff/.openclaw/projects/mountain-west-growth-os/supabase/phase6-11-combined-growth-os-schema.sql in Supabase project yidxnmxvtohaldkbypcv, or provide DDL-capable DB/management credentials; then rerun cd /Users/jeff/.openclaw/projects/mountain-west-growth-os && node scripts/sync-sqlite-to-supabase.mjs.",
+      "created_at": 1778150062
+    },
+    {
+      "author": "overnight-watchdog",
+      "body": "Correction/clean watchdog timestamp: 2026-05-07 04:34 MDT. Latest substantive run is blocked, not active; repeated-crash diagnostic is historical. Local DDL path remains absent (no supabase CLI, no psql, no DDL-capable env keys found). Manual unblock: run /Users/jeff/.openclaw/projects/mountain-west-growth-os/supabase/phase6-11-combined-growth-os-schema.sql in Supabase project yidxnmxvtohaldkbypcv or provide DDL-capable DB/management credentials, then rerun the mirror.",
+      "created_at": 1778150093
+    },
+    {
+      "author": "overnight-watchdog",
+      "body": "2026-05-07 05:35 MDT watchdog recheck: latest run is blocked (not active); the repeated-crash diagnostic is historical from earlier pre-block attempts. Verified prepared SQL/report still exist and no safe local DDL path is available from checked CLI/env. Manual unblock: run /Users/jeff/.openclaw/projects/mountain-west-growth-os/supabase/phase6-11-combined-growth-os-schema.sql in Supabase project yidxnmxvtohaldkbypcv or provide DDL-capable DB/management credentials; then rerun cd /Users/jeff/.openclaw/projects/mountain-west-growth-os && node scripts/sync-sqlite-to-supabase.mjs.",
+      "created_at": 1778153705
+    },
+    {
+      "author": "overnight-watchdog",
+      "body": "2026-05-07 06:34 MDT watchdog recheck: latest substantive run remains blocked, not active; repeated-crash diagnostic is historical. Verified prepared SQL/report files still exist and no safe local DDL path is available (no supabase CLI, no psql, no DDL-capable env keys found in checked project env). Manual unblock remains: run /Users/jeff/.openclaw/projects/mountain-west-growth-os/supabase/phase6-11-combined-growth-os-schema.sql in Supabase project yidxnmxvtohaldkbypcv, or provide DDL-capable DB/management credentials; then rerun cd /Users/jeff/.openclaw/projects/mountain-west-growth-os && node scripts/sync-sqlite-to-supabase.mjs.",
+      "created_at": 1778157278
+    },
+    {
+      "author": "overnight-watchdog",
+      "body": "2026-05-07 22:30 MDT watchdog recheck: latest run is blocked (not running); earlier crash diagnostics are historical. Revalidated local prerequisites: no supabase CLI, no psql, and no DDL-capable DB/Supabase management env keys were found in the app/Growth OS env files. Prepared SQL exists at /Users/jeff/.openclaw/projects/mountain-west-growth-os/supabase/phase6-11-combined-growth-os-schema.sql. Manual unblock: run that SQL in Supabase project yidxnmxvtohaldkbypcv SQL Editor or provide a DDL-capable DB connection/management token, then rerun cd /Users/jeff/.openclaw/projects/mountain-west-growth-os && node scripts/sync-sqlite-to-supabase.mjs. No unsafe DDL retry attempted.",
+      "created_at": 1778214774
+    },
+    {
+      "author": "overnight-watchdog",
+      "body": "2026-05-07 23:33 MDT watchdog recheck: latest run is blocked, not active; repeated crash diagnostic remains historical. Revalidated safe local prerequisites: qmd was repaired, but Supabase DDL path is still absent (no supabase CLI, no psql, no DDL-capable env keys in checked app/Growth OS env files). Prepared SQL still exists at /Users/jeff/.openclaw/projects/mountain-west-growth-os/supabase/phase6-11-combined-growth-os-schema.sql. Manual unblock: run that SQL in Supabase project yidxnmxvtohaldkbypcv SQL Editor or provide DDL-capable DB/management credentials, then rerun cd /Users/jeff/.openclaw/projects/mountain-west-growth-os && node scripts/sync-sqlite-to-supabase.mjs. No unsafe DDL retry attempted.",
+      "created_at": 1778218461
+    },
+    {
+      "author": "overnight-watchdog",
+      "body": "2026-05-08 00:34 MDT watchdog recheck: latest run remains blocked, not active; repeated-crash diagnostic is historical. Verified prepared SQL and blocker report still exist. Safe local DDL path is still absent: no supabase CLI, no psql, and checked env files expose no DDL-capable DB/management keys. Manual unblock: run /Users/jeff/.openclaw/projects/mountain-west-growth-os/supabase/phase6-11-combined-growth-os-schema.sql in Supabase project yidxnmxvtohaldkbypcv SQL Editor or provide DDL-capable DB/management credentials, then rerun cd /Users/jeff/.openclaw/projects/mountain-west-growth-os && node scripts/sync-sqlite-to-supabase.mjs. No unsafe DDL retry attempted.",
+      "created_at": 1778222079
+    },
+    {
+      "author": "overnight-watchdog",
+      "body": "2026-05-08 01:34 MDT watchdog recheck: verified latest substantive run is blocked, not active; repeated-crash diagnostic is historical. Prepared schema SQL and blocker report still exist. Local DDL path remains absent: no supabase CLI, no psql, and checked env files expose no DDL-capable DATABASE_URL/PGPASSWORD/SUPABASE_ACCESS_TOKEN-style access. Manual unblock: run /Users/jeff/.openclaw/projects/mountain-west-growth-os/supabase/phase6-11-combined-growth-os-schema.sql in Supabase project yidxnmxvtohaldkbypcv or provide DDL-capable DB/management credentials, then rerun the mirror.",
+      "created_at": 1778225677
+    },
+    {
+      "author": "overnight-watchdog",
+      "body": "2026-05-08 02:35 MDT watchdog recheck: latest substantive run is blocked, not active; repeated-crash diagnostic is historical. Revalidated safe local prerequisites: no supabase CLI, no psql, and checked env files expose no DDL-capable DB/management keys. Prepared SQL exists at /Users/jeff/.openclaw/projects/mountain-west-growth-os/supabase/phase6-11-combined-growth-os-schema.sql; blocker report exists at /Users/jeff/.openclaw/projects/mountain-west-growth-os/reports/2026-05-06-supabase-expanded-schema-blocker.md. Manual unblock: run the SQL in Supabase project yidxnmxvtohaldkbypcv SQL Editor or provide DDL-capable DB/management credentials, then rerun cd /Users/jeff/.openclaw/projects/mountain-west-growth-os && node scripts/sync-sqlite-to-supabase.mjs. No unsafe DDL retry attempted.",
+      "created_at": 1778229348
+    },
+    {
+      "author": "overnight-watchdog",
+      "body": "2026-05-08 03:33 MDT watchdog recheck: latest substantive run remains blocked, not active; repeated-crash diagnostic is historical. Revalidated prepared SQL and blocker report exist; local DDL path still absent (no supabase CLI, no psql, and checked env files expose no DDL-capable DB/management keys). Manual unblock: run /Users/jeff/.openclaw/projects/mountain-west-growth-os/supabase/phase6-11-combined-growth-os-schema.sql in Supabase project yidxnmxvtohaldkbypcv SQL Editor or provide DDL-capable DB/management credentials, then rerun cd /Users/jeff/.openclaw/projects/mountain-west-growth-os && node scripts/sync-sqlite-to-supabase.mjs. No unsafe DDL retry attempted.",
+      "created_at": 1778232807
+    },
+    {
+      "author": "overnight-watchdog",
+      "body": "2026-05-08 04:30 MDT watchdog recheck: latest substantive run remains blocked, not active; repeated crash diagnostic is historical. Verified prepared SQL and blocker report still exist; no local DDL path found (no supabase CLI, no psql, no DDL-capable env keys in checked env). Manual unblock remains: run /Users/jeff/.openclaw/projects/mountain-west-growth-os/supabase/phase6-11-combined-growth-os-schema.sql in Supabase project yidxnmxvtohaldkbypcv SQL Editor or provide DDL-capable DB/management credentials, then rerun cd /Users/jeff/.openclaw/projects/mountain-west-growth-os && node scripts/sync-sqlite-to-supabase.mjs. No unsafe DDL retry attempted.",
+      "created_at": 1778236432
+    },
+    {
+      "author": "overnight-watchdog",
+      "body": "2026-05-08 05:31 MDT watchdog recheck: latest substantive run is blocked, not active; repeated-crash diagnostic remains historical. Revalidated no safe local DDL path: supabase CLI and psql are absent, and read-only PostgREST sample checks still show expanded tables missing (source_evidence, suppression_checks, outreach_drafts, crm_sync_batches, ghl_sync_links, content_assets, kpi_snapshots). Manual unblock remains: run /Users/jeff/.openclaw/projects/mountain-west-growth-os/supabase/phase6-11-combined-growth-os-schema.sql in Supabase project yidxnmxvtohaldkbypcv SQL Editor or provide DDL-capable DB/management credentials; then rerun cd /Users/jeff/.openclaw/projects/mountain-west-growth-os && node scripts/sync-sqlite-to-supabase.mjs. No unsafe DDL retry attempted.",
+      "created_at": 1778239995
+    },
+    {
+      "author": "overnight-watchdog",
+      "body": "2026-05-08 06:33 MDT watchdog recheck: latest run 210 is blocked, not active; repeated-crash diagnostic is historical from pre-block spawn attempts. Reverified no safe local DDL path (no supabase CLI, no psql, no DDL-capable env keys in checked project files). Prepared SQL still exists at /Users/jeff/.openclaw/projects/mountain-west-growth-os/supabase/phase6-11-combined-growth-os-schema.sql and blocker report at /Users/jeff/.openclaw/projects/mountain-west-growth-os/reports/2026-05-06-supabase-expanded-schema-blocker.md. Manual unblock remains: run the SQL in Supabase project yidxnmxvtohaldkbypcv or provide DDL-capable DB/management access, then rerun cd /Users/jeff/.openclaw/projects/mountain-west-growth-os && node scripts/sync-sqlite-to-supabase.mjs.",
+      "created_at": 1778243617
+    },
+    {
+      "author": "overnight-watchdog",
+      "body": "2026-05-08 22:33 MDT watchdog recheck: latest run is blocked, not active; repeated-crash diagnostic is historical from earlier pre-block attempts. Fresh local prerequisite check: supabase CLI absent, psql absent, prepared SQL/report exist, and checked env files expose no DDL-capable DB/management keys. Manual unblock remains: run /Users/jeff/.openclaw/projects/mountain-west-growth-os/supabase/phase6-11-combined-growth-os-schema.sql in Supabase project yidxnmxvtohaldkbypcv SQL Editor or provide DDL-capable DB/management credentials; then rerun cd /Users/jeff/.openclaw/projects/mountain-west-growth-os && node scripts/sync-sqlite-to-supabase.mjs. No unsafe DDL retry attempted.",
+      "created_at": 1778301199
+    },
+    {
+      "author": "overnight-watchdog",
+      "body": "2026-05-08 23:35 MDT watchdog recheck: latest substantive run is blocked, not active; repeated-crash diagnostic is historical from pre-block attempts. Prepared SQL and blocker report still exist; supabase CLI and psql are absent in this shell, so no safe internal DDL path was available. Manual unblock remains: run /Users/jeff/.openclaw/projects/mountain-west-growth-os/supabase/phase6-11-combined-growth-os-schema.sql in Supabase project yidxnmxvtohaldkbypcv SQL Editor or provide DDL-capable DB/management credentials, then rerun cd /Users/jeff/.openclaw/projects/mountain-west-growth-os && node scripts/sync-sqlite-to-supabase.mjs. No unsafe DDL retry attempted.",
+      "created_at": 1778304927
+    },
+    {
+      "author": "overnight-watchdog",
+      "body": "2026-05-09 00:31 MDT watchdog recheck: latest substantive run remains blocked, not active; repeated-crash diagnostic is historical from pre-block attempts. Fresh prerequisite check found no supabase CLI, no psql, prepared SQL/report still exist, and checked env files expose no DDL-capable DB/management keys. Manual unblock remains: run /Users/jeff/.openclaw/projects/mountain-west-growth-os/supabase/phase6-11-combined-growth-os-schema.sql in Supabase project yidxnmxvtohaldkbypcv SQL Editor or provide DDL-capable DB/management credentials; then rerun cd /Users/jeff/.openclaw/projects/mountain-west-growth-os && node scripts/sync-sqlite-to-supabase.mjs. No unsafe DDL retry attempted.",
+      "created_at": 1778308388
+    },
+    {
+      "author": "overnight-watchdog",
+      "body": "2026-05-09 01:35 MDT watchdog recheck: newest run is blocked with a human-only DDL/access blocker; old repeated-crash diagnostic is historical, not an active worker. Reverified current local prerequisites: supabase CLI absent, psql absent, and checked project env files expose no DDL-capable DATABASE_URL/PGPASSWORD/SUPABASE_ACCESS_TOKEN-style access. Prepared SQL and blocker report still exist. Manual unblock: run /Users/jeff/.openclaw/projects/mountain-west-growth-os/supabase/phase6-11-combined-growth-os-schema.sql in Supabase project yidxnmxvtohaldkbypcv, or provide DDL-capable DB/management credentials; then rerun cd /Users/jeff/.openclaw/projects/mountain-west-growth-os && node scripts/sync-sqlite-to-supabase.mjs.",
+      "created_at": 1778312143
+    },
+    {
+      "author": "default",
+      "body": "2026-05-09 02:45 MDT watchdog recheck: latest substantive schema run is blocked, not active; the repeated-crash diagnostic is historical. Reverified safe local prerequisites: supabase CLI absent, psql absent, checked app env exposes no DDL-capable DB/management keys. Prepared SQL still exists at /Users/jeff/.openclaw/projects/mountain-west-growth-os/supabase/phase6-11-combined-growth-os-schema.sql and blocker report exists at /Users/jeff/.openclaw/projects/mountain-west-growth-os/reports/2026-05-06-supabase-expanded-schema-blocker.md. Manual unblock: run the SQL in Supabase project yidxnmxvtohaldkbypcv or provide DDL-capable credentials, then rerun cd /Users/jeff/.openclaw/projects/mountain-west-growth-os && node scripts/sync-sqlite-to-supabase.mjs. No DDL retry attempted.",
+      "created_at": 1778315847
+    },
+    {
+      "author": "overnight-watchdog",
+      "body": "2026-05-09 03:30 MDT watchdog recheck: latest substantive run remains blocked, not active; repeated-crash diagnostic is historical. Reverified prepared SQL and blocker report exist, but no local DDL path is available (supabase CLI absent, psql absent, no DDL-capable DB/management env keys found in checked project files). Manual unblock remains: run /Users/jeff/.openclaw/projects/mountain-west-growth-os/supabase/phase6-11-combined-growth-os-schema.sql in Supabase project yidxnmxvtohaldkbypcv SQL Editor or provide DDL-capable DB/management credentials. I closed the four dated partial mirror tasks as completed partial deliverables and created gated backfill task t_53d470c6 to rerun node scripts/sync-sqlite-to-supabase.mjs after this schema task is completed. No DDL retry or live/client-facing action attempted.",
+      "created_at": 1778319224
+    },
+    {
+      "author": "overnight-watchdog",
+      "body": "2026-05-09 04:30 MDT watchdog recheck: latest run remains blocked (run 210) and prior repeated-crash diagnostic is historical. Reverified prepared phase 6-11 SQL and blocker report exist; local DDL path is still unavailable (supabase CLI absent, psql absent, no DDL-capable DB/management env keys found in checked project files). Manual unblock: authorized Supabase operator runs /Users/jeff/.openclaw/projects/mountain-west-growth-os/supabase/phase6-11-combined-growth-os-schema.sql in Supabase project yidxnmxvtohaldkbypcv, then reruns cd /Users/jeff/.openclaw/projects/mountain-west-growth-os && node scripts/sync-sqlite-to-supabase.mjs. No DDL retry or live/client-facing action attempted.",
+      "created_at": 1778322780
+    },
+    {
+      "author": "overnight-watchdog",
+      "body": "2026-05-09 05:30 MDT watchdog recheck: latest run for t_fa6eb9c1 is blocked (not running); crash diagnostic is historical. Verified prepared SQL and blocker report still exist, but no local safe DDL path is available: supabase CLI not found, psql not found, and checked app env exposed no DDL-capable keys. Manual unblock remains: run /Users/jeff/.openclaw/projects/mountain-west-growth-os/supabase/phase6-11-combined-growth-os-schema.sql in Supabase project yidxnmxvtohaldkbypcv SQL Editor or provide DDL-capable DB/management credentials; then rerun cd /Users/jeff/.openclaw/projects/mountain-west-growth-os && node scripts/sync-sqlite-to-supabase.mjs. No unsafe DDL retry attempted.",
+      "created_at": 1778326408
+    },
+    {
+      "author": "default",
+      "body": "2026-05-09 06:30 MDT watchdog recheck: latest substantive run remains blocked, not active; the repeated-crash diagnostic is historical from pre-block attempts. Reverified prepared SQL exists at /Users/jeff/.openclaw/projects/mountain-west-growth-os/supabase/phase6-11-combined-growth-os-schema.sql, blocker report exists at /Users/jeff/.openclaw/projects/mountain-west-growth-os/reports/2026-05-06-supabase-expanded-schema-blocker.md, sync script exists, supabase CLI/psql are still absent, and checked Growth OS env files do not expose DDL-capable DB/management keys. Manual unblock remains: run the prepared SQL in Supabase project yidxnmxvtohaldkbypcv or provide DDL-capable credentials; then rerun cd /Users/jeff/.openclaw/projects/mountain-west-growth-os && node scripts/sync-sqlite-to-supabase.mjs. Since only human-blocked work remained, I seeded an internal-only Saturday approval-prep tranche t_79edc033, t_fe647d64, t_22ec6ee9, t_327031f5, with reviewer fan-in t_fc557596. No DDL retry or external/client-facing action attempted.",
+      "created_at": 1778329989
+    },
+    {
+      "author": "overnight-watchdog",
+      "body": "2026-05-09 22:34 MDT watchdog recheck: newest substantive run remains blocked, not active; repeated-crash diagnostic is historical. Fresh prerequisite check found prepared SQL/report/sync script present, but no local safe DDL path: supabase CLI not found, psql not found, and checked project/app env files expose no DDL-capable DB/management keys. Manual unblock remains: authorized Supabase admin runs /Users/jeff/.openclaw/projects/mountain-west-growth-os/supabase/phase6-11-combined-growth-os-schema.sql in project yidxnmxvtohaldkbypcv, then reruns cd /Users/jeff/.openclaw/projects/mountain-west-growth-os && node scripts/sync-sqlite-to-supabase.mjs. No unsafe DDL retry or live/client-facing action attempted.",
+      "created_at": 1778387654
+    },
+    {
+      "author": "overnight-watchdog",
+      "body": "2026-05-09 23:31 MDT watchdog recheck: newest substantive run remains blocked, not active; repeated-crash diagnostic is historical. Fresh checks: prepared SQL, blocker report, and sync script are present; supabase CLI and psql are not available; checked app env exposes no DDL-capable DB/management keys. Manual unblock remains: authorized Supabase admin runs /Users/jeff/.openclaw/projects/mountain-west-growth-os/supabase/phase6-11-combined-growth-os-schema.sql in project yidxnmxvtohaldkbypcv, then runs cd /Users/jeff/.openclaw/projects/mountain-west-growth-os && node scripts/sync-sqlite-to-supabase.mjs and captures verification. No unsafe DDL retry or live/client-facing action attempted.",
+      "created_at": 1778392178
+    },
+    {
+      "author": "overnight-watchdog",
+      "body": "2026-05-10 00:30 MDT watchdog recheck: newest substantive run remains blocked, not active; the repeated-crash diagnostic is historical. Fresh checks verified the prepared SQL, blocker report, source phase SQL files, and sync script are present; read-only PostgREST probes still show expanded tables missing (source_evidence, suppression_checks, outreach_drafts, crm_sync_batches, ghl_sync_links, content_assets, kpi_snapshots); supabase CLI and psql are not available in this shell. Manual unblock remains: authorized Supabase admin runs /Users/jeff/.openclaw/projects/mountain-west-growth-os/supabase/phase6-11-combined-growth-os-schema.sql in project yidxnmxvtohaldkbypcv, then reruns cd /Users/jeff/.openclaw/projects/mountain-west-growth-os && node scripts/sync-sqlite-to-supabase.mjs and captures verification. No unsafe DDL retry or live/client-facing action attempted. Since only human-blocked/gated work remains, I seeded the next internal-only Sunday readiness tranche with idempotency keys and no-external-action guardrails.",
+      "created_at": 1778395110
+    }
+  ],
+  "events": [
+    {
+      "kind": "created",
+      "payload": {
+        "assignee": null,
+        "status": "ready",
+        "parents": [],
+        "tenant": "whiteford-mountain-west",
+        "skills": null
+      },
+      "created_at": 1778050612,
+      "run_id": null
+    },
+    {
+      "kind": "assigned",
+      "payload": {
+        "assignee": "ops"
+      },
+      "created_at": 1778128305,
+      "run_id": null
+    },
+    {
+      "kind": "claimed",
+      "payload": {
+        "lock": "Jeffs-MacBook-Pro-2.local:7103",
+        "expires": 1778129260,
+        "run_id": 174
+      },
+      "created_at": 1778128360,
+      "run_id": 174
+    },
+    {
+      "kind": "spawned",
+      "payload": {
+        "pid": 27538
+      },
+      "created_at": 1778128360,
+      "run_id": 174
+    },
+    {
+      "kind": "crashed",
+      "payload": {
+        "pid": 27538,
+        "claimer": "Jeffs-MacBook-Pro-2.local:7103"
+      },
+      "created_at": 1778128420,
+      "run_id": 174
+    },
+    {
+      "kind": "claimed",
+      "payload": {
+        "lock": "Jeffs-MacBook-Pro-2.local:7103",
+        "expires": 1778129320,
+        "run_id": 183
+      },
+      "created_at": 1778128420,
+      "run_id": 183
+    },
+    {
+      "kind": "spawned",
+      "payload": {
+        "pid": 27916
+      },
+      "created_at": 1778128420,
+      "run_id": 183
+    },
+    {
+      "kind": "crashed",
+      "payload": {
+        "pid": 27916,
+        "claimer": "Jeffs-MacBook-Pro-2.local:7103"
+      },
+      "created_at": 1778128480,
+      "run_id": 183
+    },
+    {
+      "kind": "claimed",
+      "payload": {
+        "lock": "Jeffs-MacBook-Pro-2.local:7103",
+        "expires": 1778129380,
+        "run_id": 192
+      },
+      "created_at": 1778128480,
+      "run_id": 192
+    },
+    {
+      "kind": "spawned",
+      "payload": {
+        "pid": 28066
+      },
+      "created_at": 1778128480,
+      "run_id": 192
+    },
+    {
+      "kind": "crashed",
+      "payload": {
+        "pid": 28066,
+        "claimer": "Jeffs-MacBook-Pro-2.local:7103"
+      },
+      "created_at": 1778128521,
+      "run_id": 192
+    },
+    {
+      "kind": "claimed",
+      "payload": {
+        "lock": "Jeffs-MacBook-Pro-2.local:7103",
+        "expires": 1778129440,
+        "run_id": 201
+      },
+      "created_at": 1778128540,
+      "run_id": 201
+    },
+    {
+      "kind": "spawned",
+      "payload": {
+        "pid": 28381
+      },
+      "created_at": 1778128540,
+      "run_id": 201
+    },
+    {
+      "kind": "crashed",
+      "payload": {
+        "pid": 28381,
+        "claimer": "Jeffs-MacBook-Pro-2.local:7103"
+      },
+      "created_at": 1778128584,
+      "run_id": 201
+    },
+    {
+      "kind": "claimed",
+      "payload": {
+        "lock": "Jeffs-MacBook-Pro-2.local:28526",
+        "expires": 1778129484,
+        "run_id": 210
+      },
+      "created_at": 1778128584,
+      "run_id": 210
+    },
+    {
+      "kind": "spawned",
+      "payload": {
+        "pid": 28549
+      },
+      "created_at": 1778128584,
+      "run_id": 210
+    },
+    {
+      "kind": "commented",
+      "payload": {
+        "author": "ops",
+        "len": 716
+      },
+      "created_at": 1778128781,
+      "run_id": null
+    },
+    {
+      "kind": "blocked",
+      "payload": {
+        "reason": "Need DDL-capable Supabase access for project yidxnmxvtohaldkbypcv: login to SQL Editor, provide DB connection string/password, or provide a Supabase management token; current service-role API key cannot run CREATE TABLE."
+      },
+      "created_at": 1778128785,
+      "run_id": 210
+    },
+    {
+      "kind": "commented",
+      "payload": {
+        "author": "overnight-watchdog",
+        "len": 481
+      },
+      "created_at": 1778135567,
+      "run_id": null
+    },
+    {
+      "kind": "commented",
+      "payload": {
+        "author": "overnight-watchdog",
+        "len": 577
+      },
+      "created_at": 1778139367,
+      "run_id": null
+    },
+    {
+      "kind": "commented",
+      "payload": {
+        "author": "default",
+        "len": 581
+      },
+      "created_at": 1778142715,
+      "run_id": null
+    },
+    {
+      "kind": "commented",
+      "payload": {
+        "author": "overnight-watchdog",
+        "len": 893
+      },
+      "created_at": 1778150062,
+      "run_id": null
+    },
+    {
+      "kind": "commented",
+      "payload": {
+        "author": "overnight-watchdog",
+        "len": 473
+      },
+      "created_at": 1778150093,
+      "run_id": null
+    },
+    {
+      "kind": "commented",
+      "payload": {
+        "author": "overnight-watchdog",
+        "len": 583
+      },
+      "created_at": 1778153705,
+      "run_id": null
+    },
+    {
+      "kind": "commented",
+      "payload": {
+        "author": "overnight-watchdog",
+        "len": 638
+      },
+      "created_at": 1778157278,
+      "run_id": null
+    },
+    {
+      "kind": "commented",
+      "payload": {
+        "author": "overnight-watchdog",
+        "len": 681
+      },
+      "created_at": 1778214774,
+      "run_id": null
+    },
+    {
+      "kind": "commented",
+      "payload": {
+        "author": "overnight-watchdog",
+        "len": 711
+      },
+      "created_at": 1778218461,
+      "run_id": null
+    },
+    {
+      "kind": "commented",
+      "payload": {
+        "author": "overnight-watchdog",
+        "len": 671
+      },
+      "created_at": 1778222079,
+      "run_id": null
+    },
+    {
+      "kind": "commented",
+      "payload": {
+        "author": "overnight-watchdog",
+        "len": 586
+      },
+      "created_at": 1778225677,
+      "run_id": null
+    },
+    {
+      "kind": "commented",
+      "payload": {
+        "author": "overnight-watchdog",
+        "len": 793
+      },
+      "created_at": 1778229348,
+      "run_id": null
+    },
+    {
+      "kind": "commented",
+      "payload": {
+        "author": "overnight-watchdog",
+        "len": 673
+      },
+      "created_at": 1778232807,
+      "run_id": null
+    },
+    {
+      "kind": "commented",
+      "payload": {
+        "author": "overnight-watchdog",
+        "len": 656
+      },
+      "created_at": 1778236432,
+      "run_id": null
+    },
+    {
+      "kind": "commented",
+      "payload": {
+        "author": "overnight-watchdog",
+        "len": 774
+      },
+      "created_at": 1778239995,
+      "run_id": null
+    },
+    {
+      "kind": "commented",
+      "payload": {
+        "author": "overnight-watchdog",
+        "len": 762
+      },
+      "created_at": 1778243617,
+      "run_id": null
+    },
+    {
+      "kind": "commented",
+      "payload": {
+        "author": "overnight-watchdog",
+        "len": 682
+      },
+      "created_at": 1778301199,
+      "run_id": null
+    },
+    {
+      "kind": "commented",
+      "payload": {
+        "author": "overnight-watchdog",
+        "len": 666
+      },
+      "created_at": 1778304927,
+      "run_id": null
+    },
+    {
+      "kind": "commented",
+      "payload": {
+        "author": "overnight-watchdog",
+        "len": 688
+      },
+      "created_at": 1778308388,
+      "run_id": null
+    },
+    {
+      "kind": "commented",
+      "payload": {
+        "author": "overnight-watchdog",
+        "len": 726
+      },
+      "created_at": 1778312143,
+      "run_id": null
+    },
+    {
+      "kind": "commented",
+      "payload": {
+        "author": "default",
+        "len": 783
+      },
+      "created_at": 1778315847,
+      "run_id": null
+    },
+    {
+      "kind": "commented",
+      "payload": {
+        "author": "overnight-watchdog",
+        "len": 818
+      },
+      "created_at": 1778319224,
+      "run_id": null
+    },
+    {
+      "kind": "commented",
+      "payload": {
+        "author": "overnight-watchdog",
+        "len": 693
+      },
+      "created_at": 1778322780,
+      "run_id": null
+    },
+    {
+      "kind": "commented",
+      "payload": {
+        "author": "overnight-watchdog",
+        "len": 685
+      },
+      "created_at": 1778326408,
+      "run_id": null
+    },
+    {
+      "kind": "commented",
+      "payload": {
+        "author": "default",
+        "len": 1039
+      },
+      "created_at": 1778329989,
+      "run_id": null
+    },
+    {
+      "kind": "commented",
+      "payload": {
+        "author": "overnight-watchdog",
+        "len": 714
+      },
+      "created_at": 1778387654,
+      "run_id": null
+    },
+    {
+      "kind": "commented",
+      "payload": {
+        "author": "overnight-watchdog",
+        "len": 695
+      },
+      "created_at": 1778392178,
+      "run_id": null
+    },
+    {
+      "kind": "commented",
+      "payload": {
+        "author": "overnight-watchdog",
+        "len": 1034
+      },
+      "created_at": 1778395110,
+      "run_id": null
+    }
+  ],
+  "runs": [
+    {
+      "id": 174,
+      "profile": "ops",
+      "step_key": null,
+      "status": "crashed",
+      "outcome": "crashed",
+      "summary": null,
+      "error": "pid 27538 not alive",
+      "metadata": {
+        "pid": 27538,
+        "claimer": "Jeffs-MacBook-Pro-2.local:7103"
+      },
+      "worker_pid": null,
+      "started_at": 1778128360,
+      "ended_at": 1778128420
+    },
+    {
+      "id": 183,
+      "profile": "ops",
+      "step_key": null,
+      "status": "crashed",
+      "outcome": "crashed",
+      "summary": null,
+      "error": "pid 27916 not alive",
+      "metadata": {
+        "pid": 27916,
+        "claimer": "Jeffs-MacBook-Pro-2.local:7103"
+      },
+      "worker_pid": null,
+      "started_at": 1778128420,
+      "ended_at": 1778128480
+    },
+    {
+      "id": 192,
+      "profile": "ops",
+      "step_key": null,
+      "status": "crashed",
+      "outcome": "crashed",
+      "summary": null,
+      "error": "pid 28066 not alive",
+      "metadata": {
+        "pid": 28066,
+        "claimer": "Jeffs-MacBook-Pro-2.local:7103"
+      },
+      "worker_pid": null,
+      "started_at": 1778128480,
+      "ended_at": 1778128521
+    },
+    {
+      "id": 201,
+      "profile": "ops",
+      "step_key": null,
+      "status": "crashed",
+      "outcome": "crashed",
+      "summary": null,
+      "error": "pid 28381 not alive",
+      "metadata": {
+        "pid": 28381,
+        "claimer": "Jeffs-MacBook-Pro-2.local:7103"
+      },
+      "worker_pid": null,
+      "started_at": 1778128540,
+      "ended_at": 1778128584
+    },
+    {
+      "id": 210,
+      "profile": "ops",
+      "step_key": null,
+      "status": "blocked",
+      "outcome": "blocked",
+      "summary": "Need DDL-capable Supabase access for project yidxnmxvtohaldkbypcv: login to SQL Editor, provide DB connection string/password, or provide a Supabase management token; current service-role API key cannot run CREATE TABLE.",
+      "error": null,
+      "metadata": null,
+      "worker_pid": null,
+      "started_at": 1778128584,
+      "ended_at": 1778128785
+    }
+  ]
+}

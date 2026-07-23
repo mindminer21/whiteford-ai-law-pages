@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Whiteford/Schell IP — AI Use Register Visual Direction</title>
+  <style>
+    :root {
+      --bg: #f7f5ef;
+      --paper: #fffdf8;
+      --ink: #121827;
+      --muted: #5d6678;
+      --blue: #213f77;
+      --violet: #683ab7;
+      --gold: #b99057;
+      --sage: #55776a;
+      --line: #d8d0c3;
+      --shadow: 0 26px 70px rgba(18, 24, 39, 0.14);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    .canvas {
+      width: min(100vw, 1200px);
+      aspect-ratio: 1 / 1;
+      position: relative;
+      overflow: hidden;
+      background:
+        linear-gradient(rgba(216, 208, 195, 0.24) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(216, 208, 195, 0.24) 1px, transparent 1px),
+        radial-gradient(circle at 16% 12%, rgba(185, 144, 87, 0.10), transparent 34%),
+        var(--bg);
+      background-size: 46px 46px, 46px 46px, auto, auto;
+      border: 1px solid var(--line);
+    }
+
+    .brand {
+      position: absolute;
+      top: 54px;
+      left: 72px;
+      right: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-bottom: 18px;
+      border-bottom: 1px solid var(--line);
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      font-size: 21px;
+      color: var(--blue);
+      font-weight: 700;
+    }
+
+    .brand span:last-child {
+      color: var(--violet);
+      font-size: 16px;
+      letter-spacing: 0.2em;
+    }
+
+    .eyebrow {
+      position: absolute;
+      top: 138px;
+      left: 72px;
+      color: var(--violet);
+      font-size: 20px;
+      line-height: 1;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      position: absolute;
+      top: 166px;
+      left: 72px;
+      max-width: 710px;
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 72px;
+      line-height: 0.96;
+      letter-spacing: -0.04em;
+      color: var(--blue);
+      font-weight: 500;
+      text-wrap: balance;
+    }
+
+    h1 em {
+      color: var(--violet);
+      font-weight: 500;
+    }
+
+    .subhead {
+      position: absolute;
+      top: 340px;
+      left: 74px;
+      max-width: 650px;
+      color: var(--muted);
+      font-size: 25px;
+      line-height: 1.3;
+      text-wrap: pretty;
+    }
+
+    .system {
+      position: absolute;
+      left: 72px;
+      right: 72px;
+      top: 455px;
+      bottom: 132px;
+      display: grid;
+      grid-template-columns: 1fr 1.24fr 1fr;
+      gap: 26px;
+      align-items: center;
+    }
+
+    .lane-stack {
+      display: grid;
+      gap: 18px;
+    }
+
+    .lane {
+      min-height: 116px;
+      padding: 22px 23px;
+      border: 1px solid var(--line);
+      background: rgba(255, 253, 248, 0.78);
+      box-shadow: 0 10px 26px rgba(18, 24, 39, 0.05);
+      position: relative;
+    }
+
+    .lane::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      width: 24px;
+      height: 1px;
+      background: var(--gold);
+    }
+
+    .left .lane::after { right: -25px; }
+    .right .lane::after { left: -25px; }
+
+    .num {
+      display: inline-grid;
+      place-items: center;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      margin-bottom: 12px;
+      background: rgba(33, 63, 119, 0.08);
+      color: var(--blue);
+      font-size: 15px;
+      font-weight: 800;
+    }
+
+    .lane strong {
+      display: block;
+      color: var(--ink);
+      font-size: 21px;
+      line-height: 1.15;
+      margin-bottom: 6px;
+    }
+
+    .lane small {
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.25;
+      display: block;
+    }
+
+    .register {
+      min-height: 420px;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+      padding: 34px 34px 30px;
+      position: relative;
+    }
+
+    .register::before {
+      content: "";
+      position: absolute;
+      inset: 16px;
+      border: 1px solid rgba(216, 208, 195, 0.75);
+      pointer-events: none;
+    }
+
+    .register-kicker {
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      font-weight: 800;
+      font-size: 14px;
+      margin-bottom: 18px;
+    }
+
+    .register h2 {
+      margin: 0 0 22px;
+      font-family: Georgia, "Times New Roman", serif;
+      color: var(--blue);
+      font-size: 50px;
+      letter-spacing: -0.035em;
+      line-height: 1;
+      font-weight: 500;
+    }
+
+    .row {
+      display: grid;
+      grid-template-columns: 82px 1fr 68px;
+      gap: 14px;
+      align-items: center;
+      padding: 14px 0;
+      border-top: 1px solid rgba(216, 208, 195, 0.72);
+      font-size: 16px;
+    }
+
+    .pill {
+      border: 1px solid rgba(104, 58, 183, 0.26);
+      color: var(--violet);
+      padding: 6px 8px;
+      border-radius: 999px;
+      text-align: center;
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .status {
+      color: var(--sage);
+      font-weight: 800;
+      text-align: right;
+    }
+
+    .footer {
+      position: absolute;
+      left: 72px;
+      right: 72px;
+      bottom: 54px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 28px;
+      border-top: 1px solid var(--line);
+      padding-top: 23px;
+      color: var(--muted);
+      font-size: 18px;
+    }
+
+    .cta {
+      background: var(--blue);
+      color: #fffdf8;
+      padding: 15px 22px;
+      border-radius: 2px;
+      font-size: 16px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    @media (max-width: 760px) {
+      body { align-items: start; }
+      .canvas { width: 100vw; min-height: 100vh; aspect-ratio: auto; }
+      .brand, .eyebrow, h1, .subhead, .system, .footer { left: 28px; right: 28px; }
+      h1 { font-size: 48px; }
+      .subhead { top: 298px; font-size: 20px; }
+      .system { top: 420px; grid-template-columns: 1fr; position: relative; left: auto; right: auto; margin: 420px 28px 140px; }
+      .lane::after { display: none; }
+      .footer { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+  <main class="canvas" aria-label="Whiteford Schell IP AI Use Register visual direction">
+    <header class="brand"><span>Whiteford | Schell IP</span><span>Draft visual direction</span></header>
+    <div class="eyebrow">AI legal readiness · Colorado + Mountain West</div>
+    <h1>Make AI use <em>visible</em> before risk becomes urgent.</h1>
+    <p class="subhead">A simple register turns scattered AI tools, vendor features, and product functions into an executive legal operating map.</p>
+
+    <section class="system" aria-label="AI use register control layer">
+      <div class="lane-stack left">
+        <article class="lane">
+          <span class="num">01</span>
+          <strong>Use case + owner</strong>
+          <small>Function, accountable leader, launch or renewal moment.</small>
+        </article>
+        <article class="lane">
+          <span class="num">02</span>
+          <strong>Data + decision exposure</strong>
+          <small>Customer, employee, regulated, R&amp;D, or low-sensitivity inputs.</small>
+        </article>
+      </div>
+
+      <article class="register">
+        <div class="register-kicker">Control layer</div>
+        <h2>AI Use Register</h2>
+        <div class="row"><span class="pill">Tool</span><span>Customer support copilot</span><span class="status">Map</span></div>
+        <div class="row"><span class="pill">Vendor</span><span>Contract terms located?</span><span class="status">Check</span></div>
+        <div class="row"><span class="pill">Review</span><span>Human escalation path</span><span class="status">Define</span></div>
+        <div class="row"><span class="pill">Proof</span><span>Evidence trail for launch/diligence</span><span class="status">Keep</span></div>
+      </article>
+
+      <div class="lane-stack right">
+        <article class="lane">
+          <span class="num">03</span>
+          <strong>Vendor / IP / contract terms</strong>
+          <small>Confidentiality, ownership, security, indemnity, audit rights.</small>
+        </article>
+        <article class="lane">
+          <span class="num">04</span>
+          <strong>Human review + evidence trail</strong>
+          <small>Approval path, escalation, records, and board-ready reporting.</small>
+        </article>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <span>Draft-only visual handoff · no legal conclusions · no confidential facts in public forms</span>
+      <span class="cta">/ai-compliance-gameplan</span>
+    </footer>
+  </main>
+</body>
+</html>

@@ -1,0 +1,31 @@
+{
+  "run_date": "2026-05-21",
+  "run_label": "nightly_qwen_prospect_research",
+  "status": "no_op_live_source_unavailable",
+  "preflight": {
+    "live_sources": {
+      "web_search": "failed \u2014 firecrawl credits exhausted",
+      "web_extract": "failed \u2014 firecrawl credits exhausted"
+    },
+    "local_rag": "available \u2014 business-development corpus and qmd collections present",
+    "gate1_passed": false
+  },
+  "prospects": [],
+  "contacts": [],
+  "evidence": [],
+  "outreach_drafts": [],
+  "approval_items": [],
+  "suppression_issues": [],
+  "summary": {
+    "new_companies": 0,
+    "new_contacts": 0,
+    "new_evidence": 0,
+    "new_drafts": 0,
+    "new_approval_items": 0,
+    "live_crm_writes": 0,
+    "external_outreach": 0,
+    "workflow_activation": 0,
+    "notes": "Gate 1 failed \u2014 firecrawl credits exhausted. No prospect staging, scoring, or drafting occurred. Remediation: upgrade firecrawl plan or restore credits, then re-run."
+  },
+  "candidates": []
+}

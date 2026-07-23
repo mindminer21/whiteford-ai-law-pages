@@ -1,0 +1,143 @@
+{
+  "task": {
+    "id": "t_b14c27d5",
+    "title": "Refresh QMD for Sunday decision packet and blocker-lineage docs",
+    "body": "Context: The QMD Whiteford collection was refreshed before the latest Sunday morning decision packet/re-review were created. The watchdog verified `qmd search \"approval command center\"` works, but `qmd search \"Sunday decision packet\"` did not yet retrieve the newest decision docs.\n\nObjective:\n- Run local-only QMD maintenance so the newest Sunday decision packet and re-review are indexed.\n- Use the known working invocation when needed: `PATH=\"/opt/homebrew/bin:$PATH\" qmd ...`.\n- Commands to consider: `qmd status`, `qmd update`, bounded `qmd embed --max-docs-per-batch 50 --max-batch-mb 10`, then searches for `Sunday morning decision packet`, `Supabase blocker t_fa6eb9c1 t_53d470c6`, and `Tech GC local no-token QA` scoped to `whiteford-ai-law-pages`.\n\nDeliverables expected:\n- Write `/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/ops/qmd_sunday_decision_refresh_2026-05-10.md` with before/after status, exact commands, and search evidence.\n- Update `/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/KANBAN_DELIVERABLE_INDEX.md`.\n- Leave the standard Kanban deliverable comment.\n\nAcceptance criteria:\n- QMD retrieves the Sunday decision packet/re-review or the report explains the remaining local-index issue and safe fix.\n- Do not delete collections or overwrite source docs.\n- No external/public action, no CRM/HighLevel mutation, no Supabase DDL/sync/backfill/row mutation, no Clio, no email/social/LinkedIn/ad action, and no credential changes.\n",
+    "assignee": "ops",
+    "status": "done",
+    "priority": 85,
+    "tenant": "whiteford-mountain-west",
+    "workspace_kind": "dir",
+    "workspace_path": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages",
+    "created_by": "overnight-watchdog",
+    "created_at": 1778392219,
+    "started_at": 1778392230,
+    "completed_at": 1778392412,
+    "result": null,
+    "skills": []
+  },
+  "latest_summary": "Refreshed local QMD indexing for the Sunday decision packet and blocker-lineage docs, then documented before/after status and search evidence in docs/ops/qmd_sunday_decision_refresh_2026-05-10.md. `whiteford-ai-law-pages` increased from 179 to 182 indexed files and searches now retrieve the Sunday packet, review, re-review, Supabase blocker lineage, and Tech GC local/no-token QA docs; the deliverable index and standard Kanban comment were updated.",
+  "parents": [],
+  "children": [
+    "t_7df38ec8"
+  ],
+  "comments": [
+    {
+      "author": "ops",
+      "body": "Deliverable: /Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/ops/qmd_sunday_decision_refresh_2026-05-10.md\nSummary: Local-only QMD refresh report documenting before/after status, exact maintenance commands, and search evidence that the Sunday decision packet, review, re-review, Supabase blocker lineage, and Tech GC local/no-token QA docs now retrieve from `whiteford-ai-law-pages`.\nNext action: Use the report as the QMD maintenance evidence; no external/live-system action was taken or authorized.",
+      "created_at": 1778392391
+    }
+  ],
+  "events": [
+    {
+      "kind": "created",
+      "payload": {
+        "assignee": "ops",
+        "status": "ready",
+        "parents": [],
+        "tenant": "whiteford-mountain-west",
+        "skills": null
+      },
+      "created_at": 1778392219,
+      "run_id": null
+    },
+    {
+      "kind": "claimed",
+      "payload": {
+        "lock": "Jeffs-MacBook-Pro-2.local:39049",
+        "expires": 1778393130,
+        "run_id": 398
+      },
+      "created_at": 1778392230,
+      "run_id": 398
+    },
+    {
+      "kind": "spawned",
+      "payload": {
+        "pid": 39050
+      },
+      "created_at": 1778392230,
+      "run_id": 398
+    },
+    {
+      "kind": "commented",
+      "payload": {
+        "author": "ops",
+        "len": 550
+      },
+      "created_at": 1778392391,
+      "run_id": null
+    },
+    {
+      "kind": "completed",
+      "payload": {
+        "result_len": 0,
+        "summary": "Refreshed local QMD indexing for the Sunday decision packet and blocker-lineage docs, then documented before/after status and search evidence in docs/ops/qmd_sunday_decision_refresh_2026-05-10.md. `whiteford-ai-law-pages` increased from 179 to 182 indexed files and searches now retrieve the Sunday packet, review, re-review, Supabase blocker lineage, and Tech GC local/no-token QA docs; the delivera"
+      },
+      "created_at": 1778392412,
+      "run_id": 398
+    }
+  ],
+  "runs": [
+    {
+      "id": 398,
+      "profile": "ops",
+      "step_key": null,
+      "status": "done",
+      "outcome": "completed",
+      "summary": "Refreshed local QMD indexing for the Sunday decision packet and blocker-lineage docs, then documented before/after status and search evidence in docs/ops/qmd_sunday_decision_refresh_2026-05-10.md. `whiteford-ai-law-pages` increased from 179 to 182 indexed files and searches now retrieve the Sunday packet, review, re-review, Supabase blocker lineage, and Tech GC local/no-token QA docs; the deliverable index and standard Kanban comment were updated.",
+      "error": null,
+      "metadata": {
+        "changed_files": [
+          "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/ops/qmd_sunday_decision_refresh_2026-05-10.md",
+          "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/KANBAN_DELIVERABLE_INDEX.md"
+        ],
+        "commands_run": [
+          "PATH=\"/opt/homebrew/bin:$PATH\" qmd status",
+          "PATH=\"/opt/homebrew/bin:$PATH\" qmd search \"Sunday morning decision packet\" -c whiteford-ai-law-pages",
+          "PATH=\"/opt/homebrew/bin:$PATH\" qmd search \"Supabase blocker t_fa6eb9c1 t_53d470c6\" -c whiteford-ai-law-pages",
+          "PATH=\"/opt/homebrew/bin:$PATH\" qmd search \"Tech GC local no-token QA\" -c whiteford-ai-law-pages",
+          "PATH=\"/opt/homebrew/bin:$PATH\" qmd update",
+          "PATH=\"/opt/homebrew/bin:$PATH\" qmd embed --max-docs-per-batch 50 --max-batch-mb 10",
+          "PATH=\"/opt/homebrew/bin:$PATH\" qmd search \"Sunday decision packet\" -c whiteford-ai-law-pages"
+        ],
+        "qmd_before": {
+          "total_files_indexed": 185,
+          "whiteford_collection_files": 179,
+          "vectors": 2629
+        },
+        "qmd_after": {
+          "total_files_indexed": 188,
+          "whiteford_collection_files": 182,
+          "vectors": 2681
+        },
+        "search_verification": {
+          "sunday_morning_decision_packet": [
+            "qmd://whiteford-ai-law-pages/docs/reviews/2026-05-10-sunday-morning-decision-packet-review.md",
+            "qmd://whiteford-ai-law-pages/docs/reviews/2026-05-10-sunday-morning-decision-packet-rereview.md",
+            "qmd://whiteford-ai-law-pages/docs/digests/2026-05-10-sunday-morning-decision-packet.md"
+          ],
+          "supabase_blocker_lineage": [
+            "qmd://whiteford-ai-law-pages/docs/reviews/2026-05-10-sunday-morning-decision-packet-review.md",
+            "qmd://whiteford-ai-law-pages/docs/reviews/2026-05-10-sunday-morning-decision-packet-rereview.md",
+            "qmd://whiteford-ai-law-pages/docs/digests/2026-05-10-sunday-morning-decision-packet.md"
+          ],
+          "tech_gc_local_no_token_qa": [
+            "qmd://whiteford-ai-law-pages/docs/controlled-pilot/tech-gc-local-no-token-qa-harness-plan-2026-05-09.md",
+            "qmd://whiteford-ai-law-pages/docs/controlled-pilot/tech-gc-controlled-pilot-morning-approval-checklist-2026-05-09.md",
+            "qmd://whiteford-ai-law-pages/docs/controlled-pilot/tech-gc-internal-controlled-pilot-packet-2026-05-09.md",
+            "qmd://whiteford-ai-law-pages/docs/tech-gc-local-no-token-qa-evidence-2026-05-08.md"
+          ]
+        },
+        "safety": "Local-only QMD maintenance and markdown documentation updates only; no external/public action, CRM/HighLevel mutation, Supabase DDL/sync/backfill/row mutation, Clio, email/social/LinkedIn/ad action, or credential change.",
+        "notes": [
+          "QMD emitted a non-fatal local node-llama-cpp Metal compile warning, but status/search/embed commands completed successfully.",
+          "QMD URI output normalized underscores to hyphens for the Sunday document paths; source files remain the underscore-named markdown files."
+        ]
+      },
+      "worker_pid": null,
+      "started_at": 1778392230,
+      "ended_at": 1778392412
+    }
+  ]
+}

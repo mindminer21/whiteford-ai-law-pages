@@ -1,0 +1,7 @@
+{
+  "run_label": "2026-05-12",
+  "source_availability": "GATE_1_FAILED",
+  "failure_reason": "Both web_search and web_extract failed with Payment Required (insufficient credits for underlying Firecrawl service). No live-source prospect research was performed.",
+  "suppression_reason": "Gate 1 (live-source extraction) failed. No companies were discovered, scored, or staged.",
+  "candidates": []
+}

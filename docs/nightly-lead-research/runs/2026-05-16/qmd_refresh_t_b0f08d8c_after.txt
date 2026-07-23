@@ -1,0 +1,95 @@
+COMMAND: qmd status
+QMD Status
+
+Index: /Users/jeff/.cache/qmd/index.sqlite
+Size:  50.1 MB
+
+Documents
+  Total:    401 files indexed
+  Vectors:  8896 embedded
+  Updated:  3m ago
+
+AST Chunking
+  Status:   active
+  Languages: typescript, tsx, javascript, python, go, rust
+
+Collections
+  whiteford-ai-law-pages (qmd://whiteford-ai-law-pages/)
+    Pattern:  **/*.md
+    Files:    395 (updated 3m ago)
+    Contexts: 1
+      /: Schell IP / Whiteford AI authority, SEO, YouTube, HighLev...
+  business-development-books (qmd://business-development-books/)
+    Pattern:  **/*.md
+    Files:    6 (updated 11d ago)
+    Contexts: 1
+      /: Private local business-development book corpus for Jeff S...
+
+Examples
+  # List files in a collection
+  qmd ls whiteford-ai-law-pages
+  # Get a document
+  qmd get qmd://whiteford-ai-law-pages/path/to/file.md
+  # Search within a collection
+  qmd search "query" -c whiteford-ai-law-pages
+
+Models
+  Embedding:   https://huggingface.co/ggml-org/embeddinggemma-300M-GGUF
+  Reranking:   https://huggingface.co/ggml-org/Qwen3-Reranker-0.6B-Q8_0-GGUF
+  Generation:  https://huggingface.co/tobil/qmd-query-expansion-1.7B-gguf
+
+Device
+  GPU:      metal (offloading: yes)
+  Devices:  Apple M5 Max
+  VRAM:     107.5 GB free / 107.5 GB total
+  CPU:      6 math cores
+
+Tips
+  Add update commands to keep collections fresh: whiteford-ai-law-pages, business-development-books
+    qmd collection update-cmd <name> 'git stash && git pull --rebase --ff-only && git stash pop'
+
+---
+COMMAND: qmd search -n 5 --files "t_f447c8e1 Crusoe LinkedIn awareness review"
+#3e4b48,0.95,qmd://whiteford-ai-law-pages/docs/growth-os/linkedin-awareness-drafts/2026-05-16/2026-05-16-crusoe-linkedin-awareness-review-t-f447c8e1.md,"Schell IP / Whiteford AI authority, SEO, YouTube, HighLevel campaign, landing page, and legal marketing review materials."
+#b07f2a,0.95,qmd://whiteford-ai-law-pages/docs/growth-os/linkedin-awareness-drafts/2026-05-16/2026-05-16-crusoe-linkedin-awareness-draft.md,"Schell IP / Whiteford AI authority, SEO, YouTube, HighLevel campaign, landing page, and legal marketing review materials."
+#52a05b,0.95,qmd://whiteford-ai-law-pages/docs/digests/2026-05-16-daily-digest.md,"Schell IP / Whiteford AI authority, SEO, YouTube, HighLevel campaign, landing page, and legal marketing review materials."
+#406579,0.83,qmd://whiteford-ai-law-pages/docs/kanban-deliverable-index.md,"Schell IP / Whiteford AI authority, SEO, YouTube, HighLevel campaign, landing page, and legal marketing review materials."
+---
+COMMAND: qmd search -n 5 --files "t_9938ab69 nightly Qwen prospect digest review"
+#d5d42b,0.93,qmd://whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-16/nightly-qwen-prospect-digest-review-t-9938ab69.md,"Schell IP / Whiteford AI authority, SEO, YouTube, HighLevel campaign, landing page, and legal marketing review materials."
+#52a05b,0.91,qmd://whiteford-ai-law-pages/docs/digests/2026-05-16-daily-digest.md,"Schell IP / Whiteford AI authority, SEO, YouTube, HighLevel campaign, landing page, and legal marketing review materials."
+#406579,0.86,qmd://whiteford-ai-law-pages/docs/kanban-deliverable-index.md,"Schell IP / Whiteford AI authority, SEO, YouTube, HighLevel campaign, landing page, and legal marketing review materials."
+---
+COMMAND: qmd search -n 5 --files "highlevel_agent_targeting_sync_noop_report 2026-05-16"
+#cab4f8,0.92,qmd://whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-16/highlevel-agent-targeting-sync-noop-report.md,"Schell IP / Whiteford AI authority, SEO, YouTube, HighLevel campaign, landing page, and legal marketing review materials."
+#d5d42b,0.92,qmd://whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-16/nightly-qwen-prospect-digest-review-t-9938ab69.md,"Schell IP / Whiteford AI authority, SEO, YouTube, HighLevel campaign, landing page, and legal marketing review materials."
+#406579,0.88,qmd://whiteford-ai-law-pages/docs/kanban-deliverable-index.md,"Schell IP / Whiteford AI authority, SEO, YouTube, HighLevel campaign, landing page, and legal marketing review materials."
+---
+COMMAND: qmd search -n 5 --files "validation_report 2026-05-16"
+#794627,0.92,qmd://whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-16/validation-report.md,"Schell IP / Whiteford AI authority, SEO, YouTube, HighLevel campaign, landing page, and legal marketing review materials."
+#cab4f8,0.91,qmd://whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-16/highlevel-agent-targeting-sync-noop-report.md,"Schell IP / Whiteford AI authority, SEO, YouTube, HighLevel campaign, landing page, and legal marketing review materials."
+#d5d42b,0.91,qmd://whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-16/nightly-qwen-prospect-digest-review-t-9938ab69.md,"Schell IP / Whiteford AI authority, SEO, YouTube, HighLevel campaign, landing page, and legal marketing review materials."
+#406579,0.88,qmd://whiteford-ai-law-pages/docs/kanban-deliverable-index.md,"Schell IP / Whiteford AI authority, SEO, YouTube, HighLevel campaign, landing page, and legal marketing review materials."
+---
+COMMAND: qmd search -n 5 --files "t_f447c8e1"
+#3e4b48,0.89,qmd://whiteford-ai-law-pages/docs/growth-os/linkedin-awareness-drafts/2026-05-16/2026-05-16-crusoe-linkedin-awareness-review-t-f447c8e1.md,"Schell IP / Whiteford AI authority, SEO, YouTube, HighLevel campaign, landing page, and legal marketing review materials."
+#52a05b,0.89,qmd://whiteford-ai-law-pages/docs/digests/2026-05-16-daily-digest.md,"Schell IP / Whiteford AI authority, SEO, YouTube, HighLevel campaign, landing page, and legal marketing review materials."
+#b07f2a,0.88,qmd://whiteford-ai-law-pages/docs/growth-os/linkedin-awareness-drafts/2026-05-16/2026-05-16-crusoe-linkedin-awareness-draft.md,"Schell IP / Whiteford AI authority, SEO, YouTube, HighLevel campaign, landing page, and legal marketing review materials."
+#406579,0.62,qmd://whiteford-ai-law-pages/docs/kanban-deliverable-index.md,"Schell IP / Whiteford AI authority, SEO, YouTube, HighLevel campaign, landing page, and legal marketing review materials."
+---
+COMMAND: qmd search -n 5 --files "t_b3f743fe"
+#52a05b,0.87,qmd://whiteford-ai-law-pages/docs/digests/2026-05-16-daily-digest.md,"Schell IP / Whiteford AI authority, SEO, YouTube, HighLevel campaign, landing page, and legal marketing review materials."
+#cab4f8,0.87,qmd://whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-16/highlevel-agent-targeting-sync-noop-report.md,"Schell IP / Whiteford AI authority, SEO, YouTube, HighLevel campaign, landing page, and legal marketing review materials."
+#d5d42b,0.86,qmd://whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-16/nightly-qwen-prospect-digest-review-t-9938ab69.md,"Schell IP / Whiteford AI authority, SEO, YouTube, HighLevel campaign, landing page, and legal marketing review materials."
+#406579,0.48,qmd://whiteford-ai-law-pages/docs/kanban-deliverable-index.md,"Schell IP / Whiteford AI authority, SEO, YouTube, HighLevel campaign, landing page, and legal marketing review materials."
+---
+COMMAND: qmd search -n 5 --files "t_8b5d48e2"
+#d5d42b,0.88,qmd://whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-16/nightly-qwen-prospect-digest-review-t-9938ab69.md,"Schell IP / Whiteford AI authority, SEO, YouTube, HighLevel campaign, landing page, and legal marketing review materials."
+#52a05b,0.87,qmd://whiteford-ai-law-pages/docs/digests/2026-05-16-daily-digest.md,"Schell IP / Whiteford AI authority, SEO, YouTube, HighLevel campaign, landing page, and legal marketing review materials."
+#cab4f8,0.87,qmd://whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-16/highlevel-agent-targeting-sync-noop-report.md,"Schell IP / Whiteford AI authority, SEO, YouTube, HighLevel campaign, landing page, and legal marketing review materials."
+#406579,0.48,qmd://whiteford-ai-law-pages/docs/kanban-deliverable-index.md,"Schell IP / Whiteford AI authority, SEO, YouTube, HighLevel campaign, landing page, and legal marketing review materials."
+---
+COMMAND: qmd search -n 5 --files "t_9938ab69"
+#d5d42b,0.89,qmd://whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-16/nightly-qwen-prospect-digest-review-t-9938ab69.md,"Schell IP / Whiteford AI authority, SEO, YouTube, HighLevel campaign, landing page, and legal marketing review materials."
+#52a05b,0.88,qmd://whiteford-ai-law-pages/docs/digests/2026-05-16-daily-digest.md,"Schell IP / Whiteford AI authority, SEO, YouTube, HighLevel campaign, landing page, and legal marketing review materials."
+#406579,0.64,qmd://whiteford-ai-law-pages/docs/kanban-deliverable-index.md,"Schell IP / Whiteford AI authority, SEO, YouTube, HighLevel campaign, landing page, and legal marketing review materials."

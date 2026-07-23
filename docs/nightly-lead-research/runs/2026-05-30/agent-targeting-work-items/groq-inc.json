@@ -1,0 +1,147 @@
+{
+  "prospect_id": "groq-inc-20260530",
+  "company": {
+    "prospect_id": "prospect_groq_20260530",
+    "name": "Groq, Inc.",
+    "domain": "groq.com",
+    "website_url": "https://groq.com/",
+    "location": "Santa Cruz, CA (inferred from TechCrunch coverage; headquarters unverified in this run)",
+    "state_region": null,
+    "industry": "AI inference hardware / semiconductor / cloud",
+    "segment": "ai-patent",
+    "primary_offer_lane": "ai-patent",
+    "source_type": "nightly_public_source_research",
+    "source_url": "https://techcrunch.com/2026/05/29/after-nvidias-20b-not-acqui-hire-ai-chip-startup-groq-reportedly-raising-650m/",
+    "source_note": "Groq designs custom silicon (LPU - Language Processing Unit) and operates a cloud inference platform (GroqCloud) serving 3M+ developers and teams. The company specializes in ultra-low-latency AI inference for LLM workloads. Inferred CEO: Adam Winter (interim). CFO: Matt Eng. Backed by Disruptive Capital and Infinitium.\nGate status: normalized from parent nightly qwen-local browser-fallback payload; no live enrichment performed by ops staging.",
+    "pipeline_stage": "research_staged",
+    "scores": {
+      "fit_score": 93,
+      "urgency_score": 92,
+      "value_potential_score": 95,
+      "combined_priority_score": 93
+    },
+    "lead_magnet": "AI Patent Strategy Scorecard",
+    "recommended_offer": "AI IP Protection & Patent Strategy",
+    "risk_level": "attorney_review_required",
+    "suppression_status": "consent_gap_no_auto_send",
+    "conflicts_status": "required_before_send",
+    "owner": "qwen-local",
+    "notes": "Research-only nightly candidate. No outreach authorization; attorney review, conflicts, suppression, source-current checks, and Jeff exact approval required before external use.\nUpstream description: Groq designs custom silicon (LPU - Language Processing Unit) and operates a cloud inference platform (GroqCloud) serving 3M+ developers and teams. The company specializes in ultra-low-latency AI inference for LLM workloads. Inferred CEO: Adam Winter (interim). CFO: Matt Eng. Backed by Disruptive Capital and Infinitium.\nRecent events: Reporting raise of $650M from existing investors (May 29, 2026, Axios via TechCrunch); December 2025: Nvidia $20B licensing agreement that transferred senior Groq employees to Nvidia and licensed Groq hardware technology; McLaren F1 Team chose Groq for global inference deployment; Raised $750M previously (Sep 17, 2025)\nIP signals: Custom silicon / LPU architecture is a novel IP asset worth protecting (patents on LPU design, streaming inference methodology); Recent $20B Nvidia deal involved licensing of Groq's proprietary hardware technology — demonstrates existing IP portfolio; Competing with Nvidia/AMD in accelerator space; patent strategy critical for chip design differentiation; Massive inference scale (3M developers) creates novel IP around distributed inference architecture\nAI compliance signals: Enterprise AI inference service handles customer model data — privacy and data governance implications for AI governance compliance; McLaren F1 deployment signals mission-critical deployment scenarios increasing regulatory exposure\nOutreach readiness: research_only; consent basis: no_email_opt_in\nValidation caveat: Ops normalized the parent qwen-local/browser-fallback payload only; no new external enrichment or source-current verification was performed during this staging task."
+  },
+  "contacts": [
+    {
+      "name": "Adam Winter",
+      "title": "Interim CEO",
+      "role_category": "ceo",
+      "email": null,
+      "linkedin_url": null,
+      "phone": null,
+      "source_url": "https://techcrunch.com/2026/05/29/after-nvidias-20b-not-acqui-hire-ai-chip-startup-groq-reportedly-raising-650m/",
+      "source_type": "news_payload_unverified_contact",
+      "permission_basis": "public-source research; attorney review required before outreach",
+      "confidence": 45,
+      "suppression_status": "not_checked"
+    },
+    {
+      "name": "Matt Eng",
+      "title": "CFO",
+      "role_category": "cfo",
+      "email": null,
+      "linkedin_url": null,
+      "phone": null,
+      "source_url": "https://techcrunch.com/2026/05/29/after-nvidias-20b-not-acqui-hire-ai-chip-startup-groq-reportedly-raising-650m/",
+      "source_type": "news_payload_unverified_contact",
+      "permission_basis": "public-source research; attorney review required before outreach",
+      "confidence": 45,
+      "suppression_status": "not_checked"
+    }
+  ],
+  "evidence": [
+    {
+      "evidence_id": "evidence_f6f5e0d5462aca7d807b2920",
+      "source_url": "https://techcrunch.com/2026/05/29/after-nvidias-20b-not-acqui-hire-ai-chip-startup-groq-reportedly-raising-650m/",
+      "accessed_at": "2026-05-30",
+      "source_type": "news",
+      "fact_classification": "public",
+      "evidence_snippet": "Groq raising $650M from existing investors for inference neocloud; Nvidia $20B licensing deal transferred senior employees and licensed Groq hardware tech",
+      "supported_fact": "Groq raising $650M from existing investors for inference neocloud; Nvidia $20B licensing deal transferred senior employees and licensed Groq hardware tech",
+      "confidence": "high",
+      "corroboration": "parent qwen-local browser-fallback research; source-current refresh required before external use",
+      "safe_for_outreach": "conditional",
+      "safe_fact_for_copy": "Groq raising $650M from existing investors for inference neocloud; Nvidia $20B licensing deal transferred senior employees and licensed Groq hardware tech"
+    },
+    {
+      "evidence_id": "evidence_a39ccdd0cf90c7006c1d3f23",
+      "source_url": "https://groq.com/",
+      "accessed_at": "2026-05-30",
+      "source_type": "first_party_website",
+      "fact_classification": "public",
+      "evidence_snippet": "Groq operates LPU-based inference platform, 3M+ developers and teams, GroqCloud, custom silicon, McLaren F1 customer",
+      "supported_fact": "Groq operates LPU-based inference platform, 3M+ developers and teams, GroqCloud, custom silicon, McLaren F1 customer",
+      "confidence": "high",
+      "corroboration": "parent qwen-local browser-fallback research; source-current refresh required before external use",
+      "safe_for_outreach": "conditional",
+      "safe_fact_for_copy": "Groq operates LPU-based inference platform, 3M+ developers and teams, GroqCloud, custom silicon, McLaren F1 customer"
+    }
+  ],
+  "outreach_drafts": [
+    {
+      "draft_type": "educational",
+      "channel": "manual_email_review",
+      "title": "AI Patent Strategy Scorecard attorney-review angle: Groq, Inc.",
+      "subject": "Attorney-review-only AI Patent Strategy Scorecard angle for Groq, Inc.",
+      "body": "ATTORNEY REVIEW ONLY — DO NOT SEND/POST.\nTarget: Adam Winter\nProspect: Groq, Inc.\nInternal hypothesis: Groq raising $650M from existing investors for inference neocloud; Nvidia $20B licensing deal transferred senior employees and licensed Groq hardware tech\nSuggested lead magnet: AI Patent Strategy Scorecard\n\nUpstream draft text retained for review context only; it is not approved final copy:\nSubject: Protecting your LPU architecture as a licensed asset\n\nAdam,\n\nWith Groq's $20B Nvidia technology licensing deal and the company scaling to 3M+ developers on GroqCloud, your custom LPU architecture is now one of the most commercially significant inference patents in AI.\n\nAs inference becomes the primary compute bottleneck post-training, the IP landscape around streaming inference, low-latency silicon, and distributed inference deployment is becoming increasingly crowded. Companies at the intersection of custom silicon and cloud inference are typically the first to face patent challenges and defensive filing urgency.\n\nIf you're evaluating your IP posture as Groq scales its inference cloud, we published an AI Patent Strategy Scorecard that walks through 15 critical gaps in inference-hardware IP portfolios. It covers streaming inference methodology claims, distributed cache architecture IP, and licensing-readiness for silicon designs.\n\nHappy to review it with you as you shape your IP strategy alongside the inference scaling push.\n\nEducational content only — not legal advice. Attended for attorney review.\n\nRequired before any external use: source-current verification, correct contact validation, conflicts check, suppression/opt-out/prior-touch checks, attorney review, and Jeff exact approval.",
+      "source_facts": [
+        "Groq raising $650M from existing investors for inference neocloud; Nvidia $20B licensing deal transferred senior employees and licensed Groq hardware tech",
+        "Groq operates LPU-based inference platform, 3M+ developers and teams, GroqCloud, custom silicon, McLaren F1 customer"
+      ],
+      "source_urls": [
+        "https://techcrunch.com/2026/05/29/after-nvidias-20b-not-acqui-hire-ai-chip-startup-groq-reportedly-raising-650m/",
+        "https://groq.com/"
+      ],
+      "risk_level": "attorney_review_required",
+      "internal_review_notes": "Not approved for sending or posting. Research-only local staging; requires attorney review, conflicts, suppression, source-current checks, and Jeff exact approval before external use."
+    }
+  ],
+  "validation_gates": {
+    "gate_1_live_source": "PARENT_BROWSER_FALLBACK_PAYLOAD_ONLY",
+    "source_status": "Parent qwen-local used browser fallback after Firecrawl/search/extract quota failures; ops staging did not re-browse or enrich.",
+    "contact_validation": "contacts require source-current validation and enrichment before outreach",
+    "outreach_readiness": "attorney-review-only; no external action authorized"
+  },
+  "consent_gating": {
+    "ops_no_auto_send": true,
+    "consent_basis": "no_email_opt_in",
+    "approval_status": "no-auto-send",
+    "workflow_trigger_tags": [],
+    "suppression_tags": [
+      "newsletter:not-consented"
+    ]
+  },
+  "source_candidate_path": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-30/prospect_candidates.json",
+  "normalized_store_path": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-30/prospect_candidates.normalized_for_store.json",
+  "source_packet_prospect_id": "groq-inc-20260530",
+  "local_growth_os_prospect_id": "prospect_groq_20260530",
+  "task": "prepare_internal_attorney_review_agent_targeting_packet",
+  "guardrails": {
+    "external_action_allowed": false,
+    "approval_required": true,
+    "no_outreach_no_workflows_no_social_no_clio_no_live_sync": true,
+    "required_before_external_use": [
+      "Jeff exact approval",
+      "attorney review",
+      "conflicts check",
+      "suppression/opt-out/prior-touch check",
+      "source-current verification",
+      "contact identity correction/enrichment where flagged"
+    ]
+  },
+  "work_item_id": "work_nightly_agent_targeting_20260530_ba06988f82332b15f110e76d",
+  "input_path": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-30/agent-targeting-work-items/groq-inc.json",
+  "output_path": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-30/agent-targeting-packets/groq-inc-agent-targeting-packet.md",
+  "remediation_checklist": [
+    "Attorney review required before external use.",
+    "Conflicts, suppression/opt-out, prior-touch, and source-current checks required before any outreach.",
+    "Do not send, post, tag, trigger workflows, sync live CRM/Supabase, or write Clio without Jeff exact approval."
+  ]
+}

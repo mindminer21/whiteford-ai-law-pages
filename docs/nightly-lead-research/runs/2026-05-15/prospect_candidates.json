@@ -1,0 +1,16 @@
+{
+  "run_date": "2026-05-15",
+  "run_label": "2026-05-15-nightly",
+  "status": "halted_gate1_failed",
+  "gate1_status": "failed",
+  "gate1_failure_reason": "Firecrawl credits exhausted: web_search and web_extract both returned 'Payment Required: Insufficient credits'.",
+  "local_rag_status": "unavailable",
+  "local_rag_failure_reason": "Business-development corpus search index not found (build_index.py not run successfully; working-directory path issue). No QMD search available.",
+  "prospects_count": 0,
+  "contacts_count": 0,
+  "evidence_records_count": 0,
+  "outreach_drafts_count": 0,
+  "approval_items_count": 0,
+  "crm_sync_records_count": 0,
+  "candidates": []
+}

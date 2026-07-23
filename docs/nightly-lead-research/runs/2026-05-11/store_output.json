@@ -1,0 +1,18 @@
+{
+  "counts": {
+    "approval_items": 0,
+    "contacts": 1,
+    "crm_sync_records": 1,
+    "opportunities": 1,
+    "outreach_drafts": 0,
+    "prospects": 1,
+    "source_evidence": 2,
+    "suppression_checks": 0
+  },
+  "db": "/Users/jeff/.openclaw/projects/mountain-west-growth-os/data/growth-os.sqlite",
+  "note": "The ops worker successfully ran prospect_research_store.py before exiting without kanban_complete; watchdog verified the DB rows and wrote this report without re-applying writes.",
+  "prospect_id": "prospect_ae4ea495016fb286698d44da",
+  "status": "applied_verified_after_worker_protocol_violation",
+  "work_item_id": "work_nightly_agent_targeting_d9e8526442f6ac499abd",
+  "work_item_inserted_by_watchdog": true
+}

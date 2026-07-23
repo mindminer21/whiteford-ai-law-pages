@@ -1,0 +1,27 @@
+{
+  "batchId": "ghl-lead-sync-live-2026-05-06T06-53-35-632Z-d7f06e73",
+  "created_at": "2026-05-06T06:53:35.632Z",
+  "live": true,
+  "status": "ok",
+  "source": "local SQLite mirror of Supabase/Growth OS UI prospects",
+  "selected": 1,
+  "skippedExisting": 1,
+  "contactsCreated": 0,
+  "opportunitiesCreated": 0,
+  "blocked": 0,
+  "pipelineId": "Tbx4tA6wHv5lTwZPSHyZ",
+  "stageName": "Agent Targeting",
+  "stageId": "fd569cf4-979b-43b8-bd0f-78e807e80ff1",
+  "nextStageName": "Agent Targeting",
+  "nextStageId": "fd569cf4-979b-43b8-bd0f-78e807e80ff1",
+  "nextStageNote": "After metadata capture/source research, qualified records should move to Agent Targeting for company-specific value-first collateral and approval-gated outreach planning.",
+  "records": [
+    {
+      "prospect_id": "prospect_089c4bc541c05da752169c7a",
+      "company_name": "AION Robotics Corporation",
+      "status": "already_synced",
+      "contactId": "soFFCLLxwWfU5oFTQcKJ",
+      "opportunityId": "mp5BRh2qiLJkloZCCT9E"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "companyName": "Kore.ai",
+  "dnd": true,
+  "dndSettings": {
+    "Call": {
+      "message": "Internal agent targeting placeholder; no outreach until Jeff approval.",
+      "status": "active"
+    },
+    "Email": {
+      "message": "Internal agent targeting placeholder; no outreach until Jeff approval.",
+      "status": "active"
+    },
+    "SMS": {
+      "message": "Internal agent targeting placeholder; no outreach until Jeff approval.",
+      "status": "active"
+    },
+    "WhatsApp": {
+      "message": "Internal agent targeting placeholder; no outreach until Jeff approval.",
+      "status": "active"
+    }
+  },
+  "firstName": "Kore.ai",
+  "lastName": "Agent Targeting",
+  "locationId": "tm68WWMrcAa3TqQbEAMa",
+  "name": "Kore.ai Agent Targeting",
+  "source": "Growth OS nightly prospect research - Agent Targeting (prospect_ae4ea495016fb286698d44da)",
+  "website": "https://www.kore.ai"
+}

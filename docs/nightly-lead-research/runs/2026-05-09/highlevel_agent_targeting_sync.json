@@ -1,0 +1,41 @@
+{
+  "batchId": "ghl-agent-targeting-sync-noop-2026-05-09T08-47-26Z-t_999ea4bf",
+  "blocked": 0,
+  "completed_at": "2026-05-09T08:47:26Z",
+  "contactsCreated": 0,
+  "contactsLinked": 0,
+  "created_at": "2026-05-09T08:47:26Z",
+  "databaseEvidence": {
+    "agent_targeting_work_items_2026_05_09": 0,
+    "crm_sync_records_2026_05_09": 0,
+    "ghl_sync_batches_2026_05_09": 0,
+    "prospects_2026_05_09": 0
+  },
+  "inputArtifacts": {
+    "normalized_payload": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-09/prospect_candidates.normalized_for_store.json",
+    "store_output": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-09/store_output.json",
+    "validation_report": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-09/validation_report.json"
+  },
+  "live": false,
+  "locationId": "tm68WWMrcAa3TqQbEAMa",
+  "noOpReason": "Parent validation produced zero validated candidates and zero Agent Targeting work items because Gate 1 live-source extraction was blocked by Firecrawl Payment Required. There were no safe prospects to create or link in HighLevel.",
+  "opportunitiesCreated": 0,
+  "opportunitiesLinked": 0,
+  "pipelineId": "Tbx4tA6wHv5lTwZPSHyZ",
+  "records": [],
+  "safety": {
+    "company_level_contacts_used": false,
+    "dnd_enabled_on_created_contacts": false,
+    "no_contact_mutation": true,
+    "no_linkedin_actions": true,
+    "no_opportunity_mutation": true,
+    "no_sends": true,
+    "no_tags_added": true,
+    "no_workflow_enrollment": true
+  },
+  "selected": 0,
+  "stageName": "Agent Targeting",
+  "status": "noop_no_validated_candidates",
+  "syncedRecords": 0,
+  "taskId": "t_999ea4bf"
+}

@@ -1,0 +1,44 @@
+{
+  "verified_at": "2026-05-27T07:44:16+00:00",
+  "task_id": "t_b09102c2",
+  "db": "/Users/jeff/.openclaw/projects/mountain-west-growth-os/data/growth-os.sqlite",
+  "normalized_payload": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-27/prospect_candidates.normalized_for_store.json",
+  "candidate_count": 0,
+  "gate_failure": {
+    "gate": "1",
+    "name": "Live-source extraction required",
+    "status": "FAILED",
+    "blocker": "Firecrawl credits exhausted. web_search returns Payment Required. firecrawl_search (MCP) also returns HTTP 402. No live-source replacement is configured for the qwen-local profile.",
+    "consequence": "Per the nightly prompt: stop prospect staging; write source_unavailable_report.md; produce empty/no-op packet artifacts."
+  },
+  "store_apply_status": {
+    "status": "applied",
+    "counts": {},
+    "db": "/Users/jeff/.openclaw/projects/mountain-west-growth-os/data/growth-os.sqlite"
+  },
+  "table_counts_after": {
+    "prospects": 49,
+    "contacts": 44,
+    "opportunities": 60,
+    "source_evidence": 86,
+    "outreach_drafts": 31,
+    "approval_items": 63,
+    "crm_sync_records": 42,
+    "suppression_checks": 31,
+    "work_items": 26
+  },
+  "counts_delta_from_noop_apply": {
+    "prospects": 0,
+    "contacts": 0,
+    "opportunities": 0,
+    "source_evidence": 0,
+    "outreach_drafts": 0,
+    "approval_items": 0,
+    "crm_sync_records": 0,
+    "suppression_checks": 0,
+    "work_items": 0
+  },
+  "work_items_created_or_replaced": [],
+  "work_items_20260527": [],
+  "safety_decision": "Gate 1 failed upstream; no prospects were staged, no work items were created, and no external/live CRM/Supabase/HighLevel/social/email/Clio action is authorized."
+}

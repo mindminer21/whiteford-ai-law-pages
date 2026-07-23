@@ -1,0 +1,405 @@
+{
+  "packet": "2026-05-15 AION lifecycle read-only diagnostic packet",
+  "generated_at_utc": "2026-05-15T09:36:31Z",
+  "task_id": "t_1285c205",
+  "tenant": "whiteford-mountain-west",
+  "guardrails": "Read-only local/private decision prep. No SQLite/Supabase/HighLevel/CRM/Clio/source/outreach/social/workflow/public mutation or external action performed.",
+  "db_access": {
+    "path": "/Users/jeff/.openclaw/projects/mountain-west-growth-os/data/growth-os.sqlite",
+    "uri": "file:/Users/jeff/.openclaw/projects/mountain-west-growth-os/data/growth-os.sqlite?mode=ro&immutable=1",
+    "pragma_query_only": 1
+  },
+  "source_files_consulted": [
+    {
+      "path": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/digests/2026-05-15_0630_morning_action_brief.md",
+      "use": "recommended one narrow read-only AION/contact-quality data-hygiene lane; preserves HOLD posture"
+    },
+    {
+      "path": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/growth-os/data-hygiene/2026-05-15_agent_targeting_lifecycle_reconciliation_worksheet.md",
+      "use": "source worksheet naming AION lifecycle placeholder, risk class, contact/source/suppression gaps, and packet requirements"
+    },
+    {
+      "path": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/growth-os/data-hygiene/2026-05-11_agent_targeting_lifecycle_reconciliation_plan.md",
+      "use": "prior plan with AION row IDs and HOLD rationale"
+    },
+    {
+      "path": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/growth-os/data-hygiene/2026-05-11_private_dashboard_data_hygiene_visibility_spec.md",
+      "use": "existing visibility spec flagging AION Agent Targeting missing offer/contact and blocked suppression/conflicts row"
+    },
+    {
+      "path": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/growth-os/data-hygiene/2026-05-11_duplicate_lifecycle_future_approval_packet.md",
+      "use": "future approval packet naming AION exact IDs and no auto-fill posture"
+    },
+    {
+      "path": "/Users/jeff/.openclaw/projects/mountain-west-growth-os/data/growth-os.sqlite",
+      "use": "read-only SQLite inspection via immutable URI and PRAGMA query_only=ON"
+    }
+  ],
+  "pii_minimization": "Emails and phones are reduced to presence flags or [phone present - value minimized] placeholders. Contact LinkedIn is reduced to a presence flag in DB evidence. No raw secret/token values included.",
+  "queries": {
+    "prospect": {
+      "sql": "select prospect_id, company_name, domain, website_url, location, state_region, industry, segment, source_type, source_url, pipeline_stage, fit_score, urgency_score, risk_level, suppression_status, conflicts_status, owner, created_at, updated_at from prospects where prospect_id='prospect_089c4bc541c05da752169c7a'",
+      "row_count": 1,
+      "rows": [
+        {
+          "prospect_id": "prospect_089c4bc541c05da752169c7a",
+          "company_name": "AION Robotics Corporation",
+          "domain": "aionrobotics.com",
+          "website_url": "https://www.aionrobotics.com/",
+          "location": "Arvada / Denver metro, Colorado",
+          "state_region": "Colorado / Mountain West",
+          "industry": "Autonomous robotics / rugged industrial AI systems",
+          "segment": "ai-patent",
+          "source_type": "controlled_test_public_source_research",
+          "source_url": "https://www.aionrobotics.com/",
+          "pipeline_stage": "research_staged",
+          "fit_score": 90.0,
+          "urgency_score": 72.0,
+          "risk_level": "attorney_review_required",
+          "suppression_status": "not_checked",
+          "conflicts_status": "required_before_send",
+          "owner": "qwen-local",
+          "created_at": "2026-05-06T06:53:35+00:00",
+          "updated_at": "2026-05-06T06:53:35+00:00"
+        }
+      ]
+    },
+    "opportunities": {
+      "sql": "select opportunity_id, prospect_id, contact_id, offer_id, stage, estimated_value, owner, source, created_at, updated_at from opportunities where prospect_id='prospect_089c4bc541c05da752169c7a' or opportunity_id in ('opp_8b9cb9cb94b88f73b74b7064','ghl-lead-prospect_089c4bc541c05da752169c7a')",
+      "row_count": 2,
+      "rows": [
+        {
+          "opportunity_id": "opp_8b9cb9cb94b88f73b74b7064",
+          "prospect_id": "prospect_089c4bc541c05da752169c7a",
+          "contact_id": "contact_14b42eb2f15da73c52694fcb",
+          "offer_id": "ai-patent",
+          "stage": "research_staged",
+          "estimated_value": null,
+          "owner": "qwen-local",
+          "source": "nightly_prospect_research",
+          "created_at": "2026-05-06T06:42:29+00:00",
+          "updated_at": "2026-05-06T06:42:29+00:00"
+        },
+        {
+          "opportunity_id": "ghl-lead-prospect_089c4bc541c05da752169c7a",
+          "prospect_id": "prospect_089c4bc541c05da752169c7a",
+          "contact_id": null,
+          "offer_id": null,
+          "stage": "agent-targeting",
+          "estimated_value": 0.0,
+          "owner": "GHL",
+          "source": "gohighlevel",
+          "created_at": "2026-05-06T06:52:29.088Z",
+          "updated_at": "2026-05-06T06:52:29.088Z"
+        }
+      ]
+    },
+    "contacts_minimized": {
+      "sql": "select contact_id, prospect_id, name, title, role_category, case when email is not null and email<>'' then 1 else 0 end as email_present, case when linkedin_url is not null and linkedin_url<>'' then 1 else 0 end as linkedin_present, case when phone is not null and phone<>'' then 1 else 0 end as phone_present, source_type, source_url, confidence, permission_basis, suppression_status, created_at, updated_at from contacts where prospect_id='prospect_089c4bc541c05da752169c7a'",
+      "row_count": 1,
+      "rows": [
+        {
+          "contact_id": "contact_14b42eb2f15da73c52694fcb",
+          "prospect_id": "prospect_089c4bc541c05da752169c7a",
+          "name": "Nicholas Nunno",
+          "title": "CEO / Founder / Product Architect",
+          "role_category": "founder_ceo_technical_product",
+          "email_present": 1,
+          "linkedin_present": 1,
+          "phone_present": 1,
+          "source_type": "public_directory_and_company_contact_research",
+          "source_url": "https://www.aionrobotics.com/investors",
+          "confidence": 72.0,
+          "permission_basis": "public-source research; attorney review, suppression check, and conflicts/pre-contact clearance required before outreach",
+          "suppression_status": "not_checked",
+          "created_at": "2026-05-06T06:42:29+00:00",
+          "updated_at": "2026-05-06T06:42:29+00:00"
+        }
+      ]
+    },
+    "source_evidence_minimized": {
+      "sql": "select evidence_id, prospect_id, source_url, accessed_at, source_type, fact_classification, supported_fact, confidence, corroboration, safe_for_outreach, safe_fact_for_copy, created_at, substr(evidence_snippet,1,180) as evidence_snippet_min from source_evidence where prospect_id='prospect_089c4bc541c05da752169c7a'",
+      "row_count": 5,
+      "rows": [
+        {
+          "evidence_id": "evidence_09bcbfa1cb3b37db7bb9af2c",
+          "prospect_id": "prospect_089c4bc541c05da752169c7a",
+          "source_url": "https://www.aionrobotics.com/",
+          "accessed_at": "2026-05-06T06:42:29+00:00",
+          "source_type": "company_website",
+          "fact_classification": "public",
+          "supported_fact": "AION uses AI-enabled autonomous robotics in industrial settings, creating strong AI patent strategy and tech legal-readiness relevance.",
+          "confidence": "high",
+          "corroboration": "official company website",
+          "safe_for_outreach": "yes",
+          "safe_fact_for_copy": "public positioning around onboard AI, hardened autonomy, and rugged autonomous industrial tools",
+          "created_at": "2026-05-06T06:42:29+00:00",
+          "evidence_snippet_min": "AION markets rugged autonomous vehicles with onboard Artificial Intelligence and hardened autonomy for mines, oilfields, construction, infrastructure, methane monitoring, and harsh"
+        },
+        {
+          "evidence_id": "evidence_6a78fcbbc855e137a8974ee6",
+          "prospect_id": "prospect_089c4bc541c05da752169c7a",
+          "source_url": "https://www.aionrobotics.com/",
+          "accessed_at": "2026-05-06T06:42:29+00:00",
+          "source_type": "company_website",
+          "fact_classification": "public",
+          "supported_fact": "The product platform likely includes protectable technical systems, software/control architecture, sensor integration, and product-roadmap IP considerations.",
+          "confidence": "high",
+          "corroboration": "official company website",
+          "safe_for_outreach": "yes",
+          "safe_fact_for_copy": "public details about C3, M6, L4, edge AI sensing, onboard compute, and autonomous site-management vehicles",
+          "created_at": "2026-05-06T06:42:29+00:00",
+          "evidence_snippet_min": "AION describes C3, M6, and L4 products including edge AI sensing, onboard compute, physical task execution, no-code deployment, payload and runtime specs."
+        },
+        {
+          "evidence_id": "evidence_73bb8b9b7ce2a8c50bdcd449",
+          "prospect_id": "prospect_089c4bc541c05da752169c7a",
+          "source_url": "https://www.aionrobotics.com/investors",
+          "accessed_at": "2026-05-06T06:42:29+00:00",
+          "source_type": "company_investor_page",
+          "fact_classification": "public",
+          "supported_fact": "Nicholas Nunno appears to be an appropriate founder/CEO decision maker for AI patent strategy and productized tech legal readiness outreach.",
+          "confidence": "high",
+          "corroboration": "official company investor page",
+          "safe_for_outreach": "yes",
+          "safe_fact_for_copy": "public investor-page role and AI labor automation framing",
+          "created_at": "2026-05-06T06:42:29+00:00",
+          "evidence_snippet_min": "Investor page identifies Nicholas Nunno as CEO with 20 years in Engineering & Business Management and frames the company around physical manifestations of AI and automation of dull"
+        },
+        {
+          "evidence_id": "evidence_9d37bdf00cd8ec86b1e24b21",
+          "prospect_id": "prospect_089c4bc541c05da752169c7a",
+          "source_url": "https://www.zoominfo.com/pic/aion-robotics/456188162",
+          "accessed_at": "2026-05-06T06:42:29+00:00",
+          "source_type": "public_business_directory",
+          "fact_classification": "public",
+          "supported_fact": "Public business directory supports company location, general phone value, website, and CEO identity, but contact details should be verified before use.",
+          "confidence": "medium",
+          "corroboration": "third-party business directory",
+          "safe_for_outreach": "conditional",
+          "safe_fact_for_copy": "Arvada, Colorado company location and public company phone, subject to verification",
+          "created_at": "2026-05-06T06:42:29+00:00",
+          "evidence_snippet_min": "ZoomInfo lists AION Robotics at 19000 Hwy 72, Arvada, CO, 80007; phone [phone present - value minimized]; website www.aionrobotics.com; Nicholas Nunno as CEO."
+        },
+        {
+          "evidence_id": "evidence_e4a1da166a749df72312a6a9",
+          "prospect_id": "prospect_089c4bc541c05da752169c7a",
+          "source_url": "https://contactout.com/Nicholas-Nunno-316738188",
+          "accessed_at": "2026-05-06T06:42:29+00:00",
+          "source_type": "public_contact_directory",
+          "fact_classification": "public",
+          "supported_fact": "Third-party contact directory supports Nicholas Nunno role and suggests business email availability; use only after verification and attorney review.",
+          "confidence": "medium",
+          "corroboration": "third-party contact directory plus official investor page role confirmation",
+          "safe_for_outreach": "conditional",
+          "safe_fact_for_copy": "Nicholas Nunno founder/product architect role, with contact data requiring verification",
+          "created_at": "2026-05-06T06:42:29+00:00",
+          "evidence_snippet_min": "ContactOut profile identifies Nicholas Nunno as Founder / Product Architect at AION Robotics and indicates work email/phone data exists; direct personal details should be verified "
+        }
+      ]
+    },
+    "outreach_drafts": {
+      "sql": "select draft_id, prospect_id, segment, draft_type, title, channel, subject, status, risk_level, compliance_status, approval_item_id, external_action_allowed, source_evidence_ids, solicitation_classification, brand_block_id, created_at, updated_at from outreach_drafts where prospect_id='prospect_089c4bc541c05da752169c7a'",
+      "row_count": 1,
+      "rows": [
+        {
+          "draft_id": "draft_58482b23881d3aa940dfc4c1",
+          "prospect_id": "prospect_089c4bc541c05da752169c7a",
+          "segment": "ai-patent",
+          "draft_type": "email",
+          "title": "AION Robotics AI Patent Strategy Scorecard invitation",
+          "channel": "manual_email_review",
+          "subject": "AI invention documentation for rugged autonomous systems",
+          "status": "drafted",
+          "risk_level": "attorney_review_required",
+          "compliance_status": "needs_review",
+          "approval_item_id": "approval_4b75daaceafbd4ba71f96a2b",
+          "external_action_allowed": 0,
+          "source_evidence_ids": "[\"evidence_09bcbfa1cb3b37db7bb9af2c\", \"evidence_6a78fcbbc855e137a8974ee6\", \"evidence_73bb8b9b7ce2a8c50bdcd449\", \"evidence_9d37bdf00cd8ec86b1e24b21\", \"evidence_e4a1da166a749df72312a6a9\"]",
+          "solicitation_classification": "attorney_review_only",
+          "brand_block_id": "APPROVED_WHITEFORD_SCHELL_IP_BRAND_BLOCK_REQUIRED",
+          "created_at": "2026-05-06T06:42:29+00:00",
+          "updated_at": "2026-05-06T06:42:29+00:00"
+        }
+      ]
+    },
+    "approval_items": {
+      "sql": "select approval_item_id, item_type, related_id, title, channel, recipient_or_class, risk_level, approval_status, reviewer, decision_at, approval_language, created_at, updated_at from approval_items where related_id in (select draft_id from outreach_drafts where prospect_id='prospect_089c4bc541c05da752169c7a') or lower(title) like '%aion%'",
+      "row_count": 1,
+      "rows": [
+        {
+          "approval_item_id": "approval_4b75daaceafbd4ba71f96a2b",
+          "item_type": "outreach_draft",
+          "related_id": "draft_58482b23881d3aa940dfc4c1",
+          "title": "Review outreach draft: AION Robotics Corporation - AION Robotics AI Patent Strategy Scorecard invitation",
+          "channel": "manual_email_review",
+          "recipient_or_class": "AION Robotics Corporation",
+          "risk_level": "attorney_review_required",
+          "approval_status": "pending",
+          "reviewer": "Jeff Schell",
+          "decision_at": null,
+          "approval_language": null,
+          "created_at": "2026-05-06T06:42:29+00:00",
+          "updated_at": "2026-05-06T06:42:29+00:00"
+        }
+      ]
+    },
+    "suppression_checks": {
+      "sql": "select check_id, prospect_id, draft_id, local_suppression_status, local_clio_precheck_status, whiteford_conflicts_status, opt_out_status, duplicate_prior_touch_status, evidence_path, checked_at, checked_by, final_clearance, notes from suppression_checks where prospect_id='prospect_089c4bc541c05da752169c7a'",
+      "row_count": 1,
+      "rows": [
+        {
+          "check_id": "suppress_7605e2e8ab3ca93b488624ed",
+          "prospect_id": "prospect_089c4bc541c05da752169c7a",
+          "draft_id": "draft_58482b23881d3aa940dfc4c1",
+          "local_suppression_status": "not_checked",
+          "local_clio_precheck_status": "not_checked",
+          "whiteford_conflicts_status": "required_before_send",
+          "opt_out_status": "not_checked",
+          "duplicate_prior_touch_status": "not_checked",
+          "evidence_path": null,
+          "checked_at": "2026-05-06T06:42:29+00:00",
+          "checked_by": "qwen-local",
+          "final_clearance": "not_cleared",
+          "notes": "Created automatically for attorney review gate. No outreach authorized."
+        }
+      ]
+    },
+    "execution_authorizations": {
+      "sql": "select authorization_id, draft_id, prospect_id, final_review_status, source_grounding_status, suppression_status, conflicts_status, opt_out_status, brand_status, export_status, send_status, sent_at, contacted_at, outcome_status, notes, created_at, updated_at from execution_authorizations where prospect_id='prospect_089c4bc541c05da752169c7a' or draft_id in (select draft_id from outreach_drafts where prospect_id='prospect_089c4bc541c05da752169c7a')",
+      "row_count": 0,
+      "rows": []
+    },
+    "work_items": {
+      "sql": "select work_item_id, work_type, title, stage, priority, assigned_model, input_path, output_path, risk_level, approval_required, external_action_allowed, blocker, created_at, updated_at from work_items where lower(title) like '%aion%' or lower(input_path) like '%aion%' or lower(output_path) like '%aion%' or lower(blocker) like '%aion%'",
+      "row_count": 1,
+      "rows": [
+        {
+          "work_item_id": "work_nightly_agent_targeting_ef920ffa3aefae3eafae",
+          "work_type": "agent_targeting_packet",
+          "title": "Prepare Agent Targeting packet: AION Robotics Corporation",
+          "stage": "queued",
+          "priority": 92,
+          "assigned_model": "qwen3.6:35b-a3b",
+          "input_path": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-06-controlled-test/prospect_candidates.json",
+          "output_path": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-06-controlled-test/digest.md",
+          "risk_level": "high",
+          "approval_required": 1,
+          "external_action_allowed": 0,
+          "blocker": "Create internal targeting packet only. External outreach, LinkedIn activity, workflow activation, sends, posts, comments, tags, and public use require exact approval.",
+          "created_at": "2026-05-06T06:53:35+00:00",
+          "updated_at": "2026-05-06T06:53:35+00:00"
+        }
+      ]
+    },
+    "ghl_sync_links": {
+      "sql": "select sync_link_id, local_table, local_id, ghl_object_type, ghl_object_id, ghl_location_id, ghl_pipeline_id, ghl_stage_id, sync_direction, sync_status, last_sync_at, last_error, created_at, updated_at from ghl_sync_links where local_id='prospect_089c4bc541c05da752169c7a'",
+      "row_count": 2,
+      "rows": [
+        {
+          "sync_link_id": "ghl-link-prospect-contact-prospect_089c4bc541c05da752169c7a",
+          "local_table": "prospects",
+          "local_id": "prospect_089c4bc541c05da752169c7a",
+          "ghl_object_type": "contact",
+          "ghl_object_id": "soFFCLLxwWfU5oFTQcKJ",
+          "ghl_location_id": "tm68WWMrcAa3TqQbEAMa",
+          "ghl_pipeline_id": "Tbx4tA6wHv5lTwZPSHyZ",
+          "ghl_stage_id": "fd569cf4-979b-43b8-bd0f-78e807e80ff1",
+          "sync_direction": "local_to_ghl_lead_sync",
+          "sync_status": "synced",
+          "last_sync_at": "2026-05-06T06:52:29.088Z",
+          "last_error": null,
+          "created_at": "2026-05-06T06:52:29.088Z",
+          "updated_at": "2026-05-06T06:52:29.088Z"
+        },
+        {
+          "sync_link_id": "ghl-link-prospect-opportunity-prospect_089c4bc541c05da752169c7a",
+          "local_table": "prospects",
+          "local_id": "prospect_089c4bc541c05da752169c7a",
+          "ghl_object_type": "opportunity",
+          "ghl_object_id": "mp5BRh2qiLJkloZCCT9E",
+          "ghl_location_id": "tm68WWMrcAa3TqQbEAMa",
+          "ghl_pipeline_id": "Tbx4tA6wHv5lTwZPSHyZ",
+          "ghl_stage_id": "fd569cf4-979b-43b8-bd0f-78e807e80ff1",
+          "sync_direction": "local_to_ghl_lead_sync",
+          "sync_status": "synced",
+          "last_sync_at": "2026-05-06T06:52:29.088Z",
+          "last_error": null,
+          "created_at": "2026-05-06T06:52:29.088Z",
+          "updated_at": "2026-05-06T06:52:29.088Z"
+        }
+      ]
+    },
+    "activities": {
+      "sql": "select activity_id, prospect_id, contact_id, opportunity_id, activity_type, direction, channel, summary, source_path, created_by, created_at from activities where prospect_id='prospect_089c4bc541c05da752169c7a'",
+      "row_count": 1,
+      "rows": [
+        {
+          "activity_id": "activity-ghl-lead-sync-prospect_089c4bc541c05da752169c7a",
+          "prospect_id": "prospect_089c4bc541c05da752169c7a",
+          "contact_id": null,
+          "opportunity_id": "ghl-lead-prospect_089c4bc541c05da752169c7a",
+          "activity_type": "ghl_lead_sync",
+          "direction": "outbound_crm_write",
+          "channel": "gohighlevel",
+          "summary": "Synced Growth OS UI/Supabase lead into GHL Whiteford Schell IP Pipeline at Agent Targeting. No sends/sequences.",
+          "source_path": "/Users/jeff/.openclaw/projects/mountain-west-growth-os/logs/ghl-lead-sync/ghl-lead-sync-live-2026-05-06T06-52-29-088Z-2c01894c-prospect_089c4bc541c05da752169c7a-opportunity-payload.json",
+          "created_by": "ghl-sync-growth-os-leads",
+          "created_at": "2026-05-06T06:52:29.088Z"
+        }
+      ]
+    },
+    "crm_sync_records": {
+      "sql": "select sync_record_id, local_table, local_id, crm_object, crm_object_id, action, eligibility_status, sync_status, block_reason, response_path, created_at, updated_at from crm_sync_records where local_id='prospect_089c4bc541c05da752169c7a'",
+      "row_count": 1,
+      "rows": [
+        {
+          "sync_record_id": "sync_b17108cafcf3cab12f91314f",
+          "local_table": "prospects",
+          "local_id": "prospect_089c4bc541c05da752169c7a",
+          "crm_object": "ghl_or_supabase_lead_staging",
+          "crm_object_id": "mp5BRh2qiLJkloZCCT9E",
+          "action": "upsert_staging",
+          "eligibility_status": "eligible",
+          "sync_status": "synced",
+          "block_reason": null,
+          "response_path": "/Users/jeff/.openclaw/projects/mountain-west-growth-os/logs/ghl-lead-sync/ghl-lead-sync-live-2026-05-06T06-52-29-088Z-2c01894c-prospect_089c4bc541c05da752169c7a-opportunity-response.json",
+          "created_at": "2026-05-06T06:42:29+00:00",
+          "updated_at": "2026-05-06T06:52:29.088Z"
+        }
+      ]
+    },
+    "duplicate_candidates": {
+      "sql": "select * from duplicate_candidates where local_id_a='prospect_089c4bc541c05da752169c7a' or local_id_b='prospect_089c4bc541c05da752169c7a' or lower(local_id_a) like '%aion%' or lower(local_id_b) like '%aion%'",
+      "row_count": 0,
+      "rows": []
+    },
+    "ghl_stage_events": {
+      "sql": "select event_id, ghl_opportunity_id, local_opportunity_id, previous_stage_name, new_stage_name, local_stage, detected_at, action_status, action_summary, raw_payload_path, created_at from ghl_opportunity_stage_events where local_opportunity_id in ('opp_8b9cb9cb94b88f73b74b7064','ghl-lead-prospect_089c4bc541c05da752169c7a') or lower(action_summary) like '%aion%'",
+      "row_count": 0,
+      "rows": []
+    },
+    "qa_reviews": {
+      "sql": "select qa_review_id, related_id, reviewer_agent, review_status, compliance_status, brand_status, source_grounding_status, risk_level, findings, created_at, updated_at from qa_reviews where related_id in ('prospect_089c4bc541c05da752169c7a','opp_8b9cb9cb94b88f73b74b7064','ghl-lead-prospect_089c4bc541c05da752169c7a','contact_14b42eb2f15da73c52694fcb') or lower(findings) like '%aion%'",
+      "row_count": 0,
+      "rows": []
+    }
+  },
+  "summary_ids": {
+    "prospect_id": "prospect_089c4bc541c05da752169c7a",
+    "research_staged_opportunity_id": "opp_8b9cb9cb94b88f73b74b7064",
+    "agent_targeting_placeholder_opportunity_id": "ghl-lead-prospect_089c4bc541c05da752169c7a",
+    "contact_id": "contact_14b42eb2f15da73c52694fcb",
+    "draft_id": "draft_58482b23881d3aa940dfc4c1",
+    "approval_item_id": "approval_4b75daaceafbd4ba71f96a2b",
+    "suppression_check_id": "suppress_7605e2e8ab3ca93b488624ed",
+    "work_item_id": "work_nightly_agent_targeting_ef920ffa3aefae3eafae"
+  },
+  "empty_surfaces_confirmed": [
+    "execution_authorizations",
+    "duplicate_candidates",
+    "ghl_stage_events",
+    "qa_reviews"
+  ],
+  "business_development_principle": "A strong lead magnet/decision asset solves one narrow diagnostic problem completely, earns engaged time/trust before asking for consultation, and keeps legal-services follow-up opt-in-only and attorney-review-gated."
+}

@@ -1,0 +1,43 @@
+HighLevel DOM evidence — t_437a51c1 — Tech GC Launchpad
+Captured: 2026-05-06 15:08 MDT via Chrome CDP iframe text extraction
+URL: https://app.gohighlevel.com/location/tm68WWMrcAa3TqQbEAMa/workflow/dee4450a-1b7b-4597-9fa4-9c7b7423b848
+
+Observed text excerpt:
+Skip to main content
+Back to Workflows
+
+WF | Intake | Whiteford | Tech GC Launchpad | Draft
+
+Saved
+Standard Builder
+
+Builder
+
+Settings
+
+Enrollment History
+
+Execution Logs
+
+Test Workflow
+
+Draft
+
+Publish
+
+Opted in / eligible for fut...
+
+If "Tags" includes "newsletter:ai"
+
+END
+Contact TagContact Tag Added - workflow:tech-gc-launchpad
+Tag Added includes "workflow:tech-gc-launchpad"
+Stats
+Add
+132%
+
+Panel/probe notes:
+- Existing branch verified: If "Tags" includes "newsletter:ai".
+- Add Segment probe created an unsaved blank `Select / Select Operator` segment state and disabled Add Segment/Add Branch until the incomplete segment would be filled.
+- I clicked Cancel by coordinate in the panel footer and verified the panel closed without saving.
+- Workflow header remained Draft/Saved; Publish was not clicked.

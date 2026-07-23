@@ -1,0 +1,52 @@
+{
+  "run_label": "2026-05-12",
+  "run_directory": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-12",
+  "generated_at": "2026-05-12T00:00:00Z",
+  "source_availability": "GATE_1_FAILED",
+  "failure_reason": "Both web_search and web_extract failed with Payment Required (insufficient credits for underlying Firecrawl service). No live-source prospect research was performed.",
+  "prospect_candidates": [],
+  "counts": {
+    "prospects_researched": 0,
+    "contacts_discovered": 0,
+    "evidence_records": 0,
+    "outreach_drafts": 0,
+    "approval_items": 0,
+    "github_boards_updated": 0
+  },
+  "suppression_reason": "Gate 1 (live-source extraction) failed. No companies were discovered, scored, or staged.",
+  "remediation_required": [
+    "Restore web_search / web_extract credits or adjust request limits (https://firecrawl.dev/pricing).",
+    "Add a quota monitoring alert for the Firecrawl service.",
+    "Before next run, test web_search and web_extract with a neutral target to confirm 200-level success."
+  ],
+  "context_files_loaded": [
+    "docs/highlevel_campaign_implementation_plan.md",
+    "docs/highlevel_ops_execution_blueprint.md",
+    "docs/highlevel_ops_research_synthesis.md",
+    "docs/lead_magnet_opt_in_and_app_strategy.md",
+    "docs/targeted_linkedin_awareness_post_strategy.md",
+    "docs/tech_company_legal_health_checklist_app_spec.md",
+    "docs/lead_api_opt_in_gating_audit_t_f4abf859.md",
+    "docs/plans/qwen_nightly_prospecting_agent_plan.md"
+  ],
+  "gates_passed": {
+    "gate_1_live_source": false,
+    "gate_2_entity_canonicalization": "not_reached",
+    "gate_3_current_url_stale_page": "not_reached",
+    "gate_4_contact_validation": "not_reached",
+    "gate_5_linkedin_url_hygiene": "not_reached",
+    "gate_6_mountain_west_jurisdiction": "not_reached",
+    "gate_7_outreach_crm_readiness": "all_default_research_only"
+  },
+  "local_rag_context_status": {
+    "qmd_available": true,
+    "business_development_corpus_available": true,
+    "used_for_facts": false,
+    "used_for_context_only": true,
+    "notes": "Local RAG informed rubric alignment and context loading. Did not and could not substitute for live-source verification."
+  },
+  "outreach_status": "no_external_outreach_performed",
+  "crm_write_status": "no_live_crm_write",
+  "workflow_activation_status": "no_workflow_activated",
+  "social_action_status": "no_social_action_taken"
+}

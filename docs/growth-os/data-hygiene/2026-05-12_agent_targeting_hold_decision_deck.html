@@ -1,0 +1,350 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Agent Targeting HOLD Decision Deck — 2026-05-12</title>
+  <style>
+    :root {
+      --ink: #121827;
+      --navy: #1f3f73;
+      --navy-dark: #152b4f;
+      --paper: #fffdf8;
+      --cream: #f4efe7;
+      --line: #d7cec0;
+      --line-strong: #b8ab99;
+      --muted: #5d6675;
+      --gold: #b88c50;
+      --gold-soft: #f7ecd9;
+      --red: #8d332d;
+      --red-soft: #fff0ed;
+      --sage: #557568;
+      --sage-soft: #edf5f0;
+      --amber: #7a581f;
+      --amber-soft: #fff7e6;
+      --white: #ffffff;
+      --shadow: 0 26px 80px rgba(18, 24, 39, 0.16);
+    }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      overflow: hidden;
+      color: var(--ink);
+      background:
+        linear-gradient(90deg, rgba(18,24,39,0.05) 1px, transparent 1px),
+        linear-gradient(180deg, rgba(18,24,39,0.035) 1px, transparent 1px),
+        var(--cream);
+      background-size: 72px 72px;
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+    }
+    button { font: inherit; }
+    button:focus-visible { outline: 4px solid rgba(184,140,80,0.55); outline-offset: 4px; }
+    code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      background: #f0ebe2;
+      border: 1px solid rgba(216,208,195,0.9);
+      padding: 2px 7px;
+      border-radius: 0;
+      overflow-wrap: anywhere;
+    }
+    .viewport { position: fixed; inset: 0; display: grid; place-items: center; padding: 24px; }
+    .deck {
+      width: 1920px;
+      height: 1080px;
+      position: relative;
+      transform-origin: center center;
+      background: var(--paper);
+      border: 1px solid var(--line-strong);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+    .slide {
+      position: absolute;
+      inset: 0;
+      display: none;
+      padding: 80px 100px 86px;
+      background: var(--paper);
+      opacity: 0;
+      transform: translateX(18px);
+      transition: opacity 160ms ease, transform 160ms ease;
+    }
+    .slide.active { display: block; opacity: 1; transform: translateX(0); }
+    .slide::before { content: ""; position: absolute; inset: 0 0 auto 0; height: 13px; background: linear-gradient(90deg, var(--navy-dark), var(--navy), var(--gold)); }
+    .slide.boundary::before, .slide.risk::before { background: linear-gradient(90deg, var(--red), var(--navy-dark)); }
+    .slide.safe::before { background: linear-gradient(90deg, var(--sage), var(--navy)); }
+    .texture { position: absolute; right: -185px; top: -235px; width: 650px; height: 650px; border-radius: 50%; border: 1px solid rgba(184,140,80,0.26); background: radial-gradient(circle, rgba(184,140,80,0.13), rgba(184,140,80,0.03) 58%, transparent 60%); pointer-events: none; }
+    h1, h2, h3, p { margin: 0; }
+    h1 { font-size: 98px; line-height: 0.97; letter-spacing: -0.055em; max-width: 1320px; }
+    h2 { font-size: 66px; line-height: 1; letter-spacing: -0.045em; max-width: 1440px; }
+    h3 { font-size: 31px; line-height: 1.1; letter-spacing: -0.02em; }
+    .eyebrow { color: var(--navy); font-size: 23px; font-weight: 900; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 22px; }
+    .lead { margin-top: 32px; max-width: 1260px; color: #354054; font-size: 33px; line-height: 1.28; text-wrap: pretty; }
+    .small { color: var(--muted); font-size: 23px; line-height: 1.36; }
+    .micro { color: var(--muted); font-size: 19px; line-height: 1.34; }
+    .hero-grid { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(480px, 0.8fr); gap: 48px; align-items: stretch; height: calc(100% - 20px); }
+    .hero-main { padding-top: 42px; }
+    .side-panel { background: var(--navy-dark); color: #fff; border: 1px solid rgba(255,255,255,0.12); padding: 42px; display: grid; gap: 28px; align-content: start; }
+    .side-panel p { color: #dce4f1; }
+    .verdict { font-size: 51px; line-height: 1; letter-spacing: -0.04em; font-weight: 900; }
+    .meta-table { border-top: 1px solid rgba(255,255,255,0.22); display: grid; }
+    .meta-row { display: grid; grid-template-columns: 185px 1fr; gap: 18px; border-bottom: 1px solid rgba(255,255,255,0.18); padding: 18px 0; font-size: 22px; }
+    .meta-row span { color: #cbd6ea; } .meta-row strong { color: #fff; }
+    .pill-row { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 38px; }
+    .pill { min-height: 48px; display: inline-flex; align-items: center; border: 1px solid var(--line-strong); background: var(--white); padding: 10px 16px; font-size: 18px; font-weight: 900; letter-spacing: 0.075em; text-transform: uppercase; }
+    .pill.blocked { border-color: #d9aaa5; background: var(--red-soft); color: var(--red); }
+    .pill.safe { border-color: #a9bdae; background: var(--sage-soft); color: #365f51; }
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; margin-top: 36px; }
+    .three-col { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 34px; }
+    .five-list { display: grid; gap: 15px; margin-top: 36px; }
+    .decision-row { display: grid; grid-template-columns: 86px minmax(0, 1fr) 255px; gap: 20px; align-items: stretch; border: 1px solid var(--line); background: #fff; min-height: 126px; }
+    .rank { display: grid; place-items: center; background: var(--navy-dark); color: #fff; font-size: 45px; font-weight: 900; }
+    .decision-copy { padding: 22px 0; }
+    .decision-copy h3 { font-size: 30px; }
+    .decision-copy p { margin-top: 8px; color: #354054; font-size: 22px; line-height: 1.28; }
+    .posture { display: grid; place-items: center; padding: 16px; background: var(--amber-soft); color: var(--amber); border-left: 1px solid var(--line); font-size: 22px; line-height: 1.15; font-weight: 900; text-align: center; text-transform: uppercase; letter-spacing: 0.04em; }
+    .card, .gate, .source-card { border: 1px solid var(--line); background: var(--white); padding: 27px; position: relative; min-height: 175px; }
+    .card::before, .gate::before, .source-card::before { content: ""; position: absolute; inset: 0 0 auto 0; height: 8px; background: var(--gold); }
+    .card.blocked::before, .gate.blocked::before { background: var(--red); }
+    .card.safe::before, .gate.safe::before { background: var(--sage); }
+    .card p, .gate p, .source-card p { margin-top: 14px; color: #354054; font-size: 23px; line-height: 1.31; }
+    .tag { display: inline-flex; margin-bottom: 18px; padding: 7px 10px; border: 1px solid var(--line); background: #fff; font-size: 17px; font-weight: 900; text-transform: uppercase; letter-spacing: 0.08em; }
+    .tag.blocked { color: var(--red); border-color: #d9aaa5; background: var(--red-soft); }
+    .tag.safe { color: #365f51; border-color: #a9bdae; background: var(--sage-soft); }
+    ul { margin: 16px 0 0; padding-left: 1.15em; }
+    li { margin-top: 8px; color: #354054; font-size: 22px; line-height: 1.26; }
+    .risk-grid { display: grid; grid-template-columns: minmax(0, 0.96fr) minmax(0, 1.04fr); gap: 28px; margin-top: 34px; }
+    .id-list { display: grid; gap: 10px; margin-top: 16px; }
+    .id-line { border: 1px solid var(--line); background: #fbf7ef; padding: 11px 14px; font-size: 19px; line-height: 1.23; overflow-wrap: anywhere; }
+    .id-line strong { color: var(--navy-dark); }
+    .callout { border: 1px solid #d9aaa5; background: var(--red-soft); color: var(--red); padding: 22px; font-size: 24px; line-height: 1.28; font-weight: 850; margin-top: 24px; }
+    .gate-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px; margin-top: 36px; }
+    .footer-note { position: absolute; left: 100px; right: 100px; bottom: 42px; border-top: 1px solid var(--line); padding-top: 16px; color: var(--muted); font-size: 19px; line-height: 1.34; }
+    .controls { position: fixed; left: 50%; bottom: 22px; transform: translateX(-50%); display: flex; align-items: center; gap: 10px; z-index: 10; background: rgba(255,253,248,0.94); border: 1px solid var(--line-strong); padding: 10px 12px; box-shadow: 0 12px 36px rgba(18,24,39,0.12); }
+    .controls button { min-width: 46px; min-height: 42px; border: 1px solid var(--line-strong); background: var(--white); color: var(--ink); cursor: pointer; font-weight: 900; }
+    .slide-count { min-width: 106px; text-align: center; color: var(--muted); font-size: 18px; font-weight: 900; letter-spacing: 0.08em; }
+    .skip { position: fixed; left: 18px; top: 18px; z-index: 20; background: #fff; color: var(--navy-dark); border: 1px solid var(--line-strong); padding: 10px 12px; transform: translateY(-140%); }
+    .skip:focus { transform: translateY(0); }
+    @media (prefers-reduced-motion: reduce) { .slide { transition: none; } }
+    @media print {
+      body { overflow: visible; background: #fff; }
+      .viewport { position: static; display: block; padding: 0; }
+      .deck { transform: none !important; width: auto; height: auto; border: 0; box-shadow: none; overflow: visible; }
+      .slide { display: block !important; position: relative; width: 100%; min-height: 100vh; opacity: 1; transform: none; page-break-after: always; }
+      .controls, .skip { display: none; }
+      h1 { font-size: 54pt; } h2 { font-size: 38pt; } .lead { font-size: 20pt; } li, .card p, .gate p { font-size: 14pt; }
+    }
+  </style>
+</head>
+<body>
+  <a href="#slide-1" class="skip">Skip to deck</a>
+  <main class="viewport" aria-label="Agent Targeting HOLD decision deck">
+    <section class="deck" id="deck" aria-live="polite">
+      <article class="slide active safe" id="slide-1" data-title="Cover">
+        <div class="texture"></div>
+        <div class="hero-grid">
+          <div class="hero-main">
+            <div class="eyebrow">Private / local decision deck</div>
+            <h1>Agent Targeting HOLD decisions for Tuesday morning</h1>
+            <p class="lead">A restrained review aid for one narrow problem: help Jeff choose which high-risk data-hygiene HOLD gets read-only source review and future exact packet preparation first.</p>
+            <div class="pill-row">
+              <span class="pill blocked">All five remain HOLD</span>
+              <span class="pill safe">Internal decision prep only</span>
+              <span class="pill blocked">No live action authorized</span>
+            </div>
+          </div>
+          <aside class="side-panel">
+            <p class="verdict">PASS parent review; decision use only.</p>
+            <div class="meta-table">
+              <div class="meta-row"><span>Task</span><strong>t_a3ab6c07</strong></div>
+              <div class="meta-row"><span>Reviewed source</span><strong>2026-05-12 HOLD packet</strong></div>
+              <div class="meta-row"><span>Parent verdict</span><strong>PASS for internal Jeff/Whiteford decision prep only</strong></div>
+              <div class="meta-row"><span>Best next unit</span><strong>One HOLD at a time</strong></div>
+            </div>
+          </aside>
+        </div>
+      </article>
+
+      <article class="slide boundary" id="slide-2" data-title="Hard boundary">
+        <div class="eyebrow">Hard boundary</div>
+        <h2>This deck authorizes review, not action.</h2>
+        <p class="lead">No CRM/database/HighLevel/Supabase/Clio/workflow/social/email/public/client/prospect-facing action is authorized by this deck or by the reviewed packet.</p>
+        <div class="three-col">
+          <div class="card blocked"><span class="tag blocked">Do not mutate</span><h3>Records stay unchanged</h3><p>No SQLite, Supabase, HighLevel, Clio, CRM, workflow, stage, tag, owner, contact, or opportunity changes.</p></div>
+          <div class="card blocked"><span class="tag blocked">Do not reach out</span><h3>No external touch</h3><p>No email, SMS, DM, LinkedIn, social post, comment, ad, workflow enrollment, or public/client/prospect-facing copy.</p></div>
+          <div class="card safe"><span class="tag safe">Allowed decision</span><h3>Pick one narrow lane</h3><p>Jeff may choose exactly one read-only source-review / future exact-packet-prep lane to prepare next.</p></div>
+        </div>
+        <p class="footer-note">Privacy posture: the deck minimizes person-level detail and uses local row IDs/evidence paths already cited in the reviewed packet.</p>
+      </article>
+
+      <article class="slide" id="slide-3" data-title="Ranked five">
+        <div class="eyebrow">Ranked HOLD queue</div>
+        <h2>Review one HOLD at a time, starting with the highest-risk ambiguity.</h2>
+        <div class="five-list">
+          <div class="decision-row"><div class="rank">1</div><div class="decision-copy"><h3>Sereact orphan/quarantine</h3><p>Null-company/orphan HighLevel opportunity appears packet-ready while local lifecycle rows remain unresolved.</p></div><div class="posture">Hold / quarantine</div></div>
+          <div class="decision-row"><div class="rank">2</div><div class="decision-copy"><h3>AION missing offer/contact placeholder</h3><p>Same prospect has a populated research-staged row and a HighLevel Agent Targeting placeholder missing key links.</p></div><div class="posture">Hold</div></div>
+          <div class="decision-row"><div class="rank">3</div><div class="decision-copy"><h3>Rigetti suspect contact</h3><p>Research-staged row points to suspect contact data while Agent Targeting remains unlinked.</p></div><div class="posture">Hold</div></div>
+          <div class="decision-row"><div class="rank">4</div><div class="decision-copy"><h3>Nexar duplicate/company-vs-person contact</h3><p>Duplicate contact rows and company-level evidence create person-linking risk.</p></div><div class="posture">Hold</div></div>
+          <div class="decision-row"><div class="rank">5</div><div class="decision-copy"><h3>Flatfile/Obvious naming/department-email issue</h3><p>Naming convention and department-email/non-decision-maker issues remain unresolved.</p></div><div class="posture">Hold</div></div>
+        </div>
+      </article>
+
+      <article class="slide risk" id="slide-4" data-title="Sereact">
+        <div class="eyebrow">Decision 1 / Sereact orphan quarantine</div>
+        <h2>Do not trust packet-ready status until the orphan and lifecycle evidence are reconciled.</h2>
+        <div class="risk-grid">
+          <div class="card blocked"><span class="tag blocked">Risk</span><h3>Orphan opportunity plus uncleared lifecycle rows</h3><p>Recommended posture: keep quarantined. Do not link, close/archive, rename, fill fields, move stage, or prepare collateral.</p><div class="callout">Human decision: approve read-only source review and preparation of a future exact Sereact lifecycle packet?</div></div>
+          <div class="card"><span class="tag">Exact local evidence</span><div class="id-list">
+            <div class="id-line"><strong>Prospect:</strong> prospect_ef30df45ad62c93981758ca3</div>
+            <div class="id-line"><strong>Research opp:</strong> opp_7aaf67df3d4d774803c8607d</div>
+            <div class="id-line"><strong>Agent Targeting opp:</strong> ghl-agent-targeting-prospect_ef30df45ad62c93981758ca3</div>
+            <div class="id-line"><strong>Orphan GHL opp:</strong> ghl-opp-hUevEZZwjvyALchVzSzv</div>
+            <div class="id-line"><strong>Work item:</strong> work-ghl-stage-hUevEZZwjvyALchVzSzv-2026-05-10T18-32-02-464Z</div>
+            <div class="id-line"><strong>Suppression:</strong> suppress_7ea545e06cad606889f750d4 / draft_6c7ea9b4b76cc04ba5ff7819</div>
+          </div></div>
+        </div>
+        <div class="footer-note">Missing evidence: official identity/domain, international/Mountain-West scope decision, person-level evidence for related contact IDs, exact orphan payload evidence, and full clearance checks.</div>
+      </article>
+
+      <article class="slide risk" id="slide-5" data-title="AION">
+        <div class="eyebrow">Decision 2 / AION placeholder</div>
+        <h2>Do not auto-fill a HighLevel placeholder from a separate research-staged row.</h2>
+        <div class="risk-grid">
+          <div class="card blocked"><span class="tag blocked">Risk</span><h3>Opportunity-reconciliation duplicate risk</h3><p>Recommended posture: keep held. Treat the missing offer/contact placeholder as a future exact-packet problem, not a casual local inference.</p><div class="callout">Human decision: prepare a future exact AION opportunity-reconciliation packet?</div></div>
+          <div class="card"><span class="tag">Exact local evidence</span><div class="id-list">
+            <div class="id-line"><strong>Prospect:</strong> prospect_089c4bc541c05da752169c7a</div>
+            <div class="id-line"><strong>Research opp:</strong> opp_8b9cb9cb94b88f73b74b7064</div>
+            <div class="id-line"><strong>HighLevel placeholder:</strong> ghl-lead-prospect_089c4bc541c05da752169c7a</div>
+            <div class="id-line"><strong>Contact row:</strong> contact_14b42eb2f15da73c52694fcb</div>
+            <div class="id-line"><strong>Suppression:</strong> suppress_7605e2e8ab3ca93b488624ed / draft_58482b23881d3aa940dfc4c1</div>
+          </div></div>
+        </div>
+        <div class="footer-note">Missing evidence: same-lifecycle decision, current company/person facts, contact-quality decision, clearance checks, and exact rollback/read-only verification plan for any future mutation packet.</div>
+      </article>
+
+      <article class="slide risk" id="slide-6" data-title="Rigetti">
+        <div class="eyebrow">Decision 3 / Rigetti suspect contact</div>
+        <h2>Do not link or use suspect contact data as if it were source-current.</h2>
+        <div class="risk-grid">
+          <div class="card blocked"><span class="tag blocked">Risk</span><h3>Bad contact data could contaminate the next packet</h3><p>Recommended posture: keep held. Review whether the suspect contact row should be suppressed, replaced, or retained only as internal-reference evidence.</p><div class="callout">Human decision: approve read-only contact-quality review before lifecycle packet work?</div></div>
+          <div class="card"><span class="tag">Exact local evidence</span><div class="id-list">
+            <div class="id-line"><strong>Prospect:</strong> prospect_d249372d03e9b2df1dd67726</div>
+            <div class="id-line"><strong>Research opp:</strong> opp_1d79b1a5b3897c337a3f43be</div>
+            <div class="id-line"><strong>Agent Targeting opp:</strong> ghl-agent-targeting-prospect_d249372d03e9b2df1dd67726</div>
+            <div class="id-line"><strong>Suspect contact:</strong> contact_87a4528f8034e072e84af395</div>
+            <div class="id-line"><strong>Secondary contact:</strong> contact_e5358ebe2bf6f9959920e19f</div>
+            <div class="id-line"><strong>Suppression:</strong> suppress_8453219f60e43caecdb048ab / draft_beb7a04cd418d728e5fc451a</div>
+          </div></div>
+        </div>
+        <div class="footer-note">Missing evidence: official/current leadership source, contact suppression/replacement decision, secondary-contact decision, and full suppression/opt-out/conflicts/Clio/prior-touch/brand/attorney-review clearance.</div>
+      </article>
+
+      <article class="slide risk" id="slide-7" data-title="Nexar">
+        <div class="eyebrow">Decision 4 / Nexar duplicate contact</div>
+        <h2>Do not treat company-level evidence as person-level contact proof.</h2>
+        <div class="risk-grid">
+          <div class="card blocked"><span class="tag blocked">Risk</span><h3>Duplicate rows plus company-vs-person evidence</h3><p>Recommended posture: keep held. Do not link either candidate row to Agent Targeting until current entity/source and contact identity are resolved.</p><div class="callout">Human decision: approve read-only duplicate contact/entity-source review?</div></div>
+          <div class="card"><span class="tag">Exact local evidence</span><div class="id-list">
+            <div class="id-line"><strong>Prospect:</strong> prospect_c542c95f73995e2dbd2a15c3</div>
+            <div class="id-line"><strong>Research opp:</strong> opp_a506b58fff7a549c6030f18f</div>
+            <div class="id-line"><strong>Agent Targeting opp:</strong> ghl-agent-targeting-prospect_c542c95f73995e2dbd2a15c3</div>
+            <div class="id-line"><strong>Candidate contact 1:</strong> contact_f4aee748a54b4db92013be70</div>
+            <div class="id-line"><strong>Candidate contact 2:</strong> contact_f23d2a57ec5c1b0565f188a4</div>
+            <div class="id-line"><strong>Suppression:</strong> suppress_4e41e4854d6671cebf3e8f03 / draft_e8a16edaa16c1051d8fa867b</div>
+          </div></div>
+        </div>
+        <div class="footer-note">Missing evidence: official/current entity/domain and role source, person-level evidence if a link is proposed, duplicate-contact disposition, and clearance checks.</div>
+      </article>
+
+      <article class="slide risk" id="slide-8" data-title="Flatfile Obvious">
+        <div class="eyebrow">Decision 5 / Flatfile and Obvious naming</div>
+        <h2>Resolve naming and department-contact posture before any packet becomes actionable.</h2>
+        <div class="risk-grid">
+          <div class="card blocked"><span class="tag blocked">Risk</span><h3>Rebrand ambiguity plus non-decision-maker contact row</h3><p>Recommended posture: keep held. Do not use the department-email row as a decision-maker contact or rely on the person row without currentness and clearance.</p><div class="callout">Human decision: approve naming/person-contact review before lifecycle packet work?</div></div>
+          <div class="card"><span class="tag">Exact local evidence</span><div class="id-list">
+            <div class="id-line"><strong>Prospect:</strong> prospect_bea9dbd287cb8fcf077720d0</div>
+            <div class="id-line"><strong>Research opp:</strong> opp_8a46a832f79bb082853b7f8d</div>
+            <div class="id-line"><strong>Agent Targeting opp:</strong> ghl-agent-targeting-prospect_bea9dbd287cb8fcf077720d0</div>
+            <div class="id-line"><strong>Person candidate:</strong> contact_01092cd32c14e0196826c3cf</div>
+            <div class="id-line"><strong>Department contact row:</strong> contact_9119665bd6e83c1b8387d00e</div>
+            <div class="id-line"><strong>Suppression:</strong> suppress_a78d92d35273d37e4df3352a / draft_23bf6537385d43536d4d325c</div>
+          </div></div>
+        </div>
+        <div class="footer-note">Missing evidence: Jeff-approved naming convention, current first-party naming/product source, person-level current-source evidence, department-email internal-reference decision, and clearance checks.</div>
+      </article>
+
+      <article class="slide" id="slide-9" data-title="Cross-cutting gates">
+        <div class="eyebrow">Cross-cutting gates</div>
+        <h2>Before any future exact packet becomes actionable, it must carry its own proof.</h2>
+        <div class="gate-grid">
+          <div class="gate"><span class="tag">Scope</span><h3>Exact systems and boundaries</h3><p>Name systems in scope and preserve no-outreach/no-activation unless separately approved.</p></div>
+          <div class="gate"><span class="tag">Values</span><h3>Current and proposed values</h3><p>List current values and proposed values for every affected local/live row.</p></div>
+          <div class="gate"><span class="tag">Evidence</span><h3>Current source proof</h3><p>Include source-current evidence paths and timestamps, with person-quality decisions where relevant.</p></div>
+          <div class="gate"><span class="tag">Clearance</span><h3>Suppression and legal checks</h3><p>Check opt-out, HighLevel DND/unsubscribe/bounce/manual suppression, Whiteford conflicts, Clio/adverse-party, duplicate/prior-touch, brand, and attorney review.</p></div>
+          <div class="gate"><span class="tag">Rollback</span><h3>Backup, undo, stop conditions</h3><p>Include backup/export evidence, rollback plan, dry-run/read-only verification plan, and explicit stop conditions.</p></div>
+          <div class="gate"><span class="tag">Human</span><h3>Named operator and exact approval</h3><p>Identify the human operator and exact Jeff/Whiteford approval language before any future action.</p></div>
+        </div>
+      </article>
+
+      <article class="slide safe" id="slide-10" data-title="Safe next choice">
+        <div class="texture"></div>
+        <div class="eyebrow">Jeff's safe next choice</div>
+        <h2>Choose exactly one read-only lane; default to Sereact if addressing the highest risk first.</h2>
+        <p class="lead">The safe decision is not to clean anything up today. It is to select one HOLD for read-only source review and future exact packet preparation, then keep all other rows held until their own exact packet is prepared and reviewed.</p>
+        <div class="two-col">
+          <div class="card safe"><span class="tag safe">Recommended</span><h3>Start with Sereact quarantine</h3><p>Highest-risk ambiguity: orphan/null-company HighLevel opportunity plus unresolved local lifecycle rows. Approve only read-only source review and future exact packet preparation.</p></div>
+          <div class="card blocked"><span class="tag blocked">Still forbidden</span><h3>No execution from this deck</h3><p>No record mutation, enrichment writeback, HighLevel stage/list/workflow action, Clio action, social/public/client/prospect-facing use, or outreach.</p></div>
+        </div>
+        <p class="footer-note">Sources read: parent review t_c05b98db, reviewed HOLD packet, Kanban deliverable index, business-development RAG, and QMD whiteford-ai-law-pages search. This deck is private/local only.</p>
+      </article>
+    </section>
+  </main>
+  <nav class="controls" aria-label="Slide controls">
+    <button type="button" id="prev" aria-label="Previous slide">‹</button>
+    <span class="slide-count" id="count">1 / 10</span>
+    <button type="button" id="next" aria-label="Next slide">›</button>
+  </nav>
+  <script>
+    (function () {
+      const slides = Array.from(document.querySelectorAll('.slide'));
+      const deck = document.getElementById('deck');
+      const count = document.getElementById('count');
+      const prev = document.getElementById('prev');
+      const next = document.getElementById('next');
+      const storageKey = 'whiteford-agent-targeting-hold-deck-slide';
+      let current = Number.parseInt(localStorage.getItem(storageKey) || '0', 10);
+      if (!Number.isInteger(current) || current < 0 || current >= slides.length) current = 0;
+      function scaleDeck() {
+        const pad = 48;
+        const scale = Math.min((window.innerWidth - pad) / 1920, (window.innerHeight - pad) / 1080);
+        deck.style.transform = `scale(${Math.max(0.1, scale)})`;
+      }
+      function show(index) {
+        current = Math.max(0, Math.min(slides.length - 1, index));
+        slides.forEach((slide, i) => {
+          slide.classList.toggle('active', i === current);
+          slide.setAttribute('aria-hidden', i === current ? 'false' : 'true');
+        });
+        count.textContent = `${current + 1} / ${slides.length}`;
+        prev.disabled = current === 0;
+        next.disabled = current === slides.length - 1;
+        localStorage.setItem(storageKey, String(current));
+        history.replaceState(null, '', `#slide-${current + 1}`);
+      }
+      prev.addEventListener('click', () => show(current - 1));
+      next.addEventListener('click', () => show(current + 1));
+      window.addEventListener('resize', scaleDeck);
+      window.addEventListener('keydown', (event) => {
+        if (event.key === 'ArrowRight' || event.key === 'PageDown' || event.key === ' ') { event.preventDefault(); show(current + 1); }
+        if (event.key === 'ArrowLeft' || event.key === 'PageUp') { event.preventDefault(); show(current - 1); }
+        if (event.key === 'Home') { event.preventDefault(); show(0); }
+        if (event.key === 'End') { event.preventDefault(); show(slides.length - 1); }
+      });
+      const hashMatch = window.location.hash.match(/^#slide-(\d+)$/);
+      if (hashMatch) current = Number.parseInt(hashMatch[1], 10) - 1;
+      scaleDeck();
+      show(current);
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,123 @@
+{
+  "prospect_id": "flapping-airplanes-20260601",
+  "company": {
+    "prospect_id": "prospect_flapping_airplanes_20260601",
+    "name": "Flapping Airplanes",
+    "domain": "flappingairplanes.com",
+    "website_url": "https://flappingairplanes.com",
+    "company_linkedin_url": null,
+    "location": "United States (HQ unverified from current public pages)",
+    "state_region": null,
+    "industry": "AI research / foundation models / sample efficiency",
+    "segment": "ai-patent",
+    "primary_offer_lane": "ai-patent",
+    "source_type": "nightly_public_source_research",
+    "source_url": "https://techcrunch.com/2026/02/17/here-are-the-17-us-based-ai-companies-that-have-raised-100m-or-more-in-2026/",
+    "source_note": "AI research lab focused on making models think at human-level efficiency with far less training data\nRaised $180M seed round led by GV, Sequoia, and Index Ventures — valued at $1.5B, announced Jan 28, 2026\nCore thesis: current AI wastes training data; humans exceed AI capabilities on a tiny fraction of tokens seen\nEstimates humans are 100,000x-1,000,000x more sample-efficient than existing models\nMinimal public site (canvas-based, JS-rendered blog) — early-stage research lab with academic/theoretical orientation\nContact available: disagree@flappingairplanes.com\nGate status: BROWSER_FALLBACK_RESUMED via browser_navigate snapshots + browser_console text extraction.",
+    "pipeline_stage": "research_staged",
+    "scores": {
+      "fit_score": 86,
+      "urgency_score": 70,
+      "value_potential_score": 80,
+      "combined_priority_score": 79
+    },
+    "lead_magnet": "AI Patent Strategy Scorecard",
+    "recommended_offer": "AI IP Protection & Patent Strategy",
+    "risk_level": "attorney_review_required",
+    "suppression_status": "consent_gap_no_auto_send",
+    "conflicts_status": "required_before_send",
+    "owner": "qwen-local",
+    "notes": "Research-only nightly candidate. No outreach authorization; attorney review, conflicts, suppression, source-current checks, contact validation, and Jeff exact approval required before external use.\nGate status: normalized from parent nightly qwen-local browser-fallback payload; ops staging did not perform live enrichment or external source refresh.\nOutreach readiness: research_only; consent basis: no_email_opt_in; approval status: no-auto-send\nDecision-maker guidance: verify current CEO/founder from Crunchbase or press release before outreach. Minimal public footprint — may require direct contact via listed email.\nContact notes: Generic contact disagree@flappingairplanes.com found on homepage. No named decision maker identified. Minimal public footprint. Do NOT stage named-person outreach draft. Contact role-target guidance.\nKey facts: AI research lab focused on making models think at human-level efficiency with far less training data; Raised $180M seed round led by GV, Sequoia, and Index Ventures — valued at $1.5B, announced Jan 28, 2026; Core thesis: current AI wastes training data; humans exceed AI capabilities on a tiny fraction of tokens seen; Estimates humans are 100,000x-1,000,000x more sample-efficient than existing models; Minimal public site (canvas-based, JS-rendered blog) — early-stage research lab with academic/theoretical orientation; Contact available: disagree@flappingairplanes.com\nRemediation before outreach: verify current CEO/founder names from Crunchbase or press release; verify HQ location; confirm company name canonicalization (Flapping Airplanes vs. FlappingAirplanes); identify named executive via LinkedIn or angel/investor portfolio pages\nMountain West relevance: Not directly supported. Target via national research-lab IP strategy relevance.\nValidation caveat: parent research used browser_navigate snapshots after Firecrawl/search/extract quota failures; source-current checks remain required before external use."
+  },
+  "contacts": [],
+  "evidence": [
+    {
+      "evidence_id": "evidence_4986956390a974333c638d5c",
+      "source_url": "https://techcrunch.com/2026/02/17/here-are-the-17-us-based-ai-companies-that-have-raised-100m-or-more-in-2026/",
+      "accessed_at": "2026-06-01",
+      "source_type": "techcrunch_article",
+      "fact_classification": "public",
+      "evidence_snippet": "Flapping Airplanes, AI research lab, raised $180M seed led by GV, Sequoia, and Index, Jan 28, 2026, valued at $1.5B",
+      "supported_fact": "Flapping Airplanes, AI research lab, raised $180M seed led by GV, Sequoia, and Index, Jan 28, 2026, valued at $1.5B",
+      "confidence": "medium",
+      "corroboration": "parent qwen-local browser-fallback research; source-current refresh required before external use",
+      "safe_for_outreach": "conditional",
+      "safe_fact_for_copy": "Flapping Airplanes, AI research lab, raised $180M seed led by GV, Sequoia, and Index, Jan 28, 2026, valued at $1.5B"
+    },
+    {
+      "evidence_id": "evidence_63b0da6ec6a9e9b888f11d1c",
+      "source_url": "https://flappingairplanes.com",
+      "accessed_at": "2026-06-01",
+      "source_type": "first-party_website",
+      "fact_classification": "public",
+      "evidence_snippet": "Flapping Airplanes: 'We imagine a world where models can think at the level of humans without ingesting half the internet.' Humans exceed AI capabilities despite seeing 'at most a few billion text tokens' vs. current models trained on 'accessibly all of accessible history.' 100,000x-1,000,000x more efficient.",
+      "supported_fact": "Flapping Airplanes: 'We imagine a world where models can think at the level of humans without ingesting half the internet.' Humans exceed AI capabilities despite seeing 'at most a few billion text tokens' vs. current models trained on 'accessibly all of accessible history.' 100,000x-1,000,000x more efficient.",
+      "confidence": "medium",
+      "corroboration": "parent qwen-local browser-fallback research; source-current refresh required before external use",
+      "safe_for_outreach": "conditional",
+      "safe_fact_for_copy": "Flapping Airplanes: 'We imagine a world where models can think at the level of humans without ingesting half the internet.' Humans exceed AI capabilities despite seeing 'at most a few billion text tokens' vs. current models trained on 'accessibly all of accessible history.' 100,000x-1,000,000x more efficient."
+    }
+  ],
+  "outreach_drafts": [
+    {
+      "draft_type": "educational",
+      "channel": "manual_email_review",
+      "title": "AI Patent Strategy Scorecard attorney-review angle: Flapping Airplanes",
+      "subject": "Attorney-review-only AI Patent Strategy Scorecard angle for Flapping Airplanes",
+      "body": "ATTORNEY REVIEW ONLY — DO NOT SEND/POST.\nTarget: role to verify before outreach (CEO/CTO/Head of IP or equivalent; no named decision maker verified).\nProspect: Flapping Airplanes\nInternal hypothesis: Flapping Airplanes, AI research lab, raised $180M seed led by GV, Sequoia, and Index, Jan 28, 2026, valued at $1.5B\nSuggested lead magnet: AI Patent Strategy Scorecard\n\nUpstream draft text retained for review context only; it is not approved final copy:\nFlapping Airplanes raised $180M from GV, Sequoia, and Index to prove that AI models can 'think at human level' on a fraction of today's training data. As sample-efficiency research becomes the next frontier of foundation-model IP, startups in this space face early-stage patent strategy questions — not just what to claim, but where the boundary lies between algorithmic methods (patentable in some jurisdictions) and abstract ideas (excluded in others). The AI Patent Strategy Scorecard helps early-stage AI labs navigate that landscape before competitors file foundational claims.\n\nRequired before any external use: source-current verification, named contact validation, conflicts check, suppression/opt-out/prior-touch checks, attorney review, and Jeff exact approval.",
+      "source_facts": [
+        "Flapping Airplanes, AI research lab, raised $180M seed led by GV, Sequoia, and Index, Jan 28, 2026, valued at $1.5B",
+        "Flapping Airplanes: 'We imagine a world where models can think at the level of humans without ingesting half the internet.' Humans exceed AI capabilities despite seeing 'at most a few billion text tokens' vs. current models trained on 'accessibly all of accessible history.' 100,000x-1,000,000x more efficient."
+      ],
+      "source_urls": [
+        "https://techcrunch.com/2026/02/17/here-are-the-17-us-based-ai-companies-that-have-raised-100m-or-more-in-2026/",
+        "https://flappingairplanes.com"
+      ],
+      "risk_level": "attorney_review_required",
+      "internal_review_notes": "Not approved for sending or posting. Research-only local staging; requires attorney review, conflicts, suppression, source-current checks, named contact validation, and Jeff exact approval before external use."
+    }
+  ],
+  "validation_gates": {
+    "gate_1_live_source": "PARENT_BROWSER_FALLBACK_PAYLOAD_ONLY",
+    "source_status": "browser_navigate snapshots + browser_console text extraction",
+    "contact_validation": "Gate 4 failed: no named decision makers verified; no person-level contact staged.",
+    "linkedin_validation": "No company or person LinkedIn URLs verified; no LinkedIn action authorized.",
+    "outreach_readiness": "attorney-review-only research_only; no external action authorized"
+  },
+  "consent_gating": {
+    "ops_no_auto_send": true,
+    "consent_basis": "no_email_opt_in",
+    "approval_status": "no-auto-send",
+    "workflow_trigger_tags": [],
+    "suppression_tags": [
+      "newsletter:not-consented"
+    ]
+  },
+  "source_candidate_path": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-06-01/prospect_candidates.json",
+  "normalized_store_path": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-06-01/prospect_candidates.normalized_for_store.json",
+  "source_packet_prospect_id": "flapping-airplanes-20260601",
+  "local_growth_os_prospect_id": "prospect_flapping_airplanes_20260601",
+  "task": "prepare_internal_attorney_review_agent_targeting_packet",
+  "guardrails": {
+    "external_action_allowed": false,
+    "approval_required": true,
+    "no_outreach_no_workflows_no_social_no_clio_no_live_sync": true,
+    "required_before_external_use": [
+      "Jeff exact approval",
+      "attorney review",
+      "conflicts check",
+      "suppression/opt-out/prior-touch check",
+      "source-current verification",
+      "named decision-maker/contact validation"
+    ]
+  },
+  "work_item_id": "work_nightly_agent_targeting_20260601_59877ae94211c17e0826137e",
+  "input_path": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-06-01/agent-targeting-work-items/flapping-airplanes.json",
+  "output_path": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-06-01/agent-targeting-packets/flapping-airplanes-agent-targeting-packet.md",
+  "remediation_checklist": [
+    "Attorney review required before external use.",
+    "Named decision-maker/contact validation required before any outreach.",
+    "Conflicts, suppression/opt-out, prior-touch, and source-current checks required before any outreach.",
+    "Do not send, post, tag, trigger workflows, sync live CRM/Supabase, or write Clio without Jeff exact approval."
+  ]
+}

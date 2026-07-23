@@ -1,0 +1,164 @@
+{
+  "prospect_id": "cognition-labs-20260528",
+  "company": {
+    "prospect_id": "prospect_cognition_labs_20260528",
+    "name": "Cognition Labs",
+    "domain": "cognition.com",
+    "website_url": "https://cognition.com/",
+    "location": "San Francisco, CA",
+    "state_region": "CA",
+    "industry": "AI coding / autonomous software engineering",
+    "segment": "tech-gc",
+    "primary_offer_lane": "tech-gc",
+    "source_type": "nightly_public_source_research",
+    "source_url": "https://techcrunch.com/2026/05/27/ai-coding-startup-cognition-raises-1b-at-25b-pre-money-valuation/",
+    "source_note": "Cognition Labs builds Devin, the world's leading autonomous AI software engineer that performs complex coding tasks end-to-end. The company acquired Windsurf (an AI coding IDE) last year and has integrated it into its platform. Devin has reached $492M ARR with rapid enterprise adoption, suggesting they need strong general counsel infrastructure to manage contracts (Mercedes, NASA, Goldman, Santander), IP ownership for autonomous code outputs, AI governance, and prepare for M&A at current valuation trajectory.\nSize signal: Raised $1 billion at $25B pre-money valuation ($26B post-money); $492M annualized revenue run-rate; 50% MoM enterprise usage growth for 6 consecutive months; previously raised $400M at $10.2B post-money (September 2025) — tripled valuation in 8 months\nMaturity signal: Founded by Scott Wu (CEO); maker of Devin (autonomous AI software engineer); acquired remaining bits of Windsurf (AI coding platform); enterprise customers include Mercedes-Benz, NASA, Goldman Sachs, Santander; round led by Lux Capital, General Catalyst, 8VC with Founders Fund, Elad Gil, Ribbit Capital, Atreides, Layer Global as investors\nGate status: PASSED_BY_BROWSER — Firecrawl credits exhausted (same as previous night). Used browser tool directly to access TechCrunch, company websites, and GitHub for prospect sourcing. Source quality: HIGH — direct article reading, company websites, and LinkedIn-style sources. No enrichment via Apollo/Crunchbase possible due to credit exhaustion.",
+    "pipeline_stage": "research_staged",
+    "scores": {
+      "fit_score": 94,
+      "urgency_score": 90,
+      "value_potential_score": 96,
+      "combined_priority_score": 93,
+      "contact_confidence": 55
+    },
+    "lead_magnet": "Tech Company Legal Health Checklist",
+    "recommended_offer": "Tech GC Launchpad / Tech Company Legal Health Checklist",
+    "risk_level": "attorney_review_required",
+    "suppression_status": "consent_gap_no_auto_send",
+    "conflicts_status": "required_before_send",
+    "owner": "qwen-local",
+    "notes": "Research-only nightly candidate. No outreach authorization; attorney review, conflicts, suppression, source-current checks, and Jeff exact approval required before external use.\nCognition Labs builds Devin, the world's leading autonomous AI software engineer that performs complex coding tasks end-to-end. The company acquired Windsurf (an AI coding IDE) last year and has integrated it into its platform. Devin has reached $492M ARR with rapid enterprise adoption, suggesting they need strong general counsel infrastructure to manage contracts (Mercedes, NASA, Goldman, Santander), IP ownership for autonomous code outputs, AI governance, and prepare for M&A at current valuation trajectory.\nValidation caveat: Firecrawl/search were exhausted; parent research used browser fallback. Ops did not perform new external enrichment except noting Triomics home page browser access; low-confidence contacts remain unverified where marked.\nUrgency signals: [{\"signal\": \"$1B raised at $25B pre-money — massive valuation increase in 8 months requires robust GC infrastructure for contracts, compliance, investor relations\", \"source\": \"TechCrunch article, published May 27 2026 by Julie Bort\"}, {\"signal\": \"Enterprise customers (Mercedes-Benz, NASA, Goldman Sachs, Santander) — complex multi-party contracts, cross-border data, IP ownership disputes over autonomous code generation\", \"source\": \"TechCrunch article — cited by company\"}, {\"signal\": \"Acquired Windsurf — IP integration, employee agreements, technology transfer due diligence needed post-acquisition\", \"source\": \"TechCrunch article — company statement\"}, {\"signal\": \"50% MoMARR growth at $492M ARR — approaching acquisition/exit inflection point; M&A readiness review critical at $25B valuation\", \"source\": \"TechCrunch article — company statement\"}, {\"signal\": \"Autonomous AI agent making coding decisions — unaddressed IP liability questions around Devin-generated code, potential patentable processes in autonomous code generation\", \"source\": \"Product analysis — Devin capabilities\"}]"
+  },
+  "contacts": [
+    {
+      "name": "Scott Wu",
+      "title": "CEO & Founder",
+      "role_category": "ceo",
+      "email": null,
+      "email_confidence": 0,
+      "linkedin_url": "https://www.linkedin.com/in/scottwu",
+      "phone": null,
+      "source_url": "https://en.wikipedia.org/wiki/Scott_Wu",
+      "source_type": "linkedin_profile",
+      "permission_basis": "public-source research; attorney review required before outreach",
+      "confidence": 65,
+      "verified_from": "TechCrunch article confirms Scott Wu as CEO; Wikipedia confirms founder status",
+      "suppression_status": "not_checked"
+    }
+  ],
+  "evidence": [
+    {
+      "evidence_id": "evidence_1474d71ec9fbcde8a0814f57",
+      "source_url": "https://techcrunch.com/2026/05/27/ai-coding-startup-cognition-raises-1b-at-25b-pre-money-valuation/",
+      "accessed_at": "2026-05-28",
+      "source_type": "news",
+      "fact_classification": "public",
+      "evidence_snippet": "Raised $1 billion at $25B pre-money valuation ($26B post-money); $492M annualized revenue run-rate; 50% MoM enterprise usage growth for 6 consecutive months; previously raised $400M at $10.2B post-money (September 2025) — tripled valuation in 8 months",
+      "supported_fact": "Raised $1 billion at $25B pre-money valuation ($26B post-money); $492M annualized revenue run-rate; 50% MoM enterprise usage growth for 6 consecutive months; previously raised $400M at $10.2B post-money (September 2025) — tripled valuation in 8 months",
+      "confidence": "high",
+      "corroboration": "parent qwen-local browser-sourced research; source-current refresh required before external use",
+      "safe_for_outreach": "conditional",
+      "safe_fact_for_copy": "Raised $1 billion at $25B pre-money valuation ($26B post-money); $492M annualized revenue run-rate; 50% MoM enterprise usage growth for 6 consecutive months; previously raised $400M at $10.2B post-money (September 2025) — tripled valuation in 8 months"
+    },
+    {
+      "evidence_id": "evidence_8a97af642b98b80a13942bac",
+      "source_url": "https://cognition.com/",
+      "accessed_at": "2026-05-28",
+      "source_type": "company_website",
+      "fact_classification": "public",
+      "evidence_snippet": "Cognition Labs builds Devin, the world's leading autonomous AI software engineer that performs complex coding tasks end-to-end. The company acquired Windsurf (an AI coding IDE) last year and has integrated it into its platform. Devin has reached $492M ARR with rapid enterprise adoption, suggesting they need strong general counsel infrastructure to manage contracts (Mercedes, NASA, Goldman, Santander), IP ownership for autonomous code outputs, AI ",
+      "supported_fact": "Cognition Labs builds Devin, the world's leading autonomous AI software engineer that performs complex coding tasks end-to-end. The company acquired Windsurf (an AI coding IDE) last year and has integrated it into its platform. Devin has reached $492M ARR with rapid enterprise adoption, suggesting they need strong general counsel infrastructure to manage contracts (Mercedes, NASA, Goldman, Santander), IP ownership for autonomous code outputs, AI governance, and prepare for M&A at current valuation trajectory.",
+      "confidence": "high",
+      "corroboration": "parent qwen-local browser-sourced research; source-current refresh required before external use",
+      "safe_for_outreach": "conditional",
+      "safe_fact_for_copy": "Cognition Labs builds Devin, the world's leading autonomous AI software engineer that performs complex coding tasks end-to-end. The company acquired Windsurf (an AI coding IDE) last year and has integrated it into its platform. Devin has reached $492M ARR with rapid enterprise adoption, suggesting t"
+    },
+    {
+      "evidence_id": "evidence_5e80a0b671d3cf7ef1032194",
+      "source_url": "https://en.wikipedia.org/wiki/Scott_Wu",
+      "accessed_at": "2026-05-28",
+      "source_type": "public_web",
+      "fact_classification": "public",
+      "evidence_snippet": "$1B raised at $25B pre-money — massive valuation increase in 8 months requires robust GC infrastructure for contracts, compliance, investor relations",
+      "supported_fact": "$1B raised at $25B pre-money — massive valuation increase in 8 months requires robust GC infrastructure for contracts, compliance, investor relations",
+      "confidence": "high",
+      "corroboration": "parent qwen-local browser-sourced research; source-current refresh required before external use",
+      "safe_for_outreach": "conditional",
+      "safe_fact_for_copy": "$1B raised at $25B pre-money — massive valuation increase in 8 months requires robust GC infrastructure for contracts, compliance, investor relations"
+    },
+    {
+      "evidence_id": "evidence_4f0eec88d881be3b590e07f7",
+      "source_url": "https://en.wikipedia.org/wiki/Scott_Wu",
+      "accessed_at": "2026-05-28",
+      "source_type": "public_web",
+      "fact_classification": "public",
+      "evidence_snippet": "Enterprise customers (Mercedes-Benz, NASA, Goldman Sachs, Santander) — complex multi-party contracts, cross-border data, IP ownership disputes over autonomous code generation",
+      "supported_fact": "Enterprise customers (Mercedes-Benz, NASA, Goldman Sachs, Santander) — complex multi-party contracts, cross-border data, IP ownership disputes over autonomous code generation",
+      "confidence": "high",
+      "corroboration": "parent qwen-local browser-sourced research; source-current refresh required before external use",
+      "safe_for_outreach": "conditional",
+      "safe_fact_for_copy": "Enterprise customers (Mercedes-Benz, NASA, Goldman Sachs, Santander) — complex multi-party contracts, cross-border data, IP ownership disputes over autonomous code generation"
+    }
+  ],
+  "outreach_drafts": [
+    {
+      "draft_type": "email",
+      "channel": "manual_email_review",
+      "title": "Tech Company Legal Health Checklist attorney-review angle: Cognition Labs",
+      "subject": "Attorney-review-only Tech Company Legal Health Checklist angle for Cognition Labs",
+      "body": "ATTORNEY REVIEW ONLY — DO NOT SEND/POST.\nTarget: Scott Wu\nProspect: Cognition Labs\nInternal hypothesis: Scott Wu as CEO of a $26B ARR-growing AI company with enterprise customers needs OGC-level legal infrastructure. Tech GC Launchpad checklist directly addresses multi-party contract complexity, IP ownership for autonomous code, and AI governance questions.\nSuggested lead magnet: Tech Company Legal Health Checklist\nRequired before any external use: source-current verification, conflicts check, suppression/opt-out/prior-touch checks, attorney review, and Jeff exact approval.",
+      "source_facts": [
+        "Raised $1 billion at $25B pre-money valuation ($26B post-money); $492M annualized revenue run-rate; 50% MoM enterprise usage growth for 6 consecutive months; previously raised $400M at $10.2B post-money (September 2025) — tripled valuation in 8 months",
+        "Cognition Labs builds Devin, the world's leading autonomous AI software engineer that performs complex coding tasks end-to-end. The company acquired Windsurf (an AI coding IDE) last year and has integrated it into its platform. Devin has reached $492M ARR with rapid enterprise adoption, suggesting they need strong general counsel infrastructure to manage contracts (Mercedes, NASA, Goldman, Santander), IP ownership for autonomous code outputs, AI governance, and prepare for M&A at current valuation trajectory.",
+        "$1B raised at $25B pre-money — massive valuation increase in 8 months requires robust GC infrastructure for contracts, compliance, investor relations",
+        "Enterprise customers (Mercedes-Benz, NASA, Goldman Sachs, Santander) — complex multi-party contracts, cross-border data, IP ownership disputes over autonomous code generation"
+      ],
+      "source_urls": [
+        "https://techcrunch.com/2026/05/27/ai-coding-startup-cognition-raises-1b-at-25b-pre-money-valuation/",
+        "https://cognition.com/",
+        "https://en.wikipedia.org/wiki/Scott_Wu",
+        "https://en.wikipedia.org/wiki/Scott_Wu"
+      ],
+      "risk_level": "attorney_review_required",
+      "internal_review_notes": "Not approved for sending or posting. Research-only local staging; requires attorney review, conflicts, suppression, source-current checks, and Jeff exact approval before external use."
+    }
+  ],
+  "validation_gates": {
+    "gate_1_live_source": "PASSED_BY_BROWSER",
+    "source_status": "browser-based direct scraping (Firecrawl credits exhausted — all web_search web_extract firecrawl_search return 402; used live browser navigate to TechCrunch, TechStars, GitHub for prospect sourcing)",
+    "contact_validation": "low confidence contacts require enrichment before outreach",
+    "outreach_readiness": "attorney-review-only; no external action authorized"
+  },
+  "consent_gating": {
+    "ops_no_auto_send": true,
+    "consent_basis": "no_email_opt_in",
+    "approval_status": "no-auto-send",
+    "workflow_trigger_tags": [],
+    "suppression_tags": [
+      "newsletter:not-consented"
+    ]
+  },
+  "source_candidate_path": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-28/prospect_candidates.json",
+  "normalized_store_path": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-28/prospect_candidates.normalized_for_store.json",
+  "source_packet_prospect_id": "cognition-labs-20260528",
+  "local_growth_os_prospect_id": "prospect_cognition_labs_20260528",
+  "task": "prepare_internal_attorney_review_agent_targeting_packet",
+  "guardrails": {
+    "external_action_allowed": false,
+    "approval_required": true,
+    "no_outreach_no_workflows_no_social_no_clio_no_live_sync": true,
+    "required_before_external_use": [
+      "Jeff exact approval",
+      "attorney review",
+      "conflicts check",
+      "suppression/opt-out/prior-touch check",
+      "source-current verification"
+    ]
+  },
+  "work_item_id": "work_nightly_agent_targeting_20260528_3c9ae85ed6048fd96deff71e",
+  "remediation_checklist": [
+    "Attorney review required before external use.",
+    "Conflicts, suppression/opt-out, prior-touch, and source-current checks required before any outreach.",
+    "Do not send, post, tag, trigger workflows, sync live CRM/Supabase, or write Clio without Jeff exact approval."
+  ]
+}

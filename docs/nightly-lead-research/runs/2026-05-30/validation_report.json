@@ -1,0 +1,92 @@
+{
+  "task": "t_c53fa8ec",
+  "run_date": "2026-05-30",
+  "source_payload": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-30/prospect_candidates.json",
+  "normalized_payload": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-30/prospect_candidates.normalized_for_store.json",
+  "store_dry_run": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-30/store_dry_run.json",
+  "store_apply_output": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-30/store_output.json",
+  "verification": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-30/store_verification.json",
+  "backup": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-30/growth-os.before_t_c53fa8ec.sqlite",
+  "agent_targeting_work_item_dir": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-30/agent-targeting-work-items",
+  "source_candidate_count": 3,
+  "staged_count": 3,
+  "skipped": [],
+  "staged_prospects": [
+    {
+      "name": "Groq, Inc.",
+      "prospect_id": "prospect_groq_20260530",
+      "lane": "ai-patent",
+      "priority": 93
+    },
+    {
+      "name": "XCENA",
+      "prospect_id": "prospect_xcena_20260530",
+      "lane": "ai-patent",
+      "priority": 85
+    },
+    {
+      "name": "Cognition Labs, Inc. (Cognition)",
+      "prospect_id": "prospect_cognition_20260530",
+      "lane": "ai-patent",
+      "priority": 89
+    }
+  ],
+  "work_items": [
+    {
+      "company": "Groq, Inc.",
+      "prospect_id": "prospect_groq_20260530",
+      "work_item_id": "work_nightly_agent_targeting_20260530_ba06988f82332b15f110e76d",
+      "priority": 93,
+      "path": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-30/agent-targeting-work-items/groq-inc.json",
+      "output_path": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-30/agent-targeting-packets/groq-inc-agent-targeting-packet.md"
+    },
+    {
+      "company": "XCENA",
+      "prospect_id": "prospect_xcena_20260530",
+      "work_item_id": "work_nightly_agent_targeting_20260530_079aa72e5201a9e98982622e",
+      "priority": 85,
+      "path": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-30/agent-targeting-work-items/xcena.json",
+      "output_path": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-30/agent-targeting-packets/xcena-agent-targeting-packet.md"
+    },
+    {
+      "company": "Cognition Labs, Inc. (Cognition)",
+      "prospect_id": "prospect_cognition_20260530",
+      "work_item_id": "work_nightly_agent_targeting_20260530_7dd0c1761715a07ff225932b",
+      "priority": 89,
+      "path": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-30/agent-targeting-work-items/cognition-labs-inc-cognition.json",
+      "output_path": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-30/agent-targeting-packets/cognition-labs-inc-cognition-agent-targeting-packet.md"
+    }
+  ],
+  "apply_counts": {
+    "prospects": 3,
+    "contacts": 5,
+    "opportunities": 3,
+    "source_evidence": 6,
+    "outreach_drafts": 3,
+    "approval_items": 3,
+    "crm_sync_records": 3,
+    "suppression_checks": 3
+  },
+  "verification_counts": {
+    "prospects": 59,
+    "contacts": 57,
+    "opportunities": 70,
+    "source_evidence": 120,
+    "outreach_drafts": 41,
+    "approval_items": 73,
+    "crm_sync_records": 52,
+    "suppression_checks": 41,
+    "work_items": 36
+  },
+  "warnings": [
+    "Groq, Inc.: Adam Winter has no email/opt-in; no-send/no-workflow guard remains.",
+    "Groq, Inc.: Matt Eng has no email/opt-in; no-send/no-workflow guard remains.",
+    "Groq, Inc.: upstream draft typo 'Attended for attorney review' preserved only in source payload; normalized draft uses ATTORNEY REVIEW ONLY wrapper.",
+    "XCENA: Jin Kim has no email/opt-in; no-send/no-workflow guard remains.",
+    "XCENA: Dohun Kim has no email/opt-in; no-send/no-workflow guard remains.",
+    "XCENA: upstream draft typo 'Attended for attorney review' preserved only in source payload; normalized draft uses ATTORNEY REVIEW ONLY wrapper.",
+    "Cognition Labs, Inc. (Cognition): Scott Wu has no email/opt-in; no-send/no-workflow guard remains.",
+    "Cognition Labs, Inc. (Cognition): upstream draft typo 'Attended for attorney review' preserved only in source payload; normalized draft uses ATTORNEY REVIEW ONLY wrapper."
+  ],
+  "safety": "Local/internal attorney-review-only staging. No outreach, workflow activation/enrollment, trigger tags, LinkedIn/social action, Clio writes, public/client-facing changes, prospect contact, or live CRM/Supabase/HighLevel sync authorized. Supabase mirror and HighLevel sync remain gated by their existing blockers."
+}

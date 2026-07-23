@@ -1,7 +1,7 @@
 "use client";
 
 import type { Dispatch, FormEvent, RefObject, SetStateAction } from "react";
-import { useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import {
   complianceText,
   isAssessmentConfig,
@@ -18,6 +18,7 @@ import {
 type ContactState = {
   name: string;
   email: string;
+  title: string;
   company: string;
   qualifyingStatus: string;
   permissionAcknowledged: boolean;
@@ -25,12 +26,85 @@ type ContactState = {
 
 type SubmitStatus = "idle" | "submitting" | "done" | "error";
 
+type ReportAsset = {
+  filename: string;
+  content_type: "application/pdf";
+  base64: string;
+};
+
+type CalApi = ((...args: unknown[]) => void) & {
+  loaded?: boolean;
+  ns?: Record<string, CalApi>;
+  q: unknown[];
+};
+
+type CalWindow = Window & {
+  Cal?: CalApi;
+};
+
 function firstName(name: string) {
   return name.trim().split(/\s+/).filter(Boolean)[0] ?? "there";
 }
 
 function initialAnswers(config: AssessmentMagnetConfig) {
   return Object.fromEntries(config.questions.map((question) => [question.id, undefined])) as Record<string, number | undefined>;
+}
+
+function CalInlineEmbed() {
+  useEffect(() => {
+    const namespace = "meeting-with-jeff-schell";
+    const calLink = "jeffschell/meeting-with-jeff-schell";
+    const calendarWindow = window as CalWindow;
+
+    (function initializeCal(C: CalWindow, A: string, L: string) {
+      const push = (api: CalApi, args: unknown[]) => {
+        api.q.push(args);
+      };
+      const doc = C.document;
+      C.Cal =
+        C.Cal ||
+        function CalBootstrap(...args: unknown[]) {
+          const cal = C.Cal;
+          if (!cal) return;
+          if (!cal.loaded) {
+            cal.ns = {};
+            cal.q = cal.q || [];
+            doc.head.appendChild(doc.createElement("script")).src = A;
+            cal.loaded = true;
+          }
+          if (args[0] === L) {
+            const api = function calNamespaceApi(...apiArgs: unknown[]) {
+              push(api, apiArgs);
+            } as CalApi;
+            const requestedNamespace = args[1];
+            api.q = api.q || [];
+            if (typeof requestedNamespace === "string") {
+              cal.ns = cal.ns || {};
+              cal.ns[requestedNamespace] = cal.ns[requestedNamespace] || api;
+              push(cal.ns[requestedNamespace], args);
+              push(cal, ["initNamespace", requestedNamespace]);
+            } else {
+              push(cal, args);
+            }
+            return;
+          }
+          push(cal, args);
+        } as CalApi;
+    })(calendarWindow, "https://app.cal.com/embed/embed.js", "init");
+
+    calendarWindow.Cal?.("init", namespace, { origin: "https://app.cal.com" });
+    calendarWindow.Cal?.ns?.[namespace]?.("inline", {
+      elementOrSelector: "#my-cal-inline-meeting-with-jeff-schell",
+      config: { layout: "month_view", useSlotsViewOnSmallScreen: "true" },
+      calLink,
+    });
+    calendarWindow.Cal?.ns?.[namespace]?.("ui", {
+      hideEventTypeDetails: false,
+      layout: "month_view",
+    });
+  }, []);
+
+  return <div className="learn-cal-inline" id="my-cal-inline-meeting-with-jeff-schell" />;
 }
 
 export function LeadMagnetFlow({ config }: { config: MagnetConfig }) {
@@ -45,15 +119,18 @@ function AssessmentFlow({ config }: { config: AssessmentMagnetConfig }) {
   const [contact, setContact] = useState<ContactState>({
     name: "",
     email: "",
+    title: "",
     company: "",
     qualifyingStatus: config.statusOptions[0] ?? "",
     permissionAcknowledged: false,
   });
   const [answers, setAnswers] = useState<Record<string, number | undefined>>(() => initialAnswers(config));
+  const [stepIndex, setStepIndex] = useState(0);
   const [mode, setMode] = useState<MagnetMode>("founder");
   const [status, setStatus] = useState<SubmitStatus>("idle");
   const [message, setMessage] = useState("");
   const [result, setResult] = useState<AssessmentResult | null>(null);
+  const [reportAsset, setReportAsset] = useState<ReportAsset | null>(null);
   const resultRef = useRef<HTMLDivElement>(null);
 
   const answeredCount = useMemo(
@@ -61,14 +138,48 @@ function AssessmentFlow({ config }: { config: AssessmentMagnetConfig }) {
     [answers, config.questions],
   );
 
-  const canSubmit =
+  const contactReady =
     Boolean(contact.name.trim()) &&
     Boolean(contact.email.trim()) &&
+    Boolean(contact.title.trim()) &&
     Boolean(contact.company.trim()) &&
     Boolean(contact.qualifyingStatus) &&
-    contact.permissionAcknowledged &&
+    contact.permissionAcknowledged;
+  const currentQuestion = config.questions[stepIndex - 1];
+  const currentArea = currentQuestion
+    ? config.areas.find((area) => area.key === currentQuestion.areaKey)
+    : undefined;
+  const currentQuestionAnswered = currentQuestion ? answers[currentQuestion.id] !== undefined : false;
+  const progressPercent = Math.round(
+    (((stepIndex === 0 ? 0 : stepIndex) + 1) / (config.questions.length + 1)) * 100,
+  );
+  const canGoNext = stepIndex === 0 ? contactReady : currentQuestionAnswered;
+  const canSubmit =
+    contactReady &&
     answeredCount === config.questions.length &&
     status !== "submitting";
+
+  function goNext() {
+    if (!canGoNext) {
+      setStatus("error");
+      setMessage(
+        stepIndex === 0
+          ? "Complete the contact fields, title, qualifying status, and permission checkbox before starting the questionnaire."
+          : "Choose one categorical answer before continuing.",
+      );
+      return;
+    }
+
+    setStatus("idle");
+    setMessage("");
+    setStepIndex((current) => Math.min(current + 1, config.questions.length));
+  }
+
+  function goBack() {
+    setStatus("idle");
+    setMessage("");
+    setStepIndex((current) => Math.max(current - 1, 0));
+  }
 
   async function submit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -93,21 +204,24 @@ function AssessmentFlow({ config }: { config: AssessmentMagnetConfig }) {
         body: JSON.stringify({
           name: contact.name.trim(),
           email: contact.email.trim(),
+          contact_title: contact.title.trim(),
           company: contact.company.trim(),
           qualifying_status: contact.qualifyingStatus,
           permission_acknowledged: contact.permissionAcknowledged,
+          subscribe: contact.permissionAcknowledged,
           magnet_slug: config.slug,
           mode: config.modeToggle ? mode : undefined,
           answers: compactAnswers,
         }),
       });
-      const data = (await response.json()) as AssessmentResult | { error?: string };
+      const data = (await response.json()) as (AssessmentResult & { report?: ReportAsset }) | { error?: string };
 
       if (!response.ok || !("ok" in data)) {
         throw new Error("error" in data ? data.error : "Submission failed");
       }
 
       setResult(data);
+      setReportAsset(data.report ?? null);
       setStatus("done");
       window.requestAnimationFrame(() => {
         resultRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -123,6 +237,7 @@ function AssessmentFlow({ config }: { config: AssessmentMagnetConfig }) {
       <AssessmentResultView
         config={config}
         result={result}
+        reportAsset={reportAsset}
         resultRef={resultRef}
       />
     );
@@ -135,71 +250,92 @@ function AssessmentFlow({ config }: { config: AssessmentMagnetConfig }) {
       <p className="learn-report-copy">{config.formDescription}</p>
       <p className="learn-compliance-note">{noConfidentialInfoText}</p>
 
-      {config.modeToggle ? (
-        <fieldset className="learn-mode-toggle">
-          <legend>Result framing</legend>
-          <div className="learn-mode-options">
-            {(["founder", "investor"] as const).map((item) => (
-              <label key={item} className={mode === item ? "is-selected" : ""}>
-                <input
-                  type="radio"
-                  name={`${config.slug}-mode`}
-                  value={item}
-                  checked={mode === item}
-                  onChange={() => setMode(item)}
-                />
-                <span>{item === "founder" ? "Founder mode" : "Investor mode"}</span>
-              </label>
-            ))}
-          </div>
-        </fieldset>
-      ) : null}
-
-      <div className="learn-question-groups">
-        {config.areas.map((area) => (
-          <div key={area.key} className="learn-question-group" role="group" aria-label={area.label}>
-            <div className="learn-question-group-header">
-              <span>{area.label}</span>
-              <strong>{area.maxScore} pts</strong>
-            </div>
-            {config.questions
-              .filter((question) => question.areaKey === area.key)
-              .map((question) => (
-                <fieldset key={question.id} className="learn-question" data-assessment-question={question.id}>
-                  <legend>
-                    <span>{question.id.toUpperCase()}</span>
-                    {question.label}
-                  </legend>
-                  <div className="learn-answer-options">
-                    {question.options.map((option) => (
-                      <label key={`${question.id}-${option.label}`} className="learn-answer-option">
-                        <input
-                          type="radio"
-                          name={`${config.slug}-${question.id}`}
-                          value={option.score}
-                          checked={answers[question.id] === option.score}
-                          onChange={() => setAnswers((current) => ({ ...current, [question.id]: option.score }))}
-                          required
-                        />
-                        <span>{option.label}</span>
-                      </label>
-                    ))}
-                  </div>
-                </fieldset>
-              ))}
-          </div>
-        ))}
+      <div className="learn-step-progress" aria-label="Questionnaire progress">
+        <span>{stepIndex === 0 ? "Step 1: contact" : `Question ${stepIndex} of ${config.questions.length}`}</span>
+        <strong>{answeredCount} / {config.questions.length} answered</strong>
+        <div aria-hidden="true">
+          <span style={{ width: `${progressPercent}%` }} />
+        </div>
       </div>
 
-      <ContactPermissionBlock
-        config={config}
-        contact={contact}
-        setContact={setContact}
-      />
+      {stepIndex === 0 ? (
+        <div className="learn-step-panel">
+          <ContactPermissionBlock
+            config={config}
+            contact={contact}
+            setContact={setContact}
+            requireTitle
+          />
+          {config.modeToggle ? (
+            <fieldset className="learn-mode-toggle">
+              <legend>Result framing</legend>
+              <div className="learn-mode-options">
+                {(["founder", "investor"] as const).map((item) => (
+                  <label key={item} className={mode === item ? "is-selected" : ""}>
+                    <input
+                      type="radio"
+                      name={`${config.slug}-mode`}
+                      value={item}
+                      checked={mode === item}
+                      onChange={() => setMode(item)}
+                    />
+                    <span>{item === "founder" ? "Founder mode" : "Investor mode"}</span>
+                  </label>
+                ))}
+              </div>
+            </fieldset>
+          ) : null}
+        </div>
+      ) : currentQuestion ? (
+        <div className="learn-question-groups">
+          <div className="learn-question-group" role="group" aria-label={currentArea?.label ?? "Question"}>
+            <div className="learn-question-group-header">
+              <span>{currentArea?.label ?? "Questionnaire"}</span>
+              <strong>{currentArea?.maxScore ?? 3} pts</strong>
+            </div>
+            <fieldset className="learn-question" data-assessment-question={currentQuestion.id}>
+              <legend>
+                <span>{currentQuestion.id.toUpperCase()}</span>
+                {currentQuestion.label}
+              </legend>
+              <div className="learn-answer-options">
+                {currentQuestion.options.map((option) => (
+                  <label key={`${currentQuestion.id}-${option.label}`} className="learn-answer-option">
+                    <input
+                      type="radio"
+                      name={`${config.slug}-${currentQuestion.id}`}
+                      value={option.score}
+                      checked={answers[currentQuestion.id] === option.score}
+                      onChange={() => {
+                        setAnswers((current) => ({ ...current, [currentQuestion.id]: option.score }));
+                        setStatus("idle");
+                        setMessage("");
+                      }}
+                      required
+                    />
+                    <span>{option.label}</span>
+                  </label>
+                ))}
+              </div>
+            </fieldset>
+          </div>
+        </div>
+      ) : null}
 
-      <button className="learn-report-submit" type="submit" disabled={!canSubmit}>
-        {status === "submitting" ? "Preparing your result..." : config.buttonLabel}
-      </button>
+      <div className="learn-step-actions">
+        <button type="button" className="learn-step-secondary" onClick={goBack} disabled={stepIndex === 0 || status === "submitting"}>
+          Back
+        </button>
+        {stepIndex < config.questions.length ? (
+          <button type="button" className="learn-report-submit" onClick={goNext} disabled={!canGoNext || status === "submitting"}>
+            {stepIndex === 0 ? "Start questionnaire" : "Next question"}
+          </button>
+        ) : (
+          <button className="learn-report-submit" type="submit" disabled={!canSubmit}>
+            {status === "submitting" ? "Preparing your PDF report..." : config.buttonLabel}
+          </button>
+        )}
+      </div>
 
       {message ? (
         <p className={status === "error" ? "learn-report-message is-error" : "learn-report-message"}>
@@ -214,6 +350,7 @@ function DownloadFlow({ config }: { config: DownloadMagnetConfig }) {
   const [contact, setContact] = useState<ContactState>({
     name: "",
     email: "",
+    title: "",
     company: "",
     qualifyingStatus: config.statusOptions[0] ?? "",
     permissionAcknowledged: false,
@@ -253,6 +390,7 @@ function DownloadFlow({ config }: { config: DownloadMagnetConfig }) {
           company: contact.company.trim(),
           qualifying_status: contact.qualifyingStatus,
           permission_acknowledged: contact.permissionAcknowledged,
+          subscribe: contact.permissionAcknowledged,
           magnet_slug: config.slug,
         }),
       });
@@ -279,8 +417,30 @@ function DownloadFlow({ config }: { config: DownloadMagnetConfig }) {
         <div className="learn-report-kicker">Playbook requested</div>
         <h2>Thanks, {firstName(contact.name)}.</h2>
         <p className="learn-result-headline">
-          Check <strong>{contact.email.trim()}</strong> - the playbook is on its way. If it doesn&apos;t arrive in a few minutes, check your spam folder or <a href="#bio">schedule a call</a> instead.
+          Check <strong>{contact.email.trim()}</strong> - the playbook is on its way. If it doesn&apos;t arrive in a few minutes, check your spam folder.
         </p>
+        <section className="learn-calendar-section" aria-label="Schedule a consultation with Jeff Schell">
+          <div className="learn-report-kicker">Schedule a consultation</div>
+          <CalInlineEmbed />
+        </section>
+        <section className="learn-confirmation-bio" aria-label="Jeff Schell biography">
+          <img src="/logos/jeff-schell.jpg" alt="Jeff Schell" width={220} height={220} loading="lazy" />
+          <div>
+            <h3>Jeff Schell</h3>
+            <p className="learn-confirmation-bio-title">
+              Managing Partner, Mountain West · Whiteford Taylor &amp; Preston · Patent Attorney ·
+              Outside General Counsel · AI Advisor
+            </p>
+            <p>
+              Jeff Schell is Managing Partner of Whiteford&apos;s Mountain West practice and serves as
+              outside general counsel to technology companies. A patent attorney, venture capitalist,
+              and former two-time founder, he leads engagements at the intersection of patent strategy,
+              AI risk, venture growth, and corporate operations. Since 2012, his work has supported
+              the creation of over $100 million in transaction and enterprise value across
+              Colorado&apos;s technology ecosystem.
+            </p>
+          </div>
+        </section>
         <p className="learn-result-compliance">{complianceText}</p>
       </div>
     );
@@ -290,13 +450,14 @@ function DownloadFlow({ config }: { config: DownloadMagnetConfig }) {
     <form className="learn-report-card learn-download-form" data-learn-magnet-form={config.slug} onSubmit={submit}>
       <div className="learn-report-kicker">PDF delivery</div>
       <h2>{config.formTitle}</h2>
-      <p className="learn-report-copy">{config.formDescription}</p>
-      <p className="learn-compliance-note">{noConfidentialInfoText}</p>
+      {config.formDescription ? <p className="learn-report-copy">{config.formDescription}</p> : null}
+      {config.kind !== "download" ? <p className="learn-compliance-note">{noConfidentialInfoText}</p> : null}
 
       <ContactPermissionBlock
         config={config}
         contact={contact}
         setContact={setContact}
+        requireTitle={false}
       />
 
       <button className="learn-report-submit" type="submit" disabled={!canSubmit}>
@@ -316,10 +477,12 @@ function ContactPermissionBlock({
   config,
   contact,
   setContact,
+  requireTitle,
 }: {
   config: MagnetConfig;
   contact: ContactState;
   setContact: Dispatch<SetStateAction<ContactState>>;
+  requireTitle: boolean;
 }) {
   return (
     <div className="learn-contact-block">
@@ -337,8 +500,17 @@ function ContactPermissionBlock({
           value={contact.email}
           onChange={(email) => setContact((current) => ({ ...current, email }))}
         />
+        {requireTitle ? (
+          <TextField
+            label="Title"
+            autoComplete="organization-title"
+            value={contact.title}
+            onChange={(title) => setContact((current) => ({ ...current, title }))}
+          />
+        ) : null}
         <TextField
           label="Company name"
+          autoComplete="organization"
           value={contact.company}
           onChange={(company) => setContact((current) => ({ ...current, company }))}
         />
@@ -389,12 +561,14 @@ function TextField({
   onChange,
   type = "text",
   inputMode,
+  autoComplete,
 }: {
   label: string;
   value: string;
   onChange: (value: string) => void;
   type?: "text" | "email";
   inputMode?: "email";
+  autoComplete?: string;
 }) {
   return (
     <label className="learn-report-field">
@@ -405,7 +579,7 @@ function TextField({
         onChange={(event) => onChange(event.target.value)}
         required
         inputMode={inputMode}
-        autoComplete={inputMode === "email" ? "email" : label === "Name" ? "name" : "organization"}
+        autoComplete={autoComplete ?? (inputMode === "email" ? "email" : label === "Name" ? "name" : "organization")}
       />
     </label>
   );
@@ -414,12 +588,18 @@ function TextField({
 function AssessmentResultView({
   config,
   result,
+  reportAsset,
   resultRef,
 }: {
   config: AssessmentMagnetConfig;
   result: AssessmentResult;
+  reportAsset: ReportAsset | null;
   resultRef: RefObject<HTMLDivElement | null>;
 }) {
+  const reportHref = reportAsset
+    ? `data:${reportAsset.content_type};base64,${reportAsset.base64}`
+    : null;
+
   return (
     <div className="learn-report-card learn-result-card" ref={resultRef} tabIndex={-1}>
       <div className="learn-report-kicker">Your result</div>
@@ -442,6 +622,12 @@ function AssessmentResultView({
           ))}
         </ol>
       </div>
+
+      {reportHref && reportAsset ? (
+        <a className="learn-result-download" href={reportHref} download={reportAsset.filename}>
+          Download customized PDF report
+        </a>
+      ) : null}
 
       <button
         className="learn-result-schedule"

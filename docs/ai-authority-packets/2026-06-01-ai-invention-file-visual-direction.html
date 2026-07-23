@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Whiteford/Schell IP — AI Invention File Visual Direction</title>
+  <style>
+    :root {
+      --bg: #f7f5ef;
+      --paper: #fffdf8;
+      --ink: #121827;
+      --muted: #5d6678;
+      --blue: #213f77;
+      --violet: #683ab7;
+      --gold: #b99057;
+      --sage: #55776a;
+      --line: #d8d0c3;
+      --soft-blue: rgba(33, 63, 119, 0.08);
+      --soft-violet: rgba(104, 58, 183, 0.08);
+      --shadow: 0 28px 70px -48px rgba(18, 24, 39, 0.7);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      background:
+        linear-gradient(rgba(216, 208, 195, 0.22) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(216, 208, 195, 0.18) 1px, transparent 1px),
+        var(--bg);
+      background-size: 42px 42px;
+      color: var(--ink);
+      font-family: "DM Sans", "Avenir Next", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      padding: 32px;
+    }
+
+    .canvas {
+      width: min(1200px, 100%);
+      min-height: 900px;
+      border: 1px solid var(--line);
+      background: var(--paper);
+      box-shadow: var(--shadow);
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+      overflow: hidden;
+    }
+
+    header, footer {
+      padding: 34px 52px;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 32px;
+      border-bottom: 1px solid var(--line);
+      background: rgba(255, 253, 248, 0.88);
+    }
+
+    .brand {
+      font-family: Georgia, "Times New Roman", serif;
+      letter-spacing: .13em;
+      color: var(--blue);
+      font-size: 22px;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    .brand span { color: var(--violet); }
+
+    .eyebrow {
+      color: var(--violet);
+      font-size: 12px;
+      line-height: 1.3;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      text-align: right;
+      font-weight: 700;
+    }
+
+    main {
+      padding: 56px 58px 42px;
+      display: grid;
+      grid-template-columns: .9fr 1.3fr;
+      gap: 54px;
+      align-items: center;
+    }
+
+    h1 {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-weight: 400;
+      font-size: clamp(48px, 6vw, 76px);
+      line-height: .98;
+      letter-spacing: -0.045em;
+      color: var(--blue);
+      text-wrap: pretty;
+    }
+
+    h1 em {
+      color: var(--violet);
+      font-style: italic;
+      font-weight: 400;
+    }
+
+    .summary {
+      margin: 28px 0 0;
+      color: var(--muted);
+      font-size: 20px;
+      line-height: 1.5;
+      max-width: 430px;
+      text-wrap: pretty;
+    }
+
+    .note {
+      margin-top: 32px;
+      border-top: 1px solid var(--line);
+      padding-top: 22px;
+      color: var(--ink);
+      font-size: 15px;
+      line-height: 1.55;
+    }
+
+    .note strong { color: var(--blue); }
+
+    .spine {
+      position: relative;
+      padding: 18px 0;
+    }
+
+    .spine::before {
+      content: "";
+      position: absolute;
+      left: 42px;
+      top: 54px;
+      bottom: 54px;
+      width: 2px;
+      background: linear-gradient(var(--blue), var(--violet), var(--sage));
+      opacity: .62;
+    }
+
+    .step {
+      position: relative;
+      display: grid;
+      grid-template-columns: 84px 1fr;
+      gap: 20px;
+      align-items: center;
+      margin: 0 0 20px;
+    }
+
+    .number {
+      position: relative;
+      z-index: 1;
+      width: 84px;
+      height: 84px;
+      border: 1px solid var(--line);
+      background: var(--paper);
+      display: grid;
+      place-items: center;
+      color: var(--blue);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 30px;
+      box-shadow: 0 16px 34px -28px rgba(18, 24, 39, .9);
+    }
+
+    .card {
+      min-height: 96px;
+      border: 1px solid var(--line);
+      background: linear-gradient(135deg, rgba(255,255,255,.72), rgba(247,245,239,.82));
+      padding: 20px 24px;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 18px;
+      align-items: start;
+    }
+
+    .step:nth-child(2) .card { background: linear-gradient(135deg, var(--soft-violet), rgba(255,255,255,.72)); }
+    .step:nth-child(3) .card { background: linear-gradient(135deg, rgba(185,144,87,.10), rgba(255,255,255,.76)); }
+    .step:nth-child(4) .card { background: linear-gradient(135deg, rgba(85,119,106,.10), rgba(255,255,255,.76)); }
+    .step:nth-child(5) .card { background: linear-gradient(135deg, var(--soft-blue), rgba(255,255,255,.76)); }
+
+    .label {
+      color: var(--blue);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 24px;
+      line-height: 1.08;
+      margin: 0 0 8px;
+    }
+
+    .copy {
+      color: var(--muted);
+      margin: 0;
+      font-size: 15px;
+      line-height: 1.45;
+    }
+
+    .tag {
+      border: 1px solid rgba(33,63,119,.22);
+      color: var(--blue);
+      padding: 7px 9px;
+      font-size: 10px;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      white-space: nowrap;
+      background: rgba(255, 253, 248, .76);
+    }
+
+    footer {
+      border-top: 1px solid var(--line);
+      display: flex;
+      justify-content: space-between;
+      gap: 32px;
+      align-items: center;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.4;
+    }
+
+    .cta {
+      display: inline-flex;
+      align-items: center;
+      min-height: 44px;
+      padding: 0 18px;
+      background: var(--blue);
+      color: white;
+      text-decoration: none;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      font-size: 12px;
+    }
+
+    @media (max-width: 880px) {
+      body { padding: 18px; }
+      .canvas { min-height: auto; }
+      header, footer { padding: 24px; }
+      header, footer, main { grid-template-columns: 1fr; }
+      main { padding: 34px 24px; display: block; }
+      .spine { margin-top: 38px; }
+      .card { grid-template-columns: 1fr; }
+      .eyebrow { text-align: left; }
+      footer { flex-direction: column; align-items: flex-start; }
+    }
+
+    @media (prefers-reduced-motion: no-preference) {
+      .step { animation: rise .5s ease both; }
+      .step:nth-child(2) { animation-delay: .06s; }
+      .step:nth-child(3) { animation-delay: .12s; }
+      .step:nth-child(4) { animation-delay: .18s; }
+      .step:nth-child(5) { animation-delay: .24s; }
+      @keyframes rise {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+    }
+  </style>
+</head>
+<body>
+  <article class="canvas" aria-label="AI Invention File visual direction">
+    <header>
+      <div class="brand">WHITEFORD <span>|</span> SCHELL IP</div>
+      <div class="eyebrow">AI Patent Strategy · Draft Visual Direction</div>
+    </header>
+
+    <main>
+      <section>
+        <h1>The AI <em>Invention File</em></h1>
+        <p class="summary">A lightweight evidence spine for teams using AI in R&amp;D: not to prove a legal conclusion, but to make human technical judgment visible.</p>
+        <p class="note"><strong>Design posture:</strong> warm paper, precise rules, restrained violet/gold/sage accents, and no robot imagery. Built for Figma handoff or a future LinkedIn graphic template.</p>
+      </section>
+
+      <section class="spine" aria-label="Evidence spine steps">
+        <div class="step">
+          <div class="number">1</div>
+          <div class="card">
+            <div><p class="label">Human-framed problem</p><p class="copy">Capture the technical problem, constraints, architecture choices, and product context.</p></div>
+            <div class="tag">People</div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="number">2</div>
+          <div class="card">
+            <div><p class="label">AI role identified</p><p class="copy">Separate generated suggestions, automated work, model/tool inputs, and human-directed experiments.</p></div>
+            <div class="tag">Tool</div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="number">3</div>
+          <div class="card">
+            <div><p class="label">Human judgment recorded</p><p class="copy">Show what was rejected, modified, tested, validated, integrated, or turned into roadmap.</p></div>
+            <div class="tag">Decisions</div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="number">4</div>
+          <div class="card">
+            <div><p class="label">Ownership chain mapped</p><p class="copy">Track code, data, outputs, contractor work, vendor terms, and assignment coverage.</p></div>
+            <div class="tag">Records</div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="number">5</div>
+          <div class="card">
+            <div><p class="label">IP path clarified</p><p class="copy">Support counsel review of inventorship, claim direction, trade secrets, and disclosure timing.</p></div>
+            <div class="tag">Strategy</div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div>Draft educational framework — not legal advice, not an inventorship, patentability, or eligibility determination.</div>
+      <a class="cta" href="/ai-patent-strategy-scorecard">AI Patent Strategy Scorecard →</a>
+    </footer>
+  </article>
+</body>
+</html>

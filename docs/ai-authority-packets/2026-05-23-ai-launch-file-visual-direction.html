@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI Launch File Control Board — Whiteford Visual Direction</title>
+  <style>
+    :root { --bg:#f7f5ef; --paper:#fffdf8; --ink:#121827; --muted:#5d6678; --blue:#213f77; --gold:#b99057; --sage:#55776a; --line:#d8d0c3; --shadow:0 24px 70px rgba(18,24,39,.12); }
+    * { box-sizing: border-box; }
+    body { margin:0; min-height:100vh; color:var(--ink); background:linear-gradient(90deg,rgba(216,208,195,.22) 1px,transparent 1px),linear-gradient(180deg,rgba(216,208,195,.18) 1px,transparent 1px),var(--bg); background-size:56px 56px; font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; }
+    main { width:min(1180px,calc(100vw - 32px)); margin:32px auto; padding:clamp(24px,4vw,56px); background:var(--paper); border:1px solid var(--line); box-shadow:var(--shadow); position:relative; overflow:hidden; }
+    main:before { content:""; position:absolute; inset:0 0 auto; height:8px; background:linear-gradient(90deg,var(--blue),var(--gold),var(--sage)); }
+    .eyebrow { color:var(--blue); font-size:13px; font-weight:800; letter-spacing:.16em; text-transform:uppercase; margin-bottom:22px; }
+    .grid { display:grid; grid-template-columns:.92fr 1.08fr; gap:clamp(28px,5vw,64px); align-items:center; }
+    h1 { font-size:clamp(42px,7vw,84px); line-height:.91; letter-spacing:-.065em; margin:0 0 24px; max-width:720px; text-wrap:balance; }
+    .subhead { color:var(--muted); font-size:clamp(18px,2.1vw,25px); line-height:1.38; max-width:620px; margin:0 0 34px; }
+    .cta { display:inline-flex; align-items:center; min-height:48px; padding:0 18px; border:1px solid var(--blue); background:var(--blue); color:white; font-size:15px; font-weight:750; text-decoration:none; }
+    .stack { position:relative; padding-left:34px; }
+    .stack:before { content:""; position:absolute; left:10px; top:28px; bottom:28px; width:2px; background:linear-gradient(var(--blue),var(--gold),var(--sage)); }
+    .folder { position:relative; display:grid; grid-template-columns:38px 1fr; gap:16px; padding:18px 18px 18px 0; border-bottom:1px solid var(--line); }
+    .folder:before { content:""; position:absolute; left:-31px; top:27px; width:12px; height:12px; border-radius:50%; background:var(--paper); border:2px solid var(--blue); }
+    .num { color:var(--gold); font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:14px; font-weight:800; }
+    .folder h2 { margin:0 0 5px; font-size:20px; letter-spacing:-.02em; }
+    .folder p { margin:0; color:var(--muted); line-height:1.45; font-size:15px; }
+    .note { margin-top:34px; padding-top:20px; border-top:1px solid var(--line); color:var(--muted); font-size:13px; line-height:1.5; }
+    @media(max-width:860px){ main{margin:16px auto; padding:28px 20px;} .grid{grid-template-columns:1fr;} h1{font-size:clamp(44px,14vw,68px);} }
+  </style>
+</head>
+<body>
+  <main aria-label="Whiteford AI Launch File visual direction">
+    <div class="eyebrow">Whiteford Mountain West · AI Legal Operating System</div>
+    <section class="grid">
+      <div>
+        <h1>Where is the AI Launch File?</h1>
+        <p class="subhead">A board-ready control artifact for AI product launches: practical enough for operators, disciplined enough for customers, investors, regulators, and diligence.</p>
+        <a class="cta" href="/colorado-tech-general-counsel">Get the Tech Company Legal Health Checklist →</a>
+      </div>
+      <div class="stack" aria-label="AI launch file evidence categories">
+        <article class="folder"><div class="num">01</div><div><h2>System owner map</h2><p>Internal executive, product, engineering, legal, HR, and risk accountability.</p></div></article>
+        <article class="folder"><div class="num">02</div><div><h2>Vendor + model register</h2><p>Tools, providers, integrations, contractual terms, and downstream dependencies.</p></div></article>
+        <article class="folder"><div class="num">03</div><div><h2>Data-flow note</h2><p>Customer, employee, confidential, sensitive, and training-use boundaries.</p></div></article>
+        <article class="folder"><div class="num">04</div><div><h2>Contract + IP terms</h2><p>Ownership, confidentiality, audit, security, indemnity, and usage rights.</p></div></article>
+        <article class="folder"><div class="num">05</div><div><h2>Human-review path</h2><p>Escalation, review, overrides, and consequential-decision controls where relevant.</p></div></article>
+        <article class="folder"><div class="num">06</div><div><h2>Evidence trail</h2><p>Records a board, buyer, enterprise customer, or regulator could evaluate later.</p></div></article>
+        <article class="folder"><div class="num">07</div><div><h2>30-day legal workstream</h2><p>The next practical sequence: fix, assign, document, and report.</p></div></article>
+      </div>
+    </section>
+    <p class="note">Draft visual direction only. Educational framing; not legal advice and not an attorney-client relationship. Public forms should avoid requesting confidential facts.</p>
+  </main>
+</body>
+</html>

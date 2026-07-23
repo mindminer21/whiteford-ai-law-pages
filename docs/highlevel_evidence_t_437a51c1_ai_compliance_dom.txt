@@ -1,0 +1,51 @@
+HighLevel DOM evidence — t_437a51c1 — AI Compliance Gameplan
+Captured: 2026-05-06 15:08 MDT via Chrome CDP iframe text extraction
+URL: https://app.gohighlevel.com/location/tm68WWMrcAa3TqQbEAMa/workflow/682ada5f-fa1e-4411-97d6-a1e019139614
+
+Observed text excerpt:
+Skip to main content
+Back to Workflows
+
+WF | Intake | Whiteford | AI Compliance Gameplan | Draft
+
+Saved
+Standard Builder
+
+Builder
+
+Settings
+
+Enrollment History
+
+Execution Logs
+
+Test Workflow
+
+Draft
+
+Publish
+
+Consent Gate — lead magnet email opt-in required before nurture
+Opted in / eligible for fut...
+
+If "Tags" includes "newsletter:ai"
+
+Not opted in / suppressed /...
+When none of the conditions are met
+Add Intake & Compliance Tags
+END
+Create/Update Intake Opportunity
+Add Internal Intake Note
+Contact TagContact Tagged: workflow:ai-compliance-readiness
+Tag Added includes "workflow:ai-compliance-readiness"
+Stats
+Add New Trigger
+Add
+100%
+
+Panel/probe notes:
+- Existing branch verified: If "Tags" includes "newsletter:ai".
+- Opened consent-gate panel; `Add Segment` was initially enabled.
+- Add Segment probe created an unsaved blank segment state: `AND / Select / Select Operator / AND`.
+- I used Escape/Cancel behavior to close/discard the panel without saving.
+- Workflow header remained Draft/Saved; Publish was not clicked.

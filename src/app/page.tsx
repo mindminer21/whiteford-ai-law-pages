@@ -3,11 +3,11 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Interactive Legal Readiness Tools",
   description:
-    "Four marketing-only lead magnet previews from Schell IP and Whiteford for AI risk, patent moat, AI governance readiness, and patent-forward outside counsel.",
+    "Nine marketing-only lead magnet previews from Schell IP and Whiteford for AI risk, patent, governance, outside counsel, investor outreach, and search-demand readiness workflows.",
   openGraph: {
     title: "Interactive Legal Readiness Tools",
     description:
-      "Four marketing-only lead magnet previews from Schell IP and Whiteford for AI risk, patent moat, AI governance readiness, and patent-forward outside counsel.",
+      "Nine marketing-only lead magnet previews from Schell IP and Whiteford for AI risk, patent, governance, outside counsel, investor outreach, and search-demand readiness workflows.",
     url: "/",
     images: ["/logos/whiteford-white-on-navy-full.png"],
   },
@@ -66,6 +66,71 @@ const tools = [
     visual: "playbook",
     action: "Open the playbook",
   },
+  {
+    href: "/investor-outreach-kanban",
+    meta: "5-minute · Kanban board",
+    title: (
+      <>
+        Investor Outreach <em>Kanban</em>
+      </>
+    ),
+    description:
+      "Turn Signal/NFX investor categories into a founder-friendly outreach board for warm introductions, follow-up, diligence, funding, and archive hygiene.",
+    visual: "kanban",
+    action: "Build the board",
+  },
+  {
+    href: "/colorado-non-compete-checker",
+    meta: "5-minute · 12 questions",
+    title: (
+      <>
+        Colorado Non-Compete <em>Checker</em>
+      </>
+    ),
+    description:
+      "Map restrictive-covenant exposure under current Colorado law before a hire, employee dispute, regulator, or buyer surfaces it.",
+    visual: "noncompete",
+    action: "Run the check",
+  },
+  {
+    href: "/trademark-brand-precheck",
+    meta: "5-minute · 11 questions",
+    title: (
+      <>
+        Trademark &amp; Brand <em>Pre-Check</em>
+      </>
+    ),
+    description:
+      "Check brand-protection readiness before investing further in a name, launch, rebrand, domain, or campaign.",
+    visual: "trademark",
+    action: "Check my brand",
+  },
+  {
+    href: "/patent-readiness",
+    meta: "5-minute · 11 questions",
+    title: (
+      <>
+        Patent <em>Readiness</em>
+      </>
+    ),
+    description:
+      "See the patent-readiness gaps that can matter before a disclosure, demo, sale, filing decision, or investor conversation.",
+    visual: "patent",
+    action: "Check readiness",
+  },
+  {
+    href: "/sale-readiness-audit",
+    meta: "5-minute · 12 questions",
+    title: (
+      <>
+        Sale &amp; Investor <em>Readiness Audit</em>
+      </>
+    ),
+    description:
+      "Map diligence friction across corporate records, IP ownership, contracts, employment, and data before a transaction starts moving.",
+    visual: "sale",
+    action: "Run the audit",
+  },
 ] as const;
 
 function ArrowIcon() {
@@ -122,6 +187,49 @@ function PreviewVisual({ type }: { type: (typeof tools)[number]["visual"] }) {
     );
   }
 
+  if (type === "kanban") {
+    return (
+      <svg viewBox="0 0 320 132" role="img" aria-label="Investor outreach Kanban preview">
+        {[0, 1, 2, 3].map((col) => (
+          <g key={col} transform={`translate(${14 + col * 76} 10)`}>
+            <rect width="62" height="112" fill="#f7f8fa" stroke="rgba(0,55,86,0.16)" />
+            <rect x="8" y="12" width="46" height="8" fill="#632DDD" opacity="0.55" />
+            <rect x="8" y="31" width="46" height={22 + (col % 2) * 12} fill="#dfeee4" stroke="rgba(0,55,86,0.12)" />
+            <rect x="8" y={64 + (col % 2) * 6} width="46" height="28" fill="#f5ebd4" stroke="rgba(0,55,86,0.12)" />
+          </g>
+        ))}
+        <text x="18" y="126" fill="#154E73" fontSize="10" fontFamily="var(--mono)">
+          FIT · INTRO · MEETING · DILIGENCE
+        </text>
+      </svg>
+    );
+  }
+
+  if (type === "noncompete" || type === "trademark" || type === "patent" || type === "sale") {
+    const labels = {
+      noncompete: ["COVENANT", "NOTICE", "TRADE SECRET"],
+      trademark: ["STRENGTH", "CONFLICT", "RIGHTS"],
+      patent: ["TIMING", "OWNERSHIP", "RECORDS"],
+      sale: ["CAP TABLE", "IP", "CONTRACTS"],
+    }[type];
+    const colors = ["#f0ded9", "#f5ebd4", "#dfeee4"];
+    return (
+      <svg viewBox="0 0 320 132" role="img" aria-label={`${type} readiness preview`}>
+        {labels.map((label, index) => (
+          <g key={label} transform={`translate(22 ${16 + index * 36})`}>
+            <rect width="276" height="24" fill={colors[index]} stroke="rgba(0,55,86,0.16)" />
+            <rect x="10" y="8" width={142 - index * 28} height="8" fill={index === 0 ? "#b14b3d" : index === 1 ? "#c99334" : "#4f8c5b"} />
+            <text x="170" y="16" fill="#154E73" fontSize="9" fontFamily="var(--mono)">
+              {label}
+            </text>
+          </g>
+        ))}
+        <circle cx="278" cy="112" r="10" fill="#632DDD" opacity="0.88" />
+        <path d="M274 112h8M278 108v8" stroke="#fff" strokeWidth="1.4" />
+      </svg>
+    );
+  }
+
   const points =
     type === "risk"
       ? "160,18 278,64 196,118 78,86"
@@ -171,7 +279,6 @@ export default function Home() {
               height={149}
             />
           </div>
-          <span className="brand-bar-meta">Attorney advertising · learn.schellip.com</span>
         </div>
       </div>
 
@@ -179,11 +286,11 @@ export default function Home() {
         <div className="container">
           <div className="directory-eyebrow">Whiteford · Schell IP learning tools</div>
           <h1>
-            Four practical legal readiness tools for <em>AI-era technology companies.</em>
+            Practical legal readiness tools for <em>AI-era technology companies.</em>
           </h1>
           <p>
-            Preview the marketing surface for the AI risk, patent moat, governance, and outside
-            counsel lead magnets. The approved tools now render inline results and route follow-up
+            Preview the marketing surface for AI risk, patent, governance, outside counsel,
+            investor outreach, and search-demand lead magnets. The approved tools now render inline results and route follow-up
             through HighLevel.
           </p>
         </div>

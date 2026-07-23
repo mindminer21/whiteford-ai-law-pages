@@ -1,0 +1,71 @@
+{
+  "run_mode": "research_only",
+  "run_label": "2026-05-08 nightly batch (blocked)",
+  "created_at": "2026-05-08T01:50:00-06:00",
+  "model_profile": "qwen3.6:35b-a3b (qwen-local via Hermes)",
+  "tool_limitations": {
+    "web_search": "FAILED - Payment Required: Insufficient credits on firecrawl.dev",
+    "web_extract": "FAILED - Payment Required: Insufficient credits on firecrawl.dev",
+    "browser_tool": "PARTIALLY_AVAILABLE - some sites return Cloudflare captcha pages, anthropic.com company page loaded and verified. mistral.ai blocked, adept.ai Cloudflare challenge, replit.com Cloudflare challenge, YC directory navigable but not actionable.",
+    "qmd_search": "FAILED - better-sqlite3 ABI mismatch (Node v25 expects 141, compiled for 137). Need rebuild or use Node v24 prefix.",
+    "business_dev_rag_index": "NOT_BUILT - index file missing, build_index.py not run"
+  },
+  "source_unavailable_report": {
+    "status": "blocked",
+    "affected_operations": [
+      "No live-source extraction possible for any prospect",
+      "Cannot verify company domains, leadership, funding, or product claims",
+      "Cannot validate contact names/titles from current public sources",
+      "Cannot confirm LinkedIn URL hygiene",
+      "Cannot validate Mountain West geographic relevance"
+    ],
+    "prospects_id_if_sources_worked": [
+      {
+        "target": "AI Patent lane",
+        "intended_search_terms": "YC AI patent startup Series B funding 2025",
+        "verification_needed": ["domain validation", "leadership page access", "funding announcement"],
+        "notes": "Would target AI/ML companies with proprietary tech, recent patent filings, or product launches. Avoided 2025-05-07 candidates (Solve Intelligence, Asenion, GC AI)."
+      },
+      {
+        "target": "AI Compliance lane",
+        "intended_search_terms": "AI governance platform Colorado AI Act enterprise SaaS",
+        "verification_needed": ["Colorado regulatory page access", "leadership page access", "product claims"],
+        "notes": "Would target AI governance companies with Colorado regulatory exposure. Asenion already used 05-07."
+      },
+      {
+        "target": "Tech GC lane",
+        "intended_search_terms": "Series B tech startup lean legal team",
+        "verification_needed": ["company website", "about page", "funding data"],
+        "notes": "Would target Series B/A growth-stage companies without visible full-time GC."
+      },
+      {
+        "target": "M&A lane",
+        "intended_search_terms": "VC backed startup aging fund founder exit PE",
+        "verification_needed": ["funding age data", "investor portfolio", "press articles"],
+        "notes": "Would target VC-backed companies 5+ years post-funding with aging PE funds."
+      }
+    ]
+  },
+  "required_actions": [
+    "Configure or renew firecrawl.dev credits for web_search and web_extract",
+    "Rebuild qmd better-sqlite3 (npm rebuild or use Node v24)",
+    "Build business_dev_rag index (run build_index.py)",
+    "Once sources are available, re-run this task against the four lanes"
+  ],
+  "summary": {
+    "prospects_researched": 0,
+    "prospects_blocked": 0,
+    "outreach_drafts": 0,
+    "live_writes": {
+      "highlevel": 0,
+      "supabase": 0,
+      "apollo_io": 0,
+      "outreach_sent": 0
+    }
+  },
+  "deliverable_paths": {
+    "prospect_candidates_json": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-08/prospect_candidates.json",
+    "source_unavailable_report": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-08/source_unavailable_report.md",
+    "digest_md": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-08/digest.md"
+  }
+}

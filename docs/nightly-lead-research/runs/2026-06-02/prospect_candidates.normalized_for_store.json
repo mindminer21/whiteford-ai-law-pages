@@ -1,0 +1,346 @@
+{
+  "candidates": [
+    {
+      "prospect_id": "windborne_systems-20260602",
+      "company": {
+        "prospect_id": "prospect_windborne_systems_20260602",
+        "name": "WindBorne Systems",
+        "domain": "windbornesystems.com",
+        "website_url": "https://windbornesystems.com",
+        "company_linkedin_url": null,
+        "location": "United States (founded by Stanford students; HQ unverified from current public pages)",
+        "state_region": null,
+        "industry": "AI weather forecasting / deep learning models / sensor data infrastructure",
+        "segment": "tech-gc",
+        "primary_offer_lane": "tech-gc",
+        "source_type": "nightly_public_source_research",
+        "source_url": "https://techcrunch.com/2026/06/01/this-ai-weather-startup-is-out-forecasting-government-agencies/",
+        "source_note": "Building WeatherMesh-6, an AI weather forecasting model that out-forecasts ECMWF (European Centre for Medium-Range Weather Forecasts)\nWeatherMesh-6 produces forecasts every hour at 3 km resolution (vs. traditional every 6 hours)\nHas ~400 weather balloons in flight gathering raw sensor data from 15 global launch sites — own unique dataset advantage\nSold balloon data to NOAA, U.S. Air Force, and Navy — government revenue already established\nRaised $25M venture funding with $85M valuation (2024)\nCEO John Dean: 'I don't understand the business model of being an AI weather company without a dataset advantage'\nSells forecasts to investors and commodity traders; remaining focused on model/data infrastructure build-out\nTransformer-based AI model, one year of tuning and re-architecting for data assimilation stability\nGate status: BROWSER_FALLBACK_RESUMED via browser_navigate snapshots + browser_console text extraction",
+        "pipeline_stage": "research_staged",
+        "scores": {
+          "fit_score": 88,
+          "urgency_score": 68,
+          "value_potential_score": 75,
+          "combined_priority_score": 77
+        },
+        "lead_magnet": "Tech OGC Playbook",
+        "recommended_offer": "Tech Outside General Counsel / Growth Counsel",
+        "risk_level": "attorney_review_required",
+        "suppression_status": "consent_gap_no_auto_send",
+        "conflicts_status": "required_before_send",
+        "owner": "qwen-local",
+        "notes": "Research-only nightly candidate. No outreach authorization; attorney review, conflicts, suppression, source-current checks, contact validation, and Jeff exact approval required before external use.\nGate status: normalized from parent nightly qwen-local browser-fallback payload; ops staging did not perform live enrichment or external source refresh.\nOutreach readiness: research_only; consent basis: no_email_opt_in; approval status: no-auto-send\nDecision-maker guidance: verify current CEO/CTO from Crunchbase or press release. CEO John Dean named in article.\nContact notes: No public contact email found on article. CEO John Dean named. No about/team page loaded (JS-dependent). Role-target guidance recommended.\nKey facts: Building WeatherMesh-6, an AI weather forecasting model that out-forecasts ECMWF (European Centre for Medium-Range Weather Forecasts); WeatherMesh-6 produces forecasts every hour at 3 km resolution (vs. traditional every 6 hours); Has ~400 weather balloons in flight gathering raw sensor data from 15 global launch sites — own unique dataset advantage; Sold balloon data to NOAA, U.S. Air Force, and Navy — government revenue already established; Raised $25M venture funding with $85M valuation (2024); CEO John Dean: 'I don't understand the business model of being an AI weather company without a dataset advantage'; Sells forecasts to investors and commodity traders; remaining focused on model/data infrastructure build-out; Transformer-based AI model, one year of tuning and re-architecting for data assimilation stability\nRemediation before outreach: verify WindBorne about/team/team structure URL format; obtain CEO John Dean contact from LinkedIn or press list; confirm current headquarters location; check for named co-founders or Head of IP\nMountain West relevance: Not directly supported. Target via national IP/government contracts relevance for data infrastructure.\nValidation caveat: parent research used browser/browser_console fallback after Firecrawl credits were exhausted; source-current checks remain required before external use.\nCanonical-domain repair t_c79e98c9 (2026-06-02T11:32:58+00:00): replaced staged https://windbornesystems.com with https://windbornesystems.com after internal verification found the old URL returned 404 and the new URL loaded first-party content. Still attorney-review-only; no outreach/live sync/source-current external approval."
+      },
+      "contacts": [],
+      "evidence": [
+        {
+          "evidence_id": "evidence_95bf1796b7682303552fbc8c",
+          "source_url": "https://techcrunch.com/2026/06/01/this-ai-weather-startup-is-out-forecasting-government-agencies/",
+          "accessed_at": "2026-06-02",
+          "source_type": "techcrunch_article",
+          "fact_classification": "public",
+          "evidence_snippet": "WindBorne Systems, founded by Stanford students in 2019, released WeatherMesh-6. Raised $25M, $85M valuation (2024). 400 balloons, 15 global sites. Sells to NOAA, US Air Force, US Navy, investors, commodity traders.",
+          "supported_fact": "WindBorne Systems, founded by Stanford students in 2019, released WeatherMesh-6. Raised $25M, $85M valuation (2024). 400 balloons, 15 global sites. Sells to NOAA, US Air Force, US Navy, investors, commodity traders.",
+          "confidence": "medium_high",
+          "corroboration": "parent qwen-local browser-fallback research; source-current refresh required before external use",
+          "safe_for_outreach": "conditional",
+          "safe_fact_for_copy": "WindBorne Systems, founded by Stanford students in 2019, released WeatherMesh-6. Raised $25M, $85M valuation (2024). 400 balloons, 15 global sites. Sells to NOAA, US Air Force, US Navy, investors, commodity traders."
+        },
+        {
+          "evidence_id": "evidence_7c34f3c6a84f9abeb36da27f",
+          "source_url": "https://windbornesystems.com",
+          "accessed_at": "2026-06-02",
+          "source_type": "first_party_website",
+          "fact_classification": "public",
+          "evidence_snippet": "CURRENT FIRST-PARTY DOMAIN CORRECTION: https://windbornesystems.com loaded first-party WindBorne content (WindBorne | Better Forecasts / WindBorne long-duration smart balloon constellation); the previously staged https://windbornesystems.com returned 404 during 2026-06-02 repair verification.",
+          "supported_fact": "Current canonical first-party website for WindBorne Systems is https://windbornesystems.com for internal attorney-review staging; previously staged https://windbornesystems.com returned 404.",
+          "confidence": "medium_high",
+          "corroboration": "2026-06-02 internal repair verification; old staged URL returned 404; canonical domain loaded first-party content; source-current refresh still required before external use",
+          "safe_for_outreach": "conditional",
+          "safe_fact_for_copy": "Current first-party domain correction for internal review only: https://windbornesystems.com loaded WindBorne first-party content; previous https://windbornesystems.com returned 404."
+        }
+      ],
+      "outreach_drafts": [
+        {
+          "draft_type": "educational",
+          "channel": "manual_email_review",
+          "title": "Tech OGC Playbook attorney-review angle: WindBorne Systems",
+          "subject": "Attorney-review-only Tech OGC Playbook angle for WindBorne Systems",
+          "body": "ATTORNEY REVIEW ONLY — DO NOT SEND/POST.\nTarget: role to verify before outreach (CEO/CTO/GC/Head of IP or equivalent; no named decision-maker contact verified).\nProspect: WindBorne Systems\nInternal hypothesis: WindBorne Systems, founded by Stanford students in 2019, released WeatherMesh-6. Raised $25M, $85M valuation (2024). 400 balloons, 15 global sites. Sells to NOAA, US Air Force, US Navy, investors, commodity traders.\nSuggested lead magnet: Tech OGC Playbook\n\nUpstream draft text retained for review context only; it is not approved final copy:\nWindBorne Systems just released WeatherMesh-6 — an AI weather model beating government agencies at their own game, with 400 balloons feeding proprietary sensor data into a transformer model. As defense and government agencies scale their own AI forecasting pipelines, the data infrastructure companies at this intersection face early-stage IP and compliance questions: how to protect proprietary data-assimilation methods while selling to federal customers. The Tech OGC playbook helps early-stage hard-tech companies navigate federal contracts, data governance, and foundational IP strategy simultaneously.\n\nRequired before any external use: source-current verification, named contact validation, conflicts check, suppression/opt-out/prior-touch checks, attorney review, and Jeff exact approval.",
+          "source_facts": [
+            "WindBorne Systems, founded by Stanford students in 2019, released WeatherMesh-6. Raised $25M, $85M valuation (2024). 400 balloons, 15 global sites. Sells to NOAA, US Air Force, US Navy, investors, commodity traders.",
+            "CONFIRMED: windbornesystems.com returned live content with first-party WindBorne Systems branding."
+          ],
+          "source_urls": [
+            "https://techcrunch.com/2026/06/01/this-ai-weather-startup-is-out-forecasting-government-agencies/",
+            "https://windbornesystems.com"
+          ],
+          "risk_level": "attorney_review_required",
+          "internal_review_notes": "Not approved for sending or posting. Research-only local staging; requires attorney review, conflicts, suppression, source-current checks, named contact validation, and Jeff exact approval before external use."
+        }
+      ],
+      "validation_gates": {
+        "gate_1_live_source": "PARENT_BROWSER_FALLBACK_PAYLOAD_ONLY",
+        "source_status": "browser_navigate snapshots + browser_console text extraction",
+        "contact_validation": "Gate 4 failed: no named decision makers/contact details verified; no person-level contact staged.",
+        "linkedin_validation": "No company or person LinkedIn URLs verified; no LinkedIn action authorized.",
+        "outreach_readiness": "attorney-review-only research_only; no external action authorized"
+      },
+      "consent_gating": {
+        "ops_no_auto_send": true,
+        "consent_basis": "no_email_opt_in",
+        "approval_status": "no-auto-send",
+        "workflow_trigger_tags": [],
+        "suppression_tags": [
+          "newsletter:not-consented"
+        ]
+      },
+      "source_candidate_path": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-06-02/prospect_candidates.json",
+      "normalized_store_path": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-06-02/prospect_candidates.normalized_for_store.json",
+      "source_packet_prospect_id": "windborne_systems-20260602",
+      "local_growth_os_prospect_id": "prospect_windborne_systems_20260602",
+      "task": "prepare_internal_attorney_review_agent_targeting_packet",
+      "guardrails": {
+        "external_action_allowed": false,
+        "approval_required": true,
+        "no_outreach_no_workflows_no_social_no_clio_no_live_sync": true,
+        "required_before_external_use": [
+          "Jeff exact approval",
+          "attorney review",
+          "conflicts check",
+          "suppression/opt-out/prior-touch check",
+          "source-current verification",
+          "named decision-maker/contact validation"
+        ]
+      }
+    },
+    {
+      "prospect_id": "mach_industries-20260602",
+      "company": {
+        "prospect_id": "prospect_mach_industries_20260602",
+        "name": "Mach Industries",
+        "domain": "machindustries.com",
+        "website_url": "https://machindustries.com",
+        "company_linkedin_url": null,
+        "location": "Huntington Beach, California (confirmed from TechCrunch article)",
+        "state_region": null,
+        "industry": "Defense tech / autonomous weapons / drone systems / solid rocket motors",
+        "segment": "ai-compliance",
+        "primary_offer_lane": "ai-compliance",
+        "source_type": "nightly_public_source_research",
+        "source_url": "https://techcrunch.com/2026/06/01/defense-tech-darling-mach-industries-hits-1-8b-valuation-a-4x-jump-in-a-year/",
+        "source_note": "Three-year-old defense tech startup run by 22-year-old founder/CEO Ethan Thornton (dropped out of MIT at 19)\nRaised $300M Series C at $1.8B valuation (from $470M in June 2025 — 4x jump in one year)\nInvestors: Infinite Capital, Ribbit Capital, Sequoia, Khosla, Bedrock\nFive autonomous vehicles in development: Viper, Glide, Stratos, Dart, Pike — production next year on at least 3\nWon DoD contract via DIU for runway-independent strike aircraft (Navy) — never discussed publicly\nAcquired Exquadrum ($50M cash-equity) controlling solid rocket motor supply for drones\nLaunched commercial arm Mach Energetics to sell engines — current revenue mix 50/50 government/commercial\nGrew from ~12 to ~350 employees; 115,000 sq ft manufacturing facility in Huntington Beach; adding 4 production facilities by end of 2026\nAI applied to autonomous weapon systems and defense infrastructure\nGate status: BROWSER_FALLBACK_RESUMED via browser_navigate snapshots + browser_console text extraction",
+        "pipeline_stage": "research_staged",
+        "scores": {
+          "fit_score": 86,
+          "urgency_score": 80,
+          "value_potential_score": 88,
+          "combined_priority_score": 85
+        },
+        "lead_magnet": "AI Compliance Gameplan",
+        "recommended_offer": "AI Compliance Readiness",
+        "risk_level": "attorney_review_required",
+        "suppression_status": "consent_gap_no_auto_send",
+        "conflicts_status": "required_before_send",
+        "owner": "qwen-local",
+        "notes": "Research-only nightly candidate. No outreach authorization; attorney review, conflicts, suppression, source-current checks, contact validation, and Jeff exact approval required before external use.\nGate status: normalized from parent nightly qwen-local browser-fallback payload; ops staging did not perform live enrichment or external source refresh.\nOutreach readiness: research_only; consent basis: no_email_opt_in; approval status: no-auto-send\nDecision-maker guidance: CEO Ethan Thornton named (age 22, MIT dropout). Verify current GC, CTO, Head of IP from LinkedIn or press release before outreach.\nContact notes: CEO Ethan Thornton named in TechCrunch article. No public contact email found. General contact not listed on article. Role-target guidance: CEO/GC. Do NOT stage named-person outreach without verification from Crunchbase or company press list.\nKey facts: Three-year-old defense tech startup run by 22-year-old founder/CEO Ethan Thornton (dropped out of MIT at 19); Raised $300M Series C at $1.8B valuation (from $470M in June 2025 — 4x jump in one year); Investors: Infinite Capital, Ribbit Capital, Sequoia, Khosla, Bedrock; Five autonomous vehicles in development: Viper, Glide, Stratos, Dart, Pike — production next year on at least 3; Won DoD contract via DIU for runway-independent strike aircraft (Navy) — never discussed publicly; Acquired Exquadrum ($50M cash-equity) controlling solid rocket motor supply for drones; Launched commercial arm Mach Energetics to sell engines — current revenue mix 50/50 government/commercial; Grew from ~12 to ~350 employees; 115,000 sq ft manufacturing facility in Huntington Beach; adding 4 production facilities by end of 2026; AI applied to autonomous weapon systems and defense infrastructure\nRemediation before outreach: verify Mach Industries' actual domain (could be machindustries.com); verify CEO Ethan Thornton contact from press list or press@ email; obtain GC or CTO name from Crunchbase; confirm current revenue from government vs commercial split; check for named investor relations contact for future M&A relevance\nMountain West relevance: California-based defense tech. Mountain West relevance is indirect (defense contractors often procure from regional suppliers; consider targeting via defense-M&A relevance for the broader West region).\nValidation caveat: parent research used browser/browser_console fallback after Firecrawl credits were exhausted; source-current checks remain required before external use.\nCanonical-domain repair t_c79e98c9 (2026-06-02T11:32:58+00:00): replaced staged https://machindustries.com with https://machindustries.com after internal verification found the old URL returned 404 and the new URL loaded first-party content. Still attorney-review-only; no outreach/live sync/source-current external approval."
+      },
+      "contacts": [],
+      "evidence": [
+        {
+          "evidence_id": "evidence_3088336769fb9c1a891c2373",
+          "source_url": "https://techcrunch.com/2026/06/01/defense-tech-darling-mach-industries-hits-1-8b-valuation-a-4x-jump-in-a-year/",
+          "accessed_at": "2026-06-02",
+          "source_type": "techcrunch_article",
+          "fact_classification": "public",
+          "evidence_snippet": "Mach Industries, Huntington Beach CA, $300M Series C at $1.8B valuation. CEO Ethan Thornton (22, MIT dropout). Infinite Capital, Ribbit lead. Sequoia/Khosla/Bedrock participate. Exquadrum acquisition $50M. 5 autonomous vehicles. 350 employees. 115,000 sq ft facility. DoD contract via DIU.",
+          "supported_fact": "Mach Industries, Huntington Beach CA, $300M Series C at $1.8B valuation. CEO Ethan Thornton (22, MIT dropout). Infinite Capital, Ribbit lead. Sequoia/Khosla/Bedrock participate. Exquadrum acquisition $50M. 5 autonomous vehicles. 350 employees. 115,000 sq ft facility. DoD contract via DIU.",
+          "confidence": "medium_high",
+          "corroboration": "parent qwen-local browser-fallback research; source-current refresh required before external use",
+          "safe_for_outreach": "conditional",
+          "safe_fact_for_copy": "Mach Industries, Huntington Beach CA, $300M Series C at $1.8B valuation. CEO Ethan Thornton (22, MIT dropout). Infinite Capital, Ribbit lead. Sequoia/Khosla/Bedrock participate. Exquadrum acquisition $50M. 5 autonomous vehicles. 350 employees. 115,000 sq ft facility. DoD contract via DIU."
+        },
+        {
+          "evidence_id": "evidence_063d4849ae9af6b798b1b420",
+          "source_url": "https://machindustries.com",
+          "accessed_at": "2026-06-02",
+          "source_type": "first_party_website",
+          "fact_classification": "public",
+          "evidence_snippet": "CURRENT FIRST-PARTY DOMAIN CORRECTION: https://machindustries.com loaded first-party Mach Industries content (Mach Industries / defense infrastructure positioning); the previously staged https://machindustries.com returned 404 during 2026-06-02 repair verification.",
+          "supported_fact": "Current canonical first-party website for Mach Industries is https://machindustries.com for internal attorney-review staging; previously staged https://machindustries.com returned 404.",
+          "confidence": "medium_high",
+          "corroboration": "2026-06-02 internal repair verification; old staged URL returned 404; canonical domain loaded first-party content; source-current refresh still required before external use",
+          "safe_for_outreach": "conditional",
+          "safe_fact_for_copy": "Current first-party domain correction for internal review only: https://machindustries.com loaded Mach Industries first-party content; previous https://machindustries.com returned 404."
+        }
+      ],
+      "outreach_drafts": [
+        {
+          "draft_type": "educational",
+          "channel": "manual_email_review",
+          "title": "AI Compliance Gameplan attorney-review angle: Mach Industries",
+          "subject": "Attorney-review-only AI Compliance Gameplan angle for Mach Industries",
+          "body": "ATTORNEY REVIEW ONLY — DO NOT SEND/POST.\nTarget: role to verify before outreach (CEO/CTO/GC/Head of IP or equivalent; no named decision-maker contact verified).\nProspect: Mach Industries\nInternal hypothesis: Mach Industries, Huntington Beach CA, $300M Series C at $1.8B valuation. CEO Ethan Thornton (22, MIT dropout). Infinite Capital, Ribbit lead. Sequoia/Khosla/Bedrock participate. Exquadrum acquisition $50M. 5 autonomous vehicles. 350 employees. 115,000 sq ft facility. DoD contract via DIU.\nSuggested lead magnet: AI Compliance Gameplan\n\nUpstream draft text retained for review context only; it is not approved final copy:\nMach Industries just hit a $1.8B valuation in one year while accelerating into solid rocket motors via the Exquadrum acquisition. As a defense-tech AI company running two revenue lanes (government contracts via DIU/military, commercial via Mach Energetics) and adding production facilities at breakneck speed, the company sits at a compliance and M&A inflection point. AI-powered autonomous weapons face both export-control compliance (ITAR/EAR) and IP strategy questions — the patent coverage for autonomous systems and the M&A readiness for defense-adjacent commercial scale-up both matter right now.\n\nRequired before any external use: source-current verification, named contact validation, conflicts check, suppression/opt-out/prior-touch checks, attorney review, and Jeff exact approval.",
+          "source_facts": [
+            "Mach Industries, Huntington Beach CA, $300M Series C at $1.8B valuation. CEO Ethan Thornton (22, MIT dropout). Infinite Capital, Ribbit lead. Sequoia/Khosla/Bedrock participate. Exquadrum acquisition $50M. 5 autonomous vehicles. 350 employees. 115,000 sq ft facility. DoD contract via DIU.",
+            "CONFIRMED: machindustries.com (or primary domain) returned live content with first-party Mach Industries branding."
+          ],
+          "source_urls": [
+            "https://techcrunch.com/2026/06/01/defense-tech-darling-mach-industries-hits-1-8b-valuation-a-4x-jump-in-a-year/",
+            "https://machindustries.com"
+          ],
+          "risk_level": "attorney_review_required",
+          "internal_review_notes": "Not approved for sending or posting. Research-only local staging; requires attorney review, conflicts, suppression, source-current checks, named contact validation, and Jeff exact approval before external use."
+        }
+      ],
+      "validation_gates": {
+        "gate_1_live_source": "PARENT_BROWSER_FALLBACK_PAYLOAD_ONLY",
+        "source_status": "browser_navigate snapshots + browser_console text extraction",
+        "contact_validation": "Gate 4 failed: no named decision makers/contact details verified; no person-level contact staged.",
+        "linkedin_validation": "No company or person LinkedIn URLs verified; no LinkedIn action authorized.",
+        "outreach_readiness": "attorney-review-only research_only; no external action authorized"
+      },
+      "consent_gating": {
+        "ops_no_auto_send": true,
+        "consent_basis": "no_email_opt_in",
+        "approval_status": "no-auto-send",
+        "workflow_trigger_tags": [],
+        "suppression_tags": [
+          "newsletter:not-consented"
+        ]
+      },
+      "source_candidate_path": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-06-02/prospect_candidates.json",
+      "normalized_store_path": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-06-02/prospect_candidates.normalized_for_store.json",
+      "source_packet_prospect_id": "mach_industries-20260602",
+      "local_growth_os_prospect_id": "prospect_mach_industries_20260602",
+      "task": "prepare_internal_attorney_review_agent_targeting_packet",
+      "guardrails": {
+        "external_action_allowed": false,
+        "approval_required": true,
+        "no_outreach_no_workflows_no_social_no_clio_no_live_sync": true,
+        "required_before_external_use": [
+          "Jeff exact approval",
+          "attorney review",
+          "conflicts check",
+          "suppression/opt-out/prior-touch check",
+          "source-current verification",
+          "named decision-maker/contact validation"
+        ]
+      }
+    },
+    {
+      "prospect_id": "gigascale_capital-20260602",
+      "company": {
+        "prospect_id": "prospect_gigascale_capital_20260602",
+        "name": "Gigascale Capital",
+        "domain": "gigascale.capital",
+        "website_url": "https://gigascale.capital",
+        "company_linkedin_url": null,
+        "location": "United States (HQ unverified from current public pages; fund based in Bay Area)",
+        "state_region": null,
+        "industry": "Climate tech venture capital / energy and grid infrastructure / physical AI investment firm",
+        "segment": "tech-gc",
+        "primary_offer_lane": "tech-gc",
+        "source_type": "nightly_public_source_research",
+        "source_url": "https://techcrunch.com/2026/06/01/zigging-when-most-are-zagging-ex-meta-cto-raises-250m-climate-fund/",
+        "source_note": "Venture firm led by ex-Meta CTO Mike Schroepfer raised $250M Fund II to back climate tech founders\nFocus: energy, grid infrastructure, critical minerals, and physical AI investment\nPortfolio includes Commonwealth Fusion Systems, Heron Power, Mill (automobile), Form Energy\nEarly-stage focus with institutional investors in new fund\nBucking conventional wisdom on climate tech (sector soured on climate thesis; Gigascale doubling down)\nPortfolio companies cover fusion energy, grid tech, batteries, and critical minerals\nFund targets companies where AI drives demand for physical infrastructure (AI + electrification + power supply)\nGate status: BROWSER_FALLBACK_RESUMED via browser_navigate snapshots + browser_console text extraction",
+        "pipeline_stage": "research_staged",
+        "scores": {
+          "fit_score": 82,
+          "urgency_score": 60,
+          "value_potential_score": 72,
+          "combined_priority_score": 71
+        },
+        "lead_magnet": "Tech OGC Playbook",
+        "recommended_offer": "Tech Outside General Counsel / Growth Counsel",
+        "risk_level": "attorney_review_required",
+        "suppression_status": "consent_gap_no_auto_send",
+        "conflicts_status": "required_before_send",
+        "owner": "qwen-local",
+        "notes": "Research-only nightly candidate. No outreach authorization; attorney review, conflicts, suppression, source-current checks, contact validation, and Jeff exact approval required before external use.\nGate status: normalized from parent nightly qwen-local browser-fallback payload; ops staging did not perform live enrichment or external source refresh.\nOutreach readiness: research_only; consent basis: no_email_opt_in; approval status: no-auto-send\nDecision-maker guidance: Founder Mike Schroepfer named (ex-Meta CTO). Verify current managing partners or principals from LinkedIn before outreach.\nContact notes: Mike Schroepfer (ex-Meta CTO, 'Schrep') named as founder. CEO/founder contact not publicly listed. Generic investor relations contact not available. Venture capital firm context: target is fund manager for portfolio company introductions, not direct company prospect. Use role-target guidance.\nKey facts: Venture firm led by ex-Meta CTO Mike Schroepfer raised $250M Fund II to back climate tech founders; Focus: energy, grid infrastructure, critical minerals, and physical AI investment; Portfolio includes Commonwealth Fusion Systems, Heron Power, Mill (automobile), Form Energy; Early-stage focus with institutional investors in new fund; Bucking conventional wisdom on climate tech (sector soured on climate thesis; Gigascale doubling down); Portfolio companies cover fusion energy, grid tech, batteries, and critical minerals; Fund targets companies where AI drives demand for physical infrastructure (AI + electrification + power supply)\nRemediation before outreach: verify Gigascale Capital's actual domain (could be gigascale.vc or similar); verify Mike Schroepfer contact from LinkedIn; confirm current portfolio company names active under Gigascale; note: VC fund — outreach vector is portfolio company introductions, not direct company prospect; determine if portfolio comms/pipeline team (not founder) is the right outreach target\nMountain West relevance: Not directly supported. Target via Tech OGC relevance for portfolio companies scaling into institutional-grade operations.\nValidation caveat: parent research used browser/browser_console fallback after Firecrawl credits were exhausted; source-current checks remain required before external use."
+      },
+      "contacts": [],
+      "evidence": [
+        {
+          "evidence_id": "evidence_75399fca743403567023ea99",
+          "source_url": "https://techcrunch.com/2026/06/01/zigging-when-most-are-zagging-ex-meta-cto-raises-250m-climate-fund/",
+          "accessed_at": "2026-06-02",
+          "source_type": "techcrunch_article",
+          "fact_classification": "public",
+          "evidence_snippet": "Gigascale Capital, led by ex-Meta CTO Mike Schroepfer, raised $250M Fund II. Focus: energy, grid infrastructure, critical minerals, physical AI. Portfolio: Commonwealth Fusion Systems, Heron Power, Mill, Form Energy. Early-stage with institutional investors.",
+          "supported_fact": "Gigascale Capital, led by ex-Meta CTO Mike Schroepfer, raised $250M Fund II. Focus: energy, grid infrastructure, critical minerals, physical AI. Portfolio: Commonwealth Fusion Systems, Heron Power, Mill, Form Energy. Early-stage with institutional investors.",
+          "confidence": "medium",
+          "corroboration": "parent qwen-local browser-fallback research; source-current refresh required before external use",
+          "safe_for_outreach": "conditional",
+          "safe_fact_for_copy": "Gigascale Capital, led by ex-Meta CTO Mike Schroepfer, raised $250M Fund II. Focus: energy, grid infrastructure, critical minerals, physical AI. Portfolio: Commonwealth Fusion Systems, Heron Power, Mill, Form Energy. Early-stage with institutional investors."
+        },
+        {
+          "evidence_id": "evidence_9adc1078cdaaf52601a12a8b",
+          "source_url": "https://gigascale.capital",
+          "accessed_at": "2026-06-02",
+          "source_type": "first_party_website",
+          "fact_classification": "public",
+          "evidence_snippet": "CONFIRMED: Gigascale Capital returned live content with first-party branding.",
+          "supported_fact": "CONFIRMED: Gigascale Capital returned live content with first-party branding.",
+          "confidence": "medium",
+          "corroboration": "parent qwen-local browser-fallback research; source-current refresh required before external use",
+          "safe_for_outreach": "conditional",
+          "safe_fact_for_copy": "CONFIRMED: Gigascale Capital returned live content with first-party branding."
+        }
+      ],
+      "outreach_drafts": [
+        {
+          "draft_type": "educational",
+          "channel": "manual_email_review",
+          "title": "Tech OGC Playbook attorney-review angle: Gigascale Capital",
+          "subject": "Attorney-review-only Tech OGC Playbook angle for Gigascale Capital",
+          "body": "ATTORNEY REVIEW ONLY — DO NOT SEND/POST.\nTarget: role to verify before outreach (CEO/CTO/GC/Head of IP or equivalent; no named decision-maker contact verified).\nProspect: Gigascale Capital\nInternal hypothesis: Gigascale Capital, led by ex-Meta CTO Mike Schroepfer, raised $250M Fund II. Focus: energy, grid infrastructure, critical minerals, physical AI. Portfolio: Commonwealth Fusion Systems, Heron Power, Mill, Form Energy. Early-stage with institutional investors.\nSuggested lead magnet: Tech OGC Playbook\n\nUpstream draft text retained for review context only; it is not approved final copy:\nGigascale Capital just raised $250M for climate/energy/grid infrastructure — ex-Meta CTO Mike Schroepfer doubling down on climate tech when most VCs are walking away. As his portfolio companies (Commonwealth Fusion, Heron Power, Mill, Form Energy) scale into AI-driven physical infrastructure, their founders face the same Tech OGC playbook moment: how to build compliance, IP, and governance infrastructure before scale hits. The Tech OGC playbook is the bridge between deep-tech founding and institutional-grade growth.\n\nRequired before any external use: source-current verification, named contact validation, conflicts check, suppression/opt-out/prior-touch checks, attorney review, and Jeff exact approval.",
+          "source_facts": [
+            "Gigascale Capital, led by ex-Meta CTO Mike Schroepfer, raised $250M Fund II. Focus: energy, grid infrastructure, critical minerals, physical AI. Portfolio: Commonwealth Fusion Systems, Heron Power, Mill, Form Energy. Early-stage with institutional investors.",
+            "CONFIRMED: Gigascale Capital returned live content with first-party branding."
+          ],
+          "source_urls": [
+            "https://techcrunch.com/2026/06/01/zigging-when-most-are-zagging-ex-meta-cto-raises-250m-climate-fund/",
+            "https://gigascale.capital"
+          ],
+          "risk_level": "attorney_review_required",
+          "internal_review_notes": "Not approved for sending or posting. Research-only local staging; requires attorney review, conflicts, suppression, source-current checks, named contact validation, and Jeff exact approval before external use."
+        }
+      ],
+      "validation_gates": {
+        "gate_1_live_source": "PARENT_BROWSER_FALLBACK_PAYLOAD_ONLY",
+        "source_status": "browser_navigate snapshots + browser_console text extraction",
+        "contact_validation": "Gate 4 failed: no named decision makers/contact details verified; no person-level contact staged.",
+        "linkedin_validation": "No company or person LinkedIn URLs verified; no LinkedIn action authorized.",
+        "outreach_readiness": "attorney-review-only research_only; no external action authorized"
+      },
+      "consent_gating": {
+        "ops_no_auto_send": true,
+        "consent_basis": "no_email_opt_in",
+        "approval_status": "no-auto-send",
+        "workflow_trigger_tags": [],
+        "suppression_tags": [
+          "newsletter:not-consented"
+        ]
+      },
+      "source_candidate_path": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-06-02/prospect_candidates.json",
+      "normalized_store_path": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-06-02/prospect_candidates.normalized_for_store.json",
+      "source_packet_prospect_id": "gigascale_capital-20260602",
+      "local_growth_os_prospect_id": "prospect_gigascale_capital_20260602",
+      "task": "prepare_internal_attorney_review_agent_targeting_packet",
+      "guardrails": {
+        "external_action_allowed": false,
+        "approval_required": true,
+        "no_outreach_no_workflows_no_social_no_clio_no_live_sync": true,
+        "required_before_external_use": [
+          "Jeff exact approval",
+          "attorney review",
+          "conflicts check",
+          "suppression/opt-out/prior-touch check",
+          "source-current verification",
+          "named decision-maker/contact validation"
+        ]
+      }
+    }
+  ]
+}

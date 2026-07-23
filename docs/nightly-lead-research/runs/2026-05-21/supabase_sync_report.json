@@ -1,0 +1,313 @@
+{
+  "task_id": "t_20b815f4",
+  "run_label": "2026-05-21",
+  "status": "partial",
+  "sync_log_id": "sync-2026-05-21T07-41-42-819Z-34748d2f",
+  "source_db": "/Users/jeff/.openclaw/projects/mountain-west-growth-os/data/growth-os.sqlite",
+  "target_project": "https://yidxnmxvtohaldkbypcv.supabase.co",
+  "rows_attempted": 724,
+  "rows_synced": 111,
+  "core_remote_verification": [
+    {
+      "table": "prospects",
+      "local_count": 39,
+      "remote_count": 39,
+      "date_column": "created_at",
+      "local_2026_05_21_count": 0,
+      "remote_2026_05_21_count": 0
+    },
+    {
+      "table": "approval_items",
+      "local_count": 52,
+      "remote_count": 58,
+      "date_column": "created_at",
+      "local_2026_05_21_count": 0,
+      "remote_2026_05_21_count": 0
+    },
+    {
+      "table": "agent_events",
+      "local_count": 6,
+      "remote_count": 6,
+      "date_column": "created_at",
+      "local_2026_05_21_count": 0,
+      "remote_2026_05_21_count": 0
+    },
+    {
+      "table": "work_items",
+      "local_count": 14,
+      "remote_count": 14,
+      "date_column": "created_at",
+      "local_2026_05_21_count": 0,
+      "remote_2026_05_21_count": 0
+    },
+    {
+      "table": "model_runs",
+      "local_count": 0,
+      "remote_count": 0,
+      "date_column": "started_at",
+      "local_2026_05_21_count": 0,
+      "remote_2026_05_21_count": 0
+    },
+    {
+      "table": "qa_reviews",
+      "local_count": 0,
+      "remote_count": 0,
+      "date_column": "created_at",
+      "local_2026_05_21_count": 0,
+      "remote_2026_05_21_count": 0
+    }
+  ],
+  "missing_remote_tables": [
+    {
+      "table": "source_evidence",
+      "local_rows_skipped": 44,
+      "remote_status": {
+        "http_status": 404,
+        "body": ""
+      }
+    },
+    {
+      "table": "suppression_checks",
+      "local_rows_skipped": 20,
+      "remote_status": {
+        "http_status": 404,
+        "body": ""
+      }
+    },
+    {
+      "table": "compliance_reviews",
+      "local_rows_skipped": 20,
+      "remote_status": {
+        "http_status": 404,
+        "body": ""
+      }
+    },
+    {
+      "table": "outreach_drafts",
+      "local_rows_skipped": 20,
+      "remote_status": {
+        "http_status": 404,
+        "body": ""
+      }
+    },
+    {
+      "table": "draft_audit_trail",
+      "local_rows_skipped": 20,
+      "remote_status": {
+        "http_status": 404,
+        "body": ""
+      }
+    },
+    {
+      "table": "outreach_channels",
+      "local_rows_skipped": 4,
+      "remote_status": {
+        "http_status": 404,
+        "body": ""
+      }
+    },
+    {
+      "table": "send_authorization_rules",
+      "local_rows_skipped": 4,
+      "remote_status": {
+        "http_status": 404,
+        "body": ""
+      }
+    },
+    {
+      "table": "execution_authorizations",
+      "local_rows_skipped": 8,
+      "remote_status": {
+        "http_status": 404,
+        "body": ""
+      }
+    },
+    {
+      "table": "ghl_sync_links",
+      "local_rows_skipped": 80,
+      "remote_status": {
+        "http_status": 404,
+        "body": ""
+      }
+    },
+    {
+      "table": "crm_integration_config",
+      "local_rows_skipped": 1,
+      "remote_status": {
+        "http_status": 404,
+        "body": ""
+      }
+    },
+    {
+      "table": "crm_field_mappings",
+      "local_rows_skipped": 27,
+      "remote_status": {
+        "http_status": 404,
+        "body": ""
+      }
+    },
+    {
+      "table": "crm_sync_batches",
+      "local_rows_skipped": 18,
+      "remote_status": {
+        "http_status": 404,
+        "body": ""
+      }
+    },
+    {
+      "table": "crm_sync_records",
+      "local_rows_skipped": 32,
+      "remote_status": {
+        "http_status": 404,
+        "body": ""
+      }
+    },
+    {
+      "table": "crm_audit_log",
+      "local_rows_skipped": 41,
+      "remote_status": {
+        "http_status": 404,
+        "body": ""
+      }
+    },
+    {
+      "table": "ghl_pipeline_blueprints",
+      "local_rows_skipped": 5,
+      "remote_status": {
+        "http_status": 404,
+        "body": ""
+      }
+    },
+    {
+      "table": "ghl_pipeline_stage_mappings",
+      "local_rows_skipped": 58,
+      "remote_status": {
+        "http_status": 404,
+        "body": ""
+      }
+    },
+    {
+      "table": "ghl_stage_action_rules",
+      "local_rows_skipped": 14,
+      "remote_status": {
+        "http_status": 404,
+        "body": ""
+      }
+    },
+    {
+      "table": "ghl_opportunity_stage_events",
+      "local_rows_skipped": 1,
+      "remote_status": {
+        "http_status": 404,
+        "body": ""
+      }
+    },
+    {
+      "table": "content_lanes",
+      "local_rows_skipped": 5,
+      "remote_status": {
+        "http_status": 404,
+        "body": ""
+      }
+    },
+    {
+      "table": "content_topics",
+      "local_rows_skipped": 20,
+      "remote_status": {
+        "http_status": 404,
+        "body": ""
+      }
+    },
+    {
+      "table": "content_sources",
+      "local_rows_skipped": 20,
+      "remote_status": {
+        "http_status": 404,
+        "body": ""
+      }
+    },
+    {
+      "table": "content_assets",
+      "local_rows_skipped": 80,
+      "remote_status": {
+        "http_status": 404,
+        "body": ""
+      }
+    },
+    {
+      "table": "kpi_snapshots",
+      "local_rows_skipped": 1,
+      "remote_status": {
+        "http_status": 404,
+        "body": ""
+      }
+    },
+    {
+      "table": "cohort_tracking",
+      "local_rows_skipped": 5,
+      "remote_status": {
+        "http_status": 404,
+        "body": ""
+      }
+    },
+    {
+      "table": "offer_performance",
+      "local_rows_skipped": 5,
+      "remote_status": {
+        "http_status": 404,
+        "body": ""
+      }
+    },
+    {
+      "table": "agent_productivity_metrics",
+      "local_rows_skipped": 3,
+      "remote_status": {
+        "http_status": 404,
+        "body": ""
+      }
+    },
+    {
+      "table": "weekly_growth_reports",
+      "local_rows_skipped": 1,
+      "remote_status": {
+        "http_status": 404,
+        "body": ""
+      }
+    },
+    {
+      "table": "hardening_checks",
+      "local_rows_skipped": 11,
+      "remote_status": {
+        "http_status": 404,
+        "body": ""
+      }
+    },
+    {
+      "table": "duplicate_candidates",
+      "local_rows_skipped": 3,
+      "remote_status": {
+        "http_status": 404,
+        "body": ""
+      }
+    },
+    {
+      "table": "source_freshness_checks",
+      "local_rows_skipped": 20,
+      "remote_status": {
+        "http_status": 404,
+        "body": ""
+      }
+    },
+    {
+      "table": "backup_exports",
+      "local_rows_skipped": 22,
+      "remote_status": {
+        "http_status": 404,
+        "body": ""
+      }
+    }
+  ],
+  "schema_artifact": "/Users/jeff/.openclaw/projects/mountain-west-growth-os/supabase/phase6-11-combined-growth-os-schema.sql",
+  "prior_blocker_report": "/Users/jeff/.openclaw/projects/mountain-west-growth-os/reports/2026-05-06-supabase-expanded-schema-blocker.md",
+  "safety": "Internal SQLite to Supabase mirror helper only; no DDL attempted and no outreach/email/workflow/LinkedIn/Clio/HighLevel/public/client-facing action performed."
+}

@@ -1,0 +1,86 @@
+{
+  "task_id": "t_a879a957",
+  "validated_at": "2026-05-25T08:19:39+00:00",
+  "normalized_payload": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-25/prospect_candidates.normalized_for_store.json",
+  "dry_run": {
+    "status": "dry_run",
+    "candidates": 3,
+    "db": "/Users/jeff/.openclaw/projects/mountain-west-growth-os/data/growth-os.sqlite"
+  },
+  "store_output": {
+    "status": "applied",
+    "counts": {
+      "prospects": 2,
+      "contacts": 6,
+      "opportunities": 2,
+      "source_evidence": 11,
+      "outreach_drafts": 2,
+      "approval_items": 2,
+      "crm_sync_records": 2,
+      "suppression_checks": 2
+    },
+    "db": "/Users/jeff/.openclaw/projects/mountain-west-growth-os/data/growth-os.sqlite"
+  },
+  "verification_path": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-25/store_verification.json",
+  "backup_path": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-25/growth-os.before_t_a879a957.sqlite",
+  "staged_prospects": [
+    {
+      "prospect_id": "prospect_machina_labs_20260525",
+      "company_name": "Machina Labs",
+      "domain": "machinalabs.ai",
+      "segment": "ai-patent",
+      "pipeline_stage": "research_staged",
+      "suppression_status": "consent_gap_no_auto_send",
+      "conflicts_status": "required_before_send"
+    },
+    {
+      "prospect_id": "prospect_rhoda_ai_20260524",
+      "company_name": "Rhoda AI",
+      "domain": "rhoda.ai",
+      "segment": "ai-patent",
+      "pipeline_stage": "research_staged",
+      "suppression_status": "consent_gap_no_auto_send",
+      "conflicts_status": "required_before_send"
+    },
+    {
+      "prospect_id": "prospect_mind_robotics_20260525",
+      "company_name": "Mind Robotics",
+      "domain": "mindrobotics.ai",
+      "segment": "ai-patent",
+      "pipeline_stage": "research_staged",
+      "suppression_status": "consent_gap_no_auto_send",
+      "conflicts_status": "required_before_send"
+    }
+  ],
+  "work_items": [
+    {
+      "work_item_id": "work_nightly_agent_targeting_20260525_6985b28a57cd2be14ee03004",
+      "company": "Machina Labs",
+      "priority": 80,
+      "input_path": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-25/agent-targeting-work-items/machina-labs.json",
+      "local_growth_os_prospect_id": "prospect_machina_labs_20260525"
+    },
+    {
+      "work_item_id": "work_nightly_agent_targeting_20260525_fb899646d1907dfadf94dd72",
+      "company": "Rhoda AI",
+      "priority": 83,
+      "input_path": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-25/agent-targeting-work-items/rhoda-ai.json",
+      "local_growth_os_prospect_id": "prospect_rhoda_ai_20260524"
+    },
+    {
+      "work_item_id": "work_nightly_agent_targeting_20260525_7248b1f771bf454d7328c416",
+      "company": "Mind Robotics",
+      "priority": 80,
+      "input_path": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-25/agent-targeting-work-items/mind-robotics.json",
+      "local_growth_os_prospect_id": "prospect_mind_robotics_20260525"
+    }
+  ],
+  "warnings": [
+    "Rhoda AI matched existing local prospect_id prospect_rhoda_ai_20260524 by domain rhoda.ai; 2026-05-25 evidence/contact rows and a separate 2026-05-25 work item were staged while preserving the existing prospect identity.",
+    "Mind Robotics remains flagged for Rivian conflict-of-interest review before any external use.",
+    "Mind Robotics domain canonicalization is informational/uncleared in the source gates; keep attorney-review-only/source-current review before external use.",
+    "All candidates are non-Mountain-West HQ; no Mountain West claim is made. Use industry-wide AI/IP relevance only if Jeff approves future external action.",
+    "All outreach and LinkedIn awareness drafts are attorney-review-only and must not be sent, posted, tagged, synced live, or enrolled in workflows."
+  ],
+  "safety_decision": "Records and work items are staged locally only with external_action_allowed=0 and approval_required=1. No outreach, sends, workflow activation/enrollment, trigger tags, LinkedIn/social action, Clio write, public/client-facing use, or live CRM/Supabase sync is authorized."
+}

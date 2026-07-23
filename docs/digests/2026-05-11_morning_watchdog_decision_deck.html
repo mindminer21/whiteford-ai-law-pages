@@ -1,0 +1,363 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>2026-05-11 Morning Watchdog Decision Deck — Internal / Local Only</title>
+  <style>
+    :root {
+      --ink: #121827;
+      --navy: #203f73;
+      --navy-dark: #162b4f;
+      --paper: #fffdf8;
+      --cream: #f6f3ec;
+      --white: #ffffff;
+      --line: #d8d0c3;
+      --line-strong: #b9ad9c;
+      --muted: #5f6878;
+      --gold: #b88c50;
+      --gold-soft: #f5ead9;
+      --sage: #557568;
+      --sage-soft: #edf5f0;
+      --amber: #79561d;
+      --amber-soft: #fff7e6;
+      --red: #8d332d;
+      --red-soft: #fff0ed;
+      --blue-soft: #edf3fb;
+      --shadow: 0 20px 60px rgba(18, 24, 39, 0.08);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        linear-gradient(90deg, rgba(18, 24, 39, 0.04) 1px, transparent 1px),
+        linear-gradient(180deg, rgba(18, 24, 39, 0.03) 1px, transparent 1px),
+        var(--cream);
+      background-size: 72px 72px;
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      line-height: 1.48;
+    }
+    a { color: var(--navy); text-decoration-thickness: 1px; text-underline-offset: 4px; overflow-wrap: anywhere; }
+    a:focus-visible, button:focus-visible { outline: 3px solid rgba(184, 140, 80, 0.55); outline-offset: 3px; }
+    code { background: #f0ebe2; border: 1px solid rgba(216,208,195,0.8); padding: 2px 5px; font-size: 0.92em; overflow-wrap: anywhere; }
+    h1, h2, h3, p { margin: 0; }
+    ul { margin: 0; padding-left: 1.15rem; }
+    li + li { margin-top: 0.35rem; }
+    .shell { max-width: 1460px; margin: 0 auto; padding: 28px 20px 64px; }
+    .topline {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 18px;
+      align-items: start;
+      border: 1px solid var(--line-strong);
+      background: rgba(255,253,248,0.92);
+      padding: 16px;
+      box-shadow: var(--shadow);
+    }
+    .classification {
+      color: var(--red);
+      background: var(--red-soft);
+      border: 1px solid #d9aaa5;
+      padding: 10px 12px;
+      font-size: 13px;
+      font-weight: 780;
+    }
+    .date-block { min-width: 285px; border: 1px solid var(--line); background: var(--white); padding: 12px; text-align: right; font-size: 13px; color: var(--muted); }
+    .date-block strong { display: block; color: var(--ink); font-size: 16px; }
+    .nav { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+    .nav a { border: 1px solid var(--line); background: var(--paper); color: var(--ink); padding: 8px 10px; font-size: 12px; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; text-decoration: none; }
+    .hero { display: grid; grid-template-columns: minmax(0, 1.28fr) minmax(320px, 0.72fr); gap: 22px; margin-top: 24px; align-items: stretch; }
+    .hero-main, .hero-side, .panel, .summary-card, .decision-card, .evidence-card, .note-card { border: 1px solid var(--line); background: var(--paper); box-shadow: var(--shadow); }
+    .hero-main { padding: clamp(28px, 4vw, 48px); background: linear-gradient(135deg, var(--paper), #fbf4e8); }
+    .hero-side { padding: 22px; background: var(--navy-dark); color: var(--white); display: grid; gap: 18px; align-content: start; }
+    .eyebrow { color: var(--navy); font-size: 12px; font-weight: 850; letter-spacing: 0.16em; text-transform: uppercase; }
+    .hero-side .eyebrow, .wall .eyebrow { color: #e7d2ad; }
+    h1 { margin-top: 12px; font-size: clamp(38px, 5.1vw, 72px); line-height: 0.97; letter-spacing: -0.045em; max-width: 1100px; }
+    h2 { font-size: clamp(24px, 2.1vw, 34px); line-height: 1.08; letter-spacing: -0.028em; }
+    h3 { font-size: 18px; line-height: 1.15; }
+    .lead { margin-top: 18px; color: #354054; max-width: 940px; font-size: clamp(17px, 1.5vw, 21px); }
+    .hero-meta { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; }
+    .pill { display: inline-flex; align-items: center; min-height: 34px; border: 1px solid var(--line-strong); background: var(--white); padding: 7px 10px; color: #354054; font-size: 12px; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; }
+    .pill.blocked { border-color: #d9aaa5; background: var(--red-soft); color: var(--red); }
+    .pill.safe { border-color: #a9bdae; background: var(--sage-soft); color: #365f51; }
+    .pill.pending { border-color: #d8c08b; background: var(--amber-soft); color: var(--amber); }
+    .verdict { font-size: clamp(30px, 4vw, 45px); line-height: 1; letter-spacing: -0.035em; font-weight: 850; }
+    .verdict-copy { color: #d8dfed; font-size: 15px; }
+    .mini-table { border-top: 1px solid rgba(255,255,255,0.22); display: grid; }
+    .mini-row { display: grid; grid-template-columns: 122px 1fr; gap: 10px; border-bottom: 1px solid rgba(255,255,255,0.18); padding: 10px 0; font-size: 13px; }
+    .mini-row span:first-child { color: #cbd6ea; }
+    .mini-row strong { color: #fff; }
+    .section { margin-top: 24px; scroll-margin-top: 12px; }
+    .section-head { display: flex; justify-content: space-between; gap: 18px; align-items: end; margin-bottom: 12px; }
+    .section-head p { max-width: 780px; color: var(--muted); font-size: 14px; }
+    .panel { padding: 22px; }
+    .summary-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; }
+    .summary-card { padding: 16px; min-height: 176px; position: relative; overflow: hidden; }
+    .summary-card::before, .decision-card::before { content: ""; position: absolute; inset: 0 0 auto; height: 5px; background: var(--amber); }
+    .summary-card.safe::before, .decision-card.safe::before { background: var(--sage); }
+    .summary-card.blocked::before, .decision-card.blocked::before { background: var(--red); }
+    .summary-card h3 { margin-top: 14px; }
+    .summary-card p, .decision-card p, .decision-card li, .evidence-card li, .note-card li, .note-card p { color: #354054; font-size: 14px; }
+    .status-top { display: flex; justify-content: space-between; gap: 10px; align-items: start; margin-top: 6px; }
+    .kicker { color: var(--muted); font-size: 12px; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; }
+    .tag { font-size: 12px; font-weight: 850; padding: 4px 7px; border: 1px solid var(--line); background: #fff; white-space: nowrap; }
+    .tag.safe { color: #365f51; border-color: #a9bdae; background: var(--sage-soft); }
+    .tag.pending { color: var(--amber); border-color: #d8c08b; background: var(--amber-soft); }
+    .tag.blocked { color: var(--red); border-color: #d9aaa5; background: var(--red-soft); }
+    .decision-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+    .decision-card { padding: 16px; min-height: 276px; display: grid; grid-template-rows: auto auto 1fr auto; gap: 10px; position: relative; overflow: visible; }
+    .number { width: 34px; height: 34px; display: grid; place-items: center; border: 1px solid var(--navy); color: var(--navy); background: #fff; font-weight: 900; }
+    .decision-call { border: 1px solid var(--line); background: #fff; padding: 9px; font-size: 12px; font-weight: 800; color: var(--ink); }
+    .wall { background: var(--navy-dark); color: #fff; border-color: var(--navy-dark); }
+    .wall p, .wall li { color: #d8dfed; }
+    .wall-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin-top: 16px; }
+    .wall-card { border: 1px solid rgba(255,255,255,0.18); background: rgba(255,255,255,0.05); padding: 14px; }
+    .wall-card strong { display: block; margin-bottom: 7px; color: #fff; }
+    .lineage-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; align-items: stretch; }
+    .flow { display: grid; gap: 10px; }
+    .flow-row { display: grid; grid-template-columns: 165px 1fr; gap: 12px; border: 1px solid var(--line); background: #fff; padding: 13px; }
+    .flow-row strong { display: block; }
+    .flow-row span { color: var(--muted); font-size: 13px; }
+    .blocker-box { border: 1px solid #d9aaa5; background: var(--red-soft); padding: 16px; }
+    .blocker-box p, .blocker-box li { color: #4b2a28; font-size: 14px; }
+    .route-grid, .evidence-grid, .notes-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+    .route-card, .evidence-card, .note-card { border: 1px solid var(--line); background: var(--white); padding: 16px; min-height: 166px; }
+    .route-card code { display: inline-block; margin-bottom: 8px; }
+    .route-card p, .evidence-card p { color: #354054; font-size: 14px; }
+    .path { color: var(--muted); font-size: 12px; overflow-wrap: anywhere; margin-top: 8px; }
+    .toolbar { display: flex; gap: 8px; align-items: center; justify-content: flex-end; margin-top: 10px; }
+    button { min-height: 40px; border: 1px solid var(--line-strong); background: var(--paper); color: var(--ink); padding: 8px 12px; font: inherit; font-size: 13px; font-weight: 800; cursor: pointer; }
+    footer { margin-top: 28px; border: 1px solid var(--line); background: rgba(255,253,248,0.9); padding: 16px; color: var(--muted); font-size: 13px; }
+    @media (max-width: 1180px) {
+      .summary-grid, .decision-grid, .route-grid, .evidence-grid, .notes-grid, .wall-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .hero, .lineage-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 760px) {
+      .shell { padding: 16px 12px 42px; }
+      .topline, .summary-grid, .decision-grid, .route-grid, .evidence-grid, .notes-grid, .wall-grid { grid-template-columns: 1fr; }
+      .date-block { text-align: left; min-width: 0; }
+      .hero-main, .panel { padding: 18px; }
+      .flow-row { grid-template-columns: 1fr; }
+      h1 { font-size: 38px; }
+      .toolbar { justify-content: flex-start; }
+    }
+    @media print {
+      html { scroll-behavior: auto; }
+      body { background: #fff; color: #000; font-size: 12pt; }
+      .shell { max-width: none; padding: 0; }
+      .nav, .toolbar { display: none; }
+      .hero-main, .hero-side, .panel, .summary-card, .decision-card, .evidence-card, .note-card, .topline, .route-card { box-shadow: none; break-inside: avoid; }
+      .hero-side, .wall { background: #fff; color: #000; border-color: #000; }
+      .hero-side .eyebrow, .wall .eyebrow, .wall p, .wall li, .hero-side p, .mini-row span:first-child, .mini-row strong, .wall-card strong { color: #000; }
+      .wall-card { border-color: #000; background: #fff; }
+      .section { break-inside: avoid; page-break-inside: avoid; }
+      a { color: #000; text-decoration: underline; }
+    }
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <div class="topline" role="note" aria-label="Internal-only classification">
+      <div class="classification"><strong>Internal/local docs-only decision aid.</strong> This HTML deck is not an approval record, not a form, not an approval-capture tool, and not an execution surface. It does not authorize or perform local QA/tests, code edits, browser probes, HighLevel/CRM/Supabase/Clio mutation, source-access restoration, prospecting, workflow action, email/SMS/newsletter, social/LinkedIn/YouTube/ad activity, deployment, publishing, or client/prospect-facing action.</div>
+      <div class="date-block"><strong>2026-05-11</strong> Morning Watchdog Decision Deck<br />Whiteford Schell IP · private/local file</div>
+    </div>
+    <nav class="nav" aria-label="Deck sections">
+      <a href="#executive-summary">Summary</a>
+      <a href="#decision-boxes">Decisions</a>
+      <a href="#no-external-action-wall">No-action wall</a>
+      <a href="#blocker-lineage">Blockers</a>
+      <a href="#approved-routes-assets">Routes/assets</a>
+      <a href="#evidence-links">Evidence</a>
+    </nav>
+
+    <header class="hero">
+      <section class="hero-main" aria-labelledby="page-title">
+        <div class="eyebrow">Morning command-center artifact</div>
+        <h1 id="page-title">Hold all live action unless Jeff approves one narrow internal lane.</h1>
+        <p class="lead">Use this private local deck to review the 2026-05-11 decision register, the 06:30 digest lineage, and the command-center refresh without confusing internal readiness with permission to act. The governing default is HOLD; the only potentially safe progress lane remains a future exact-approved local/no-token synthetic <code>/api/leads</code> QA run.</p>
+        <div class="hero-meta" aria-label="Key posture labels">
+          <span class="pill blocked">Default: HOLD all</span>
+          <span class="pill safe">Safe now: internal review only</span>
+          <span class="pill pending">Optional future lane: local/no-token QA</span>
+          <span class="pill blocked">No approval capture</span>
+        </div>
+      </section>
+      <aside class="hero-side" aria-label="Executive verdict">
+        <div>
+          <div class="eyebrow">Executive verdict</div>
+          <div class="verdict">Review, mark up, decide — but do not execute.</div>
+        </div>
+        <p class="verdict-copy">The 05/11 register is a decision-prep addendum to the 05/10 06:30 digest. It preserves exact approval gates for local QA, future adapter work, HighLevel fields/views, Tech GC copy, Supabase DDL/backfill, source access, and authority content.</p>
+        <div class="mini-table" aria-label="Operating posture summary">
+          <div class="mini-row"><span>Mode</span><strong>Static local HTML</strong></div>
+          <div class="mini-row"><span>Source</span><strong>05/11 register + 06:30 digest</strong></div>
+          <div class="mini-row"><span>CRM/HighLevel</span><strong>No mutation authorized</strong></div>
+          <div class="mini-row"><span>Supabase</span><strong>Human/admin blocker remains</strong></div>
+          <div class="mini-row"><span>External action</span><strong>Not authorized</strong></div>
+        </div>
+      </aside>
+    </header>
+
+    <section id="executive-summary" class="section" aria-labelledby="summary-title">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">One-screen executive summary</div>
+          <h2 id="summary-title">Morning posture in four cards.</h2>
+        </div>
+        <p>Restrained Whiteford/Schell IP command-center style: paper, navy, gold, red/sage status signals, no generic SaaS sheen, and no invented metrics.</p>
+      </div>
+      <div class="summary-grid">
+        <article class="summary-card blocked">
+          <div class="status-top"><span class="kicker">Governing default</span><span class="tag blocked">Hold</span></div>
+          <h3>No external or live-system action is approved from the register.</h3>
+          <p>Any narrowed execution lane must name operator, system, scope, evidence path, stop rules, rollback, and attorney/privacy/source-current gates.</p>
+        </article>
+        <article class="summary-card safe">
+          <div class="status-top"><span class="kicker">Safe now</span><span class="tag safe">Internal</span></div>
+          <h3>Jeff can review decision boxes, blocker lineage, and route mappings.</h3>
+          <p>Allowed use is reading, markup, local docs, approval-packet edits, and Whiteford/Jeff discussion only.</p>
+        </article>
+        <article class="summary-card pending">
+          <div class="status-top"><span class="kicker">Narrow option</span><span class="tag pending">Future only</span></div>
+          <h3>Local/no-token <code>/api/leads</code> QA is the only potentially safe progress lane.</h3>
+          <p>It still requires exact Jeff approval before tests, adapter probes, browser checks, route execution, or evidence capture.</p>
+        </article>
+        <article class="summary-card blocked">
+          <div class="status-top"><span class="kicker">Hard blockers</span><span class="tag blocked">Blocked</span></div>
+          <h3>Supabase, source access, HighLevel fields/views, copy, and authority use remain gated.</h3>
+          <p>Most next steps are human-only, attorney/privacy review, source-current review, read-only verification, or exact approval work.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="decision-boxes" class="section" aria-labelledby="decision-title">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Decision boxes</div>
+          <h2 id="decision-title">Nine decisions Jeff can resolve without authorizing execution.</h2>
+        </div>
+        <p>These cards summarize the register's copy/paste decision boxes. They are not interactive approvals and do not record acceptance.</p>
+      </div>
+      <div class="decision-grid">
+        <article class="decision-card blocked"><div class="number">1</div><h3>Confirm HOLD all</h3><ul><li>Safe now: internal reading, local docs, approval-packet edits, discussion.</li><li>Not approved: QA/tests, code, HighLevel, Supabase, source, publish, sends, prospecting.</li></ul><div class="decision-call">Default: HOLD unless a later exact packet narrows one lane.</div></article>
+        <article class="decision-card pending"><div class="number">2</div><h3>Local/no-token <code>/api/leads</code> QA</h3><ul><li>Future approval could permit prepared synthetic <code>.invalid</code> fixture checks only.</li><li>No token/location, no contact/upsert/workflow/send, preview mode only.</li></ul><div class="decision-call">Requires exact approval before any test/probe/evidence run.</div></article>
+        <article class="decision-card blocked"><div class="number">3</div><h3>Future adapter work</h3><ul><li>Static finding: current preview uses bare custom-field keys.</li><li>Candidate shapes include <code>fieldKey contact.*</code>, <code>key contact.*</code>, or id-backed verified fields.</li></ul><div class="decision-call">No engineering edit, tests, deploy, or live-token reliance approved.</div></article>
+        <article class="decision-card blocked"><div class="number">4</div><h3>Six HighLevel fields</h3><ul><li>Fields: AI Patent gap/ownership maps and M&amp;A timing/category/risk/60-day plan.</li><li>Create later only after exact approval, attorney/privacy review, and read-only verification.</li></ul><div class="decision-call">No field creation or sensitive diagnostic storage now.</div></article>
+        <article class="decision-card blocked"><div class="number">5</div><h3>Saved views / smart lists</h3><ul><li>Future view-only evidence capture needs exact operator, names, filters, exclusions, evidence folder.</li><li>Saved views are internal review aids, not send audiences.</li></ul><div class="decision-call">No HighLevel login/view creation unless exactly approved later.</div></article>
+        <article class="decision-card pending"><div class="number">6</div><h3>Tech GC copy</h3><ul><li>Attorney-only copy direction for <code>/colorado-tech-general-counsel</code>.</li><li>Can guide later implementation packet after legal/privacy/brand/source-current review.</li></ul><div class="decision-call">No app insertion, public page, HighLevel/email/social use, or publication.</div></article>
+        <article class="decision-card blocked"><div class="number">7</div><h3>Supabase DDL / backfill</h3><ul><li>Authorized human/admin must satisfy <code>t_fa6eb9c1</code>.</li><li>Only after verification can <code>t_53d470c6</code> or <code>t_7d361e6b</code> rely on expanded tables.</li></ul><div class="decision-call">No agent DDL, credential guessing, or backfill before DDL verification.</div></article>
+        <article class="decision-card blocked"><div class="number">8</div><h3>Source access</h3><ul><li>Firecrawl or replacement/manual workflow may be reviewed for internal research only.</li><li>Neutral smoke tests are required before any prospect scoring.</li></ul><div class="decision-call">No prospect inference or named-company claims from source-blocked output.</div></article>
+        <article class="decision-card pending"><div class="number">9</div><h3>Authority/content review</h3><ul><li>Approved routes can be mapped internally for attorney/content review.</li><li>Exact copy, source-current, CTA/UTM, conflicts/suppression, channel/operator approval still required.</li></ul><div class="decision-call">No upload, publish, social, newsletter, HighLevel campaign, ad, or public copy change.</div></article>
+      </div>
+    </section>
+
+    <section id="no-external-action-wall" class="section panel wall" aria-labelledby="wall-title">
+      <div class="eyebrow">Hard no-external-action wall</div>
+      <h2 id="wall-title">This file cannot approve or trigger external action.</h2>
+      <p style="margin-top:10px; max-width:980px;">The register's wall is intentionally redundant. A PASS, digest, deck, dashboard, or decision aid is not permission to execute.</p>
+      <div class="wall-grid">
+        <div class="wall-card"><strong>No communications.</strong><p>No email, SMS, DM, LinkedIn message, LinkedIn/company-page post, social planner action, newsletter, YouTube upload, ad, boost, comment, tag, or client/prospect-facing communication.</p></div>
+        <div class="wall-card"><strong>No HighLevel/CRM mutation.</strong><p>No login-driven change, API mutation, custom field creation, saved view creation, workflow save/test/activation/manual-start/enrollment, contact/opportunity/tag/task/note mutation, import/export, send, or pipeline movement.</p></div>
+        <div class="wall-card"><strong>No Supabase/Clio mutation.</strong><p>No DDL, gated backfill/sync, mirror sync, row mutation, dashboard-data mutation, credential guessing, production token use, Clio write, conflicts mutation, or matter/client/prospect mutation.</p></div>
+        <div class="wall-card"><strong>No local QA without exact approval.</strong><p>No tests, route execution, browser probes, adapter probes, screenshot evidence, or command capture until Jeff approves exact synthetic scope, operator, commands, folder, and stop rules.</p></div>
+        <div class="wall-card"><strong>No public/product changes.</strong><p>No app insertion, public page change, route/domain/CTA/UTM production change, deployment, publication, public authority route use, or source-current claim.</p></div>
+        <div class="wall-card"><strong>No prospect or real-data use.</strong><p>No prospect discovery, staging, enrichment, scoring, outreach, real contacts, confidential facts, privileged facts, invention disclosures, transaction details, or regulated data in any QA path.</p></div>
+      </div>
+    </section>
+
+    <section id="blocker-lineage" class="section" aria-labelledby="lineage-title">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Supabase / source / HighLevel blocker lineage</div>
+          <h2 id="lineage-title">The dependencies remain visible and deliberately blocked.</h2>
+        </div>
+        <p>Lineage is separated so the local/no-token QA option cannot be mistaken for permission to alter live systems or source pipelines.</p>
+      </div>
+      <div class="lineage-grid">
+        <div class="flow" aria-label="Blocker flow">
+          <div class="flow-row"><strong>Supabase DDL</strong><p><code>t_fa6eb9c1</code><br /><span>Blocked on human/DDL-capable Supabase access for project <code>yidxnmxvtohaldkbypcv</code>.</span></p></div>
+          <div class="flow-row"><strong>Gated sync/backfill</strong><p><code>t_53d470c6</code><br /><span>Todo and intentionally gated by <code>t_fa6eb9c1</code>; cannot run before schema installation and exact approval.</span></p></div>
+          <div class="flow-row"><strong>Mirror visibility</strong><p><code>t_7d361e6b</code><br /><span>Depends on validation plus <code>t_fa6eb9c1</code>; must not rely on expanded tables until schema exists.</span></p></div>
+          <div class="flow-row"><strong>Source access</strong><p>Firecrawl/replacement/manual workflow<br /><span>Requires restored or approved source path plus neutral smoke tests before prospect scoring.</span></p></div>
+        </div>
+        <div class="blocker-box">
+          <h3>Manual Supabase unblock path, if Jeff chooses it later</h3>
+          <p style="margin-top:10px;">An authorized human/admin would run <code>/Users/jeff/.openclaw/projects/mountain-west-growth-os/supabase/phase6-11-combined-growth-os-schema.sql</code> in Supabase project <code>yidxnmxvtohaldkbypcv</code>, capture schema verification, and only after separate exact approval run gated sync/backfill.</p>
+          <ul style="margin-top:12px;"><li>Agents must not run DDL or guess credentials.</li><li>Dashboard copy is not proof that expanded tables are live.</li><li>HighLevel remains no-mutation by default: no fields, views, workflow actions, sends, or contact movement.</li><li>QMD and business-development RAG are internal synthesis only, not live public-source evidence for prospecting.</li></ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="approved-routes-assets" class="section" aria-labelledby="routes-title">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Approved internal-review routes/assets</div>
+          <h2 id="routes-title">Use these as route references only.</h2>
+        </div>
+        <p>The register maps current routes for internal review. No route mapping here approves publication, copy changes, CTA/UTM use, email/social/ads, or workflow enrollment.</p>
+      </div>
+      <div class="route-grid">
+        <article class="route-card"><code>/ai-patent-strategy-scorecard</code><p>AI Patent lead magnet and authority CTA reference; final source-current/copy/CTA approvals still required.</p></article>
+        <article class="route-card"><code>/ai-compliance-gameplan</code><p>AI Compliance diagnostic value reference; no workflow/send/public relaunch approval implied.</p></article>
+        <article class="route-card"><code>/colorado-ai-compliance-lawyer</code><p>Authority/service route for internal route mapping only; no public copy change approved.</p></article>
+        <article class="route-card"><code>/colorado-tech-general-counsel</code><p>Tech GC lead-magnet/controlled-pilot route; safest optional lane remains future exact-approved local/no-token synthetic QA.</p></article>
+        <article class="route-card"><code>/colorado-startup-ma-lawyer</code><p>Founder/M&amp;A route mapping for internal review; M&amp;A fields remain privacy/attorney-review gated.</p></article>
+        <article class="route-card"><code>/ai-law-youtube</code><p>Authority hub reference for evergreen source-independent content review; no upload, publish, social planner, or YouTube action approved.</p></article>
+      </div>
+    </section>
+
+    <section id="evidence-links" class="section" aria-labelledby="evidence-title">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Evidence links</div>
+          <h2 id="evidence-title">Source documents used for this deck.</h2>
+        </div>
+        <p>All links are local/private paths or route references for orientation. Opening this deck does not fetch remote assets or call APIs.</p>
+      </div>
+      <div class="evidence-grid">
+        <article class="evidence-card"><h3>05/11 register</h3><ul><li>HOLD/local-QA/adapter/six-field/saved-view/Tech-GC/Supabase/source/authority boxes.</li><li>Current Supabase blocker snapshot.</li><li>Approved internal route map.</li></ul><div class="path">docs/digests/2026-05-11_morning_watchdog_decision_register.md</div></article>
+        <article class="evidence-card"><h3>06:30 digest</h3><ul><li>Executive summary table.</li><li>Decision boxes for local/no-token QA, adapter work, fields, saved views, Tech GC copy, Supabase, source access, and no-action wall.</li></ul><div class="path">docs/digests/2026-05-10_0630_lead_magnet_highlevel_decision_digest.md</div></article>
+        <article class="evidence-card"><h3>Command-center refresh</h3><ul><li>Private/local dashboard status for 05:30 PASS/internal-only and 06:30 digest.</li><li>No-execution warning and blocker summary.</li></ul><div class="path">/Users/jeff/.openclaw/projects/mountain-west-growth-os/dashboards/growth-os-dashboard/docs/2026-05-10_0630_lead_magnet_command_center_refresh.md</div></article>
+        <article class="evidence-card"><h3>Parent handoff</h3><ul><li>Task <code>t_73520ad9</code> created the register.</li><li>Preserved Supabase lineage <code>t_fa6eb9c1 → t_53d470c6</code> and <code>t_7d361e6b</code>.</li></ul><div class="path">Kanban task t_73520ad9</div></article>
+        <article class="evidence-card"><h3>Business-development synthesis</h3><ul><li>Narrow diagnostic problem.</li><li>Problem awareness and value before ask.</li><li>Opt-in-only, educational, non-hypey, non-confidential, no-advice/no-ACR, attorney-review-gated follow-up.</li></ul><div class="path">Local business-development corpus synthesis; no book text reproduced.</div></article>
+        <article class="evidence-card"><h3>This deck</h3><ul><li>Self-contained HTML/CSS/JS.</li><li>No remote assets, forms, API calls, or approval-recording behavior.</li><li>Print-friendly command-center artifact.</li></ul><div class="path">docs/digests/2026-05-11_morning_watchdog_decision_deck.html</div></article>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="notes-title">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Operating notes</div>
+          <h2 id="notes-title">How to use this artifact safely.</h2>
+        </div>
+      </div>
+      <div class="notes-grid">
+        <article class="note-card"><h3>For Jeff review</h3><p>Print or open locally, mark decisions outside this file, and then convert exactly one approved lane into a future Kanban task with operator, scope, evidence folder, stop rules, and rollback/no-action language.</p></article>
+        <article class="note-card"><h3>For future workers</h3><p>Do not treat this deck, the register, the digest, or dashboard visibility as execution approval. Copy the exact approved text from Jeff if unblocked later.</p></article>
+        <article class="note-card"><h3>For legal/brand safety</h3><p>Keep legal-services content source-current, non-confidential, no legal advice, no attorney-client relationship, no guarantees, and attorney-review-gated before any public or external use.</p></article>
+      </div>
+      <div class="toolbar" aria-label="Local deck controls"><button type="button" id="printDeck">Print deck</button><button type="button" id="topDeck">Back to top</button></div>
+    </section>
+
+    <footer>
+      Private/local Whiteford Schell IP decision deck generated from the 2026-05-11 morning watchdog register. No remote assets, no forms, no API calls, no approval capture, and no external action. Keyboard shortcut: press <code>t</code> to return to top or <code>p</code> to open the print dialog.
+    </footer>
+  </main>
+  <script>
+    (function () {
+      'use strict';
+      var printButton = document.getElementById('printDeck');
+      var topButton = document.getElementById('topDeck');
+      if (printButton) printButton.addEventListener('click', function () { window.print(); });
+      if (topButton) topButton.addEventListener('click', function () { window.scrollTo({ top: 0, behavior: 'smooth' }); });
+      window.addEventListener('keydown', function (event) {
+        if (event.target && /input|textarea|select/i.test(event.target.tagName)) return;
+        if (event.key === 't') window.scrollTo({ top: 0, behavior: 'smooth' });
+        if (event.key === 'p') window.print();
+      });
+    }());
+  </script>
+</body>
+</html>

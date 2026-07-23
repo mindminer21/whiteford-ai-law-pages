@@ -1,0 +1,19 @@
+{
+  "apply": false,
+  "assets": {},
+  "errors": [
+    "No HighLevel user found for location; cannot create email campaigns because userId is required."
+  ],
+  "locationId": "tm68WWMrcAa3TqQbEAMa",
+  "safety": {
+    "activatedWorkflows": false,
+    "createdContacts": false,
+    "createdDraftEmailCampaignAssetsOnly": true,
+    "enrolledContacts": false,
+    "sentEmails": false,
+    "workflowAutomationCreation": "manual_ui_required_or_unavailable_via_safe_public_api"
+  },
+  "selectedUser": null,
+  "users": [],
+  "workflowCampaignsDraftList": []
+}

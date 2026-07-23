@@ -1,0 +1,39 @@
+{
+  "task_id": "t_7678983c",
+  "run_label": "2026-05-13",
+  "prepared_at": "2026-05-13T08:20:51Z",
+  "highlevel_location": {
+    "name": "Whiteford Schell IP",
+    "location_id": "tm68WWMrcAa3TqQbEAMa"
+  },
+  "pipeline": {
+    "name": "Whiteford Schell IP Pipeline",
+    "pipeline_id": "Tbx4tA6wHv5lTwZPSHyZ"
+  },
+  "upstream_validation_task_id": "t_486dbb47",
+  "candidate_count": 0,
+  "agent_targeting_work_items_verified_for_2026_05_13": 0,
+  "prospects_created_2026_05_13": 0,
+  "highlevel_contacts_created": 0,
+  "highlevel_contacts_linked": 0,
+  "highlevel_opportunities_created": 0,
+  "highlevel_opportunities_linked_or_moved": 0,
+  "live_crm_writes_performed": false,
+  "external_actions_performed": false,
+  "workflow_enrollment_performed": false,
+  "trigger_tags_applied": false,
+  "decision": "NO_OP_NO_VALIDATED_AGENT_TARGETING_PROSPECTS",
+  "blockers": [
+    "Gate 1 live-source extraction failed before prospect discovery because Firecrawl credits were exhausted / Payment Required.",
+    "No validated 2026-05-13 Agent Targeting prospects or work_items exist to sync.",
+    "HighLevel token/location access should still be verified in read-only dry-run mode before any future live sync."
+  ],
+  "verification": {
+    "validation_report_md": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-13/validation_report.md",
+    "validation_report_json": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-13/validation_report.json",
+    "growth_os_db": "/Users/jeff/.openclaw/projects/mountain-west-growth-os/data/growth-os.sqlite",
+    "sqlite_agent_targeting_work_items_count": 0,
+    "sqlite_prospects_created_count": 0
+  },
+  "next_action": "Restore live-source access, pass source smoke test, rerun nightly discovery/validation, verify HighLevel token/location access in read-only dry-run mode, and get Jeff approval before any live mutation."
+}

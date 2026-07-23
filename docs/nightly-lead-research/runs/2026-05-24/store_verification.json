@@ -1,0 +1,113 @@
+{
+  "prospects": [
+    {
+      "prospect_id": "prospect_shield_ai_20260524",
+      "company_name": "Shield AI",
+      "domain": "shield.ai",
+      "segment": "ai-patent",
+      "pipeline_stage": "research_staged",
+      "suppression_status": "consent_gap_no_auto_send",
+      "conflicts_status": "required_before_send",
+      "contacts": 2,
+      "evidence": 3,
+      "drafts": 1,
+      "suppression_not_cleared": 1,
+      "pending_sync": 1
+    },
+    {
+      "prospect_id": "prospect_rhoda_ai_20260524",
+      "company_name": "Rhoda AI",
+      "domain": "rhoda.ai",
+      "segment": "ai-patent",
+      "pipeline_stage": "research_staged",
+      "suppression_status": "consent_gap_no_auto_send",
+      "conflicts_status": "required_before_send",
+      "contacts": 2,
+      "evidence": 3,
+      "drafts": 1,
+      "suppression_not_cleared": 1,
+      "pending_sync": 1
+    },
+    {
+      "prospect_id": "prospect_c6c776b4596056a65d055c7c",
+      "company_name": "Kodiak AI",
+      "domain": "kodiak.ai",
+      "segment": "ai-patent",
+      "pipeline_stage": "research_staged",
+      "suppression_status": "consent_gap_no_auto_send",
+      "conflicts_status": "required_before_send",
+      "contacts": 4,
+      "evidence": 5,
+      "drafts": 2,
+      "suppression_not_cleared": 2,
+      "pending_sync": 0
+    }
+  ],
+  "work_items": [
+    {
+      "work_item_id": "work_nightly_agent_targeting_20260524_1e45fb810b15ff22e08c3121",
+      "title": "Prepare attorney-review Agent Targeting packet: Kodiak AI",
+      "stage": "queued",
+      "priority": 80,
+      "input_path": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-24/agent-targeting-work-items/kodiak-ai.json",
+      "approval_required": 1,
+      "external_action_allowed": 0,
+      "blocker": "External actions blocked: no outreach, email/SMS, workflow activation/enrollment, trigger tags, LinkedIn/social action, Clio writes, public/client-facing changes, or live CRM/Supabase sync without Jeff exact approval; attorney review, conflicts, suppression, source-current verification, and opt-out checks required before external use."
+    },
+    {
+      "work_item_id": "work_nightly_agent_targeting_20260524_f7d53779a0a915b581cb467f",
+      "title": "Prepare attorney-review Agent Targeting packet: Rhoda AI",
+      "stage": "queued",
+      "priority": 83,
+      "input_path": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-24/agent-targeting-work-items/rhoda-ai.json",
+      "approval_required": 1,
+      "external_action_allowed": 0,
+      "blocker": "External actions blocked: no outreach, email/SMS, workflow activation/enrollment, trigger tags, LinkedIn/social action, Clio writes, public/client-facing changes, or live CRM/Supabase sync without Jeff exact approval; attorney review, conflicts, suppression, source-current verification, and opt-out checks required before external use."
+    },
+    {
+      "work_item_id": "work_nightly_agent_targeting_20260524_bae7bc5f4eeeb2eabe39b023",
+      "title": "Prepare attorney-review Agent Targeting packet: Shield AI",
+      "stage": "queued",
+      "priority": 85,
+      "input_path": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-24/agent-targeting-work-items/shield-ai.json",
+      "approval_required": 1,
+      "external_action_allowed": 0,
+      "blocker": "External actions blocked: no outreach, email/SMS, workflow activation/enrollment, trigger tags, LinkedIn/social action, Clio writes, public/client-facing changes, or live CRM/Supabase sync without Jeff exact approval; attorney review, conflicts, suppression, source-current verification, and opt-out checks required before external use."
+    }
+  ],
+  "dry_run": {
+    "status": "dry_run",
+    "candidates": 3,
+    "db": "/Users/jeff/.openclaw/projects/mountain-west-growth-os/data/growth-os.sqlite"
+  },
+  "apply": {
+    "status": "applied",
+    "counts": {
+      "prospects": 2,
+      "contacts": 6,
+      "opportunities": 2,
+      "source_evidence": 9,
+      "outreach_drafts": 3,
+      "approval_items": 3,
+      "crm_sync_records": 2,
+      "suppression_checks": 3
+    },
+    "db": "/Users/jeff/.openclaw/projects/mountain-west-growth-os/data/growth-os.sqlite"
+  },
+  "unit_tests": {
+    "returncode": 0,
+    "stdout": "",
+    "stderr": "...\n----------------------------------------------------------------------\nRan 3 tests in 0.093s\n\nOK\n"
+  },
+  "warnings": [
+    "Kodiak AI: contact/role VP Engineering / General Counsel is not publicly verified; internal role targeting only"
+  ],
+  "normalized_path": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-24/prospect_candidates.normalized_for_store.json",
+  "report_path": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-24/validation_report.md",
+  "generated_at": "2026-05-24T08:17:45+00:00",
+  "dedupe_notes": [
+    "Shield AI: source prospect id normalized through local domain de-dupe to prospect_shield_ai_20260524",
+    "Rhoda AI: source prospect id normalized through local domain de-dupe to prospect_rhoda_ai_20260524",
+    "Kodiak AI: source prospect id normalized through local domain de-dupe to prospect_c6c776b4596056a65d055c7c"
+  ]
+}

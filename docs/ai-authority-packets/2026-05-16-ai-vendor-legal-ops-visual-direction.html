@@ -1,0 +1,473 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Whiteford AI Vendor Legal Operating System Map Visual Direction — 2026-05-16</title>
+  <style>
+    :root {
+      --bg: #f7f5ef;
+      --paper: #fffdf8;
+      --paper-warm: #fbf7ef;
+      --ink: #121827;
+      --muted: #5d6678;
+      --blue: #213f77;
+      --gold: #b99057;
+      --sage: #55776a;
+      --rust: #9f5d45;
+      --line: #d8d0c3;
+      --soft-blue: rgba(33, 63, 119, 0.08);
+      --soft-gold: rgba(185, 144, 87, 0.16);
+      --soft-sage: rgba(85, 119, 106, 0.13);
+      --soft-rust: rgba(159, 93, 69, 0.11);
+      --shadow: 0 26px 90px rgba(18, 24, 39, 0.12);
+    }
+
+    * { box-sizing: border-box; }
+
+    html, body { min-height: 100%; }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      background:
+        linear-gradient(90deg, rgba(18, 24, 39, 0.035) 1px, transparent 1px),
+        linear-gradient(180deg, rgba(18, 24, 39, 0.03) 1px, transparent 1px),
+        var(--bg);
+      background-size: 72px 72px;
+    }
+
+    main {
+      width: min(1500px, calc(100vw - 40px));
+      margin: 0 auto;
+      padding: 42px 0;
+    }
+
+    .frame {
+      aspect-ratio: 16 / 9;
+      min-height: 760px;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+      gap: 28px;
+      padding: clamp(30px, 4vw, 58px);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .frame::before {
+      content: "";
+      position: absolute;
+      inset: 22px;
+      border: 1px solid rgba(33, 63, 119, 0.08);
+      pointer-events: none;
+    }
+
+    .topline,
+    .map,
+    .footer {
+      position: relative;
+      z-index: 1;
+    }
+
+    .topline {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 320px;
+      gap: 28px;
+      align-items: start;
+    }
+
+    .eyebrow {
+      color: var(--gold);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    h1 {
+      max-width: 1050px;
+      margin: 0;
+      color: var(--blue);
+      font-size: clamp(42px, 5.1vw, 78px);
+      line-height: 0.96;
+      letter-spacing: -0.055em;
+      text-wrap: balance;
+    }
+
+    .lede {
+      max-width: 940px;
+      margin: 20px 0 0;
+      color: var(--muted);
+      font-size: clamp(17px, 1.55vw, 23px);
+      line-height: 1.42;
+    }
+
+    .status {
+      border: 1px solid var(--line);
+      background: #fbf8f0;
+      padding: 16px 18px;
+      font-size: 13px;
+      line-height: 1.45;
+      color: var(--muted);
+    }
+
+    .status strong {
+      color: var(--ink);
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .map {
+      display: grid;
+      grid-template-columns: 260px minmax(330px, 0.8fr) minmax(460px, 1.25fr);
+      gap: 18px;
+      align-items: stretch;
+    }
+
+    .panel,
+    .register,
+    .layers,
+    .event-band {
+      border: 1px solid var(--line);
+      background: linear-gradient(180deg, #fffefa, var(--paper-warm));
+    }
+
+    .panel {
+      padding: 22px;
+      display: grid;
+      gap: 14px;
+      align-content: start;
+    }
+
+    .panel-title,
+    .register-label,
+    .layer-title,
+    .event-title {
+      margin: 0;
+      font-size: 12px;
+      font-weight: 850;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+
+    .entry-card {
+      min-height: 82px;
+      border: 1px solid rgba(216, 208, 195, 0.94);
+      background: rgba(255, 253, 248, 0.86);
+      padding: 15px 16px;
+      display: grid;
+      align-content: center;
+      gap: 5px;
+    }
+
+    .entry-card strong {
+      color: var(--ink);
+      font-size: 18px;
+      line-height: 1.05;
+      letter-spacing: -0.035em;
+    }
+
+    .entry-card span {
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.35;
+    }
+
+    .register {
+      position: relative;
+      display: grid;
+      align-content: center;
+      min-height: 440px;
+      padding: 32px;
+      background:
+        linear-gradient(180deg, rgba(33, 63, 119, 0.035), rgba(85, 119, 106, 0.035)),
+        #fffdf8;
+    }
+
+    .register::before,
+    .register::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      width: 20px;
+      border-top: 1px solid var(--line);
+    }
+
+    .register::before { left: -20px; }
+    .register::after { right: -20px; }
+
+    .register-card {
+      border: 1px solid rgba(33, 63, 119, 0.22);
+      background: rgba(255, 255, 255, 0.78);
+      padding: 28px;
+      box-shadow: inset 0 0 0 8px rgba(33, 63, 119, 0.035);
+    }
+
+    .register-card h2 {
+      margin: 14px 0 14px;
+      color: var(--blue);
+      font-size: clamp(31px, 2.9vw, 46px);
+      line-height: 0.98;
+      letter-spacing: -0.052em;
+      text-wrap: balance;
+    }
+
+    .register-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.55;
+    }
+
+    .fields {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 9px;
+      margin-top: 22px;
+    }
+
+    .field {
+      border: 1px solid rgba(216, 208, 195, 0.94);
+      background: rgba(247, 245, 239, 0.66);
+      padding: 10px 11px;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.25;
+    }
+
+    .field strong {
+      display: block;
+      color: var(--ink);
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 5px;
+    }
+
+    .layers {
+      display: grid;
+      grid-template-rows: auto 1fr;
+      gap: 16px;
+      padding: 22px;
+    }
+
+    .layer-grid {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .layer {
+      min-height: 252px;
+      border: 1px solid rgba(216, 208, 195, 0.94);
+      background: rgba(255, 253, 248, 0.88);
+      padding: 15px 13px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .layer:nth-child(1) { box-shadow: inset 0 5px 0 var(--blue); }
+    .layer:nth-child(2) { box-shadow: inset 0 5px 0 var(--sage); }
+    .layer:nth-child(3) { box-shadow: inset 0 5px 0 var(--gold); }
+    .layer:nth-child(4) { box-shadow: inset 0 5px 0 var(--rust); }
+    .layer:nth-child(5) { box-shadow: inset 0 5px 0 #6b7280; }
+
+    .layer h3 {
+      margin: 0 0 12px;
+      font-size: 18px;
+      line-height: 1.05;
+      letter-spacing: -0.04em;
+    }
+
+    .layer p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.45;
+    }
+
+    .mini-tag {
+      display: inline-block;
+      align-self: start;
+      border: 1px solid rgba(18, 24, 39, 0.09);
+      padding: 6px 8px;
+      color: var(--muted);
+      background: rgba(247, 245, 239, 0.8);
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .event-band {
+      grid-column: 1 / -1;
+      display: grid;
+      grid-template-columns: 240px repeat(4, minmax(0, 1fr));
+      gap: 10px;
+      align-items: stretch;
+      padding: 16px;
+      background: #f8f3e9;
+    }
+
+    .event-title {
+      color: var(--blue);
+      align-self: center;
+    }
+
+    .event {
+      border: 1px solid rgba(33, 63, 119, 0.12);
+      background: rgba(255, 253, 248, 0.74);
+      padding: 13px 14px;
+      min-height: 64px;
+    }
+
+    .event strong {
+      display: block;
+      color: var(--ink);
+      font-size: 15px;
+      letter-spacing: -0.02em;
+      margin-bottom: 5px;
+    }
+
+    .event span {
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.35;
+    }
+
+    .footer {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 24px;
+      align-items: end;
+      border-top: 1px solid var(--line);
+      padding-top: 18px;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.45;
+    }
+
+    .footer strong { color: var(--ink); }
+
+    .meta {
+      text-align: right;
+      color: var(--ink);
+      font-weight: 750;
+    }
+
+    @media (max-width: 1180px) {
+      .frame { aspect-ratio: auto; min-height: auto; }
+      .topline, .map, .footer { grid-template-columns: 1fr; }
+      .register::before, .register::after { display: none; }
+      .register { min-height: auto; }
+      .layer-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .event-band { grid-template-columns: 1fr 1fr; }
+      .meta { text-align: left; }
+    }
+
+    @media (max-width: 720px) {
+      main { width: min(100vw - 24px, 1500px); padding: 18px 0; }
+      .frame { padding: 24px; }
+      .layer-grid, .event-band, .fields { grid-template-columns: 1fr; }
+      .layer { min-height: auto; gap: 28px; }
+    }
+
+    @media print {
+      body { background: white; }
+      main { width: 100%; padding: 0; }
+      .frame { box-shadow: none; border-color: #999; min-height: auto; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="frame" aria-labelledby="title">
+      <header class="topline">
+        <div>
+          <div class="eyebrow">Whiteford / Schell IP visual direction · Private local draft</div>
+          <h1 id="title">AI Vendor Legal Operating System Map</h1>
+          <p class="lede">A calm executive briefing board for turning scattered AI tools and pilots into a non-confidential register tied to contracts, data, IP, workforce decisions, customer commitments, and the next business event.</p>
+        </div>
+        <aside class="status" aria-label="Review status">
+          <strong>Internal-only review posture</strong>
+          Draft visual direction only. Not legal advice. No attorney-client relationship. Do not enter confidential, privileged, vendor-specific, customer, employee, invention, deal, or regulated facts. Attorney, ethics, source-current, and brand approval required before any public use.
+        </aside>
+      </header>
+
+      <div class="map" aria-label="AI vendor legal operating system visual map">
+        <section class="panel" aria-label="AI entry points">
+          <p class="panel-title">Entry points</p>
+          <div class="entry-card"><strong>Sales tools</strong><span>meeting notes, CRM assistants, proposal support, customer-data touchpoints</span></div>
+          <div class="entry-card"><strong>Product AI</strong><span>model features, autonomy, analytics, prompts, output ownership questions</span></div>
+          <div class="entry-card"><strong>Workforce / HR</strong><span>screening, performance, training, policy, consequential-decision escalation</span></div>
+          <div class="entry-card"><strong>Finance / operations</strong><span>forecasting, support automation, vendor spend, board-reporting inputs</span></div>
+        </section>
+
+        <section class="register" aria-label="Central AI vendor and use-case register">
+          <div class="register-card">
+            <p class="register-label">Center spine</p>
+            <h2>AI Vendor + Use-Case Register</h2>
+            <p>One narrow diagnostic artifact: enough structure for leadership to see ownership, contract posture, data exposure, approval triggers, and evidence gaps before a launch, enterprise sale, financing, diligence request, board review, or AI compliance conversation.</p>
+            <div class="fields" aria-label="Register fields">
+              <div class="field"><strong>Tool / category</strong>Generic label, not secrets</div>
+              <div class="field"><strong>Business owner</strong>Named internal reviewer</div>
+              <div class="field"><strong>Data touched</strong>Non-confidential category</div>
+              <div class="field"><strong>Contract status</strong>Clickwrap, negotiated, flowdown</div>
+              <div class="field"><strong>Approval trigger</strong>Launch, HR, customer, board</div>
+              <div class="field"><strong>Evidence gap</strong>What leadership cannot yet show</div>
+            </div>
+          </div>
+        </section>
+
+        <section class="layers" aria-label="Legal operating layers">
+          <p class="layer-title">Legal operating layers</p>
+          <div class="layer-grid">
+            <article class="layer">
+              <div><h3>Contracts</h3><p>Confidentiality, training rights, indemnity, audit, security, customer flowdowns, termination leverage.</p></div>
+              <span class="mini-tag">vendor terms</span>
+            </article>
+            <article class="layer">
+              <div><h3>Data</h3><p>Customer, employee, product, sensitive, regulated, or operational data categories without collecting facts in public forms.</p></div>
+              <span class="mini-tag">data map</span>
+            </article>
+            <article class="layer">
+              <div><h3>IP / ownership</h3><p>Output ownership, training inputs, R&amp;D records, inventions, code, open-source adjacency, trade-secret handling.</p></div>
+              <span class="mini-tag">evidence</span>
+            </article>
+            <article class="layer">
+              <div><h3>Employment / decisioning</h3><p>Hiring, screening, evaluation, accommodation, monitoring, and higher-risk decision workflows.</p></div>
+              <span class="mini-tag">escalation</span>
+            </article>
+            <article class="layer">
+              <div><h3>Board / customer reporting</h3><p>What the company can calmly explain to a customer, investor, auditor, board, buyer, or regulator.</p></div>
+              <span class="mini-tag">readiness</span>
+            </article>
+          </div>
+        </section>
+
+        <section class="event-band" aria-label="Next business event checkpoints">
+          <p class="event-title">Next business event checkpoints</p>
+          <div class="event"><strong>Enterprise sale</strong><span>Can we answer customer AI-data questions without improvising?</span></div>
+          <div class="event"><strong>Product launch</strong><span>Who approves higher-risk AI use before it goes live?</span></div>
+          <div class="event"><strong>Financing</strong><span>What legal operating evidence is ready for investor diligence?</span></div>
+          <div class="event"><strong>Diligence</strong><span>Can contracts, IP, data, HR, and governance owners tell one story?</span></div>
+        </section>
+      </div>
+
+      <footer class="footer">
+        <div>
+          <strong>Lead-magnet posture:</strong> fulfill the educational promise by solving one narrow diagnostic problem before any consultation ask. Follow-up remains opt-in-only, non-confidential, non-hypey, and attorney-review-gated. No public publishing, workflow activation, CRM mutation, messaging, or social posting is authorized by this artifact.
+        </div>
+        <div class="meta">Task t_cf412ca2<br />docs/ai-authority-packets/2026-05-16-ai-vendor-legal-ops-visual-direction.html</div>
+      </footer>
+    </section>
+  </main>
+</body>
+</html>

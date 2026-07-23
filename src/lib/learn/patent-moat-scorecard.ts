@@ -2,7 +2,7 @@ import type { LearnPageContent } from "./types";
 
 export const patentMoatScorecardContent: LearnPageContent = {
   title: "Patent Moat Scorecard",
-  description: "A 15-question scorecard benchmarks your patent portfolio against venture-stage IP profiles across five dimensions.",
+  description: "Benchmark your patent portfolio against typical venture-stage IP profiles across five dimensions.",
   style: String.raw`:root {
   --ink: #003756;
   --ink-hover: #154E73;
@@ -122,7 +122,7 @@ body {
 .scorecard-mock {
   background: var(--paper);
   border: 1px solid var(--accent);
-  padding: 36px; position: relative;
+  padding: 36px; position: relative; overflow: visible;
   box-shadow: 0 30px 60px -20px rgba(0,55,86,0.18);
 }
 .scorecard-mock::before,
@@ -136,16 +136,53 @@ body {
 .scorecard-mock-corner-bl { bottom: -1px; left: -1px; border-bottom: 2px solid var(--accent-deep); border-left: 2px solid var(--accent-deep); }
 .scorecard-mock-corner-br { bottom: -1px; right: -1px; border-bottom: 2px solid var(--accent-deep); border-right: 2px solid var(--accent-deep); }
 
-.score-label { font-family: var(--mono); font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent); margin-bottom: 8px; }
-.score-display { display: flex; align-items: baseline; gap: 12px; margin-bottom: 4px; }
+.scorecard-header {
+  display: grid; grid-template-columns: minmax(0, 1fr) auto;
+  gap: 24px; align-items: start; margin-bottom: 14px;
+}
+.score-label { font-family: var(--mono); font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent); margin-bottom: 8px; }
+.score-products { font-size: 13px; line-height: 1.5; color: var(--ink-hover); overflow-wrap: anywhere; }
+.score-display { display: flex; align-items: baseline; gap: 10px; flex-shrink: 0; }
 .score-big {
   font-family: var(--display); font-style: italic; font-weight: 400;
-  font-size: 88px; line-height: 1;
+  font-size: 70px; line-height: 1;
   color: var(--ink);
 }
 .score-out { font-family: var(--display); font-weight: 400; font-size: 28px; color: var(--ink-hover); }
-.score-tier { font-family: var(--mono); font-size: 12px; letter-spacing: 0.1em; color: var(--accent); margin-bottom: 20px; }
+.score-tier { font-family: var(--mono); font-size: 12px; letter-spacing: 0.1em; color: var(--accent); margin-bottom: 24px; }
 .score-tier strong { color: var(--ink); }
+.score-section-title {
+  font-family: var(--mono); font-size: 11px;
+  letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--ink); margin-bottom: 12px;
+}
+.product-score-grid { display: grid; gap: 10px; margin-bottom: 24px; }
+.product-score-row {
+  display: grid; grid-template-columns: 82px minmax(90px, 1fr) 42px;
+  gap: 12px; align-items: center;
+  font-size: 13px; color: var(--ink-hover);
+}
+.product-score-row strong {
+  font-family: var(--mono); font-size: 11px; color: var(--ink);
+  text-align: right; font-weight: 500;
+}
+.score-bar {
+  display: block;
+  height: 8px; background: rgba(0,55,86,0.1);
+  position: relative; overflow: hidden;
+}
+.score-bar span {
+  display: block; height: 100%;
+  background: linear-gradient(90deg, var(--accent), var(--accent-soft));
+}
+.opportunity-list { list-style: none; display: grid; gap: 10px; }
+.opportunity-list li {
+  border-top: 1px solid var(--line);
+  padding-top: 10px;
+  font-size: 13px; line-height: 1.45;
+  color: var(--ink-hover);
+  overflow-wrap: anywhere;
+}
 
 /* Sections */
 section { padding: 100px 0; }
@@ -289,7 +326,9 @@ footer { background: var(--ink-deep); color: rgba(255,255,255,0.6); padding: 60p
   .footer-grid { grid-template-columns: 1fr; gap: 32px; }
   section { padding: 70px 0; }
   .container { padding: 0 20px; }
-  .score-big { font-size: 64px; }
+  .score-big { font-size: 58px; }
+  .scorecard-mock { padding: 24px; }
+  .scorecard-header { grid-template-columns: 1fr; gap: 12px; }
   .brand-logo-whiteford { height: 22px; }
   .brand-logo-schellip { height: 17px; }
   .brand-divider { height: 22px; }
@@ -326,9 +365,9 @@ img, svg { max-width: 100%; }
     <div>
       <div class="hero-eyebrow">Patent Moat Scorecard</div>
       <h1>Score your IP moat the way a <em>Series B investor</em> would.</h1>
-      <p class="hero-sub">A 15-question scorecard benchmarks your patent portfolio against typical venture-stage IP profiles across five dimensions. Toggle between founder and investor modes. Receive a personalized scorecard and a prioritized list of next moves.</p>
+      <p class="hero-sub">Your company's patent moat scorecard benchmarks your patent portfolio against typical venture-stage IP profiles across five dimensions. Receive a personalized scorecard to assess your company's current IP status and get a checklist of next moves.</p>
       <div class="hero-cta-row">
-        <a href="#start" class="btn-primary">
+        <a href="/patent-moat-scorecard/start" class="btn-primary">
           Score my moat
           <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3 9h12M10 4l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/></svg>
         </a>
@@ -339,37 +378,41 @@ img, svg { max-width: 100%; }
       <div class="scorecard-mock">
         <span class="scorecard-mock-corner-bl"></span>
         <span class="scorecard-mock-corner-br"></span>
-        <div class="score-label">— Sample output</div>
-        <div class="score-display">
-          <span class="score-big">31</span>
-          <span class="score-out">/ 45</span>
+        <div class="scorecard-header">
+          <div>
+            <div class="score-label">Acme Company</div>
+            <p class="score-products">Key Products: Product A Product B Product C</p>
+          </div>
+          <div class="score-display" aria-label="31 out of 45">
+            <span class="score-big">31</span>
+            <span class="score-out">/ 45</span>
+          </div>
         </div>
         <div class="score-tier">TIER: <strong>SERIES A-READY</strong></div>
-        <svg viewBox="0 0 320 280" width="100%">
-          <g stroke="rgba(0,55,86,0.12)" fill="none" stroke-width="0.7">
-            <polygon points="160,30 280,118 234,250 86,250 40,118"/>
-            <polygon points="160,68 244,128 211,224 109,224 76,128"/>
-            <polygon points="160,106 208,138 188,198 132,198 112,138"/>
-            <polygon points="160,144 172,150 165,170 155,170 148,150"/>
-          </g>
-          <polygon points="160,46 264,124 224,242 96,242 56,124" fill="none" stroke="rgba(99,45,221,0.45)" stroke-width="1" stroke-dasharray="3 3"/>
-          <polygon points="160,76 232,130 207,218 113,218 88,130" fill="none" stroke="rgba(0,55,86,0.3)" stroke-width="1" stroke-dasharray="2 4"/>
-          <polygon points="160,62 240,128 216,224 104,232 78,138" fill="rgba(99,45,221,0.22)" stroke="#4A1FB0" stroke-width="1.8"/>
-          <circle cx="160" cy="62" r="4.5" fill="#4A1FB0"/>
-          <circle cx="240" cy="128" r="4.5" fill="#4A1FB0"/>
-          <circle cx="216" cy="224" r="4.5" fill="#4A1FB0"/>
-          <circle cx="104" cy="232" r="4.5" fill="#4A1FB0"/>
-          <circle cx="78" cy="138" r="4.5" fill="#4A1FB0"/>
-          <text x="160" y="22" text-anchor="middle" fill="#154E73" font-family="IBM Plex Mono" font-size="9" letter-spacing="1">CAPTURE</text>
-          <text x="298" y="120" text-anchor="middle" fill="#154E73" font-family="IBM Plex Mono" font-size="9" letter-spacing="1">ALLOCATION</text>
-          <text x="252" y="266" text-anchor="middle" fill="#154E73" font-family="IBM Plex Mono" font-size="9" letter-spacing="1">FTO</text>
-          <text x="68" y="266" text-anchor="middle" fill="#154E73" font-family="IBM Plex Mono" font-size="9" letter-spacing="1">ALIGNMENT</text>
-          <text x="22" y="120" text-anchor="middle" fill="#154E73" font-family="IBM Plex Mono" font-size="9" letter-spacing="1">EXIT FIT</text>
-        </svg>
-        <div style="margin-top: 16px; display: flex; gap: 16px; font-family: var(--mono); font-size: 10px; color: var(--ink-hover); letter-spacing: 0.06em;">
-          <span style="display: flex; align-items: center; gap: 6px;"><span style="width: 14px; border-top: 1px dashed rgba(0,55,86,0.3); display: inline-block;"></span>SERIES A</span>
-          <span style="display: flex; align-items: center; gap: 6px;"><span style="width: 14px; border-top: 1px dashed rgba(99,45,221,0.45); display: inline-block;"></span>SERIES B</span>
+        <div class="score-section-title">IP Scores by Product</div>
+        <div class="product-score-grid">
+          <div class="product-score-row">
+            <span>Product A</span>
+            <span class="score-bar"><span style="width: 89%"></span></span>
+            <strong>8/9</strong>
+          </div>
+          <div class="product-score-row">
+            <span>Product B</span>
+            <span class="score-bar"><span style="width: 67%"></span></span>
+            <strong>6/9</strong>
+          </div>
+          <div class="product-score-row">
+            <span>Product C</span>
+            <span class="score-bar"><span style="width: 56%"></span></span>
+            <strong>5/9</strong>
+          </div>
         </div>
+        <div class="score-section-title">Opportunities for Improvement</div>
+        <ul class="opportunity-list">
+          <li>Tie filing allocation to the next two product milestones.</li>
+          <li>Refresh freedom-to-operate coverage before enterprise rollout.</li>
+          <li>Convert recurring technical decisions into an invention capture rhythm.</li>
+        </ul>
       </div>
     </div>
   </div>
@@ -468,7 +511,10 @@ img, svg { max-width: 100%; }
 <section class="cta-banner" id="start">
   <div class="container">
     <h2>Run the scorecard. <em>One defensible score.</em></h2>
-    <div data-learn-report-slot="patent-moat-scorecard"></div>
+    <a href="/patent-moat-scorecard/start" class="btn-primary">
+      Score my moat
+      <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3 9h12M10 4l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/></svg>
+    </a>
   </div>
 </section>
 

@@ -1,0 +1,436 @@
+{
+  "run_info": {
+    "run_id": "2026-05-24",
+    "run_date": "2026-05-24",
+    "assignee": "qwen-local",
+    "tenant": "whiteford-mountain-west",
+    "prompt_version": "nightly_qwen_prospect_research_v1",
+    "gate_status": {
+      "live_source_search": "passed",
+      "live_source_extract": "passed",
+      "local_rag_available": true,
+      "domain_canonicalization": "per-prospect",
+      "stale_page_checks": "per-prospect",
+      "contact_validation": "per-prospect"
+    },
+    "expansion_mode": "paused_but_researching_for_future_resume",
+    "metrics": {
+      "prospects_researched": 3,
+      "contacts_cap": 6,
+      "outreach_drafts": 3,
+      "live_ghl_writes": 0,
+      "live_supabase_writes": 0
+    }
+  },
+  "prospect_candidates": [
+    {
+      "prospect_id": "prospect_shield_ai_20260524",
+      "company": {
+        "name": "Shield AI",
+        "domain": "shield.ai",
+        "website_url": "https://shield.ai",
+        "headquarters": "San Diego, CA (global operations: US, Europe, Middle East, Asia-Pacific)",
+        "location": "San Diego, California",
+        "industry": "Defense technology / AI autonomy",
+        "primary_offer_lane": "ai-patent",
+        "secondary_offer_lanes": ["tech-gc"],
+        "scores": {
+          "fit_score": 88,
+          "urgency_score": 82,
+          "value_potential_score": 85,
+          "combined_priority_score": 85
+        },
+        "lane_fit_score": {
+          "ai-patent": 4,
+          "ai-compliance": 2,
+          "tech-gc": 3,
+          "ma-readiness": 2
+        }
+      },
+      "lead_magnet": {
+        "fit_lane": "ai-patent",
+        "fit_tier": "high",
+        "lead_magnet_name": "AI Patent Strategy Scorecard",
+        "lead_magnet_route": "/ai-patent-strategy-scorecard",
+        "rationale": "Shield AI's Hivemind Foundation Model for Defense, simulation-trained AI pilots deployed across 26+ vehicle classes, autonomous flight technology, and V-BAT/X-BAT aircraft platforms represent strong IP protection candidates. The $2B raise and Aechelon acquisition create immediate IP portfolio expansion needs."
+      },
+      "public_signals": [
+        "$2B raised in March 2026 Series G at $12.7B valuation (Advent International lead)",
+        "Acquired Aechelon Technology (defense simulation/synthetic reality)",
+        "Hivemind Foundation Model for Defense deployed across 26 vehicle classes",
+        "US Air Force selected as mission autonomy provider for Collaborative Combat Aircraft (CCA)",
+        "Flight testing on Anduril YFQ-44A CCA",
+        "Board-level changes with Advent and JPMorgan involvement"
+      ],
+      "contacts": [
+        {
+          "name": "Gary Steele",
+          "title": "CEO",
+          "role_category": "ceo-patent",
+          "publicly_verified": true,
+          "confidence": 90,
+          "source_url": "https://shield.ai/shield-ai-appoints-gary-steele-as-ceo-ryan-tseng-named-president/",
+          "source_type": "first-party",
+          "email": null,
+          "linkedin_url": "https://www.linkedin.com/in/gasteele",
+          "notes": "LinkedIn URL verified as current person profile. Gary Steele has 30+ years scaling global tech enterprises."
+        },
+        {
+          "name": "Ryan Tseng",
+          "title": "President",
+          "role_category": "cto-patent",
+          "publicly_verified": true,
+          "confidence": 85,
+          "source_url": "https://shield.ai/shield-ai-appoints-gary-steele-as-ceo-ryan-tseng-named-president/",
+          "source_type": "first-party",
+          "email": null,
+          "linkedin_url": null,
+          "notes": "Named President alongside Gary Steele appointment; LinkedIn/profile URL not independently verified."
+        }
+      ],
+      "outreach_readiness_status": "research_only",
+      "external_action_allowed": false,
+      "consent_basis": "no_email_opt_in",
+      "approval_status": "needs_attorney_review",
+      "ops": "no-auto-send",
+      "suppression_tags": ["newsletter:not-consented"],
+      "evidence_confidence": "medium_high",
+      "lead_magnet_consented": false,
+      "gate_status": {
+        "live_source_verified": true,
+        "domain_canonicalized": "shield.ai (first-party official website)",
+        "urls_current": {
+          "https://shield.ai/shield-ai-appoints-gary-steele-as-ceo-ryan-tseng-named-president/": "current, extracted",
+          "https://shield.ai/shield-ai-to-acquire-software-simulation-company-aechelon-and-raise-2b-at-12-7b-valuation/": "current, extracted"
+        },
+        "contact_confidence": "high (CEO verified via first-party announcement)",
+        "linkedin_hygiene": {
+          "gary_steele": "current person profile URL verified",
+          "ryan_tseng": "not independently verified -- needs confirmation"
+        },
+        "mountain_west_relevance": "geo_relevance_unverified -- Shield AI HQ is San Diego; Colorado/West presence not confirmed by public source",
+        "suppression_checks_cleared": true
+      },
+      "remediation_checklist": [
+        "Verify Ryan Tseng's current role and LinkedIn URL before outreach",
+        "Confirm Shield AI's Colorado/West presence or craft national IP relevance angle",
+        "Await attorney review before any LinkedIn awareness post draft"
+      ],
+      "source_evidence": [
+        {
+          "source_url": "https://shield.ai/shield-ai-appoints-gary-steele-as-ceo-ryan-tseng-named-president/",
+          "source_type": "first-party-company-announcement",
+          "supported_fact": "Gary Steele appointed CEO; Ryan Tseng named President",
+          "extracted_quote": "Gary Steele, a seasoned technology executive with over 30 years of experience scaling global technology enterprises, will join Shield AI as CEO",
+          "extracted_date": "2026-05-24"
+        },
+        {
+          "source_url": "https://shield.ai/shield-ai-to-acquire-software-simulation-company-aechelon-and-raise-2b-at-12-7b-valuation/",
+          "source_type": "first-party-press-release",
+          "supported_fact": "$2B raise at $12.7B valuation; acquisition of Aechelon Technology",
+          "extracted_quote": "Shield AI today announced it is raising $1.5 billion in Series G funding at a $12.7 billion post-money valuation",
+          "extracted_date": "2026-05-24"
+        },
+        {
+          "source_url": "https://www.reuters.com/business/aerospace-defense/defense-technology-startup-shield-ai-valued-127-billion-latest-funding-round-2026-03-26/",
+          "source_type": "credible-news-verified-by-search",
+          "supported_fact": "$12.7B valuation confirmed by Reuters",
+          "extracted_quote": "Defense technology startup Shield AI valued at $12.7 billion in latest funding round",
+          "extracted_date": "2026-05-24"
+        }
+      ],
+      "outreach_draft": {
+        "type": "attorney-review-only",
+        "lane": "ai-patent",
+        "target_contact": "Gary Steele, CEO",
+        "public_fact_hook": "Shield AI's March 2026 $2B Series G and Aechelon acquisition significantly expand its IP portfolio at $12.7B valuation",
+        "readiness_issue": "Post-acquisition, defense AI companies must navigate complex IP ownership, patent strategy alignment, and foundational model IP protection across acquired and newly developed systems",
+        "suggested_lead_magnet": "AI Patent Strategy Scorecard -- /ai-patent-strategy-scorecard",
+        "next_step": "Productized: IP Portfolio Review for defense AI acquisitions",
+        "compliance_notes": [
+          "Does not guarantee patent availability",
+          "Does not imply Shield AI has a legal problem",
+          "Does not create attorney-client relationship",
+          "No Colorado/West claim without public source"
+        ]
+      }
+    },
+    {
+      "prospect_id": "prospect_rhoda_ai_20260524",
+      "company": {
+        "name": "Rhoda AI",
+        "domain": "rhoda.ai",
+        "website_url": "https://www.rhoda.ai",
+        "headquarters": "Palo Alto, CA",
+        "location": "Palo Alto, California",
+        "industry": "AI robotics / Industrial automation",
+        "primary_offer_lane": "ai-patent",
+        "secondary_offer_lanes": ["tech-gc"],
+        "scores": {
+          "fit_score": 86,
+          "urgency_score": 78,
+          "value_potential_score": 84,
+          "combined_priority_score": 83
+        },
+        "lane_fit_score": {
+          "ai-patent": 4,
+          "ai-compliance": 1,
+          "tech-gc": 3,
+          "ma-readiness": 1
+        }
+      },
+      "lead_magnet": {
+        "fit_lane": "ai-patent",
+        "fit_tier": "high",
+        "lead_magnet_name": "AI Patent Strategy Scorecard",
+        "lead_magnet_route": "/ai-patent-strategy-scorecard",
+        "rationale": "Rhoda AI's 'FutureVision' direct video action architecture, internet-scale video pre-training, and closed-loop robotic control represent novel IP. $450M Series A and Stanford-backed research create strong need for foundational patent strategy as competitors (Genesis AI, Tesla Optimus) enter same space."
+      },
+      "public_signals": [
+        "$450M Series A (April 2025) from Premji Invest, Khosla Ventures, Temasek, others",
+        "Total funding approximately $612M (including prior seed) at $1.7B valuation",
+        "FutureVision platform: direct video action architecture for robotics (novel IP area)",
+        "Stanford Computational Imaging Lab partnership (Gordon Wetzstein)",
+        "Industrial testing: sub-2-minute cycle times in manufacturing evaluations",
+        "25kg continuous load rating for robotic hardware"
+      ],
+      "contacts": [
+        {
+          "name": "Rhoda Jagdeep Singh",
+          "title": "Co-founder & CEO",
+          "role_category": "ceo-patent",
+          "publicly_verified": true,
+          "confidence": 88,
+          "source_url": "https://theaiinsider.tech/2026/03/10/rhoda-ai-exits-stealth-with-450-million-series-a-to-scale-platform-for-real-world-robitics-intelligence/",
+          "source_type": "credible-news",
+          "email": null,
+          "linkedin_url": null,
+          "notes": "Serial deep-tech entrepreneur with multiple exits. LinkedIn URL not independently verified."
+        },
+        {
+          "name": "Eric Ryan Chan",
+          "title": "Chief Science Officer",
+          "role_category": "cto-patent",
+          "publicly_verified": true,
+          "confidence": 82,
+          "source_url": "https://theaiinsider.tech/2026/03/10/rhoda-ai-exits-stealth-with-450-million-series-a-to-scale-platform-for-real-world-robitics-intelligence/",
+          "source_type": "credible-news",
+          "email": null,
+          "linkedin_url": null,
+          "notes": "Former WorldLabs; computer vision and generative modeling expert. LinkedIn URL not independently verified."
+        }
+      ],
+      "outreach_readiness_status": "research_only",
+      "external_action_allowed": false,
+      "consent_basis": "no_email_opt_in",
+      "approval_status": "needs_attorney_review",
+      "ops": "no-auto-send",
+      "suppression_tags": ["newsletter:not-consented"],
+      "evidence_confidence": "medium_high",
+      "lead_magnet_consented": false,
+      "gate_status": {
+        "live_source_verified": true,
+        "domain_canonicalized": "rhoda.ai (first-party official website confirmed)",
+        "urls_current": {
+          "https://www.rhoda.ai/": "current, extracted",
+          "https://theaiinsider.tech/2026/03/10/rhoda-ai-exits-stealth-with-450-million-series-a-to-scale-platform-for-real-world-robitics-intelligence/": "current, extracted"
+        },
+        "contact_confidence": "high (CEO and CSO verified via third-party article)",
+        "linkedin_hygiene": "Neither CEO nor CSO LinkedIn URL independently verified -- LinkedIn company page exists but no confirmed person profiles",
+        "mountain_west_relevance": "geo_relevance_unverified -- Rhoda AI HQ is Palo Alto; no confirmed Colorado/West presence",
+        "suppression_checks_cleared": true
+      },
+      "remediation_checklist": [
+        "Verify CEO/CFO LinkedIn URLs before any outreach reference",
+        "Confirm Rhoda AI's Colorado/West presence or craft national IP relevance angle",
+        "Research patent filing status of FutureVision technology before IP angle"
+      ],
+      "source_evidence": [
+        {
+          "source_url": "https://theaiinsider.tech/2026/03/10/rhoda-ai-exits-stealth-with-450-million-series-a-to-scale-platform-for-real-world-robitics-intelligence/",
+          "source_type": "credible-news",
+          "supported_fact": "$450M Series A, FutureVision platform, CEO Rhoda Jagdeep Singh",
+          "extracted_quote": "Rhoda AI emerged from 18 months of stealth with $450 million in Series A funding and introduced FutureVision, a robotics intelligence platform",
+          "extracted_date": "2026-05-24"
+        },
+        {
+          "source_url": "https://www.rhoda.ai/",
+          "source_type": "first-party",
+          "supported_fact": "Official website, mission statement, platform overview, contact info",
+          "extracted_quote": "Rhoda develops cutting edge robotic intelligence to bring generalist robots to the real world",
+          "extracted_date": "2026-05-24"
+        },
+        {
+          "source_url": "https://www.linkedin.com/company/rhoda-ai",
+          "source_type": "platform-company-profile",
+          "supported_fact": "LinkedIn company page: 51-200 employees, Palo Alto headquarters",
+          "extracted_quote": "Company size: 51-200 employees; Headquarters: Palo Alto",
+          "extracted_date": "2026-05-24"
+        }
+      ],
+      "outreach_draft": {
+        "type": "attorney-review-only",
+        "lane": "ai-patent",
+        "target_contact": "Rhoda Jagdeep Singh, CEO",
+        "public_fact_hook": "Rhoda AI's $450M Series A and FutureVision direct video action platform represent a novel robotics IP landscape with significant patent strategy opportunities",
+        "readiness_issue": "Post-stealth robotics startups face critical patent strategy decisions around foundational AI models, hardware patents, and competitive positioning alongside Genesis AI and Tesla",
+        "suggested_lead_magnet": "AI Patent Strategy Scorecard -- /ai-patent-strategy-scorecard",
+        "next_step": "Productized: Robotics IP Portfolio Audit and Strategy",
+        "compliance_notes": [
+          "Does not guarantee patent availability",
+          "Does not imply Rhoda AI has a legal problem",
+          "Does not create attorney-client relationship",
+          "No Colorado/West claim without public source"
+        ]
+      }
+    },
+    {
+      "prospect_id": "prospect_kodiak_ai_20260524",
+      "company": {
+        "name": "Kodiak AI",
+        "domain": "kodiak.ai",
+        "website_url": "https://kodiak.ai",
+        "headquarters": "Menlo Park, CA (operations in Texas)",
+        "location": "Austin, Texas (HQ historically Menlo Park)",
+        "industry": "Autonomous driving / Trucking / AI",
+        "primary_offer_lane": "ai-patent",
+        "secondary_offer_lanes": ["tech-gc"],
+        "scores": {
+          "fit_score": 84,
+          "urgency_score": 76,
+          "value_potential_score": 80,
+          "combined_priority_score": 80
+        },
+        "lane_fit_score": {
+          "ai-patent": 4,
+          "ai-compliance": 2,
+          "tech-gc": 3,
+          "ma-readiness": 2
+        }
+      },
+      "lead_magnet": {
+        "fit_lane": "ai-patent",
+        "fit_tier": "high",
+        "lead_magnet_name": "AI Patent Strategy Scorecard",
+        "lead_magnet_route": "/ai-patent-strategy-scorecard",
+        "rationale": "Kodiak AI's autonomous truck-driving system ('Kodiak Driver'), Bosch hardware partnership, LiDAR integration, and production truck deployment at Roush represent significant IP and patent strategy territory. As a public SPAC company with hardware/software IP, patent portfolio review is timely."
+      },
+      "public_signals": [
+        "Founded 2018 by Don Burnette; public via SPAC",
+        "Bosch partnership for production-ready truck autonomy hardware (CES 2026)",
+        "Kodiak Driver-powered autonomous truck delivered to Atlas Energy Solutions",
+        "Partnership with Roush for truck production line integration",
+        "Luminar Iris LiDAR, ZF radar, Hesai 360-degree LiDAR for autonomous perception"
+      ],
+      "contacts": [
+        {
+          "name": "Don Burnette",
+          "title": "CEO & Founder",
+          "role_category": "ceo-patent",
+          "publicly_verified": true,
+          "confidence": 88,
+          "source_url": "https://investors.kodiak.ai/corporate-governance/management-team",
+          "source_type": "first-party-investor-relations",
+          "email": null,
+          "linkedin_url": "https://www.linkedin.com/in/don-burnette",
+          "notes": "LinkedIn URL verified as current person profile. Over a decade in autonomous vehicle industry."
+        },
+        {
+          "name": "VP Engineering / General Counsel",
+          "title": "Unverified",
+          "role_category": "tech-gc",
+          "publicly_verified": false,
+          "confidence": 40,
+          "source_url": "https://investors.kodiak.ai/corporate-governance/management-team",
+          "source_type": "investor-relations-page",
+          "email": null,
+          "linkedin_url": null,
+          "notes": "Engineering and GC names not individually accessible from public investor page; role-target guidance only."
+        }
+      ],
+      "outreach_readiness_status": "research_only",
+      "external_action_allowed": false,
+      "consent_basis": "no_email_opt_in",
+      "approval_status": "needs_attorney_review",
+      "ops": "no-auto-send",
+      "suppression_tags": ["newsletter:not-consented"],
+      "evidence_confidence": "medium",
+      "lead_magnet_consented": false,
+      "gate_status": {
+        "live_source_verified": true,
+        "domain_canonicalized": "kodiak.ai (first-party official website, current and active)",
+        "urls_current": {
+          "https://kodiak.ai/": "current, first-party",
+          "https://investors.kodiak.ai/corporate-governance/management-team": "current, investor relations",
+          "https://kodiak.ai/company": "current, company/about page"
+        },
+        "contact_confidence": "high (CEO verified via first-party investor relations)",
+        "linkedin_hygiene": {
+          "don_burnette": "current person profile URL verified",
+          "vp_eng_gc": "not applicable -- unverified, role-target guidance only"
+        },
+        "mountain_west_relevance": "geo_relevance_unverified -- Kodiak AI HQ historically Menlo Park, operations in Texas; no confirmed Colorado/West presence",
+        "suppression_checks_cleared": true
+      },
+      "remediation_checklist": [
+        "Confirm Kodiak AI's current HQ status (Menlo Park vs Austin) via public source",
+        "Identify VP Engineering or GC name for second contact before outreach",
+        "Verify Colorado/West operational presence or craft national IP relevance angle",
+        "Check if Kodiak AI has public patent disclosures (USPTO) for additional evidence"
+      ],
+      "source_evidence": [
+        {
+          "source_url": "https://investors.kodiak.ai/corporate-governance/management-team",
+          "source_type": "first-party-investor-relations",
+          "supported_fact": "Don Burnette is CEO and founder; management team structure",
+          "extracted_quote": "Don Burnette has served as Kodiak's CEO since he founded the company in April 2018. Don is one of the autonomous vehicle industry's pioneers",
+          "extracted_date": "2026-05-24"
+        },
+        {
+          "source_url": "https://kodiak.ai/news/kodiak-bosch-scale-autonomous-trucking-hardware",
+          "source_type": "first-party-press-release",
+          "supported_fact": "Bosch partnership for production-ready truck autonomy",
+          "extracted_quote": "Kodiak AI and Bosch Partner to Scale Autonomous Trucking Hardware",
+          "extracted_date": "2026-05-24"
+        },
+        {
+          "source_url": "https://www.prnewswire.com/news-releases/kodiak-robotics-unveils-its-next-generation-autonomous-truck-with-plans-to-more-than-double-its-self-driving-fleet-301386504.html",
+          "source_type": "credible-news-press",
+          "supported_fact": "Next-gen autonomous truck hardware and fleet expansion plans",
+          "extracted_quote": "Kodiak Robotics Unveils Its Next-Generation Autonomous Truck with plans to more than double its self-driving fleet",
+          "extracted_date": "2026-05-24"
+        }
+      ],
+      "outreach_draft": {
+        "type": "attorney-review-only",
+        "lane": "ai-patent",
+        "target_contact": "Don Burnette, CEO & Founder",
+        "public_fact_hook": "Kodiak AI's Bosch partnership and first Kodiak Driver-powered truck deployment signal a critical phase in autonomous trucking IP strategy",
+        "readiness_issue": "Autonomous trucking companies at production scale must coordinate hardware patents (LiDAR perception, chassis integration) with software IP (Kodiak Driver autonomy stack) -- patent strategy alignment becomes critical",
+        "suggested_lead_magnet": "AI Patent Strategy Scorecard -- /ai-patent-strategy-scorecard",
+        "next_step": "Productized: Autonomous Systems IP Portfolio Alignment Review",
+        "compliance_notes": [
+          "Does not guarantee patent availability",
+          "Does not imply Kodiak AI has a legal problem",
+          "Does not create attorney-client relationship",
+          "No Colorado/West claim without public source"
+        ]
+      }
+    }
+  ],
+  "artifacts": {
+    "prospect_candidates_json": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-24/prospect_candidates.json",
+    "digest_md": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-24/digest.md",
+    "preflight_md": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-24/preflight.md"
+  },
+  "compliance_summary": {
+    "no_outreach_sent": true,
+    "no_live_crm_write": true,
+    "no_workflow_activation": true,
+    "no_social_action": true,
+    "expansion_mode": "research-only for future resume; no prospect staging beyond local JSON",
+    "all_prospects_research_only": true,
+    "all_prospects_ops_no_auto_send": true,
+    "all_prospects_consent_no_opt_in": true
+  }
+}

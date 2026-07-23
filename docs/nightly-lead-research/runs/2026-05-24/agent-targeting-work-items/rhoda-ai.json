@@ -1,0 +1,143 @@
+{
+  "task": "prepare_internal_attorney_review_agent_targeting_packet",
+  "company": {
+    "name": "Rhoda AI",
+    "domain": "rhoda.ai",
+    "website_url": "https://www.rhoda.ai",
+    "headquarters": "Palo Alto, CA",
+    "location": "Palo Alto, California",
+    "industry": "AI robotics / Industrial automation",
+    "primary_offer_lane": "ai-patent",
+    "secondary_offer_lanes": [
+      "tech-gc"
+    ],
+    "scores": {
+      "fit_score": 86,
+      "urgency_score": 78,
+      "value_potential_score": 84,
+      "combined_priority_score": 83
+    },
+    "lane_fit_score": {
+      "ai-patent": 4,
+      "ai-compliance": 1,
+      "tech-gc": 3,
+      "ma-readiness": 1
+    },
+    "prospect_id": "prospect_rhoda_ai_20260524",
+    "segment": "ai-patent",
+    "lead_magnet": "AI Patent Strategy Scorecard",
+    "recommended_offer": "Productized: Robotics IP Portfolio Audit and Strategy",
+    "source_url": "https://theaiinsider.tech/2026/03/10/rhoda-ai-exits-stealth-with-450-million-series-a-to-scale-platform-for-real-world-robitics-intelligence/",
+    "source_note": "$450M Series A (April 2025) from Premji Invest, Khosla Ventures, Temasek, others; Total funding approximately $612M (including prior seed) at $1.7B valuation; FutureVision platform: direct video action architecture for robotics (novel IP area)",
+    "pipeline_stage": "research_staged",
+    "risk_level": "attorney_review_required",
+    "suppression_status": "consent_gap_no_auto_send",
+    "conflicts_status": "required_before_send",
+    "owner": "qwen-local",
+    "notes": "Research-only nightly candidate. No outreach authorization; attorney review, conflicts, suppression, and source-current checks required before external use."
+  },
+  "contacts": [
+    {
+      "name": "Rhoda Jagdeep Singh",
+      "title": "Co-founder & CEO",
+      "role_category": "ceo-patent",
+      "publicly_verified": true,
+      "confidence": 88,
+      "source_url": "https://theaiinsider.tech/2026/03/10/rhoda-ai-exits-stealth-with-450-million-series-a-to-scale-platform-for-real-world-robitics-intelligence/",
+      "source_type": "credible-news",
+      "email": null,
+      "linkedin_url": null,
+      "notes": "Serial deep-tech entrepreneur with multiple exits. LinkedIn URL not independently verified."
+    },
+    {
+      "name": "Eric Ryan Chan",
+      "title": "Chief Science Officer",
+      "role_category": "cto-patent",
+      "publicly_verified": true,
+      "confidence": 82,
+      "source_url": "https://theaiinsider.tech/2026/03/10/rhoda-ai-exits-stealth-with-450-million-series-a-to-scale-platform-for-real-world-robitics-intelligence/",
+      "source_type": "credible-news",
+      "email": null,
+      "linkedin_url": null,
+      "notes": "Former WorldLabs; computer vision and generative modeling expert. LinkedIn URL not independently verified."
+    }
+  ],
+  "evidence": [
+    {
+      "source_url": "https://theaiinsider.tech/2026/03/10/rhoda-ai-exits-stealth-with-450-million-series-a-to-scale-platform-for-real-world-robitics-intelligence/",
+      "source_type": "credible-news",
+      "fact_classification": "public",
+      "evidence_snippet": "Rhoda AI emerged from 18 months of stealth with $450 million in Series A funding and introduced FutureVision, a robotics intelligence platform",
+      "supported_fact": "$450M Series A, FutureVision platform, CEO Rhoda Jagdeep Singh",
+      "confidence": "medium_high",
+      "corroboration": "public source cited in nightly research packet",
+      "safe_for_outreach": "conditional",
+      "safe_fact_for_copy": "$450M Series A, FutureVision platform, CEO Rhoda Jagdeep Singh",
+      "accessed_at": "2026-05-24"
+    },
+    {
+      "source_url": "https://www.rhoda.ai/",
+      "source_type": "first-party",
+      "fact_classification": "public",
+      "evidence_snippet": "Rhoda develops cutting edge robotic intelligence to bring generalist robots to the real world",
+      "supported_fact": "Official website, mission statement, platform overview, contact info",
+      "confidence": "medium_high",
+      "corroboration": "public source cited in nightly research packet",
+      "safe_for_outreach": "conditional",
+      "safe_fact_for_copy": "Official website, mission statement, platform overview, contact info",
+      "accessed_at": "2026-05-24"
+    },
+    {
+      "source_url": "https://www.linkedin.com/company/rhoda-ai",
+      "source_type": "platform-company-profile",
+      "fact_classification": "public",
+      "evidence_snippet": "Company size: 51-200 employees; Headquarters: Palo Alto",
+      "supported_fact": "LinkedIn company page: 51-200 employees, Palo Alto headquarters",
+      "confidence": "medium_high",
+      "corroboration": "public source cited in nightly research packet",
+      "safe_for_outreach": "conditional",
+      "safe_fact_for_copy": "LinkedIn company page: 51-200 employees, Palo Alto headquarters",
+      "accessed_at": "2026-05-24"
+    }
+  ],
+  "outreach_drafts": [
+    {
+      "draft_type": "email",
+      "channel": "manual_email_review",
+      "title": "AI patent scorecard attorney-review angle: Rhoda AI",
+      "subject": "Attorney-review-only AI patent strategy angle for Rhoda AI",
+      "body": "ATTORNEY REVIEW ONLY — DO NOT SEND.\nTarget: Rhoda Jagdeep Singh, CEO\nPublic fact hook: Rhoda AI's $450M Series A and FutureVision direct video action platform represent a novel robotics IP landscape with significant patent strategy opportunities\nReadiness issue: Post-stealth robotics startups face critical patent strategy decisions around foundational AI models, hardware patents, and competitive positioning alongside Genesis AI and Tesla\nSuggested lead magnet: AI Patent Strategy Scorecard -- /ai-patent-strategy-scorecard\nNext step: Productized: Robotics IP Portfolio Audit and Strategy\nCompliance notes: Does not guarantee patent availability; Does not imply Rhoda AI has a legal problem; Does not create attorney-client relationship; No Colorado/West claim without public source\nGuardrail: no outreach, workflow enrollment, trigger tags, LinkedIn/social action, Clio write, live CRM/Supabase sync, public/client-facing use, or send without Jeff exact approval plus attorney/conflicts/suppression review.",
+      "source_facts": [
+        "Rhoda AI's $450M Series A and FutureVision direct video action platform represent a novel robotics IP landscape with significant patent strategy opportunities"
+      ],
+      "source_urls": [
+        "https://theaiinsider.tech/2026/03/10/rhoda-ai-exits-stealth-with-450-million-series-a-to-scale-platform-for-real-world-robitics-intelligence/",
+        "https://www.rhoda.ai/",
+        "https://www.linkedin.com/company/rhoda-ai"
+      ],
+      "risk_level": "attorney_review_required",
+      "internal_review_notes": "Not approved for sending. Research-only local staging; requires attorney review, conflicts, suppression, source-current checks, and Jeff exact approval before external use."
+    }
+  ],
+  "source_candidate_path": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-24/prospect_candidates.json",
+  "normalized_store_path": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-24/prospect_candidates.normalized_for_store.json",
+  "guardrails": {
+    "external_action_allowed": false,
+    "approval_required": true,
+    "no_outreach_no_workflows_no_social_no_clio_no_live_sync": true,
+    "required_before_external_use": [
+      "Jeff exact approval",
+      "attorney review",
+      "conflicts check",
+      "suppression/opt-out check",
+      "source-current verification"
+    ]
+  },
+  "remediation_checklist": [
+    "Verify CEO/CFO LinkedIn URLs before any outreach reference",
+    "Confirm Rhoda AI's Colorado/West presence or craft national IP relevance angle",
+    "Research patent filing status of FutureVision technology before IP angle"
+  ],
+  "local_growth_os_prospect_id": "prospect_rhoda_ai_20260524",
+  "source_packet_prospect_id": "prospect_rhoda_ai_20260524"
+}

@@ -1,0 +1,26 @@
+[
+  {
+    "docid": "#8dbbc7",
+    "score": 0.92,
+    "file": "qmd://whiteford-ai-law-pages/docs/reviews/2026-05-10-sunday-morning-decision-packet-review.md",
+    "title": "Sunday Morning Decision Packet Review — 2026-05-10",
+    "context": "Schell IP / Whiteford AI authority, SEO, YouTube, HighLevel campaign, landing page, and legal marketing review materials.",
+    "snippet": "@@ -20,4 @@ (19 before, 56 after)\n| Sunday packet | `docs/digests/2026-05-10_sunday_morning_decision_packet.md` | Reviewed full packet and approval boxes. |\n| Parent handoff | `t_87f19c84` Kanban handoff | Confirms packet intent: Tech GC local/no-token QA is the only optional safe progress lane; all public/external/live-system st..."
+  },
+  {
+    "docid": "#490ec6",
+    "score": 0.92,
+    "file": "qmd://whiteford-ai-law-pages/docs/digests/2026-05-10-sunday-morning-decision-packet.md",
+    "title": "Sunday Morning Whiteford Decision Packet — 2026-05-10",
+    "context": "Schell IP / Whiteford AI authority, SEO, YouTube, HighLevel campaign, landing page, and legal marketing review materials.",
+    "snippet": "@@ -28,4 @@ (27 before, 301 after)\n| --- | --- | --- | --- |\n| Tech GC local/no-token QA | Approve if Jeff wants safe internal progress today. | A specialist can run local/static/no-token browser/API QA using synthetic `.invalid` payloads and capture evidence. | No live HighLevel, no workflow/test send/contact enrollment, no Supab..."
+  },
+  {
+    "docid": "#2db972",
+    "score": 0.91,
+    "file": "qmd://whiteford-ai-law-pages/docs/kanban-deliverable-index.md",
+    "title": "Whiteford Mountain West Kanban Deliverable Index",
+    "context": "Schell IP / Whiteford AI authority, SEO, YouTube, HighLevel campaign, landing page, and legal marketing review materials.",
+    "snippet": "@@ -188,4 @@ (187 before, 31 after)\n| `t_6d2b0de5` Refresh QMD Whiteford collection for recent approval and Growth OS docs | `docs/ops/qmd_whiteford_collection_refresh_2026-05-09.md` | Refreshed local QMD retrieval: `whiteford-ai-law-pages` increased from 11 to 179 indexed files, embedded missing vectors, and verified searches for ..."
+  }
+]

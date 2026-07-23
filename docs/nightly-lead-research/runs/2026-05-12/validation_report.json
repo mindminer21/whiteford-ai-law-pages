@@ -1,0 +1,18 @@
+{
+  "task_id": "t_b4edc00a",
+  "run_label": "2026-05-12",
+  "validated_at": "2026-05-12T07:43:15Z",
+  "source_packet": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-12/prospect_candidates.json",
+  "normalized_payload": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-12/prospect_candidates.normalized_for_store.json",
+  "store_dry_run": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-12/store_dry_run.json",
+  "store_output": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-12/store_output.json",
+  "candidate_count": 0,
+  "dry_run_status": "dry_run",
+  "apply_status": "applied",
+  "apply_counts": {},
+  "agent_targeting_work_items_created": 0,
+  "source_availability": "GATE_1_FAILED",
+  "blocker": "Firecrawl credits exhausted / Payment Required; no live-source prospect discovery or verification available.",
+  "external_actions_performed": false,
+  "live_crm_or_supabase_writes_performed": false
+}

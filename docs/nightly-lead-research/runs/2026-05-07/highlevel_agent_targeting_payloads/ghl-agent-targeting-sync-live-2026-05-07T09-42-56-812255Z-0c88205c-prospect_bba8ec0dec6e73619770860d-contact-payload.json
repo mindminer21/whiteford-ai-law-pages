@@ -1,0 +1,28 @@
+{
+  "companyName": "Electra",
+  "dnd": true,
+  "dndSettings": {
+    "Call": {
+      "message": "Internal agent targeting placeholder; no outreach until Jeff approval.",
+      "status": "active"
+    },
+    "Email": {
+      "message": "Internal agent targeting placeholder; no outreach until Jeff approval.",
+      "status": "active"
+    },
+    "SMS": {
+      "message": "Internal agent targeting placeholder; no outreach until Jeff approval.",
+      "status": "active"
+    },
+    "WhatsApp": {
+      "message": "Internal agent targeting placeholder; no outreach until Jeff approval.",
+      "status": "active"
+    }
+  },
+  "firstName": "Electra",
+  "lastName": "Agent Targeting",
+  "locationId": "tm68WWMrcAa3TqQbEAMa",
+  "name": "Electra Agent Targeting",
+  "source": "Growth OS nightly prospect research - Agent Targeting (prospect_bba8ec0dec6e73619770860d)",
+  "website": "https://www.electra.earth"
+}

@@ -1,0 +1,133 @@
+{
+  "task": {
+    "id": "t_7df38ec8",
+    "title": "Build private Sunday decision packet review deck",
+    "body": "Parent: t_b14c27d5. Start after QMD refresh evidence exists.\n\nObjective:\n- Build a private/local, self-contained HTML review deck or printable command-center artifact from `/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/digests/2026-05-10_sunday_morning_decision_packet.md` and `/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/reviews/2026-05-10_sunday_morning_decision_packet_rereview.md`.\n- Use the Claude/design posture for a high-clarity internal artifact: one-screen executive summary, five decision boxes, hard no-external-action wall, blocker lineage for `t_fa6eb9c1` and `t_53d470c6`, and links to the QMD refresh/command-center evidence.\n- Keep it static/local only. Do not add forms, approval capture, API calls, live integrations, publishing/deployment, or production credentials.\n\nBusiness-development principle to preserve: deliver narrow diagnostic value first, make the buyer problem-aware, earn engaged time/trust before any consultation ask, and keep all follow-up opt-in-only; Whiteford/Schell IP legal copy must remain educational, non-hypey, non-confidential, attorney-review-gated, and no-ACR/no-legal-advice.\n\nDeliverables expected:\n- Create `/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/digests/2026-05-10_sunday_decision_packet_review_deck.html` (self-contained HTML/CSS/JS only if needed).\n- If useful, add a brief implementation note next to it; otherwise the HTML can include an internal notes section.\n- Update `/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/KANBAN_DELIVERABLE_INDEX.md`.\n- Leave the standard Kanban deliverable comment.\n\nAcceptance criteria:\n- The artifact is readable locally, print-friendly, and explicitly says it is not an approval record and authorizes no external/live-system action.\n- It accurately preserves the Sunday packet's recommendation: only Tech GC local/no-token QA is an optional Jeff-approved lane; Supabase/source/HighLevel/authority/public actions remain held.\n- Verify file existence and run deterministic HTML/static checks; browser/screenshot verification is welcome if available.\n- No external/public action, no CRM/HighLevel mutation, no Supabase DDL/sync/backfill/row mutation, no Clio, no email/social/LinkedIn/ad action.\n",
+    "assignee": "frontend-eng",
+    "status": "done",
+    "priority": 84,
+    "tenant": "whiteford-mountain-west",
+    "workspace_kind": "dir",
+    "workspace_path": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages",
+    "created_by": "overnight-watchdog",
+    "created_at": 1778392219,
+    "started_at": 1778392443,
+    "completed_at": 1778392836,
+    "result": null,
+    "skills": []
+  },
+  "latest_summary": "Created the private/local Sunday decision packet review deck at docs/digests/2026-05-10_sunday_decision_packet_review_deck.html and updated docs/KANBAN_DELIVERABLE_INDEX.md. The deck is self-contained/static, print-friendly, preserves the Tech GC local/no-token QA-only recommendation, includes five decision boxes, blocker lineage for t_fa6eb9c1/t_53d470c6, QMD/command-center evidence links, and a hard no-external-action wall.",
+  "parents": [
+    "t_b14c27d5"
+  ],
+  "children": [
+    "t_974f2141"
+  ],
+  "comments": [
+    {
+      "author": "frontend-eng",
+      "body": "Deliverable: /Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/digests/2026-05-10_sunday_decision_packet_review_deck.html\nSummary: Private/local self-contained Sunday decision packet review deck summarizing the one safe Tech GC local/no-token QA lane, five decision boxes, hard no-external-action wall, Supabase/source/HighLevel/authority holds, blocker lineage, and QMD/command-center evidence.\nNext action: Jeff should open the HTML locally and decide whether to approve Box A for Tech GC local/no-token QA only or hold all lanes; no external/live-system action is authorized by the deck.",
+      "created_at": 1778392822
+    }
+  ],
+  "events": [
+    {
+      "kind": "created",
+      "payload": {
+        "assignee": "frontend-eng",
+        "status": "todo",
+        "parents": [
+          "t_b14c27d5"
+        ],
+        "tenant": "whiteford-mountain-west",
+        "skills": null
+      },
+      "created_at": 1778392219,
+      "run_id": null
+    },
+    {
+      "kind": "promoted",
+      "payload": null,
+      "created_at": 1778392412,
+      "run_id": null
+    },
+    {
+      "kind": "claimed",
+      "payload": {
+        "lock": "Jeffs-MacBook-Pro-2.local:89348",
+        "expires": 1778393343,
+        "run_id": 399
+      },
+      "created_at": 1778392443,
+      "run_id": 399
+    },
+    {
+      "kind": "spawned",
+      "payload": {
+        "pid": 39400
+      },
+      "created_at": 1778392443,
+      "run_id": 399
+    },
+    {
+      "kind": "commented",
+      "payload": {
+        "author": "frontend-eng",
+        "len": 638
+      },
+      "created_at": 1778392822,
+      "run_id": null
+    },
+    {
+      "kind": "completed",
+      "payload": {
+        "result_len": 0,
+        "summary": "Created the private/local Sunday decision packet review deck at docs/digests/2026-05-10_sunday_decision_packet_review_deck.html and updated docs/KANBAN_DELIVERABLE_INDEX.md. The deck is self-contained/static, print-friendly, preserves the Tech GC local/no-token QA-only recommendation, includes five decision boxes, blocker lineage for t_fa6eb9c1/t_53d470c6, QMD/command-center evidence links, and a "
+      },
+      "created_at": 1778392836,
+      "run_id": 399
+    }
+  ],
+  "runs": [
+    {
+      "id": 399,
+      "profile": "frontend-eng",
+      "step_key": null,
+      "status": "done",
+      "outcome": "completed",
+      "summary": "Created the private/local Sunday decision packet review deck at docs/digests/2026-05-10_sunday_decision_packet_review_deck.html and updated docs/KANBAN_DELIVERABLE_INDEX.md. The deck is self-contained/static, print-friendly, preserves the Tech GC local/no-token QA-only recommendation, includes five decision boxes, blocker lineage for t_fa6eb9c1/t_53d470c6, QMD/command-center evidence links, and a hard no-external-action wall.",
+      "error": null,
+      "metadata": {
+        "changed_files": [
+          "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/digests/2026-05-10_sunday_decision_packet_review_deck.html",
+          "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/KANBAN_DELIVERABLE_INDEX.md"
+        ],
+        "verification": [
+          "HTMLParser parse succeeded with 265 tags",
+          "Required strings present: not an approval record, not authorize, Tech GC local/no-token QA, t_fa6eb9c1, t_53d470c6, No HighLevel/CRM mutation, Five decision boxes, QMD refresh evidence",
+          "Static safety scan found no form/input/button/script/iframe tags and no remote http/https src/href references",
+          "Deliverable index entry for t_7df38ec8 verified",
+          "Browser verification via local 127.0.0.1 static server: page loaded with title and zero console errors",
+          "Vision QA confirmed polished internal review deck layout; after 3-column adjustment, five decision boxes were visible/readable and not clipped"
+        ],
+        "commands_run": [
+          "python3 /Users/jeff/.hermes/knowledge/business-development/search_business_dev.py \"lead magnet narrow diagnostic promise problem aware earn trust opt in follow up legal services\" --index /Users/jeff/.hermes/knowledge/business-development/business_dev_index.sqlite -k 4",
+          "python3 -m http.server 8765 --bind 127.0.0.1",
+          "browser navigate http://127.0.0.1:8765/docs/digests/2026-05-10_sunday_decision_packet_review_deck.html",
+          "browser console check",
+          "browser vision QA",
+          "git status --short -- docs/digests/2026-05-10_sunday_decision_packet_review_deck.html docs/KANBAN_DELIVERABLE_INDEX.md"
+        ],
+        "safety": "Static/local docs-only work. No external/public action, CRM/HighLevel mutation, workflow action, Supabase DDL/sync/backfill/row mutation, Clio, email/social/LinkedIn/ad action, credential use, contact enrollment, or public deployment performed.",
+        "business_development_rag": "Queried private business-development corpus and synthesized principles: narrow diagnostic lead magnet, problem awareness, engaged time/trust before consultation ask, opt-in-only follow-up; no long copyrighted text reproduced.",
+        "browser_screenshots": [
+          "/Users/jeff/.hermes/profiles/frontend-eng/cache/screenshots/browser_screenshot_85d509cdc88b4beab7183c4d2e03b616.png",
+          "/Users/jeff/.hermes/profiles/frontend-eng/cache/screenshots/browser_screenshot_fcdb9af8c7d04e9a8d5cbb6adc8dba21.png"
+        ]
+      },
+      "worker_pid": null,
+      "started_at": 1778392443,
+      "ended_at": 1778392836
+    }
+  ]
+}

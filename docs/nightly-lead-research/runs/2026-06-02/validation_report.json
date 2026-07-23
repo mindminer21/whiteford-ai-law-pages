@@ -1,0 +1,132 @@
+{
+  "task": "t_ccdd72c7",
+  "run_date": "2026-06-02",
+  "source_payload": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-06-02/prospect_candidates.json",
+  "normalized_payload": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-06-02/prospect_candidates.normalized_for_store.json",
+  "store_dry_run": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-06-02/store_dry_run.json",
+  "store_apply_output": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-06-02/store_output.json",
+  "verification": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-06-02/store_verification.json",
+  "backup": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-06-02/growth-os.before_t_ccdd72c7.sqlite",
+  "agent_targeting_work_item_dir": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-06-02/agent-targeting-work-items",
+  "source_candidate_count": 3,
+  "staged_count": 3,
+  "skipped": [],
+  "staged_prospects": [
+    {
+      "name": "WindBorne Systems",
+      "prospect_id": "prospect_windborne_systems_20260602",
+      "lane": "tech-gc",
+      "priority": 77
+    },
+    {
+      "name": "Mach Industries",
+      "prospect_id": "prospect_mach_industries_20260602",
+      "lane": "ai-compliance",
+      "priority": 85
+    },
+    {
+      "name": "Gigascale Capital",
+      "prospect_id": "prospect_gigascale_capital_20260602",
+      "lane": "tech-gc",
+      "priority": 71
+    }
+  ],
+  "work_items": [
+    {
+      "company": "WindBorne Systems",
+      "prospect_id": "prospect_windborne_systems_20260602",
+      "work_item_id": "work_nightly_agent_targeting_20260602_554483d4b9c61aeb39897db0",
+      "priority": 77,
+      "path": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-06-02/agent-targeting-work-items/windborne-systems.json",
+      "output_path": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-06-02/agent-targeting-packets/windborne-systems-agent-targeting-packet.md"
+    },
+    {
+      "company": "Mach Industries",
+      "prospect_id": "prospect_mach_industries_20260602",
+      "work_item_id": "work_nightly_agent_targeting_20260602_aa8f3da95038d23eb873779f",
+      "priority": 85,
+      "path": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-06-02/agent-targeting-work-items/mach-industries.json",
+      "output_path": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-06-02/agent-targeting-packets/mach-industries-agent-targeting-packet.md"
+    },
+    {
+      "company": "Gigascale Capital",
+      "prospect_id": "prospect_gigascale_capital_20260602",
+      "work_item_id": "work_nightly_agent_targeting_20260602_353d3f1fff582f539125bbe3",
+      "priority": 71,
+      "path": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-06-02/agent-targeting-work-items/gigascale-capital.json",
+      "output_path": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-06-02/agent-targeting-packets/gigascale-capital-agent-targeting-packet.md"
+    }
+  ],
+  "apply_counts": {
+    "prospects": 3,
+    "contacts": 0,
+    "opportunities": 3,
+    "source_evidence": 6,
+    "outreach_drafts": 3,
+    "approval_items": 3,
+    "crm_sync_records": 3,
+    "suppression_checks": 3
+  },
+  "verification_counts": {
+    "prospects": 65,
+    "contacts": 57,
+    "opportunities": 76,
+    "source_evidence": 132,
+    "outreach_drafts": 47,
+    "approval_items": 79,
+    "crm_sync_records": 58,
+    "suppression_checks": 47,
+    "work_items": 42
+  },
+  "row_checks": [
+    {
+      "company": "WindBorne Systems",
+      "prospect_id": "prospect_windborne_systems_20260602",
+      "prospect_rows": 1,
+      "contact_rows": 0,
+      "evidence_rows": 2,
+      "draft_rows": 1,
+      "approval_rows": 1,
+      "suppression_rows": 1,
+      "sync_rows": 1,
+      "work_item_rows": 1,
+      "external_action_allowed_sum": 0
+    },
+    {
+      "company": "Mach Industries",
+      "prospect_id": "prospect_mach_industries_20260602",
+      "prospect_rows": 1,
+      "contact_rows": 0,
+      "evidence_rows": 2,
+      "draft_rows": 1,
+      "approval_rows": 1,
+      "suppression_rows": 1,
+      "sync_rows": 1,
+      "work_item_rows": 1,
+      "external_action_allowed_sum": 0
+    },
+    {
+      "company": "Gigascale Capital",
+      "prospect_id": "prospect_gigascale_capital_20260602",
+      "prospect_rows": 1,
+      "contact_rows": 0,
+      "evidence_rows": 2,
+      "draft_rows": 1,
+      "approval_rows": 1,
+      "suppression_rows": 1,
+      "sync_rows": 1,
+      "work_item_rows": 1,
+      "external_action_allowed_sum": 0
+    }
+  ],
+  "warnings": [
+    "WindBorne Systems: normalized primary_offer_lane 'Tech OGC' -> 'tech-gc' for store enum.",
+    "WindBorne Systems: Gate 4 contact validation failed; no named contact staged and no-send/no-workflow guard remains.",
+    "Mach Industries: normalized primary_offer_lane 'AI Compliance' -> 'ai-compliance' for store enum.",
+    "Mach Industries: Gate 4 contact validation failed; no named contact staged and no-send/no-workflow guard remains.",
+    "Gigascale Capital: normalized primary_offer_lane 'Tech OGC' -> 'tech-gc' for store enum.",
+    "Gigascale Capital: Gate 4 contact validation failed; no named contact staged and no-send/no-workflow guard remains.",
+    "Gigascale Capital: VC fund, not direct operating-company prospect; staged for portfolio-introduction/Tech OGC review only."
+  ],
+  "safety": "Local/internal attorney-review-only staging. No outreach, workflow activation/enrollment, trigger tags, LinkedIn/social action, Clio writes, public/client-facing changes, prospect contact, source-currentness claim, or live CRM/Supabase/HighLevel sync authorized. Supabase mirror and HighLevel sync remain gated by existing blockers."
+}

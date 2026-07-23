@@ -1,0 +1,428 @@
+{
+  "candidates": [
+    {
+      "company": {
+        "name": "RADICL (Radicl Defense LLC)",
+        "domain": "radicl.com",
+        "website_url": "https://radicl.com/",
+        "location": "Boulder, Colorado",
+        "state_region": "Mountain West / Colorado",
+        "industry": "Cybersecurity / AI-powered virtual Security Operations Center (vSOC)",
+        "segment": "tech-gc",
+        "primary_offer_lane": "tech-gc",
+        "lead_magnet": "Tech Company Legal Health Checklist",
+        "recommended_offer": "RADICL's rapid post-Series-A expansion ($31M raised, ~50 new hires, AI Director role created) has likely generated legal complexity across commercial contracts (DIB customer MSA/SOWs), employment/contractor classification, IP assignment (AI technology created by team), and compliance obligations (CMMC/NIST for DIB customers). As a Boulder-based company without a visible full-time GC (legal appears founder-managed), RADICL is exactly the profile the Tech Company Legal Health Checklist was designed for.",
+        "source_type": "nightly_public_source_research",
+        "source_url": "https://radicl.com/",
+        "source_note": "Source packet radicl-boulder-cyber; consent basis no_email_opt_in; next action attorney_review. Local staging only; no external action authorized.",
+        "pipeline_stage": "research_staged",
+        "opportunity_stage": "research_staged",
+        "scores": {
+          "fit_score": 92,
+          "urgency_score": 65,
+          "value_potential_score": 70,
+          "combined_priority_score": 80,
+          "contact_confidence": 85
+        },
+        "risk_level": "attorney_review_required",
+        "suppression_status": "consent_gap_no_auto_send",
+        "conflicts_status": "required_before_send",
+        "owner": "qwen-local",
+        "created_at": "2026-05-08T02:00:00-06:00",
+        "notes": "RADICL delivers AI-powered Cybersecurity-as-a-Service (CSaaS) for SMBs in the Defense Industrial Base (DIB), combining automated threat hunting, compliance tracking (CMMC/NIST 800-171), and 24/7 virtual SOC into a single platform. Their technology uses autonomous workflows for high-volume alert correlation and machine-speed threat detection.\nRaw source packet id: radicl-boulder-cyber\nSize signal: ~50 employees (added ~50 post-Series A); 3 co-founders + specialized team\nMaturity signal: Founded Spring 2021; ~5 years; Series A $31M Feb 2026\nFunding signal: $31M Series A (Feb 2026, led by Paladin Capital Group; Access Ventures, Denver Angels participate)\nAI usage signals: Autonomous alert-correlation workflows, AI threat hunting, AI-powered compliance scoring, machine-speed anomaly detection\nLead magnet route: /colorado-tech-general-counsel\nConsent gate: no-auto-send / no_email_opt_in\nNext action notes: Colorado geographic relevance confirmed (Boulder HQ). Strong Tech GC fit from post-Series-A expansion without visible GC. Draft outreach ready for attorney review connecting growth-stage legal complexity to the Tech Company Legal Health Checklist."
+      },
+      "contacts": [
+        {
+          "name": "Chris Petersen",
+          "title": "CEO & Co-Founder",
+          "role_category": "founder",
+          "email": null,
+          "linkedin_url": "https://www.linkedin.com/company/radicl-defense",
+          "phone": "(720) 738-7529",
+          "source_type": "company_website",
+          "source_url": "https://radicl.com/leadership",
+          "confidence": 85,
+          "permission_basis": "public-source research; attorney review required before outreach",
+          "suppression_status": "not_checked"
+        },
+        {
+          "name": "Dave Graff",
+          "title": "Co-Founder & COO/CRO",
+          "role_category": "ceo",
+          "email": null,
+          "linkedin_url": null,
+          "phone": "(720) 738-7529",
+          "source_type": "company_website",
+          "source_url": "https://radicl.com/leadership",
+          "confidence": 82,
+          "permission_basis": "public-source research; attorney review required before outreach",
+          "suppression_status": "not_checked"
+        }
+      ],
+      "evidence": [
+        {
+          "source_url": "https://radicl.com/",
+          "accessed_at": "2026-05-08",
+          "source_type": "company_website",
+          "fact_classification": "public",
+          "evidence_snippet": "Live homepage confirms RADICL as AI-powered vSOC platform for DIB SMBs; offers MDR, MAS, MSA, MCA services",
+          "supported_fact": "Live homepage confirms RADICL as AI-powered vSOC platform for DIB SMBs; offers MDR, MAS, MSA, MCA services",
+          "confidence": "high",
+          "corroboration": "single public source; attorney review required before outreach",
+          "safe_for_outreach": "conditional",
+          "safe_fact_for_copy": "Live homepage confirms RADICL as AI-powered vSOC platform for DIB SMBs; offers MDR, MAS, MSA, MCA services"
+        },
+        {
+          "source_url": "https://radicl.com/leadership",
+          "accessed_at": "2026-05-08",
+          "source_type": "company_website",
+          "fact_classification": "public",
+          "evidence_snippet": "Leadership team page confirms Chris Petersen (CEO/Co-Founder), Dave Graff (Co-Founder/COO/CRO), Matt Petersen (Co-Founder/Chief Engineer), and Ben Aldrich (Director of AI)",
+          "supported_fact": "Leadership team page confirms Chris Petersen (CEO/Co-Founder), Dave Graff (Co-Founder/COO/CRO), Matt Petersen (Co-Founder/Chief Engineer), and Ben Aldrich (Director of AI)",
+          "confidence": "high",
+          "corroboration": "single public source; attorney review required before outreach",
+          "safe_for_outreach": "conditional",
+          "safe_fact_for_copy": "Leadership team page confirms Chris Petersen (CEO/Co-Founder), Dave Graff (Co-Founder/COO/CRO), Matt Petersen (Co-Founder/Chief Engineer), and Ben Aldrich (Director of AI)"
+        },
+        {
+          "source_url": "https://radicl.com/investors",
+          "accessed_at": "2026-05-08",
+          "source_type": "company_website",
+          "fact_classification": "public",
+          "evidence_snippet": "Investor page confirms backing by Paladin Capital Group, Access Ventures, Denver Angels network; co-founders Matt Petersen, Dave Graff, Chris Petersen founded Spring 2021",
+          "supported_fact": "Investor page confirms backing by Paladin Capital Group, Access Ventures, Denver Angels network; co-founders Matt Petersen, Dave Graff, Chris Petersen founded Spring 2021",
+          "confidence": "high",
+          "corroboration": "single public source; attorney review required before outreach",
+          "safe_for_outreach": "conditional",
+          "safe_fact_for_copy": "Investor page confirms backing by Paladin Capital Group, Access Ventures, Denver Angels network; co-founders Matt Petersen, Dave Graff, Chris Petersen founded Spring 2021"
+        },
+        {
+          "source_url": "https://www.bizjournals.com/denver/news/2026/02/03/boulder-startup-radicl-raises-millions.html",
+          "accessed_at": "2026-05-08",
+          "source_type": "press_release",
+          "fact_classification": "public",
+          "evidence_snippet": "Boulder startup RADICL secured $31M Series A led by Paladin Capital Group, adding ~50 people within 3 months",
+          "supported_fact": "Boulder startup RADICL secured $31M Series A led by Paladin Capital Group, adding ~50 people within 3 months",
+          "confidence": "high",
+          "corroboration": "single public source; attorney review required before outreach",
+          "safe_for_outreach": "conditional",
+          "safe_fact_for_copy": "Boulder startup RADICL secured $31M Series A led by Paladin Capital Group, adding ~50 people within 3 months"
+        },
+        {
+          "source_url": "https://siliconangle.com/2026/02/03/radicl-secures-31m-expand-ai-driven-security-operations-small-businesses/",
+          "accessed_at": "2026-05-08",
+          "source_type": "news",
+          "fact_classification": "public",
+          "evidence_snippet": "Series A round details; AI-driven security operations for SMBs with AI and expert-driven 24/7 SOC operations",
+          "supported_fact": "Series A round details; AI-driven security operations for SMBs with AI and expert-driven 24/7 SOC operations",
+          "confidence": "high",
+          "corroboration": "single public source; attorney review required before outreach",
+          "safe_for_outreach": "conditional",
+          "safe_fact_for_copy": "Series A round details; AI-driven security operations for SMBs with AI and expert-driven 24/7 SOC operations"
+        }
+      ],
+      "outreach_drafts": [
+        {
+          "draft_type": "linkedin_awareness_post",
+          "title": "Attorney-review LinkedIn awareness draft: RADICL (Radicl Defense LLC)",
+          "channel": "linkedin_manual_review_only",
+          "subject": null,
+          "body": "@RADICL's expansion ($31M Series A, 50+ new hires) is a useful signal for a bigger DIB cybersecurity issue:\n\nSecurity startups are becoming faster to deploy than they are to legally organize.\n\nThat sounds like a funding milestone.\n\nIt isn't only that.\n\nThe harder question for DIB tech companies is whether they can support the legal infrastructure that comes with defense contractors as customers: CMMC audits, MSA negotiation at scale, IP assignment for AI-generated code, and enterprise customer security questionnaires.\n\nFor #founders: compliance isn't just a sales blocker -- it's a product feature.\nFor #investors: DIB customer expansion requires legal ops that match the technical rigor.\nFor #cybersecurityprofessionals: the gap between AI capability and legal readiness is growing fastest at mid-sized firms.\n\nEducational starting point: Tech Company Legal Health Checklist\nhttps://whiteford-ai-law-pages.vercel.app/colorado-tech-general-counsel\n\nInternal review notes, not for post:\n- Tagged company: @RADICL (verify LinkedIn handle: /company/radicl-defense)\n- Source URLs: https://radicl.com/, https://www.bizjournals.com/denver/news/2026/02/03/boulder-startup-radicl-raises-millions.html\n- Lead magnet lane: tech-gc\n- Legal/ethics flags: None - positive growth signal, no legal problem implied",
+          "source_facts": [
+            "Live homepage confirms RADICL as AI-powered vSOC platform for DIB SMBs; offers MDR, MAS, MSA, MCA services",
+            "Leadership team page confirms Chris Petersen (CEO/Co-Founder), Dave Graff (Co-Founder/COO/CRO), Matt Petersen (Co-Founder/Chief Engineer), and Ben Aldrich (Director of AI)",
+            "Investor page confirms backing by Paladin Capital Group, Access Ventures, Denver Angels network; co-founders Matt Petersen, Dave Graff, Chris Petersen founded Spring 2021",
+            "Boulder startup RADICL secured $31M Series A led by Paladin Capital Group, adding ~50 people within 3 months",
+            "Series A round details; AI-driven security operations for SMBs with AI and expert-driven 24/7 SOC operations"
+          ],
+          "source_urls": [
+            "https://radicl.com/",
+            "https://radicl.com/leadership",
+            "https://radicl.com/investors",
+            "https://www.bizjournals.com/denver/news/2026/02/03/boulder-startup-radicl-raises-millions.html",
+            "https://siliconangle.com/2026/02/03/radicl-secures-31m-expand-ai-driven-security-operations-small-businesses/"
+          ],
+          "risk_level": "attorney_review_required",
+          "internal_review_notes": "Draft-only internal awareness copy. No LinkedIn action, tagging, posting, email send, workflow enrollment, or external action authorized."
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "Manifest OS",
+        "domain": "manifestos.com",
+        "website_url": "https://manifestos.com/",
+        "location": "New York, NY (333 Park Ave S, NYC; powered firms operate under Arizona AI-qualified ABS status)",
+        "state_region": "Non-Mountain-West / US",
+        "industry": "Legal technology / AI-native law firm platform",
+        "segment": "tech-gc",
+        "primary_offer_lane": "tech-gc",
+        "lead_magnet": "Tech Company Legal Health Checklist",
+        "recommended_offer": "Manifest OS's explosive growth (18 months, $115M total raised, 3,000+ engagements) has created significant legal complexity across attorney employment/contractor agreements, Arizona ABS regulatory compliance, AI model governance and data privacy, enterprise customer MSA negotiation scale, and cross-border immigration services compliance. Founded by a non-lawyer entrepreneur, the company needs the exact legal operations infrastructure its platform sells to law firms. The irony is notable: the company that powers the legal operations gap in law firms likely needs the Tech Company Legal Health Checklist for its own scaling challenges.",
+        "source_type": "nightly_public_source_research",
+        "source_url": "https://manifestos.com/series-a",
+        "source_note": "Source packet manifest-os-legal-tech; consent basis no_email_opt_in; next action attorney_review. Local staging only; no external action authorized.",
+        "pipeline_stage": "research_staged",
+        "opportunity_stage": "research_staged",
+        "scores": {
+          "fit_score": 91,
+          "urgency_score": 65,
+          "value_potential_score": 85,
+          "combined_priority_score": 80,
+          "contact_confidence": 82
+        },
+        "risk_level": "attorney_review_required",
+        "suppression_status": "consent_gap_no_auto_send",
+        "conflicts_status": "required_before_send",
+        "owner": "qwen-local",
+        "created_at": "2026-05-08T02:00:00-06:00",
+        "notes": "Manifest OS is building the world's first AI-native law firm model, combining a unified brand (Manifest Law), end-to-end AI platform for client communications/collaboration/research/drafting/billing, and centralized back-office operations. Currently focused on business immigration (H-1B, PERM, EB1A, green cards) under Arizona's Alternative Business Structure framework. Operating on fixed-fee and outcomes-based pricing (no billable hours). AI agents automate document gathering, form filling, and drafting with multi-round attorney review.\nRaw source packet id: manifest-os-legal-tech\nSize signal: ~33+ person company (team from $55M seed + $60M Series A); 100+ attorneys in powered firm; 3,000+ engagements in 18 months\nMaturity signal: Founded 2025; ~1年 old; double funding rounds ($55M seed + $60M Series A = $115M total in 2025-2026)\nFunding signal: $115M total funding ($55M seed Jul 2025 + $60M Series A Apr 2026 at $750M valuation)\nAI usage signals: AI-native platform with human-supervised AI agents for document gathering, form filling, drafting, client communication, and billing automation; multi-round attorney review workflow\nLead magnet route: /colorado-tech-general-counsel\nConsent gate: no-auto-send / no_email_opt_in\nNext action notes: Strong Tech GC fit from irony angle ($750M legal tech company needing own legal ops review). Not a Colorado/Mountain West company but fits classically as growth-stage company with distributed legal needs across a non-lawyer founder. Note that Whiteford could offer value as a cross-jurisdiction legal operations advisor. Draft ready for attorney review."
+      },
+      "contacts": [
+        {
+          "name": "Dan Mishin",
+          "title": "Founder & CEO",
+          "role_category": "founder",
+          "email": null,
+          "linkedin_url": "https://www.linkedin.com/in/danielmishin",
+          "phone": null,
+          "source_type": "company_website",
+          "source_url": "https://manifestos.com/series-a",
+          "confidence": 82,
+          "permission_basis": "public-source research; attorney review required before outreach",
+          "suppression_status": "not_checked"
+        },
+        {
+          "name": "David Schellhas",
+          "title": "Former GC (Salesforce, Groupon, Slack) / Investor / Advisor",
+          "role_category": "product_leader",
+          "email": null,
+          "linkedin_url": null,
+          "phone": null,
+          "source_type": "press_release",
+          "source_url": "https://www.businesswire.com/news/home/20260427884891/en/Manifest-OS-Raises-%2460M-to-Scale-the-Worlds-First-AI-Native-Law-Firm-Model",
+          "confidence": 65,
+          "permission_basis": "public-source research; attorney review required before outreach",
+          "suppression_status": "not_checked"
+        }
+      ],
+      "evidence": [
+        {
+          "source_url": "https://manifestos.com/series-a",
+          "accessed_at": "2026-05-08",
+          "source_type": "company_website",
+          "fact_classification": "public",
+          "evidence_snippet": "Company website confirms $60M Series A, AI-native law firm model, fixed-fee pricing, 3,000+ engagements in 18 months, 100+ attorneys",
+          "supported_fact": "Company website confirms $60M Series A, AI-native law firm model, fixed-fee pricing, 3,000+ engagements in 18 months, 100+ attorneys",
+          "confidence": "high",
+          "corroboration": "single public source; attorney review required before outreach",
+          "safe_for_outreach": "conditional",
+          "safe_fact_for_copy": "Company website confirms $60M Series A, AI-native law firm model, fixed-fee pricing, 3,000+ engagements in 18 months, 100+ attorneys"
+        },
+        {
+          "source_url": "https://www.businesswire.com/news/home/20260427884891/en/Manifest-OS-Raises-%2460M-to-Scale-the-Worlds-First-AI-Native-Law-Firm-Model",
+          "accessed_at": "2026-05-08",
+          "source_type": "press_release",
+          "fact_classification": "public",
+          "evidence_snippet": "BusinessWire announcement confirms $60M Series A at $750M valuation, Menlo Ventures lead, Kleiner Perkins/F1/Quiet Capital participants; Dan Mishin as Founder/CEO with immigrant entrepreneur background",
+          "supported_fact": "BusinessWire announcement confirms $60M Series A at $750M valuation, Menlo Ventures lead, Kleiner Perkins/F1/Quiet Capital participants; Dan Mishin as Founder/CEO with immigrant entrepreneur background",
+          "confidence": "high",
+          "corroboration": "single public source; attorney review required before outreach",
+          "safe_for_outreach": "conditional",
+          "safe_fact_for_copy": "BusinessWire announcement confirms $60M Series A at $750M valuation, Menlo Ventures lead, Kleiner Perkins/F1/Quiet Capital participants; Dan Mishin as Founder/CEO with immigrant entrepreneur background"
+        },
+        {
+          "source_url": "https://www.linkedin.com/in/danielmishin",
+          "accessed_at": "2026-05-08",
+          "source_type": "linkedin_profile",
+          "fact_classification": "public",
+          "evidence_snippet": "Dan Mishin LinkedIn profile confirmed as founder and CEO of Manifest OS",
+          "supported_fact": "Dan Mishin LinkedIn profile confirmed as founder and CEO of Manifest OS",
+          "confidence": "high",
+          "corroboration": "single public source; attorney review required before outreach",
+          "safe_for_outreach": "conditional",
+          "safe_fact_for_copy": "Dan Mishin LinkedIn profile confirmed as founder and CEO of Manifest OS"
+        },
+        {
+          "source_url": "https://www.legaltech-talk.com/manifest-os-raises-60m-series-a-at-750m-valuation/",
+          "accessed_at": "2026-05-08",
+          "source_type": "news",
+          "fact_classification": "public",
+          "evidence_snippet": "LegalTechTalk confirms $60M Series A at $750M valuation for Manifest OS; largest Series A in legal tech",
+          "supported_fact": "LegalTechTalk confirms $60M Series A at $750M valuation for Manifest OS; largest Series A in legal tech",
+          "confidence": "high",
+          "corroboration": "single public source; attorney review required before outreach",
+          "safe_for_outreach": "conditional",
+          "safe_fact_for_copy": "LegalTechTalk confirms $60M Series A at $750M valuation for Manifest OS; largest Series A in legal tech"
+        }
+      ],
+      "outreach_drafts": [
+        {
+          "draft_type": "linkedin_awareness_post",
+          "title": "Attorney-review LinkedIn awareness draft: Manifest OS",
+          "channel": "linkedin_manual_review_only",
+          "subject": null,
+          "body": "@Manifest OS's $60M Series A is a useful signal for a bigger legal tech issue:\n\nLegal tech companies are scaling faster than their legal operations.\n\nThat sounds like a funding milestone.\n\nIt isn't only that.\n\nThe harder question for a $750M AI-native law firm platform is whether the company can build the same legal infrastructure for itself that it sells to its customers: attorney compliance frameworks, AI governance for legal drafting, cross-state regulatory compliance, and enterprise-grade customer contracts.\n\nFor #founders: your own legal operations are the first product to test.\nFor #legaltechbuilders: the gap between product maturity and legal maturity is where risk accumulates.\nFor #investors: legal ops maturity in late-stage legal tech is an under-measured diligence factor.\n\nEducational starting point: Tech Company Legal Health Checklist\nhttps://whiteford-ai-law-pages.vercel.app/colorado-tech-general-counsel\n\nInternal review notes, not for post:\n- Tagged company: @[Manifest OS - verify handle]\n- Source URLs: https://manifestos.com/series-a, BusinessWire Apr 28 2026\n- Lead magnet lane: tech-gc\n- Legal/ethics flags: None - positive growth signal, no legal problem implied",
+          "source_facts": [
+            "Company website confirms $60M Series A, AI-native law firm model, fixed-fee pricing, 3,000+ engagements in 18 months, 100+ attorneys",
+            "BusinessWire announcement confirms $60M Series A at $750M valuation, Menlo Ventures lead, Kleiner Perkins/F1/Quiet Capital participants; Dan Mishin as Founder/CEO with immigrant entrepreneur background",
+            "Dan Mishin LinkedIn profile confirmed as founder and CEO of Manifest OS",
+            "LegalTechTalk confirms $60M Series A at $750M valuation for Manifest OS; largest Series A in legal tech"
+          ],
+          "source_urls": [
+            "https://manifestos.com/series-a",
+            "https://www.businesswire.com/news/home/20260427884891/en/Manifest-OS-Raises-%2460M-to-Scale-the-Worlds-First-AI-Native-Law-Firm-Model",
+            "https://www.linkedin.com/in/danielmishin",
+            "https://www.legaltech-talk.com/manifest-os-raises-60m-series-a-at-750m-valuation/"
+          ],
+          "risk_level": "attorney_review_required",
+          "internal_review_notes": "Draft-only internal awareness copy. No LinkedIn action, tagging, posting, email send, workflow enrollment, or external action authorized."
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "Sereact",
+        "domain": "sereact.de",
+        "website_url": "https://sereact.de",
+        "location": "Stuttgart, Germany",
+        "state_region": "International / non-Mountain-West",
+        "industry": "AI robotics / Computer vision for autonomous systems",
+        "segment": "ai-patent",
+        "primary_offer_lane": "ai-patent",
+        "lead_magnet": "AI Patent Strategy Scorecard",
+        "recommended_offer": "Sereact's computer vision AI for autonomous robots represents strong patent-strategy territory: proprietary sensor fusion, AI perception models, and autonomous navigation systems are highly protectable technical systems. The $110M Series B funding creates urgency around establishing IP moats before the company scales commercial deployment. The gap: no visible public patent filing information, suggesting invention documentation strategy may be behind commercialization pace.",
+        "source_type": "nightly_public_source_research",
+        "source_url": "https://www.instagram.com/p/DXphxYMkek0/",
+        "source_note": "Source packet sereact-robotics-ai; consent basis no_email_opt_in; next action attorney_review. Local staging only; no external action authorized.",
+        "pipeline_stage": "research_staged",
+        "opportunity_stage": "research_staged",
+        "scores": {
+          "fit_score": 94,
+          "urgency_score": 65,
+          "value_potential_score": 85,
+          "combined_priority_score": 82,
+          "contact_confidence": 75
+        },
+        "risk_level": "attorney_review_required",
+        "suppression_status": "consent_gap_no_auto_send",
+        "conflicts_status": "required_before_send",
+        "owner": "qwen-local",
+        "created_at": "2026-05-08T02:00:00-06:00",
+        "notes": "Sereact is a Stuttgart-based AI robotics startup building computer vision and AI-powered systems for autonomous robots. Founded by Dr. Ralf Gulde (CEO) and Marc Tuscher (CTO) with deep Bosch heritage. Raised $110M Series B led by Headline with participation from Bullhound Capital and others. Focuses on developing AI models and vision systems that enable robots to perceive, understand, and interact with their environment autonomously.\nRaw source packet id: sereact-robotics-ai\nSize signal: Series B; ~30-50 employees based on team size signals\nMaturity signal: Founded by Ralf Gulde (formerly Bosch); Series B $110M led by Headline\nFunding signal: $110M Series B led by Headline\nAI usage signals: Computer vision AI, machine learning for robotic perception, autonomous system AI models\nLead magnet route: /ai-patent-strategy-scorecard\nConsent gate: no-auto-send / no_email_opt_in\nNext action notes: Germany-based company (not US/Colorado) but strong AI Patent fit. US patents may be relevant for global AI robotics IP strategy. Contact data needs verification via official source (company website, Crunchbase, or press release). Recommend attorney review to determine whether US patent law angle justifies outreach to a European company."
+      },
+      "contacts": [
+        {
+          "name": "Dr. Ralf Gulde",
+          "title": "CEO",
+          "role_category": "founder",
+          "email": null,
+          "linkedin_url": null,
+          "phone": null,
+          "source_type": "other_public",
+          "source_url": "https://www.instagram.com/p/DXphxYMkek0/",
+          "confidence": 65,
+          "permission_basis": "public-source research; low-confidence contact (Instagram source only; no official bios or public profile URLs found; recommend verifying via company website or Crunchbase before outreach)",
+          "suppression_status": "not_checked"
+        },
+        {
+          "name": "Marc Tuscher",
+          "title": "CTO",
+          "role_category": "cto",
+          "email": null,
+          "linkedin_url": null,
+          "phone": null,
+          "source_type": "other_public",
+          "source_url": "https://www.instagram.com/p/DXphxYMkek0/",
+          "confidence": 65,
+          "permission_basis": "public-source research; low-confidence contact (Instagram source only; no official bios or public profile URLs found; recommend verifying via company website before outreach)",
+          "suppression_status": "not_checked"
+        }
+      ],
+      "evidence": [
+        {
+          "source_url": "https://www.instagram.com/p/DXphxYMkek0/",
+          "accessed_at": "2026-05-08",
+          "source_type": "other_public",
+          "fact_classification": "public",
+          "evidence_snippet": "Sereact confirmed as Stuttgart-based AI robotics startup founded by Dr. Ralf Gulde (CEO) and Marc Tuscher (CTO), raised $110M Series B led by Headline",
+          "supported_fact": "Sereact confirmed as Stuttgart-based AI robotics startup founded by Dr. Ralf Gulde (CEO) and Marc Tuscher (CTO), raised $110M Series B led by Headline",
+          "confidence": "low",
+          "corroboration": "single public source; attorney review required before outreach",
+          "safe_for_outreach": "conditional",
+          "safe_fact_for_copy": null
+        },
+        {
+          "source_url": "https://sereact.de",
+          "accessed_at": "2026-05-08",
+          "source_type": "company_website",
+          "fact_classification": "public",
+          "evidence_snippet": "Sereact website (verify live status) as the company's official domain for AI robotics computer vision products",
+          "supported_fact": "Sereact website (verify live status) as the company's official domain for AI robotics computer vision products",
+          "confidence": "high",
+          "corroboration": "single public source; attorney review required before outreach",
+          "safe_for_outreach": "conditional",
+          "safe_fact_for_copy": "Sereact website (verify live status) as the company's official domain for AI robotics computer vision products"
+        }
+      ],
+      "outreach_drafts": [
+        {
+          "draft_type": "research_watchlist_note",
+          "title": "Attorney-review watchlist note: Sereact",
+          "channel": "manual_review_only",
+          "subject": null,
+          "body": "Sereact's computer vision AI for autonomous robots represents strong patent-strategy territory: proprietary sensor fusion, AI perception models, and autonomous navigation systems are highly protectable technical systems. The $110M Series B funding creates urgency around establishing IP moats before the company scales commercial deployment. The gap: no visible public patent filing information, suggesting invention documentation strategy may be behind commercialization pace.",
+          "source_facts": [
+            "Sereact confirmed as Stuttgart-based AI robotics startup founded by Dr. Ralf Gulde (CEO) and Marc Tuscher (CTO), raised $110M Series B led by Headline",
+            "Sereact website (verify live status) as the company's official domain for AI robotics computer vision products"
+          ],
+          "source_urls": [
+            "https://www.instagram.com/p/DXphxYMkek0/",
+            "https://sereact.de"
+          ],
+          "risk_level": "attorney_review_required",
+          "internal_review_notes": "Research-only/watchlist note. Contact confidence/source geography gates must be cleared before any external copy or outreach."
+        }
+      ]
+    }
+  ],
+  "source_file": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-08/prospect_candidates.json",
+  "normalized_at": "2026-05-08T08:35:10+00:00",
+  "normalization_notes": [
+    "Converted qwen-local prospects[] schema to prospect_research_store.py candidates[] schema.",
+    "Mapped safe_for_outreach booleans to Growth OS enum value conditional for staged attorney-review evidence.",
+    "Preserved consent gap/no-auto-send and required_before_send conflicts gates."
+  ],
+  "semantic_validation_warnings": [
+    {
+      "severity": "medium",
+      "company": "Manifest OS",
+      "issue": "Contact David Schellhas confidence 65 is below 75; hold named-contact outreach until verified through official/company or high-confidence source."
+    },
+    {
+      "severity": "low",
+      "company": "Manifest OS",
+      "issue": "Geographic fit is New York, NY (333 Park Ave S, NYC; powered firms operate under Arizona AI-qualified ABS status); not Colorado/Mountain West. Keep as attorney-review-only unless Jeff approves broader national/international targeting rationale."
+    },
+    {
+      "severity": "medium",
+      "company": "Sereact",
+      "issue": "Contact Dr. Ralf Gulde confidence 65 is below 75; hold named-contact outreach until verified through official/company or high-confidence source."
+    },
+    {
+      "severity": "medium",
+      "company": "Sereact",
+      "issue": "Contact Marc Tuscher confidence 65 is below 75; hold named-contact outreach until verified through official/company or high-confidence source."
+    },
+    {
+      "severity": "medium",
+      "company": "Sereact",
+      "issue": "Evidence caveat for https://www.instagram.com/p/DXphxYMkek0/: Instagram source - verify via company website, Crunchbase, or press release before named-contact outreach"
+    },
+    {
+      "severity": "medium",
+      "company": "Sereact",
+      "issue": "Geographic fit is Stuttgart, Germany; not Colorado/Mountain West. Keep as attorney-review-only unless Jeff approves broader national/international targeting rationale."
+    }
+  ]
+}

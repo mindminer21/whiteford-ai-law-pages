@@ -1,0 +1,280 @@
+{
+  "credentialSource": "growth-os-secret-ref",
+  "credentialsAvailable": true,
+  "endpoints": {
+    "customFields": {
+      "ok": true,
+      "path": "/locations/tm68WWMrcAa3TqQbEAMa/customFields",
+      "version": "2021-07-28"
+    },
+    "location": {
+      "ok": true,
+      "path": "/locations/tm68WWMrcAa3TqQbEAMa",
+      "version": "2021-07-28"
+    },
+    "workflowCampaigns": {
+      "ok": true,
+      "path": "/emails/campaigns/workflows",
+      "version": "2021-07-28"
+    },
+    "workflows": {
+      "ok": true,
+      "path": "/workflows/",
+      "version": "2021-07-28"
+    }
+  },
+  "expectedLocationId": "tm68WWMrcAa3TqQbEAMa",
+  "fieldVerification": {
+    "existing": {
+      "ai_patent_checks": {
+        "dataType": "LARGE_TEXT",
+        "fieldKey": "contact.ai_patent_checks",
+        "id": "0mv2zSrrPiwTw3Eufuwk",
+        "name": "AI Patent Checks",
+        "placeholder": "ai_patent_checks"
+      },
+      "ai_patent_score": {
+        "dataType": "NUMERICAL",
+        "fieldKey": "contact.ai_patent_score",
+        "id": "L78KuFhyFafq5PSp5MjR",
+        "name": "AI Patent Score",
+        "placeholder": "ai_patent_score"
+      },
+      "ai_patent_score_band": {
+        "dataType": "TEXT",
+        "fieldKey": "contact.ai_patent_score_band",
+        "id": "xh6AfuK3kI9YCbkL3Wko",
+        "name": "AI Patent Score Band",
+        "placeholder": "ai_patent_score_band"
+      },
+      "ai_patent_stage": {
+        "dataType": "TEXT",
+        "fieldKey": "contact.ai_patent_stage",
+        "id": "7pf3mgT5ttvFjBjEpg5m",
+        "name": "AI Patent Stage",
+        "placeholder": "ai_patent_stage"
+      },
+      "approval_status": {
+        "dataType": "TEXT",
+        "fieldKey": "contact.approval_status",
+        "id": "PZQ4DD5Dy4qJG9pTsNM3",
+        "name": "Approval Status",
+        "placeholder": "approval_status"
+      },
+      "consent_basis": {
+        "dataType": "TEXT",
+        "fieldKey": "contact.consent_basis",
+        "id": "TvCAwsNbVg94JrEBM3e0",
+        "name": "Consent Basis",
+        "placeholder": "consent_basis"
+      }
+    },
+    "expectedCount": 37,
+    "missing": {
+      "ai_compliance_10_day_fixes": {
+        "critical": true,
+        "name": "AI Compliance 10 Day Fixes",
+        "recommendedType": "LARGE_TEXT"
+      },
+      "ai_compliance_category_scores": {
+        "critical": true,
+        "name": "AI Compliance Category Scores",
+        "recommendedType": "LARGE_TEXT"
+      },
+      "ai_compliance_heat_map": {
+        "critical": true,
+        "name": "AI Compliance Heat Map",
+        "recommendedType": "LARGE_TEXT"
+      },
+      "ai_compliance_maturity_level": {
+        "critical": true,
+        "name": "AI Compliance Maturity Level",
+        "recommendedType": "TEXT"
+      },
+      "ai_compliance_recommended_next_step": {
+        "critical": true,
+        "name": "AI Compliance Recommended Next Step",
+        "recommendedType": "TEXT"
+      },
+      "ai_compliance_report_version": {
+        "critical": true,
+        "name": "AI Compliance Report Version",
+        "recommendedType": "TEXT"
+      },
+      "ai_compliance_roadmap_30_60_90": {
+        "critical": true,
+        "name": "AI Compliance Roadmap 30 60 90",
+        "recommendedType": "LARGE_TEXT"
+      },
+      "ai_compliance_top_gaps": {
+        "critical": true,
+        "name": "AI Compliance Top Gaps",
+        "recommendedType": "LARGE_TEXT"
+      },
+      "ai_patent_privacy_guardrail_version": {
+        "critical": true,
+        "name": "AI Patent Privacy Guardrail Version",
+        "recommendedType": "TEXT"
+      },
+      "ai_patent_recommended_next_step": {
+        "critical": true,
+        "name": "AI Patent Recommended Next Step",
+        "recommendedType": "TEXT"
+      },
+      "ai_patent_report_version": {
+        "critical": true,
+        "name": "AI Patent Report Version",
+        "recommendedType": "TEXT"
+      },
+      "disclaimer_acknowledged": {
+        "critical": true,
+        "name": "Disclaimer Acknowledged",
+        "recommendedType": "TEXT"
+      },
+      "ma_readiness_answers_json": {
+        "critical": true,
+        "name": "M&A Readiness Answers JSON",
+        "recommendedType": "LARGE_TEXT"
+      },
+      "ma_readiness_band": {
+        "critical": true,
+        "name": "M&A Readiness Band",
+        "recommendedType": "TEXT"
+      },
+      "ma_readiness_input_type": {
+        "critical": true,
+        "name": "M&A Readiness Input Type",
+        "recommendedType": "TEXT"
+      },
+      "ma_readiness_privacy_guardrail_version": {
+        "critical": true,
+        "name": "M&A Readiness Privacy Guardrail Version",
+        "recommendedType": "TEXT"
+      },
+      "ma_readiness_report_version": {
+        "critical": true,
+        "name": "M&A Readiness Report Version",
+        "recommendedType": "TEXT"
+      },
+      "ma_readiness_score": {
+        "critical": true,
+        "name": "M&A Readiness Score",
+        "recommendedType": "NUMERICAL"
+      },
+      "privacy_guardrail_version": {
+        "critical": true,
+        "name": "Privacy Guardrail Version",
+        "recommendedType": "TEXT"
+      },
+      "public_form_input_type": {
+        "critical": true,
+        "name": "Public Form Input Type",
+        "recommendedType": "TEXT"
+      },
+      "report_requested": {
+        "critical": true,
+        "name": "Report Requested",
+        "recommendedType": "TEXT"
+      },
+      "tech_legal_health_answers_json": {
+        "critical": true,
+        "name": "Tech Legal Health Answers JSON",
+        "recommendedType": "LARGE_TEXT"
+      },
+      "tech_legal_health_band": {
+        "critical": true,
+        "name": "Tech Legal Health Band",
+        "recommendedType": "TEXT"
+      },
+      "tech_legal_health_branch_signals": {
+        "critical": true,
+        "name": "Tech Legal Health Branch Signals",
+        "recommendedType": "LARGE_TEXT"
+      },
+      "tech_legal_health_category_scores": {
+        "critical": true,
+        "name": "Tech Legal Health Category Scores",
+        "recommendedType": "LARGE_TEXT"
+      },
+      "tech_legal_health_company_moment": {
+        "critical": true,
+        "name": "Tech Legal Health Company Moment",
+        "recommendedType": "TEXT"
+      },
+      "tech_legal_health_lowest_category": {
+        "critical": true,
+        "name": "Tech Legal Health Lowest Category",
+        "recommendedType": "TEXT"
+      },
+      "tech_legal_health_privacy_guardrail_version": {
+        "critical": true,
+        "name": "Tech Legal Health Privacy Guardrail Version",
+        "recommendedType": "TEXT"
+      },
+      "tech_legal_health_report_version": {
+        "critical": true,
+        "name": "Tech Legal Health Report Version",
+        "recommendedType": "TEXT"
+      },
+      "tech_legal_health_score": {
+        "critical": true,
+        "name": "Tech Legal Health Score",
+        "recommendedType": "NUMERICAL"
+      },
+      "tech_legal_health_top_actions": {
+        "critical": true,
+        "name": "Tech Legal Health Top Actions",
+        "recommendedType": "LARGE_TEXT"
+      }
+    },
+    "totalFieldsReturned": 33,
+    "typeMismatches": {}
+  },
+  "generatedAt": "2026-05-07T05:47:25.089695-06:00",
+  "locationId": "tm68WWMrcAa3TqQbEAMa",
+  "safety": {
+    "activatedWorkflows": false,
+    "createdOrUpdatedFields": false,
+    "enrolledContacts": false,
+    "mutatedContactsOrOpportunities": false,
+    "sentEmails": false,
+    "sentSms": false
+  },
+  "scope": "read-only HighLevel API probes only; no contacts/opportunities/messages/workflows/campaigns/tags/fields/env vars created/updated/deleted",
+  "workflowVerification": {
+    "readableLimit": "List endpoint confirms workflow names/status only; step-level suppression/DND/unsubscribe/disclaimer/version guards require manual UI evidence.",
+    "relevantWorkflows": [
+      {
+        "createdAt": "2026-05-06T14:10:38.477Z",
+        "id": "682ada5f-fa1e-4411-97d6-a1e019139614",
+        "name": "WF | Intake | Whiteford | AI Compliance Gameplan | Draft",
+        "status": "draft",
+        "updatedAt": "2026-05-06T17:08:06.877Z"
+      },
+      {
+        "createdAt": "2026-05-06T14:09:56.822Z",
+        "id": "8dbff7fd-caa0-49b3-ba16-bd46b4a1f1d7",
+        "name": "WF | Intake | Whiteford | AI Patent Strategy Scorecard | Draft",
+        "status": "draft",
+        "updatedAt": "2026-05-06T15:23:57.172Z"
+      },
+      {
+        "createdAt": "2026-05-06T14:11:12.785Z",
+        "id": "4be5ea96-b497-4149-be72-f38aa136da35",
+        "name": "WF | Intake | Whiteford | Founder M&A Readiness | Draft",
+        "status": "draft",
+        "updatedAt": "2026-05-06T17:08:46.718Z"
+      },
+      {
+        "createdAt": "2026-05-06T14:10:54.733Z",
+        "id": "dee4450a-1b7b-4597-9fa4-9c7b7423b848",
+        "name": "WF | Intake | Whiteford | Tech GC Launchpad | Draft",
+        "status": "draft",
+        "updatedAt": "2026-05-06T17:04:15.897Z"
+      }
+    ],
+    "totalWorkflowsReturned": 4,
+    "unsafeStatusSignals": [],
+    "workflowCampaigns": []
+  }
+}

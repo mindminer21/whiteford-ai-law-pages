@@ -1,0 +1,154 @@
+{
+  "apply": false,
+  "customFields": {
+    "ai_patent_checks": {
+      "dataType": "LARGE_TEXT",
+      "name": "AI Patent Checks",
+      "status": "missing"
+    },
+    "ai_patent_score": {
+      "dataType": "NUMERICAL",
+      "name": "AI Patent Score",
+      "status": "missing"
+    },
+    "ai_patent_score_band": {
+      "dataType": "TEXT",
+      "name": "AI Patent Score Band",
+      "status": "missing"
+    },
+    "ai_patent_stage": {
+      "dataType": "TEXT",
+      "name": "AI Patent Stage",
+      "status": "missing"
+    },
+    "ai_readiness_checks": {
+      "dataType": "LARGE_TEXT",
+      "name": "AI Readiness Checks",
+      "status": "missing"
+    },
+    "ai_readiness_score": {
+      "dataType": "NUMERICAL",
+      "name": "AI Readiness Score",
+      "status": "missing"
+    },
+    "ai_recommended_offer": {
+      "dataType": "TEXT",
+      "name": "AI Recommended Offer",
+      "status": "missing"
+    },
+    "ai_risk_score": {
+      "dataType": "NUMERICAL",
+      "name": "AI Risk Score",
+      "status": "missing"
+    },
+    "ai_score_band": {
+      "dataType": "TEXT",
+      "name": "AI Score Band",
+      "status": "missing"
+    },
+    "ai_use_cases": {
+      "dataType": "LARGE_TEXT",
+      "name": "AI Use Cases",
+      "status": "missing"
+    },
+    "authority_pillar": {
+      "dataType": "TEXT",
+      "name": "Authority Pillar",
+      "status": "missing"
+    },
+    "campaign_key": {
+      "dataType": "TEXT",
+      "name": "Campaign Key",
+      "status": "missing"
+    },
+    "campaign_label": {
+      "dataType": "TEXT",
+      "name": "Campaign Label",
+      "status": "missing"
+    },
+    "lead_magnet": {
+      "dataType": "TEXT",
+      "name": "Lead Magnet",
+      "status": "missing"
+    },
+    "recommended_offer": {
+      "dataType": "TEXT",
+      "name": "Recommended Offer",
+      "status": "missing"
+    },
+    "role": {
+      "dataType": "TEXT",
+      "name": "Role",
+      "status": "missing"
+    },
+    "source_channel": {
+      "dataType": "TEXT",
+      "name": "Source Channel",
+      "status": "missing"
+    },
+    "source_page": {
+      "dataType": "TEXT",
+      "name": "Source Page",
+      "status": "missing"
+    },
+    "youtube_topic": {
+      "dataType": "TEXT",
+      "name": "YouTube Topic",
+      "status": "missing"
+    }
+  },
+  "locationId": "tm68WWMrcAa3TqQbEAMa",
+  "tags": {
+    "interest:ai-compliance": {
+      "status": "missing"
+    },
+    "interest:ai-patent-law": {
+      "id": "isgN68rHai067UsUbosa",
+      "status": "existing"
+    },
+    "interest:ma-readiness": {
+      "status": "missing"
+    },
+    "interest:tech-ogc": {
+      "status": "missing"
+    },
+    "leadmagnet:ai-compliance-gameplan": {
+      "status": "missing"
+    },
+    "leadmagnet:ai-patent-scorecard": {
+      "id": "q7OYTozjWdpqPbY6xsvi",
+      "status": "existing"
+    },
+    "leadmagnet:ma-readiness-checklist": {
+      "status": "missing"
+    },
+    "leadmagnet:tech-gc-checklist": {
+      "status": "missing"
+    },
+    "newsletter:ai": {
+      "id": "DWMSyc3Cw4jH1JuzGF23",
+      "status": "existing"
+    },
+    "newsletter:not-consented": {
+      "status": "missing"
+    },
+    "whiteford-mountain-west": {
+      "id": "UgFtJxRzDJuuXzwv0O7d",
+      "status": "existing"
+    },
+    "workflow:ai-compliance-readiness": {
+      "status": "missing"
+    },
+    "workflow:ai-patent-strategy": {
+      "id": "WZfRXwccEjnHflOUL9Nt",
+      "status": "existing"
+    },
+    "workflow:ma-readiness": {
+      "status": "missing"
+    },
+    "workflow:tech-gc-launchpad": {
+      "status": "missing"
+    }
+  },
+  "warnings": []
+}

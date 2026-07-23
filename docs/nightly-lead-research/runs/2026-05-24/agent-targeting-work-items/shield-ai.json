@@ -1,0 +1,143 @@
+{
+  "task": "prepare_internal_attorney_review_agent_targeting_packet",
+  "company": {
+    "name": "Shield AI",
+    "domain": "shield.ai",
+    "website_url": "https://shield.ai",
+    "headquarters": "San Diego, CA (global operations: US, Europe, Middle East, Asia-Pacific)",
+    "location": "San Diego, California",
+    "industry": "Defense technology / AI autonomy",
+    "primary_offer_lane": "ai-patent",
+    "secondary_offer_lanes": [
+      "tech-gc"
+    ],
+    "scores": {
+      "fit_score": 88,
+      "urgency_score": 82,
+      "value_potential_score": 85,
+      "combined_priority_score": 85
+    },
+    "lane_fit_score": {
+      "ai-patent": 4,
+      "ai-compliance": 2,
+      "tech-gc": 3,
+      "ma-readiness": 2
+    },
+    "prospect_id": "prospect_shield_ai_20260524",
+    "segment": "ai-patent",
+    "lead_magnet": "AI Patent Strategy Scorecard",
+    "recommended_offer": "Productized: IP Portfolio Review for defense AI acquisitions",
+    "source_url": "https://shield.ai/shield-ai-appoints-gary-steele-as-ceo-ryan-tseng-named-president/",
+    "source_note": "$2B raised in March 2026 Series G at $12.7B valuation (Advent International lead); Acquired Aechelon Technology (defense simulation/synthetic reality); Hivemind Foundation Model for Defense deployed across 26 vehicle classes",
+    "pipeline_stage": "research_staged",
+    "risk_level": "attorney_review_required",
+    "suppression_status": "consent_gap_no_auto_send",
+    "conflicts_status": "required_before_send",
+    "owner": "qwen-local",
+    "notes": "Research-only nightly candidate. No outreach authorization; attorney review, conflicts, suppression, and source-current checks required before external use."
+  },
+  "contacts": [
+    {
+      "name": "Gary Steele",
+      "title": "CEO",
+      "role_category": "ceo-patent",
+      "publicly_verified": true,
+      "confidence": 90,
+      "source_url": "https://shield.ai/shield-ai-appoints-gary-steele-as-ceo-ryan-tseng-named-president/",
+      "source_type": "first-party",
+      "email": null,
+      "linkedin_url": "https://www.linkedin.com/in/gasteele",
+      "notes": "LinkedIn URL verified as current person profile. Gary Steele has 30+ years scaling global tech enterprises."
+    },
+    {
+      "name": "Ryan Tseng",
+      "title": "President",
+      "role_category": "cto-patent",
+      "publicly_verified": true,
+      "confidence": 85,
+      "source_url": "https://shield.ai/shield-ai-appoints-gary-steele-as-ceo-ryan-tseng-named-president/",
+      "source_type": "first-party",
+      "email": null,
+      "linkedin_url": null,
+      "notes": "Named President alongside Gary Steele appointment; LinkedIn/profile URL not independently verified."
+    }
+  ],
+  "evidence": [
+    {
+      "source_url": "https://shield.ai/shield-ai-appoints-gary-steele-as-ceo-ryan-tseng-named-president/",
+      "source_type": "first-party-company-announcement",
+      "fact_classification": "public",
+      "evidence_snippet": "Gary Steele, a seasoned technology executive with over 30 years of experience scaling global technology enterprises, will join Shield AI as CEO",
+      "supported_fact": "Gary Steele appointed CEO; Ryan Tseng named President",
+      "confidence": "medium_high",
+      "corroboration": "public source cited in nightly research packet",
+      "safe_for_outreach": "conditional",
+      "safe_fact_for_copy": "Gary Steele appointed CEO; Ryan Tseng named President",
+      "accessed_at": "2026-05-24"
+    },
+    {
+      "source_url": "https://shield.ai/shield-ai-to-acquire-software-simulation-company-aechelon-and-raise-2b-at-12-7b-valuation/",
+      "source_type": "first-party-press-release",
+      "fact_classification": "public",
+      "evidence_snippet": "Shield AI today announced it is raising $1.5 billion in Series G funding at a $12.7 billion post-money valuation",
+      "supported_fact": "$2B raise at $12.7B valuation; acquisition of Aechelon Technology",
+      "confidence": "medium_high",
+      "corroboration": "public source cited in nightly research packet",
+      "safe_for_outreach": "conditional",
+      "safe_fact_for_copy": "$2B raise at $12.7B valuation; acquisition of Aechelon Technology",
+      "accessed_at": "2026-05-24"
+    },
+    {
+      "source_url": "https://www.reuters.com/business/aerospace-defense/defense-technology-startup-shield-ai-valued-127-billion-latest-funding-round-2026-03-26/",
+      "source_type": "credible-news-verified-by-search",
+      "fact_classification": "public",
+      "evidence_snippet": "Defense technology startup Shield AI valued at $12.7 billion in latest funding round",
+      "supported_fact": "$12.7B valuation confirmed by Reuters",
+      "confidence": "medium_high",
+      "corroboration": "public source cited in nightly research packet",
+      "safe_for_outreach": "conditional",
+      "safe_fact_for_copy": "$12.7B valuation confirmed by Reuters",
+      "accessed_at": "2026-05-24"
+    }
+  ],
+  "outreach_drafts": [
+    {
+      "draft_type": "email",
+      "channel": "manual_email_review",
+      "title": "AI patent scorecard attorney-review angle: Shield AI",
+      "subject": "Attorney-review-only AI patent strategy angle for Shield AI",
+      "body": "ATTORNEY REVIEW ONLY — DO NOT SEND.\nTarget: Gary Steele, CEO\nPublic fact hook: Shield AI's March 2026 $2B Series G and Aechelon acquisition significantly expand its IP portfolio at $12.7B valuation\nReadiness issue: Post-acquisition, defense AI companies must navigate complex IP ownership, patent strategy alignment, and foundational model IP protection across acquired and newly developed systems\nSuggested lead magnet: AI Patent Strategy Scorecard -- /ai-patent-strategy-scorecard\nNext step: Productized: IP Portfolio Review for defense AI acquisitions\nCompliance notes: Does not guarantee patent availability; Does not imply Shield AI has a legal problem; Does not create attorney-client relationship; No Colorado/West claim without public source\nGuardrail: no outreach, workflow enrollment, trigger tags, LinkedIn/social action, Clio write, live CRM/Supabase sync, public/client-facing use, or send without Jeff exact approval plus attorney/conflicts/suppression review.",
+      "source_facts": [
+        "Shield AI's March 2026 $2B Series G and Aechelon acquisition significantly expand its IP portfolio at $12.7B valuation"
+      ],
+      "source_urls": [
+        "https://shield.ai/shield-ai-appoints-gary-steele-as-ceo-ryan-tseng-named-president/",
+        "https://shield.ai/shield-ai-to-acquire-software-simulation-company-aechelon-and-raise-2b-at-12-7b-valuation/",
+        "https://www.reuters.com/business/aerospace-defense/defense-technology-startup-shield-ai-valued-127-billion-latest-funding-round-2026-03-26/"
+      ],
+      "risk_level": "attorney_review_required",
+      "internal_review_notes": "Not approved for sending. Research-only local staging; requires attorney review, conflicts, suppression, source-current checks, and Jeff exact approval before external use."
+    }
+  ],
+  "source_candidate_path": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-24/prospect_candidates.json",
+  "normalized_store_path": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-24/prospect_candidates.normalized_for_store.json",
+  "guardrails": {
+    "external_action_allowed": false,
+    "approval_required": true,
+    "no_outreach_no_workflows_no_social_no_clio_no_live_sync": true,
+    "required_before_external_use": [
+      "Jeff exact approval",
+      "attorney review",
+      "conflicts check",
+      "suppression/opt-out check",
+      "source-current verification"
+    ]
+  },
+  "remediation_checklist": [
+    "Verify Ryan Tseng's current role and LinkedIn URL before outreach",
+    "Confirm Shield AI's Colorado/West presence or craft national IP relevance angle",
+    "Await attorney review before any LinkedIn awareness post draft"
+  ],
+  "local_growth_os_prospect_id": "prospect_shield_ai_20260524",
+  "source_packet_prospect_id": "prospect_shield_ai_20260524"
+}

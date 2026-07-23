@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI Invention File — Whiteford Visual Direction</title>
+  <style>
+    :root {
+      --bg: #f7f5ef;
+      --paper: #fffdf8;
+      --ink: #121827;
+      --muted: #5d6678;
+      --blue: #213f77;
+      --violet: #683ab7;
+      --gold: #b99057;
+      --sage: #55776a;
+      --line: #d8d0c3;
+      --shadow: 0 24px 80px rgba(18, 24, 39, 0.10);
+      --radius: 18px;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      color: var(--ink);
+      background:
+        linear-gradient(90deg, rgba(216,208,195,.38) 1px, transparent 1px),
+        linear-gradient(0deg, rgba(216,208,195,.26) 1px, transparent 1px),
+        var(--bg);
+      background-size: 44px 44px;
+      font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    main {
+      width: min(1180px, calc(100vw - 40px));
+      margin: 0 auto;
+      padding: 56px 0 42px;
+    }
+
+    .eyebrow {
+      color: var(--blue);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.05fr .95fr;
+      gap: 34px;
+      align-items: stretch;
+      margin-bottom: 28px;
+    }
+
+    .panel {
+      background: rgba(255, 253, 248, .92);
+      border: 1px solid var(--line);
+      border-radius: calc(var(--radius) + 8px);
+      box-shadow: var(--shadow);
+      padding: 34px;
+    }
+
+    h1 {
+      max-width: 760px;
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(42px, 6vw, 76px);
+      line-height: .94;
+      letter-spacing: -.055em;
+      text-wrap: pretty;
+    }
+
+    .lede {
+      margin: 24px 0 0;
+      max-width: 690px;
+      color: var(--muted);
+      font-size: clamp(18px, 2vw, 22px);
+      line-height: 1.5;
+      text-wrap: pretty;
+    }
+
+    .aside {
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 360px;
+    }
+
+    .aside::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 85% 10%, rgba(185, 144, 87, .24), transparent 34%);
+      pointer-events: none;
+    }
+
+    .metric-label {
+      color: var(--muted);
+      font-size: 14px;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+
+    .question {
+      position: relative;
+      margin-top: 18px;
+      font-family: Georgia, "Times New Roman", serif;
+      color: var(--blue);
+      font-size: clamp(30px, 4vw, 48px);
+      line-height: 1;
+      letter-spacing: -.035em;
+      text-wrap: balance;
+    }
+
+    .note {
+      position: relative;
+      margin-top: 28px;
+      padding-top: 20px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.55;
+    }
+
+    .flow {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+      margin-top: 22px;
+    }
+
+    .step {
+      min-height: 268px;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 22px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .step::after {
+      content: "";
+      position: absolute;
+      left: 22px;
+      right: 22px;
+      bottom: 74px;
+      height: 1px;
+      background: var(--line);
+    }
+
+    .number {
+      width: 42px;
+      height: 42px;
+      border: 1px solid var(--line);
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      color: var(--blue);
+      font-weight: 800;
+      background: #fbf7ec;
+    }
+
+    h2 {
+      margin: 24px 0 12px;
+      font-size: 23px;
+      line-height: 1.05;
+      letter-spacing: -.025em;
+      text-wrap: balance;
+    }
+
+    .step p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.5;
+    }
+
+    .tag {
+      width: fit-content;
+      margin-top: 24px;
+      border: 1px solid rgba(33, 63, 119, .24);
+      color: var(--blue);
+      background: rgba(33, 63, 119, .05);
+      border-radius: 999px;
+      padding: 8px 12px;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .footer {
+      display: flex;
+      justify-content: space-between;
+      gap: 22px;
+      margin-top: 24px;
+      padding: 18px 2px 0;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.45;
+    }
+
+    .footer strong { color: var(--ink); }
+
+    @media (max-width: 920px) {
+      main { padding-top: 34px; }
+      .hero, .flow { grid-template-columns: 1fr; }
+      .aside { min-height: auto; }
+      .step { min-height: 230px; }
+      .footer { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="hero" aria-label="AI invention file visual direction">
+      <div class="panel">
+        <div class="eyebrow">Whiteford × Schell IP authority concept</div>
+        <h1>AI Invention File</h1>
+        <p class="lede">A calm executive diagram for showing how AI-assisted work becomes reviewable company IP: human framing, AI tool role, recorded judgment, and a clarified ownership path.</p>
+      </div>
+      <aside class="panel aside">
+        <div>
+          <div class="metric-label">Executive question</div>
+          <div class="question">Can we show what the people contributed?</div>
+        </div>
+        <p class="note">Use as a Figma direction, LinkedIn carousel cover, lead-magnet section header, or YouTube thumbnail foundation. Keep claims educational and fact-specific.</p>
+      </aside>
+    </section>
+
+    <section class="flow" aria-label="Four part invention file flow">
+      <article class="step">
+        <div>
+          <div class="number">1</div>
+          <h2>Problem framed by people</h2>
+          <p>Technical problem, constraints, architecture thesis, roadmap relevance, and the human team directing the work.</p>
+        </div>
+        <div class="tag">Human origin</div>
+      </article>
+      <article class="step">
+        <div>
+          <div class="number">2</div>
+          <h2>AI role identified</h2>
+          <p>Model or tool used, prompts or inputs, generated candidates, automated experiments, and tool boundaries.</p>
+        </div>
+        <div class="tag">Tool record</div>
+      </article>
+      <article class="step">
+        <div>
+          <div class="number">3</div>
+          <h2>Human judgment recorded</h2>
+          <p>Selections, rejections, modifications, validation steps, technical tradeoffs, and implementation decisions.</p>
+        </div>
+        <div class="tag">Contribution evidence</div>
+      </article>
+      <article class="step">
+        <div>
+          <div class="number">4</div>
+          <h2>IP path clarified</h2>
+          <p>Inventorship review, ownership chain, contractor terms, patent versus trade-secret posture, and disclosure timing.</p>
+        </div>
+        <div class="tag">Counsel-ready</div>
+      </article>
+    </section>
+
+    <footer class="footer">
+      <div><strong>Lead magnet:</strong> /ai-patent-strategy-scorecard</div>
+      <div>Draft educational framework — not legal advice; do not submit confidential invention details in public forms.</div>
+    </footer>
+  </main>
+</body>
+</html>

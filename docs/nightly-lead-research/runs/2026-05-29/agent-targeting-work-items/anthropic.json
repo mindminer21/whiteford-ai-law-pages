@@ -1,0 +1,163 @@
+{
+  "prospect_id": "anthropic-20260529",
+  "company": {
+    "prospect_id": "prospect_anthropic_20260529",
+    "name": "Anthropic",
+    "domain": "anthropic.com",
+    "website_url": "https://www.anthropic.com/",
+    "location": "San Francisco, CA",
+    "state_region": "CA",
+    "industry": "Foundation model AI / AI safety lab",
+    "segment": "ma-readiness",
+    "primary_offer_lane": "ma-readiness",
+    "source_type": "nightly_public_source_research",
+    "source_url": "https://techcrunch.com/2026/05/28/anthropic-raises-65-billion-1-trillion-valuation/",
+    "source_note": "AI safety lab and foundation model developer. Announced $65B raise nearing $1T valuation ahead of IPO. Released Opus 4.8 with new dynamic workflow tool. Major AI market mover.\nfunding_stage: Pre-IPO ($65B raise); funding_amount: $65B; valuation: ~$1T\nGate status: normalized from parent nightly qwen-local browser-fallback payload; no live enrichment performed by ops staging.",
+    "pipeline_stage": "research_staged",
+    "scores": {
+      "fit_score": 80,
+      "urgency_score": 80,
+      "value_potential_score": 80,
+      "combined_priority_score": 80,
+      "contact_confidence": 10
+    },
+    "lead_magnet": "AI IP Due Diligence Checklist for IPO",
+    "recommended_offer": "AI IPO IP Preparation & Patent Strategy",
+    "risk_level": "attorney_review_required",
+    "suppression_status": "consent_gap_no_auto_send",
+    "conflicts_status": "required_before_send",
+    "owner": "qwen-local",
+    "notes": "Research-only nightly candidate. No outreach authorization; attorney review, conflicts, suppression, source-current checks, and Jeff exact approval required before external use.\nUpstream summary: AI safety lab and foundation model developer. Announced $65B raise nearing $1T valuation ahead of IPO. Released Opus 4.8 with new dynamic workflow tool. Major AI market mover.\nOutreach hypothesis: At $1T valuation and preparing for IPO, Anthropic faces critical IP portfolio review requirements.\nSafe next action from source payload: Monitor IPO filings (S-1); draft educational outreach re: IPO IP preparation for AI companies.\nValidation caveat: Ops normalized the parent qwen-local/browser-fallback payload only; no new external enrichment or source-current verification was performed during this staging task. Domains/locations are local dedupe hints and must be source-current verified before external use."
+  },
+  "contacts": [
+    {
+      "name": "Dario Hassabis",
+      "title": "CEO & Co-Founder",
+      "role_category": "executive",
+      "email": null,
+      "linkedin_url": null,
+      "phone": null,
+      "source_url": "https://techcrunch.com/2026/05/28/anthropic-raises-65-billion-1-trillion-valuation/",
+      "source_type": "news_payload_unverified_contact",
+      "permission_basis": "public-source research; attorney review required before outreach",
+      "confidence": 10,
+      "suppression_status": "not_checked"
+    }
+  ],
+  "evidence": [
+    {
+      "evidence_id": "evidence_0375a79ea5c8b3cb104107fd",
+      "source_url": "https://techcrunch.com/2026/05/28/anthropic-raises-65-billion-1-trillion-valuation/",
+      "accessed_at": "2026-05-29",
+      "source_type": "news",
+      "fact_classification": "public",
+      "evidence_snippet": "AI safety lab and foundation model developer. Announced $65B raise nearing $1T valuation ahead of IPO. Released Opus 4.8 with new dynamic workflow tool. Major AI market mover.",
+      "supported_fact": "AI safety lab and foundation model developer. Announced $65B raise nearing $1T valuation ahead of IPO. Released Opus 4.8 with new dynamic workflow tool. Major AI market mover.",
+      "confidence": "high",
+      "corroboration": "parent qwen-local browser-sourced research; source-current refresh required before external use",
+      "safe_for_outreach": "conditional",
+      "safe_fact_for_copy": "AI safety lab and foundation model developer. Announced $65B raise nearing $1T valuation ahead of IPO. Released Opus 4.8 with new dynamic workflow tool. Major AI market mover."
+    },
+    {
+      "evidence_id": "evidence_aa81e752a4b0b69be004a9fa",
+      "source_url": "https://techcrunch.com/2026/05/28/anthropic-raises-65-billion-1-trillion-valuation/",
+      "accessed_at": "2026-05-29",
+      "source_type": "news",
+      "fact_classification": "public",
+      "evidence_snippet": "IPO preparation stage = natural IP audit and portfolio strategy opportunity. Foundation model patents, training data IP, and model architecture protections are core business assets.",
+      "supported_fact": "IPO preparation stage = natural IP audit and portfolio strategy opportunity. Foundation model patents, training data IP, and model architecture protections are core business assets.",
+      "confidence": "high",
+      "corroboration": "parent qwen-local browser-sourced research; source-current refresh required before external use",
+      "safe_for_outreach": "conditional",
+      "safe_fact_for_copy": "IPO preparation stage = natural IP audit and portfolio strategy opportunity. Foundation model patents, training data IP, and model architecture protections are core business assets."
+    },
+    {
+      "evidence_id": "evidence_6d82692f29a05731e44ef6cc",
+      "source_url": "https://techcrunch.com/2026/05/28/anthropic-raises-65-billion-1-trillion-valuation/",
+      "accessed_at": "2026-05-29",
+      "source_type": "news",
+      "fact_classification": "public",
+      "evidence_snippet": "At $1T valuation and preparing for IPO, Anthropic faces critical IP portfolio review requirements.",
+      "supported_fact": "At $1T valuation and preparing for IPO, Anthropic faces critical IP portfolio review requirements.",
+      "confidence": "high",
+      "corroboration": "parent qwen-local browser-sourced research; source-current refresh required before external use",
+      "safe_for_outreach": "conditional",
+      "safe_fact_for_copy": "At $1T valuation and preparing for IPO, Anthropic faces critical IP portfolio review requirements."
+    },
+    {
+      "evidence_id": "evidence_33ffd1488e8bf559043aff07",
+      "source_url": "https://techcrunch.com/2026/05/28/anthropic-raises-65-billion-1-trillion-valuation/",
+      "accessed_at": "2026-05-29",
+      "source_type": "news",
+      "fact_classification": "public",
+      "evidence_snippet": "funding_stage: Pre-IPO ($65B raise); funding_amount: $65B; valuation: ~$1T",
+      "supported_fact": "funding_stage: Pre-IPO ($65B raise); funding_amount: $65B; valuation: ~$1T",
+      "confidence": "high",
+      "corroboration": "parent qwen-local browser-sourced research; source-current refresh required before external use",
+      "safe_for_outreach": "conditional",
+      "safe_fact_for_copy": "funding_stage: Pre-IPO ($65B raise); funding_amount: $65B; valuation: ~$1T"
+    }
+  ],
+  "outreach_drafts": [
+    {
+      "draft_type": "email",
+      "channel": "manual_email_review",
+      "title": "AI IP Due Diligence Checklist for IPO attorney-review angle: Anthropic",
+      "subject": "Attorney-review-only AI IP Due Diligence Checklist for IPO angle for Anthropic",
+      "body": "ATTORNEY REVIEW ONLY — DO NOT SEND/POST.\nTarget: Dario Hassabis\nProspect: Anthropic\nInternal hypothesis: At $1T valuation and preparing for IPO, Anthropic faces critical IP portfolio review requirements.\nSuggested lead magnet: AI IP Due Diligence Checklist for IPO\nRequired before any external use: source-current verification, correct contact validation, conflicts check, suppression/opt-out/prior-touch checks, attorney review, and Jeff exact approval.",
+      "source_facts": [
+        "AI safety lab and foundation model developer. Announced $65B raise nearing $1T valuation ahead of IPO. Released Opus 4.8 with new dynamic workflow tool. Major AI market mover.",
+        "IPO preparation stage = natural IP audit and portfolio strategy opportunity. Foundation model patents, training data IP, and model architecture protections are core business assets.",
+        "At $1T valuation and preparing for IPO, Anthropic faces critical IP portfolio review requirements.",
+        "funding_stage: Pre-IPO ($65B raise); funding_amount: $65B; valuation: ~$1T"
+      ],
+      "source_urls": [
+        "https://techcrunch.com/2026/05/28/anthropic-raises-65-billion-1-trillion-valuation/",
+        "https://techcrunch.com/2026/05/28/anthropic-raises-65-billion-1-trillion-valuation/",
+        "https://techcrunch.com/2026/05/28/anthropic-raises-65-billion-1-trillion-valuation/",
+        "https://techcrunch.com/2026/05/28/anthropic-raises-65-billion-1-trillion-valuation/"
+      ],
+      "risk_level": "attorney_review_required",
+      "internal_review_notes": "Not approved for sending or posting. Research-only local staging; requires attorney review, conflicts, suppression, source-current checks, and Jeff exact approval before external use."
+    }
+  ],
+  "validation_gates": {
+    "gate_1_live_source": "PARENT_BROWSER_FALLBACK_PAYLOAD_ONLY",
+    "source_status": "Parent qwen-local used browser fallback after search/extract quota failures; ops staging did not re-browse or enrich.",
+    "contact_validation": "low confidence/unverified contacts require enrichment before outreach",
+    "outreach_readiness": "attorney-review-only; no external action authorized"
+  },
+  "consent_gating": {
+    "ops_no_auto_send": true,
+    "consent_basis": "no_email_opt_in",
+    "approval_status": "no-auto-send",
+    "workflow_trigger_tags": [],
+    "suppression_tags": [
+      "newsletter:not-consented"
+    ]
+  },
+  "source_candidate_path": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-29/prospect_candidates.json",
+  "normalized_store_path": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-29/prospect_candidates.normalized_for_store.json",
+  "source_packet_prospect_id": "anthropic-20260529",
+  "local_growth_os_prospect_id": "prospect_anthropic_20260529",
+  "task": "prepare_internal_attorney_review_agent_targeting_packet",
+  "guardrails": {
+    "external_action_allowed": false,
+    "approval_required": true,
+    "no_outreach_no_workflows_no_social_no_clio_no_live_sync": true,
+    "required_before_external_use": [
+      "Jeff exact approval",
+      "attorney review",
+      "conflicts check",
+      "suppression/opt-out/prior-touch check",
+      "source-current verification",
+      "contact identity correction/enrichment where flagged"
+    ]
+  },
+  "work_item_id": "work_nightly_agent_targeting_20260529_2b7d90a5cd48313e188a1a4c",
+  "remediation_checklist": [
+    "Attorney review required before external use.",
+    "Conflicts, suppression/opt-out, prior-touch, and source-current checks required before any outreach.",
+    "Do not send, post, tag, trigger workflows, sync live CRM/Supabase, or write Clio without Jeff exact approval."
+  ]
+}

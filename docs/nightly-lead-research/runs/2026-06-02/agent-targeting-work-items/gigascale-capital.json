@@ -1,0 +1,123 @@
+{
+  "prospect_id": "gigascale_capital-20260602",
+  "company": {
+    "prospect_id": "prospect_gigascale_capital_20260602",
+    "name": "Gigascale Capital",
+    "domain": "gigascale.capital",
+    "website_url": "https://gigascale.capital",
+    "company_linkedin_url": null,
+    "location": "United States (HQ unverified from current public pages; fund based in Bay Area)",
+    "state_region": null,
+    "industry": "Climate tech venture capital / energy and grid infrastructure / physical AI investment firm",
+    "segment": "tech-gc",
+    "primary_offer_lane": "tech-gc",
+    "source_type": "nightly_public_source_research",
+    "source_url": "https://techcrunch.com/2026/06/01/zigging-when-most-are-zagging-ex-meta-cto-raises-250m-climate-fund/",
+    "source_note": "Venture firm led by ex-Meta CTO Mike Schroepfer raised $250M Fund II to back climate tech founders\nFocus: energy, grid infrastructure, critical minerals, and physical AI investment\nPortfolio includes Commonwealth Fusion Systems, Heron Power, Mill (automobile), Form Energy\nEarly-stage focus with institutional investors in new fund\nBucking conventional wisdom on climate tech (sector soured on climate thesis; Gigascale doubling down)\nPortfolio companies cover fusion energy, grid tech, batteries, and critical minerals\nFund targets companies where AI drives demand for physical infrastructure (AI + electrification + power supply)\nGate status: BROWSER_FALLBACK_RESUMED via browser_navigate snapshots + browser_console text extraction",
+    "pipeline_stage": "research_staged",
+    "scores": {
+      "fit_score": 82,
+      "urgency_score": 60,
+      "value_potential_score": 72,
+      "combined_priority_score": 71
+    },
+    "lead_magnet": "Tech OGC Playbook",
+    "recommended_offer": "Tech Outside General Counsel / Growth Counsel",
+    "risk_level": "attorney_review_required",
+    "suppression_status": "consent_gap_no_auto_send",
+    "conflicts_status": "required_before_send",
+    "owner": "qwen-local",
+    "notes": "Research-only nightly candidate. No outreach authorization; attorney review, conflicts, suppression, source-current checks, contact validation, and Jeff exact approval required before external use.\nGate status: normalized from parent nightly qwen-local browser-fallback payload; ops staging did not perform live enrichment or external source refresh.\nOutreach readiness: research_only; consent basis: no_email_opt_in; approval status: no-auto-send\nDecision-maker guidance: Founder Mike Schroepfer named (ex-Meta CTO). Verify current managing partners or principals from LinkedIn before outreach.\nContact notes: Mike Schroepfer (ex-Meta CTO, 'Schrep') named as founder. CEO/founder contact not publicly listed. Generic investor relations contact not available. Venture capital firm context: target is fund manager for portfolio company introductions, not direct company prospect. Use role-target guidance.\nKey facts: Venture firm led by ex-Meta CTO Mike Schroepfer raised $250M Fund II to back climate tech founders; Focus: energy, grid infrastructure, critical minerals, and physical AI investment; Portfolio includes Commonwealth Fusion Systems, Heron Power, Mill (automobile), Form Energy; Early-stage focus with institutional investors in new fund; Bucking conventional wisdom on climate tech (sector soured on climate thesis; Gigascale doubling down); Portfolio companies cover fusion energy, grid tech, batteries, and critical minerals; Fund targets companies where AI drives demand for physical infrastructure (AI + electrification + power supply)\nRemediation before outreach: verify Gigascale Capital's actual domain (could be gigascale.vc or similar); verify Mike Schroepfer contact from LinkedIn; confirm current portfolio company names active under Gigascale; note: VC fund — outreach vector is portfolio company introductions, not direct company prospect; determine if portfolio comms/pipeline team (not founder) is the right outreach target\nMountain West relevance: Not directly supported. Target via Tech OGC relevance for portfolio companies scaling into institutional-grade operations.\nValidation caveat: parent research used browser/browser_console fallback after Firecrawl credits were exhausted; source-current checks remain required before external use."
+  },
+  "contacts": [],
+  "evidence": [
+    {
+      "evidence_id": "evidence_75399fca743403567023ea99",
+      "source_url": "https://techcrunch.com/2026/06/01/zigging-when-most-are-zagging-ex-meta-cto-raises-250m-climate-fund/",
+      "accessed_at": "2026-06-02",
+      "source_type": "techcrunch_article",
+      "fact_classification": "public",
+      "evidence_snippet": "Gigascale Capital, led by ex-Meta CTO Mike Schroepfer, raised $250M Fund II. Focus: energy, grid infrastructure, critical minerals, physical AI. Portfolio: Commonwealth Fusion Systems, Heron Power, Mill, Form Energy. Early-stage with institutional investors.",
+      "supported_fact": "Gigascale Capital, led by ex-Meta CTO Mike Schroepfer, raised $250M Fund II. Focus: energy, grid infrastructure, critical minerals, physical AI. Portfolio: Commonwealth Fusion Systems, Heron Power, Mill, Form Energy. Early-stage with institutional investors.",
+      "confidence": "medium",
+      "corroboration": "parent qwen-local browser-fallback research; source-current refresh required before external use",
+      "safe_for_outreach": "conditional",
+      "safe_fact_for_copy": "Gigascale Capital, led by ex-Meta CTO Mike Schroepfer, raised $250M Fund II. Focus: energy, grid infrastructure, critical minerals, physical AI. Portfolio: Commonwealth Fusion Systems, Heron Power, Mill, Form Energy. Early-stage with institutional investors."
+    },
+    {
+      "evidence_id": "evidence_9adc1078cdaaf52601a12a8b",
+      "source_url": "https://gigascale.capital",
+      "accessed_at": "2026-06-02",
+      "source_type": "first_party_website",
+      "fact_classification": "public",
+      "evidence_snippet": "CONFIRMED: Gigascale Capital returned live content with first-party branding.",
+      "supported_fact": "CONFIRMED: Gigascale Capital returned live content with first-party branding.",
+      "confidence": "medium",
+      "corroboration": "parent qwen-local browser-fallback research; source-current refresh required before external use",
+      "safe_for_outreach": "conditional",
+      "safe_fact_for_copy": "CONFIRMED: Gigascale Capital returned live content with first-party branding."
+    }
+  ],
+  "outreach_drafts": [
+    {
+      "draft_type": "educational",
+      "channel": "manual_email_review",
+      "title": "Tech OGC Playbook attorney-review angle: Gigascale Capital",
+      "subject": "Attorney-review-only Tech OGC Playbook angle for Gigascale Capital",
+      "body": "ATTORNEY REVIEW ONLY — DO NOT SEND/POST.\nTarget: role to verify before outreach (CEO/CTO/GC/Head of IP or equivalent; no named decision-maker contact verified).\nProspect: Gigascale Capital\nInternal hypothesis: Gigascale Capital, led by ex-Meta CTO Mike Schroepfer, raised $250M Fund II. Focus: energy, grid infrastructure, critical minerals, physical AI. Portfolio: Commonwealth Fusion Systems, Heron Power, Mill, Form Energy. Early-stage with institutional investors.\nSuggested lead magnet: Tech OGC Playbook\n\nUpstream draft text retained for review context only; it is not approved final copy:\nGigascale Capital just raised $250M for climate/energy/grid infrastructure — ex-Meta CTO Mike Schroepfer doubling down on climate tech when most VCs are walking away. As his portfolio companies (Commonwealth Fusion, Heron Power, Mill, Form Energy) scale into AI-driven physical infrastructure, their founders face the same Tech OGC playbook moment: how to build compliance, IP, and governance infrastructure before scale hits. The Tech OGC playbook is the bridge between deep-tech founding and institutional-grade growth.\n\nRequired before any external use: source-current verification, named contact validation, conflicts check, suppression/opt-out/prior-touch checks, attorney review, and Jeff exact approval.",
+      "source_facts": [
+        "Gigascale Capital, led by ex-Meta CTO Mike Schroepfer, raised $250M Fund II. Focus: energy, grid infrastructure, critical minerals, physical AI. Portfolio: Commonwealth Fusion Systems, Heron Power, Mill, Form Energy. Early-stage with institutional investors.",
+        "CONFIRMED: Gigascale Capital returned live content with first-party branding."
+      ],
+      "source_urls": [
+        "https://techcrunch.com/2026/06/01/zigging-when-most-are-zagging-ex-meta-cto-raises-250m-climate-fund/",
+        "https://gigascale.capital"
+      ],
+      "risk_level": "attorney_review_required",
+      "internal_review_notes": "Not approved for sending or posting. Research-only local staging; requires attorney review, conflicts, suppression, source-current checks, named contact validation, and Jeff exact approval before external use."
+    }
+  ],
+  "validation_gates": {
+    "gate_1_live_source": "PARENT_BROWSER_FALLBACK_PAYLOAD_ONLY",
+    "source_status": "browser_navigate snapshots + browser_console text extraction",
+    "contact_validation": "Gate 4 failed: no named decision makers/contact details verified; no person-level contact staged.",
+    "linkedin_validation": "No company or person LinkedIn URLs verified; no LinkedIn action authorized.",
+    "outreach_readiness": "attorney-review-only research_only; no external action authorized"
+  },
+  "consent_gating": {
+    "ops_no_auto_send": true,
+    "consent_basis": "no_email_opt_in",
+    "approval_status": "no-auto-send",
+    "workflow_trigger_tags": [],
+    "suppression_tags": [
+      "newsletter:not-consented"
+    ]
+  },
+  "source_candidate_path": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-06-02/prospect_candidates.json",
+  "normalized_store_path": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-06-02/prospect_candidates.normalized_for_store.json",
+  "source_packet_prospect_id": "gigascale_capital-20260602",
+  "local_growth_os_prospect_id": "prospect_gigascale_capital_20260602",
+  "task": "prepare_internal_attorney_review_agent_targeting_packet",
+  "guardrails": {
+    "external_action_allowed": false,
+    "approval_required": true,
+    "no_outreach_no_workflows_no_social_no_clio_no_live_sync": true,
+    "required_before_external_use": [
+      "Jeff exact approval",
+      "attorney review",
+      "conflicts check",
+      "suppression/opt-out/prior-touch check",
+      "source-current verification",
+      "named decision-maker/contact validation"
+    ]
+  },
+  "work_item_id": "work_nightly_agent_targeting_20260602_353d3f1fff582f539125bbe3",
+  "input_path": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-06-02/agent-targeting-work-items/gigascale-capital.json",
+  "output_path": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-06-02/agent-targeting-packets/gigascale-capital-agent-targeting-packet.md",
+  "remediation_checklist": [
+    "Attorney review required before external use.",
+    "Named decision-maker/contact validation required before any outreach.",
+    "Conflicts, suppression/opt-out, prior-touch, and source-current checks required before any outreach.",
+    "Do not send, post, tag, trigger workflows, sync live CRM/Supabase, or write Clio without Jeff exact approval."
+  ]
+}

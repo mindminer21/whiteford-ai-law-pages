@@ -1,0 +1,519 @@
+{
+  "apply": true,
+  "customFields": {
+    "ai_patent_checks": {
+      "response": {
+        "customField": {
+          "dataType": "LARGE_TEXT",
+          "dateAdded": "2026-05-06T04:49:35.003Z",
+          "documentType": "field",
+          "fieldKey": "contact.ai_patent_checks",
+          "id": "0mv2zSrrPiwTw3Eufuwk",
+          "locationId": "tm68WWMrcAa3TqQbEAMa",
+          "model": "contact",
+          "name": "AI Patent Checks",
+          "parentId": "L2UbwKorpLWlVqMwP3e5",
+          "placeholder": "ai_patent_checks",
+          "position": 900,
+          "standard": false
+        },
+        "traceId": "ebf58866-da3c-42e0-a957-4112a9eb19dc"
+      },
+      "status": "created"
+    },
+    "ai_patent_score": {
+      "response": {
+        "customField": {
+          "dataType": "NUMERICAL",
+          "dateAdded": "2026-05-06T04:49:33.077Z",
+          "documentType": "field",
+          "fieldKey": "contact.ai_patent_score",
+          "id": "L78KuFhyFafq5PSp5MjR",
+          "locationId": "tm68WWMrcAa3TqQbEAMa",
+          "model": "contact",
+          "name": "AI Patent Score",
+          "parentId": "L2UbwKorpLWlVqMwP3e5",
+          "placeholder": "ai_patent_score",
+          "position": 750,
+          "standard": false
+        },
+        "traceId": "5d60c3ff-5afb-4d7e-ae3b-5fc352744344"
+      },
+      "status": "created"
+    },
+    "ai_patent_score_band": {
+      "response": {
+        "customField": {
+          "dataType": "TEXT",
+          "dateAdded": "2026-05-06T04:49:34.350Z",
+          "documentType": "field",
+          "fieldKey": "contact.ai_patent_score_band",
+          "id": "xh6AfuK3kI9YCbkL3Wko",
+          "locationId": "tm68WWMrcAa3TqQbEAMa",
+          "model": "contact",
+          "name": "AI Patent Score Band",
+          "parentId": "L2UbwKorpLWlVqMwP3e5",
+          "placeholder": "ai_patent_score_band",
+          "position": 850,
+          "standard": false
+        },
+        "traceId": "9fbaa2f2-9281-418e-ba5d-80a1e4745d77"
+      },
+      "status": "created"
+    },
+    "ai_patent_stage": {
+      "response": {
+        "customField": {
+          "dataType": "TEXT",
+          "dateAdded": "2026-05-06T04:49:33.774Z",
+          "documentType": "field",
+          "fieldKey": "contact.ai_patent_stage",
+          "id": "7pf3mgT5ttvFjBjEpg5m",
+          "locationId": "tm68WWMrcAa3TqQbEAMa",
+          "model": "contact",
+          "name": "AI Patent Stage",
+          "parentId": "L2UbwKorpLWlVqMwP3e5",
+          "placeholder": "ai_patent_stage",
+          "position": 800,
+          "standard": false
+        },
+        "traceId": "4a1e7d27-20dd-46ad-a6a9-2f5e95a433ab"
+      },
+      "status": "created"
+    },
+    "ai_readiness_checks": {
+      "response": {
+        "customField": {
+          "dataType": "LARGE_TEXT",
+          "dateAdded": "2026-05-06T04:49:32.442Z",
+          "documentType": "field",
+          "fieldKey": "contact.ai_readiness_checks",
+          "id": "TVTNLJnRkTMoWJiXIa6Q",
+          "locationId": "tm68WWMrcAa3TqQbEAMa",
+          "model": "contact",
+          "name": "AI Readiness Checks",
+          "parentId": "L2UbwKorpLWlVqMwP3e5",
+          "placeholder": "ai_readiness_checks",
+          "position": 700,
+          "standard": false
+        },
+        "traceId": "5a3613af-115a-42a3-be4e-76252825f60b"
+      },
+      "status": "created"
+    },
+    "ai_readiness_score": {
+      "response": {
+        "customField": {
+          "dataType": "NUMERICAL",
+          "dateAdded": "2026-05-06T04:49:29.908Z",
+          "documentType": "field",
+          "fieldKey": "contact.ai_readiness_score",
+          "id": "meQ6hnsgWOYZzBcMmm2E",
+          "locationId": "tm68WWMrcAa3TqQbEAMa",
+          "model": "contact",
+          "name": "AI Readiness Score",
+          "parentId": "L2UbwKorpLWlVqMwP3e5",
+          "placeholder": "ai_readiness_score",
+          "position": 500,
+          "standard": false
+        },
+        "traceId": "7d70ffec-1b89-40e4-b983-5b111073d48b"
+      },
+      "status": "created"
+    },
+    "ai_recommended_offer": {
+      "response": {
+        "customField": {
+          "dataType": "TEXT",
+          "dateAdded": "2026-05-06T04:49:31.114Z",
+          "documentType": "field",
+          "fieldKey": "contact.ai_recommended_offer",
+          "id": "n356Iz93Y6U0ByWFFpGn",
+          "locationId": "tm68WWMrcAa3TqQbEAMa",
+          "model": "contact",
+          "name": "AI Recommended Offer",
+          "parentId": "L2UbwKorpLWlVqMwP3e5",
+          "placeholder": "ai_recommended_offer",
+          "position": 600,
+          "standard": false
+        },
+        "traceId": "51138d7d-f87a-4dd9-9743-542dff44837f"
+      },
+      "status": "created"
+    },
+    "ai_risk_score": {
+      "response": {
+        "customField": {
+          "dataType": "NUMERICAL",
+          "dateAdded": "2026-05-06T04:49:29.274Z",
+          "documentType": "field",
+          "fieldKey": "contact.ai_risk_score",
+          "id": "9gjvKtASWn49eo5mLeuB",
+          "locationId": "tm68WWMrcAa3TqQbEAMa",
+          "model": "contact",
+          "name": "AI Risk Score",
+          "parentId": "L2UbwKorpLWlVqMwP3e5",
+          "placeholder": "ai_risk_score",
+          "position": 450,
+          "standard": false
+        },
+        "traceId": "5d08fe9b-4b82-48a3-af80-78dc14696d18"
+      },
+      "status": "created"
+    },
+    "ai_score_band": {
+      "response": {
+        "customField": {
+          "dataType": "TEXT",
+          "dateAdded": "2026-05-06T04:49:30.507Z",
+          "documentType": "field",
+          "fieldKey": "contact.ai_score_band",
+          "id": "kWP4zmf9VwL5andDQfEk",
+          "locationId": "tm68WWMrcAa3TqQbEAMa",
+          "model": "contact",
+          "name": "AI Score Band",
+          "parentId": "L2UbwKorpLWlVqMwP3e5",
+          "placeholder": "ai_score_band",
+          "position": 550,
+          "standard": false
+        },
+        "traceId": "faa6d21e-40f6-46c8-a2f4-6f6b48844d22"
+      },
+      "status": "created"
+    },
+    "ai_use_cases": {
+      "response": {
+        "customField": {
+          "dataType": "LARGE_TEXT",
+          "dateAdded": "2026-05-06T04:49:31.840Z",
+          "documentType": "field",
+          "fieldKey": "contact.ai_use_cases",
+          "id": "UlFRPwpAbUzvKQZeN0HA",
+          "locationId": "tm68WWMrcAa3TqQbEAMa",
+          "model": "contact",
+          "name": "AI Use Cases",
+          "parentId": "L2UbwKorpLWlVqMwP3e5",
+          "placeholder": "ai_use_cases",
+          "position": 650,
+          "standard": false
+        },
+        "traceId": "002ed3b5-d9b8-41fe-abbb-b54e5aea8a54"
+      },
+      "status": "created"
+    },
+    "authority_pillar": {
+      "response": {
+        "customField": {
+          "dataType": "TEXT",
+          "dateAdded": "2026-05-06T04:49:25.307Z",
+          "documentType": "field",
+          "fieldKey": "contact.authority_pillar",
+          "id": "UQ78yAPlH4UAIZ8juHR0",
+          "locationId": "tm68WWMrcAa3TqQbEAMa",
+          "model": "contact",
+          "name": "Authority Pillar",
+          "parentId": "L2UbwKorpLWlVqMwP3e5",
+          "placeholder": "authority_pillar",
+          "position": 150,
+          "standard": false
+        },
+        "traceId": "d4dfe7b3-6176-467f-b3d7-654baad8ae0e"
+      },
+      "status": "created"
+    },
+    "campaign_key": {
+      "response": {
+        "customField": {
+          "dataType": "TEXT",
+          "dateAdded": "2026-05-06T04:49:24.061Z",
+          "documentType": "field",
+          "fieldKey": "contact.campaign_key",
+          "id": "Qz7tTt2gHbiIKEuOKf9Q",
+          "locationId": "tm68WWMrcAa3TqQbEAMa",
+          "model": "contact",
+          "name": "Campaign Key",
+          "parentId": "L2UbwKorpLWlVqMwP3e5",
+          "placeholder": "campaign_key",
+          "position": 50,
+          "standard": false
+        },
+        "traceId": "1427e808-8f59-4414-bb15-5fe3a2b901e0"
+      },
+      "status": "created"
+    },
+    "campaign_label": {
+      "response": {
+        "customField": {
+          "dataType": "TEXT",
+          "dateAdded": "2026-05-06T04:49:24.663Z",
+          "documentType": "field",
+          "fieldKey": "contact.campaign_label",
+          "id": "ktyUD9eDp9A3v5WVNzvu",
+          "locationId": "tm68WWMrcAa3TqQbEAMa",
+          "model": "contact",
+          "name": "Campaign Label",
+          "parentId": "L2UbwKorpLWlVqMwP3e5",
+          "placeholder": "campaign_label",
+          "position": 100,
+          "standard": false
+        },
+        "traceId": "502ce0fe-028e-4aa2-8c5a-044d50cccfca"
+      },
+      "status": "created"
+    },
+    "lead_magnet": {
+      "response": {
+        "customField": {
+          "dataType": "TEXT",
+          "dateAdded": "2026-05-06T04:49:27.983Z",
+          "documentType": "field",
+          "fieldKey": "contact.lead_magnet",
+          "id": "e3SJHNsUNdW67ouLWFYQ",
+          "locationId": "tm68WWMrcAa3TqQbEAMa",
+          "model": "contact",
+          "name": "Lead Magnet",
+          "parentId": "L2UbwKorpLWlVqMwP3e5",
+          "placeholder": "lead_magnet",
+          "position": 350,
+          "standard": false
+        },
+        "traceId": "950cac3b-1e24-4628-9d2d-fcb629a7a5fc"
+      },
+      "status": "created"
+    },
+    "recommended_offer": {
+      "response": {
+        "customField": {
+          "dataType": "TEXT",
+          "dateAdded": "2026-05-06T04:49:28.648Z",
+          "documentType": "field",
+          "fieldKey": "contact.recommended_offer",
+          "id": "edel6dKsWHAFFUlB2mBM",
+          "locationId": "tm68WWMrcAa3TqQbEAMa",
+          "model": "contact",
+          "name": "Recommended Offer",
+          "parentId": "L2UbwKorpLWlVqMwP3e5",
+          "placeholder": "recommended_offer",
+          "position": 400,
+          "standard": false
+        },
+        "traceId": "87d51786-0c70-4a7a-9c1a-20273a68419a"
+      },
+      "status": "created"
+    },
+    "role": {
+      "response": {
+        "customField": {
+          "dataType": "TEXT",
+          "dateAdded": "2026-05-06T04:49:35.628Z",
+          "documentType": "field",
+          "fieldKey": "contact.role",
+          "id": "bDDyFlZKHlwIULA2OqgJ",
+          "locationId": "tm68WWMrcAa3TqQbEAMa",
+          "model": "contact",
+          "name": "Role",
+          "parentId": "L2UbwKorpLWlVqMwP3e5",
+          "placeholder": "role",
+          "position": 950,
+          "standard": false
+        },
+        "traceId": "20be2ff2-1501-4bd5-ba3f-c0d067493919"
+      },
+      "status": "created"
+    },
+    "source_channel": {
+      "response": {
+        "customField": {
+          "dataType": "TEXT",
+          "dateAdded": "2026-05-06T04:49:26.606Z",
+          "documentType": "field",
+          "fieldKey": "contact.source_channel",
+          "id": "qBbuCGIureBlrA5sHmRf",
+          "locationId": "tm68WWMrcAa3TqQbEAMa",
+          "model": "contact",
+          "name": "Source Channel",
+          "parentId": "L2UbwKorpLWlVqMwP3e5",
+          "placeholder": "source_channel",
+          "position": 250,
+          "standard": false
+        },
+        "traceId": "f01ea221-250b-496d-a4f6-b5d20a066ff3"
+      },
+      "status": "created"
+    },
+    "source_page": {
+      "response": {
+        "customField": {
+          "dataType": "TEXT",
+          "dateAdded": "2026-05-06T04:49:25.999Z",
+          "documentType": "field",
+          "fieldKey": "contact.source_page",
+          "id": "INEppd3YGJBDLfHerE9a",
+          "locationId": "tm68WWMrcAa3TqQbEAMa",
+          "model": "contact",
+          "name": "Source Page",
+          "parentId": "L2UbwKorpLWlVqMwP3e5",
+          "placeholder": "source_page",
+          "position": 200,
+          "standard": false
+        },
+        "traceId": "ed755735-9f70-4dff-9bed-36c7fcf0bf84"
+      },
+      "status": "created"
+    },
+    "youtube_topic": {
+      "response": {
+        "customField": {
+          "dataType": "TEXT",
+          "dateAdded": "2026-05-06T04:49:27.232Z",
+          "documentType": "field",
+          "fieldKey": "contact.youtube_topic",
+          "id": "ZrgezIZJxwAryrX5vWcy",
+          "locationId": "tm68WWMrcAa3TqQbEAMa",
+          "model": "contact",
+          "name": "YouTube Topic",
+          "parentId": "L2UbwKorpLWlVqMwP3e5",
+          "placeholder": "youtube_topic",
+          "position": 300,
+          "standard": false
+        },
+        "traceId": "dc96f795-fa9a-4812-a831-1701f8bfa412"
+      },
+      "status": "created"
+    }
+  },
+  "locationId": "tm68WWMrcAa3TqQbEAMa",
+  "tags": {
+    "interest:ai-compliance": {
+      "response": {
+        "tag": {
+          "id": "SZ1VWuu7A8kAVpTDc1F0",
+          "locationId": "tm68WWMrcAa3TqQbEAMa",
+          "name": "interest:ai-compliance"
+        },
+        "traceId": "30c9e95d-dccf-4e89-a2b7-d350afa5d4cc"
+      },
+      "status": "created"
+    },
+    "interest:ai-patent-law": {
+      "id": "isgN68rHai067UsUbosa",
+      "status": "existing"
+    },
+    "interest:ma-readiness": {
+      "response": {
+        "tag": {
+          "id": "vAasc4oplv4L2ITjcKHR",
+          "locationId": "tm68WWMrcAa3TqQbEAMa",
+          "name": "interest:ma-readiness"
+        },
+        "traceId": "495e08b7-9e71-418e-b041-fea47c991969"
+      },
+      "status": "created"
+    },
+    "interest:tech-ogc": {
+      "response": {
+        "tag": {
+          "id": "U3IETGpVAAUsCA2GAdX4",
+          "locationId": "tm68WWMrcAa3TqQbEAMa",
+          "name": "interest:tech-ogc"
+        },
+        "traceId": "8d88b308-7fad-4f05-b197-017208ec5f03"
+      },
+      "status": "created"
+    },
+    "leadmagnet:ai-compliance-gameplan": {
+      "response": {
+        "tag": {
+          "id": "aeMI5TVvDleFPBfx2aEI",
+          "locationId": "tm68WWMrcAa3TqQbEAMa",
+          "name": "leadmagnet:ai-compliance-gameplan"
+        },
+        "traceId": "72efe203-a479-4972-b29b-043d3a636276"
+      },
+      "status": "created"
+    },
+    "leadmagnet:ai-patent-scorecard": {
+      "id": "q7OYTozjWdpqPbY6xsvi",
+      "status": "existing"
+    },
+    "leadmagnet:ma-readiness-checklist": {
+      "response": {
+        "tag": {
+          "id": "Y6gtxKo1wQ9kWYcPejda",
+          "locationId": "tm68WWMrcAa3TqQbEAMa",
+          "name": "leadmagnet:ma-readiness-checklist"
+        },
+        "traceId": "67e86c2f-d9e7-41ae-aed8-84e21784a9a2"
+      },
+      "status": "created"
+    },
+    "leadmagnet:tech-gc-checklist": {
+      "response": {
+        "tag": {
+          "id": "J5hcj9jHgrmkTlfAz9AX",
+          "locationId": "tm68WWMrcAa3TqQbEAMa",
+          "name": "leadmagnet:tech-gc-checklist"
+        },
+        "traceId": "c5f878bd-b2e8-4dc4-ae0b-5d3d13634e2b"
+      },
+      "status": "created"
+    },
+    "newsletter:ai": {
+      "id": "DWMSyc3Cw4jH1JuzGF23",
+      "status": "existing"
+    },
+    "newsletter:not-consented": {
+      "response": {
+        "tag": {
+          "id": "PuS7pqcwDAgU9CzjjgCD",
+          "locationId": "tm68WWMrcAa3TqQbEAMa",
+          "name": "newsletter:not-consented"
+        },
+        "traceId": "5cc3853e-e12a-4258-a1ee-71969682a7d1"
+      },
+      "status": "created"
+    },
+    "whiteford-mountain-west": {
+      "id": "UgFtJxRzDJuuXzwv0O7d",
+      "status": "existing"
+    },
+    "workflow:ai-compliance-readiness": {
+      "response": {
+        "tag": {
+          "id": "aLH8Z1rmQSfjFIRHagGy",
+          "locationId": "tm68WWMrcAa3TqQbEAMa",
+          "name": "workflow:ai-compliance-readiness"
+        },
+        "traceId": "531f487b-08d3-4945-b992-85a3a3317c14"
+      },
+      "status": "created"
+    },
+    "workflow:ai-patent-strategy": {
+      "id": "WZfRXwccEjnHflOUL9Nt",
+      "status": "existing"
+    },
+    "workflow:ma-readiness": {
+      "response": {
+        "tag": {
+          "id": "vBjCsu6UEeaEOmvu0vhc",
+          "locationId": "tm68WWMrcAa3TqQbEAMa",
+          "name": "workflow:ma-readiness"
+        },
+        "traceId": "aff80190-f1f7-433a-b32b-0f9af9ba083f"
+      },
+      "status": "created"
+    },
+    "workflow:tech-gc-launchpad": {
+      "response": {
+        "tag": {
+          "id": "JUG30WwG9bNmdUzT2Tn9",
+          "locationId": "tm68WWMrcAa3TqQbEAMa",
+          "name": "workflow:tech-gc-launchpad"
+        },
+        "traceId": "37794003-e487-4875-b11e-a57e65833b60"
+      },
+      "status": "created"
+    }
+  },
+  "warnings": []
+}

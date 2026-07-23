@@ -1,0 +1,22 @@
+{
+  "run_label": "2026-05-20",
+  "run_timestamp": "2026-05-20T00:00:00Z",
+  "status": "source_unavailable_gate_1_failed",
+  "source_availability": {
+    "live_search": false,
+    "live_extraction": false,
+    "local_rag_available": true,
+    "error": "Firecrawl insufficient credits — both web_search and web_extract returned Payment Required"
+  },
+  "prospects": [],
+  "candidates": [],
+  "summary": {
+    "companies_researched": 0,
+    "contacts_staged": 0,
+    "lead_magnet_fit_classifications": 0,
+    "outreach_drafts": 0,
+    "approval_items": 0,
+    "evidence_rows": 0
+  },
+  "action_required": "Replenish Firecrawl credits and re-run. No prospect discovery or staging performed."
+}

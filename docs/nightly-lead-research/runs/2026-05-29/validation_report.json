@@ -1,0 +1,121 @@
+{
+  "task_id": "t_6a7b3bbd",
+  "validated_at": "2026-05-29T13:05:30+00:00",
+  "source_payload": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-29/prospect_candidates.json",
+  "normalized_payload": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-29/prospect_candidates.normalized_for_store.json",
+  "dry_run": {
+    "status": "dry_run",
+    "candidates": 4,
+    "db": "/Users/jeff/.openclaw/projects/mountain-west-growth-os/data/growth-os.sqlite"
+  },
+  "store_output": {
+    "status": "applied",
+    "counts": {
+      "prospects": 4,
+      "contacts": 4,
+      "opportunities": 4,
+      "source_evidence": 16,
+      "outreach_drafts": 4,
+      "approval_items": 4,
+      "crm_sync_records": 4,
+      "suppression_checks": 4
+    },
+    "db": "/Users/jeff/.openclaw/projects/mountain-west-growth-os/data/growth-os.sqlite"
+  },
+  "verification_path": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-29/store_verification.json",
+  "backup_path": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-29/growth-os.before_t_6a7b3bbd.sqlite",
+  "raw_candidates": 6,
+  "selected_for_local_staging": 4,
+  "skipped_candidates": [
+    {
+      "prospect_name": "Unidentified Chip Startup (AI Memory)",
+      "relevance_score": 4,
+      "reason": "Skipped from local staging: insufficient company identity/lane or relevance below 6; retained only in source payload for future research."
+    },
+    {
+      "prospect_name": "Slate Auto",
+      "relevance_score": 3,
+      "reason": "Skipped from local staging: insufficient company identity/lane or relevance below 6; retained only in source payload for future research."
+    }
+  ],
+  "staged_prospects": [
+    {
+      "prospect_id": "prospect_anthropic_20260529",
+      "company_name": "Anthropic",
+      "domain": "anthropic.com",
+      "segment": "ma-readiness",
+      "pipeline_stage": "research_staged",
+      "suppression_status": "consent_gap_no_auto_send",
+      "conflicts_status": "required_before_send"
+    },
+    {
+      "prospect_id": "prospect_asana_stackai_acquisition_20260529",
+      "company_name": "Asana / StackAI (Acquisition)",
+      "domain": "asana.com",
+      "segment": "ma-readiness",
+      "pipeline_stage": "research_staged",
+      "suppression_status": "consent_gap_no_auto_send",
+      "conflicts_status": "required_before_send"
+    },
+    {
+      "prospect_id": "prospect_glean_20260529",
+      "company_name": "Glean",
+      "domain": "glean.com",
+      "segment": "ai-patent",
+      "pipeline_stage": "research_staged",
+      "suppression_status": "consent_gap_no_auto_send",
+      "conflicts_status": "required_before_send"
+    },
+    {
+      "prospect_id": "prospect_h1_healthcare_data_platform_20260529",
+      "company_name": "H1 (Healthcare Data Platform)",
+      "domain": "h1.co",
+      "segment": "ai-compliance",
+      "pipeline_stage": "research_staged",
+      "suppression_status": "consent_gap_no_auto_send",
+      "conflicts_status": "required_before_send"
+    }
+  ],
+  "work_items": [
+    {
+      "work_item_id": "work_nightly_agent_targeting_20260529_e60bb1e2d046737a8795e015",
+      "company": "Glean",
+      "priority": 90,
+      "input_path": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-29/agent-targeting-work-items/glean.json",
+      "local_growth_os_prospect_id": "prospect_glean_20260529"
+    },
+    {
+      "work_item_id": "work_nightly_agent_targeting_20260529_2b7d90a5cd48313e188a1a4c",
+      "company": "Anthropic",
+      "priority": 80,
+      "input_path": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-29/agent-targeting-work-items/anthropic.json",
+      "local_growth_os_prospect_id": "prospect_anthropic_20260529"
+    },
+    {
+      "work_item_id": "work_nightly_agent_targeting_20260529_a98c57f3e80b94fa5d7af146",
+      "company": "H1 (Healthcare Data Platform)",
+      "priority": 70,
+      "input_path": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-29/agent-targeting-work-items/h1-healthcare-data-platform.json",
+      "local_growth_os_prospect_id": "prospect_h1_healthcare_data_platform_20260529"
+    },
+    {
+      "work_item_id": "work_nightly_agent_targeting_20260529_6c50df7e004f37626b6cb12d",
+      "company": "Asana / StackAI (Acquisition)",
+      "priority": 60,
+      "input_path": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-29/agent-targeting-work-items/asana-stackai-acquisition.json",
+      "local_growth_os_prospect_id": "prospect_asana_stackai_acquisition_20260529"
+    }
+  ],
+  "warnings": [
+    "Glean: no email/opt-in in payload; no-send/no-workflow guard remains.",
+    "Anthropic: upstream payload lists Dario Hassabis as CEO/Co-Founder; this is unverified/inconsistent and must not be used externally without source-current correction.",
+    "Anthropic: no email/opt-in in payload; no-send/no-workflow guard remains.",
+    "H1 (Healthcare Data Platform): no email/opt-in in payload; no-send/no-workflow guard remains.",
+    "Asana / StackAI (Acquisition): no email/opt-in in payload; no-send/no-workflow guard remains.",
+    "Unidentified Chip Startup (AI Memory): skipped from staging because company identity is unknown and lane is TBD.",
+    "Slate Auto: skipped from staging because relevance score 3 and payload marks it low priority/insufficient for IP-focused outreach.",
+    "All staged outreach vectors are attorney-review-only and must not be sent, posted, tagged, synced live, or enrolled in workflows.",
+    "Parent research used browser fallback after web_search/web_extract quota failure; source-current checks remain required before external use."
+  ],
+  "safety_decision": "Records and work items are staged locally only with external_action_allowed=0 and approval_required=1. No outreach, sends, workflow activation/enrollment, trigger tags, LinkedIn/social action, Clio write, public/client-facing use, prospect contact, or live CRM/Supabase/HighLevel sync is authorized."
+}

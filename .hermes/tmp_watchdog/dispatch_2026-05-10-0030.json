@@ -1,0 +1,31 @@
+{
+  "reclaimed": 0,
+  "crashed": [],
+  "timed_out": [],
+  "auto_blocked": [],
+  "promoted": 0,
+  "spawned": [
+    {
+      "task_id": "t_41abea7c",
+      "assignee": "pm",
+      "workspace": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages"
+    },
+    {
+      "task_id": "t_cd533490",
+      "assignee": "frontend-eng",
+      "workspace": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages"
+    },
+    {
+      "task_id": "t_789e3d40",
+      "assignee": "highlevel-ops",
+      "workspace": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages"
+    },
+    {
+      "task_id": "t_fb43fa2b",
+      "assignee": "writer",
+      "workspace": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages"
+    }
+  ],
+  "skipped_unassigned": [],
+  "skipped_nonspawnable": []
+}

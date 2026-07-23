@@ -1,0 +1,17 @@
+{
+  "campaignKey": "ai-compliance",
+  "sourcePage": "/ai-compliance-gameplan",
+  "sourceChannel": "jeff-preview-test",
+  "contact": {
+    "name": "TEST Jeff No Opt In",
+    "email": "jeff+whiteford-no-optin-test@schellip.com",
+    "company": "Whiteford Test Company",
+    "role": "Internal test",
+    "subscribe": false
+  },
+  "assessment": {
+    "riskScore": 42,
+    "readinessScore": 78,
+    "tags": ["internal-test", "workflow:malicious-client-tag"]
+  }
+}

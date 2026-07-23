@@ -1,0 +1,423 @@
+{
+  "apply": true,
+  "customFields": {
+    "approval_status": {
+      "response": {
+        "customField": {
+          "dataType": "TEXT",
+          "dateAdded": "2026-05-06T05:26:54.900Z",
+          "documentType": "field",
+          "fieldKey": "contact.approval_status",
+          "id": "PZQ4DD5Dy4qJG9pTsNM3",
+          "locationId": "tm68WWMrcAa3TqQbEAMa",
+          "model": "contact",
+          "name": "Approval Status",
+          "parentId": "L2UbwKorpLWlVqMwP3e5",
+          "placeholder": "approval_status",
+          "position": 1300,
+          "standard": false
+        },
+        "traceId": "4619ddc5-89a7-46e5-8573-6c356c642365"
+      },
+      "status": "created"
+    },
+    "consent_basis": {
+      "response": {
+        "customField": {
+          "dataType": "TEXT",
+          "dateAdded": "2026-05-06T05:26:54.250Z",
+          "documentType": "field",
+          "fieldKey": "contact.consent_basis",
+          "id": "TvCAwsNbVg94JrEBM3e0",
+          "locationId": "tm68WWMrcAa3TqQbEAMa",
+          "model": "contact",
+          "name": "Consent Basis",
+          "parentId": "L2UbwKorpLWlVqMwP3e5",
+          "placeholder": "consent_basis",
+          "position": 1250,
+          "standard": false
+        },
+        "traceId": "feb88384-f8f3-4724-bb20-f96616f8035b"
+      },
+      "status": "created"
+    },
+    "decision_maker_priority": {
+      "response": {
+        "customField": {
+          "dataType": "TEXT",
+          "dateAdded": "2026-05-06T05:26:51.731Z",
+          "documentType": "field",
+          "fieldKey": "contact.decision_maker_priority",
+          "id": "sxb5burpn9gj6Su9UHjh",
+          "locationId": "tm68WWMrcAa3TqQbEAMa",
+          "model": "contact",
+          "name": "Decision Maker Priority",
+          "parentId": "L2UbwKorpLWlVqMwP3e5",
+          "placeholder": "decision_maker_priority",
+          "position": 1050,
+          "standard": false
+        },
+        "traceId": "6ed265b0-d5ab-4e6f-919e-31b3e7395ddc"
+      },
+      "status": "created"
+    },
+    "decision_maker_role": {
+      "response": {
+        "customField": {
+          "dataType": "TEXT",
+          "dateAdded": "2026-05-06T05:26:51.128Z",
+          "documentType": "field",
+          "fieldKey": "contact.decision_maker_role",
+          "id": "M4EqfbzqtpbZ7iokYiZt",
+          "locationId": "tm68WWMrcAa3TqQbEAMa",
+          "model": "contact",
+          "name": "Decision Maker Role",
+          "parentId": "L2UbwKorpLWlVqMwP3e5",
+          "placeholder": "decision_maker_role",
+          "position": 1000,
+          "standard": false
+        },
+        "traceId": "6f287485-58b3-4e0e-9f16-a1e282f3c6cd"
+      },
+      "status": "created"
+    },
+    "enrichment_confidence": {
+      "response": {
+        "customField": {
+          "dataType": "NUMERICAL",
+          "dateAdded": "2026-05-06T05:26:53.674Z",
+          "documentType": "field",
+          "fieldKey": "contact.enrichment_confidence",
+          "id": "QVtRYlJ0KXfrawxb6uZv",
+          "locationId": "tm68WWMrcAa3TqQbEAMa",
+          "model": "contact",
+          "name": "Enrichment Confidence",
+          "parentId": "L2UbwKorpLWlVqMwP3e5",
+          "placeholder": "enrichment_confidence",
+          "position": 1200,
+          "standard": false
+        },
+        "traceId": "73c68e60-a1e7-4056-acaf-9b233b7ca956"
+      },
+      "status": "created"
+    },
+    "enrichment_source_url": {
+      "response": {
+        "customField": {
+          "dataType": "TEXT",
+          "dateAdded": "2026-05-06T05:26:53.049Z",
+          "documentType": "field",
+          "fieldKey": "contact.enrichment_source_url",
+          "id": "iGk7SSq6CtsZbLPyuB9i",
+          "locationId": "tm68WWMrcAa3TqQbEAMa",
+          "model": "contact",
+          "name": "Enrichment Source URL",
+          "parentId": "L2UbwKorpLWlVqMwP3e5",
+          "placeholder": "enrichment_source_url",
+          "position": 1150,
+          "standard": false
+        },
+        "traceId": "1a0d8896-bd42-4236-88aa-a24b9878a52a"
+      },
+      "status": "created"
+    },
+    "last_human_review_at": {
+      "response": {
+        "customField": {
+          "dataType": "TEXT",
+          "dateAdded": "2026-05-06T05:26:55.512Z",
+          "documentType": "field",
+          "fieldKey": "contact.last_human_review_at",
+          "id": "hYph7No8j1yDAbX1K4g7",
+          "locationId": "tm68WWMrcAa3TqQbEAMa",
+          "model": "contact",
+          "name": "Last Human Review At",
+          "parentId": "L2UbwKorpLWlVqMwP3e5",
+          "placeholder": "last_human_review_at",
+          "position": 1350,
+          "standard": false
+        },
+        "traceId": "4e71ab38-de38-4ab4-8b91-e7afc77b2a8b"
+      },
+      "status": "created"
+    },
+    "linkedin_draft_status": {
+      "response": {
+        "customField": {
+          "dataType": "TEXT",
+          "dateAdded": "2026-05-06T05:26:57.456Z",
+          "documentType": "field",
+          "fieldKey": "contact.linkedin_draft_status",
+          "id": "1dnBYpzcllC3f3Hp9O1j",
+          "locationId": "tm68WWMrcAa3TqQbEAMa",
+          "model": "contact",
+          "name": "LinkedIn Draft Status",
+          "parentId": "L2UbwKorpLWlVqMwP3e5",
+          "placeholder": "linkedin_draft_status",
+          "position": 1500,
+          "standard": false
+        },
+        "traceId": "6016c86a-0362-434e-8b53-2b7e9db0c560"
+      },
+      "status": "created"
+    },
+    "linkedin_profile_url": {
+      "response": {
+        "customField": {
+          "dataType": "TEXT",
+          "dateAdded": "2026-05-06T05:26:52.430Z",
+          "documentType": "field",
+          "fieldKey": "contact.linkedin_profile_url",
+          "id": "CwiY3lYPwAsHlaMb1on3",
+          "locationId": "tm68WWMrcAa3TqQbEAMa",
+          "model": "contact",
+          "name": "LinkedIn Profile URL",
+          "parentId": "L2UbwKorpLWlVqMwP3e5",
+          "placeholder": "linkedin_profile_url",
+          "position": 1100,
+          "standard": false
+        },
+        "traceId": "298af5c9-9ffe-47cc-8764-ec016fe613a7"
+      },
+      "status": "created"
+    },
+    "outreach_hypothesis": {
+      "response": {
+        "customField": {
+          "dataType": "LARGE_TEXT",
+          "dateAdded": "2026-05-06T05:26:56.166Z",
+          "documentType": "field",
+          "fieldKey": "contact.outreach_hypothesis",
+          "id": "Mh63JQKArJIIK6dV0b2k",
+          "locationId": "tm68WWMrcAa3TqQbEAMa",
+          "model": "contact",
+          "name": "Outreach Hypothesis",
+          "parentId": "L2UbwKorpLWlVqMwP3e5",
+          "placeholder": "outreach_hypothesis",
+          "position": 1400,
+          "standard": false
+        },
+        "traceId": "1592b601-fde0-4e85-87c4-0462f1611a05"
+      },
+      "status": "created"
+    },
+    "personalized_content_angle": {
+      "response": {
+        "customField": {
+          "dataType": "LARGE_TEXT",
+          "dateAdded": "2026-05-06T05:26:56.840Z",
+          "documentType": "field",
+          "fieldKey": "contact.personalized_content_angle",
+          "id": "qat9gBfJHUk0LTrqozZx",
+          "locationId": "tm68WWMrcAa3TqQbEAMa",
+          "model": "contact",
+          "name": "Personalized Content Angle",
+          "parentId": "L2UbwKorpLWlVqMwP3e5",
+          "placeholder": "personalized_content_angle",
+          "position": 1450,
+          "standard": false
+        },
+        "traceId": "552ab776-3b74-4543-9db0-2c1d31505472"
+      },
+      "status": "created"
+    },
+    "pipeline_next_action": {
+      "response": {
+        "customField": {
+          "dataType": "TEXT",
+          "dateAdded": "2026-05-06T05:26:58.751Z",
+          "documentType": "field",
+          "fieldKey": "contact.pipeline_next_action",
+          "id": "JRtUG5UvKRPGyqCydBUp",
+          "locationId": "tm68WWMrcAa3TqQbEAMa",
+          "model": "contact",
+          "name": "Pipeline Next Action",
+          "parentId": "L2UbwKorpLWlVqMwP3e5",
+          "placeholder": "pipeline_next_action",
+          "position": 1600,
+          "standard": false
+        },
+        "traceId": "1760b02a-31f1-4bd3-acf3-684fb1cf635f"
+      },
+      "status": "created"
+    },
+    "suggested_offer_lane": {
+      "response": {
+        "customField": {
+          "dataType": "TEXT",
+          "dateAdded": "2026-05-06T05:26:58.177Z",
+          "documentType": "field",
+          "fieldKey": "contact.suggested_offer_lane",
+          "id": "tZxdA0AeQ2YuJO5gy8t7",
+          "locationId": "tm68WWMrcAa3TqQbEAMa",
+          "model": "contact",
+          "name": "Suggested Offer Lane",
+          "parentId": "L2UbwKorpLWlVqMwP3e5",
+          "placeholder": "suggested_offer_lane",
+          "position": 1550,
+          "standard": false
+        },
+        "traceId": "2293b8ff-f818-4b81-9cce-847886d959a5"
+      },
+      "status": "created"
+    }
+  },
+  "locationId": "tm68WWMrcAa3TqQbEAMa",
+  "safeScope": "tags and contact custom fields only",
+  "tags": {
+    "brand:whiteford-schellip": {
+      "response": {
+        "tag": {
+          "id": "MxzqQUAAeGriKBueipfq",
+          "locationId": "tm68WWMrcAa3TqQbEAMa",
+          "name": "brand:whiteford-schellip"
+        },
+        "traceId": "d9b03ae0-430c-4c3c-9025-dc8d777e91cd"
+      },
+      "status": "created"
+    },
+    "enrichment:needs-research": {
+      "response": {
+        "tag": {
+          "id": "3nRTFHptUVsDFMTedMIz",
+          "locationId": "tm68WWMrcAa3TqQbEAMa",
+          "name": "enrichment:needs-research"
+        },
+        "traceId": "f019c015-1b75-4d6b-9292-b7cdf3c7e4a0"
+      },
+      "status": "created"
+    },
+    "enrichment:public-source": {
+      "response": {
+        "tag": {
+          "id": "36GlfxjuLWR55FPsltsQ",
+          "locationId": "tm68WWMrcAa3TqQbEAMa",
+          "name": "enrichment:public-source"
+        },
+        "traceId": "92ae98ad-fe96-4002-9c8e-13a9f1ce4acd"
+      },
+      "status": "created"
+    },
+    "newsletter:daily-ai-authority": {
+      "response": {
+        "tag": {
+          "id": "b5VVbfvd8b2NKsVC8MYr",
+          "locationId": "tm68WWMrcAa3TqQbEAMa",
+          "name": "newsletter:daily-ai-authority"
+        },
+        "traceId": "d84b2467-635a-46f1-a4d4-e867ec1dba7f"
+      },
+      "status": "created"
+    },
+    "ops:approval-approved": {
+      "response": {
+        "tag": {
+          "id": "bu16A0s2sRH6exC76L1n",
+          "locationId": "tm68WWMrcAa3TqQbEAMa",
+          "name": "ops:approval-approved"
+        },
+        "traceId": "35225c54-2f9c-4b44-87d3-22db6cd677ea"
+      },
+      "status": "created"
+    },
+    "ops:approval-required": {
+      "response": {
+        "tag": {
+          "id": "bCLd2Y9Jzbzqrua1AhkR",
+          "locationId": "tm68WWMrcAa3TqQbEAMa",
+          "name": "ops:approval-required"
+        },
+        "traceId": "b97cb912-639d-400f-8f21-dcb186b77e38"
+      },
+      "status": "created"
+    },
+    "ops:approval-revise": {
+      "response": {
+        "tag": {
+          "id": "64eUrZMlpVPdoxmZ2Caw",
+          "locationId": "tm68WWMrcAa3TqQbEAMa",
+          "name": "ops:approval-revise"
+        },
+        "traceId": "21bea011-bbf0-4297-abc7-68663e8188fe"
+      },
+      "status": "created"
+    },
+    "ops:no-auto-send": {
+      "response": {
+        "tag": {
+          "id": "LdM5qIWsDwLvVCfrq0uw",
+          "locationId": "tm68WWMrcAa3TqQbEAMa",
+          "name": "ops:no-auto-send"
+        },
+        "traceId": "4a64acb2-3bbc-40fb-a016-8d3aea3dbc11"
+      },
+      "status": "created"
+    },
+    "outreach:do-not-send": {
+      "response": {
+        "tag": {
+          "id": "wvmJlzZHsWnGok6dsgGs",
+          "locationId": "tm68WWMrcAa3TqQbEAMa",
+          "name": "outreach:do-not-send"
+        },
+        "traceId": "d4129827-fcf9-44c3-a58d-a88c65cb373d"
+      },
+      "status": "created"
+    },
+    "outreach:personalized-draft-ready": {
+      "response": {
+        "tag": {
+          "id": "VnOEdpHqNLxVePLM1EPm",
+          "locationId": "tm68WWMrcAa3TqQbEAMa",
+          "name": "outreach:personalized-draft-ready"
+        },
+        "traceId": "25c6cc75-739d-4a61-ab5e-5dec5bd7f0e1"
+      },
+      "status": "created"
+    },
+    "social:attorney-review-required": {
+      "response": {
+        "tag": {
+          "id": "ndibHiKrITYMwK0R2RMf",
+          "locationId": "tm68WWMrcAa3TqQbEAMa",
+          "name": "social:attorney-review-required"
+        },
+        "traceId": "459a0500-e7a6-485f-ba54-31a112cf625a"
+      },
+      "status": "created"
+    },
+    "social:linkedin-draft": {
+      "response": {
+        "tag": {
+          "id": "hOh6qwPRf06R9FoB10lg",
+          "locationId": "tm68WWMrcAa3TqQbEAMa",
+          "name": "social:linkedin-draft"
+        },
+        "traceId": "d2e6957d-8b11-472c-a7c3-fa0f7c4c1f91"
+      },
+      "status": "created"
+    },
+    "workflow:draft-only": {
+      "response": {
+        "tag": {
+          "id": "KLeXxBMdVCFhFI3fkyTr",
+          "locationId": "tm68WWMrcAa3TqQbEAMa",
+          "name": "workflow:draft-only"
+        },
+        "traceId": "e27f3633-b570-4780-ac78-024f021ecffe"
+      },
+      "status": "created"
+    },
+    "workflow:manual-start": {
+      "response": {
+        "tag": {
+          "id": "OyNFjnYsvxfH3xBXcAhS",
+          "locationId": "tm68WWMrcAa3TqQbEAMa",
+          "name": "workflow:manual-start"
+        },
+        "traceId": "89b32ad0-705b-433e-95af-6336dd29da26"
+      },
+      "status": "created"
+    }
+  }
+}

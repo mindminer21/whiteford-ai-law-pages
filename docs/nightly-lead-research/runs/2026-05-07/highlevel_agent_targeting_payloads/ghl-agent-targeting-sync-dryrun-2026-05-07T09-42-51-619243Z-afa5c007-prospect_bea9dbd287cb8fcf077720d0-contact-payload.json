@@ -1,0 +1,28 @@
+{
+  "companyName": "Flatfile (also rebranded company name: Obvious)",
+  "dnd": true,
+  "dndSettings": {
+    "Call": {
+      "message": "Internal agent targeting placeholder; no outreach until Jeff approval.",
+      "status": "active"
+    },
+    "Email": {
+      "message": "Internal agent targeting placeholder; no outreach until Jeff approval.",
+      "status": "active"
+    },
+    "SMS": {
+      "message": "Internal agent targeting placeholder; no outreach until Jeff approval.",
+      "status": "active"
+    },
+    "WhatsApp": {
+      "message": "Internal agent targeting placeholder; no outreach until Jeff approval.",
+      "status": "active"
+    }
+  },
+  "firstName": "Flatfile",
+  "lastName": "Agent Targeting",
+  "locationId": "tm68WWMrcAa3TqQbEAMa",
+  "name": "Flatfile (also rebranded company name: Obvious) Agent Targeting",
+  "source": "Growth OS nightly prospect research - Agent Targeting (prospect_bea9dbd287cb8fcf077720d0)",
+  "website": "https://flatfile.com"
+}

@@ -38,36 +38,34 @@ const pages = [
     source: read("src/app/page.tsx"),
     brandMarker: 'className="brand-lockup"',
     footerMarker: 'className="footer-lockup"',
-    needsReportSlot: false,
   },
   {
     name: "AI Legal Risk Triage",
     source: read("src/lib/learn/ai-risk-triage.ts"),
     brandMarker: '<div class="brand-lockup">',
     footerMarker: '<div class="footer-lockup">',
-    needsReportSlot: true,
+    startHref: "/ai-risk-triage/start",
   },
   {
     name: "Patent Moat Scorecard",
     source: read("src/lib/learn/patent-moat-scorecard.ts"),
     brandMarker: '<div class="brand-lockup">',
     footerMarker: '<div class="footer-lockup">',
-    needsReportSlot: true,
+    startHref: "/patent-moat-scorecard/start",
   },
   {
     name: "AI Governance Readiness Plan",
     source: read("src/lib/learn/governance-plan.ts"),
     brandMarker: '<div class="brand-lockup">',
     footerMarker: '<div class="footer-lockup">',
-    needsReportSlot: true,
+    startHref: "/governance-plan/start",
   },
   {
     name: "Outside Counsel Playbook",
     source: read("src/app/outside-counsel-playbook/page.tsx"),
     brandMarker: 'className="brand-lockup"',
     footerMarker: 'className="footer-lockup"',
-    needsReportSlot: false,
-    hasEmailPdfForm: true,
+    startHref: "/outside-counsel-playbook/start",
   },
 ];
 
@@ -89,7 +87,7 @@ const layout = read("src/app/layout.tsx");
 const rootPage = read("src/app/page.tsx");
 const legacyPage = read("src/app/legacy/page.tsx");
 const learnHtmlPage = read("src/components/learn-html-page.tsx");
-const learnHtmlWithFlow = read("src/components/learn-html-with-flow.tsx");
+const leadMagnetStartPage = read("src/components/lead-magnet-start-page.tsx");
 const leadMagnetFlow = read("src/components/lead-magnet-flow.tsx");
 const magnetConfig = read("src/lib/magnets/finalization.ts");
 const leadRoute = read("src/app/api/leads/route.ts");
@@ -121,10 +119,13 @@ for (const page of pages) {
   assert.ok(source.includes("Attorney advertising"), `${page.name} missing attorney advertising notation`);
   assert.doesNotMatch(source, /workflow:[a-z0-9-]+/i, `${page.name} must not hard-code workflow trigger tags`);
   assert.doesNotMatch(source, /<textarea/i, `${page.name} must not request confidential free text`);
-  if (!page.hasEmailPdfForm) {
-    assert.doesNotMatch(source, /<form|<input/i, `${page.name} must not request user-entered confidential information`);
+  assert.doesNotMatch(source, /<form|<input/i, `${page.name} landing page must not request user-entered confidential information`);
+  assert.doesNotMatch(source, /data-learn-report-slot=/, `${page.name} landing page must not embed the lead magnet form`);
+  assert.doesNotMatch(source, /href=["']#start/i, `${page.name} CTA must not scroll to an embedded form`);
+  if (page.startHref) {
+    assert.ok(source.includes(`href="${page.startHref}"`) || source.includes(`href={\"${page.startHref}\"}`), `${page.name} must link CTA to ${page.startHref}`);
   }
-  assert.doesNotMatch(source, /href=["']\/start|href=["'][^"']*\/start/i, `${page.name} must not link to /start placeholder routes`);
+  assert.doesNotMatch(source, /href=["']\/start["']/i, `${page.name} must not link to the old generic /start placeholder route`);
   assert.doesNotMatch(source, /Interactive tool launching once Whiteford compliance review is complete/, `${page.name} must not show compliance-review pending language`);
 
   assertOrder(
@@ -137,17 +138,27 @@ for (const page of pages) {
     ["Whiteford Taylor Preston", "footer-divider", "Schell IP"],
     `${page.name} footer lockup`,
   );
-
-  if (page.needsReportSlot) {
-    assert.ok(source.includes("data-learn-report-slot="), `${page.name} missing report form slot`);
-    assert.ok(source.includes("data-cal-link=\"jeffschell/meeting-with-jeff-schell\""), `${page.name} missing Cal.com button link`);
-    assert.doesNotMatch(source, /Cal\("init"|app\.cal\.com\/embed\/embed\.js/i, `${page.name} must not embed per-page Cal.com script`);
-  }
+  assert.doesNotMatch(source, /Cal\("init"|app\.cal\.com\/embed\/embed\.js/i, `${page.name} must not embed per-page Cal.com script`);
 }
 
-assert.ok(learnHtmlPage.includes("LearnHtmlWithFlow"), "Learn HTML renderer must delegate to the portal wrapper");
-assert.ok(learnHtmlWithFlow.includes("LeadMagnetFlow"), "Learn HTML portal wrapper must mount the finalized lead magnet flow");
-assert.ok(learnHtmlWithFlow.includes("data-learn-report-slot"), "Learn HTML portal wrapper must target the stable report request slot");
+assert.ok(learnHtmlPage.includes("content.markup"), "Learn HTML renderer must keep the Claude markup server-rendered");
+assert.doesNotMatch(learnHtmlPage, /LeadMagnetFlow|LearnFlowPortal|data-learn-report-slot/, "Learn landing renderer must not mount forms into landing pages");
+assert.ok(leadMagnetStartPage.includes("LeadMagnetFlow"), "Standalone start page shell must mount the finalized lead magnet flow");
+assert.ok(leadMagnetStartPage.includes("learn-start-page"), "Standalone start page shell must use the start-page visual system");
+for (const route of [
+  ["src/app/ai-risk-triage/start/page.tsx", "ai-risk-triage", "/ai-risk-triage"],
+  ["src/app/patent-moat-scorecard/start/page.tsx", "patent-moat-scorecard", "/patent-moat-scorecard"],
+  ["src/app/governance-plan/start/page.tsx", "governance-plan", "/governance-plan"],
+  ["src/app/outside-counsel-playbook/start/page.tsx", "outside-counsel-playbook", "/outside-counsel-playbook"],
+]) {
+  const [file, slug, backHref] = route;
+  assert.ok(exists(file), `Standalone start route missing: ${file}`);
+  const source = read(file);
+  assert.ok(source.includes("LeadMagnetStartPage"), `${file} must render the standalone start-page shell`);
+  assert.ok(source.includes(`magnetConfigs["${slug}"]`), `${file} must use the correct magnet config`);
+  assert.ok(source.includes(`backHref="${backHref}"`), `${file} must link back to its landing page`);
+  assert.ok(source.includes("robots: { index: false, follow: false }"), `${file} must noindex the form-only page`);
+}
 for (const token of [
   "Name",
   "Work email",

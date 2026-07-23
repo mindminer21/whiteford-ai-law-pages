@@ -1,0 +1,72 @@
+{
+  "status": "verified",
+  "task": "t_c53fa8ec",
+  "db": "/Users/jeff/.openclaw/projects/mountain-west-growth-os/data/growth-os.sqlite",
+  "counts": {
+    "prospects": 59,
+    "contacts": 57,
+    "opportunities": 70,
+    "source_evidence": 120,
+    "outreach_drafts": 41,
+    "approval_items": 73,
+    "crm_sync_records": 52,
+    "suppression_checks": 41,
+    "work_items": 36
+  },
+  "row_checks": [
+    {
+      "company": "Groq, Inc.",
+      "prospect_id": "prospect_groq_20260530",
+      "prospect_rows": 1,
+      "evidence_rows": 2,
+      "draft_rows": 1,
+      "work_item_rows": 1,
+      "external_action_allowed_sum": 0
+    },
+    {
+      "company": "XCENA",
+      "prospect_id": "prospect_xcena_20260530",
+      "prospect_rows": 1,
+      "evidence_rows": 2,
+      "draft_rows": 1,
+      "work_item_rows": 1,
+      "external_action_allowed_sum": 0
+    },
+    {
+      "company": "Cognition Labs, Inc. (Cognition)",
+      "prospect_id": "prospect_cognition_20260530",
+      "prospect_rows": 1,
+      "evidence_rows": 2,
+      "draft_rows": 1,
+      "work_item_rows": 1,
+      "external_action_allowed_sum": 0
+    }
+  ],
+  "work_items": [
+    {
+      "company": "Groq, Inc.",
+      "prospect_id": "prospect_groq_20260530",
+      "work_item_id": "work_nightly_agent_targeting_20260530_ba06988f82332b15f110e76d",
+      "priority": 93,
+      "path": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-30/agent-targeting-work-items/groq-inc.json",
+      "output_path": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-30/agent-targeting-packets/groq-inc-agent-targeting-packet.md"
+    },
+    {
+      "company": "XCENA",
+      "prospect_id": "prospect_xcena_20260530",
+      "work_item_id": "work_nightly_agent_targeting_20260530_079aa72e5201a9e98982622e",
+      "priority": 85,
+      "path": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-30/agent-targeting-work-items/xcena.json",
+      "output_path": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-30/agent-targeting-packets/xcena-agent-targeting-packet.md"
+    },
+    {
+      "company": "Cognition Labs, Inc. (Cognition)",
+      "prospect_id": "prospect_cognition_20260530",
+      "work_item_id": "work_nightly_agent_targeting_20260530_7dd0c1761715a07ff225932b",
+      "priority": 89,
+      "path": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-30/agent-targeting-work-items/cognition-labs-inc-cognition.json",
+      "output_path": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-30/agent-targeting-packets/cognition-labs-inc-cognition-agent-targeting-packet.md"
+    }
+  ],
+  "guardrails": "internal-only local staging; no outreach/workflows/social/Clio/live CRM/Supabase/HighLevel actions"
+}

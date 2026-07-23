@@ -1,0 +1,39 @@
+{
+  "body": {
+    "opportunity": {
+      "contact": {
+        "companyName": "Electra",
+        "followers": [],
+        "id": "IyG5z25j03oCmnJSH8AO",
+        "name": "Electra Agent Targeting",
+        "tags": []
+      },
+      "contactId": "IyG5z25j03oCmnJSH8AO",
+      "createdAt": "2026-05-07T09:42:57.845Z",
+      "followers": [],
+      "id": "WaK3PaLfyEvw9Tyn1uPf",
+      "internalSource": {
+        "apiVersion": "2021-07-28",
+        "channel": "OAUTH",
+        "id": "69f97a4042f2b054fe684553",
+        "source": "INTEGRATION",
+        "type": "CREATED"
+      },
+      "isAttribute": false,
+      "lastActionDate": "2026-05-07T09:42:57.845Z",
+      "lastStageChangeAt": "2026-05-07T09:42:57.845Z",
+      "lastStatusChangeAt": "2026-05-07T09:42:57.845Z",
+      "locationId": "tm68WWMrcAa3TqQbEAMa",
+      "monetaryValue": 0,
+      "name": "Electra \u2014 Agent Targeting",
+      "pipelineId": "Tbx4tA6wHv5lTwZPSHyZ",
+      "pipelineStageId": "fd569cf4-979b-43b8-bd0f-78e807e80ff1",
+      "source": "Growth OS nightly prospect research - Agent Targeting (prospect_bba8ec0dec6e73619770860d)",
+      "status": "open",
+      "updatedAt": "2026-05-07T09:42:57.845Z"
+    },
+    "traceId": "ad4a8394-8df8-45d6-a1c0-53fa95383752"
+  },
+  "ok": true,
+  "status": 201
+}

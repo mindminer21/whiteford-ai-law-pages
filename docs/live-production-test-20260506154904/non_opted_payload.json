@@ -1,0 +1,17 @@
+{
+  "campaignKey": "ai-compliance",
+  "sourcePage": "/ai-compliance-gameplan",
+  "sourceChannel": "jeff-production-smoke-test",
+  "contact": {
+    "name": "TEST Jeff Production No Opt In",
+    "email": "jeff+whiteford-prod-no-optin-test@schellip.com",
+    "company": "Whiteford Production Test Company",
+    "role": "Internal production smoke test",
+    "subscribe": false
+  },
+  "assessment": {
+    "riskScore": 37,
+    "readinessScore": 81,
+    "tags": ["internal-test", "production-smoke-test", "workflow:malicious-client-tag"]
+  }
+}

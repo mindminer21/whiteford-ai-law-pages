@@ -1,0 +1,108 @@
+{
+  "task": "t_c79e98c9",
+  "scope": "local/internal Growth OS staging rows and local artifacts only",
+  "url_checks": {
+    "https://windborne.systems": {
+      "result": "HTTP 404 during internal verification"
+    },
+    "https://windbornesystems.com": {
+      "result": "HTTP 200",
+      "snippet_signal": "WindBorne | Better Forecasts / first-party WindBorne content"
+    },
+    "https://machindustries.ai": {
+      "result": "HTTP 404 during internal verification"
+    },
+    "https://machindustries.com": {
+      "result": "HTTP 200",
+      "snippet_signal": "Mach Industries / first-party defense infrastructure content"
+    },
+    "https://gigascale.capital": {
+      "result": "HTTP 200 after redirect",
+      "final_url": "https://gigascale.com/"
+    },
+    "https://gigascale.com": {
+      "result": "HTTP 200",
+      "snippet_signal": "first-party Gigascale content"
+    }
+  },
+  "json_syntax": {
+    "prospect_candidates.json": "PASS",
+    "prospect_candidates.normalized_for_store.json": "PASS",
+    "agent-targeting-work-items/windborne-systems.json": "PASS",
+    "agent-targeting-work-items/mach-industries.json": "PASS",
+    "agent-targeting-work-items/gigascale-capital.json": "PASS"
+  },
+  "db_checks": {
+    "prospects": [
+      {
+        "prospect_id": "prospect_gigascale_capital_20260602",
+        "domain": "gigascale.capital",
+        "website_url": "https://gigascale.capital",
+        "pipeline_stage": "research_staged",
+        "suppression_status": "consent_gap_no_auto_send",
+        "conflicts_status": "required_before_send"
+      },
+      {
+        "prospect_id": "prospect_mach_industries_20260602",
+        "domain": "machindustries.com",
+        "website_url": "https://machindustries.com",
+        "pipeline_stage": "research_staged",
+        "suppression_status": "consent_gap_no_auto_send",
+        "conflicts_status": "required_before_send"
+      },
+      {
+        "prospect_id": "prospect_windborne_systems_20260602",
+        "domain": "windbornesystems.com",
+        "website_url": "https://windbornesystems.com",
+        "pipeline_stage": "research_staged",
+        "suppression_status": "consent_gap_no_auto_send",
+        "conflicts_status": "required_before_send"
+      }
+    ],
+    "first_party_evidence": [
+      {
+        "prospect_id": "prospect_gigascale_capital_20260602",
+        "source_url": "https://gigascale.capital",
+        "safe_for_outreach": "conditional"
+      },
+      {
+        "prospect_id": "prospect_mach_industries_20260602",
+        "source_url": "https://machindustries.com",
+        "safe_for_outreach": "conditional"
+      },
+      {
+        "prospect_id": "prospect_windborne_systems_20260602",
+        "source_url": "https://windbornesystems.com",
+        "safe_for_outreach": "conditional"
+      }
+    ],
+    "drafts": [
+      {
+        "prospect_id": "prospect_gigascale_capital_20260602",
+        "source_urls": "[\"https://techcrunch.com/2026/06/01/zigging-when-most-are-zagging-ex-meta-cto-raises-250m-climate-fund/\", \"https://gigascale.capital\"]",
+        "compliance_status": "needs_review",
+        "external_action_allowed": 0
+      },
+      {
+        "prospect_id": "prospect_mach_industries_20260602",
+        "source_urls": "[\"https://techcrunch.com/2026/06/01/defense-tech-darling-mach-industries-hits-1-8b-valuation-a-4x-jump-in-a-year/\", \"https://machindustries.com\"]",
+        "compliance_status": "needs_review",
+        "external_action_allowed": 0
+      },
+      {
+        "prospect_id": "prospect_windborne_systems_20260602",
+        "source_urls": "[\"https://techcrunch.com/2026/06/01/this-ai-weather-startup-is-out-forecasting-government-agencies/\", \"https://windbornesystems.com\"]",
+        "compliance_status": "needs_review",
+        "external_action_allowed": 0
+      }
+    ],
+    "stale_prospect_url_count": 0
+  },
+  "guardrails": {
+    "external_actions_performed": 0,
+    "contacts_staged_for_20260602_prospects": 0,
+    "draft_external_action_allowed_sum": 0,
+    "work_item_external_action_allowed_sum": 0,
+    "live_highlevel_or_supabase_sync": "not performed"
+  }
+}

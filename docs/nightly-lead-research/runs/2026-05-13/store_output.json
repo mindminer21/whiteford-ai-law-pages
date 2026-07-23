@@ -1,0 +1,15 @@
+{
+  "command": [
+    "python3",
+    "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/scripts/prospect_research_store.py",
+    "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-13/prospect_candidates.normalized_for_store.json"
+  ],
+  "returncode": 0,
+  "stdout": "{\n  \"status\": \"applied\",\n  \"counts\": {},\n  \"db\": \"/Users/jeff/.openclaw/projects/mountain-west-growth-os/data/growth-os.sqlite\"\n}\n",
+  "stderr": "",
+  "parsed_stdout": {
+    "status": "applied",
+    "counts": {},
+    "db": "/Users/jeff/.openclaw/projects/mountain-west-growth-os/data/growth-os.sqlite"
+  }
+}

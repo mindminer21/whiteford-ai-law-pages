@@ -1,0 +1,318 @@
+{
+  "nightly_run_date": "2026-05-30",
+  "status": "completed",
+  "browser_source": "browser_navigate (Firecrawl credits exhausted on initial run; browser fallback active)",
+  "source_rescue": "Browser fallback used for all prospect discovery and evidence capture",
+  "prospects": [
+    {
+      "company": {
+        "name": "Groq, Inc.",
+        "domain": "groq.com",
+        "website_url": "https://groq.com/",
+        "location": "Santa Cruz, CA (inferred from TechCrunch coverage; headquarters unverified in this run)",
+        "industry": "AI inference hardware / semiconductor / cloud",
+        "description": "Groq designs custom silicon (LPU - Language Processing Unit) and operates a cloud inference platform (GroqCloud) serving 3M+ developers and teams. The company specializes in ultra-low-latency AI inference for LLM workloads. Inferred CEO: Adam Winter (interim). CFO: Matt Eng. Backed by Disruptive Capital and Infinitium.",
+        "recent_events": [
+          "Reporting raise of $650M from existing investors (May 29, 2026, Axios via TechCrunch)",
+          "December 2025: Nvidia $20B licensing agreement that transferred senior Groq employees to Nvidia and licensed Groq hardware technology",
+          "McLaren F1 Team chose Groq for global inference deployment",
+          "Raised $750M previously (Sep 17, 2025)"
+        ],
+        "ip_relevance_signals": [
+          "Custom silicon / LPU architecture is a novel IP asset worth protecting (patents on LPU design, streaming inference methodology)",
+          "Recent $20B Nvidia deal involved licensing of Groq's proprietary hardware technology — demonstrates existing IP portfolio",
+          "Competing with Nvidia/AMD in accelerator space; patent strategy critical for chip design differentiation",
+          "Massive inference scale (3M developers) creates novel IP around distributed inference architecture"
+        ],
+        "ai_compliance_signals": [
+          "Enterprise AI inference service handles customer model data — privacy and data governance implications for AI governance compliance",
+          "McLaren F1 deployment signals mission-critical deployment scenarios increasing regulatory exposure"
+        ],
+        "primary_offer_lane": "ai-patent",
+        "secondary_offer_lanes": ["ai-compliance", "tech-gc"],
+        "scores": {
+          "fit_score": 93,
+          "urgency_score": 92,
+          "value_potential_score": 95,
+          "combined_priority_score": 93
+        },
+        "lead_magnet_fit_lane": "ai-patent",
+        "lead_magnet_fit_tier": "very_high",
+        "lead_magnet_consented": false,
+        "evidence": [
+          {
+            "source_url": "https://techcrunch.com/2026/05/29/after-nvidias-20b-not-acqui-hire-ai-chip-startup-groq-reportedly-raising-650m/",
+            "accessed_date": "2026-05-30",
+            "source_type": "techcrunch_article",
+            "supported_fact": "Groq raising $650M from existing investors for inference neocloud; Nvidia $20B licensing deal transferred senior employees and licensed Groq hardware tech",
+            "confidence": "high"
+          },
+          {
+            "source_url": "https://groq.com/",
+            "accessed_date": "2026-05-30",
+            "source_type": "first_party_website",
+            "supported_fact": "Groq operates LPU-based inference platform, 3M+ developers and teams, GroqCloud, custom silicon, McLaren F1 customer",
+            "confidence": "high"
+          }
+        ],
+        "contacts": [
+          {
+            "name": "Adam Winter",
+            "title": "Interim CEO",
+            "role_category": "ceo",
+            "confidence": "medium",
+            "linkedin_url": null,
+            "email": null,
+            "notes": "Named as interim CEO in TechCrunch/Axios report; title is interim — verify if permanent appointment has occurred"
+          },
+          {
+            "name": "Matt Eng",
+            "title": "CFO",
+            "role_category": "cfo",
+            "confidence": "medium",
+            "linkedin_url": null,
+            "email": null,
+            "notes": "Named as CFO in TechCrunch/Axios report"
+          }
+        ],
+        "outreach_readiness_status": "research_only",
+        "consent_basis": "no_email_opt_in",
+        "outreach_notes": [
+          "Contact confidence is medium because names come from a single secondary source (Axios via TechCrunch); verify current leadership before outreach",
+          "Interim CEO suggests leadership transition — timing could be advantageous for patent strategy engagement"
+        ]
+      },
+      "outreach_drafts": [
+        {
+          "lane": "ai-patent",
+          "type": "educational",
+          "draft": "Subject: Protecting your LPU architecture as a licensed asset\n\nAdam,\n\nWith Groq's $20B Nvidia technology licensing deal and the company scaling to 3M+ developers on GroqCloud, your custom LPU architecture is now one of the most commercially significant inference patents in AI.\n\nAs inference becomes the primary compute bottleneck post-training, the IP landscape around streaming inference, low-latency silicon, and distributed inference deployment is becoming increasingly crowded. Companies at the intersection of custom silicon and cloud inference are typically the first to face patent challenges and defensive filing urgency.\n\nIf you're evaluating your IP posture as Groq scales its inference cloud, we published an AI Patent Strategy Scorecard that walks through 15 critical gaps in inference-hardware IP portfolios. It covers streaming inference methodology claims, distributed cache architecture IP, and licensing-readiness for silicon designs.\n\nHappy to review it with you as you shape your IP strategy alongside the inference scaling push.\n\nEducational content only — not legal advice. Attended for attorney review.",
+          "lead_magnet": "AI Patent Strategy Scorecard",
+          "lead_magnet_url": "/ai-patent-strategy-scorecard",
+          "attorney_review_required": true
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "XCENA",
+        "domain": "xcena.com",
+        "website_url": "https://xcena.com/",
+        "location": "Seongnam-si, Gyeonggi-do, South Korea (HQ); U.S. offices",
+        "industry": "AI chip design / computational memory / semiconductor",
+        "description": "XCENA (formerly MetisX) designs computational memory chips that integrate processing directly into DRAM modules. The MX1 prototype chip uses CXL (Compute Express Link) to connect compute close to memory, reducing CPU-GPU round trips for AI inference workloads. Raised $135M Series B at $570M valuation (total raised: $185M). Co-founded in 2022 by Samsung and SK Hynix veterans.",
+        "recent_events": [
+          "Raised $135M Series B at $570M valuation (May 29, 2026, TechCrunch/Kate Park)",
+          "Rebranded from MetisX to XCENA (strategic rebranding)",
+          "Named 'Investment Company of the Year' at Korea VC Awards 2024",
+          "MX1 prototype; mass production expected end of 2026 via Samsung foundry",
+          "Revenue expected starting 2027"
+        ],
+        "ip_relevance_signals": [
+          "Computational memory architecture is a highly patentable domain (RISC-V cores within memory, compute-in-memory methodology)",
+          "Co-founded by Samsung/SK Hynix veterans with deep patent experience in memory chip design",
+          "Competes with Astera Labs and Marvell in next-gen memory connectivity — IP space is contested",
+          "Founding team of 3 (Jin Kim, Dohun Kim, Harry Juhyun Kim) — small team with concentrated IP risk",
+          "Mass production via Samsung foundry creates cross-border IP transfer considerations"
+        ],
+        "ai_compliance_signals": [],
+        "primary_offer_lane": "ai-patent",
+        "secondary_offer_lanes": ["tech-gc"],
+        "scores": {
+          "fit_score": 88,
+          "urgency_score": 85,
+          "value_potential_score": 82,
+          "combined_priority_score": 85
+        },
+        "lead_magnet_fit_lane": "ai-patent",
+        "lead_magnet_fit_tier": "high",
+        "lead_magnet_consented": false,
+        "evidence": [
+          {
+            "source_url": "https://techcrunch.com/2026/05/29/xcena-secures-135m-at-570m-valuation-betting-on-memory-as-ais-real-bottleneck/",
+            "accessed_date": "2026-05-30",
+            "source_type": "techcrunch_article",
+            "supported_fact": "XCENA raised $135M Series B at $570M; MX1 compute-in-memory chip uses CXL; mass production end 2026 via Samsung foundry; revenue 2027",
+            "confidence": "high"
+          },
+          {
+            "source_url": "https://xcena.com/",
+            "accessed_date": "2026-05-30",
+            "source_type": "first_party_website",
+            "supported_fact": "Company name: XCENA; CEO: Jin Kim; Address: Seongnam-si, South Korea; Product: MX1 SDK; Rebranded from MetisX",
+            "confidence": "high"
+          }
+        ],
+        "contacts": [
+          {
+            "name": "Jin Kim",
+            "title": "CEO & Co-founder",
+            "role_category": "ceo",
+            "confidence": "high",
+            "linkedin_url": null,
+            "email": null,
+            "notes": "Named as CEO in both TechCrunch article and XCENA.com Company Registration. Co-founder with Samsung/SK Hynix background. Strong fit for AI Patent lead magnet."
+          },
+          {
+            "name": "Dohun Kim",
+            "title": "CTO & Co-founder",
+            "role_category": "cto",
+            "confidence": "high",
+            "linkedin_url": null,
+            "email": null,
+            "notes": "Named as CTO in TechCrunch article. Samsung/SK Hynix veteran. Technical founder with deep semiconductor patent experience."
+          }
+        ],
+        "outreach_readiness_status": "draft_ready",
+        "consent_basis": "no_email_opt_in",
+        "outreach_notes": [
+          "Contact confidence is high because CEO named on both TechCrunch article and company registration page",
+          "Geographic note: HQ in South Korea — US patent strategy likely relevant for hyperscaler sales in US/EU markets, but Mountain West relevance not directly supported by public sources"
+        ]
+      },
+      "outreach_drafts": [
+        {
+          "lane": "ai-patent",
+          "type": "educational",
+          "draft": "Subject: Securing computational memory IP ahead of Samsung production\n\nJin,\n\nCongrats on the $570M valuation. As XCENA moves the MX1 from prototype to Samsung foundry production at end 2026, your computational memory architecture patents are entering a critical filing window.\n\nThe IP space around compute-in-memory (CXL-based, RISC-V cores within DRAM) is rapidly becoming contested — Astera Labs, Marvell, and memory giants like Samsung and SK Hynix are all investing heavily in overlapping areas.\n\nFor companies at the nexus of custom silicon and hyperscaler infrastructure, a comprehensive IP strategy typically covers:\n- Compute-in-memory methodology claims\n- CXL-based data orchestration architecture\n- Memory-level KV cache management innovations\n- Cross-border IP considerations for Korean HQ / US market sales\n\nWe published an AI Patent Strategy Scorecard that walks through these and 11 other critical gaps in compute-hardware IP portfolios. Worth a look as you finalize your production timeline.\n\nEducational content only — not legal advice. Attended for attorney review.",
+          "lead_magnet": "AI Patent Strategy Scorecard",
+          "lead_magnet_url": "/ai-patent-strategy-scorecard",
+          "attorney_review_required": true
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "Cognition Labs, Inc. (Cognition)",
+        "domain": "cognition.ai",
+        "website_url": "https://www.cognition.ai/",
+        "location": "San Francisco, CA (inferred); HQ unverified in this run",
+        "industry": "AI software / autonomous agents / developer tools",
+        "description": "Cognition operates Devin, the first autonomous software engineer. The company raised $1B at a $26B valuation (2-year-old startup). Devin now powers 89% of code committed by Cognition engineers and is integrated into Windsurf (acquired competitor). Customers include Citigroup, Mercedes-Benz, Goldman Sachs, US Army, NASA, Lowe's, Rivian, Cisco, Dell, Zillow, Anduril, and Cloudflare (all public-facing via the Cognition website). Launched Cognition for Government (Feb 2026). CEO is Scott Wu (co-founder, age ~24).",
+        "recent_events": [
+          "Raised $1B at $26B valuation (TechCrunch, Scott Wu says Devin shouldn't replace humans — May 29, 2026)",
+          "Devin in Windsurf integration (April 15, 2026)",
+          "Cognition for Government launch (Feb 25, 2026)",
+          "Devin 2.2 release (Feb 24, 2026)",
+          "SWE-1.6 research preview (March 1, 2026)",
+          "Windsurf acquisition earlier in 2026"
+        ],
+        "ip_relevance_signals": [
+          "Autonomous agent architecture (Devin self-driving software development) is a highly novel IP domain",
+          "Government deployment (Cognition for Government) increases IP protection urgency for national security applications",
+          "Acquired Windsurf — IP integration and licensing implications",
+          "Patent strategy increasingly critical for AI agent companies as the autonomous coding space fills with competitors (OpenAI Codex, Claude Code, Cursor, Replit, etc.)",
+          "26B valuation puts Cognition in unicorn territory — potential M&A target or IPO pipeline, increasing IP due diligence pressure"
+        ],
+        "ai_compliance_signals": [
+          "Government deployment (Cognition for Government, US Army, Navy) increases AI governance and compliance exposure",
+          "Autonomous software development agents operate in high-risk domains (defense, finance, healthcare) — AI compliance frameworks increasingly relevant",
+          "Customer base includes regulated industries: financial services (Goldman Sachs, Citigroup), defense (US Army, Anduril), real estate (Zillow, Lowe's), government"
+        ],
+        "primary_offer_lane": "ai-patent",
+        "secondary_offer_lanes": ["ai-compliance", "tech-gc"],
+        "scores": {
+          "fit_score": 86,
+          "urgency_score": 90,
+          "value_potential_score": 91,
+          "combined_priority_score": 89
+        },
+        "lead_magnet_fit_lane": "ai-patent",
+        "lead_magnet_fit_tier": "high",
+        "lead_magnet_consented": false,
+        "evidence": [
+          {
+            "source_url": "https://techcrunch.com/2026/05/29/cognitions-scott-wu-says-ai-coding-agents-shouldnt-replace-humans/",
+            "accessed_date": "2026-05-30",
+            "source_type": "techcrunch_article",
+            "supported_fact": "Cognition raised $1B; maker of Devin AI coding agent; 89% of code committed by Devin; CEO Scott Wu; acquired Windsurf; Government launch Feb 2026",
+            "confidence": "high"
+          },
+          {
+            "source_url": "https://www.cognition.ai/",
+            "accessed_date": "2026-05-30",
+            "source_type": "first_party_website",
+            "supported_fact": "Cognition operates Devin, autonomous software engineer; customers include Citigroup, Mercedes, Goldman Sachs, US Army, NASA, Lowe's, Anduril, Cisco, Dell, Zillow, Rivian, Cloudflare; LinkedIn and X presence",
+            "confidence": "high"
+          }
+        ],
+        "contacts": [
+          {
+            "name": "Scott Wu",
+            "title": "CEO & Co-founder",
+            "role_category": "ceo",
+            "confidence": "high",
+            "linkedin_url": null,
+            "email": null,
+            "notes": "Named as CEO on TechCrunch article and cognition.ai. 24-year-old competitive programmer prodigy. Strong public presence. Verified across TechCrunch and company website."
+          }
+        ],
+        "outreach_readiness_status": "research_only",
+        "consent_basis": "no_email_opt_in",
+        "outreach_notes": [
+          "High-fit prospect but contact is a young founder with massive media presence — outreach must be carefully calibrated",
+          "Strong dual-lane signal: AI Patent (primary, $26B valuation IP pressure) + AI Compliance (secondary, government deployment)",
+          "Mountain West relevance not supported by public source — target via national IP/compliance relevance"
+        ]
+      },
+      "outreach_drafts": [
+        {
+          "lane": "ai-patent",
+          "type": "educational",
+          "draft": "Subject: Devin's IP posture at $26B valuation\n\nScott,\n\nCognition's $26B valuation and the government deployment of Devin puts your autonomous agent IP in one of the most contested spaces in all of AI. As the line between \"agent\" and \"autonomous software engineer\" blurs, patent claims around self-driving development, recursive agent design, and multi-agent code generation are becoming the primary battleground.\n\nWith Windsurf acquired, US government deployment, and customers spanning defense (US Army, Anduril), finance (Goldman Sachs), and enterprise (Cisco, Dell) — your IP portfolio is both the company's crown jewel and its most scrutinized asset.\n\nWe published an AI Patent Strategy Scorecard that covers 15 critical gaps in autonomous-agent IP portfolios, including:\n- Agent orchestration architecture claims\n- Autonomous planning/execution methodology\n- Multi-agent handoff and context management\n- Licensing considerations for acquired agent products\n\nAt your scale, IP strategy transitions from a defensive exercise to a core valuation driver. Worth reviewing as Devin 2.2 ships.\n\nEducational content only — not legal advice. Attended for attorney review.",
+          "lead_magnet": "AI Patent Strategy Scorecard",
+          "lead_magnet_url": "/ai-patent-strategy-scorecard",
+          "attorney_review_required": true
+        }
+      ]
+    }
+  ],
+  "contacts": [
+    {
+      "prospect": "XCENA",
+      "name": "Jin Kim",
+      "title": "CEO & Co-founder",
+      "confidence": "high",
+      "verification": "Named on both TechCrunch article and XCENA.com company registration"
+    },
+    {
+      "prospect": "XCENA",
+      "name": "Dohun Kim",
+      "title": "CTO & Co-founder",
+      "confidence": "high",
+      "verification": "Named on TechCrunch article; confirmed co-founder status"
+    },
+    {
+      "prospect": "Cognition",
+      "name": "Scott Wu",
+      "title": "CEO & Co-founder",
+      "confidence": "high",
+      "verification": "Named on TechCrunch article and cognition.ai website"
+    },
+    {
+      "prospect": "Groq",
+      "name": "Adam Winter",
+      "title": "Interim CEO",
+      "confidence": "medium",
+      "verification": "Named as interim CEO in Axios via TechCrunch; status may have changed"
+    },
+    {
+      "prospect": "Groq",
+      "name": "Matt Eng",
+      "title": "CFO",
+      "confidence": "medium",
+      "verification": "Named as CFO in Axios via TechCrunch"
+    }
+  ],
+  "approval_items": [],
+  "summary": {
+    "new_companies": 3,
+    "contacts": 5,
+    "evidence_records": 6,
+    "outreach_drafts": 3,
+    "approval_items": 0,
+    "gate_status": "PASSED",
+    "rescue_method": "browser_navigate (Firecrawl credits exhausted)"
+  },
+  "next_action": "Await attorney review of 3 AI-inference/chip/prospect candidates. All routed to AI Patent Strategy Scorecard. XCENA highest-contact confidence. No external outreach sent. No live CRM writes."
+}

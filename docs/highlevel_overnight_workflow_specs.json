@@ -1,0 +1,124 @@
+{
+  "generated": "2026-05-06",
+  "locationId": "tm68WWMrcAa3TqQbEAMa",
+  "safety": {
+    "draftOnly": true,
+    "externalMessagesEnabled": false,
+    "workflowActivationAllowed": false,
+    "contactEnrollmentAllowed": false,
+    "liveOpportunityMutationAllowed": false,
+    "privateWorkflowEditEndpointsUsed": false
+  },
+  "pipeline": {
+    "id": "Tbx4tA6wHv5lTwZPSHyZ",
+    "name": "Whiteford Schell IP Pipeline",
+    "stages": {
+      "newLead": "c1e14510-2d11-41ee-b51a-b71025aed5e1",
+      "agentTargeting": "fd569cf4-979b-43b8-bd0f-78e807e80ff1",
+      "targetingPacketReady": "fbd84fbe-ed49-4246-b644-a557cf5a508c",
+      "approvedForAgentAssistedOutreach": "9d794930-a9a3-4efd-bb4e-9d203f9c5919",
+      "initialContact": "2da549c4-9123-4118-b997-6d72cc7f4ece",
+      "qualification": "5eb0cbff-ea87-440a-90e1-edfffae7bf29",
+      "prospectMeetingScheduled": "5ee7decd-7521-46dd-901b-a6bd1874ee94",
+      "jeffWhitefordReview": "f38c7a47-a100-4621-9800-f80aa962282c",
+      "contactedSent": "4fa62be4-b950-4f34-96ba-649f137ffc12",
+      "repliedNeedsTriage": "2d500b90-f248-4ccb-8293-1aae19c57d9e",
+      "legalJudgmentEscalation": "91db4075-fdb4-459f-a447-8be3dee4bf50",
+      "suppressedDoNotContact": "143ee9d4-74e3-4c5c-ab6d-23e154372b1b"
+    }
+  },
+  "globalSafetyTags": [
+    "brand:whiteford-schellip",
+    "workflow:draft-only",
+    "workflow:manual-start",
+    "ops:approval-required",
+    "ops:no-auto-send"
+  ],
+  "suppressionTags": [
+    "outreach:do-not-send"
+  ],
+  "offerLaneWorkflows": [
+    {
+      "recommendedName": "WF | Intake | Whiteford | AI Patent Strategy Scorecard | Draft",
+      "existingWorkflowIdIfAny": "424fd134-b34b-494f-a337-2aba0dec3060",
+      "existingWorkflowNameIfAny": "AI Patent Strategy Campaign",
+      "existingStatus": "draft",
+      "tagTrigger": "workflow:ai-patent-strategy",
+      "routes": ["/ai-patent-strategy-scorecard"],
+      "offer": "AI Patent Strategy Sprint",
+      "suggestedOfferLane": "ai-patent",
+      "emailAssetIds": ["69fae707b403f2826bb84ed3", "69fae709e13643c94a7a1e30", "69fae70ae2f2acabb6cea700", "69fae70ca3d63272ae7a8646"],
+      "actions": [
+        "Add global safety tags and lane tag",
+        "Set Suggested Offer Lane = ai-patent",
+        "Set Approval Status = pending",
+        "Set Pipeline Next Action = Review scorecard for invention capture, ownership, documentation, eligibility, and prior-art risk",
+        "Find existing opportunity in Whiteford Schell IP Pipeline",
+        "Create internal attorney-review task before any external message",
+        "Keep email/SMS steps disabled until Jeff approves"
+      ]
+    },
+    {
+      "recommendedName": "WF | Intake | Whiteford | AI Compliance Gameplan | Draft",
+      "existingWorkflowIdIfAny": null,
+      "tagTrigger": "workflow:ai-compliance-readiness",
+      "routes": ["/ai-compliance-gameplan", "/colorado-ai-compliance-lawyer"],
+      "offer": "AI Compliance Readiness Sprint",
+      "suggestedOfferLane": "ai-compliance",
+      "emailAssetIds": ["69fae70d092f9b30795116ca", "69fae70fb9da8d23821dfc28", "69fae710e2f2ac4753cea729", "69fae7112cae7d5fdf5fba02"],
+      "actions": [
+        "Add global safety tags and lane tag",
+        "Set Suggested Offer Lane = ai-compliance",
+        "Set Approval Status = pending",
+        "Set Pipeline Next Action = Review AI readiness score; decide whether to invite AI Compliance Readiness Sprint consult",
+        "Find existing opportunity in Whiteford Schell IP Pipeline",
+        "Create internal attorney-review task before any external message",
+        "Keep email/SMS steps disabled until Jeff approves"
+      ]
+    },
+    {
+      "recommendedName": "WF | Intake | Whiteford | Tech GC Launchpad | Draft",
+      "existingWorkflowIdIfAny": null,
+      "tagTrigger": "workflow:tech-gc-launchpad",
+      "routes": ["/colorado-tech-general-counsel"],
+      "offer": "Tech GC Launchpad",
+      "suggestedOfferLane": "tech-gc",
+      "emailAssetIds": ["69fae713e1364318517a1e97", "69fae714e2f2ac3f34cea769", "69fae715092f9ba066511737", "69fae716b403f2fcddb84f89"],
+      "actions": [
+        "Add global safety tags and lane tag",
+        "Set Suggested Offer Lane = tech-gc",
+        "Set Approval Status = pending",
+        "Set Pipeline Next Action = Map legal operating needs and decide whether OGC Launchpad review is appropriate",
+        "Find existing opportunity in Whiteford Schell IP Pipeline",
+        "Create internal attorney-review task before any external message",
+        "Keep email/SMS steps disabled until Jeff approves"
+      ]
+    },
+    {
+      "recommendedName": "WF | Intake | Whiteford | Founder M&A Readiness | Draft",
+      "existingWorkflowIdIfAny": null,
+      "tagTrigger": "workflow:ma-readiness",
+      "routes": ["/colorado-startup-ma-lawyer"],
+      "offer": "Founder M&A Readiness Review",
+      "suggestedOfferLane": "ma-readiness",
+      "emailAssetIds": ["69fae7173501ab2683ed1367", "69fae7185f61ae5420c49d1e", "69fae71ae13643c7e47a1ee6", "69fae71b614ce9e828db4b4e"],
+      "actions": [
+        "Add global safety tags and lane tag",
+        "Set Suggested Offer Lane = ma-readiness",
+        "Set Approval Status = pending",
+        "Set Pipeline Next Action = Review M&A checklist for diligence cleanup and readiness-review fit",
+        "Find existing opportunity in Whiteford Schell IP Pipeline",
+        "Create internal attorney-review task before any external message",
+        "Keep email/SMS steps disabled until Jeff approves"
+      ]
+    }
+  ],
+  "supportingWorkflowsObserved": [
+    {"id": "bd952a80-46d3-419f-900d-e9add46ca003", "name": "1. New Lead Nurture (Fast 5) - Claim Offer", "status": "draft", "uiTotalEnrolled": 0, "uiActiveEnrolled": 0},
+    {"id": "0a1749da-af77-4d51-ba2e-8a1027ca66b5", "name": "2. Appointment Confirmation + Reminders", "status": "draft", "uiTotalEnrolled": 0, "uiActiveEnrolled": 0},
+    {"id": "dcf4b664-4d02-4465-bf88-1be1a1e6ea34", "name": "3. Appt No Show", "status": "draft", "uiTotalEnrolled": 0, "uiActiveEnrolled": 0},
+    {"id": "622a2611-afe0-4d02-b848-f5c3e81130e1", "name": "4. New Sale - Send Review Request", "status": "draft"},
+    {"id": "28cfdf24-11ec-47b6-9830-3aa3bc827cf0", "name": "5. Long-Term Nurture", "status": "draft", "uiTotalEnrolled": 0, "uiActiveEnrolled": 0},
+    {"id": "39b5c831-10d4-4005-89f5-64307403158f", "name": "6. Stale Leads", "status": "draft", "uiTotalEnrolled": 0, "uiActiveEnrolled": 0}
+  ]
+}

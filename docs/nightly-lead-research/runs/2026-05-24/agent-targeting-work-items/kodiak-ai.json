@@ -1,0 +1,145 @@
+{
+  "task": "prepare_internal_attorney_review_agent_targeting_packet",
+  "company": {
+    "name": "Kodiak AI",
+    "domain": "kodiak.ai",
+    "website_url": "https://kodiak.ai",
+    "headquarters": "Menlo Park, CA (operations in Texas)",
+    "location": "Austin, Texas (HQ historically Menlo Park)",
+    "industry": "Autonomous driving / Trucking / AI",
+    "primary_offer_lane": "ai-patent",
+    "secondary_offer_lanes": [
+      "tech-gc"
+    ],
+    "scores": {
+      "fit_score": 84,
+      "urgency_score": 76,
+      "value_potential_score": 80,
+      "combined_priority_score": 80
+    },
+    "lane_fit_score": {
+      "ai-patent": 4,
+      "ai-compliance": 2,
+      "tech-gc": 3,
+      "ma-readiness": 2
+    },
+    "prospect_id": "prospect_kodiak_ai_20260524",
+    "segment": "ai-patent",
+    "lead_magnet": "AI Patent Strategy Scorecard",
+    "recommended_offer": "Productized: Autonomous Systems IP Portfolio Alignment Review",
+    "source_url": "https://investors.kodiak.ai/corporate-governance/management-team",
+    "source_note": "Founded 2018 by Don Burnette; public via SPAC; Bosch partnership for production-ready truck autonomy hardware (CES 2026); Kodiak Driver-powered autonomous truck delivered to Atlas Energy Solutions",
+    "pipeline_stage": "research_staged",
+    "risk_level": "attorney_review_required",
+    "suppression_status": "consent_gap_no_auto_send",
+    "conflicts_status": "required_before_send",
+    "owner": "qwen-local",
+    "notes": "Research-only nightly candidate. No outreach authorization; attorney review, conflicts, suppression, and source-current checks required before external use."
+  },
+  "contacts": [
+    {
+      "name": "Don Burnette",
+      "title": "CEO & Founder",
+      "role_category": "ceo-patent",
+      "publicly_verified": true,
+      "confidence": 88,
+      "source_url": "https://investors.kodiak.ai/corporate-governance/management-team",
+      "source_type": "first-party-investor-relations",
+      "email": null,
+      "linkedin_url": "https://www.linkedin.com/in/don-burnette",
+      "notes": "LinkedIn URL verified as current person profile. Over a decade in autonomous vehicle industry."
+    },
+    {
+      "name": "VP Engineering / General Counsel",
+      "title": "Unverified",
+      "role_category": "tech-gc",
+      "publicly_verified": false,
+      "confidence": 40,
+      "source_url": "https://investors.kodiak.ai/corporate-governance/management-team",
+      "source_type": "investor-relations-page",
+      "email": null,
+      "linkedin_url": null,
+      "notes": "Engineering and GC names not individually accessible from public investor page; role-target guidance only."
+    }
+  ],
+  "evidence": [
+    {
+      "source_url": "https://investors.kodiak.ai/corporate-governance/management-team",
+      "source_type": "first-party-investor-relations",
+      "fact_classification": "public",
+      "evidence_snippet": "Don Burnette has served as Kodiak's CEO since he founded the company in April 2018. Don is one of the autonomous vehicle industry's pioneers",
+      "supported_fact": "Don Burnette is CEO and founder; management team structure",
+      "confidence": "medium",
+      "corroboration": "public source cited in nightly research packet",
+      "safe_for_outreach": "conditional",
+      "safe_fact_for_copy": "Don Burnette is CEO and founder; management team structure",
+      "accessed_at": "2026-05-24"
+    },
+    {
+      "source_url": "https://kodiak.ai/news/kodiak-bosch-scale-autonomous-trucking-hardware",
+      "source_type": "first-party-press-release",
+      "fact_classification": "public",
+      "evidence_snippet": "Kodiak AI and Bosch Partner to Scale Autonomous Trucking Hardware",
+      "supported_fact": "Bosch partnership for production-ready truck autonomy",
+      "confidence": "medium",
+      "corroboration": "public source cited in nightly research packet",
+      "safe_for_outreach": "conditional",
+      "safe_fact_for_copy": "Bosch partnership for production-ready truck autonomy",
+      "accessed_at": "2026-05-24"
+    },
+    {
+      "source_url": "https://www.prnewswire.com/news-releases/kodiak-robotics-unveils-its-next-generation-autonomous-truck-with-plans-to-more-than-double-its-self-driving-fleet-301386504.html",
+      "source_type": "credible-news-press",
+      "fact_classification": "public",
+      "evidence_snippet": "Kodiak Robotics Unveils Its Next-Generation Autonomous Truck with plans to more than double its self-driving fleet",
+      "supported_fact": "Next-gen autonomous truck hardware and fleet expansion plans",
+      "confidence": "medium",
+      "corroboration": "public source cited in nightly research packet",
+      "safe_for_outreach": "conditional",
+      "safe_fact_for_copy": "Next-gen autonomous truck hardware and fleet expansion plans",
+      "accessed_at": "2026-05-24"
+    }
+  ],
+  "outreach_drafts": [
+    {
+      "draft_type": "email",
+      "channel": "manual_email_review",
+      "title": "AI patent scorecard attorney-review angle: Kodiak AI",
+      "subject": "Attorney-review-only AI patent strategy angle for Kodiak AI",
+      "body": "ATTORNEY REVIEW ONLY — DO NOT SEND.\nTarget: Don Burnette, CEO & Founder\nPublic fact hook: Kodiak AI's Bosch partnership and first Kodiak Driver-powered truck deployment signal a critical phase in autonomous trucking IP strategy\nReadiness issue: Autonomous trucking companies at production scale must coordinate hardware patents (LiDAR perception, chassis integration) with software IP (Kodiak Driver autonomy stack) -- patent strategy alignment becomes critical\nSuggested lead magnet: AI Patent Strategy Scorecard -- /ai-patent-strategy-scorecard\nNext step: Productized: Autonomous Systems IP Portfolio Alignment Review\nCompliance notes: Does not guarantee patent availability; Does not imply Kodiak AI has a legal problem; Does not create attorney-client relationship; No Colorado/West claim without public source\nGuardrail: no outreach, workflow enrollment, trigger tags, LinkedIn/social action, Clio write, live CRM/Supabase sync, public/client-facing use, or send without Jeff exact approval plus attorney/conflicts/suppression review.",
+      "source_facts": [
+        "Kodiak AI's Bosch partnership and first Kodiak Driver-powered truck deployment signal a critical phase in autonomous trucking IP strategy"
+      ],
+      "source_urls": [
+        "https://investors.kodiak.ai/corporate-governance/management-team",
+        "https://kodiak.ai/news/kodiak-bosch-scale-autonomous-trucking-hardware",
+        "https://www.prnewswire.com/news-releases/kodiak-robotics-unveils-its-next-generation-autonomous-truck-with-plans-to-more-than-double-its-self-driving-fleet-301386504.html"
+      ],
+      "risk_level": "attorney_review_required",
+      "internal_review_notes": "Not approved for sending. Research-only local staging; requires attorney review, conflicts, suppression, source-current checks, and Jeff exact approval before external use."
+    }
+  ],
+  "source_candidate_path": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-24/prospect_candidates.json",
+  "normalized_store_path": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-24/prospect_candidates.normalized_for_store.json",
+  "guardrails": {
+    "external_action_allowed": false,
+    "approval_required": true,
+    "no_outreach_no_workflows_no_social_no_clio_no_live_sync": true,
+    "required_before_external_use": [
+      "Jeff exact approval",
+      "attorney review",
+      "conflicts check",
+      "suppression/opt-out check",
+      "source-current verification"
+    ]
+  },
+  "remediation_checklist": [
+    "Confirm Kodiak AI's current HQ status (Menlo Park vs Austin) via public source",
+    "Identify VP Engineering or GC name for second contact before outreach",
+    "Verify Colorado/West operational presence or craft national IP relevance angle",
+    "Check if Kodiak AI has public patent disclosures (USPTO) for additional evidence"
+  ],
+  "local_growth_os_prospect_id": "prospect_c6c776b4596056a65d055c7c",
+  "source_packet_prospect_id": "prospect_kodiak_ai_20260524",
+  "dedupe_note": "Local Growth OS store matched an existing prospect by domain and used the existing local prospect_id."
+}

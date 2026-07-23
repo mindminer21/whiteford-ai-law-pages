@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sereact Quarantine HOLD Decision Deck — 2026-05-15</title>
+  <style>
+    :root {
+      --ink: #121827;
+      --navy: #1f3f73;
+      --navy-dark: #152b4f;
+      --paper: #fffdf8;
+      --cream: #f4efe7;
+      --line: #d7cec0;
+      --line-strong: #b8ab99;
+      --muted: #5d6675;
+      --gold: #b88c50;
+      --red: #8d332d;
+      --red-soft: #fff0ed;
+      --sage: #557568;
+      --sage-soft: #edf5f0;
+      --amber: #7a581f;
+      --amber-soft: #fff7e6;
+      --white: #ffffff;
+      --shadow: 0 26px 80px rgba(18, 24, 39, 0.16);
+    }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      overflow: hidden;
+      color: var(--ink);
+      background:
+        linear-gradient(90deg, rgba(18,24,39,0.05) 1px, transparent 1px),
+        linear-gradient(180deg, rgba(18,24,39,0.035) 1px, transparent 1px),
+        var(--cream);
+      background-size: 72px 72px;
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+    }
+    button { font: inherit; }
+    button:focus-visible, a:focus-visible { outline: 4px solid rgba(184,140,80,0.55); outline-offset: 4px; }
+    code { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; background: #f0ebe2; border: 1px solid rgba(216,208,195,0.9); padding: 2px 7px; overflow-wrap: anywhere; }
+    .viewport { position: fixed; inset: 0; display: grid; place-items: center; padding: 24px; }
+    .deck { width: 1920px; height: 1080px; position: relative; transform-origin: center center; background: var(--paper); border: 1px solid var(--line-strong); box-shadow: var(--shadow); overflow: hidden; }
+    .slide { position: absolute; inset: 0; display: none; padding: 78px 100px 88px; background: var(--paper); opacity: 0; transform: translateX(18px); transition: opacity 160ms ease, transform 160ms ease; }
+    .slide.active { display: block; opacity: 1; transform: translateX(0); }
+    .slide::before { content: ""; position: absolute; inset: 0 0 auto 0; height: 13px; background: linear-gradient(90deg, var(--navy-dark), var(--navy), var(--gold)); }
+    .slide.boundary::before, .slide.hold::before { background: linear-gradient(90deg, var(--red), var(--navy-dark)); }
+    .slide.allowed::before { background: linear-gradient(90deg, var(--sage), var(--navy)); }
+    .texture { position: absolute; right: -185px; top: -235px; width: 650px; height: 650px; border-radius: 50%; border: 1px solid rgba(184,140,80,0.26); background: radial-gradient(circle, rgba(184,140,80,0.13), rgba(184,140,80,0.03) 58%, transparent 60%); pointer-events: none; }
+    h1, h2, h3, p { margin: 0; }
+    h1 { font-size: 92px; line-height: 0.98; letter-spacing: -0.055em; max-width: 1320px; }
+    h2 { font-size: 64px; line-height: 1; letter-spacing: -0.045em; max-width: 1450px; }
+    h3 { font-size: 30px; line-height: 1.1; letter-spacing: -0.02em; }
+    .eyebrow { color: var(--navy); font-size: 22px; font-weight: 900; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 22px; }
+    .lead { margin-top: 30px; max-width: 1260px; color: #354054; font-size: 32px; line-height: 1.28; text-wrap: pretty; }
+    .small { color: var(--muted); font-size: 22px; line-height: 1.36; }
+    .micro { color: var(--muted); font-size: 18px; line-height: 1.34; }
+    .hero-grid { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(500px, 0.8fr); gap: 48px; align-items: stretch; height: calc(100% - 20px); }
+    .hero-main { padding-top: 42px; }
+    .side-panel { background: var(--navy-dark); color: #fff; border: 1px solid rgba(255,255,255,0.12); padding: 42px; display: grid; gap: 28px; align-content: start; }
+    .side-panel p { color: #dce4f1; }
+    .verdict { font-size: 48px; line-height: 1; letter-spacing: -0.04em; font-weight: 900; }
+    .meta-table { border-top: 1px solid rgba(255,255,255,0.22); display: grid; }
+    .meta-row { display: grid; grid-template-columns: 190px 1fr; gap: 18px; border-bottom: 1px solid rgba(255,255,255,0.18); padding: 17px 0; font-size: 21px; }
+    .meta-row span { color: #cbd6ea; } .meta-row strong { color: #fff; overflow-wrap: anywhere; }
+    .pill-row { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 38px; }
+    .pill { min-height: 48px; display: inline-flex; align-items: center; border: 1px solid var(--line-strong); background: var(--white); padding: 10px 16px; font-size: 18px; font-weight: 900; letter-spacing: 0.075em; text-transform: uppercase; }
+    .pill.blocked { border-color: #d9aaa5; background: var(--red-soft); color: var(--red); }
+    .pill.safe { border-color: #a9bdae; background: var(--sage-soft); color: #365f51; }
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; margin-top: 36px; }
+    .three-col { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 34px; }
+    .card, .gate { border: 1px solid var(--line); background: var(--white); padding: 27px; position: relative; min-height: 172px; }
+    .card::before, .gate::before { content: ""; position: absolute; inset: 0 0 auto 0; height: 8px; background: var(--gold); }
+    .card.blocked::before, .gate.blocked::before { background: var(--red); }
+    .card.safe::before, .gate.safe::before { background: var(--sage); }
+    .card p, .gate p { margin-top: 14px; color: #354054; font-size: 22px; line-height: 1.31; }
+    .tag { display: inline-flex; margin-bottom: 18px; padding: 7px 10px; border: 1px solid var(--line); background: #fff; font-size: 16px; font-weight: 900; text-transform: uppercase; letter-spacing: 0.08em; }
+    .tag.blocked { color: var(--red); border-color: #d9aaa5; background: var(--red-soft); }
+    .tag.safe { color: #365f51; border-color: #a9bdae; background: var(--sage-soft); }
+    ul { margin: 16px 0 0; padding-left: 1.15em; }
+    li { margin-top: 8px; color: #354054; font-size: 21px; line-height: 1.26; }
+    .id-list { display: grid; gap: 10px; margin-top: 16px; }
+    .id-line { border: 1px solid var(--line); background: #fbf7ef; padding: 10px 14px; font-size: 18px; line-height: 1.22; overflow-wrap: anywhere; }
+    .id-line strong { color: var(--navy-dark); }
+    .decision-box { border: 2px solid var(--red); background: var(--red-soft); padding: 30px; margin-top: 34px; color: var(--red); font-size: 28px; line-height: 1.24; font-weight: 900; }
+    .compare { display: grid; grid-template-columns: 1fr 1fr; gap: 26px; margin-top: 34px; }
+    .choice { border: 1px solid var(--line-strong); background: #fff; padding: 30px; min-height: 360px; }
+    .choice.primary { border-color: #d9aaa5; background: var(--red-soft); }
+    .choice.secondary { border-color: #a9bdae; background: var(--sage-soft); }
+    .choice h3 { font-size: 38px; }
+    .choice p { margin-top: 14px; color: #354054; font-size: 24px; line-height: 1.28; }
+    .footer-note { position: absolute; left: 100px; right: 100px; bottom: 42px; border-top: 1px solid var(--line); padding-top: 16px; color: var(--muted); font-size: 18px; line-height: 1.34; }
+    .controls { position: fixed; left: 50%; bottom: 22px; transform: translateX(-50%); display: flex; align-items: center; gap: 10px; z-index: 10; background: rgba(255,253,248,0.94); border: 1px solid var(--line-strong); padding: 10px 12px; box-shadow: 0 12px 36px rgba(18,24,39,0.12); }
+    .controls button { min-width: 46px; min-height: 42px; border: 1px solid var(--line-strong); background: var(--white); color: var(--ink); cursor: pointer; font-weight: 900; }
+    .slide-count { min-width: 106px; text-align: center; color: var(--muted); font-size: 18px; font-weight: 900; letter-spacing: 0.08em; }
+    .skip { position: fixed; left: 18px; top: 18px; z-index: 20; background: #fff; color: var(--navy-dark); border: 1px solid var(--line-strong); padding: 10px 12px; transform: translateY(-140%); }
+    .skip:focus { transform: translateY(0); }
+    @media (prefers-reduced-motion: reduce) { .slide { transition: none; } }
+    @media print {
+      body { overflow: visible; background: #fff; }
+      .viewport { position: static; display: block; padding: 0; }
+      .deck { transform: none !important; width: auto; height: auto; border: 0; box-shadow: none; overflow: visible; }
+      .slide { display: block !important; position: relative; width: 100%; min-height: 100vh; opacity: 1; transform: none; page-break-after: always; }
+      .controls, .skip { display: none; }
+      h1 { font-size: 54pt; } h2 { font-size: 38pt; } .lead { font-size: 20pt; } li, .card p, .gate p { font-size: 14pt; }
+    }
+  </style>
+</head>
+<body>
+  <a href="#slide-1" class="skip">Skip to deck</a>
+  <main class="viewport" aria-label="Sereact quarantine HOLD decision deck">
+    <section class="deck" id="deck" aria-live="polite">
+      <article class="slide active allowed" id="slide-1" data-title="Cover">
+        <div class="texture"></div>
+        <div class="hero-grid">
+          <div class="hero-main">
+            <div class="eyebrow">Private / local decision deck</div>
+            <h1>Sereact quarantine HOLD decision</h1>
+            <p class="lead">A sparse Jeff/Whiteford decision aid for one narrow diagnostic problem: whether Sereact stays quarantined, or whether Jeff authorizes a future read-only diagnostic packet only.</p>
+            <div class="pill-row">
+              <span class="pill blocked">Default: HOLD</span>
+              <span class="pill safe">Internal decision prep only</span>
+              <span class="pill blocked">No mutation or outreach</span>
+            </div>
+          </div>
+          <aside class="side-panel">
+            <p class="verdict">Keep Sereact quarantined unless Jeff chooses a future read-only review.</p>
+            <div class="meta-table">
+              <div class="meta-row"><span>Task</span><strong>t_a47002eb</strong></div>
+              <div class="meta-row"><span>Parent packet</span><strong>t_a86b0bdc</strong></div>
+              <div class="meta-row"><span>Source file</span><strong>2026-05-15_sereact_quarantine_exact_approval_packet.md</strong></div>
+              <div class="meta-row"><span>Approved now</span><strong>Internal reading, discussion, attorney review, local docs, Kanban planning</strong></div>
+            </div>
+          </aside>
+        </div>
+      </article>
+
+      <article class="slide boundary" id="slide-2" data-title="Boundary">
+        <div class="eyebrow">Hard boundary</div>
+        <h2>This deck is not a control surface.</h2>
+        <p class="lead">It contains no execute controls, forms, source-browsing instructions, or live-system links. It restates the parent packet's no-mutation/no-external-action boundary for Sereact only.</p>
+        <div class="three-col">
+          <div class="card blocked"><span class="tag blocked">Not approved</span><h3>No record changes</h3><p>No SQLite, Supabase, HighLevel/CRM, Clio, dashboard-live, workflow, opportunity, tag, owner, source, contact, or prospect mutation.</p></div>
+          <div class="card blocked"><span class="tag blocked">Not approved</span><h3>No external touch</h3><p>No email, SMS, LinkedIn, social, ads, public pages, client/prospect-facing material, outreach, enrichment, or source-provider/public-source browsing.</p></div>
+          <div class="card safe"><span class="tag safe">Allowed now</span><h3>Read and decide</h3><p>Jeff may use the parent packet and this deck for private discussion, attorney review, local docs, and Kanban planning only.</p></div>
+        </div>
+        <p class="footer-note">Source facts are limited to the parent packet and its listed 2026-05-15 artifacts; no new public-source or live-system evidence was added.</p>
+      </article>
+
+      <article class="slide hold" id="slide-3" data-title="Why HOLD">
+        <div class="eyebrow">Why HOLD lands</div>
+        <h2>The packet-ready signal is a discrepancy, not readiness.</h2>
+        <div class="two-col">
+          <div class="card blocked"><span class="tag blocked">Lifecycle conflict</span><h3>Three opportunity records do not resolve into action</h3><p>One research-staged row has offer/contact values; one Agent Targeting row is missing contact; one HighLevel-derived orphan is marked <code>targeting-packet-ready</code> but lacks local prospect, offer, and contact links.</p></div>
+          <div class="card blocked"><span class="tag blocked">Clearance gap</span><h3>Suppression and conflicts are not cleared</h3><p>The local prospect has <code>consent_gap_no_auto_send</code> and <code>conflicts_status=required_before_send</code>; the suppression check remains <code>final_clearance=not_cleared</code>.</p></div>
+          <div class="card blocked"><span class="tag blocked">Contact quality</span><h3>Person rows are incomplete and low-confidence</h3><p>Both named contacts have missing email, LinkedIn, and phone; confidence is 65; source URL is Instagram; suppression is <code>not_checked</code>.</p></div>
+          <div class="card blocked"><span class="tag blocked">Geography / source-current</span><h3>International fit and currentness remain unresolved</h3><p>Sereact is listed as Stuttgart, Germany / International non-Mountain-West. Current source evidence is diagnostic only and does not clear outreach or legal-marketing use.</p></div>
+        </div>
+      </article>
+
+      <article class="slide" id="slide-4" data-title="Exact scope">
+        <div class="eyebrow">Exact records in HOLD scope</div>
+        <h2>Keep these named records unchanged.</h2>
+        <div class="two-col">
+          <div class="card"><span class="tag">Core records</span><div class="id-list">
+            <div class="id-line"><strong>Prospect:</strong> prospect_ef30df45ad62c93981758ca3</div>
+            <div class="id-line"><strong>Research opportunity:</strong> opp_7aaf67df3d4d774803c8607d</div>
+            <div class="id-line"><strong>Agent Targeting opportunity:</strong> ghl-agent-targeting-prospect_ef30df45ad62c93981758ca3</div>
+            <div class="id-line"><strong>Orphan opportunity:</strong> ghl-opp-hUevEZZwjvyALchVzSzv</div>
+            <div class="id-line"><strong>Orphan prospect value:</strong> ghl-prospect-hUevEZZwjvyALchVzSzv</div>
+            <div class="id-line"><strong>GHL contact clue:</strong> 1a2gBW9IhpZfgnh6bT2K</div>
+          </div></div>
+          <div class="card"><span class="tag">Evidence / draft / queue records</span><div class="id-list">
+            <div class="id-line"><strong>Contacts:</strong> contact_be2ee5a1d75bffb184f923c5; contact_44ef39121d6425c00cb55936</div>
+            <div class="id-line"><strong>Evidence:</strong> evidence_503dba5c53be79168896c0a0; evidence_1e9082307bc731cd12f907f1</div>
+            <div class="id-line"><strong>Draft:</strong> draft_6c7ea9b4b76cc04ba5ff7819</div>
+            <div class="id-line"><strong>Approval:</strong> approval_6db0cd9880c934d168c383e5</div>
+            <div class="id-line"><strong>Suppression:</strong> suppress_7ea545e06cad606889f750d4</div>
+            <div class="id-line"><strong>Work items:</strong> work_nightly_agent_targeting_024634d5cebed23366c1; work-ghl-stage-hUevEZZwjvyALchVzSzv-2026-05-10T18-32-02-464Z</div>
+          </div></div>
+        </div>
+        <p class="footer-note">Parent packet path: /Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/growth-os/data-hygiene/2026-05-15_sereact_quarantine_exact_approval_packet.md</p>
+      </article>
+
+      <article class="slide allowed" id="slide-5" data-title="Two choices">
+        <div class="eyebrow">Narrow decision</div>
+        <h2>Only two safe choices belong in this deck.</h2>
+        <div class="compare">
+          <div class="choice primary"><h3>Choice A: HOLD quarantine</h3><p>Keep all Sereact lifecycle, packet-ready/orphan, contact-quality, source-current, suppression/conflicts, draft, approval, and work-item records unchanged.</p><p>This is the default recommendation.</p></div>
+          <div class="choice secondary"><h3>Choice B: Future read-only diagnostic packet only</h3><p>Authorize a later Sereact-only source-current/lifecycle review and evidence capture. It observes status; it does not clear, enrich, contact, browse beyond approved read-only scope, or mutate records.</p><p>Separate exact approval is required before that future work begins.</p></div>
+        </div>
+        <div class="decision-box">Not a choice here: local-only mutation-plan preparation, live mutation, source-access restoration/testing, enrichment, outreach, CRM movement, workflow action, or public/client/prospect-facing use.</div>
+      </article>
+
+      <article class="slide hold" id="slide-6" data-title="Stop conditions">
+        <div class="eyebrow">Stop conditions</div>
+        <h2>If any uncertainty appears, stay in HOLD.</h2>
+        <div class="three-col">
+          <div class="gate blocked"><span class="tag blocked">Approval gap</span><h3>No exact written approval</h3><p>Do not rely on a stage label, work item, draft, approval shell, internal note, this deck, or the parent packet as execution authority.</p></div>
+          <div class="gate blocked"><span class="tag blocked">Evidence gap</span><h3>Currentness or identity unresolved</h3><p>Stop if source evidence is stale, inaccessible, contradictory, source-blocked, not tied to the same company/contact, or missing exact paths/timestamps/timezone.</p></div>
+          <div class="gate blocked"><span class="tag blocked">Legal/clearance gap</span><h3>Consent/conflicts/contact quality unresolved</h3><p>Stop for missing or contradictory consent, suppression, opt-out, HighLevel DND, Clio/adverse-party, prior-touch, brand, attorney-review, or person-source evidence.</p></div>
+        </div>
+        <p class="lead">Business-development principle preserved: solve one narrow diagnostic problem completely, earn trust before consultation or follow-up, and keep any later follow-up opt-in-only, non-confidential, non-hypey, no-legal-advice/no-guarantee, and attorney-review-gated.</p>
+      </article>
+
+      <article class="slide allowed" id="slide-7" data-title="Decision readout">
+        <div class="eyebrow">Bottom line</div>
+        <h2>Recommended readout: HOLD Sereact quarantine.</h2>
+        <p class="lead">Jeff should choose HOLD unless he wants one narrow future read-only Sereact source-current/lifecycle diagnostic packet. That future lane must name exact scope, operator, evidence path, excluded systems, source-current timestamp, stop conditions, and required statuses to observe — not clear.</p>
+        <div class="three-col">
+          <div class="card safe"><span class="tag safe">Decision A</span><h3>HOLD now</h3><p>Preserve current records unchanged. Continue internal attorney/Whiteford discussion only.</p></div>
+          <div class="card safe"><span class="tag safe">Decision B</span><h3>Approve future read-only packet only</h3><p>Separate exact approval can authorize diagnostic review and evidence capture only.</p></div>
+          <div class="card blocked"><span class="tag blocked">Always excluded</span><h3>No execution</h3><p>No mutation, source restoration/testing, enrichment, outreach, sync, stage movement, workflow, social, public, or client/prospect-facing action.</p></div>
+        </div>
+        <p class="footer-note">Deck file: /Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/private-decks/2026-05-15_sereact_quarantine_hold_decision_deck.html</p>
+      </article>
+    </section>
+  </main>
+  <nav class="controls" aria-label="Slide controls">
+    <button type="button" id="prev" aria-label="Previous slide">‹</button>
+    <span class="slide-count" id="count">1 / 7</span>
+    <button type="button" id="next" aria-label="Next slide">›</button>
+  </nav>
+  <script>
+    (function () {
+      const slides = Array.from(document.querySelectorAll('.slide'));
+      const deck = document.getElementById('deck');
+      const count = document.getElementById('count');
+      let index = 0;
+      function scaleDeck() {
+        const scale = Math.min(window.innerWidth / 1968, window.innerHeight / 1128);
+        deck.style.transform = 'scale(' + Math.max(0.2, scale) + ')';
+      }
+      function show(nextIndex, updateHash) {
+        index = Math.max(0, Math.min(slides.length - 1, nextIndex));
+        slides.forEach((slide, i) => slide.classList.toggle('active', i === index));
+        count.textContent = (index + 1) + ' / ' + slides.length;
+        if (updateHash) history.replaceState(null, '', '#slide-' + (index + 1));
+      }
+      function fromHash() {
+        const match = location.hash.match(/slide-(\d+)/);
+        show(match ? Number(match[1]) - 1 : 0, false);
+      }
+      document.getElementById('prev').addEventListener('click', () => show(index - 1, true));
+      document.getElementById('next').addEventListener('click', () => show(index + 1, true));
+      window.addEventListener('keydown', (event) => {
+        if (event.key === 'ArrowRight' || event.key === 'PageDown' || event.key === ' ') { event.preventDefault(); show(index + 1, true); }
+        if (event.key === 'ArrowLeft' || event.key === 'PageUp') { event.preventDefault(); show(index - 1, true); }
+        if (event.key === 'Home') { event.preventDefault(); show(0, true); }
+        if (event.key === 'End') { event.preventDefault(); show(slides.length - 1, true); }
+      });
+      window.addEventListener('resize', scaleDeck);
+      window.addEventListener('hashchange', fromHash);
+      fromHash();
+      scaleDeck();
+    })();
+  </script>
+</body>
+</html>

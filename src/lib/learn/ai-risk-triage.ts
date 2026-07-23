@@ -306,7 +306,7 @@ img, svg { max-width: 100%; }
       <h1>Find the AI legal exposure <em>buyers will surface first.</em></h1>
       <p class="hero-sub">A five-minute triage maps your AI risk across four areas investors and acquirers consistently probe: data rights, output ownership, customer and vendor contracts, and internal governance. Receive a personalized risk profile, prioritized actions, and a printable personalized brief.</p>
       <div class="hero-cta-row">
-        <a href="#start" class="btn-primary">
+        <a href="/ai-risk-triage/start" class="btn-primary">
           Start the 5-minute triage
           <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3 9h12M10 4l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/></svg>
         </a>
@@ -415,7 +415,10 @@ img, svg { max-width: 100%; }
           <li>Report summary delivered through the approved HighLevel workflow</li>
           <li>Optional follow-up consultation scheduled in two clicks</li>
         </ul>
-        <div data-learn-report-slot="ai-risk-triage"></div>
+        <a href="/ai-risk-triage/start" class="btn-primary">
+          Start the 5-minute triage
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3 9h12M10 4l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/></svg>
+        </a>
       </div>
       <div class="report-mock">
         <div class="report-mock-header">

@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Whiteford AI-Assisted Invention Records Visual Direction — 2026-05-14</title>
+  <style>
+    :root {
+      --bg: #f7f5ef;
+      --paper: #fffdf8;
+      --ink: #121827;
+      --muted: #5d6678;
+      --blue: #213f77;
+      --gold: #b99057;
+      --sage: #55776a;
+      --line: #d8d0c3;
+      --soft-blue: rgba(33, 63, 119, 0.08);
+      --soft-gold: rgba(185, 144, 87, 0.15);
+      --soft-sage: rgba(85, 119, 106, 0.14);
+      --shadow: 0 26px 90px rgba(18, 24, 39, 0.12);
+    }
+
+    * { box-sizing: border-box; }
+
+    html, body { min-height: 100%; }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      background:
+        linear-gradient(90deg, rgba(18, 24, 39, 0.035) 1px, transparent 1px),
+        linear-gradient(180deg, rgba(18, 24, 39, 0.03) 1px, transparent 1px),
+        var(--bg);
+      background-size: 72px 72px;
+    }
+
+    main {
+      width: min(1440px, calc(100vw - 40px));
+      margin: 0 auto;
+      padding: 42px 0;
+    }
+
+    .frame {
+      aspect-ratio: 16 / 9;
+      min-height: 720px;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+      padding: clamp(28px, 4vw, 58px);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .frame::before {
+      content: "";
+      position: absolute;
+      inset: 22px;
+      border: 1px solid rgba(33, 63, 119, 0.08);
+      pointer-events: none;
+    }
+
+    .topline {
+      display: flex;
+      justify-content: space-between;
+      gap: 24px;
+      align-items: start;
+      position: relative;
+      z-index: 1;
+    }
+
+    .eyebrow {
+      color: var(--gold);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    h1 {
+      max-width: 1040px;
+      margin: 0;
+      color: var(--blue);
+      font-size: clamp(44px, 5.6vw, 86px);
+      line-height: 0.95;
+      letter-spacing: -0.06em;
+      text-wrap: balance;
+    }
+
+    .status {
+      min-width: 250px;
+      border: 1px solid var(--line);
+      background: #fbf8f0;
+      padding: 16px 18px;
+      font-size: 13px;
+      line-height: 1.45;
+      color: var(--muted);
+    }
+
+    .status strong { color: var(--ink); display: block; margin-bottom: 4px; }
+
+    .lede {
+      max-width: 900px;
+      margin: 20px 0 0;
+      color: var(--muted);
+      font-size: clamp(18px, 1.8vw, 25px);
+      line-height: 1.38;
+    }
+
+    .board {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 320px;
+      gap: 24px;
+      align-items: stretch;
+      margin: 36px 0 26px;
+    }
+
+    .map {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .card {
+      border: 1px solid var(--line);
+      background: linear-gradient(180deg, #fffefa, #fbf7ef);
+      padding: 24px;
+      min-height: 360px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .card:nth-child(1) .marker { background: var(--soft-blue); color: var(--blue); }
+    .card:nth-child(2) .marker { background: var(--soft-sage); color: #355f52; }
+    .card:nth-child(3) .marker { background: var(--soft-gold); color: #7b5730; }
+
+    .marker {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      font-weight: 900;
+      margin-bottom: 42px;
+      border: 1px solid rgba(18, 24, 39, 0.06);
+    }
+
+    h2 {
+      margin: 0 0 12px;
+      color: var(--ink);
+      font-size: clamp(23px, 2vw, 31px);
+      line-height: 1;
+      letter-spacing: -0.045em;
+    }
+
+    ul {
+      margin: 0;
+      padding-left: 18px;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.58;
+    }
+
+    .caption {
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.4;
+      border-top: 1px solid var(--line);
+      padding-top: 16px;
+      margin-top: 22px;
+    }
+
+    .side {
+      border: 1px solid var(--line);
+      background: #f8f3e9;
+      padding: 24px;
+      display: grid;
+      align-content: space-between;
+      gap: 24px;
+    }
+
+    .side h2 {
+      color: var(--blue);
+      font-size: 27px;
+      margin-bottom: 16px;
+    }
+
+    .route {
+      border: 1px solid rgba(33, 63, 119, 0.22);
+      background: var(--blue);
+      color: white;
+      padding: 18px;
+      font-weight: 800;
+      line-height: 1.25;
+      letter-spacing: -0.02em;
+    }
+
+    .route span {
+      display: block;
+      opacity: 0.78;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+
+    .caveat {
+      border-top: 1px solid rgba(18, 24, 39, 0.14);
+      padding-top: 18px;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.45;
+    }
+
+    .footer {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 24px;
+      align-items: end;
+      border-top: 1px solid var(--line);
+      padding-top: 18px;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.45;
+    }
+
+    .sources {
+      max-width: 900px;
+    }
+
+    .brand-note {
+      color: var(--ink);
+      font-weight: 750;
+      text-align: right;
+    }
+
+    @media (max-width: 1120px) {
+      .frame { aspect-ratio: auto; min-height: auto; }
+      .topline, .board, .footer { grid-template-columns: 1fr; display: grid; }
+      .status { min-width: 0; }
+      .map { grid-template-columns: 1fr; }
+      .card { min-height: auto; }
+      .marker { margin-bottom: 26px; }
+      .brand-note { text-align: left; }
+    }
+
+    @media print {
+      body { background: white; }
+      main { width: 100%; padding: 0; }
+      .frame { box-shadow: none; border-color: #999; min-height: auto; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="frame" aria-labelledby="title">
+      <header class="topline">
+        <div>
+          <div class="eyebrow">Whiteford / Schell IP visual direction · Private local draft</div>
+          <h1 id="title">AI helped build it. Can the record explain the human invention story?</h1>
+          <p class="lede">A restrained executive diagnostic board for AI/ML, robotics, autonomy, SaaS, cyber, and data teams preparing non-confidential questions before patent filing, diligence, or a patent-versus-trade-secret strategy decision.</p>
+        </div>
+        <aside class="status" aria-label="Review status">
+          <strong>Review posture</strong>
+          Internal/private artifact only. Attorney, ethics, brand, and source-current review required before any public use.
+        </aside>
+      </header>
+
+      <div class="board" aria-label="Human contribution record check concept board">
+        <div class="map">
+          <article class="card">
+            <div>
+              <div class="marker">1</div>
+              <h2>AI role</h2>
+              <ul>
+                <li>Generated candidates, options, code, text, designs, or analysis</li>
+                <li>Optimized parameters, tested outputs, or summarized prior work</li>
+                <li>Helped classify, label, compare, search, or refine technical material</li>
+              </ul>
+            </div>
+            <p class="caption">Visual treatment: quiet blue ledger column, not a futuristic “AI magic” panel.</p>
+          </article>
+
+          <article class="card">
+            <div>
+              <div class="marker">2</div>
+              <h2>Human contribution</h2>
+              <ul>
+                <li>Framed the technical problem and selected the design path</li>
+                <li>Made architecture, method, training, or implementation choices</li>
+                <li>Reviewed, modified, validated, rejected, or combined AI outputs</li>
+              </ul>
+            </div>
+            <p class="caption">Visual treatment: sage decision column showing judgment, selection, and validation.</p>
+          </article>
+
+          <article class="card">
+            <div>
+              <div class="marker">3</div>
+              <h2>Record evidence</h2>
+              <ul>
+                <li>Notebooks, prompts, outputs, commits, tests, diagrams, and disclosures</li>
+                <li>Decision logs, ownership documents, assignments, and contributor history</li>
+                <li>Confidential details screened before public forms, comments, or email replies</li>
+              </ul>
+            </div>
+            <p class="caption">Visual treatment: warm gold evidence column with paper-trail restraint.</p>
+          </article>
+        </div>
+
+        <aside class="side" aria-label="CTA framing and legal caveats">
+          <div>
+            <h2>Lead-magnet framing</h2>
+            <p class="caveat">The AI Patent Strategy Scorecard should feel like a preparation tool: identify human-contribution and record gaps before asking counsel to evaluate inventorship, ownership, patentability, filing strategy, or trade-secret treatment.</p>
+          </div>
+          <div class="route"><span>Draft CTA frame</span>Start the AI Patent Strategy Scorecard<br />/ai-patent-strategy-scorecard#scorecard</div>
+          <p class="caveat">No confidential invention details in public forms. No legal advice, no attorney-client relationship, and no determination of inventorship, ownership, patentability, allowance, validity, infringement, freedom to operate, or trade-secret treatment.</p>
+        </aside>
+      </div>
+
+      <footer class="footer">
+        <div class="sources">Source-current review anchors for any later public asset: USPTO AI Resources; Federal Register revised inventorship guidance for AI-assisted inventions; Google helpful, reliable, people-first content guidance. Verify legal status immediately before publication.</div>
+        <div class="brand-note">Palette: paper · ink · Whiteford blue · restrained gold · sage</div>
+      </footer>
+    </section>
+  </main>
+</body>
+</html>

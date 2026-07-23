@@ -1,0 +1,126 @@
+{
+  "task_id": "t_98b125c5",
+  "status": "partial",
+  "source_db": "/Users/jeff/.openclaw/projects/mountain-west-growth-os/data/growth-os.sqlite",
+  "target_project": "https://yidxnmxvtohaldkbypcv.supabase.co",
+  "sync_log": {
+    "sync_id": "sync-2026-05-14T08-10-12-487Z-b39e4572",
+    "sync_status": "partial",
+    "target_project": "https://yidxnmxvtohaldkbypcv.supabase.co",
+    "rows_attempted": 714,
+    "rows_synced": 111,
+    "blocker": "Skipped missing Supabase tables: source_evidence, suppression_checks, compliance_reviews, outreach_drafts, draft_audit_trail, outreach_channels, send_authorization_rules, execution_authorizations, ghl_sync_links, crm_integration_config, crm_field_mappings, crm_sync_batches, crm_sync_records, crm_audit_log, ghl_pipeline_blueprints, ghl_pipeline_stage_mappings, ghl_stage_action_rules, ghl_opportunity_stage_events, content_lanes, content_topics, content_sources, content_assets, kpi_snapshots, cohort_tracking, offer_performance, agent_productivity_metrics, weekly_growth_reports, hardening_checks, duplicate_candidates, source_freshness_checks, backup_exports"
+  },
+  "sync_result": {
+    "attempted": 714,
+    "synced": 111,
+    "skipped_tables": [
+      "source_evidence",
+      "suppression_checks",
+      "compliance_reviews",
+      "outreach_drafts",
+      "draft_audit_trail",
+      "outreach_channels",
+      "send_authorization_rules",
+      "execution_authorizations",
+      "ghl_sync_links",
+      "crm_integration_config",
+      "crm_field_mappings",
+      "crm_sync_batches",
+      "crm_sync_records",
+      "crm_audit_log",
+      "ghl_pipeline_blueprints",
+      "ghl_pipeline_stage_mappings",
+      "ghl_stage_action_rules",
+      "ghl_opportunity_stage_events",
+      "content_lanes",
+      "content_topics",
+      "content_sources",
+      "content_assets",
+      "kpi_snapshots",
+      "cohort_tracking",
+      "offer_performance",
+      "agent_productivity_metrics",
+      "weekly_growth_reports",
+      "hardening_checks",
+      "duplicate_candidates",
+      "source_freshness_checks",
+      "backup_exports"
+    ]
+  },
+  "nightly_2026_05_14_local_rows": [
+    {
+      "table": "prospects",
+      "local_2026_05_14_count": 0
+    },
+    {
+      "table": "work_items",
+      "local_2026_05_14_count": 0
+    },
+    {
+      "table": "approval_items",
+      "local_2026_05_14_count": 0
+    },
+    {
+      "table": "source_evidence",
+      "local_2026_05_14_count": 0
+    },
+    {
+      "table": "outreach_drafts",
+      "local_2026_05_14_count": 0
+    },
+    {
+      "table": "crm_sync_records",
+      "local_2026_05_14_count": 0
+    }
+  ],
+  "remote_core_verification": [
+    {
+      "table": "prospects",
+      "local_count": 39,
+      "remote_count": 39,
+      "local_2026_05_14_count": 0,
+      "remote_2026_05_14_count": 0
+    },
+    {
+      "table": "approval_items",
+      "local_count": 52,
+      "remote_count": 58,
+      "local_2026_05_14_count": 0,
+      "remote_2026_05_14_count": 0
+    },
+    {
+      "table": "agent_events",
+      "local_count": 6,
+      "remote_count": 6,
+      "local_2026_05_14_count": 0,
+      "remote_2026_05_14_count": 0
+    },
+    {
+      "table": "work_items",
+      "local_count": 14,
+      "remote_count": 14,
+      "local_2026_05_14_count": 0,
+      "remote_2026_05_14_count": 0
+    },
+    {
+      "table": "model_runs",
+      "local_count": 0,
+      "remote_count": 0
+    },
+    {
+      "table": "qa_reviews",
+      "local_count": 0,
+      "remote_count": 0,
+      "local_2026_05_14_count": 0,
+      "remote_2026_05_14_count": 0
+    }
+  ],
+  "blocker": "Expanded phase 6-11 Supabase tables are still absent from PostgREST schema cache; mirror helper skipped them instead of attempting DDL.",
+  "unblock_options": [
+    "Run /Users/jeff/.openclaw/projects/mountain-west-growth-os/supabase/phase6-11-combined-growth-os-schema.sql in Supabase SQL Editor for project yidxnmxvtohaldkbypcv, then rerun node scripts/sync-sqlite-to-supabase.mjs.",
+    "Provide a DDL-capable Postgres connection string such as SUPABASE_DB_URL or DATABASE_URL so psql can apply the migration.",
+    "Provide Supabase management/DDL-capable access or a logged-in Supabase browser session for the project SQL editor."
+  ],
+  "safety": "Internal/staging Supabase mirror only; no DDL, outreach, workflow activation, LinkedIn/social, Clio, ads, public/client-facing changes, or HighLevel writes were performed."
+}

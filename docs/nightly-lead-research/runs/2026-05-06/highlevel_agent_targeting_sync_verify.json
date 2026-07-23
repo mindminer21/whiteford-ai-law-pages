@@ -1,0 +1,50 @@
+{
+  "verified_at": "2026-05-07T05:02:01Z",
+  "method": "HighLevel GET /opportunities/:id for each created opportunity plus local SQLite ghl_sync_links readback",
+  "pipelineId": "Tbx4tA6wHv5lTwZPSHyZ",
+  "stageName": "Agent Targeting",
+  "stageId": "fd569cf4-979b-43b8-bd0f-78e807e80ff1",
+  "verifiedOpportunities": [
+    {
+      "company": "Kodiak Robotics",
+      "contactId": "U9kfeAN9w8ZRLj5nXIz8",
+      "opportunityId": "JbzdcCHJaBgpIJyt7ccc",
+      "oppName": "Kodiak Robotics — Agent Targeting",
+      "pipelineId": "Tbx4tA6wHv5lTwZPSHyZ",
+      "pipelineStageId": "fd569cf4-979b-43b8-bd0f-78e807e80ff1",
+      "status": "open"
+    },
+    {
+      "company": "Nexar",
+      "contactId": "W4Nl8orLw9XRbxuqFSvu",
+      "opportunityId": "NzoQ2XJ4biAJWiUhKHgT",
+      "oppName": "Nexar — Agent Targeting",
+      "pipelineId": "Tbx4tA6wHv5lTwZPSHyZ",
+      "pipelineStageId": "fd569cf4-979b-43b8-bd0f-78e807e80ff1",
+      "status": "open"
+    },
+    {
+      "company": "Rigetti Computing",
+      "contactId": "u8I3Yr7RTDSHJlpp7WyS",
+      "opportunityId": "lG8g7kmVJ6JXx7tD4NES",
+      "oppName": "Rigetti Computing — Agent Targeting",
+      "pipelineId": "Tbx4tA6wHv5lTwZPSHyZ",
+      "pipelineStageId": "fd569cf4-979b-43b8-bd0f-78e807e80ff1",
+      "status": "open"
+    }
+  ],
+  "localDbVerification": {
+    "ghl_sync_links": 6,
+    "prospectsPipelineStage": "agent-targeting",
+    "crm_sync_recordsStatus": "synced",
+    "crm_sync_batchStatus": "ok"
+  },
+  "safetyVerification": {
+    "noSends": true,
+    "noWorkflowEnrollment": true,
+    "noTagsAdded": true,
+    "noLinkedInActions": true,
+    "createdContactsAreCompanyLevelPlaceholders": true,
+    "createdContactsDndEnabled": true
+  }
+}

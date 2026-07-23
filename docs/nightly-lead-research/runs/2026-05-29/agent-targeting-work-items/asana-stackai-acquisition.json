@@ -1,0 +1,163 @@
+{
+  "prospect_id": "asana-stackai-20260529",
+  "company": {
+    "prospect_id": "prospect_asana_stackai_acquisition_20260529",
+    "name": "Asana / StackAI (Acquisition)",
+    "domain": "asana.com",
+    "website_url": "https://asana.com/",
+    "location": "San Francisco, CA / New York, NY",
+    "state_region": "CA/NY",
+    "industry": "AI productivity platform / no-code agent builder M&A",
+    "segment": "ma-readiness",
+    "primary_offer_lane": "ma-readiness",
+    "source_type": "nightly_public_source_research",
+    "source_url": "https://techcrunch.com/2026/05/28/asana-acquires-no-code-agent-builder-stackai/",
+    "source_note": "Asana (productivity platform) acquires StackAI (no-code agent-builder startup). AI agent-building technology enters Asana's platform. Asana is public (NYSE: ASANA).\nfunding_stage: Acquired; funding_amount: undisclosed; valuation: undisclosed\nGate status: normalized from parent nightly qwen-local browser-fallback payload; no live enrichment performed by ops staging.",
+    "pipeline_stage": "research_staged",
+    "scores": {
+      "fit_score": 60,
+      "urgency_score": 60,
+      "value_potential_score": 60,
+      "combined_priority_score": 60,
+      "contact_confidence": 25
+    },
+    "lead_magnet": "AI M&A IP Checklist",
+    "recommended_offer": "AI Acquisition IP Due Diligence",
+    "risk_level": "attorney_review_required",
+    "suppression_status": "consent_gap_no_auto_send",
+    "conflicts_status": "required_before_send",
+    "owner": "qwen-local",
+    "notes": "Research-only nightly candidate. No outreach authorization; attorney review, conflicts, suppression, source-current checks, and Jeff exact approval required before external use.\nUpstream summary: Asana (productivity platform) acquires StackAI (no-code agent-builder startup). AI agent-building technology enters Asana's platform. Asana is public (NYSE: ASANA).\nOutreach hypothesis: StackAI's no-code agent-building technology likely involves novel IP assets worth protecting and integrating.\nSafe next action from source payload: Monitor acquisition terms and IP integration disclosures.\nValidation caveat: Ops normalized the parent qwen-local/browser-fallback payload only; no new external enrichment or source-current verification was performed during this staging task. Domains/locations are local dedupe hints and must be source-current verified before external use."
+  },
+  "contacts": [
+    {
+      "name": "Duxin Sui",
+      "title": "StackAI CEO & Founder",
+      "role_category": "executive",
+      "email": null,
+      "linkedin_url": null,
+      "phone": null,
+      "source_url": "https://techcrunch.com/2026/05/28/asana-acquires-no-code-agent-builder-stackai/",
+      "source_type": "news_payload_unverified_contact",
+      "permission_basis": "public-source research; attorney review required before outreach",
+      "confidence": 25,
+      "suppression_status": "not_checked"
+    }
+  ],
+  "evidence": [
+    {
+      "evidence_id": "evidence_8f847146d1403df8bc6433c1",
+      "source_url": "https://techcrunch.com/2026/05/28/asana-acquires-no-code-agent-builder-stackai/",
+      "accessed_at": "2026-05-29",
+      "source_type": "news",
+      "fact_classification": "public",
+      "evidence_snippet": "Asana (productivity platform) acquires StackAI (no-code agent-builder startup). AI agent-building technology enters Asana's platform. Asana is public (NYSE: ASANA).",
+      "supported_fact": "Asana (productivity platform) acquires StackAI (no-code agent-builder startup). AI agent-building technology enters Asana's platform. Asana is public (NYSE: ASANA).",
+      "confidence": "medium",
+      "corroboration": "parent qwen-local browser-sourced research; source-current refresh required before external use",
+      "safe_for_outreach": "conditional",
+      "safe_fact_for_copy": "Asana (productivity platform) acquires StackAI (no-code agent-builder startup). AI agent-building technology enters Asana's platform. Asana is public (NYSE: ASANA)."
+    },
+    {
+      "evidence_id": "evidence_12c99827d62b8589a8fe1fb5",
+      "source_url": "https://techcrunch.com/2026/05/28/asana-acquires-no-code-agent-builder-stackai/",
+      "accessed_at": "2026-05-29",
+      "source_type": "news",
+      "fact_classification": "public",
+      "evidence_snippet": "AI agent acquisition = IP transfer and integration opportunity. StackAI's no-code agent technology may involve novel workflow automation IP.",
+      "supported_fact": "AI agent acquisition = IP transfer and integration opportunity. StackAI's no-code agent technology may involve novel workflow automation IP.",
+      "confidence": "medium",
+      "corroboration": "parent qwen-local browser-sourced research; source-current refresh required before external use",
+      "safe_for_outreach": "conditional",
+      "safe_fact_for_copy": "AI agent acquisition = IP transfer and integration opportunity. StackAI's no-code agent technology may involve novel workflow automation IP."
+    },
+    {
+      "evidence_id": "evidence_8df6dd4a44e34463a20ed64e",
+      "source_url": "https://techcrunch.com/2026/05/28/asana-acquires-no-code-agent-builder-stackai/",
+      "accessed_at": "2026-05-29",
+      "source_type": "news",
+      "fact_classification": "public",
+      "evidence_snippet": "StackAI's no-code agent-building technology likely involves novel IP assets worth protecting and integrating.",
+      "supported_fact": "StackAI's no-code agent-building technology likely involves novel IP assets worth protecting and integrating.",
+      "confidence": "medium",
+      "corroboration": "parent qwen-local browser-sourced research; source-current refresh required before external use",
+      "safe_for_outreach": "conditional",
+      "safe_fact_for_copy": "StackAI's no-code agent-building technology likely involves novel IP assets worth protecting and integrating."
+    },
+    {
+      "evidence_id": "evidence_a8307b681576a69836aaf937",
+      "source_url": "https://techcrunch.com/2026/05/28/asana-acquires-no-code-agent-builder-stackai/",
+      "accessed_at": "2026-05-29",
+      "source_type": "news",
+      "fact_classification": "public",
+      "evidence_snippet": "funding_stage: Acquired; funding_amount: undisclosed; valuation: undisclosed",
+      "supported_fact": "funding_stage: Acquired; funding_amount: undisclosed; valuation: undisclosed",
+      "confidence": "medium",
+      "corroboration": "parent qwen-local browser-sourced research; source-current refresh required before external use",
+      "safe_for_outreach": "conditional",
+      "safe_fact_for_copy": "funding_stage: Acquired; funding_amount: undisclosed; valuation: undisclosed"
+    }
+  ],
+  "outreach_drafts": [
+    {
+      "draft_type": "email",
+      "channel": "manual_email_review",
+      "title": "AI M&A IP Checklist attorney-review angle: Asana / StackAI (Acquisition)",
+      "subject": "Attorney-review-only AI M&A IP Checklist angle for Asana / StackAI (Acquisition)",
+      "body": "ATTORNEY REVIEW ONLY — DO NOT SEND/POST.\nTarget: Duxin Sui\nProspect: Asana / StackAI (Acquisition)\nInternal hypothesis: StackAI's no-code agent-building technology likely involves novel IP assets worth protecting and integrating.\nSuggested lead magnet: AI M&A IP Checklist\nRequired before any external use: source-current verification, correct contact validation, conflicts check, suppression/opt-out/prior-touch checks, attorney review, and Jeff exact approval.",
+      "source_facts": [
+        "Asana (productivity platform) acquires StackAI (no-code agent-builder startup). AI agent-building technology enters Asana's platform. Asana is public (NYSE: ASANA).",
+        "AI agent acquisition = IP transfer and integration opportunity. StackAI's no-code agent technology may involve novel workflow automation IP.",
+        "StackAI's no-code agent-building technology likely involves novel IP assets worth protecting and integrating.",
+        "funding_stage: Acquired; funding_amount: undisclosed; valuation: undisclosed"
+      ],
+      "source_urls": [
+        "https://techcrunch.com/2026/05/28/asana-acquires-no-code-agent-builder-stackai/",
+        "https://techcrunch.com/2026/05/28/asana-acquires-no-code-agent-builder-stackai/",
+        "https://techcrunch.com/2026/05/28/asana-acquires-no-code-agent-builder-stackai/",
+        "https://techcrunch.com/2026/05/28/asana-acquires-no-code-agent-builder-stackai/"
+      ],
+      "risk_level": "attorney_review_required",
+      "internal_review_notes": "Not approved for sending or posting. Research-only local staging; requires attorney review, conflicts, suppression, source-current checks, and Jeff exact approval before external use."
+    }
+  ],
+  "validation_gates": {
+    "gate_1_live_source": "PARENT_BROWSER_FALLBACK_PAYLOAD_ONLY",
+    "source_status": "Parent qwen-local used browser fallback after search/extract quota failures; ops staging did not re-browse or enrich.",
+    "contact_validation": "low confidence/unverified contacts require enrichment before outreach",
+    "outreach_readiness": "attorney-review-only; no external action authorized"
+  },
+  "consent_gating": {
+    "ops_no_auto_send": true,
+    "consent_basis": "no_email_opt_in",
+    "approval_status": "no-auto-send",
+    "workflow_trigger_tags": [],
+    "suppression_tags": [
+      "newsletter:not-consented"
+    ]
+  },
+  "source_candidate_path": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-29/prospect_candidates.json",
+  "normalized_store_path": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-29/prospect_candidates.normalized_for_store.json",
+  "source_packet_prospect_id": "asana-stackai-20260529",
+  "local_growth_os_prospect_id": "prospect_asana_stackai_acquisition_20260529",
+  "task": "prepare_internal_attorney_review_agent_targeting_packet",
+  "guardrails": {
+    "external_action_allowed": false,
+    "approval_required": true,
+    "no_outreach_no_workflows_no_social_no_clio_no_live_sync": true,
+    "required_before_external_use": [
+      "Jeff exact approval",
+      "attorney review",
+      "conflicts check",
+      "suppression/opt-out/prior-touch check",
+      "source-current verification",
+      "contact identity correction/enrichment where flagged"
+    ]
+  },
+  "work_item_id": "work_nightly_agent_targeting_20260529_6c50df7e004f37626b6cb12d",
+  "remediation_checklist": [
+    "Attorney review required before external use.",
+    "Conflicts, suppression/opt-out, prior-touch, and source-current checks required before any outreach.",
+    "Do not send, post, tag, trigger workflows, sync live CRM/Supabase, or write Clio without Jeff exact approval."
+  ]
+}

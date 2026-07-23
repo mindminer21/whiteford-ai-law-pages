@@ -1,0 +1,132 @@
+{
+  "task": {
+    "id": "t_974f2141",
+    "title": "Review private Sunday decision packet review deck",
+    "body": "Parent: t_7df38ec8. Review the private Sunday decision packet review deck after it is created.\n\nObjective:\n- Verify `/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/digests/2026-05-10_sunday_decision_packet_review_deck.html` and any implementation note are accurate to the passed Sunday decision packet/re-review.\n- Confirm the artifact clearly separates internal review from approval/execution; it must not imply approval capture, public readiness, live HighLevel/Supabase/CRM/Clio authority, source-current prospecting, sends, posts, workflow actions, or public launch.\n- Confirm blocker lineage `t_fa6eb9c1` (Supabase expanded-schema DDL) and `t_53d470c6` (gated backfill/sync) are visible and correctly constrained.\n\nBusiness-development principle to preserve: deliver narrow diagnostic value first, make the buyer problem-aware, earn engaged time/trust before any consultation ask, and keep all follow-up opt-in-only; Whiteford/Schell IP legal copy must remain educational, non-hypey, non-confidential, attorney-review-gated, and no-ACR/no-legal-advice.\n\nDeliverables expected:\n- Write `/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/reviews/2026-05-10_sunday_decision_review_deck_review.md` with PASS / NEEDS REVISION verdict for internal Jeff/Whiteford decision prep only.\n- Update `/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/KANBAN_DELIVERABLE_INDEX.md`.\n- Leave the standard Kanban deliverable comment.\n\nAcceptance criteria:\n- If PASS: list exact remaining Jeff/manual approvals and confirm all external/live-system actions are withheld.\n- If NEEDS REVISION: name exact file/section/copy changes needed and create/leave a narrow follow-up recommendation.\n- No external/public action, no CRM/HighLevel mutation, no Supabase DDL/sync/backfill/row mutation, no Clio, no email/social/LinkedIn/ad action.\n",
+    "assignee": "reviewer",
+    "status": "done",
+    "priority": 83,
+    "tenant": "whiteford-mountain-west",
+    "workspace_kind": "dir",
+    "workspace_path": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages",
+    "created_by": "overnight-watchdog",
+    "created_at": 1778392219,
+    "started_at": 1778392860,
+    "completed_at": 1778393051,
+    "result": null,
+    "skills": []
+  },
+  "latest_summary": "Created the Sunday decision review deck review and updated the deliverable index. Verdict: PASS for internal Jeff/Whiteford decision prep only, with all external/live-system actions withheld and only the exact Tech GC local/no-token QA lane available for Jeff's separate manual approve-or-hold decision.",
+  "parents": [
+    "t_7df38ec8"
+  ],
+  "children": [],
+  "comments": [
+    {
+      "author": "reviewer",
+      "body": "Deliverable: /Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/reviews/2026-05-10_sunday_decision_review_deck_review.md\nSummary: PASS review for the private/local Sunday decision packet review deck, confirming blocker lineage, static/no-execution posture, and all external/live-system actions withheld.\nNext action: Jeff can use the deck only for internal decision prep and decide whether to approve the exact Tech GC local/no-token QA lane or hold; all public/live/CRM/HighLevel/Supabase/Clio/email/social actions still require later exact approval.",
+      "created_at": 1778393038
+    }
+  ],
+  "events": [
+    {
+      "kind": "created",
+      "payload": {
+        "assignee": "reviewer",
+        "status": "todo",
+        "parents": [
+          "t_7df38ec8"
+        ],
+        "tenant": "whiteford-mountain-west",
+        "skills": null
+      },
+      "created_at": 1778392219,
+      "run_id": null
+    },
+    {
+      "kind": "promoted",
+      "payload": null,
+      "created_at": 1778392836,
+      "run_id": null
+    },
+    {
+      "kind": "claimed",
+      "payload": {
+        "lock": "Jeffs-MacBook-Pro-2.local:39845",
+        "expires": 1778393760,
+        "run_id": 400
+      },
+      "created_at": 1778392860,
+      "run_id": 400
+    },
+    {
+      "kind": "spawned",
+      "payload": {
+        "pid": 39846
+      },
+      "created_at": 1778392860,
+      "run_id": 400
+    },
+    {
+      "kind": "commented",
+      "payload": {
+        "author": "reviewer",
+        "len": 598
+      },
+      "created_at": 1778393038,
+      "run_id": null
+    },
+    {
+      "kind": "completed",
+      "payload": {
+        "result_len": 0,
+        "summary": "Created the Sunday decision review deck review and updated the deliverable index. Verdict: PASS for internal Jeff/Whiteford decision prep only, with all external/live-system actions withheld and only the exact Tech GC local/no-token QA lane available for Jeff's separate manual approve-or-hold decision."
+      },
+      "created_at": 1778393051,
+      "run_id": 400
+    }
+  ],
+  "runs": [
+    {
+      "id": 400,
+      "profile": "reviewer",
+      "step_key": null,
+      "status": "done",
+      "outcome": "completed",
+      "summary": "Created the Sunday decision review deck review and updated the deliverable index. Verdict: PASS for internal Jeff/Whiteford decision prep only, with all external/live-system actions withheld and only the exact Tech GC local/no-token QA lane available for Jeff's separate manual approve-or-hold decision.",
+      "error": null,
+      "metadata": {
+        "changed_files": [
+          "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/reviews/2026-05-10_sunday_decision_review_deck_review.md",
+          "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/KANBAN_DELIVERABLE_INDEX.md"
+        ],
+        "verdict": "PASS for internal Jeff/Whiteford decision prep only",
+        "reviewed_artifacts": [
+          "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/digests/2026-05-10_sunday_decision_packet_review_deck.html",
+          "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/digests/2026-05-10_sunday_morning_decision_packet.md",
+          "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/reviews/2026-05-10_sunday_morning_decision_packet_rereview.md",
+          "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/ops/qmd_sunday_decision_refresh_2026-05-10.md"
+        ],
+        "verification": [
+          "business-development corpus queried for narrow diagnostic/problem-aware/opt-in principles",
+          "QMD queried for Sunday packet and Supabase blocker lineage",
+          "static HTML audit: 265 tags, no script/iframe/form/input/button/textarea/select tags, no remote http/https src/href refs",
+          "browser local 127.0.0.1 review: page loaded, zero console errors",
+          "browser vision QA: polished internal/local deck; five decision boxes visible/readable; no interactive approval or external-action controls implied"
+        ],
+        "remaining_manual_approvals": [
+          "Jeff approve/hold exact Tech GC local/no-token QA lane only",
+          "Jeff or named authorized Supabase admin decision for t_fa6eb9c1 DDL before any t_53d470c6 gated backfill/sync",
+          "source-access recovery approval and neutral smoke tests before prospecting",
+          "HighLevel documentation/read-only/sandbox/exact-scope choice; no mutation approved",
+          "authority route/CTA/UTM internal-review decisions only; public/email/social/HighLevel use held",
+          "attorney/legal/ethics/privacy/current-law/brand/sender/footer/unsubscribe/suppression/conflicts approvals before any external/live use"
+        ],
+        "safety": "No external/public action, CRM/HighLevel mutation, workflow action, Supabase DDL/sync/backfill/row mutation, Clio, email/social/LinkedIn/ad action, prospecting, credential use, or public deployment performed."
+      },
+      "worker_pid": null,
+      "started_at": 1778392860,
+      "ended_at": 1778393051
+    }
+  ]
+}

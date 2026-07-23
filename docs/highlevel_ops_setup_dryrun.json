@@ -1,0 +1,116 @@
+{
+  "apply": false,
+  "customFields": {
+    "approval_status": {
+      "dataType": "TEXT",
+      "name": "Approval Status",
+      "status": "missing"
+    },
+    "consent_basis": {
+      "dataType": "TEXT",
+      "name": "Consent Basis",
+      "status": "missing"
+    },
+    "decision_maker_priority": {
+      "dataType": "TEXT",
+      "name": "Decision Maker Priority",
+      "status": "missing"
+    },
+    "decision_maker_role": {
+      "dataType": "TEXT",
+      "name": "Decision Maker Role",
+      "status": "missing"
+    },
+    "enrichment_confidence": {
+      "dataType": "NUMERICAL",
+      "name": "Enrichment Confidence",
+      "status": "missing"
+    },
+    "enrichment_source_url": {
+      "dataType": "TEXT",
+      "name": "Enrichment Source URL",
+      "status": "missing"
+    },
+    "last_human_review_at": {
+      "dataType": "TEXT",
+      "name": "Last Human Review At",
+      "status": "missing"
+    },
+    "linkedin_draft_status": {
+      "dataType": "TEXT",
+      "name": "LinkedIn Draft Status",
+      "status": "missing"
+    },
+    "linkedin_profile_url": {
+      "dataType": "TEXT",
+      "name": "LinkedIn Profile URL",
+      "status": "missing"
+    },
+    "outreach_hypothesis": {
+      "dataType": "LARGE_TEXT",
+      "name": "Outreach Hypothesis",
+      "status": "missing"
+    },
+    "personalized_content_angle": {
+      "dataType": "LARGE_TEXT",
+      "name": "Personalized Content Angle",
+      "status": "missing"
+    },
+    "pipeline_next_action": {
+      "dataType": "TEXT",
+      "name": "Pipeline Next Action",
+      "status": "missing"
+    },
+    "suggested_offer_lane": {
+      "dataType": "TEXT",
+      "name": "Suggested Offer Lane",
+      "status": "missing"
+    }
+  },
+  "locationId": "tm68WWMrcAa3TqQbEAMa",
+  "safeScope": "tags and contact custom fields only",
+  "tags": {
+    "brand:whiteford-schellip": {
+      "status": "missing"
+    },
+    "enrichment:needs-research": {
+      "status": "missing"
+    },
+    "enrichment:public-source": {
+      "status": "missing"
+    },
+    "newsletter:daily-ai-authority": {
+      "status": "missing"
+    },
+    "ops:approval-approved": {
+      "status": "missing"
+    },
+    "ops:approval-required": {
+      "status": "missing"
+    },
+    "ops:approval-revise": {
+      "status": "missing"
+    },
+    "ops:no-auto-send": {
+      "status": "missing"
+    },
+    "outreach:do-not-send": {
+      "status": "missing"
+    },
+    "outreach:personalized-draft-ready": {
+      "status": "missing"
+    },
+    "social:attorney-review-required": {
+      "status": "missing"
+    },
+    "social:linkedin-draft": {
+      "status": "missing"
+    },
+    "workflow:draft-only": {
+      "status": "missing"
+    },
+    "workflow:manual-start": {
+      "status": "missing"
+    }
+  }
+}

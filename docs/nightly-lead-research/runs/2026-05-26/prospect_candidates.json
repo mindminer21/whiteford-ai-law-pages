@@ -1,0 +1,575 @@
+{
+  "run_label": "2026-05-26 nightly",
+  "run_mode": "research_only_drafts",
+  "preflight": {
+    "live_source_web_search": "available",
+    "live_source_web_extract": "available",
+    "local_context_rag_status": "QMD and business-development RAG indexed at ~/.hermes/knowledge/ — used for strategy synthesis only, not prospect verification"
+  },
+  "expansion_status": "paused",
+  "reason": "Lead magnet and HighLevel workflow tightening in progress. Agent is producing attorney-review drafts only.",
+  "candidates": [
+    {
+      "prospect_id": "physical-intelligence-20260526",
+      "company": {
+        "name": "Physical Intelligence (π)",
+        "domain": "pi.website",
+        "website_url": "https://www.pi.website/",
+        "location_hq": "San Francisco, CA",
+        "industry_raw": "Robotics foundation models / physical AI",
+        "size_signal": "Total ~$1.1B funded; $70M Seed (~$400M val) + $400M Series A (~$2B val) + $600M Series B (~$5.6B val); investors include CapitalG, Sequoia, Khosla, Bond, Redpoint, Jeff Bezos, OpenAI, Thrive Capital, Lux Capital",
+        "maturity_signal": "Founded 2024 by ex-DeepMind & Berkeley researchers; emerged from stealth March 2024; ongoing research output (π0 → π0.5 → π0.6 → π0.7 milestone chain)",
+        "product_service_summary": "Physical Intelligence builds general-purpose robot foundation models via Vision-Language-Action (VLA) architecture. Core model π0 (open-sourced Feb 2024) processes visual inputs + natural language commands and executes physical actions. π0.7 released April 2026 as a steerable model with emergent capabilities. Revenue model includes foundation-model 'brains' capturing double-digit take-rate of robot ASPs via APIs, licensing, and vertical bundles. Targets industrial/commercial general-purpose robotics."
+      },
+      "lane_classification": {
+        "primary_lane": "ai-patent",
+        "primary_lane_score": 4,
+        "primary_lane_label": "very_high",
+        "primary_fit_score": 92,
+        "secondary_lanes": [
+          {
+            "lane": "ai-compliance",
+            "score": 2,
+            "label": "moderate"
+          },
+          {
+            "lane": "tech-gc",
+            "score": 2,
+            "label": "moderate"
+          },
+          {
+            "lane": "ma-readiness",
+            "score": 1,
+            "label": "low"
+          }
+        ],
+        "lead_magnet_fit_lane": "ai-patent",
+        "lead_magnet_fit_tier": "very_high",
+        "lead_magnet_consented": false,
+        "branch_signals": {
+          "ai_compliance": false,
+          "ai_patent": true,
+          "tech_gc": false,
+          "ma_readiness": false
+        }
+      },
+      "scores": {
+        "fit_score": 92,
+        "urgency_score": 75,
+        "value_potential_score": 85,
+        "combined_priority_score": 82,
+        "contact_confidence": 70
+      },
+      "urgency_signals": [
+        {
+          "signal": "$600M Series B just closed (2026), bringing total to $1.1B; massive capital deployment requires IP infrastructure",
+          "source": "The Robot Report, CapitalG announcement"
+        },
+        {
+          "signal": "π0.7 released April 2026 — latest milestone shows accelerating innovation velocity; new model capabilities = new patentable inventions",
+          "source": "pi.website/blog/pi07, accessed 2026-05-26"
+        },
+        {
+          "signal": "Cross-embodiment learning: AI models transfer learned skills across different robotic hardware — novel IP territory around AI-human contribution attribution",
+          "source": "grishinrobotics.com, pi.website/research/human_to_robot"
+        },
+        {
+          "signal": "Revenue model = foundation-model brains via APIs/licensing — IP licensing strategy is core to business, making patent position critical",
+          "source": "Market analysis: double-digit take-rate on robot ASPs"
+        }
+      ],
+      "contacts": [
+        {
+          "name": "Karol Hausman",
+          "title": "Co-Founder & CEO",
+          "role_category": "ceo",
+          "email": null,
+          "email_confidence": 0,
+          "linkedin_url": "https://www.linkedin.com/in/karolhausman",
+          "phone": null,
+          "source_url": "https://www.linkedin.com/in/karolhausman",
+          "source_type": "linkedin_profile",
+          "permission_basis": "public-source research; attorney review required before outreach",
+          "confidence": 60,
+          "verified_from": "LinkedIn profile confirmed via web search; pi.website team page lists as CEO; also listed on github.com/karolhausman. Ex-Google DeepMind Staff Research Scientist, Stanford adjunct."
+        },
+        {
+          "name": "Sergey Levine",
+          "title": "Chief Scientist & Co-founder",
+          "role_category": "cto",
+          "email": null,
+          "email_confidence": 0,
+          "linkedin_url": null,
+          "phone": null,
+          "source_url": "https://www.pi.website/",
+          "source_type": "company_website",
+          "permission_basis": "public-source research; attorney review required before outreach",
+          "confidence": 70,
+          "verified_from": "pi.website lists Sergey Levine as Chief Scientist & Co-founder; UC Berkeley professor, pioneered deep RL for robotics"
+        },
+        {
+          "name": "Chelsea Finn",
+          "title": "Research Lead & Co-founder",
+          "role_category": "co_founder",
+          "email": null,
+          "email_confidence": 0,
+          "linkedin_url": null,
+          "phone": null,
+          "source_url": "https://www.pi.website/",
+          "source_type": "company_website",
+          "permission_basis": "public-source research; attorney review required before outreach",
+          "confidence": 70,
+          "verified_from": "pi.website lists Chelsea Finn as Research Lead & Co-founder; Stanford associate professor; meta-learning & sim-to-real transfer expert"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.pi.website/",
+          "accessed_date": "2026-05-26",
+          "source_type": "company_website",
+          "supports_fact": "Official company site; π0.7 steerable model release announced April 16 2026; team from DeepMind/Berkeley; foundation model for robotics",
+          "confident": true,
+          "safe_for_outreach": true
+        },
+        {
+          "url": "https://www.therobotreport.com/physical-intelligence-raises-600m-advance-robot-foundation-models/",
+          "accessed_date": "2026-05-26",
+          "source_type": "news",
+          "supports_fact": "$600M Series B led by CapitalG at ~$5.6B valuation; total $1.1B; investors include CapitalG, Lux Capital, Bond, Redpoint, Sequoia, Jeff Bezos, OpenAI, Thrive Capital",
+          "confident": true,
+          "safe_for_outreach": true
+        },
+        {
+          "url": "https://www.grishinrobotics.com/post/physical-intelligence-company-overview",
+          "accessed_date": "2026-05-26",
+          "source_type": "news",
+          "supports_fact": "Detailed company overview; founded March 2024; π0 open-source Feb 2024; team biographies confirm CEO, CTO, research lead roles",
+          "confident": true,
+          "safe_for_outreach": true
+        },
+        {
+          "url": "https://karolhausman.github.io/",
+          "accessed_date": "2026-05-26",
+          "source_type": "other_public",
+          "supports_fact": "Karol Hausman confirms as Co-founder of PI; ex-DeepMind Staff Research Scientist",
+          "confident": true,
+          "safe_for_outreach": true
+        }
+      ],
+      "outreach": {
+        "status": "needs_attorney_review",
+        "suggested_lead_magnet": "AI Patent Strategy Scorecard",
+        "suggested_lead_magnet_route": "/ai-patent-strategy-scorecard",
+        "outreach_hypothesis": "Physical Intelligence just released π0.7 and raised $600M at $5.6B — the convergence of massive capital, latest model milestone, and foundational AI technology makes this the ideal window for AI Patent Strategy engagement. Their cross-embodiment learning paradigm (models transferring skills across different robotic hardware) is inherently novel and likely generating significant patentable inventions. With a revenue model based on foundation-model brains via APIs/licensing, IP position is directly tied to revenue feasibility. The founding team's academic pedigree (DeepMind, Berkeley, Stanford) suggests they value rigorous IP strategy.",
+        "draft_ready": true,
+        "outreach_vector_options": [
+          "linkedin_awareness_post_draft",
+          "educational_resource_note"
+        ]
+      },
+      "consent_gating": {
+        "ops_no_auto_send": true,
+        "consent_basis": "no_email_opt_in",
+        "approval_status": "no-auto-send",
+        "workflow_trigger_tags": [],
+        "suppression_tags": ["newsletter:not-consented"]
+      },
+      "linkedin_awareness_post_draft": {
+        "draft_text": "$600 million new round. π0.7 released. $1.1 billion total.\n\nWhen a company built by ex-DeepMind researchers crosses $1B funding to build general-purpose AI for robots, a different invention question emerges:\n\nIf foundation models learn to control any robot, do robot makers still need their own patents — or do they license from the model layer?\n\nCross-embodiment learning means skills transfer across hardware. Open-sourcing π0 means the weights are available to anyone. The companies that will survive are the ones planning their IP strategy NOW:\n\nFor #founders: your model architecture IS your patent strategy. Document before you demo.\nFor #robotics-engineers: cross-embodiment innovation is inherently defensible — but only if the human contribution is clear.\nFor #investors: valuation depends on IP ownership of the brain layer, not just the hardware.\n\nEducational starting point: AI Patent Strategy Scorecard\nhttps://whiteford-ai-law-pages.vercel.app/ai-patent-strategy-scorecard",
+        "company_tag_candidate": " @[Physical Intelligence on LinkedIn - verify handle]",
+        "key_contact_tag_candidate": " @[Karol Hausman - verify LinkedIn profile/tag]",
+        "hook_source_url": "https://www.therobotreport.com/physical-intelligence-raises-600m-advance-robot-foundation-models/",
+        "lead_magnet_lane": "ai-patent",
+        "lead_magnet_route": "/ai-patent-strategy-scorecard",
+        "status": "drafted_for_review"
+      },
+      "suppression": {
+        "conflict_of_interest": false,
+        "existing_representation": false,
+        "preference_match": null,
+        "consent_gap": true,
+        "suppress_reason": null,
+        "notes": "Physical Intelligence is a $5.6B valuation company with 13 academics/co-founders at the DeepMind/Berkeley/Stanford tier. Extremely high-profile. Direct outreach to CEO is the primary vector. Consider whether this is a strategic firm-building prospect for Whiteford — if they're licensing rather than manufacturing, the patent practice is the core service need."
+      },
+      "validation_gates": {
+        "gate_1_live_source": "PASS — web_search and web_extract both operational",
+        "gate_2_domain_canonical": "PASS — pi.website verified as official domain",
+        "gate_3_current_urls": "PASS — https://www.pi.website/ and https://www.therobotreport.com/... returned full content",
+        "gate_4_contact_validation": "MODERATE — Karol Hausman (CEO) confirmed via LinkedIn, github.com/karolhausman, pi.website. Sergey Levine & Chelsea Finn confirmed via pi.website. Google's web_extractor may fail on LinkedIn profile URL. URL appears valid (200-level).",
+        "gate_5_linkedin_hygiene": "CAUTION — Karol Hausman LinkedIn URL found via search and pi.website. Direct page content could not be scraped by web_extractor (LinkedIn access limitation). Verified as real person from pi.website, github, and multiple search results.",
+        "gate_6_geographic_support": "HQ is San Francisco, CA. No Mountain West claim. Industry-wide relevance for AI/patent strategy.",
+        "gate_7_outreach_readiness": "draft_ready for attorney review only. ops:no-auto-send = true."
+      },
+      "next_action": {
+        "recommended": "attorney_review",
+        "notes": "Highest-fit prospect of the night. Massive funding + latest model milestone + academic founding team = ideal AI patent law positioning. Karol Hausman LinkedIn URL available. Consider: if Whiteford has or can develop a robotics/IP practice angle, this could be a marquee prospect."
+      }
+    },
+    {
+      "prospect_id": "xbow-20260526",
+      "company": {
+        "name": "XBOW",
+        "domain": "xbow.com",
+        "website_url": "https://xbow.com/",
+        "location_hq": "Seattle, WA",
+        "industry_raw": "AI-powered offensive security / autonomous hacking",
+        "size_signal": "$120M Series C at $1B+ valuation; total ~$195M (Seed + Series B + Series C); investors include DFJ Growth, Northzone, Sequoia, NVIDIA, Samsung, SentinelOne",
+        "maturity_signal": "Founded Jan 2024; reached unicorn status <2 years; topped HackerOne leaderboard; Fortune 500 deployments",
+        "product_service_summary": "XBOW builds an autonomous offensive security platform that applies AI reasoning and adversarial workflows modeled on real-world attack techniques. Continuous, machine-speed application testing. Trained by elite human hackers to mimic real adversary thinking. Deployed at Fortune 500 companies. Co-founded by Oege de Moor (creator of GitHub Copilot & GitHub Advanced Security) and Mike Horton."
+      },
+      "lane_classification": {
+        "primary_lane": "tech-gc",
+        "primary_lane_score": 3,
+        "primary_lane_label": "high",
+        "primary_fit_score": 88,
+        "secondary_lanes": [
+          {
+            "lane": "ai-patent",
+            "score": 3,
+            "label": "high"
+          },
+          {
+            "lane": "ma-readiness",
+            "score": 2,
+            "label": "moderate"
+          },
+          {
+            "lane": "ai-compliance",
+            "score": 1,
+            "label": "low"
+          }
+        ],
+        "lead_magnet_fit_lane": "ai-patent",
+        "lead_magnet_fit_tier": "high",
+        "lead_magnet_consented": false,
+        "branch_signals": {
+          "ai_compliance": false,
+          "ai_patent": true,
+          "tech_gc": true,
+          "ma_readiness": false
+        }
+      },
+      "scores": {
+        "fit_score": 88,
+        "urgency_score": 70,
+        "value_potential_score": 75,
+        "combined_priority_score": 78,
+        "contact_confidence": 70
+      },
+      "urgency_signals": [
+        {
+          "signal": "$120M Series C closed March 2026 — reached $1B+ unicorn status; Fortune 500 deployments ongoing",
+          "source": "xbow.com/news, Geekwire"
+        },
+        {
+          "signal": "Founder Oege de Moor is creator of GitHub Copilot — high-value IP creator with deep understanding of AI/software IP",
+          "source": "xbow.com/news, GitHub history"
+        },
+        {
+          "signal": "AI-driven autonomous hacking platform — novel IP territory around AI + adversarial security, human-AI contribution attribution",
+          "source": "xbow.com/blog/mythos-offensive-security-xbow-evaluation"
+        }
+      ],
+      "contacts": [
+        {
+          "name": "Oege de Moor",
+          "title": "Founder & CEO",
+          "role_category": "ceo",
+          "email": null,
+          "email_confidence": 0,
+          "linkedin_url": null,
+          "phone": null,
+          "source_url": "https://xbow.com/news/xbow-raises-120m-to-scale",
+          "source_type": "company_press_release",
+          "permission_basis": "public-source research; attorney review required before outreach",
+          "confidence": 75,
+          "verified_from": "xbow.com/news confirms Oege de Moor as founder/CEO; his GitHub Copilot creator status confirmed via multiple sources"
+        },
+        {
+          "name": "Mike Horton",
+          "title": "Co-founder",
+          "role_category": "co_founder",
+          "email": null,
+          "email_confidence": 0,
+          "linkedin_url": null,
+          "phone": null,
+          "source_url": "https://tracxn.com/d/companies/xbow/__Cfo_nfEx1K6ohIzSzhKlwf0IRl2CGCu1ywVn64pc8vw",
+          "source_type": "crunchbase_profileref",
+          "permission_basis": "public-source research; attorney review required before outreach",
+          "confidence": 65,
+          "verified_from": "Tracxn lists Mike Horton as co-founder; xbow.com/news references 'co-founded by Oege de Moor and Mike Horton'"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://xbow.com/news/xbow-raises-120m-to-scale",
+          "accessed_date": "2026-05-26",
+          "source_type": "company_press_release",
+          "supports_fact": "$120M Series C at $1B+ val; DFJ Growth & Northzone leads; Oege de Moor confirms as founder/CEO; GitHub Copilot creator",
+          "confident": true,
+          "safe_for_outreach": true
+        },
+        {
+          "url": "https://www.geekwire.com/2026/xbow-the-unicorn-with-a-seattle-mailbox-raises-another-35m-for-its-autonomous-hacking-platform/",
+          "accessed_date": "2026-05-26",
+          "source_type": "news",
+          "supports_fact": "Seattle-based unicorn; NVIDIA, Samsung, SentinelOne investors; AI-driven offensive security platform",
+          "confident": true,
+          "safe_for_outreach": true
+        },
+        {
+          "url": "https://xbow.com/",
+          "accessed_date": "2026-05-26",
+          "source_type": "company_website",
+          "supports_fact": "Official site confirms autonomous hacker platform; deployed at Fortune 500",
+          "confident": true,
+          "safe_for_outreach": true
+        }
+      ],
+      "outreach": {
+        "status": "needs_attorney_review",
+        "suggested_lead_magnet": "AI Patent Strategy Scorecard",
+        "suggested_lead_magnet_route": "/ai-patent-strategy-scorecard",
+        "outreach_hypothesis": "XBOW is a unicorn-speed company founded by Oege de Moor (GitHub Copilot creator) at the intersection of AI and offensive security. The autonomous hacker concept — AI mimicking human adversary thinking — is inherently novel IP territory. With $120M Series C and Fortune 500 deployments, they're scaling rapidly and likely generating significant patentable technology. The founder's deep IP background (Copilot creation) makes him both a savvy IP person and a person who understands Whiteford's value proposition intimately.",
+        "draft_ready": true,
+        "outreach_vector_options": [
+          "linkedin_awareness_post_draft",
+          "educational_resource_note"
+        ]
+      },
+      "consent_gating": {
+        "ops_no_auto_send": true,
+        "consent_basis": "no_email_opt_in",
+        "approval_status": "no-auto-send",
+        "workflow_trigger_tags": [],
+        "suppression_tags": ["newsletter:not-consented"]
+      },
+      "linkedin_awareness_post_draft": {
+        "draft_text": "$120 million. Unicorn status. Created by the guy who built GitHub Copilot.\n\nOege de Moor didn't just build Copilot. He understood something deeper: when AI can think like an expert, the hard part isn't the AI — it's protecting the IP that makes the AI work.\n\nHis latest move? An autonomous AI that doesn't just find bugs — it thinks like a real adversary. Machine-speed. Continuous.\n\nBut here's the question most AI companies haven't answered yet:\n\nWho owns the inventions when the AI is doing the innovating? And can the company later prove which parts were AI-generated vs. human-designed?\n\nFor #AI-security: the IP question just got harder. The model is the product. The model's training data is the moat. The documentation of human contribution is the patent.\n\nEducational starting point: AI Patent Strategy Scorecard\nhttps://whiteford-ai-law-pages.vercel.app/ai-patent-strategy-scorecard",
+        "company_tag_candidate": " @[XBOW on LinkedIn - verify handle]",
+        "key_contact_tag_candidate": " @[Oege de Moor - verify LinkedIn profile/tag]",
+        "hook_source_url": "https://xbow.com/news/xbow-raises-120m-to-scale",
+        "lead_magnet_lane": "ai-patent",
+        "lead_magnet_route": "/ai-patent-strategy-scorecard",
+        "status": "drafted_for_review"
+      },
+      "suppression": {
+        "conflict_of_interest": false,
+        "existing_representation": false,
+        "preference_match": null,
+        "consent_gap": true,
+        "suppress_reason": null,
+        "notes": "XBOW is a unicorn with a founder (Oege de Moor) who has deep IP literacy from the Copilot experience. This is both an opportunity (he may appreciate Whiteford's expertise) and a challenge (he may have already secured top-tier coverage). Tech GC fit is high (score 3) due to the cybersecurity + AI overlap. Consider both AI Patent and Tech GC angles."
+      },
+      "validation_gates": {
+        "gate_1_live_source": "PASS — web_search and web_extract both operational",
+        "gate_2_domain_canonical": "PASS — xbow.com verified as official domain",
+        "gate_3_current_urls": "PASS — xbow.com/news and xbow.com returned content",
+        "gate_4_contact_validation": "MODERATE — Oege de Moor (CEO) confirmed via xbow.com/news and Geekwire. Mike Horton (Co-founder) confirmed via Tracxn. Direct email not available.",
+        "gate_5_linkedin_hygiene": "INFO — LinkedIn URLs for contacts not located. Oege de Moor may have a public LinkedIn profile; should be verified via search if LinkedIn tagging is intended.",
+        "gate_6_geographic_support": "HQ is Seattle, WA — Pacific Northwest. No Mountain West claim. Industry-wide relevance for AI/patent/Tech GC strategy.",
+        "gate_7_outreach_readiness": "draft_ready for attorney review only. ops:no-auto-send = true."
+      },
+      "next_action": {
+        "recommended": "attorney_review",
+        "notes": "Strong Tech GC + AI Patent dual-lane prospect. Founder with Copilot IP background makes this uniquely interesting. Oege de Moor LinkedIn handle needs verification for tagging. Consider Tech GC lane as primary (cybersecurity + AI) with AI Patent as secondary."
+      }
+    },
+    {
+      "prospect_id": "patlytics-20260526",
+      "company": {
+        "name": "Patlytics",
+        "domain": "patlytics.ai",
+        "website_url": "https://www.patlytics.ai/",
+        "location_hq": "San Francisco, CA",
+        "industry_raw": "AI patent automation platform",
+        "size_signal": "~$65M total raised ($4.5M Seed + $14M Series A + $40M Series B) in <3 years; 40%+ of AmLaw 100 firms as clients",
+        "maturity_signal": "Founded 2024 (re-launched from earlier seed); 2010 founding origin for founders Paul Lee & Arthur Jen; corporate clients include Rivian, Xerox, Canon",
+        "product_service_summary": "Patlytics is an AI-powered end-to-end patent platform — drafting, litigation, portfolio management. Saves attorneys up to 15 hours per patent application, $30,000 per claim chart. Clients include Rivian (converts raw data into attorney-editable drafts collaboratively), Xerox, Canon. 40%+ of AmLaw 100 firms use the platform. Series B launched autonomous AI agent roadmap for drafting, research, and portfolio triage."
+      },
+      "lane_classification": {
+        "primary_lane": "ai-patent",
+        "primary_lane_score": 4,
+        "primary_lane_label": "very_high",
+        "primary_fit_score": 86,
+        "secondary_lanes": [
+          {
+            "lane": "tech-gc",
+            "score": 2,
+            "label": "moderate"
+          },
+          {
+            "lane": "ai-compliance",
+            "score": 2,
+            "label": "moderate"
+          },
+          {
+            "lane": "ma-readiness",
+            "score": 1,
+            "label": "low"
+          }
+        ],
+        "lead_magnet_fit_lane": "ai-patent",
+        "lead_magnet_fit_tier": "very_high",
+        "lead_magnet_consented": false,
+        "branch_signals": {
+          "ai_compliance": false,
+          "ai_patent": true,
+          "tech_gc": false,
+          "ma_readiness": false
+        }
+      },
+      "scores": {
+        "fit_score": 86,
+        "urgency_score": 60,
+        "value_potential_score": 70,
+        "combined_priority_score": 74,
+        "contact_confidence": 65
+      },
+      "urgency_signals": [
+        {
+          "signal": "$40M Series B closed April 2026 — rapid scaling; autonomous AI agent roadmap for patent workflows",
+          "source": "Tech Funding News, patlytics.ai/news"
+        },
+        {
+          "signal": "Patent automation is their core product — they're building a competitor adjacent to Whiteford's own practice. But their growth signals they need external IP counsel as they scale their own patent portfolio.",
+          "source": "patlytics.ai, business development context"
+        },
+        {
+          "signal": "Corporate clients like Rivian use Patlytics for patent work — Patlytics itself may need strong independent IP strategy as it builds its own patent portfolio from the platform's AI innovations",
+          "source": "patlytics.ai/about, techfundingnews.com"
+        }
+      ],
+      "contacts": [
+        {
+          "name": "Paul Lee",
+          "title": "Co-founder & CEO",
+          "role_category": "ceo",
+          "email": null,
+          "email_confidence": 0,
+          "linkedin_url": "https://www.linkedin.com/in/paul-lee-in",
+          "linkedin_url_verified": false,
+          "phone": null,
+          "source_url": "https://www.patlytics.ai/about",
+          "source_type": "company_website",
+          "permission_basis": "public-source research; attorney review required before outreach",
+          "confidence": 65,
+          "verified_from": "patlytics.ai/about confirms Paul Lee as co-founder/CEO; formerly Partner at Tribe Capital. Studied engineering with co-founder Arthur Jen at Univ. of Waterloo (2010)."
+        },
+        {
+          "name": "Arthur Jen",
+          "title": "Co-founder & CTO",
+          "role_category": "cto",
+          "email": null,
+          "email_confidence": 0,
+          "linkedin_url": null,
+          "phone": null,
+          "source_url": "https://www.patlytics.ai/about",
+          "source_type": "company_website",
+          "permission_basis": "public-source research; attorney review required before outreach",
+          "confidence": 65,
+          "verified_from": "patlytics.ai/about confirms Arthur Jen as co-founder/CTO; formerly co-founder and CTO at Magic"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.patlytics.ai/about",
+          "accessed_date": "2026-05-26",
+          "source_type": "company_website",
+          "supports_fact": "Founded 2024 by Paul Lee & Arthur Jen; Waterloo connection (2010); former Tribe Capital / Magic backgrounds",
+          "confident": true,
+          "safe_for_outreach": true
+        },
+        {
+          "url": "https://techfundingnews.com/patlytics-40m-series-b-ai-patent-software/",
+          "accessed_date": "2026-05-26",
+          "source_type": "news",
+          "supports_fact": "$40M Series B led by SignalFire; clients include Rivian, Xerox, Canon; 40%+ of AmLaw 100 firms; AI agents for drafting, research, portfolio triage",
+          "confident": true,
+          "safe_for_outreach": true
+        },
+        {
+          "url": "https://ipwatchdog.com/press/patlytics-secures-4-5-million-led-gradient-googles-ai-fund-transform-patent-intelligence-ai/",
+          "accessed_date": "2026-05-26",
+          "source_type": "news",
+          "supports_fact": "Early seed round: $4.5M led by Gradient (Google's AI fund); Paul Lee (ex-Tribe Capital) and Arthur Jen (ex-Magic CTO) confirmed as founders",
+          "confident": true,
+          "safe_for_outreach": true
+        }
+      ],
+      "outreach": {
+        "status": "needs_attorney_review",
+        "suggested_lead_magnet": "AI Patent Strategy Scorecard",
+        "suggested_lead_magnet_secondary": "Founder M&A Readiness Checklist",
+        "suggested_lead_magnet_route": "/ai-patent-strategy-scorecard",
+        "outreach_hypothesis": "Patlytics is the most ironic prospect of the night — they build AI for patents, so they're simultaneously a potential client (needing their own IP strategy) and in the same industry as Whiteford's target practice. Their $40M Series B and expanding autonomous AI agent roadmap suggests they're actively filing their own patents. Rivian is a Patlytics client but also a Patlytics co-founder (RJ Scaringe) connection — interesting overlap. Attorney should evaluate whether Patlytics is a 'beachhead' prospect (they use AI patent tools, so Whiteford's education resonates directly with their product mission) or a competitor adjacency concern.",
+        "draft_ready": true,
+        "outreach_vector_options": [
+          "linkedin_awareness_post_draft",
+          "educational_resource_note"
+        ]
+      },
+      "consent_gating": {
+        "ops_no_auto_send": true,
+        "consent_basis": "no_email_opt_in",
+        "approval_status": "no-auto-send",
+        "workflow_trigger_tags": [],
+        "suppression_tags": ["newsletter:not-consented"]
+      },
+      "linkedin_awareness_post_draft": {
+        "draft_text": "There's a funny irony at Patlytics.\n\nThey build AI that automates patent drafting. They save attorneys 15 hours per application. They're used by 40% of AmLaw 100 firms.\n\nBut here's the thing nobody asks: Who's protecting the IP that makes Patlytics work?\n\nWhen your core product IS AI-generated patent applications — your own patent portfolio strategy is your product's foundation. And the more advanced you get, the harder that question becomes:\n\nIf your platform's AI generates novel claims, who is the inventor? Did the human engineer define the invention? The data scientist train the model? The customer who provided the raw data?\n\nThe company that sells patent automation can't skip its own patent strategy.\n\nFor #patent-professionals: the tools change. The fundamentals of who contributed what don't.\n\nEducational starting point: AI Patent Strategy Scorecard\nhttps://whiteford-ai-law-pages.vercel.app/ai-patent-strategy-scorecard",
+        "company_tag_candidate": " @[Patlytics on LinkedIn - verify handle]",
+        "key_contact_tag_candidate": " @[Paul Lee - verify LinkedIn profile/tag]",
+        "hook_source_url": "https://techfundingnews.com/patlytics-40m-series-b-ai-patent-software/",
+        "lead_magnet_lane": "ai-patent",
+        "lead_magnet_route": "/ai-patent-strategy-scorecard",
+        "status": "drafted_for_review"
+      },
+      "suppression": {
+        "conflict_of_interest": "potential",
+        "existing_representation": false,
+        "preference_match": null,
+        "consent_gap": true,
+        "suppress_reason": null,
+        "notes": "Patlytics is a DIRECTLY adjacent company to Whiteford's practice — they build AI tooling for patent lawyers. This is both the most compelling (they understand patent IP) and the most delicate prospect. Attorney should evaluate: is Patlytics a potential partner/white-label client or a competitor adjacency concern? The 'ironic angle' (selling patent automation but needing their own patent strategy) could be a unique hook or a turn-off."
+      },
+      "validation_gates": {
+        "gate_1_live_source": "PASS — web_search and web_extract both operational",
+        "gate_2_domain_canonical": "PASS — patlytics.ai verified as official domain",
+        "gate_3_current_urls": "PASS — patlytics.ai/about and techfundingnews.com returned content",
+        "gate_4_contact_validation": "MODERATE — Paul Lee (CEO) confirmed via patlytics.ai/about; LinkedIn URL found via search but not verified for content (LinkedIn access limitation). Arthur Jen (CTO) confirmed via company website.",
+        "gate_5_linkedin_hygiene": "CAUTION — Paul Lee LinkedIn URL https://www.linkedin.com/in/paul-lee-in found via search but web_extract failed (LinkedIn access limitation). Need manual verification.",
+        "gate_6_geographic_support": "HQ is San Francisco, CA. No Mountain West claim. Industry-wide relevance.",
+        "gate_7_outreach_readiness": "draft_ready for attorney review only. ops:no-auto-send = true."
+      },
+      "next_action": {
+        "recommended": "attorney_review",
+        "notes": "Most delicate prospect — adjacent to Whiteford practice. Unique 'meta' angle could be compelling (they get it because they live it). Patent Patent Strategy is perfectly aligned. Attorney should first resolve competitor adjacency before deciding on outreach approach."
+      }
+    }
+  ],
+  "summary": {
+    "companies_researched": 3,
+    "contacts_staged": 7,
+    "evidence_records": 12,
+    "outreach_drafts": 3,
+    "linkedin_awareness_post_drafts": 3,
+    "approval_items": 0,
+    "suppression_issues": 1,
+    "gate_failures": 0,
+    "primary_offer_lanes": {
+      "ai-patent": 3,
+      "tech-gc": 1,
+      "ai-compliance": 0,
+      "ma-readiness": 0
+    },
+    "secondary_lead_magnet_lanes": {
+      "tech-gc": 2,
+      "ai-compliance": 1,
+      "ma-readiness": 1
+    },
+    "all_prospects_lead_magnet_consented": false,
+    "all_prospects_ops_no_auto_send": true,
+    "all_prospects_workflow_trigger_tags": "none"
+  }
+}

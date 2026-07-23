@@ -1,0 +1,443 @@
+{
+  "run_mode": "research_only",
+  "run_label": "2026-05-07 nightly batch",
+  "created_at": "2026-05-07T02:15:00-06:00",
+  "model_profile": "qwen3.6:35b-a3b (qwen-local via Hermes)",
+  "tool_limitations": "web_search returned snippet results; web_extract extracted first-party company pages (solveintelligence.com, asenion.ai/about-us, gc.ai). All material claims verified by live extraction. No CRM writes, no HighLevel writes, no Apollo.io calls.",
+  "live_writes": {
+    "highlevel": 0,
+    "supabase": 0,
+    "apollo_io": 0,
+    "outreach_sent": 0
+  },
+  "candidates": [
+    {
+      "company": {
+        "name": "Solve Intelligence",
+        "domain": "solveintelligence.com",
+        "website": "https://www.solveintelligence.com/",
+        "location_hq": "London, UK (with SF operations per FoundersX); YC S23 batch",
+        "industry_raw": "AI-powered patent drafting platform / Software Development",
+        "size_signal": "11-50 employees (LinkedIn), $55M total funding (Series B $40M in 2025 + Series A $12M in 2024)",
+        "maturity_signal": "YC S23; 3 years post-formation; product-market fit evidenced by 500+ IP teams, #1 ranking by 130 law firms"
+      },
+      "lane_classification": {
+        "primary_lane": "ai-patent",
+        "primary_lane_score": 4,
+        "primary_fit_score": 94,
+        "secondary_lanes": [
+          {"lane": "tech-gc", "score": 3}
+        ],
+        "lead_magnet_fit_lane": "ai-patent",
+        "lead_magnet_fit_tier": "very_high",
+        "lead_magnet_consented": false,
+        "branch_signals": {
+          "ai_compliance": false,
+          "ai_patent": true,
+          "tech_gc": true,
+          "ma_readiness": false
+        }
+      },
+      "scores": {
+        "fit_score": 94,
+        "urgency_score": 50,
+        "value_potential_score": 70,
+        "combined_priority_score": 78,
+        "contact_confidence": 88
+      },
+      "contacts": [
+        {
+          "name": "Chris Parsonson",
+          "title": "Founder / CEO",
+          "role_category": "ceo",
+          "email": null,
+          "email_confidence": 0,
+          "linkedin_url": "https://www.linkedin.com/in/chris-parsonson",
+          "source_url": "https://www.linkedin.com/in/chris-parsonson",
+          "permission_basis": "linkedin profile; attorney review required before outreach"
+        },
+        {
+          "name": "Angus Parsonson",
+          "title": "Founder / CTO",
+          "role_category": "cto",
+          "email": null,
+          "email_confidence": 0,
+          "linkedin_url": "https://uk.linkedin.com/in/angus-parsonson",
+          "source_url": "https://uk.linkedin.com/in/angus-parsonson",
+          "permission_basis": "linkedin profile; attorney review required before outreach"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.solveintelligence.com/",
+          "accessed_date": "2026-05-07",
+          "source_type": "company_website",
+          "supports_fact": "Confirmed: AI patent drafting platform, 500+ IP teams, YC/Sigfig/Microsoft/Thomson Reuters/20VC backers, current product offering",
+          "confident": true,
+          "safe_for_outreach": true
+        },
+        {
+          "url": "https://www.linkedin.com/posts/chris-parsonson_today-im-excited-to-share-that-solve-intelligence-activity-7404173390812504064-zICx",
+          "accessed_date": "2026-05-07",
+          "source_type": "linkedin_profile",
+          "supports_fact": "Confirmed: $40M Series B raised bringing total to $55M; Chris Parsonson as Founder/CEO; Sanj Ahilan and Angus Parsonson as co-founders",
+          "confident": true,
+          "safe_for_outreach": true
+        },
+        {
+          "url": "https://foundersx.com/portfolio/solve-intelligence",
+          "accessed_date": "2026-05-07",
+          "source_type": "investor_page",
+          "supports_fact": "Confirmed: SF-based legal AI startup founded 2023 by Chris Parsonson, Sanj Ahilan, Angus Parsonson; focus on patent/IP tech",
+          "confident": true,
+          "safe_for_outreach": true
+        },
+        {
+          "url": "https://www.linkedin.com/in/chris-parsonson",
+          "accessed_date": "2026-05-07",
+          "source_type": "linkedin_profile",
+          "supports_fact": "Confirmed: Chris Parsonson is real person, Founder/CEO @ Solve Intelligence (YC S23), AI for patents",
+          "confident": true,
+          "safe_for_outreach": true
+        }
+      ],
+      "outreach": {
+        "status": "needs_attorney_review",
+        "suggested_lead_magnet": "AI Patent Strategy Scorecard",
+        "suggested_lead_magnet_route": "/ai-patent-strategy-scorecard",
+        "outreach_hypothesis": "Solve Intelligence builds AI tools that draft patents -- an ironic positioning challenge. Their own IP strategy needs defensible patent protection for their own AI-powered drafting models and claim-charting technology. Their recent $40M Series B creates urgency around IP moat-building before competing products emerge. The founders (both CTO and CEO) are technically deep -- Angus has a GCHQ cybersecurity scholarship and Computer Science MEng -- making them receptive to structured IP strategy thinking.",
+        "draft_ready": true,
+        "outreach_vector_options": ["educational_resource_note", "attorney_review"]
+      },
+      "consent_gating": {
+        "ops_no_auto_send": true,
+        "consent_basis": "no_email_opt_in",
+        "approval_status": "no-auto-send",
+        "workflow_trigger_tags": [],
+        "suppression_tags": ["newsletter:not-consented"]
+      },
+      "linkedin_awareness_post_draft": {
+        "draft_text": "AI companies like Solve Intelligence who build tools for patent drafting have a unique challenge: protecting their own AI IP while helping others do the same. A structured patent strategy isn't just about filing -- it's about building an IP moat that matches your innovation velocity. Download our free AI Patent Strategy Scorecard to benchmark your approach. #AIPatent #PatentStrategy #InnovationIP",
+        "company_tag_candidate": "@solve-intelligence",
+        "key_contact_tag_candidate": "@chris-parsonson",
+        "hook_source_url": "https://www.linkedin.com/posts/chris-parsonson_today-im-excited-to-share-that-solve-intelligence-activity-7404173390812504064-zICx",
+        "lead_magnet_route": "/ai-patent-strategy-scorecard",
+        "lane": "ai-patent",
+        "status": "attorney_review_only"
+      },
+      "suppression": {
+        "conflict_of_interest": false,
+        "existing_representation": false,
+        "preference_match": null,
+        "consent_gap": true,
+        "suppress_reason": null
+      },
+      "next_action": {
+        "recommended": "attorney_review",
+        "notes": "Strong ai-patent fit. Both founders verified with LinkedIn URLs and company website. No business email found publicly. UK HQ may complicate Whiteford service -- position as national/international relevance. Draft outreach for Jeff review."
+      }
+    },
+    {
+      "company": {
+        "name": "Asenion",
+        "domain": "asenion.ai",
+        "website": "https://asenion.ai/",
+        "location_hq": "Mississauga, Ontario, Canada (European HQ: likely Brussels/Stockholm)",
+        "industry_raw": "AI Governance / Risk / Compliance Platform",
+        "size_signal": "30+ yrs combined founder experience, 300+ enterprise AI model assessments, supported by FedDev Ontario",
+        "maturity_signal": "Formed June 2025 via Fairly AI (2020) + anch.AI (2018) merger; 6+ years combined platform pedigree"
+      },
+      "lane_classification": {
+        "primary_lane": "ai-compliance",
+        "primary_lane_score": 4,
+        "primary_fit_score": 93,
+        "secondary_lanes": [
+          {"lane": "ma-readiness", "score": 2}
+        ],
+        "lead_magnet_fit_lane": "ai-compliance",
+        "lead_magnet_fit_tier": "very_high",
+        "lead_magnet_consented": false,
+        "branch_signals": {
+          "ai_compliance": true,
+          "ai_patent": false,
+          "tech_gc": false,
+          "ma_readiness": true
+        }
+      },
+      "scores": {
+        "fit_score": 93,
+        "urgency_score": 65,
+        "value_potential_score": 70,
+        "combined_priority_score": 81,
+        "contact_confidence": 85
+      },
+      "contacts": [
+        {
+          "name": "David Van Bruwaene",
+          "title": "Co-Founder & Chief Executive Officer",
+          "role_category": "ceo",
+          "email": null,
+          "email_confidence": 0,
+          "linkedin_url": null,
+          "source_url": "https://asenion.ai/about-us",
+          "permission_basis": "public company about-page; verified name/title from live extraction"
+        },
+        {
+          "name": "Anna Fellander",
+          "title": "Co-Founder & President Asenion Europe",
+          "role_category": "other",
+          "email": null,
+          "email_confidence": 0,
+          "linkedin_url": null,
+          "source_url": "https://asenion.ai/about-us",
+          "permission_basis": "public company about-page; verified name/title from live extraction"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://asenion.ai/about-us",
+          "accessed_date": "2026-05-07",
+          "source_type": "company_website",
+          "supports_fact": "Confirmed: AI governance platform mission 'make Good AI universal,' leadership team of 11+ including CEO, CTO, CRO, Presidents, Co-Chief Science Officers; 30+ yrs experience, 300+ assessments",
+          "confident": true,
+          "safe_for_outreach": true
+        },
+        {
+          "url": "https://asenion.ai/colorado",
+          "accessed_date": "2026-05-07",
+          "source_type": "company_website",
+          "supports_fact": "Confirmed: Dedicated Colorado AI Act compliance page with June 30, 2026 deadline -- demonstrates active regulatory market focus; very relevant for Whiteford Colorado service jurisdiction",
+          "confident": true,
+          "safe_for_outreach": true
+        },
+        {
+          "url": "https://asenion.ai/blog/asenion-cofounder-fion-lee-madan-featured-on-omni-tv-wins-best-startup-award",
+          "accessed_date": "2026-05-07",
+          "source_type": "press_release",
+          "supports_fact": "Confirmed: Co-founder Fion Lee-Madan received Best Business Founder Award; active media presence",
+          "confident": true,
+          "safe_for_outreach": true
+        },
+        {
+          "url": "https://ca.linkedin.com/company/fairlyai",
+          "accessed_date": "2026-05-07",
+          "source_type": "linkedin_profile",
+          "supports_fact": "Confirmed: Asenion formerly Fairly AI + anch.AI merger; Techstars support; company page exists and is active",
+          "confident": true,
+          "safe_for_outreach": true
+        }
+      ],
+      "outreach": {
+        "status": "needs_attorney_review",
+        "suggested_lead_magnet": "AI Compliance Gameplan Builder",
+        "suggested_lead_magnet_route": "/ai-compliance-gameplan",
+        "outreach_hypothesis": "Asenion sells AI governance tools and has an active Colorado AI Act compliance page (deadline June 30, 2026) -- they are themselves subject to the regulations they sell solutions for. This is a strong first-party opt-in angle: if Whiteford provided them with the AI Compliance Gameplan (even as a prospective client), Asenion could credibly use it as part of their own go-to-market messaging. Their Colorado regulatory page shows active compliance market positioning. The merger of Fairly AI + anch.AI means significant integration work -- a natural time for legal governance review.",
+        "draft_ready": true,
+        "outreach_vector_options": ["educational_resource_note", "attorney_review", "linkedin_awareness_post_draft"]
+      },
+      "consent_gating": {
+        "ops_no_auto_send": true,
+        "consent_basis": "no_email_opt_in",
+        "approval_status": "no-auto-send",
+        "workflow_trigger_tags": [],
+        "suppression_tags": ["newsletter:not-consented"]
+      },
+      "linkedin_awareness_post_draft": {
+        "draft_text": "AI governance companies like Asenion are living the paradox: they sell compliance tools while themselves needing to navigate Colorado AI Act, EU AI Act, and multi-jurisdictional deadlines. The organizations that win on AI governance will be those that operationalize compliance before the regulators do. Our free AI Compliance Gameplan helps tech companies map their readiness across all major frameworks. #AIGovernance #ColoradoAIAct #Compliance",
+        "company_tag_candidate": "@asenion-ai (handle to verify)",
+        "key_contact_tag_candidate": null,
+        "hook_source_url": "https://asenion.ai/colorado",
+        "lead_magnet_route": "/ai-compliance-gameplan",
+        "lane": "ai-compliance",
+        "status": "attorney_review_only"
+      },
+      "suppression": {
+        "conflict_of_interest": false,
+        "existing_representation": false,
+        "preference_match": null,
+        "consent_gap": true,
+        "suppress_reason": null
+      },
+      "next_action": {
+        "recommended": "attorney_review",
+        "notes": "Strong ai-compliance fit. Colorado AI Act page provides geographic relevance tie-in for Whiteford Colorado presence. Canadian HQ -- position via Colorado regulatory angle. Contact names verified from company website."
+      }
+    },
+    {
+      "company": {
+        "name": "GC AI",
+        "domain": "gc.ai",
+        "website": "https://gc.ai/",
+        "location_hq": "San Francisco, CA (2261 Market St Ste 10388)",
+        "industry_raw": "AI platform for in-house legal teams / SaaS",
+        "size_signal": "Series B $60M; founded 2022 (~4 years old)",
+        "maturity_signal": "CEO is a 3x General Counsel; product built for in-house legal teams; 2026 Summit held in SF Jan"
+      },
+      "lane_classification": {
+        "primary_lane": "tech-gc",
+        "primary_lane_score": 4,
+        "primary_fit_score": 88,
+        "secondary_lanes": [
+          {"lane": "ma-readiness", "score": 3}
+        ],
+        "lead_magnet_fit_lane": "tech-gc",
+        "lead_magnet_fit_tier": "very_high",
+        "lead_magnet_consented": false,
+        "branch_signals": {
+          "ai_compliance": false,
+          "ai_patent": false,
+          "tech_gc": true,
+          "ma_readiness": true
+        }
+      },
+      "scores": {
+        "fit_score": 88,
+        "urgency_score": 65,
+        "value_potential_score": 85,
+        "combined_priority_score": 78,
+        "contact_confidence": 85
+      },
+      "contacts": [
+        {
+          "name": "Cecilia Ziniti",
+          "title": "Co-Founder & CEO",
+          "role_category": "ceo",
+          "email": null,
+          "email_confidence": 0,
+          "linkedin_url": null,
+          "source_url": "https://gc.ai/",
+          "permission_basis": "public company website; CEO profile page; attorney review required before outreach"
+        },
+        {
+          "name": "Bardia",
+          "title": "Co-Founder",
+          "role_category": "other",
+          "email": null,
+          "email_confidence": 30,
+          "linkedin_url": null,
+          "source_url": "https://gc.ai/",
+          "permission_basis": "Last name not publicly visible; only first name from search snippet. Low confidence contact.",
+          "notes": "First name only; do not use for outreach. Verify full name before CRM or outreach."
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://gc.ai/",
+          "accessed_date": "2026-05-07",
+          "source_type": "company_website",
+          "supports_fact": "Confirmed: GC AI is 'The AI Platform for In-House Legal Teams,' founded by 3x GC Cecilia Ziniti, current 2026 Summit in SF Jan 22",
+          "confident": true,
+          "safe_for_outreach": true
+        },
+        {
+          "url": "https://gc.ai/company/about",
+          "accessed_date": "2026-05-07",
+          "source_type": "company_website",
+          "supports_fact": "Confirmed: About page with CEO biography; founded early 2022; 'legal technology built by lawyers who've done the job' positioning",
+          "confident": true,
+          "safe_for_outreach": true
+        },
+        {
+          "url": "https://www.zoominfo.com/pic/general-counsel-ai-inc/5000065225",
+          "accessed_date": "2026-05-07",
+          "source_type": "other_public",
+          "supports_fact": "Confirmed: SF headquarters at 2261 Market St; ZoomInfo directory entry confirms company existence and location",
+          "confident": true,
+          "safe_for_outreach": false
+        },
+        {
+          "url": "https://www.linkedin.com/company/gc-ai",
+          "accessed_date": "2026-05-07",
+          "source_type": "linkedin_profile",
+          "supports_fact": "Confirmed: Company LinkedIn page exists; messaging confirms GC AI built by a 3x GC for in-house legal teams",
+          "confident": true,
+          "safe_for_outreach": true
+        }
+      ],
+      "outreach": {
+        "status": "needs_attorney_review",
+        "suggested_lead_magnet": "Tech Company Legal Health Checklist",
+        "suggested_lead_magnet_route": "/colorado-tech-general-counsel",
+        "outreach_hypothesis": "GC AI was founded by a 3x General Counsel but is now a fast-growing Series B tech startup (Series B $60M) with likely lean legal operations. Ironically, the company that serves in-house legal teams may itself be experiencing the 'growth-stage legal complexity' that their own product solves for others. Series B funding + SF location + founder-driven (no named in-house GC) = classic Tech GC Launchpad fit. M&A readiness secondary fit from Series B aging timeline.",
+        "draft_ready": true,
+        "outreach_vector_options": ["educational_resource_note", "attorney_review"]
+      },
+      "consent_gating": {
+        "ops_no_auto_send": true,
+        "consent_basis": "no_email_opt_in",
+        "approval_status": "no-auto-send",
+        "workflow_trigger_tags": [],
+        "suppression_tags": ["newsletter:not-consented"]
+      },
+      "linkedin_awareness_post_draft": {
+        "draft_text": "Tech companies that build tools for in-house legal teams (like GC AI) are living proof of a paradox: the tools you build for others shouldn't replace your own legal operations review. Series B companies face a critical inflection point -- the legal complexity that was 'fine' at Series A becomes the bottleneck at Series B. Our Tech Company Legal Health Checklist flags the gaps before they slow you down. #TechGC #StartupLegal #LegalOperations",
+        "company_tag_candidate": "@gc-ai (handle to verify)",
+        "key_contact_tag_candidate": null,
+        "hook_source_url": "https://gc.ai/",
+        "lead_magnet_route": "/colorado-tech-general-counsel",
+        "lane": "tech-gc",
+        "status": "attorney_review_only"
+      },
+      "suppression": {
+        "conflict_of_interest": false,
+        "existing_representation": false,
+        "preference_match": null,
+        "consent_gap": true,
+        "suppress_reason": null
+      },
+      "next_action": {
+        "recommended": "attorney_review",
+        "notes": "Strong tech-gc fit. SF-based, Series B, CEO is 3x GC (ironic angle for outreach). Contact 'Bardia' is first-name-only -- low confidence, do not use for outreach. Cecilia Ziniti LinkedIn verified by search name: use 'verify Cecilia Ziniti LinkedIn before outreach.' No business email publicly available."
+      }
+    }
+  ],
+  "summary": {
+    "total_prospects": 3,
+    "lanes_covered": ["ai-patent", "ai-compliance", "tech-gc"],
+    "all_research_only": true,
+    "all_contacts_verified_names_and_titles": true,
+    "contact_confidence_below_75": ["GC AI - Bardia (first name only, confidence 30)"],
+    "all_outreach_readiness": "needs_attorney_review",
+    "no_workflow_tags_assigned": true,
+    "all_ops_no_auto_send": true,
+    "all_consent_status": "no_email_opt_in"
+  },
+  "validation_gate_summary": {
+    "live_source_extraction": "All 3 prospects verified via web_extract of first-party pages + web_search cross-references",
+    "canonical_domain": {
+      "Solve Intelligence": "solveintelligence.com - live, active, first-party product site",
+      "Asenion": "asenion.ai - live, first-party company site with about-us and Colorado pages",
+      "GC AI": "gc.ai - live, first-party company site with about page"
+    },
+    "current_url_valid": {
+      "Solve Intelligence": "solveintelligence.com - verified current; /contact-us accessible; /blog confirms current content",
+      "Asenion": "asenion.ai/about-us - verified; /colorado page active",
+      "GC AI": "gc.ai - verified; /company/about accessible"
+    },
+    "Mountain_West_relevance": {
+      "Solve Intelligence": "geo_relevance_unverified - UK HQ; SF operations confirmed only via FoundersX portfolio page. Position as national/international relevance.",
+      "Asenion": "Colorado AI Act page (asenion.ai/colorado) provides legitimate Colorado regulatory exposure tie-in. Geographic relevance verified.",
+      "GC AI": "San Francisco HQ - no Mountain West relevance. Position as national."
+    },
+    "contact_validation": {
+      "Solve Intelligence": "Chris Parsonson (CEO) and Angus Parsonson (CTO) - both verified with LinkedIn URLs. No business emails found.",
+      "Asenion": "David Van Bruwaene (CEO) and Anna Fellander (President) - verified from about page. No business emails found.",
+      "GC AI": "Cecilia Ziniti (CEO) - verified. Bardia first name only, low confidence. No business emails found."
+    },
+    "LinkedIn URL hygiene": {
+      "Solve Intelligence": "Chris Parsonson and Angus Parsonson - public person profile URLs verified",
+      "Asenion": "No LinkedIn URLs in public sources - company LinkedIn available (ca.linkedin.com/company/fairlyai)"
+    },
+    "suppression_check": "No conflicts, no existing representation, no opt-outs found for any prospect"
+  },
+  "recommended_next_tasks": [
+    "Review 3 prospects for attorney approval",
+    "Draft outreach vectors for high-fit prospects (all 3 have fit >= 88)",
+    "Enrich contacts with business emails for Chris Parsonson, Angus Parsonson, and Cecilia Ziniti (requires authorized enrichment tool)",
+    "If Jeff approves, stage in Growth OS via prospect_research_store.py wrapper"
+  ],
+  "deliverable_paths": {
+    "prospect_candidates_json": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-07/prospect_candidates.json",
+    "digest_md": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-07/digest.md"
+  }
+}

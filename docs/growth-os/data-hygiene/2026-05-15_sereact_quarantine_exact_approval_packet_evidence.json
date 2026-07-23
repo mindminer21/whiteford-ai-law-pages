@@ -1,0 +1,231 @@
+{
+  "task_id": "t_a86b0bdc",
+  "tenant": "whiteford-mountain-west",
+  "status": "internal_read_only_no_mutation_evidence",
+  "prepared_at": "2026-05-15 00:35:08 MDT",
+  "sqlite_path": "/Users/jeff/.openclaw/projects/mountain-west-growth-os/data/growth-os.sqlite",
+  "sqlite_access_mode": "file URI mode=ro&immutable=1 plus PRAGMA query_only=ON",
+  "boundaries": {
+    "performed": [
+      "read local Markdown inputs",
+      "read local JSON payload",
+      "read local SQLite with read-only immutable connection",
+      "wrote private Markdown/JSON decision-prep artifacts"
+    ],
+    "not_performed_or_authorized": [
+      "SQLite business-data mutation",
+      "Supabase mutation",
+      "HighLevel or CRM mutation",
+      "Clio write",
+      "dashboard-live mutation",
+      "workflow test, activation, or enrollment",
+      "source-provider access or public-source browsing",
+      "contact enrichment or prospect expansion",
+      "email, SMS, social, LinkedIn, YouTube, ad, public-page, or client/prospect-facing action"
+    ]
+  },
+  "exact_ids": {
+    "prospect": "prospect_ef30df45ad62c93981758ca3",
+    "research_staged_opportunity": "opp_7aaf67df3d4d774803c8607d",
+    "agent_targeting_opportunity": "ghl-agent-targeting-prospect_ef30df45ad62c93981758ca3",
+    "contacts": [
+      "contact_be2ee5a1d75bffb184f923c5",
+      "contact_44ef39121d6425c00cb55936"
+    ],
+    "orphan_opportunity": "ghl-opp-hUevEZZwjvyALchVzSzv",
+    "orphan_prospect_value": "ghl-prospect-hUevEZZwjvyALchVzSzv",
+    "ghl_payload_path": "/Users/jeff/.openclaw/projects/mountain-west-growth-os/logs/ghl-stage-poller/ghl-stage-hUevEZZwjvyALchVzSzv-2026-05-10T18-32-02-464Z-payload.json"
+  },
+  "prospect_rows": [
+    {
+      "prospect_id": "prospect_ef30df45ad62c93981758ca3",
+      "company_name": "Sereact",
+      "domain": "sereact.de",
+      "website_url": "https://sereact.de",
+      "location": "Stuttgart, Germany",
+      "state_region": "International / non-Mountain-West",
+      "industry": "AI robotics / Computer vision for autonomous systems",
+      "segment": "ai-patent",
+      "source_type": "nightly_public_source_research",
+      "source_url": "https://www.instagram.com/p/DXphxYMkek0/",
+      "pipeline_stage": "agent-targeting",
+      "fit_score": 94.0,
+      "urgency_score": 65.0,
+      "risk_level": "attorney_review_required",
+      "suppression_status": "consent_gap_no_auto_send",
+      "conflicts_status": "required_before_send",
+      "owner": "qwen-local",
+      "created_at": "2026-05-08T02:00:00-06:00",
+      "updated_at": "2026-05-08T08:39:18.849457Z"
+    }
+  ],
+  "missing_orphan_prospect_row": {
+    "prospect_id": "ghl-prospect-hUevEZZwjvyALchVzSzv",
+    "row_found_in_prospects": false
+  },
+  "opportunity_rows": [
+    {
+      "opportunity_id": "opp_7aaf67df3d4d774803c8607d",
+      "prospect_id": "prospect_ef30df45ad62c93981758ca3",
+      "contact_id": "contact_be2ee5a1d75bffb184f923c5",
+      "offer_id": "ai-patent",
+      "stage": "research_staged",
+      "owner": "qwen-local",
+      "source": "nightly_prospect_research",
+      "created_at": "2026-05-08T08:36:11+00:00",
+      "updated_at": "2026-05-08T08:36:11+00:00"
+    },
+    {
+      "opportunity_id": "ghl-agent-targeting-prospect_ef30df45ad62c93981758ca3",
+      "prospect_id": "prospect_ef30df45ad62c93981758ca3",
+      "contact_id": null,
+      "offer_id": "ai-patent",
+      "stage": "agent-targeting",
+      "estimated_value": 0.0,
+      "owner": "GHL",
+      "source": "gohighlevel",
+      "created_at": "2026-05-08T08:39:18.849457Z",
+      "updated_at": "2026-05-08T08:39:18.849457Z"
+    },
+    {
+      "opportunity_id": "ghl-opp-hUevEZZwjvyALchVzSzv",
+      "prospect_id": "ghl-prospect-hUevEZZwjvyALchVzSzv",
+      "contact_id": null,
+      "offer_id": null,
+      "stage": "targeting-packet-ready",
+      "owner": "GHL",
+      "source": "gohighlevel",
+      "created_at": "2026-05-10T18:32:02.464Z",
+      "updated_at": "2026-05-10T18:32:02.464Z"
+    }
+  ],
+  "contact_rows": [
+    {
+      "contact_id": "contact_44ef39121d6425c00cb55936",
+      "prospect_id": "prospect_ef30df45ad62c93981758ca3",
+      "name": "Marc Tuscher",
+      "title": "CTO",
+      "role_category": "cto",
+      "email": null,
+      "linkedin_url": null,
+      "phone": null,
+      "source_type": "other_public",
+      "source_url": "https://www.instagram.com/p/DXphxYMkek0/",
+      "confidence": 65.0,
+      "permission_basis": "public-source research; low-confidence contact (Instagram source only; no official bios or public profile URLs found; recommend verifying via company website before outreach)",
+      "suppression_status": "not_checked",
+      "created_at": "2026-05-08T08:36:11+00:00",
+      "updated_at": "2026-05-08T08:36:11+00:00"
+    },
+    {
+      "contact_id": "contact_be2ee5a1d75bffb184f923c5",
+      "prospect_id": "prospect_ef30df45ad62c93981758ca3",
+      "name": "Dr. Ralf Gulde",
+      "title": "CEO",
+      "role_category": "founder",
+      "email": null,
+      "linkedin_url": null,
+      "phone": null,
+      "source_type": "other_public",
+      "source_url": "https://www.instagram.com/p/DXphxYMkek0/",
+      "confidence": 65.0,
+      "permission_basis": "public-source research; low-confidence contact (Instagram source only; no official bios or public profile URLs found; recommend verifying via company website or Crunchbase before outreach)",
+      "suppression_status": "not_checked",
+      "created_at": "2026-05-08T08:36:11+00:00",
+      "updated_at": "2026-05-08T08:36:11+00:00"
+    }
+  ],
+  "source_evidence_rows": [
+    {
+      "evidence_id": "evidence_503dba5c53be79168896c0a0",
+      "prospect_id": "prospect_ef30df45ad62c93981758ca3",
+      "source_url": "https://www.instagram.com/p/DXphxYMkek0/",
+      "accessed_at": "2026-05-08",
+      "source_type": "other_public",
+      "confidence": "low",
+      "corroboration": "single public source; attorney review required before outreach",
+      "safe_for_outreach": "conditional"
+    },
+    {
+      "evidence_id": "evidence_1e9082307bc731cd12f907f1",
+      "prospect_id": "prospect_ef30df45ad62c93981758ca3",
+      "source_url": "https://sereact.de",
+      "accessed_at": "2026-05-08",
+      "source_type": "company_website",
+      "confidence": "high",
+      "corroboration": "single public source; attorney review required before outreach",
+      "safe_for_outreach": "conditional"
+    }
+  ],
+  "draft_approval_suppression_work_items": {
+    "outreach_drafts": [
+      {
+        "draft_id": "draft_6c7ea9b4b76cc04ba5ff7819",
+        "prospect_id": "prospect_ef30df45ad62c93981758ca3",
+        "draft_type": "research_watchlist_note",
+        "channel": "manual_review_only",
+        "status": "drafted",
+        "risk_level": "attorney_review_required",
+        "compliance_status": "needs_review",
+        "approval_item_id": "approval_6db0cd9880c934d168c383e5",
+        "external_action_allowed": 0,
+        "solicitation_classification": "attorney_review_only"
+      }
+    ],
+    "approval_items": [
+      {
+        "approval_item_id": "approval_6db0cd9880c934d168c383e5",
+        "related_id": "draft_6c7ea9b4b76cc04ba5ff7819",
+        "approval_status": "pending",
+        "reviewer": "Jeff Schell",
+        "decision_at": null,
+        "approval_language": null
+      }
+    ],
+    "suppression_checks": [
+      {
+        "check_id": "suppress_7ea545e06cad606889f750d4",
+        "prospect_id": "prospect_ef30df45ad62c93981758ca3",
+        "draft_id": "draft_6c7ea9b4b76cc04ba5ff7819",
+        "local_suppression_status": "not_checked",
+        "local_clio_precheck_status": "not_checked",
+        "whiteford_conflicts_status": "required_before_send",
+        "opt_out_status": "not_checked",
+        "duplicate_prior_touch_status": "not_checked",
+        "final_clearance": "not_cleared"
+      }
+    ],
+    "execution_authorizations_found": [],
+    "work_items": [
+      {
+        "work_item_id": "work_nightly_agent_targeting_024634d5cebed23366c1",
+        "work_type": "agent_targeting_packet",
+        "title": "Prepare attorney-review Agent Targeting packet: Sereact",
+        "stage": "queued",
+        "approval_required": 1,
+        "external_action_allowed": 0
+      },
+      {
+        "work_item_id": "work-ghl-stage-hUevEZZwjvyALchVzSzv-2026-05-10T18-32-02-464Z",
+        "work_type": "targeting_packet_review",
+        "title": "Targeting Packet Ready: Sereact — Agent Targeting",
+        "stage": "queued",
+        "approval_required": 1,
+        "external_action_allowed": 0
+      }
+    ]
+  },
+  "ghl_stage_payload_summary": {
+    "id": "hUevEZZwjvyALchVzSzv",
+    "name": "Sereact — Agent Targeting",
+    "source": "Growth OS nightly prospect research - Agent Targeting (prospect_ef30df45ad62c93981758ca3)",
+    "status": "open",
+    "pipelineStageId": "fbd84fbe-ed49-4246-b644-a557cf5a508c",
+    "lastStageChangeAt": "2026-05-10T18:31:41.695Z",
+    "contactId": "1a2gBW9IhpZfgnh6bT2K",
+    "relation_contact_recordId": "1a2gBW9IhpZfgnh6bT2K",
+    "relation_companyName": "Sereact",
+    "local_interpretation": "Diagnostic clue only; not approval to mutate local SQLite or HighLevel."
+  },
+  "recommended_posture": "HOLD / quarantine by default; future read-only source-current review only if exactly approved; future local-only mutation-plan preparation only if separately exactly approved; no execution or external action."
+}

@@ -1,0 +1,160 @@
+{
+  "ok": true,
+  "status": "partial",
+  "attempted": 574,
+  "synced": 81,
+  "skipped": [
+    {
+      "table": "source_evidence",
+      "rows": 13,
+      "reason": "{\"code\":\"PGRST205\",\"details\":null,\"hint\":\"Perhaps you meant the table 'public.qa_reviews'\",\"message\":\"Could not find the table 'public.source_evidence' in the schema cache\"}"
+    },
+    {
+      "table": "suppression_checks",
+      "rows": 11,
+      "reason": "{\"code\":\"PGRST205\",\"details\":null,\"hint\":\"Perhaps you meant the table 'public.approval_items'\",\"message\":\"Could not find the table 'public.suppression_checks' in the schema cache\"}"
+    },
+    {
+      "table": "compliance_reviews",
+      "rows": 20,
+      "reason": "{\"code\":\"PGRST205\",\"details\":null,\"hint\":\"Perhaps you meant the table 'public.qa_reviews'\",\"message\":\"Could not find the table 'public.compliance_reviews' in the schema cache\"}"
+    },
+    {
+      "table": "outreach_drafts",
+      "rows": 11,
+      "reason": "{\"code\":\"PGRST205\",\"details\":null,\"hint\":null,\"message\":\"Could not find the table 'public.outreach_drafts' in the schema cache\"}"
+    },
+    {
+      "table": "draft_audit_trail",
+      "rows": 20,
+      "reason": "{\"code\":\"PGRST205\",\"details\":null,\"hint\":null,\"message\":\"Could not find the table 'public.draft_audit_trail' in the schema cache\"}"
+    },
+    {
+      "table": "outreach_channels",
+      "rows": 4,
+      "reason": "{\"code\":\"PGRST205\",\"details\":null,\"hint\":null,\"message\":\"Could not find the table 'public.outreach_channels' in the schema cache\"}"
+    },
+    {
+      "table": "send_authorization_rules",
+      "rows": 4,
+      "reason": "{\"code\":\"PGRST205\",\"details\":null,\"hint\":null,\"message\":\"Could not find the table 'public.send_authorization_rules' in the schema cache\"}"
+    },
+    {
+      "table": "execution_authorizations",
+      "rows": 8,
+      "reason": "{\"code\":\"PGRST205\",\"details\":null,\"hint\":null,\"message\":\"Could not find the table 'public.execution_authorizations' in the schema cache\"}"
+    },
+    {
+      "table": "ghl_sync_links",
+      "rows": 61,
+      "reason": "{\"code\":\"PGRST205\",\"details\":null,\"hint\":null,\"message\":\"Could not find the table 'public.ghl_sync_links' in the schema cache\"}"
+    },
+    {
+      "table": "crm_integration_config",
+      "rows": 1,
+      "reason": "{\"code\":\"PGRST205\",\"details\":null,\"hint\":null,\"message\":\"Could not find the table 'public.crm_integration_config' in the schema cache\"}"
+    },
+    {
+      "table": "crm_field_mappings",
+      "rows": 27,
+      "reason": "{\"code\":\"PGRST205\",\"details\":null,\"hint\":\"Perhaps you meant the table 'public.model_runs'\",\"message\":\"Could not find the table 'public.crm_field_mappings' in the schema cache\"}"
+    },
+    {
+      "table": "crm_sync_batches",
+      "rows": 13,
+      "reason": "{\"code\":\"PGRST205\",\"details\":null,\"hint\":null,\"message\":\"Could not find the table 'public.crm_sync_batches' in the schema cache\"}"
+    },
+    {
+      "table": "crm_sync_records",
+      "rows": 19,
+      "reason": "{\"code\":\"PGRST205\",\"details\":null,\"hint\":null,\"message\":\"Could not find the table 'public.crm_sync_records' in the schema cache\"}"
+    },
+    {
+      "table": "crm_audit_log",
+      "rows": 28,
+      "reason": "{\"code\":\"PGRST205\",\"details\":null,\"hint\":null,\"message\":\"Could not find the table 'public.crm_audit_log' in the schema cache\"}"
+    },
+    {
+      "table": "ghl_pipeline_blueprints",
+      "rows": 5,
+      "reason": "{\"code\":\"PGRST205\",\"details\":null,\"hint\":null,\"message\":\"Could not find the table 'public.ghl_pipeline_blueprints' in the schema cache\"}"
+    },
+    {
+      "table": "ghl_pipeline_stage_mappings",
+      "rows": 58,
+      "reason": "{\"code\":\"PGRST205\",\"details\":null,\"hint\":null,\"message\":\"Could not find the table 'public.ghl_pipeline_stage_mappings' in the schema cache\"}"
+    },
+    {
+      "table": "ghl_stage_action_rules",
+      "rows": 14,
+      "reason": "{\"code\":\"PGRST205\",\"details\":null,\"hint\":null,\"message\":\"Could not find the table 'public.ghl_stage_action_rules' in the schema cache\"}"
+    },
+    {
+      "table": "content_lanes",
+      "rows": 5,
+      "reason": "{\"code\":\"PGRST205\",\"details\":null,\"hint\":\"Perhaps you meant the table 'public.agent_events'\",\"message\":\"Could not find the table 'public.content_lanes' in the schema cache\"}"
+    },
+    {
+      "table": "content_topics",
+      "rows": 20,
+      "reason": "{\"code\":\"PGRST205\",\"details\":null,\"hint\":\"Perhaps you meant the table 'public.agent_events'\",\"message\":\"Could not find the table 'public.content_topics' in the schema cache\"}"
+    },
+    {
+      "table": "content_sources",
+      "rows": 20,
+      "reason": "{\"code\":\"PGRST205\",\"details\":null,\"hint\":\"Perhaps you meant the table 'public.agent_events'\",\"message\":\"Could not find the table 'public.content_sources' in the schema cache\"}"
+    },
+    {
+      "table": "content_assets",
+      "rows": 80,
+      "reason": "{\"code\":\"PGRST205\",\"details\":null,\"hint\":\"Perhaps you meant the table 'public.agent_events'\",\"message\":\"Could not find the table 'public.content_assets' in the schema cache\"}"
+    },
+    {
+      "table": "kpi_snapshots",
+      "rows": 1,
+      "reason": "{\"code\":\"PGRST205\",\"details\":null,\"hint\":\"Perhaps you meant the table 'public.prospects'\",\"message\":\"Could not find the table 'public.kpi_snapshots' in the schema cache\"}"
+    },
+    {
+      "table": "cohort_tracking",
+      "rows": 5,
+      "reason": "{\"code\":\"PGRST205\",\"details\":null,\"hint\":null,\"message\":\"Could not find the table 'public.cohort_tracking' in the schema cache\"}"
+    },
+    {
+      "table": "offer_performance",
+      "rows": 5,
+      "reason": "{\"code\":\"PGRST205\",\"details\":null,\"hint\":null,\"message\":\"Could not find the table 'public.offer_performance' in the schema cache\"}"
+    },
+    {
+      "table": "agent_productivity_metrics",
+      "rows": 3,
+      "reason": "{\"code\":\"PGRST205\",\"details\":null,\"hint\":\"Perhaps you meant the table 'public.agent_events'\",\"message\":\"Could not find the table 'public.agent_productivity_metrics' in the schema cache\"}"
+    },
+    {
+      "table": "weekly_growth_reports",
+      "rows": 1,
+      "reason": "{\"code\":\"PGRST205\",\"details\":null,\"hint\":null,\"message\":\"Could not find the table 'public.weekly_growth_reports' in the schema cache\"}"
+    },
+    {
+      "table": "hardening_checks",
+      "rows": 11,
+      "reason": "{\"code\":\"PGRST205\",\"details\":null,\"hint\":\"Perhaps you meant the table 'public.agent_events'\",\"message\":\"Could not find the table 'public.hardening_checks' in the schema cache\"}"
+    },
+    {
+      "table": "duplicate_candidates",
+      "rows": 3,
+      "reason": "{\"code\":\"PGRST205\",\"details\":null,\"hint\":null,\"message\":\"Could not find the table 'public.duplicate_candidates' in the schema cache\"}"
+    },
+    {
+      "table": "source_freshness_checks",
+      "rows": 20,
+      "reason": "{\"code\":\"PGRST205\",\"details\":null,\"hint\":null,\"message\":\"Could not find the table 'public.source_freshness_checks' in the schema cache\"}"
+    },
+    {
+      "table": "backup_exports",
+      "rows": 2,
+      "reason": "{\"code\":\"PGRST205\",\"details\":null,\"hint\":\"Perhaps you meant the table 'public.agent_events'\",\"message\":\"Could not find the table 'public.backup_exports' in the schema cache\"}"
+    }
+  ],
+  "db": "/Users/jeff/.openclaw/projects/mountain-west-growth-os/data/growth-os.sqlite",
+  "target": "https://yidxnmxvtohaldkbypcv.supabase.co"
+}

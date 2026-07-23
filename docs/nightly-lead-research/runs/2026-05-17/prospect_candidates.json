@@ -1,0 +1,19 @@
+{
+  "run_label": "2026-05-17",
+  "run_timestamp": "2026-05-17T02:00:00Z",
+  "gate_1_status": "failed",
+  "gate_1_details": {
+    "web_search": {
+      "available": false,
+      "error": "Insufficient credits to perform this request (Firecrawl API)"
+    },
+    "web_extract": {
+      "available": false,
+      "error": "Insufficient credits to perform this request (Firecrawl API)"
+    }
+  },
+  "prospects": [],
+  "_reason": "Gate 1 failed — both live-source extraction tools failed. No prospects researched or staged. Prospect expansion remains paused per 2026-05-06 operating mode.",
+  "_next_steps": "Restore Firecrawl credits or reconfigure connector before prospect staging can resume.",
+  "candidates": []
+}

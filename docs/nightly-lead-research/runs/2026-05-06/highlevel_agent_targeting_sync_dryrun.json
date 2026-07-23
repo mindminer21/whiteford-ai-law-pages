@@ -1,0 +1,46 @@
+{
+  "batchId": "ghl-agent-targeting-sync-dryrun-2026-05-07T05-01-11-417089Z-b71a27ef",
+  "blocked": 0,
+  "completed_at": "2026-05-07T05:01:12.472568Z",
+  "contactsCreated": 0,
+  "contactsLinked": 0,
+  "created_at": "2026-05-07T05:01:11.417089Z",
+  "live": false,
+  "locationId": "tm68WWMrcAa3TqQbEAMa",
+  "opportunitiesCreated": 0,
+  "opportunitiesLinked": 0,
+  "pipelineId": "Tbx4tA6wHv5lTwZPSHyZ",
+  "records": [
+    {
+      "company_name": "Kodiak Robotics",
+      "contactPayloadPath": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-06/highlevel_agent_targeting_payloads/ghl-agent-targeting-sync-dryrun-2026-05-07T05-01-11-417089Z-b71a27ef-prospect_c6c776b4596056a65d055c7c-contact-payload.json",
+      "prospect_id": "prospect_c6c776b4596056a65d055c7c",
+      "status": "dry_run_ready"
+    },
+    {
+      "company_name": "Nexar",
+      "contactPayloadPath": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-06/highlevel_agent_targeting_payloads/ghl-agent-targeting-sync-dryrun-2026-05-07T05-01-11-417089Z-b71a27ef-prospect_c542c95f73995e2dbd2a15c3-contact-payload.json",
+      "prospect_id": "prospect_c542c95f73995e2dbd2a15c3",
+      "status": "dry_run_ready"
+    },
+    {
+      "company_name": "Rigetti Computing",
+      "contactPayloadPath": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-06/highlevel_agent_targeting_payloads/ghl-agent-targeting-sync-dryrun-2026-05-07T05-01-11-417089Z-b71a27ef-prospect_d249372d03e9b2df1dd67726-contact-payload.json",
+      "prospect_id": "prospect_d249372d03e9b2df1dd67726",
+      "status": "dry_run_ready"
+    }
+  ],
+  "safety": {
+    "company_level_contacts_used": true,
+    "dnd_enabled_on_created_contacts": true,
+    "no_linkedin_actions": true,
+    "no_sends": true,
+    "no_tags_added": true,
+    "no_workflow_enrollment": true
+  },
+  "selected": 3,
+  "stageId": "fd569cf4-979b-43b8-bd0f-78e807e80ff1",
+  "stageName": "Agent Targeting",
+  "status": "dry_run_ok",
+  "syncedRecords": 0
+}

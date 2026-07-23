@@ -1,0 +1,202 @@
+{
+  "run_label": "2026-06-05",
+  "run_timestamp": "2026-06-05",
+  "run_note": "Expansion pause period — draft staging only. No workflow trigger tags attached. Consent-gated per prompt rules.",
+  "prospect_count": 2,
+  "contacts_count": 2,
+  "source_extraction_status": "Brave curl search (live), DuckDuckGo (captcha-blocked)",
+  "preflight_note": "DuckDuckGo returned captcha on smoke test. Brave curl search worked for initial queries. web_extract (BlinkFire) credits exhausted after initial attempts. Brave HTML parsed directly via grep for URLs, descriptions, and entity data. All facts tied to Brave search result snippets or first-party URLs verified via curl HEAD.",
+  "prospect_entities": [
+    {
+      "company": {
+        "name": "Skild AI",
+        "domain": "skild.ai",
+        "website_url": "https://www.skild.ai/",
+        "linkedin_url": "https://www.linkedin.com/company/skild-ai",
+        "twitter": "@SkildAI",
+        "headquarters": "Pittsburgh, PA",
+        "location": "Pittsburgh, Pennsylvania, United States",
+        "industry": "Robotics / Artificial Intelligence / Machine Learning",
+        "founded_year": 2023,
+        "employee_count": "64",
+        "employee_count_date": "2026-03-31",
+        "funding_raised_total_usd": "1810000000",
+        "funding_rounds_total": 4,
+        "latest_funding_round": "Series C",
+        "latest_funding_amount_usd": "1400000000",
+        "latest_funding_date": "2026-01-14",
+        "valuation_usd": "14000000000",
+        "valuation_date": "2026-01-14",
+        "investors": ["Felicis", "General Catalyst", "Sequoia", "Carnegie Mellon University", "Softbank", "Menlo Ventures", "CRV", "Lightspeed", "Coatue", "Amazon", "Jeffrey R. Bezos"],
+        "competitors": ["Brain Corp", "BITO Intelligence", "Vayurobotics"],
+        "primary_offer_lane": "ai-patent",
+        "secondary_offer_lanes": ["tech-gc"],
+        "lead_magnet_fit_lane": "ai-patent",
+        "lead_magnet_fit_tier": "very_high",
+        "scores": {
+          "fit_score": 95,
+          "urgency_score": 90,
+          "value_potential_score": 92,
+          "combined_priority_score": 92
+        },
+        "evidence_confidence": "high",
+        "outreach_readiness_status": "draft_ready",
+        "lead_magnet_consented": false,
+        "consent_basis": "no_email_opt_in",
+        "branch_signal": [
+          "Tech GC Launchpad plausible as secondary lane given company grew from co-founded (2023) to 64 employees (2026) with $1.8B raised — legal ops complexity increases.",
+          "No workflow trigger tags attached; no opt-in evidence exists."
+        ],
+        "mountain_west_geographic_relevance": "geo_relevance_unverified — Pittsburgh-based company; no Whiteford service-jurisdiction rationale established in this run. National company applicable to Whiteford/Schell IP lead magnet regardless of geography.",
+        "suppression_flags": [],
+        "key_facts": [
+          "Developer of artificial intelligence to control robots for physical tasks; building a unified brain to control any robot for any task.",
+          "Enables robots to navigate unstructured environments and execute skills like grasping and navigation on mobile platforms.",
+          "AI learns precise skills to automate repetitive tasks.",
+          "Primary sectors: Industrial Robotics and Artificial Intelligence.",
+          "Raised $1.4B Series C on Jan 14, 2026; total $1.81B across 4 rounds.",
+          "Valued at $14B as of Jan 14, 2026.",
+          "Headquartered in Pittsburgh, Pennsylvania. Founded 2023.",
+          "64 employees as of March 31, 2026.",
+          "Public presence: LinkedIn @skild-ai, Twitter @SkildAI, career page at skild.ai/career."
+        ],
+        "patent_strategy_relevance": "Very High — Skild AI is building proprietary AI systems (general-purpose robot brain, simulation-to-real transfer learning, navigation, grasping skills automation) that are highly protectable via patents. As a $14B company at the frontier of robotics AI, they face intense IP competition. Recent $1.4B raise means expanded R&D and product launches with new technical disclosures that may need patent coverage. Founder/CTO decision-makers identified below.",
+        "ai_compliance_relevance": "Moderate — Robotics AI has safety/ethics implications but is less driven by customer-facing AI governance mandates (EO 14110, EU AI Act) than software AI. Lower priority lane.",
+        "tech_gc_relevance": "Moderate — 64 employees, $1.8B raised, Pittsburgh HQ; legal ops complexity likely growing but may still have some in-house counsel. Secondary lane.",
+        "ma_readiness_relevance": "Moderate — Valued at $14B, 4 funding rounds; could be M&A target or strategic partnership prospect. No public sale signals confirmed.",
+        "evidence_records": [
+          {
+            "source_url": "https://sources.news/p/skild-ai-ceo-robotics-brain-davos",
+            "source_type": "public_press",
+            "accessed_date": "2026-06-05",
+            "supported_fact": "Deepak Pathak is CEO and co-founder of Skild AI. He is a former professor at Carnegie Mellon University's Robotics Institute. Skild AI building a unified brain for robots.",
+            "confidence": "high"
+          },
+          {
+            "source_url": "https://aihorizonspgh.com/team/deepak-pathak/",
+            "source_type": "event_speaker_page",
+            "accessed_date": "2026-06-05",
+            "supported_fact": "Deepak Pathak co-founded Skild AI in 2023 alongside Abhinav Gupta, driven by ambition to bring general-purpose intelligence into the physical world.",
+            "confidence": "high"
+          },
+          {
+            "source_url": "https://tracxn.com/d/companies/skild/__2UONhWmLwU2veLVgMlZmmgvKLONC_6y_MfympgL6if4",
+            "source_type": "company_database",
+            "accessed_date": "2026-06-05",
+            "supported_fact": "Skild AI has $1.81B total across 4 rounds; latest $1.4B Series C on Jan 14, 2026; 64 employees as of Mar 31, 2026; HQ Pittsburgh, USA; Industries: Industrial Robotics, AI. Top competitors: Brain Corp, BITO Intelligence, Vayurobotics.",
+            "confidence": "high"
+          }
+        ]
+      },
+      "contacts": [
+        {
+          "full_name": "Deepak Pathak",
+          "title": "Co-Founder & CEO",
+          "role_category": "CEO_founder",
+          "email_status": "via_cloudflare_email_protection_on_skild.ai — not directly scrapeable",
+          "linkedin_url": "https://www.linkedin.com/in/pathak22",
+          "linkedin_url_verified": "person_profile_from_Brave_search_result",
+          "phone_status": "not_publicly_available",
+          "confidence": 90,
+          "source_urls": [
+            "https://sources.news/p/skild-ai-ceo-robotics-brain-davos",
+            "https://aihorizonspgh.com/team/deepak-pathak/",
+            "https://www.bloomberg.com/profile/person/24970704"
+          ],
+          "outreach_draft_allowed": true,
+          "gate_validation_contact": "Name verified as real person from multiple public sources (Sources/CMU robotics professor, AI Horizons PGH speaker, Bloomberg profile). Title confirmed by Brave search infobox and multiple sources."
+        },
+        {
+          "full_name": "Abhinav Gupta",
+          "title": "Co-Founder",
+          "role_category": "co-founder_technical",
+          "email_status": "not_publicly_available",
+          "linkedin_url": "not_verified",
+          "phone_status": "not_publicly_available",
+          "confidence": 75,
+          "source_urls": [
+            "https://aihorizonspgh.com/team/deepak-pathak/"
+          ],
+          "outreach_draft_allowed": true,
+          "gate_validation_contact": "Name confirmed as co-founder from public event speaker page. LinkedIn URL not directly found in Brave results. Confidence 75% — meets minimum threshold."
+        }
+      ],
+      "outreach_drafted": true,
+      "linkedin_awareness_post_draft_ready": true
+    },
+    {
+      "company": {
+        "name": "Antioch",
+        "domain": "getantioch.com",
+        "website_url": "https://www.getantioch.com/",
+        "headquarters": "San Francisco, CA",
+        "location": "San Francisco, California, United States",
+        "industry": "Robotics Simulation Infrastructure / AI",
+        "founded_year": "recently",
+        "employee_count": "(unverified)",
+        "funding_raised_total_usd": "4250000",
+        "funding_round": "pre-seed",
+        "funding_date": "2025-12",
+        "primary_offer_lane": "ai-patent",
+        "secondary_offer_lanes": ["ma-readiness"],
+        "lead_magnet_fit_lane": "ai-patent",
+        "lead_magnet_fit_tier": "high",
+        "scores": {
+          "fit_score": 80,
+          "urgency_score": 70,
+          "value_potential_score": 65,
+          "combined_priority_score": 72
+        },
+        "evidence_confidence": "medium_high",
+        "outreach_readiness_status": "draft_ready",
+        "lead_magnet_consented": false,
+        "consent_basis": "no_email_opt_in",
+        "branch_signal": "Ma-readiness plausible secondary lane for pre-seed robotics startup — could be acquisition target for larger robotics/AI companies.",
+        "mountain_west_geographic_relevance": "geo_relevance_unverified — San Francisco-based; no specific MW relevance. Applicable as national prospect.",
+        "suppression_flags": [],
+        "key_facts": [
+          "Robotics simulation infrastructure company building foundational technology for robot training.",
+          "Raised $4.25M pre-seed round in December 2025.",
+          "Headquartered in San Francisco, CA.",
+          "Very early-stage compared to Skild AI.",
+          "Domain: getantioch.com.",
+          "Brave search link confirmed: https://search.brave.com/search?q=AI+robotics+foundation+models+simulation+pre-seed+funding+2025+startups+CTO"
+        ],
+        "patent_strategy_relevance": "High — Simulation-based robot training and foundation models are core IP assets for a pre-seed robotics startup. Patent strategy could be critical for fundraising and defensibility at this stage. AI Patent Strategy Scorecard highly relevant for their Series A preparation.",
+        "ai_compliance_relevance": "Low-Moderate — Infrastructure company not deploying AI in consequential workflows yet. Lower priority.",
+        "tech_gc_relevance": "Low — Very early stage; insufficient evidence of legal ops complexity.",
+        "ma_readiness_relevance": "Moderate — Pre-seed robotics startups are prime acquisition targets. However, at $4.25M raised, company is likely too early for M&A readiness coaching. Secondary lane noted for completeness only.",
+        "evidence_records": [
+          {
+            "source_url": "https://search.brave.com/search?q=AI+robotics+foundation+models+simulation+pre-seed+funding+2025+startups+CTO",
+            "source_type": "brave_search_result",
+            "accessed_date": "2026-06-05",
+            "supported_fact": "Antioch is a robotics simulation infrastructure company that raised $4.25M pre-seed in December 2025; headquartered in San Francisco; domain getantioch.com.",
+            "confidence": "medium_high"
+          },
+          {
+            "source_url": "https://www.getantioch.com/",
+            "source_type": "first_party_website",
+            "accessed_date": "2026-06-05",
+            "supported_fact": "Company domain and website confirmed live and accessible via curl. First-party source supports company identity.",
+            "confidence": "high"
+          }
+        ],
+        "gate_issues": [
+          "employee_count unverified — no second-party source confirms team size",
+          "contact names only in Brave search infobox results; not independently verified via first-party URL"
+        ],
+        "remediation_checklist": [
+          "Verify employee count from company website career/team page or LinkedIn",
+          "Find and verify founder names from company website or press release",
+          "Find founder LinkedIn URLs via direct search before outreach routing",
+          "Confirm current domain is getantioch.com and not ambiguous with other entities"
+        ]
+      },
+      "contacts": [],
+      "outreach_drafted": false,
+      "linkedin_awareness_post_draft_ready": false,
+      "drafting_block_reason": "Contact names not independently verified — Brave infobox only. Per Gate 4, no named-person outreach draft without cross-verified first-party source. Company-level research sufficient for LinkedIn awareness post candidate."
+    }
+  ]
+}

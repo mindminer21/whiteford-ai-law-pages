@@ -1,0 +1,67 @@
+{
+  "by_status": {
+    "blocked": 1,
+    "done": 238,
+    "running": 4,
+    "todo": 2
+  },
+  "by_assignee": {
+    "analyst": {
+      "done": 2
+    },
+    "frontend-eng": {
+      "done": 28,
+      "running": 1
+    },
+    "highlevel-browser-operator": {
+      "done": 8
+    },
+    "highlevel-campaign": {
+      "done": 2
+    },
+    "highlevel-ops": {
+      "done": 29,
+      "running": 1
+    },
+    "nightly-qwen-cron": {
+      "done": 7
+    },
+    "ops": {
+      "blocked": 1,
+      "done": 17,
+      "todo": 1
+    },
+    "orchestrator": {
+      "done": 14
+    },
+    "pm": {
+      "done": 24,
+      "running": 1
+    },
+    "qwen-local": {
+      "done": 8
+    },
+    "reviewer": {
+      "done": 45,
+      "todo": 1
+    },
+    "seo-audit": {
+      "done": 5
+    },
+    "seo-content": {
+      "done": 10
+    },
+    "seo-research": {
+      "done": 7
+    },
+    "seo-review": {
+      "done": 4
+    },
+    "writer": {
+      "done": 26,
+      "running": 1
+    }
+  },
+  "oldest_ready_age_seconds": null,
+  "now": 1778395169
+}

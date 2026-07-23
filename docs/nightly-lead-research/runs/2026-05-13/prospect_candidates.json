@@ -1,0 +1,44 @@
+{
+  "run_date": "2026-05-13",
+  "run_label": "2026-05-13-nightly",
+  "status": "halted_gate1",
+  "preflight": {
+    "live_source_search": {
+      "tool": "web_search",
+      "status": "failed",
+      "error": "Firecrawl credits exhausted (Payment Required)"
+    },
+    "live_source_extract": {
+      "tool": "web_extract",
+      "status": "failed",
+      "error": "Firecrawl credits exhausted (Payment Required)"
+    },
+    "local_rag_available": true,
+    "qmd_cli_present": true,
+    "business_dev_corpus_present": true
+  },
+  "gates": {
+    "gate_1_live_source": "FAILED",
+    "gate_2_canonicalization": "skipped_gate1",
+    "gate_3_url_freshness": "skipped_gate1",
+    "gate_4_contact_validation": "skipped_gate1",
+    "gate_5_linkedin_hygiene": "skipped_gate1",
+    "gate_6_geo_support": "skipped_gate1"
+  },
+  "prospects_researched": 0,
+  "prospects_staged": 0,
+  "contacts_staged": 0,
+  "evidence_records": 0,
+  "outreach_drafts": 0,
+  "linkedIn_drafts": 0,
+  "approval_items": 0,
+  "summary": "Gate 1 (live-source extraction) failed. web_search and web_extract both returned Firecrawl credit exhaustion errors. No prospects were researched, staged, or drafted. Local RAG/context was available but cannot substitute for live-source verification per the hard-gate protocol.",
+  "next_action_required": "Repair Firecrawl credits or configure alternative search/extract tools. Review source_unavailable_report.md for detailed remediation steps.",
+  "artifacts": {
+    "source_unavailable_report": "docs/nightly-lead-research/runs/2026-05-13/source_unavailable_report.md",
+    "digest": "docs/nightly-lead-research/runs/2026-05-13/digest.md (written by wrapper after gate pass)",
+    "prospect_candidates": "docs/nightly-lead-research/runs/2026-05-13/prospect_candidates.json (this file; empty/no-op due to Gate 1 failure)"
+  },
+  "prospects": [],
+  "outreach_vectors": []
+}

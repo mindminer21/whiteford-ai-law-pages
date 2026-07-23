@@ -1,0 +1,131 @@
+{
+  "task": "t_623e1e6e",
+  "run_date": "2026-06-01",
+  "source_payload": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-06-01/prospect_candidates.json",
+  "normalized_payload": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-06-01/prospect_candidates.normalized_for_store.json",
+  "store_dry_run": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-06-01/store_dry_run.json",
+  "store_apply_output": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-06-01/store_output.json",
+  "verification": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-06-01/store_verification.json",
+  "backup": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-06-01/growth-os.before_t_623e1e6e.sqlite",
+  "agent_targeting_work_item_dir": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-06-01/agent-targeting-work-items",
+  "source_candidate_count": 3,
+  "staged_count": 3,
+  "skipped": [],
+  "staged_prospects": [
+    {
+      "name": "SkildAI",
+      "prospect_id": "prospect_skildai_20260601",
+      "lane": "ai-patent",
+      "priority": 91
+    },
+    {
+      "name": "Goodfire",
+      "prospect_id": "prospect_goodfire_20260601",
+      "lane": "ai-patent",
+      "priority": 88
+    },
+    {
+      "name": "Flapping Airplanes",
+      "prospect_id": "prospect_flapping_airplanes_20260601",
+      "lane": "ai-patent",
+      "priority": 86
+    }
+  ],
+  "work_items": [
+    {
+      "company": "SkildAI",
+      "prospect_id": "prospect_skildai_20260601",
+      "work_item_id": "work_nightly_agent_targeting_20260601_851f22b6e49baead7c710fe0",
+      "priority": 84,
+      "path": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-06-01/agent-targeting-work-items/skildai.json",
+      "output_path": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-06-01/agent-targeting-packets/skildai-agent-targeting-packet.md"
+    },
+    {
+      "company": "Goodfire",
+      "prospect_id": "prospect_goodfire_20260601",
+      "work_item_id": "work_nightly_agent_targeting_20260601_4786be32331150404029e89b",
+      "priority": 81,
+      "path": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-06-01/agent-targeting-work-items/goodfire.json",
+      "output_path": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-06-01/agent-targeting-packets/goodfire-agent-targeting-packet.md"
+    },
+    {
+      "company": "Flapping Airplanes",
+      "prospect_id": "prospect_flapping_airplanes_20260601",
+      "work_item_id": "work_nightly_agent_targeting_20260601_59877ae94211c17e0826137e",
+      "priority": 79,
+      "path": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-06-01/agent-targeting-work-items/flapping-airplanes.json",
+      "output_path": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-06-01/agent-targeting-packets/flapping-airplanes-agent-targeting-packet.md"
+    }
+  ],
+  "apply_counts": {
+    "prospects": 3,
+    "contacts": 0,
+    "opportunities": 3,
+    "source_evidence": 6,
+    "outreach_drafts": 3,
+    "approval_items": 3,
+    "crm_sync_records": 3,
+    "suppression_checks": 3
+  },
+  "verification_counts": {
+    "prospects": 62,
+    "contacts": 57,
+    "opportunities": 73,
+    "source_evidence": 126,
+    "outreach_drafts": 44,
+    "approval_items": 76,
+    "crm_sync_records": 55,
+    "suppression_checks": 44,
+    "work_items": 39
+  },
+  "row_checks": [
+    {
+      "company": "SkildAI",
+      "prospect_id": "prospect_skildai_20260601",
+      "prospect_rows": 1,
+      "contact_rows": 0,
+      "evidence_rows": 2,
+      "draft_rows": 1,
+      "approval_rows": 1,
+      "suppression_rows": 1,
+      "sync_rows": 1,
+      "work_item_rows": 1,
+      "external_action_allowed_sum": 0
+    },
+    {
+      "company": "Goodfire",
+      "prospect_id": "prospect_goodfire_20260601",
+      "prospect_rows": 1,
+      "contact_rows": 0,
+      "evidence_rows": 2,
+      "draft_rows": 1,
+      "approval_rows": 1,
+      "suppression_rows": 1,
+      "sync_rows": 1,
+      "work_item_rows": 1,
+      "external_action_allowed_sum": 0
+    },
+    {
+      "company": "Flapping Airplanes",
+      "prospect_id": "prospect_flapping_airplanes_20260601",
+      "prospect_rows": 1,
+      "contact_rows": 0,
+      "evidence_rows": 2,
+      "draft_rows": 1,
+      "approval_rows": 1,
+      "suppression_rows": 1,
+      "sync_rows": 1,
+      "work_item_rows": 1,
+      "external_action_allowed_sum": 0
+    }
+  ],
+  "warnings": [
+    "SkildAI: Gate 4 contact validation failed; no named contact staged and no-send/no-workflow guard remains.",
+    "SkildAI: normalized primary_offer_lane 'AI Patent' -> 'ai-patent' for store enum.",
+    "Goodfire: Gate 4 contact validation failed; no named contact staged and no-send/no-workflow guard remains.",
+    "Goodfire: normalized primary_offer_lane 'AI Patent' -> 'ai-patent' for store enum.",
+    "Flapping Airplanes: Gate 4 contact validation failed; no named contact staged and no-send/no-workflow guard remains.",
+    "Flapping Airplanes: normalized primary_offer_lane 'AI Patent' -> 'ai-patent' for store enum."
+  ],
+  "safety": "Local/internal attorney-review-only staging. No outreach, workflow activation/enrollment, trigger tags, LinkedIn/social action, Clio writes, public/client-facing changes, prospect contact, or live CRM/Supabase/HighLevel sync authorized. Supabase mirror and HighLevel sync remain gated by existing blockers."
+}

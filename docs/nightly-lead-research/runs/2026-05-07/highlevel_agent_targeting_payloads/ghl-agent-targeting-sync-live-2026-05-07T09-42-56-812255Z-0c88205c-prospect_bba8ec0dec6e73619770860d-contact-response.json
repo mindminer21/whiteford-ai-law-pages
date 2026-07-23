@@ -1,0 +1,55 @@
+{
+  "body": {
+    "contact": {
+      "companyName": "Electra",
+      "country": "US",
+      "createdBy": {
+        "channel": "OAUTH",
+        "source": "INTEGRATION",
+        "sourceId": "69f97a4042f2b054fe684553",
+        "timestamp": "2026-05-07T09:42:57.283Z"
+      },
+      "customFields": [],
+      "dateAdded": "2026-05-07T09:42:57.283Z",
+      "dateUpdated": "2026-05-07T09:42:57.283Z",
+      "deleted": false,
+      "dnd": true,
+      "dndDate": "2026-05-07T09:42:57.284Z",
+      "dndSettings": {
+        "Call": {
+          "message": "Internal agent targeting placeholder; no outreach until Jeff approval.",
+          "status": "active"
+        },
+        "SMS": {
+          "message": "Internal agent targeting placeholder; no outreach until Jeff approval.",
+          "status": "active"
+        },
+        "WhatsApp": {
+          "message": "Internal agent targeting placeholder; no outreach until Jeff approval.",
+          "status": "active"
+        }
+      },
+      "firstName": "Electra",
+      "firstNameLowerCase": "electra",
+      "fullNameLowerCase": "electra agent targeting",
+      "id": "IyG5z25j03oCmnJSH8AO",
+      "lastName": "Agent Targeting",
+      "lastNameLowerCase": "agent targeting",
+      "lastSessionActivityAt": "2026-05-07T09:42:57.284Z",
+      "lastUpdatedBy": {
+        "channel": "OAUTH",
+        "source": "INTEGRATION",
+        "sourceId": "69f97a4042f2b054fe684553",
+        "timestamp": "2026-05-07T09:42:57.283Z"
+      },
+      "locationId": "tm68WWMrcAa3TqQbEAMa",
+      "source": "Growth OS nightly prospect research - Agent Targeting (prospect_bba8ec0dec6e73619770860d)",
+      "tags": [],
+      "type": "lead",
+      "website": "https://www.electra.earth"
+    },
+    "traceId": "c27dac3c-4bac-40a2-a98d-319cf26ba04b"
+  },
+  "ok": true,
+  "status": 201
+}

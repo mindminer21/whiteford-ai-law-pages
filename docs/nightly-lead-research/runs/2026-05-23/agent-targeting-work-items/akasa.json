@@ -1,0 +1,180 @@
+{
+  "company": {
+    "name": "AKASA",
+    "domain": "akasa.com",
+    "website_url": "https://akasa.com",
+    "location": "South San Francisco, CA (HQ); Denver/Colorado hub/coworking presence only",
+    "industry": "Healthcare / AI / Revenue Cycle Management",
+    "company_size": "Approximately 110 employees",
+    "founded": "2019 (Built In profile; verify against first-party source before external use)",
+    "funding": "110M (Seedtable 2026)",
+    "description": "AI solutions for healthcare revenue cycle management. Co-founded by ex-a16z partner Malinka Walaliyadde. First-party careers page supports Bay Area/NYC/Denver hubs; current reliable directory source supports South San Francisco HQ, not Denver HQ.",
+    "ai_usage": "Core: AI/ML for healthcare revenue cycle - billing, adjudication, denials. Generative AI in workflows.",
+    "primary_offer_lane": "ai-compliance",
+    "secondary_offer_lanes": [
+      "tech-gc",
+      "ma-readiness"
+    ],
+    "scores": {
+      "fit_score": 82,
+      "urgency_score": 65,
+      "value_potential_score": 75,
+      "combined_priority_score": 74
+    },
+    "lead_magnet_fit_lane": "ai-compliance",
+    "lead_magnet_fit_tier": "hold_until_geo_review",
+    "lead_magnet_consented": false,
+    "outreach_readiness_status": "hold_geography_needs_corroboration",
+    "external_action_allowed": false,
+    "notes": "Description: AI solutions for healthcare revenue cycle management. Co-founded by ex-a16z partner Malinka Walaliyadde. Current source checks support South San Francisco HQ and Denver as a hub/coworking presence, not Denver HQ.\nCompany size: Approximately 110 employees\nFounded: 2019 per Built In profile; first-party confirmation still recommended\nFunding: 110M (Seedtable 2026)\nAI usage: Core: AI/ML for healthcare revenue cycle - billing, adjudication, denials. Generative AI in workflows.\nOutreach readiness: hold_geography_needs_corroboration\nLead magnet fit tier: hold_until_geo_review\nGeo relevance: partial - South San Francisco HQ; Denver hub/coworking presence only\nResearch confidence: medium after geography correction",
+    "pipeline_stage": "research_staged",
+    "risk_level": "attorney_review_required",
+    "suppression_status": "consent_gap_no_auto_send",
+    "conflicts_status": "required_before_send",
+    "source_type": "nightly_public_source_research",
+    "source_note": "Nightly Qwen public-source research run 2026-05-23 patched after review; local/internal staging only; no external action authorized.",
+    "owner": "qwen-local"
+  },
+  "contacts": [
+    {
+      "name": "Malinka Walaliyadde",
+      "title": "CEO & Co-Founder",
+      "role_category": "ceo",
+      "confidence": "high",
+      "email_source": "public_not_available",
+      "linkedin_url": "",
+      "linkedin_confidence": "unverified",
+      "source_url": "https://akasa.com/press/top-ai-revenue-cycle-leader-black-book",
+      "notes": "Former a16z partner. Co-founded AKASA. Public interviews on AI governance in healthcare. Key AI compliance decision-maker."
+    },
+    {
+      "name": "Benjamin Beadle-Ryby",
+      "title": "Co-Founder",
+      "role_category": "co-founder",
+      "confidence": "medium",
+      "email_source": "public_not_available",
+      "linkedin_url": "",
+      "linkedin_confidence": "linkedin_only_needs_manual_human_verification",
+      "source_url": "",
+      "notes": "Potential co-founder contact remains medium confidence; LinkedIn-only evidence is not treated as primary and requires non-LinkedIn or manual human verification before named-recipient targeting."
+    }
+  ],
+  "evidence": [
+    {
+      "source_url": "https://akasa.com/press/top-ai-revenue-cycle-leader-black-book",
+      "source_type": "first_party",
+      "accessed_date": "2026-05-23",
+      "supported_fact": "Top AI revenue cycle leader recognition and CEO quote from Malinka Walaliyadde; source does not support Denver HQ.",
+      "accessed_at": "2026-05-23T00:00:00+00:00",
+      "confidence": "medium",
+      "corroboration": "single public source from nightly research or patch verification",
+      "safe_for_outreach": "conditional",
+      "fact_classification": "public",
+      "safe_fact_for_copy": "Attorney-review-only factual support; do not use externally without approval."
+    },
+    {
+      "source_url": "https://datainnovation.org/2025/02/5-qs-for-malinka-walaliyadde-co-founder-of-akasa/",
+      "source_type": "third_party",
+      "accessed_date": "2026-05-23",
+      "supported_fact": "Co-founder ex-a16z interview on AI governance in healthcare. Leadership AI awareness confirmed.",
+      "accessed_at": "2026-05-23T00:00:00+00:00",
+      "confidence": "medium",
+      "corroboration": "single public source from nightly research or patch verification",
+      "safe_for_outreach": "conditional",
+      "fact_classification": "public",
+      "safe_fact_for_copy": "Attorney-review-only factual support; do not use externally without approval."
+    },
+    {
+      "source_url": "https://www.healthevolution.com/insider/innovator-ceo-profile-akasas-malinka-walaliyadde/",
+      "source_type": "third_party",
+      "accessed_date": "2026-05-23",
+      "supported_fact": "Innovator CEO profile. Former a16z. Co-founded to address healthcare financial complexity.",
+      "accessed_at": "2026-05-23T00:00:00+00:00",
+      "confidence": "medium",
+      "corroboration": "single public source from nightly research or patch verification",
+      "safe_for_outreach": "conditional",
+      "fact_classification": "public",
+      "safe_fact_for_copy": "Attorney-review-only factual support; do not use externally without approval."
+    },
+    {
+      "source_url": "https://akasa.com/careers/",
+      "source_type": "first_party",
+      "accessed_date": "2026-05-23",
+      "supported_fact": "AKASA careers page describes a remote-friendly hybrid organization with hubs in the Bay Area, NYC, and Denver; supports Denver hub presence, not Denver HQ.",
+      "accessed_at": "2026-05-23T00:00:00+00:00",
+      "confidence": "medium",
+      "corroboration": "single public source from nightly research or patch verification",
+      "safe_for_outreach": "conditional",
+      "fact_classification": "public",
+      "safe_fact_for_copy": "Attorney-review-only factual support; do not use externally without approval."
+    },
+    {
+      "source_url": "https://www.builtinsf.com/company/akasa/offices",
+      "source_type": "external_directory",
+      "accessed_date": "2026-05-23",
+      "supported_fact": "Built In profile lists AKASA headquarters as South San Francisco, CA, with Denver, CO as a coworking hub/office; use only as current directory corroboration.",
+      "accessed_at": "2026-05-23T00:00:00+00:00",
+      "confidence": "medium",
+      "corroboration": "single public source from nightly research or patch verification",
+      "safe_for_outreach": "conditional",
+      "fact_classification": "public",
+      "safe_fact_for_copy": "Attorney-review-only factual support; do not use externally without approval."
+    }
+  ],
+  "confidence": "medium",
+  "entity_ambiguity": false,
+  "geo_relevance": "partial - South San Francisco HQ; Denver/Colorado hub or coworking presence only; not Denver HQ",
+  "run_date": "2026-05-23",
+  "outreach_vectors": [
+    {
+      "lane": "ai-compliance",
+      "lead_magnet": "AI Compliance Gameplan Builder",
+      "lead_magnet_route": "/ai-compliance-gameplan",
+      "vector": "HOLD for Mountain-West-specific outreach until geography is reviewed: AKASA deploys AI in healthcare revenue cycle, but current checks support South San Francisco HQ with Denver hub/coworking presence only. Any AI Compliance Gameplan angle must remain attorney-review-only and not imply Denver HQ.",
+      "value_note": "Value-first internal note only. Geography/current-source review required before any named queue or external use.",
+      "draft_type": "agent_targeting_vector",
+      "channel": "attorney_review_only",
+      "title": "AKASA ai-compliance attorney-review targeting vector",
+      "subject": null,
+      "body": "Internal attorney-review targeting vector only. Not approved for sending.\n\nProspect: AKASA\nLane: ai-compliance\nLead magnet/resource: AI Compliance Gameplan Builder /ai-compliance-gameplan\n\nVector: HOLD for Mountain-West-specific outreach until geography is reviewed: AKASA deploys AI in healthcare revenue cycle, but current checks support South San Francisco HQ with Denver hub/coworking presence only. Any AI Compliance Gameplan angle must remain attorney-review-only and not imply Denver HQ.\n\nValue note: Value-first internal note only. Geography/current-source review required before any named queue or external use.\n\nGuardrail: no outreach, LinkedIn action, workflow enrollment, CRM/Supabase live sync, Clio write, public/client-facing use, or external use without Jeff exact approval, attorney review, suppression/conflicts clearance, and source-current verification.",
+      "source_facts": [
+        "Top AI revenue cycle leader recognition and CEO quote from Malinka Walaliyadde; source does not support Denver HQ.",
+        "Co-founder ex-a16z interview on AI governance in healthcare. Leadership AI awareness confirmed.",
+        "Innovator CEO profile. Former a16z. Co-founded to address healthcare financial complexity.",
+        "AKASA careers page describes a remote-friendly hybrid organization with hubs in the Bay Area, NYC, and Denver; supports Denver hub presence, not Denver HQ.",
+        "Built In profile lists AKASA headquarters as South San Francisco, CA, with Denver, CO as a coworking hub/office; use only as current directory corroboration."
+      ],
+      "source_urls": [
+        "https://akasa.com/press/top-ai-revenue-cycle-leader-black-book",
+        "https://datainnovation.org/2025/02/5-qs-for-malinka-walaliyadde-co-founder-of-akasa/",
+        "https://www.healthevolution.com/insider/innovator-ceo-profile-akasas-malinka-walaliyadde/",
+        "https://akasa.com/careers/",
+        "https://www.builtinsf.com/company/akasa/offices"
+      ],
+      "risk_level": "attorney_review_required",
+      "internal_review_notes": "Patched after reviewer changes requested; attorney-review only; no external action authorized; no tags/manual/no-post for social copy."
+    }
+  ],
+  "work_item_guardrails": {
+    "external_action_allowed": false,
+    "approval_required": true,
+    "research_only": true,
+    "manual_no_post_social_only": true,
+    "blocked_actions": [
+      "outreach",
+      "email_or_sms_send",
+      "workflow_activation_or_enrollment",
+      "linkedin_or_social_action",
+      "live_crm_or_supabase_sync",
+      "clio_write",
+      "public/client-facing use"
+    ],
+    "required_before_external_use": [
+      "Jeff exact approval",
+      "attorney review",
+      "conflicts check",
+      "suppression/opt-out check",
+      "source-current verification"
+    ]
+  }
+}

@@ -1,0 +1,123 @@
+{
+  "prospect_id": "cyera-20260603",
+  "company": {
+    "prospect_id": "prospect_cyera_20260603",
+    "name": "Cyera",
+    "domain": "cyera.com",
+    "website_url": "https://cyera.com",
+    "company_linkedin_url": null,
+    "location": "Not specified in article (likely NYC/Bay Area — data security company)",
+    "state_region": null,
+    "industry": "Data Storage Security / Enterprise AI Data Governance",
+    "segment": "ai-compliance",
+    "primary_offer_lane": "ai-compliance",
+    "source_type": "nightly_public_source_research",
+    "source_url": "https://techcrunch.com/2026/06/02/cyera-eyes-12b-valuation-at-80x-arr-multiple-despite-operating-losses/",
+    "source_note": "Data storage security platform that safeguards enterprise data from attackers weaponizing AI. One-fifth of Fortune 500 are customers. Acquired Ryft (Index Ventures-backed) and Genie Security (<1yr old). Revenue >$150M ARR. 80x ARR multiple ($12B valuation). Operating losses from aggressive sales hiring (500 headcount additions).\nPlatform explicitly positioned around defending enterprise data against AI-weaponized attackers; AI compliance and governance exposure very high given Fortune 500 customer base, rapid M&A, and AI security claims\nUrgency signals: Series F + $300M funding (past 6 months) — +15; Acquisition of Ryft and Genie Security — strategic expansion — +15; 500+ headcount additions in 2025 — hiring surge — +15; Fortune 500 customer base (1/5) — enterprise governance exposure — +15; Data security + AI positioning — regulatory exposure (Colorado AI Act, enterprise vendor AI risk) — +15; Operating losses despite massive revenue — M&A consolidation signal — +5 (judgment)\nGate status: BROWSER_FALLBACK_RESUMED from parent qwen-local research; ops staging did not perform live enrichment or external source refresh.",
+    "pipeline_stage": "research_staged",
+    "scores": {
+      "fit_score": 85,
+      "urgency_score": 80,
+      "value_potential_score": 90,
+      "combined_priority_score": 85
+    },
+    "lead_magnet": "AI Compliance Gameplan Builder",
+    "recommended_offer": "AI Compliance / Governance Readiness",
+    "risk_level": "attorney_review_required",
+    "suppression_status": "consent_gap_no_auto_send",
+    "conflicts_status": "required_before_send",
+    "owner": "qwen-local",
+    "notes": "Research-only nightly candidate. No outreach authorization; attorney review, conflicts, suppression, source-current checks, contact validation, and Jeff exact approval required before external use.\nOutreach readiness: research_only; consent basis: no_email_opt_in; approval status: no-auto-send.\nNo named contact staged; company-level research only until leadership/contact verification.\nKey facts: Data storage security company; $12B valuation at 80x ARR; $300M+ finalizing round (Evolution Equity Partners); $150M+ ARR; founded 2021; 500+ jobs in 2025; Fortune 500 customers (1/5); acquired Ryft and Genie Security; Company website — domain verification\nNext action: Very-high AI compliance fit (85 combined priority 85). High value (90). BUT: no named contact identified — Gate 4 forces research_only with company-level research only. Need to research leadership team separately before CRM enrichment. Recommend tech-GC lane as alternative follow-up if no contact found.\nRemediation before outreach: Gate 4 FAILED: No named contact found in primary article source — cannot stage named-person outreach; Remediation: Research leadership team via cyera.com/team or Crunchbase before CRM progression; Gate 5: No LinkedIn URLs — company-level only until verification; Gate 6: No Mountain West claim needed\nMountain West relevance: none claimed — national/international prospect scope only.\nValidation caveat: parent research used browser fallback after Firecrawl/search/extract quota failures; source-current checks remain required before external use."
+  },
+  "contacts": [],
+  "evidence": [
+    {
+      "evidence_id": "evidence_1ce371e72bc1301ee55abdc6",
+      "source_url": "https://techcrunch.com/2026/06/02/cyera-eyes-12b-valuation-at-80x-arr-multiple-despite-operating-losses/",
+      "accessed_at": "2026-06-03",
+      "source_type": "techcrunch_article",
+      "fact_classification": "public",
+      "evidence_snippet": "Data storage security company; $12B valuation at 80x ARR; $300M+ finalizing round (Evolution Equity Partners); $150M+ ARR; founded 2021; 500+ jobs in 2025; Fortune 500 customers (1/5); acquired Ryft and Genie Security",
+      "supported_fact": "Data storage security company; $12B valuation at 80x ARR; $300M+ finalizing round (Evolution Equity Partners); $150M+ ARR; founded 2021; 500+ jobs in 2025; Fortune 500 customers (1/5); acquired Ryft and Genie Security",
+      "confidence": "medium_high",
+      "corroboration": "parent qwen-local browser-fallback research; source-current refresh required before external use",
+      "safe_for_outreach": "conditional",
+      "safe_fact_for_copy": "Data storage security company; $12B valuation at 80x ARR; $300M+ finalizing round (Evolution Equity Partners); $150M+ ARR; founded 2021; 500+ jobs in 2025; Fortune 500 customers (1/5); acquired Ryft and Genie Security"
+    },
+    {
+      "evidence_id": "evidence_eeba5514ad6c5d9d44237005",
+      "source_url": "https://cyera.com",
+      "accessed_at": "2026-06-03",
+      "source_type": "first-party_website",
+      "fact_classification": "public",
+      "evidence_snippet": "Company website — domain verification",
+      "supported_fact": "Company website — domain verification",
+      "confidence": "medium_high",
+      "corroboration": "parent qwen-local browser-fallback research; source-current refresh required before external use",
+      "safe_for_outreach": "conditional",
+      "safe_fact_for_copy": "Company website — domain verification"
+    }
+  ],
+  "outreach_drafts": [
+    {
+      "draft_type": "educational",
+      "channel": "manual_email_review",
+      "title": "AI Compliance Gameplan Builder attorney-review angle: Cyera",
+      "subject": "Attorney-review-only AI Compliance Gameplan Builder angle for Cyera",
+      "body": "ATTORNEY REVIEW ONLY — DO NOT SEND/POST.\nTarget: role to verify before outreach (CEO/CTO/GC/Head of IP or equivalent; no named decision maker verified).\nProspect: Cyera\nInternal hypothesis: Cyera's massive expansion (80x ARR multiple, 500+ headcount additions, acquisitions of Ryft and Genie) and explicit AI-weaponized defense positioning creates significant AI governance exposure. As a growing enterprise data security company with Fortune 500 customers, their compliance framework for their own AI tooling and data handling is a critical readiness signal — especially as Colorado AI Act and enterprise vendor AI risk frameworks mature.\nSuggested lead magnet: AI Compliance Gameplan Builder\nUpstream draft marker retained for review context only; no final copy approved:\n[CANDIDATE — FOR JEFF REVIEW]\nRequired before any external use: source-current verification, named contact/LinkedIn validation, conflicts check, suppression/opt-out/prior-touch checks, attorney review, and Jeff exact approval.",
+      "source_facts": [
+        "Data storage security company; $12B valuation at 80x ARR; $300M+ finalizing round (Evolution Equity Partners); $150M+ ARR; founded 2021; 500+ jobs in 2025; Fortune 500 customers (1/5); acquired Ryft and Genie Security",
+        "Company website — domain verification"
+      ],
+      "source_urls": [
+        "https://techcrunch.com/2026/06/02/cyera-eyes-12b-valuation-at-80x-arr-multiple-despite-operating-losses/",
+        "https://cyera.com"
+      ],
+      "risk_level": "attorney_review_required",
+      "internal_review_notes": "Not approved for sending or posting. Research-only local staging; requires attorney review, conflicts, suppression, source-current checks, contact validation, and Jeff exact approval before external use."
+    }
+  ],
+  "validation_gates": {
+    "gate_1_live_source": "PARENT_BROWSER_FALLBACK_PAYLOAD_ONLY",
+    "source_status": "curl RSS + browser article extraction from parent qwen-local research; Firecrawl credits exhausted",
+    "contact_validation": "failed/held: no named decision maker staged",
+    "linkedin_validation": "pending; no verified personal LinkedIn promoted to contact field",
+    "outreach_readiness": "attorney-review-only research_only; no external action authorized"
+  },
+  "consent_gating": {
+    "ops_no_auto_send": true,
+    "consent_basis": "no_email_opt_in",
+    "approval_status": "no-auto-send",
+    "workflow_trigger_tags": [],
+    "suppression_tags": [
+      "newsletter:not-consented"
+    ]
+  },
+  "source_candidate_path": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-06-03/prospect_candidates.json",
+  "normalized_store_path": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-06-03/prospect_candidates.normalized_for_store.json",
+  "source_packet_prospect_id": "cyera-20260603",
+  "local_growth_os_prospect_id": "prospect_cyera_20260603",
+  "task": "prepare_internal_attorney_review_agent_targeting_packet",
+  "guardrails": {
+    "external_action_allowed": false,
+    "approval_required": true,
+    "no_outreach_no_workflows_no_social_no_clio_no_live_sync": true,
+    "required_before_external_use": [
+      "Jeff exact approval",
+      "attorney review",
+      "conflicts check",
+      "suppression/opt-out/prior-touch check",
+      "source-current verification",
+      "named decision-maker/contact and LinkedIn validation"
+    ]
+  },
+  "work_item_id": "work_nightly_agent_targeting_20260603_587bfc27cde875544144c55b",
+  "input_path": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-06-03/agent-targeting-work-items/cyera.json",
+  "output_path": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-06-03/agent-targeting-packets/cyera-agent-targeting-packet.md",
+  "remediation_checklist": [
+    "Attorney review required before external use.",
+    "Named decision-maker/contact and LinkedIn validation required before any outreach.",
+    "Conflicts, suppression/opt-out, prior-touch, and source-current checks required before any outreach.",
+    "Do not send, post, tag, trigger workflows, sync live CRM/Supabase, or write Clio without Jeff exact approval."
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "batchId": "ghl-agent-targeting-sync-dryrun-2026-05-11T10-55-10-677387Z-5027b894",
+  "blocked": 0,
+  "completed_at": "2026-05-11T10:55:11.116083Z",
+  "contactsCreated": 0,
+  "contactsLinked": 0,
+  "created_at": "2026-05-11T10:55:10.677387Z",
+  "live": false,
+  "locationId": "tm68WWMrcAa3TqQbEAMa",
+  "opportunitiesCreated": 0,
+  "opportunitiesLinked": 0,
+  "pipelineId": "Tbx4tA6wHv5lTwZPSHyZ",
+  "records": [
+    {
+      "company_name": "Kore.ai",
+      "contactPayloadPath": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-11/highlevel_agent_targeting_payloads/ghl-agent-targeting-sync-dryrun-2026-05-11T10-55-10-677387Z-5027b894-prospect_ae4ea495016fb286698d44da-contact-payload.json",
+      "prospect_id": "prospect_ae4ea495016fb286698d44da",
+      "status": "dry_run_ready"
+    }
+  ],
+  "safety": {
+    "company_level_contacts_used": true,
+    "dnd_enabled_on_created_contacts": true,
+    "no_linkedin_actions": true,
+    "no_sends": true,
+    "no_tags_added": true,
+    "no_workflow_enrollment": true
+  },
+  "selected": 1,
+  "stageId": "fd569cf4-979b-43b8-bd0f-78e807e80ff1",
+  "stageName": "Agent Targeting",
+  "status": "dry_run_ok",
+  "syncedRecords": 0
+}

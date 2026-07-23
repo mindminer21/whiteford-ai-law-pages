@@ -1,0 +1,166 @@
+{
+  "company": {
+    "name": "Josh.ai",
+    "domain": "josh.ai",
+    "website_url": "https://josh.ai",
+    "location": "Denver, CO",
+    "industry": "AI / Smart Home / Voice Assistant Software",
+    "company_size": "Approximately 50-100 employees",
+    "founded": "2015",
+    "funding": "11M USD listed (Seedtable 2026); multiple rounds",
+    "description": "AI-powered smart home control platform with voice, touch, and contextual automation. Sells exclusively through certified tech integrators. IoT Breakthrough Award 2026. Expanding residential into healthcare, hotels, commercial, MDUs.",
+    "patent_activity": "Public patent page lists numerous provisional patent applications plus listed utility/design patents; source-current review required before external use.",
+    "ai_usage": "Core product: voice AI, contextual awareness, generative AI (JoshGPT), local processing NLP",
+    "primary_offer_lane": "ai-patent",
+    "secondary_offer_lanes": [
+      "tech-gc",
+      "ai-compliance"
+    ],
+    "scores": {
+      "fit_score": 88,
+      "urgency_score": 72,
+      "value_potential_score": 80,
+      "combined_priority_score": 80
+    },
+    "lead_magnet_fit_lane": "ai-patent",
+    "lead_magnet_fit_tier": "high",
+    "lead_magnet_consented": false,
+    "outreach_readiness_status": "draft_ready_attorney_review_only",
+    "external_action_allowed": false,
+    "pipeline_stage": "research_staged",
+    "risk_level": "attorney_review_required",
+    "suppression_status": "consent_gap_no_auto_send",
+    "conflicts_status": "required_before_send",
+    "source_type": "nightly_public_source_research",
+    "source_note": "Nightly Qwen public-source research run 2026-05-23 patched after review; local/internal staging only; no external action authorized.",
+    "owner": "qwen-local"
+  },
+  "contacts": [
+    {
+      "name": "Tim Gill",
+      "title": "Co-Founder & CTO",
+      "role_category": "co-founder",
+      "confidence": "high",
+      "email_source": "public_not_available",
+      "linkedin_url": "",
+      "linkedin_confidence": "company_page_only_not_person_url",
+      "source_url": "https://josh.ai/team",
+      "notes": "Software savant; built J++ proprietary language. Former Quark founder/chair. Denver-based per Josh.ai team page. Company LinkedIn retained only as company-level evidence, not a person URL."
+    },
+    {
+      "name": "Alex Capecelatro",
+      "title": "Co-Founder & CEO",
+      "role_category": "ceo",
+      "confidence": "high",
+      "email_source": "public_not_available",
+      "linkedin_url": "",
+      "linkedin_confidence": "unverified",
+      "source_url": "https://josh.ai/team",
+      "notes": "Splits time Provincetown/California. NRL/Sandia/UCLA/Harvard research background. Consumer tech at Fisker. Key IP/M&A strategy decision-maker."
+    }
+  ],
+  "evidence": [
+    {
+      "source_url": "https://josh.ai/about/",
+      "source_type": "first_party",
+      "accessed_date": "2026-05-23",
+      "supported_fact": "Josh.ai first-party about page supports Denver, CO HQ/founding/product positioning; patent activity is separately supported by the patents page.",
+      "accessed_at": "2026-05-23T00:00:00+00:00",
+      "confidence": "medium",
+      "corroboration": "single public source from nightly research or patch verification",
+      "safe_for_outreach": "conditional",
+      "fact_classification": "public",
+      "safe_fact_for_copy": "Attorney-review-only factual support; do not use externally without approval."
+    },
+    {
+      "source_url": "https://josh.ai/team",
+      "source_type": "first_party",
+      "accessed_date": "2026-05-23",
+      "supported_fact": "Tim Gill (CTO, Denver) built J++. Alex Capecelatro (CEO). Lutron co-op. Growing team.",
+      "accessed_at": "2026-05-23T00:00:00+00:00",
+      "confidence": "medium",
+      "corroboration": "single public source from nightly research or patch verification",
+      "safe_for_outreach": "conditional",
+      "fact_classification": "public",
+      "safe_fact_for_copy": "Attorney-review-only factual support; do not use externally without approval."
+    },
+    {
+      "source_url": "https://www.linkedin.com/company/joshai",
+      "source_type": "external_directory",
+      "accessed_date": "2026-05-23",
+      "supported_fact": "Josh.ai company LinkedIn page only; company-level directory evidence, not a person-level URL or primary contact evidence.",
+      "accessed_at": "2026-05-23T00:00:00+00:00",
+      "confidence": "medium",
+      "corroboration": "single public source from nightly research or patch verification",
+      "safe_for_outreach": "conditional",
+      "fact_classification": "public",
+      "safe_fact_for_copy": "Attorney-review-only factual support; do not use externally without approval."
+    },
+    {
+      "source_url": "https://josh.ai/patents/",
+      "source_type": "first_party",
+      "accessed_date": "2026-05-23",
+      "supported_fact": "Josh.ai public patent page lists numerous provisional patent applications plus listed utility/design patents; use source-exact wording and attorney review before external copy.",
+      "accessed_at": "2026-05-23T00:00:00+00:00",
+      "confidence": "medium",
+      "corroboration": "single public source from nightly research or patch verification",
+      "safe_for_outreach": "conditional",
+      "fact_classification": "public",
+      "safe_fact_for_copy": "Attorney-review-only factual support; do not use externally without approval."
+    }
+  ],
+  "confidence": "high",
+  "entity_ambiguity": false,
+  "geo_relevance": "verified - Denver CO HQ via first-party Josh.ai source; still attorney/source-current review required before external use",
+  "run_date": "2026-05-23",
+  "outreach_vectors": [
+    {
+      "lane": "ai-patent",
+      "lead_magnet": "AI Patent Strategy Scorecard",
+      "lead_magnet_route": "/ai-patent-strategy-scorecard",
+      "vector": "Josh.ai public patent page lists numerous provisional patent applications plus listed utility/design patents, alongside proprietary J++ language and voice AI. Patent Strategy Sprint could map public portfolio signals against smart home and healthcare AI competitive threats as they expand beyond residential.",
+      "value_note": "Value-first. No implication of deficiency. Connects public patent page to portfolio strategy opportunity.",
+      "draft_type": "agent_targeting_vector",
+      "channel": "attorney_review_only",
+      "title": "Josh.ai ai-patent attorney-review targeting vector",
+      "subject": null,
+      "body": "Internal attorney-review targeting vector only. Not approved for sending.\n\nProspect: Josh.ai\nLane: ai-patent\nLead magnet/resource: AI Patent Strategy Scorecard /ai-patent-strategy-scorecard\n\nVector: Josh.ai public patent page lists numerous provisional patent applications plus listed utility/design patents, alongside proprietary J++ language and voice AI. Patent Strategy Sprint could map public portfolio signals against smart home and healthcare AI competitive threats as they expand beyond residential.\n\nValue note: Value-first. No implication of deficiency. Connects public patent page to portfolio strategy opportunity.\n\nGuardrail: no outreach, LinkedIn action, workflow enrollment, CRM/Supabase live sync, Clio write, public/client-facing use, or external use without Jeff exact approval, attorney review, suppression/conflicts clearance, and source-current verification.",
+      "source_facts": [
+        "Josh.ai first-party about page supports Denver, CO HQ/founding/product positioning; patent activity is separately supported by the patents page.",
+        "Tim Gill (CTO, Denver) built J++. Alex Capecelatro (CEO). Lutron co-op. Growing team.",
+        "Josh.ai company LinkedIn page only; company-level directory evidence, not a person-level URL or primary contact evidence.",
+        "Josh.ai public patent page lists numerous provisional patent applications plus listed utility/design patents; use source-exact wording and attorney review before external copy."
+      ],
+      "source_urls": [
+        "https://josh.ai/about/",
+        "https://josh.ai/team",
+        "https://www.linkedin.com/company/joshai",
+        "https://josh.ai/patents/"
+      ],
+      "risk_level": "attorney_review_required",
+      "internal_review_notes": "Patched after reviewer changes requested; attorney-review only; no external action authorized; no tags/manual/no-post for social copy."
+    }
+  ],
+  "work_item_guardrails": {
+    "external_action_allowed": false,
+    "approval_required": true,
+    "research_only": true,
+    "manual_no_post_social_only": true,
+    "blocked_actions": [
+      "outreach",
+      "email_or_sms_send",
+      "workflow_activation_or_enrollment",
+      "linkedin_or_social_action",
+      "live_crm_or_supabase_sync",
+      "clio_write",
+      "public/client-facing use"
+    ],
+    "required_before_external_use": [
+      "Jeff exact approval",
+      "attorney review",
+      "conflicts check",
+      "suppression/opt-out check",
+      "source-current verification"
+    ]
+  }
+}

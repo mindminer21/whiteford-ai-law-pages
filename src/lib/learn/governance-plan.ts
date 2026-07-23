@@ -2,7 +2,7 @@ import type { LearnPageContent } from "./types";
 
 export const governancePlanContent: LearnPageContent = {
   title: "AI Governance Readiness Plan",
-  description: "A five-minute diagnostic produces a one-page AI governance readiness plan across nine board-facing areas.",
+  description: "Generate an AI governance action plan across board-facing readiness areas.",
   style: String.raw`:root {
   --ink: #003756;
   --ink-hover: #154E73;
@@ -305,9 +305,9 @@ img, svg { max-width: 100%; }
     <div>
       <div class="hero-eyebrow">AI Governance Readiness Plan</div>
       <h1>Map your AI governance the way <em>a board would want to see it.</em></h1>
-      <p class="hero-sub">A five-minute diagnostic produces a one-page plan mapping nine governance areas by readiness. The output is engineered to drop into a leadership memo or board deck. Quarter-ready. Practical.</p>
+      <p class="hero-sub">Generate your action plan to identify your AI governance areas by readiness. This will give you an asset to drop into a leadership memo or board deck.</p>
       <div class="hero-cta-row">
-        <a href="#start" class="btn-primary">
+        <a href="/governance-plan/start" class="btn-primary">
           Build my governance plan
           <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3 9h12M10 4l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/></svg>
         </a>
@@ -346,7 +346,7 @@ img, svg { max-width: 100%; }
   <div class="container">
     <div class="section-eyebrow">— Nine governance areas</div>
     <h2 class="section-title">The questions a sophisticated board <em>will eventually ask.</em></h2>
-    <p class="section-lede">AI now touches nine distinct legal and operational areas in most technology companies. The plan groups them into three categories that mirror how a board or audit committee would actually think about oversight.</p>
+    <p class="section-lede">AI now touches distinct legal and operational areas in most technology companies. Your customized AI action plan will group your company's readiness and action items in three categories that mirror how a board or audit committee would actually think about oversight.</p>
     <div class="domain-rows">
       <div class="domain-row">
         <div class="domain-row-label">Foundations<br />Row 1</div>
@@ -403,45 +403,17 @@ img, svg { max-width: 100%; }
 
 <section class="forward-up">
   <div class="container">
-    <div class="forward-up-grid">
-      <div>
-        <div class="section-eyebrow">— Designed to be forwarded</div>
-        <h2 class="section-title">A one-page artifact <em>your team can act on.</em></h2>
-        <p style="font-size: 17px; color: var(--ink-hover); line-height: 1.6; margin-bottom: 24px;">Most governance assessments produce a 40-page report no one reads. This one produces a one-page plan engineered to be dropped into an exec memo or board pre-read. The five-page workbook follows for the team that owns each area.</p>
-        <p style="font-size: 15px; color: var(--ink-hover); line-height: 1.6;">Operations leaders forward the plan to the CEO. The CEO forwards to the GC. The GC books a focused consultation. Three touches, one capture.</p>
-      </div>
-      <div class="forward-up-visual">
-        <div style="font-family: var(--mono); font-size: 11px; letter-spacing: 0.12em; color: var(--accent); margin-bottom: 20px; text-transform: uppercase;">— Typical distribution path</div>
-        <div class="forward-up-flow">
-          <div class="flow-item">
-            <span class="flow-item-role">DOWNLOAD</span>
-            <span class="flow-item-name">Head of Operations</span>
-          </div>
-          <span class="flow-arrow">↓</span>
-          <div class="flow-item">
-            <span class="flow-item-role">FORWARD</span>
-            <span class="flow-item-name">Chief Executive Officer</span>
-          </div>
-          <span class="flow-arrow">↓</span>
-          <div class="flow-item">
-            <span class="flow-item-role">FORWARD</span>
-            <span class="flow-item-name">General Counsel</span>
-          </div>
-          <span class="flow-arrow">↓</span>
-          <div class="flow-item" style="border-color: var(--accent); background: rgba(99,45,221,0.06);">
-            <span class="flow-item-role" style="color: var(--ink);">CONSULT</span>
-            <span class="flow-item-name">Schell IP at Whiteford</span>
-          </div>
-        </div>
-      </div>
-    </div>
+    <h2 class="section-title">A one page AI thought framework that your team can act on.</h2>
   </div>
 </section>
 
 <section class="cta-banner" id="start">
   <div class="container">
     <h2>Build my plan. <em>A board-ready governance map.</em></h2>
-    <div data-learn-report-slot="governance-plan"></div>
+    <a href="/governance-plan/start" class="btn-primary">
+      Build my governance plan
+      <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3 9h12M10 4l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/></svg>
+    </a>
   </div>
 </section>
 

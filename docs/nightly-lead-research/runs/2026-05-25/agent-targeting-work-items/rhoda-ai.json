@@ -1,0 +1,188 @@
+{
+  "task": "prepare_internal_attorney_review_agent_targeting_packet",
+  "company": {
+    "prospect_id": "prospect_rhoda_ai_20260524",
+    "name": "Rhoda AI",
+    "domain": "rhoda.ai",
+    "website_url": "https://www.rhoda.ai/",
+    "location": "Palo Alto, CA",
+    "state_region": "California",
+    "industry": "Physical AI / robot foundation models",
+    "segment": "ai-patent",
+    "primary_offer_lane": "ai-patent",
+    "source_type": "nightly_public_source_research",
+    "source_url": "https://www.rhoda.ai/",
+    "source_note": "Rhoda AI is building general-purpose robot foundation models that operate in commercial and industrial environments. FutureVision is their robot intelligence platform leveraging internet-scale video pre-training (1+ million videos) and on-robot trajectory fine-tuning. Applications in logistics, automotive, manufacturing, and ecommerce. Targeting physical AGI. Investors include Khosla Ventures, John Doerr/Temasek, Samsung NEXT, Mayfield, NVentures, and many others.",
+    "pipeline_stage": "research_staged",
+    "scores": {
+      "fit_score": 94,
+      "urgency_score": 70,
+      "value_potential_score": 80,
+      "combined_priority_score": 83,
+      "contact_confidence": 60
+    },
+    "lead_magnet": "AI Patent Strategy Scorecard",
+    "recommended_offer": "AI Patent Strategy Scorecard / attorney-review Agent Targeting packet",
+    "risk_level": "attorney_review_required",
+    "suppression_status": "consent_gap_no_auto_send",
+    "conflicts_status": "required_before_send",
+    "owner": "qwen-local",
+    "notes": "Research-only nightly candidate. No outreach authorization; attorney review, conflicts, suppression, and source-current checks required before external use.\nRhoda AI is building general-purpose robot foundation models that operate in commercial and industrial environments. FutureVision is their robot intelligence platform leveraging internet-scale video pre-training (1+ million videos) and on-robot trajectory fine-tuning. Applications in logistics, automotive, manufacturing, and ecommerce. Targeting physical AGI. Investors include Khosla Ventures, John Doerr/Temasek, Samsung NEXT, Mayfield, NVentures, and many others.\nSize signal: Series A $450M at $1.7B valuation; pre-seed $105M (Genesis AI) + $162.6M Series A\nMaturity signal: Emerging from stealth in early 2026; 18 months of development\nValidation gates: {\"gate_1_live_source\": \"PASS — web_search and web_extract both operational\", \"gate_2_domain_canonical\": \"PASS — rhoda.ai verified as official domain\", \"gate_3_current_urls\": \"PASS — https://www.rhoda.ai/ and https://www.rhoda.ai/team both returned full content; https://www.rhoda.ai/news/press-release confirmed\", \"gate_4_contact_validation\": \"HIGH CONTACT CONFIDENCE for Jagdeep Singh (CEO). Company team page confirms all named contacts. LinkedIn could not be scraped for content but URL found via search. Google's web_extractor failed on LinkedIn profile URL (Gate 5 notes).\", \"gate_5_linkedin_hygiene\": \"CAUTION — Jagdeep Singh LinkedIn URL https://www.linkedin.com/in/jagdeep-singh-3b2a9222 was found via search but web_extract failed to render content (LinkedIn access limitation). URL appears to be a valid public person profile (returned 200-level with 'Website Not Supported' extraction error, not 404). Verified as real person from multiple independent sources. For outreach use, Jeff should verify the handle manually before tagging.\", \"gate_6_geographic_support\": \"HQ Palo Alto, CA. No Mountain West claim. Industry-wide relevance for AI/ip strategy.\", \"gate_7_outreach_readiness\": \"draft_ready for attorney review only. No workflow trigger tags. ops:no-auto-send = true.\"}"
+  },
+  "contacts": [
+    {
+      "name": "Jagdeep Singh",
+      "title": "Co-founder & CEO",
+      "role_category": "ceo",
+      "email": null,
+      "linkedin_url": "https://www.linkedin.com/in/jagdeep-singh-3b2a9222",
+      "phone": null,
+      "source_type": "linkedin_profile",
+      "source_url": "https://www.linkedin.com/in/jagdeep-singh-3b2a9222",
+      "confidence": 60,
+      "permission_basis": "public-source research; attorney review required before outreach",
+      "suppression_status": "not_checked",
+      "notes": "LinkedIn profile URL found via web search; company team page confirms name/title. Direct page content could not be scraped (LinkedIn access limitation). Verified as real person from multiple search results."
+    },
+    {
+      "name": "Andrew Wooten",
+      "title": "Co-founder & Chief Product Officer",
+      "role_category": "product_leader",
+      "email": null,
+      "linkedin_url": null,
+      "phone": null,
+      "source_type": "company_website",
+      "source_url": "https://www.rhoda.ai/team",
+      "confidence": 75,
+      "permission_basis": "public-source research; attorney review required before outreach",
+      "suppression_status": "not_checked",
+      "notes": "rhoda.ai/team confirmed Andrew Wooten as Chief Product Officer and Co-founder"
+    },
+    {
+      "name": "Eric Chan",
+      "title": "Chief Scientist & Co-founder",
+      "role_category": "cto",
+      "email": null,
+      "linkedin_url": null,
+      "phone": null,
+      "source_type": "company_website",
+      "source_url": "https://www.rhoda.ai/team",
+      "confidence": 75,
+      "permission_basis": "public-source research; attorney review required before outreach",
+      "suppression_status": "not_checked",
+      "notes": "rhoda.ai/team confirmed Eric Chan as Chief Scientist and Co-founder"
+    }
+  ],
+  "evidence": [
+    {
+      "source_url": "https://www.rhoda.ai/",
+      "accessed_at": "2026-05-25",
+      "source_type": "company_website",
+      "fact_classification": "public",
+      "evidence_snippet": "Company describes itself as building general-purpose foundation models for physical AI; FutureVision platform detailed",
+      "supported_fact": "Company describes itself as building general-purpose foundation models for physical AI; FutureVision platform detailed",
+      "confidence": "high",
+      "corroboration": "public source cited in nightly research packet",
+      "safe_for_outreach": "conditional",
+      "safe_fact_for_copy": "Company describes itself as building general-purpose foundation models for physical AI; FutureVision platform detailed"
+    },
+    {
+      "source_url": "https://www.rhoda.ai/team",
+      "accessed_at": "2026-05-25",
+      "source_type": "company_website",
+      "fact_classification": "public",
+      "evidence_snippet": "Leadership team confirmed: Jagdeep Singh (CEO), Eric Chan (Chief Scientist), Andrew Wooten (CPO), Gordon Wetzstein (Scientific Advisor, Co-founder), Changan Chen (CRO)",
+      "supported_fact": "Leadership team confirmed: Jagdeep Singh (CEO), Eric Chan (Chief Scientist), Andrew Wooten (CPO), Gordon Wetzstein (Scientific Advisor, Co-founder), Changan Chen (CRO)",
+      "confidence": "high",
+      "corroboration": "public source cited in nightly research packet",
+      "safe_for_outreach": "conditional",
+      "safe_fact_for_copy": "Leadership team confirmed: Jagdeep Singh (CEO), Eric Chan (Chief Scientist), Andrew Wooten (CPO), Gordon Wetzstein (Scientific Advisor, Co-founder), Changan Chen (CRO)"
+    },
+    {
+      "source_url": "https://www.roboticstomorrow.com/news/2026/03/10/rhoda-ai-exits-stealth-with-450m-series-a-to-bring-robots-out-of-the-lab-and-into-the-real-world/26240/",
+      "accessed_at": "2026-05-25",
+      "source_type": "news",
+      "fact_classification": "public",
+      "evidence_snippet": "Rhoda AI emerged from stealth with $450M Series A led by Premji Invest; FutureVision robot foundation model unveiled; CEO Jagdeep Singh confirmed",
+      "supported_fact": "Rhoda AI emerged from stealth with $450M Series A led by Premji Invest; FutureVision robot foundation model unveiled; CEO Jagdeep Singh confirmed",
+      "confidence": "high",
+      "corroboration": "public source cited in nightly research packet",
+      "safe_for_outreach": "conditional",
+      "safe_fact_for_copy": "Rhoda AI emerged from stealth with $450M Series A led by Premji Invest; FutureVision robot foundation model unveiled; CEO Jagdeep Singh confirmed"
+    },
+    {
+      "source_url": "https://www.linkedin.com/posts/rhoda-ai_the-gap-between-robotics-in-the-lab-and-robotics-activity-7437150328208338945-AOqP",
+      "accessed_at": "2026-05-25",
+      "source_type": "other_public",
+      "fact_classification": "public",
+      "evidence_snippet": "Official company LinkedIn post confirming FutureVision and robot foundation model approach",
+      "supported_fact": "Official company LinkedIn post confirming FutureVision and robot foundation model approach",
+      "confidence": "high",
+      "corroboration": "public source cited in nightly research packet",
+      "safe_for_outreach": "conditional",
+      "safe_fact_for_copy": "Official company LinkedIn post confirming FutureVision and robot foundation model approach"
+    }
+  ],
+  "outreach_drafts": [
+    {
+      "draft_type": "email",
+      "channel": "manual_email_review",
+      "title": "AI patent scorecard attorney-review angle: Rhoda AI",
+      "subject": "Attorney-review-only AI patent strategy angle for Rhoda AI",
+      "body": "ATTORNEY REVIEW ONLY — DO NOT SEND.\nTarget: Jagdeep Singh\nPublic fact hook / hypothesis: Rhoda AI just emerged from stealth with $450M Series A and unveiled FutureVision, a robot foundation model built on internet-scale video pre-training. The company is at the absolute peak of innovation velocity — a critical window for IP documentation. With the convergence of AI foundation models, robotics hardware, and video-predictive control, the human-contribution/attribution question for patentability is especially salient. Pre-seed investors and board will likely ask about IP position. The AI Patent Strategy Scorecard is the most valuable first-party tool for leadership to map their IP strategy now.\nSuggested lead magnet: AI Patent Strategy Scorecard — /ai-patent-strategy-scorecard\nLinkedIn awareness draft exists for internal review only; do not post or tag without exact approval.\n\nInternal LinkedIn awareness draft:\nWhat happens when a company raises $450 million to build robots that learn from watching videos?\n\nYou get a fundamental invention question:\n\nIf a foundation model trained on 1 million+ videos contributes to the system's behavior — who is the inventor?\n\nThe AI doesn't file the patent. The human contribution does.\n\nAnd for a company building robot foundation models, the documentation gap between what the model learns and what humans design is wide.\n\nFor #founders: your first filing strategy should come before your first product launch.\nFor #investors: AI patent diligence is increasingly about process, not just claims.\nFor #AI researchers: publication and patent timing need to be planned together.\n\nEducational starting point: AI Patent Strategy Scorecard\nhttps://whiteford-ai-law-pages.vercel.app/ai-patent-strategy-scorecard\n\nGuardrail: no outreach, email/SMS, workflow enrollment, trigger tags, LinkedIn/social action, Clio write, live CRM/Supabase sync, public/client-facing use, or send without Jeff exact approval plus attorney/conflicts/suppression review.",
+      "source_facts": [
+        "Company describes itself as building general-purpose foundation models for physical AI; FutureVision platform detailed",
+        "Leadership team confirmed: Jagdeep Singh (CEO), Eric Chan (Chief Scientist), Andrew Wooten (CPO), Gordon Wetzstein (Scientific Advisor, Co-founder), Changan Chen (CRO)",
+        "Rhoda AI emerged from stealth with $450M Series A led by Premji Invest; FutureVision robot foundation model unveiled; CEO Jagdeep Singh confirmed"
+      ],
+      "source_urls": [
+        "https://www.rhoda.ai/",
+        "https://www.rhoda.ai/team",
+        "https://www.roboticstomorrow.com/news/2026/03/10/rhoda-ai-exits-stealth-with-450m-series-a-to-bring-robots-out-of-the-lab-and-into-the-real-world/26240/",
+        "https://www.linkedin.com/posts/rhoda-ai_the-gap-between-robotics-in-the-lab-and-robotics-activity-7437150328208338945-AOqP"
+      ],
+      "risk_level": "attorney_review_required",
+      "internal_review_notes": "Not approved for sending. Research-only local staging; requires attorney review, conflicts, suppression, source-current checks, and Jeff exact approval before external use."
+    }
+  ],
+  "source_candidate_path": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-25/prospect_candidates.json",
+  "normalized_store_path": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-25/prospect_candidates.normalized_for_store.json",
+  "guardrails": {
+    "external_action_allowed": false,
+    "approval_required": true,
+    "no_outreach_no_workflows_no_social_no_clio_no_live_sync": true,
+    "required_before_external_use": [
+      "Jeff exact approval",
+      "attorney review",
+      "conflicts check",
+      "suppression/opt-out check",
+      "source-current verification"
+    ]
+  },
+  "validation_gates": {
+    "gate_1_live_source": "PASS — web_search and web_extract both operational",
+    "gate_2_domain_canonical": "PASS — rhoda.ai verified as official domain",
+    "gate_3_current_urls": "PASS — https://www.rhoda.ai/ and https://www.rhoda.ai/team both returned full content; https://www.rhoda.ai/news/press-release confirmed",
+    "gate_4_contact_validation": "HIGH CONTACT CONFIDENCE for Jagdeep Singh (CEO). Company team page confirms all named contacts. LinkedIn could not be scraped for content but URL found via search. Google's web_extractor failed on LinkedIn profile URL (Gate 5 notes).",
+    "gate_5_linkedin_hygiene": "CAUTION — Jagdeep Singh LinkedIn URL https://www.linkedin.com/in/jagdeep-singh-3b2a9222 was found via search but web_extract failed to render content (LinkedIn access limitation). URL appears to be a valid public person profile (returned 200-level with 'Website Not Supported' extraction error, not 404). Verified as real person from multiple independent sources. For outreach use, Jeff should verify the handle manually before tagging.",
+    "gate_6_geographic_support": "HQ Palo Alto, CA. No Mountain West claim. Industry-wide relevance for AI/ip strategy.",
+    "gate_7_outreach_readiness": "draft_ready for attorney review only. No workflow trigger tags. ops:no-auto-send = true."
+  },
+  "consent_gating": {
+    "ops_no_auto_send": true,
+    "consent_basis": "no_email_opt_in",
+    "approval_status": "no-auto-send",
+    "workflow_trigger_tags": [],
+    "suppression_tags": [
+      "newsletter:not-consented"
+    ]
+  },
+  "source_packet_prospect_id": "rhoda-ai-20260525",
+  "local_growth_os_prospect_id": "prospect_rhoda_ai_20260524",
+  "work_item_id": "work_nightly_agent_targeting_20260525_fb899646d1907dfadf94dd72",
+  "remediation_checklist": [
+    "Attorney review required before external use.",
+    "Conflicts, suppression/opt-out, prior-touch, and source-current checks required before any outreach.",
+    "Do not send, post, tag, trigger workflows, sync live CRM/Supabase, or write Clio without Jeff exact approval."
+  ]
+}

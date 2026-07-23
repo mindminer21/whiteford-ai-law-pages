@@ -1,0 +1,53 @@
+{
+  "task_id": "t_e4acb4a2",
+  "tenant": "whiteford-mountain-west",
+  "validated_at_utc": "2026-05-22T07:41:49Z",
+  "source_packet": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-22/prospect_candidates.json",
+  "local_db": "/Users/jeff/.openclaw/projects/mountain-west-growth-os/data/growth-os.sqlite",
+  "payload_summary": {
+    "run_date": "2026-05-22",
+    "status": "gated_noop",
+    "gateway_status": "Gate 1 failed",
+    "failure_reason": "Firecrawl API: insufficient credits (Payment Required) for both web_search and web_extract",
+    "candidates": 0,
+    "prospects": 0,
+    "contacts": 0,
+    "evidence": 0,
+    "outreach_drafts": 0,
+    "approval_items": 0
+  },
+  "store_dry_run": {
+    "status": "dry_run",
+    "candidates": 0,
+    "db": "/Users/jeff/.openclaw/projects/mountain-west-growth-os/data/growth-os.sqlite"
+  },
+  "store_apply": {
+    "status": "applied",
+    "counts": {},
+    "db": "/Users/jeff/.openclaw/projects/mountain-west-growth-os/data/growth-os.sqlite"
+  },
+  "post_apply_local_counts": {
+    "prospects": 39,
+    "contacts": 20,
+    "opportunities": 50,
+    "source_evidence": 44,
+    "outreach_drafts": 20,
+    "approval_items": 52,
+    "crm_sync_records": 32,
+    "suppression_checks": 20,
+    "work_items": 14
+  },
+  "agent_targeting_work_items_matching_2026_05_22": {
+    "count": 0,
+    "rows": []
+  },
+  "safety": {
+    "external_actions_taken": false,
+    "highlevel_mutations": false,
+    "supabase_mutations": false,
+    "clio_writes": false,
+    "workflow_or_enrollment_actions": false,
+    "outreach_or_social_actions": false
+  },
+  "decision": "local_validation_staging_noop_zero_candidates_no_agent_targeting_items_created"
+}

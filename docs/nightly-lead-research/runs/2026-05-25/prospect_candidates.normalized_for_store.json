@@ -1,0 +1,506 @@
+{
+  "run_label": "2026-05-25 nightly",
+  "run_mode": "research_only_drafts",
+  "source_payload": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-25/prospect_candidates.json",
+  "normalization_notes": [
+    "Mapped qwen evidence url/supports_fact to store source_url/supported_fact.",
+    "Converted boolean safe_for_outreach to conditional to satisfy local enum and attorney-review-only posture.",
+    "Converted outreach/linkedin awareness draft into one attorney-review-only outreach_draft per prospect; no external action allowed."
+  ],
+  "candidates": [
+    {
+      "company": {
+        "prospect_id": "prospect_machina_labs_20260525",
+        "name": "Machina Labs",
+        "domain": "machinalabs.ai",
+        "website_url": "https://machinalabs.ai/",
+        "location": "Los Angeles, CA",
+        "state_region": "California",
+        "industry": "AI-guided robotics / advanced manufacturing",
+        "segment": "ai-patent",
+        "primary_offer_lane": "ai-patent",
+        "source_type": "nightly_public_source_research",
+        "source_url": "https://machinalabs.ai/",
+        "source_note": "Machina builds software-defined factories that convert digital design intent into production-grade metal structures using AI-guided robotics (RoboCraftsman platform). Applications in aerospace/defense (airframes, missiles/hypersonics), automotive, and emerging sectors (naval, energy). Team from SpaceX, Relativity, Carbon3D, Novelis, nTopology.",
+        "pipeline_stage": "research_staged",
+        "scores": {
+          "fit_score": 92,
+          "urgency_score": 65,
+          "value_potential_score": 70,
+          "combined_priority_score": 80,
+          "contact_confidence": 75
+        },
+        "lead_magnet": "AI Patent Strategy Scorecard",
+        "recommended_offer": "AI Patent Strategy Scorecard / attorney-review Agent Targeting packet",
+        "risk_level": "attorney_review_required",
+        "suppression_status": "consent_gap_no_auto_send",
+        "conflicts_status": "required_before_send",
+        "owner": "qwen-local",
+        "notes": "Research-only nightly candidate. No outreach authorization; attorney review, conflicts, suppression, and source-current checks required before external use.\nMachina builds software-defined factories that convert digital design intent into production-grade metal structures using AI-guided robotics (RoboCraftsman platform). Applications in aerospace/defense (airframes, missiles/hypersonics), automotive, and emerging sectors (naval, energy). Team from SpaceX, Relativity, Carbon3D, Novelis, nTopology.\nSize signal: Series C ($124M) + Series B ($32M), total ~$170M public funding, ~40 employees\nMaturity signal: Founded 2019, ~7 years; commercial deployments with Toyota, Lockheed Martin, NASA\nValidation gates: {\"gate_1_live_source\": \"PASS — web_search and web_extract both operational\", \"gate_2_domain_canonical\": \"PASS — machinalabs.ai verified as official domain\", \"gate_3_current_urls\": \"PASS — https://machinalabs.ai/ and https://machinalabs.ai/resources/machinas-32m-series-b-fundraise both returned content\", \"gate_4_contact_validation\": \"PASS — Edward Mehr (CEO, Co-founder) confirmed across 3 public sources; Babak Raeisinia (Co-founder, Advisor) confirmed via dot.LA and TheOrg\", \"gate_5_linkedin_hygiene\": \"INFO — LinkedIn URLs not obtained for contacts. Jagdeep Singh LinkedIn was attempted for Rhoda but could not be extracted (LinkedIn blocks web_extract). Candidate for attorney to verify manually.\", \"gate_6_geographic_support\": \"INFO — HQ is Los Angeles, not Mountain West. No Mountain West claim made. Relevance is industry-wide AI/IP, not location-specific.\", \"gate_7_outreach_readiness\": \"draft_ready for attorney review only. No workflow trigger tags. ops:no-auto-send = true.\"}"
+      },
+      "contacts": [
+        {
+          "name": "Edward Mehr",
+          "title": "Co-Founder & CEO",
+          "role_category": "ceo",
+          "email": null,
+          "linkedin_url": null,
+          "phone": null,
+          "source_type": "company_leadership_profile",
+          "source_url": "https://theorg.com/org/machina-labs/org-chart/edward-mehr",
+          "confidence": 80,
+          "permission_basis": "public-source research; attorney review required before outreach",
+          "suppression_status": "not_checked",
+          "notes": "Official company materials + dot.LA + TheOrg; CEO confirmed across multiple sources"
+        },
+        {
+          "name": "Babak Raeisinia",
+          "title": "Co-Founder (Advisor)",
+          "role_category": "founder",
+          "email": null,
+          "linkedin_url": null,
+          "phone": null,
+          "source_type": "press_release",
+          "source_url": "https://dot.la/machina-labs-robotics-2656535070.html",
+          "confidence": 75,
+          "permission_basis": "public-source research; attorney review required before outreach",
+          "suppression_status": "not_checked",
+          "notes": "dot.LA article; TheOrg confirms Advisor & Co-founder status"
+        }
+      ],
+      "evidence": [
+        {
+          "source_url": "https://machinalabs.ai/",
+          "accessed_at": "2026-05-25",
+          "source_type": "company_website",
+          "fact_classification": "public",
+          "evidence_snippet": "Company builds AI-guided robotic manufacturing platform (RoboCraftsman); applications in aerospace, defense, automotive; team from SpaceX/Relativity",
+          "supported_fact": "Company builds AI-guided robotic manufacturing platform (RoboCraftsman); applications in aerospace, defense, automotive; team from SpaceX/Relativity",
+          "confidence": "high",
+          "corroboration": "public source cited in nightly research packet",
+          "safe_for_outreach": "conditional",
+          "safe_fact_for_copy": "Company builds AI-guided robotic manufacturing platform (RoboCraftsman); applications in aerospace, defense, automotive; team from SpaceX/Relativity"
+        },
+        {
+          "source_url": "https://machinalabs.ai/resources/machinas-32m-series-b-fundraise",
+          "accessed_at": "2026-05-25",
+          "source_type": "company_website",
+          "fact_classification": "public",
+          "evidence_snippet": "$32M Series B co-led by NVentures (NVIDIA VC) and Innovation Endeavors; total $45M at that time; AI/R&D acceleration stated as use of funds",
+          "supported_fact": "$32M Series B co-led by NVentures (NVIDIA VC) and Innovation Endeavors; total $45M at that time; AI/R&D acceleration stated as use of funds",
+          "confidence": "high",
+          "corroboration": "public source cited in nightly research packet",
+          "safe_for_outreach": "conditional",
+          "safe_fact_for_copy": "$32M Series B co-led by NVentures (NVIDIA VC) and Innovation Endeavors; total $45M at that time; AI/R&D acceleration stated as use of funds"
+        },
+        {
+          "source_url": "https://dot.la/machina-labs-robotics-2656535070.html",
+          "accessed_at": "2026-05-25",
+          "source_type": "news",
+          "fact_classification": "public",
+          "evidence_snippet": "Founded 2019 by Edward Mehr and Babak Raeisinia; Series A $1M + Series A-1 $10M + Series B $32M; Edward Mehr confirmed as CEO",
+          "supported_fact": "Founded 2019 by Edward Mehr and Babak Raeisinia; Series A $1M + Series A-1 $10M + Series B $32M; Edward Mehr confirmed as CEO",
+          "confidence": "high",
+          "corroboration": "public source cited in nightly research packet",
+          "safe_for_outreach": "conditional",
+          "safe_fact_for_copy": "Founded 2019 by Edward Mehr and Babak Raeisinia; Series A $1M + Series A-1 $10M + Series B $32M; Edward Mehr confirmed as CEO"
+        },
+        {
+          "source_url": "https://www.linkedin.com/posts/grishinrobotics_machina-labs-just-raised-124m-series-c-activity-7426583917052383232-REO5",
+          "accessed_at": "2026-05-25",
+          "source_type": "other_public",
+          "fact_classification": "public",
+          "evidence_snippet": "Machina raised $124M Series C; total public capital ~$170M; HQ Los Angeles; investors include Balerion Capital",
+          "supported_fact": "Machina raised $124M Series C; total public capital ~$170M; HQ Los Angeles; investors include Balerion Capital",
+          "confidence": "high",
+          "corroboration": "public source cited in nightly research packet",
+          "safe_for_outreach": "conditional",
+          "safe_fact_for_copy": "Machina raised $124M Series C; total public capital ~$170M; HQ Los Angeles; investors include Balerion Capital"
+        }
+      ],
+      "outreach_drafts": [
+        {
+          "draft_type": "email",
+          "channel": "manual_email_review",
+          "title": "AI patent scorecard attorney-review angle: Machina Labs",
+          "subject": "Attorney-review-only AI patent strategy angle for Machina Labs",
+          "body": "ATTORNEY REVIEW ONLY — DO NOT SEND.\nTarget: Edward Mehr\nPublic fact hook / hypothesis: Machina Labs is deploying cutting-edge AI-guided robotics for manufacturing (aerospace, defense, automotive) with multiple high-profile deployments and $170M+ in public funding. At this scale and with this level of technical complexity (robot foundation models, AI-driven process control, multi-material fabrication), there is likely significant IP documentation activity — but also significant risk around human-contribution attribution, AI-assisted invention records, trade-secret vs patent strategy, and disclosure timing as the company scales toward production and potential M&A. The AI Patent Strategy Scorecard could help the leadership team map their IP posture before the next funding or customer milestone.\nSuggested lead magnet: AI Patent Strategy Scorecard — /ai-patent-strategy-scorecard\nLinkedIn awareness draft exists for internal review only; do not post or tag without exact approval.\n\nInternal LinkedIn awareness draft:\nCompanies building AI-guided robotics are running into a hidden IP challenge:\n\nThe AI doesn't file the patent. The human contribution does.\n\nAnd when the system itself generates designs, optimizes processes, and controls fabrication — the documentation gap widens fast.\n\nIt's not just about what the robot makes.\n\nIt's about who designed the design process, what the AI contributed, and whether the company can later prove inventive conception.\n\nFor #founders and #CTOs: invention records are becoming a product operating system.\nFor #investors: IP diligence on physical-AI companies is increasingly about documentation, not just demos.\nFor #engineering-leaders: R&D speed and IP strategy need to move together — not later.\n\nEducational starting point: AI Patent Strategy Scorecard\nhttps://whiteford-ai-law-pages.vercel.app/ai-patent-strategy-scorecard\n\nGuardrail: no outreach, email/SMS, workflow enrollment, trigger tags, LinkedIn/social action, Clio write, live CRM/Supabase sync, public/client-facing use, or send without Jeff exact approval plus attorney/conflicts/suppression review.",
+          "source_facts": [
+            "Company builds AI-guided robotic manufacturing platform (RoboCraftsman); applications in aerospace, defense, automotive; team from SpaceX/Relativity",
+            "$32M Series B co-led by NVentures (NVIDIA VC) and Innovation Endeavors; total $45M at that time; AI/R&D acceleration stated as use of funds",
+            "Founded 2019 by Edward Mehr and Babak Raeisinia; Series A $1M + Series A-1 $10M + Series B $32M; Edward Mehr confirmed as CEO"
+          ],
+          "source_urls": [
+            "https://machinalabs.ai/",
+            "https://machinalabs.ai/resources/machinas-32m-series-b-fundraise",
+            "https://dot.la/machina-labs-robotics-2656535070.html",
+            "https://www.linkedin.com/posts/grishinrobotics_machina-labs-just-raised-124m-series-c-activity-7426583917052383232-REO5"
+          ],
+          "risk_level": "attorney_review_required",
+          "internal_review_notes": "Not approved for sending. Research-only local staging; requires attorney review, conflicts, suppression, source-current checks, and Jeff exact approval before external use."
+        }
+      ],
+      "source_candidate_prospect_id": "machina-labs-20260525",
+      "source_candidate_path": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-25/prospect_candidates.json",
+      "guardrails": {
+        "external_action_allowed": false,
+        "approval_required": true,
+        "no_outreach_no_workflows_no_social_no_clio_no_live_sync": true,
+        "required_before_external_use": [
+          "Jeff exact approval",
+          "attorney review",
+          "conflicts check",
+          "suppression/opt-out check",
+          "source-current verification"
+        ]
+      },
+      "validation_gates": {
+        "gate_1_live_source": "PASS — web_search and web_extract both operational",
+        "gate_2_domain_canonical": "PASS — machinalabs.ai verified as official domain",
+        "gate_3_current_urls": "PASS — https://machinalabs.ai/ and https://machinalabs.ai/resources/machinas-32m-series-b-fundraise both returned content",
+        "gate_4_contact_validation": "PASS — Edward Mehr (CEO, Co-founder) confirmed across 3 public sources; Babak Raeisinia (Co-founder, Advisor) confirmed via dot.LA and TheOrg",
+        "gate_5_linkedin_hygiene": "INFO — LinkedIn URLs not obtained for contacts. Jagdeep Singh LinkedIn was attempted for Rhoda but could not be extracted (LinkedIn blocks web_extract). Candidate for attorney to verify manually.",
+        "gate_6_geographic_support": "INFO — HQ is Los Angeles, not Mountain West. No Mountain West claim made. Relevance is industry-wide AI/IP, not location-specific.",
+        "gate_7_outreach_readiness": "draft_ready for attorney review only. No workflow trigger tags. ops:no-auto-send = true."
+      },
+      "consent_gating": {
+        "ops_no_auto_send": true,
+        "consent_basis": "no_email_opt_in",
+        "approval_status": "no-auto-send",
+        "workflow_trigger_tags": [],
+        "suppression_tags": [
+          "newsletter:not-consented"
+        ]
+      },
+      "next_action": {
+        "recommended": "attorney_review",
+        "notes": "High AI patent fit but large-scale funded company. Attorney should evaluate fit with Whiteford's typical client profile. Prioritize: AI Patent lead magnet, LinkedIn awareness post draft, email draft for CEO/COO review."
+      }
+    },
+    {
+      "company": {
+        "prospect_id": "prospect_rhoda_ai_20260525",
+        "name": "Rhoda AI",
+        "domain": "rhoda.ai",
+        "website_url": "https://www.rhoda.ai/",
+        "location": "Palo Alto, CA",
+        "state_region": "California",
+        "industry": "Physical AI / robot foundation models",
+        "segment": "ai-patent",
+        "primary_offer_lane": "ai-patent",
+        "source_type": "nightly_public_source_research",
+        "source_url": "https://www.rhoda.ai/",
+        "source_note": "Rhoda AI is building general-purpose robot foundation models that operate in commercial and industrial environments. FutureVision is their robot intelligence platform leveraging internet-scale video pre-training (1+ million videos) and on-robot trajectory fine-tuning. Applications in logistics, automotive, manufacturing, and ecommerce. Targeting physical AGI. Investors include Khosla Ventures, John Doerr/Temasek, Samsung NEXT, Mayfield, NVentures, and many others.",
+        "pipeline_stage": "research_staged",
+        "scores": {
+          "fit_score": 94,
+          "urgency_score": 70,
+          "value_potential_score": 80,
+          "combined_priority_score": 83,
+          "contact_confidence": 60
+        },
+        "lead_magnet": "AI Patent Strategy Scorecard",
+        "recommended_offer": "AI Patent Strategy Scorecard / attorney-review Agent Targeting packet",
+        "risk_level": "attorney_review_required",
+        "suppression_status": "consent_gap_no_auto_send",
+        "conflicts_status": "required_before_send",
+        "owner": "qwen-local",
+        "notes": "Research-only nightly candidate. No outreach authorization; attorney review, conflicts, suppression, and source-current checks required before external use.\nRhoda AI is building general-purpose robot foundation models that operate in commercial and industrial environments. FutureVision is their robot intelligence platform leveraging internet-scale video pre-training (1+ million videos) and on-robot trajectory fine-tuning. Applications in logistics, automotive, manufacturing, and ecommerce. Targeting physical AGI. Investors include Khosla Ventures, John Doerr/Temasek, Samsung NEXT, Mayfield, NVentures, and many others.\nSize signal: Series A $450M at $1.7B valuation; pre-seed $105M (Genesis AI) + $162.6M Series A\nMaturity signal: Emerging from stealth in early 2026; 18 months of development\nValidation gates: {\"gate_1_live_source\": \"PASS — web_search and web_extract both operational\", \"gate_2_domain_canonical\": \"PASS — rhoda.ai verified as official domain\", \"gate_3_current_urls\": \"PASS — https://www.rhoda.ai/ and https://www.rhoda.ai/team both returned full content; https://www.rhoda.ai/news/press-release confirmed\", \"gate_4_contact_validation\": \"HIGH CONTACT CONFIDENCE for Jagdeep Singh (CEO). Company team page confirms all named contacts. LinkedIn could not be scraped for content but URL found via search. Google's web_extractor failed on LinkedIn profile URL (Gate 5 notes).\", \"gate_5_linkedin_hygiene\": \"CAUTION — Jagdeep Singh LinkedIn URL https://www.linkedin.com/in/jagdeep-singh-3b2a9222 was found via search but web_extract failed to render content (LinkedIn access limitation). URL appears to be a valid public person profile (returned 200-level with 'Website Not Supported' extraction error, not 404). Verified as real person from multiple independent sources. For outreach use, Jeff should verify the handle manually before tagging.\", \"gate_6_geographic_support\": \"HQ Palo Alto, CA. No Mountain West claim. Industry-wide relevance for AI/ip strategy.\", \"gate_7_outreach_readiness\": \"draft_ready for attorney review only. No workflow trigger tags. ops:no-auto-send = true.\"}"
+      },
+      "contacts": [
+        {
+          "name": "Jagdeep Singh",
+          "title": "Co-founder & CEO",
+          "role_category": "ceo",
+          "email": null,
+          "linkedin_url": "https://www.linkedin.com/in/jagdeep-singh-3b2a9222",
+          "phone": null,
+          "source_type": "linkedin_profile",
+          "source_url": "https://www.linkedin.com/in/jagdeep-singh-3b2a9222",
+          "confidence": 60,
+          "permission_basis": "public-source research; attorney review required before outreach",
+          "suppression_status": "not_checked",
+          "notes": "LinkedIn profile URL found via web search; company team page confirms name/title. Direct page content could not be scraped (LinkedIn access limitation). Verified as real person from multiple search results."
+        },
+        {
+          "name": "Andrew Wooten",
+          "title": "Co-founder & Chief Product Officer",
+          "role_category": "product_leader",
+          "email": null,
+          "linkedin_url": null,
+          "phone": null,
+          "source_type": "company_website",
+          "source_url": "https://www.rhoda.ai/team",
+          "confidence": 75,
+          "permission_basis": "public-source research; attorney review required before outreach",
+          "suppression_status": "not_checked",
+          "notes": "rhoda.ai/team confirmed Andrew Wooten as Chief Product Officer and Co-founder"
+        },
+        {
+          "name": "Eric Chan",
+          "title": "Chief Scientist & Co-founder",
+          "role_category": "cto",
+          "email": null,
+          "linkedin_url": null,
+          "phone": null,
+          "source_type": "company_website",
+          "source_url": "https://www.rhoda.ai/team",
+          "confidence": 75,
+          "permission_basis": "public-source research; attorney review required before outreach",
+          "suppression_status": "not_checked",
+          "notes": "rhoda.ai/team confirmed Eric Chan as Chief Scientist and Co-founder"
+        }
+      ],
+      "evidence": [
+        {
+          "source_url": "https://www.rhoda.ai/",
+          "accessed_at": "2026-05-25",
+          "source_type": "company_website",
+          "fact_classification": "public",
+          "evidence_snippet": "Company describes itself as building general-purpose foundation models for physical AI; FutureVision platform detailed",
+          "supported_fact": "Company describes itself as building general-purpose foundation models for physical AI; FutureVision platform detailed",
+          "confidence": "high",
+          "corroboration": "public source cited in nightly research packet",
+          "safe_for_outreach": "conditional",
+          "safe_fact_for_copy": "Company describes itself as building general-purpose foundation models for physical AI; FutureVision platform detailed"
+        },
+        {
+          "source_url": "https://www.rhoda.ai/team",
+          "accessed_at": "2026-05-25",
+          "source_type": "company_website",
+          "fact_classification": "public",
+          "evidence_snippet": "Leadership team confirmed: Jagdeep Singh (CEO), Eric Chan (Chief Scientist), Andrew Wooten (CPO), Gordon Wetzstein (Scientific Advisor, Co-founder), Changan Chen (CRO)",
+          "supported_fact": "Leadership team confirmed: Jagdeep Singh (CEO), Eric Chan (Chief Scientist), Andrew Wooten (CPO), Gordon Wetzstein (Scientific Advisor, Co-founder), Changan Chen (CRO)",
+          "confidence": "high",
+          "corroboration": "public source cited in nightly research packet",
+          "safe_for_outreach": "conditional",
+          "safe_fact_for_copy": "Leadership team confirmed: Jagdeep Singh (CEO), Eric Chan (Chief Scientist), Andrew Wooten (CPO), Gordon Wetzstein (Scientific Advisor, Co-founder), Changan Chen (CRO)"
+        },
+        {
+          "source_url": "https://www.roboticstomorrow.com/news/2026/03/10/rhoda-ai-exits-stealth-with-450m-series-a-to-bring-robots-out-of-the-lab-and-into-the-real-world/26240/",
+          "accessed_at": "2026-05-25",
+          "source_type": "news",
+          "fact_classification": "public",
+          "evidence_snippet": "Rhoda AI emerged from stealth with $450M Series A led by Premji Invest; FutureVision robot foundation model unveiled; CEO Jagdeep Singh confirmed",
+          "supported_fact": "Rhoda AI emerged from stealth with $450M Series A led by Premji Invest; FutureVision robot foundation model unveiled; CEO Jagdeep Singh confirmed",
+          "confidence": "high",
+          "corroboration": "public source cited in nightly research packet",
+          "safe_for_outreach": "conditional",
+          "safe_fact_for_copy": "Rhoda AI emerged from stealth with $450M Series A led by Premji Invest; FutureVision robot foundation model unveiled; CEO Jagdeep Singh confirmed"
+        },
+        {
+          "source_url": "https://www.linkedin.com/posts/rhoda-ai_the-gap-between-robotics-in-the-lab-and-robotics-activity-7437150328208338945-AOqP",
+          "accessed_at": "2026-05-25",
+          "source_type": "other_public",
+          "fact_classification": "public",
+          "evidence_snippet": "Official company LinkedIn post confirming FutureVision and robot foundation model approach",
+          "supported_fact": "Official company LinkedIn post confirming FutureVision and robot foundation model approach",
+          "confidence": "high",
+          "corroboration": "public source cited in nightly research packet",
+          "safe_for_outreach": "conditional",
+          "safe_fact_for_copy": "Official company LinkedIn post confirming FutureVision and robot foundation model approach"
+        }
+      ],
+      "outreach_drafts": [
+        {
+          "draft_type": "email",
+          "channel": "manual_email_review",
+          "title": "AI patent scorecard attorney-review angle: Rhoda AI",
+          "subject": "Attorney-review-only AI patent strategy angle for Rhoda AI",
+          "body": "ATTORNEY REVIEW ONLY — DO NOT SEND.\nTarget: Jagdeep Singh\nPublic fact hook / hypothesis: Rhoda AI just emerged from stealth with $450M Series A and unveiled FutureVision, a robot foundation model built on internet-scale video pre-training. The company is at the absolute peak of innovation velocity — a critical window for IP documentation. With the convergence of AI foundation models, robotics hardware, and video-predictive control, the human-contribution/attribution question for patentability is especially salient. Pre-seed investors and board will likely ask about IP position. The AI Patent Strategy Scorecard is the most valuable first-party tool for leadership to map their IP strategy now.\nSuggested lead magnet: AI Patent Strategy Scorecard — /ai-patent-strategy-scorecard\nLinkedIn awareness draft exists for internal review only; do not post or tag without exact approval.\n\nInternal LinkedIn awareness draft:\nWhat happens when a company raises $450 million to build robots that learn from watching videos?\n\nYou get a fundamental invention question:\n\nIf a foundation model trained on 1 million+ videos contributes to the system's behavior — who is the inventor?\n\nThe AI doesn't file the patent. The human contribution does.\n\nAnd for a company building robot foundation models, the documentation gap between what the model learns and what humans design is wide.\n\nFor #founders: your first filing strategy should come before your first product launch.\nFor #investors: AI patent diligence is increasingly about process, not just claims.\nFor #AI researchers: publication and patent timing need to be planned together.\n\nEducational starting point: AI Patent Strategy Scorecard\nhttps://whiteford-ai-law-pages.vercel.app/ai-patent-strategy-scorecard\n\nGuardrail: no outreach, email/SMS, workflow enrollment, trigger tags, LinkedIn/social action, Clio write, live CRM/Supabase sync, public/client-facing use, or send without Jeff exact approval plus attorney/conflicts/suppression review.",
+          "source_facts": [
+            "Company describes itself as building general-purpose foundation models for physical AI; FutureVision platform detailed",
+            "Leadership team confirmed: Jagdeep Singh (CEO), Eric Chan (Chief Scientist), Andrew Wooten (CPO), Gordon Wetzstein (Scientific Advisor, Co-founder), Changan Chen (CRO)",
+            "Rhoda AI emerged from stealth with $450M Series A led by Premji Invest; FutureVision robot foundation model unveiled; CEO Jagdeep Singh confirmed"
+          ],
+          "source_urls": [
+            "https://www.rhoda.ai/",
+            "https://www.rhoda.ai/team",
+            "https://www.roboticstomorrow.com/news/2026/03/10/rhoda-ai-exits-stealth-with-450m-series-a-to-bring-robots-out-of-the-lab-and-into-the-real-world/26240/",
+            "https://www.linkedin.com/posts/rhoda-ai_the-gap-between-robotics-in-the-lab-and-robotics-activity-7437150328208338945-AOqP"
+          ],
+          "risk_level": "attorney_review_required",
+          "internal_review_notes": "Not approved for sending. Research-only local staging; requires attorney review, conflicts, suppression, source-current checks, and Jeff exact approval before external use."
+        }
+      ],
+      "source_candidate_prospect_id": "rhoda-ai-20260525",
+      "source_candidate_path": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-25/prospect_candidates.json",
+      "guardrails": {
+        "external_action_allowed": false,
+        "approval_required": true,
+        "no_outreach_no_workflows_no_social_no_clio_no_live_sync": true,
+        "required_before_external_use": [
+          "Jeff exact approval",
+          "attorney review",
+          "conflicts check",
+          "suppression/opt-out check",
+          "source-current verification"
+        ]
+      },
+      "validation_gates": {
+        "gate_1_live_source": "PASS — web_search and web_extract both operational",
+        "gate_2_domain_canonical": "PASS — rhoda.ai verified as official domain",
+        "gate_3_current_urls": "PASS — https://www.rhoda.ai/ and https://www.rhoda.ai/team both returned full content; https://www.rhoda.ai/news/press-release confirmed",
+        "gate_4_contact_validation": "HIGH CONTACT CONFIDENCE for Jagdeep Singh (CEO). Company team page confirms all named contacts. LinkedIn could not be scraped for content but URL found via search. Google's web_extractor failed on LinkedIn profile URL (Gate 5 notes).",
+        "gate_5_linkedin_hygiene": "CAUTION — Jagdeep Singh LinkedIn URL https://www.linkedin.com/in/jagdeep-singh-3b2a9222 was found via search but web_extract failed to render content (LinkedIn access limitation). URL appears to be a valid public person profile (returned 200-level with 'Website Not Supported' extraction error, not 404). Verified as real person from multiple independent sources. For outreach use, Jeff should verify the handle manually before tagging.",
+        "gate_6_geographic_support": "HQ Palo Alto, CA. No Mountain West claim. Industry-wide relevance for AI/ip strategy.",
+        "gate_7_outreach_readiness": "draft_ready for attorney review only. No workflow trigger tags. ops:no-auto-send = true."
+      },
+      "consent_gating": {
+        "ops_no_auto_send": true,
+        "consent_basis": "no_email_opt_in",
+        "approval_status": "no-auto-send",
+        "workflow_trigger_tags": [],
+        "suppression_tags": [
+          "newsletter:not-consented"
+        ]
+      },
+      "next_action": {
+        "recommended": "attorney_review",
+        "notes": "Highest AI patent urgency of the three candidates due to stealth exit + massive funding. This is the ideal timing for Whiteford to be top-of-mind on AI patent strategy with the CEO and CTO before first disclosures. LinkedIn handle J Singh needs manual verification for tag use."
+      }
+    },
+    {
+      "company": {
+        "prospect_id": "prospect_mind_robotics_20260525",
+        "name": "Mind Robotics",
+        "domain": "mindrobotics.ai",
+        "website_url": "https://www.mindrobotics.ai/",
+        "location": "Palo Alto, CA (spinout from Rivian, Normal, IL)",
+        "state_region": "California",
+        "industry": "AI industrial robotics / humanoid robots / physical AI",
+        "segment": "ai-patent",
+        "primary_offer_lane": "ai-patent",
+        "source_type": "nightly_public_source_research",
+        "source_url": "https://www.wsj.com/business/autos/rivian-ceos-robotics-spinoff-raises-400-million-4c54a9a0",
+        "source_note": "Mind Robotics is building AI-enabled industrial robots for factory and manufacturing work. Founded and led by Rivian CEO RJ Scaringe as a spinout in late 2025. Rivian is a partner and major shareholder, providing data on manufacturing processes. Aiming to deploy humanoid-style robots for physical automation in industrial settings. Total funding over $1 billion.",
+        "pipeline_stage": "research_staged",
+        "scores": {
+          "fit_score": 90,
+          "urgency_score": 70,
+          "value_potential_score": 75,
+          "combined_priority_score": 80,
+          "contact_confidence": 65
+        },
+        "lead_magnet": "AI Patent Strategy Scorecard",
+        "recommended_offer": "AI Patent Strategy Scorecard / attorney-review Agent Targeting packet",
+        "risk_level": "attorney_review_required",
+        "suppression_status": "consent_gap_no_auto_send",
+        "conflicts_status": "required_before_send",
+        "owner": "qwen-local",
+        "notes": "Research-only nightly candidate. No outreach authorization; attorney review, conflicts, suppression, and source-current checks required before external use.\nMind Robotics is building AI-enabled industrial robots for factory and manufacturing work. Founded and led by Rivian CEO RJ Scaringe as a spinout in late 2025. Rivian is a partner and major shareholder, providing data on manufacturing processes. Aiming to deploy humanoid-style robots for physical automation in industrial settings. Total funding over $1 billion.\nSize signal: Founded late 2025; $500M Series A + $400M follow-on by Kleiner Perkins; total >$1B funding\nMaturity signal: Spinout from Rivian (EV company founded 2009, IPO'd); parent Rivian PE-backed aging fund; founder RJ Scaringe has exit context\nValidation gates: {\"gate_1_live_source\": \"PASS\", \"gate_2_domain_canonical\": \"INFO — mindrobotics.ai domain not directly verified for content. RJ Scaringe and Mind Robotics confirmed via WSJ/Forbes/BusinessWire. Domain canonicalization needs attention.\", \"gate_3_current_urls\": \"INFO — News sources (WSJ, Forbes, BusinessWire) returned content. Company domain not directly verified.\", \"gate_4_contact_validation\": \"MODERATE — RJ Scaringe confirmed via multiple news sources as Mind Robotics founder. Title verified as Founder/Chairman. Rivian CEO confirmed. No direct business email.\", \"gate_5_linkedin_hygiene\": \"INFO — RJ Scaringe LinkedIn not directly located or verified. Name found in news articles. Should be verified via search if LinkedIn tagging is intended.\", \"gate_6_geographic_support\": \"HQ appears to be Palo Alto, CA (spinout from Rivian, Normal, IL). No Mountain West claim.\", \"gate_7_outreach_readiness\": \"draft_ready for attorney review only. M&A secondary angle adds unique value. No workflow trigger tags. ops:no-auto-send = true.\"}\nConflict caution: Mind Robotics / Rivian conflict-of-interest check required."
+      },
+      "contacts": [
+        {
+          "name": "RJ Scaringe",
+          "title": "Founder, Chairman of Board (Mind Robotics); CEO (Rivian)",
+          "role_category": "ceo",
+          "email": null,
+          "linkedin_url": null,
+          "phone": null,
+          "source_type": "news",
+          "source_url": "https://www.wsj.com/business/autos/rivian-ceos-robotics-spinoff-raises-400-million-4c54a9a0",
+          "confidence": 65,
+          "permission_basis": "public-source research; attorney review required before outreach",
+          "suppression_status": "not_checked",
+          "notes": "Multiple independent news sources (WSJ, Forbes, BusinessWire, LinkedIn posts) confirm RJ Scaringe as founder/creator of Mind Robotics spinout and current Rivian CEO"
+        }
+      ],
+      "evidence": [
+        {
+          "source_url": "https://www.wsj.com/business/autos/rivian-ceos-robotics-spinoff-raises-400-million-4c54a9a0",
+          "accessed_at": "2026-05-25",
+          "source_type": "news",
+          "fact_classification": "public",
+          "evidence_snippet": "Rivian CEO RJ Scaringe founded Mind Robotics as spinout in late 2025; raised $400M Kleiner Perkins; total >$1B",
+          "supported_fact": "Rivian CEO RJ Scaringe founded Mind Robotics as spinout in late 2025; raised $400M Kleiner Perkins; total >$1B",
+          "confidence": "high",
+          "corroboration": "public source cited in nightly research packet",
+          "safe_for_outreach": "conditional",
+          "safe_fact_for_copy": "Rivian CEO RJ Scaringe founded Mind Robotics as spinout in late 2025; raised $400M Kleiner Perkins; total >$1B"
+        },
+        {
+          "source_url": "https://www.businesswire.com/news/home/20260311414783/en/Mind-Robotics-Announces-%24500M-Financing-to-Support-Deployment-of-AI-Powered-Robots-at-Industrial-Scale",
+          "accessed_at": "2026-05-25",
+          "source_type": "press_release",
+          "fact_classification": "public",
+          "evidence_snippet": "$500M Series A co-led by Accel and Andreessen horowitz; building/deploying AI-powered robots for manufacturing",
+          "supported_fact": "$500M Series A co-led by Accel and Andreessen horowitz; building/deploying AI-powered robots for manufacturing",
+          "confidence": "high",
+          "corroboration": "public source cited in nightly research packet",
+          "safe_for_outreach": "conditional",
+          "safe_fact_for_copy": "$500M Series A co-led by Accel and Andreessen horowitz; building/deploying AI-powered robots for manufacturing"
+        },
+        {
+          "source_url": "https://www.forbes.com/sites/edgarsten/2026/05/19/rivian-founders-new-company-aims-to-evolve-humanoid-robots/",
+          "accessed_at": "2026-05-25",
+          "source_type": "news",
+          "fact_classification": "public",
+          "evidence_snippet": "Mind Robotics aims to evolve humanoid robots; Rivian connection confirmed by Forbes",
+          "supported_fact": "Mind Robotics aims to evolve humanoid robots; Rivian connection confirmed by Forbes",
+          "confidence": "high",
+          "corroboration": "public source cited in nightly research packet",
+          "safe_for_outreach": "conditional",
+          "safe_fact_for_copy": "Mind Robotics aims to evolve humanoid robots; Rivian connection confirmed by Forbes"
+        }
+      ],
+      "outreach_drafts": [
+        {
+          "draft_type": "email",
+          "channel": "manual_email_review",
+          "title": "AI patent scorecard attorney-review angle: Mind Robotics",
+          "subject": "Attorney-review-only AI patent strategy angle for Mind Robotics",
+          "body": "ATTORNEY REVIEW ONLY — DO NOT SEND.\nTarget: RJ Scaringe\nPublic fact hook / hypothesis: Mind Robotics is a Rivian spinout with >$1B in funding focusing on AI-powered industrial robots. The dual relevance to AI Patent Strategy (deep technical AI/robotics with significant IP potential) and M&A Readiness (aging Rivian PE fund, spinout structure, subsidiary relationships) makes this a particularly interesting prospect. As a newly founded company with massive capital and a founder who has built and exited a company (Rivian), there is both IP creation urgency and future transaction proximity. The AI Patent Strategy Scorecard is the primary lead magnet; M&A readiness is a secondary consideration for the attorney.\nSuggested lead magnet: AI Patent Strategy Scorecard — /ai-patent-strategy-scorecard\nLinkedIn awareness draft exists for internal review only; do not post or tag without exact approval.\n\nInternal LinkedIn awareness draft:\nA company founded late 2025 just crossed $1 billion in funding.\n\nThat's fast.\n\nBut the real question for any company building AI-powered robots isn't how much they raised.\n\nIt's whether they documented the right things before the right people started asking.\n\nFor a spinout from an IPO'd EV company going into humanoid robotics:\n- the parent-child IP relationships need to be clean,\n- the human-contribution-to-AI-inventions needs to be defensible,\n- and the disclosure timeline needs to be planned — not reactive.\n\nFor #founders: spinout IP is your hardest IP. Get it right from day one.\nFor #investors: valuation is easy. IP ownership is where the real risk lives.\nFor #robotics-engineers: your documentation is as important as your prototype.\n\nEducational starting point: AI Patent Strategy Scorecard\nhttps://whiteford-ai-law-pages.vercel.app/ai-patent-strategy-scorecard\n\nGuardrail: no outreach, email/SMS, workflow enrollment, trigger tags, LinkedIn/social action, Clio write, live CRM/Supabase sync, public/client-facing use, or send without Jeff exact approval plus attorney/conflicts/suppression review.",
+          "source_facts": [
+            "Rivian CEO RJ Scaringe founded Mind Robotics as spinout in late 2025; raised $400M Kleiner Perkins; total >$1B",
+            "$500M Series A co-led by Accel and Andreessen horowitz; building/deploying AI-powered robots for manufacturing",
+            "Mind Robotics aims to evolve humanoid robots; Rivian connection confirmed by Forbes"
+          ],
+          "source_urls": [
+            "https://www.wsj.com/business/autos/rivian-ceos-robotics-spinoff-raises-400-million-4c54a9a0",
+            "https://www.businesswire.com/news/home/20260311414783/en/Mind-Robotics-Announces-%24500M-Financing-to-Support-Deployment-of-AI-Powered-Robots-at-Industrial-Scale",
+            "https://www.forbes.com/sites/edgarsten/2026/05/19/rivian-founders-new-company-aims-to-evolve-humanoid-robots/"
+          ],
+          "risk_level": "attorney_review_required",
+          "internal_review_notes": "Not approved for sending. Research-only local staging; requires attorney review, conflicts, suppression, source-current checks, and Jeff exact approval before external use."
+        }
+      ],
+      "source_candidate_prospect_id": "mind-robotics-20260525",
+      "source_candidate_path": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-25/prospect_candidates.json",
+      "guardrails": {
+        "external_action_allowed": false,
+        "approval_required": true,
+        "no_outreach_no_workflows_no_social_no_clio_no_live_sync": true,
+        "required_before_external_use": [
+          "Jeff exact approval",
+          "attorney review",
+          "conflicts check",
+          "suppression/opt-out check",
+          "source-current verification"
+        ]
+      },
+      "validation_gates": {
+        "gate_1_live_source": "PASS",
+        "gate_2_domain_canonical": "INFO — mindrobotics.ai domain not directly verified for content. RJ Scaringe and Mind Robotics confirmed via WSJ/Forbes/BusinessWire. Domain canonicalization needs attention.",
+        "gate_3_current_urls": "INFO — News sources (WSJ, Forbes, BusinessWire) returned content. Company domain not directly verified.",
+        "gate_4_contact_validation": "MODERATE — RJ Scaringe confirmed via multiple news sources as Mind Robotics founder. Title verified as Founder/Chairman. Rivian CEO confirmed. No direct business email.",
+        "gate_5_linkedin_hygiene": "INFO — RJ Scaringe LinkedIn not directly located or verified. Name found in news articles. Should be verified via search if LinkedIn tagging is intended.",
+        "gate_6_geographic_support": "HQ appears to be Palo Alto, CA (spinout from Rivian, Normal, IL). No Mountain West claim.",
+        "gate_7_outreach_readiness": "draft_ready for attorney review only. M&A secondary angle adds unique value. No workflow trigger tags. ops:no-auto-send = true."
+      },
+      "consent_gating": {
+        "ops_no_auto_send": true,
+        "consent_basis": "no_email_opt_in",
+        "approval_status": "no-auto-send",
+        "workflow_trigger_tags": [],
+        "suppression_tags": [
+          "newsletter:not-consented"
+        ]
+      },
+      "next_action": {
+        "recommended": "attorney_review",
+        "notes": "Unique dual-lane prospect (AI Patent + M&A). Rivian connection creates parent-child IP complexity worth noting. RJ Scaringe is a high-profile founder with exit experience — if accessible, this could be a strategic prospect for both IP and M&A practices."
+      }
+    }
+  ]
+}

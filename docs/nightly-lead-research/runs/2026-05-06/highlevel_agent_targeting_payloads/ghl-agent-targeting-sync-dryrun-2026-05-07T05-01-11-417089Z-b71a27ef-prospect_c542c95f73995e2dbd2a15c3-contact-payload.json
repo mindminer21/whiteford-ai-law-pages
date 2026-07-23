@@ -1,0 +1,28 @@
+{
+  "companyName": "Nexar",
+  "dnd": true,
+  "dndSettings": {
+    "Call": {
+      "message": "Internal agent targeting placeholder; no outreach until Jeff approval.",
+      "status": "active"
+    },
+    "Email": {
+      "message": "Internal agent targeting placeholder; no outreach until Jeff approval.",
+      "status": "active"
+    },
+    "SMS": {
+      "message": "Internal agent targeting placeholder; no outreach until Jeff approval.",
+      "status": "active"
+    },
+    "WhatsApp": {
+      "message": "Internal agent targeting placeholder; no outreach until Jeff approval.",
+      "status": "active"
+    }
+  },
+  "firstName": "Nexar",
+  "lastName": "Agent Targeting",
+  "locationId": "tm68WWMrcAa3TqQbEAMa",
+  "name": "Nexar Agent Targeting",
+  "source": "Growth OS nightly prospect research - Agent Targeting (prospect_c542c95f73995e2dbd2a15c3)",
+  "website": "https://www.nexar.com/"
+}

@@ -1,0 +1,13 @@
+{
+  "run_date": "2026-05-18",
+  "status": "gated_noop",
+  "gateway_status": "Gate 1 failed",
+  "failure_reason": "Firecrawl API: insufficient credits (Payment Required) for both web_search and web_extract",
+  "prospects": [],
+  "contacts": [],
+  "evidence": [],
+  "outreach_drafts": [],
+  "approval_items": [],
+  "_notes": "No-op packet. Live-source research unavailable night 7 consecutive (5/12-5/18). No prospects discovered or staged. No CRM/Supabase writes. Requires Firecrawl credit restoration.",
+  "candidates": []
+}

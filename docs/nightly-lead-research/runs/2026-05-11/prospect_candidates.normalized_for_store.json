@@ -1,0 +1,81 @@
+{
+  "candidates": [
+    {
+      "company": {
+        "conflicts_status": "required_before_send",
+        "domain": "kore.ai",
+        "fit_score": 60,
+        "industry": "Enterprise Agentic AI Platform / Conversational AI",
+        "lead_magnet": "Tech Company Legal Health Checklist",
+        "location": "Kochi, India + Bay Area (San Jose), CA strategic HQ (just established, per headline banner)",
+        "name": "Kore.ai",
+        "notes": "Established enterprise player; Gartner leader; recent Bay Area expansion signals growth + organizational change\nGartner Magic Quadrant Leader 2025; Morgan Stanley, Pfizer, AMD, Dell, AWS, Microsoft as customers; enterprise-tier (estimated 500+ employees)\nKore.ai is a valid enterprise tech company (confirmed via curl), but at enterprise scale with established legal ops, priority is lower. Positioning as 'new Bay Area expansion = legal review opportunity' is weak. Recommend deprioritizing vs. mid-market Series B-A targets when sources resume.\nNo auto-send; no workflow tags; contact evidence low confidence; attorney review required before any external use.",
+        "owner": "qwen-local",
+        "pipeline_stage": "research_staged",
+        "primary_offer_lane": "tech-gc",
+        "recommended_offer": "Kore.ai is a mature enterprise AI platform company just expanding to the Bay Area. The organizational change (new Bay Area HQ + global operations) creates natural legal/compliance urgency. However, at enterprise scale, this is a low-priority prospect vs. mid-market Series B-A targets. The 'tech GC' lane applies but Whiteford would need a strong Bay Area or national value proposition.",
+        "risk_level": "attorney_review_required",
+        "scores": {
+          "combined_priority_score": 58,
+          "fit_score": 60,
+          "urgency_score": 40,
+          "value_potential_score": 70
+        },
+        "segment": "tech-gc",
+        "source_note": "2026-05-11 nightly research; Firecrawl credits exhausted, curl-only first-party evidence; low priority and no outreach authorized.",
+        "source_type": "nightly_public_source_research_curl_limited",
+        "source_url": "https://www.kore.ai",
+        "state_region": "California/Bay Area",
+        "suppression_status": "not_checked",
+        "urgency_score": 40,
+        "website_url": "https://www.kore.ai"
+      },
+      "contacts": [
+        {
+          "confidence": 20,
+          "email": null,
+          "linkedin_url": "https://www.linkedin.com/in/naveenravanti",
+          "name": "Naveen Ravanti",
+          "permission_basis": "Company website header confirmed 'Agentic AI Applications for the Enterprise'; LinkedIn URL standard format, unverified. Low confidence until verified.",
+          "phone": null,
+          "role_category": "ceo",
+          "source_url": "https://www.kore.ai (title confirmed via page title/header from curl extract)",
+          "suppression_status": "not_checked",
+          "title": "CEO"
+        }
+      ],
+      "evidence": [
+        {
+          "accessed_at": "2026-05-11",
+          "confidence": "high",
+          "corroboration": "First-party title/meta extraction only via curl. No web_extract for full page verification.",
+          "evidence_snippet": "CONFIRMED VIA CURL ONLY - HTTP 200 with title 'Agentic AI Applications for the Enterprise' and meta title 'Kore.ai'. Page confirms Gartner Magic Quadrant Leader for Conversational AI Platforms 2025. Customers include Morgan Stanley, Pfizer, AMD, Microsoft, AWS. Just established Bay Area strategic HQ.",
+          "fact_classification": "public",
+          "safe_fact_for_copy": null,
+          "safe_for_outreach": "conditional",
+          "source_type": "company_website",
+          "source_url": "https://www.kore.ai",
+          "supported_fact": "CONFIRMED VIA CURL ONLY - HTTP 200 with title 'Agentic AI Applications for the Enterprise' and meta title 'Kore.ai'. Page confirms Gartner Magic Quadrant Leader for Conversational AI Platforms 2025. Customers include Morgan Stanley, Pfizer, AMD, Microsoft, AWS. Just established Bay Area strategic HQ."
+        },
+        {
+          "accessed_at": "2026-05-11",
+          "confidence": "high",
+          "corroboration": "URL probed via curl, returned 200.",
+          "evidence_snippet": "CONFIRMED VIA CURL ONLY - HTTP 200 confirms Bay Area strategic headquarters announcement. Indicates organizational growth and expansion phase.",
+          "fact_classification": "public",
+          "safe_fact_for_copy": null,
+          "safe_for_outreach": "conditional",
+          "source_type": "company_website",
+          "source_url": "https://www.kore.ai/news/kore-ai-establishes-bay-area-strategic-headquarters-to-lead-the-next-wave-of-enterprise-ai",
+          "supported_fact": "CONFIRMED VIA CURL ONLY - HTTP 200 confirms Bay Area strategic headquarters announcement. Indicates organizational growth and expansion phase."
+        }
+      ],
+      "outreach_drafts": []
+    }
+  ],
+  "run_metadata": {
+    "normalization_note": "Adapter file for scripts/prospect_research_store.py; source JSON used prospects/url/supports_fact aliases.",
+    "run_date": "2026-05-11",
+    "source": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-11/prospect_candidates.json"
+  }
+}

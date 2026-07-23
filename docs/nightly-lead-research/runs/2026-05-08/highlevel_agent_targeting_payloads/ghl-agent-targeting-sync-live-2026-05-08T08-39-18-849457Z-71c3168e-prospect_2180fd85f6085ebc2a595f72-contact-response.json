@@ -1,0 +1,55 @@
+{
+  "body": {
+    "contact": {
+      "companyName": "RADICL (Radicl Defense LLC)",
+      "country": "US",
+      "createdBy": {
+        "channel": "OAUTH",
+        "source": "INTEGRATION",
+        "sourceId": "69f97a4042f2b054fe684553",
+        "timestamp": "2026-05-08T08:39:21.010Z"
+      },
+      "customFields": [],
+      "dateAdded": "2026-05-08T08:39:21.010Z",
+      "dateUpdated": "2026-05-08T08:39:21.010Z",
+      "deleted": false,
+      "dnd": true,
+      "dndDate": "2026-05-08T08:39:21.011Z",
+      "dndSettings": {
+        "Call": {
+          "message": "Internal agent targeting placeholder; no outreach until Jeff approval.",
+          "status": "active"
+        },
+        "SMS": {
+          "message": "Internal agent targeting placeholder; no outreach until Jeff approval.",
+          "status": "active"
+        },
+        "WhatsApp": {
+          "message": "Internal agent targeting placeholder; no outreach until Jeff approval.",
+          "status": "active"
+        }
+      },
+      "firstName": "RADICL",
+      "firstNameLowerCase": "radicl",
+      "fullNameLowerCase": "radicl (radicl defense llc) agent targeting",
+      "id": "PngYMpg9XtRzFutqkzKH",
+      "lastName": "(Radicl Defense LLC) Agent Targeting",
+      "lastNameLowerCase": "(radicl defense llc) agent targeting",
+      "lastSessionActivityAt": "2026-05-08T08:39:21.011Z",
+      "lastUpdatedBy": {
+        "channel": "OAUTH",
+        "source": "INTEGRATION",
+        "sourceId": "69f97a4042f2b054fe684553",
+        "timestamp": "2026-05-08T08:39:21.010Z"
+      },
+      "locationId": "tm68WWMrcAa3TqQbEAMa",
+      "source": "Growth OS nightly prospect research - Agent Targeting (prospect_2180fd85f6085ebc2a595f72)",
+      "tags": [],
+      "type": "lead",
+      "website": "https://radicl.com/"
+    },
+    "traceId": "57fe55a5-1e31-4059-bac0-4ce36be8a244"
+  },
+  "ok": true,
+  "status": 201
+}

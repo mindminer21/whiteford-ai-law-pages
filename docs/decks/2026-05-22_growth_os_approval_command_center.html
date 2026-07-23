@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Private Growth OS Approval Command Center — Whiteford / Schell IP — 2026-05-22</title>
+  <style>
+    :root{
+      --ink:#121827;
+      --navy:#213f77;
+      --deep:#003756;
+      --muted:#5d6678;
+      --paper:#fffdf8;
+      --cream:#f5f1e8;
+      --line:#d8d0c3;
+      --line-strong:#b8ab99;
+      --gold:#b99057;
+      --hold:#8d332d;
+      --hold-bg:#fff0ed;
+      --safe:#315f4f;
+      --safe-bg:#edf5f0;
+      --warn:#77531b;
+      --warn-bg:#fff7e6;
+      --blue-bg:#eef4ff;
+      --shadow:0 26px 90px rgba(0,43,69,.16);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{margin:0;overflow:hidden;color:var(--ink);background:linear-gradient(90deg,rgba(33,63,119,.045) 1px,transparent 1px),linear-gradient(180deg,rgba(33,63,119,.035) 1px,transparent 1px),var(--cream);background-size:80px 80px;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,Helvetica,sans-serif}
+    button{font:inherit}
+    button:focus-visible,a:focus-visible{outline:4px solid rgba(185,144,87,.62);outline-offset:4px}
+    code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;background:#f0ebe2;border:1px solid var(--line);padding:2px 7px;color:#18314a;overflow-wrap:anywhere}
+    .skip{position:absolute;left:18px;top:18px;z-index:50;transform:translateY(-84px);padding:10px 14px;background:var(--deep);color:#fff;border-radius:999px;text-decoration:none}.skip:focus{transform:translateY(0)}
+    .viewport{position:fixed;inset:0;display:grid;place-items:center;padding:24px}.deck{width:1920px;height:1080px;position:relative;transform-origin:center center;background:var(--paper);border:1px solid var(--line-strong);box-shadow:var(--shadow);overflow:hidden}.slide{position:absolute;inset:0;display:none;padding:72px 92px 82px;background:var(--paper);opacity:0;transform:translateX(14px);transition:opacity 150ms ease,transform 150ms ease}.slide.active{display:block;opacity:1;transform:translateX(0)}
+    .slide:before{content:"";position:absolute;inset:0 0 auto 0;height:12px;background:linear-gradient(90deg,var(--navy),var(--deep),var(--gold))}.slide.hold:before{background:linear-gradient(90deg,var(--hold),var(--deep))}.slide.safe:before{background:linear-gradient(90deg,var(--safe),var(--navy))}.slide.warn:before{background:linear-gradient(90deg,var(--warn),var(--navy))}.slide.final:before{background:linear-gradient(90deg,var(--deep),var(--hold),var(--gold))}
+    .watermark{position:absolute;right:70px;top:50px;color:rgba(18,24,39,.07);font-size:128px;font-weight:900;letter-spacing:-.08em;pointer-events:none}.rule{height:1px;background:var(--line);margin:30px 0}.eyebrow{font-size:17px;letter-spacing:.17em;text-transform:uppercase;color:var(--deep);font-weight:850;margin-bottom:20px}.private-label{display:inline-flex;align-items:center;gap:10px;border:1px solid #e3b6af;background:var(--hold-bg);color:var(--hold);font-size:16px;font-weight:900;letter-spacing:.12em;text-transform:uppercase;padding:9px 13px;border-radius:999px;margin-bottom:24px}.private-label:before{content:"";width:10px;height:10px;border-radius:50%;background:var(--hold)}
+    h1,h2,h3,p{margin:0}h1{font-size:76px;line-height:.99;letter-spacing:-.055em;max-width:1350px;text-wrap:balance}h2{font-size:56px;line-height:1.02;letter-spacing:-.045em;max-width:1560px;text-wrap:balance}h3{font-size:27px;line-height:1.08;letter-spacing:-.02em}.lead{font-size:30px;line-height:1.34;color:var(--muted);max-width:1260px;margin-top:28px}.small{font-size:18px;line-height:1.35;color:var(--muted)}.footer-note,.source-path{position:absolute;left:92px;right:92px;bottom:38px;color:var(--muted);font-size:18px}.source-path{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:15px;overflow-wrap:anywhere}
+    .hero-grid{display:grid;grid-template-columns:1fr 500px;gap:72px;align-items:center;height:100%}.side-panel{border:1px solid var(--line);background:#fffaf1;padding:34px}.verdict{font-size:25px;line-height:1.3;font-weight:760;color:var(--deep)}.meta-table{margin-top:30px;border-top:1px solid var(--line)}.meta-row{display:flex;justify-content:space-between;gap:20px;border-bottom:1px solid var(--line);padding:15px 0;font-size:18px}.meta-row span{color:var(--muted)}.meta-row strong{text-align:right}.pill-row{display:flex;flex-wrap:wrap;gap:13px;margin-top:34px}.pill,.tag{display:inline-flex;align-items:center;border:1px solid var(--line);border-radius:999px;padding:9px 13px;font-size:15px;font-weight:850;text-transform:uppercase;letter-spacing:.08em}.tag{margin-bottom:18px}.blocked,.tag.blocked{background:var(--hold-bg);border-color:#e0b2aa;color:var(--hold)}.safe,.tag.safe{background:var(--safe-bg);border-color:#b8d0c3;color:var(--safe)}.warn,.tag.warn{background:var(--warn-bg);border-color:#e0c789;color:var(--warn)}.info,.tag.info{background:var(--blue-bg);border-color:#c8d8f5;color:var(--navy)}
+    .two-col{display:grid;grid-template-columns:1fr 1fr;gap:30px;margin-top:42px}.three-col{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:38px}.four-col{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:38px}.card,.decision,.queue-card,.wall-card{border:1px solid var(--line);background:#fff;padding:27px;min-height:270px}.card.blocked,.decision.blocked,.queue-card.blocked,.wall-card.blocked{background:var(--hold-bg);border-color:#e3b6af}.card.safe,.decision.safe,.queue-card.safe{background:var(--safe-bg);border-color:#b8d0c3}.card.warn,.decision.warn,.queue-card.warn{background:var(--warn-bg);border-color:#e0c789}.card.info,.decision.info,.queue-card.info{background:var(--blue-bg);border-color:#c8d8f5}.card p,.decision p,.queue-card p,.wall-card p{font-size:21px;line-height:1.34;color:var(--muted);margin-top:14px}.card ul,.decision ul,.queue-card ul,.wall-card ul{margin:18px 0 0 22px;padding:0}.card li,.decision li,.queue-card li,.wall-card li{font-size:20px;line-height:1.32;color:var(--muted);margin:10px 0}.callout{margin-top:32px;border:1px solid var(--line);background:#fffaf1;padding:22px 28px;font-size:24px;line-height:1.32;color:var(--deep);font-weight:700}.decision-line{margin-top:18px;padding:17px 18px;background:rgba(255,255,255,.68);border:1px dashed rgba(0,55,86,.24);font-size:20px;line-height:1.4;color:#354054}.label{font-size:16px;letter-spacing:.11em;text-transform:uppercase;color:var(--deep);font-weight:850}.status-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-top:36px}.status-row{display:grid;grid-template-columns:255px 1fr;gap:22px;align-items:start;border:1px solid var(--line);background:#fff;padding:22px 24px}.status-row p{font-size:21px;line-height:1.34;color:var(--muted)}.decision-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-top:36px}.decision{min-height:400px}.queue-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:28px;margin-top:36px}.task-list{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:18px}.task-chip{display:flex;align-items:center;justify-content:center;min-height:48px;border:1px solid rgba(141,51,45,.28);background:rgba(255,255,255,.62);font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:16px;color:#5b3833}.flow{display:grid;grid-template-rows:repeat(6,1fr);gap:13px;margin-top:30px}.flow-row{display:grid;grid-template-columns:300px 1fr 260px;gap:20px;align-items:center;border:1px solid var(--line);background:#fff;padding:16px 20px}.flow-row p{font-size:20px;line-height:1.32;color:var(--muted)}.flow-row.safe{background:var(--safe-bg);border-color:#b8d0c3}.flow-row.warn{background:var(--warn-bg);border-color:#e0c789}.flow-row.blocked{background:var(--hold-bg);border-color:#e3b6af}.source-list{display:grid;gap:16px;margin-top:30px}.source-item{border:1px solid var(--line);background:#fff;padding:19px 22px}.source-item p{font-size:18px;line-height:1.35;color:var(--muted);font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;overflow-wrap:anywhere}.wall-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:36px}.wall-card{border-color:#e3b6af;background:var(--hold-bg);min-height:570px}.wall-card li{font-size:22px;color:#5b3833}.controls{position:fixed;right:28px;bottom:24px;z-index:20;display:flex;align-items:center;gap:12px;background:rgba(255,253,248,.94);border:1px solid var(--line);box-shadow:0 10px 40px rgba(0,43,69,.12);padding:10px 12px}.controls button{width:44px;height:44px;border:1px solid var(--line-strong);background:#fff;color:var(--deep);font-size:32px;line-height:1;cursor:pointer}.controls button:disabled{opacity:.38;cursor:not-allowed}.slide-count{min-width:72px;text-align:center;font-size:16px;color:var(--muted);font-variant-numeric:tabular-nums}.controls .title{max-width:340px;color:var(--deep);font-size:16px;font-weight:750;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+    @media (prefers-reduced-motion:reduce){.slide{transition:none}}
+    @media print{body{overflow:visible;background:#fff}.viewport{position:static;display:block;padding:0}.deck{width:auto;height:auto;transform:none!important;border:0;box-shadow:none}.slide{position:relative;display:block!important;opacity:1!important;transform:none!important;page-break-after:always;width:100vw;height:56.25vw;min-height:720px;border:1px solid #ddd}.controls,.skip{display:none!important}.watermark{display:none}h1{font-size:54pt}h2{font-size:38pt}.lead{font-size:18pt}.card p,.decision p,.queue-card p,.flow-row p,.card li,.decision li,.queue-card li,.wall-card li{font-size:14pt}.two-col,.three-col,.four-col,.status-grid,.decision-grid,.queue-grid,.wall-grid{grid-template-columns:1fr}.flow-row{grid-template-columns:1fr}.task-list{grid-template-columns:repeat(2,1fr)}}
+  </style>
+</head>
+<body>
+  <a href="#slide-1" class="skip">Skip to deck</a>
+  <main class="viewport" aria-label="Whiteford and Schell IP private Growth OS approval command center deck">
+    <section class="deck" id="deck" aria-live="polite">
+      <article class="slide active hold" id="slide-1" data-title="Private status">
+        <div class="watermark">HOLD</div>
+        <div class="hero-grid">
+          <div>
+            <div class="private-label">PRIVATE INTERNAL DECISION PREP — not public marketing copy</div>
+            <h1>Growth OS approval command center for the 2026-05-22 overnight state.</h1>
+            <p class="lead">This local deck converts the PM decision packet into a one-screen review surface for Jeff and authorized Whiteford/Schell IP operators. It authorizes no live action: no sends, no workflow enrollment, no public publishing, no CRM mutation, no Supabase DDL, no Clio write, no social action.</p>
+            <div class="pill-row"><span class="pill blocked">Default HOLD</span><span class="pill safe">Local HTML only</span><span class="pill blocked">No execute controls</span></div>
+          </div>
+          <aside class="side-panel">
+            <p class="verdict">The system is useful for internal review, but external and live-system work remains behind explicit human/operator gates.</p>
+            <div class="meta-table"><div class="meta-row"><span>Task</span><strong>t_baf5caeb</strong></div><div class="meta-row"><span>Source packet</span><strong>t_79d1534a</strong></div><div class="meta-row"><span>Audience</span><strong>Jeff + internal operators</strong></div><div class="meta-row"><span>Posture</span><strong>HOLD unless one narrow gate is approved</strong></div></div>
+          </aside>
+        </div>
+      </article>
+
+      <article class="slide warn" id="slide-2" data-title="Current state">
+        <div class="private-label">PRIVATE INTERNAL DECISION PREP — not public marketing copy</div>
+        <div class="eyebrow">Current state</div><h2>Useful internal artifacts exist. The execution layer is still blocked.</h2>
+        <div class="status-grid">
+          <div class="status-row"><div class="label">2026-05-22 run</div><p>Nightly Qwen chain is a reviewed local no-op: zero candidates, zero prospects, zero evidence, zero drafts, zero approval items, and zero Agent Targeting work items.</p></div>
+          <div class="status-row"><div class="label">Local RAG</div><p>QMD and business-development RAG are internal strategy/rubric support only. They are not Gate 1 current public-source prospect evidence and cannot substitute for source-current public evidence, suppression/conflicts review, privacy/ethics review, or explicit approval before any prospect, public, outreach, or live-system action.</p></div>
+          <div class="status-row"><div class="label">Supabase</div><p>Core tables exist, but expanded phase 6-11 Growth OS mirror tables remain missing by prior read-only checks. Prepared SQL exists, but applying it is admin/DDL work.</p></div>
+          <div class="status-row"><div class="label">HighLevel</div><p>LeadConnector/HighLevel access remains blocked by 403 / Cloudflare Error 1010 or location-token access errors. Read-only access must be repaired before any trustworthy dry-run.</p></div>
+          <div class="status-row"><div class="label">Consent/content</div><p>Funnel map is aligned to opt-in-only routing. Ursa Major and AI Invention File assets are internal review candidates only, not publication or outreach approval.</p></div>
+        </div>
+        <div class="callout">Decision posture: choose HOLD or one exact internal gate. Do not force-start children or route around blocked parents.</div>
+      </article>
+
+      <article class="slide warn" id="slide-3" data-title="Supabase DDL unblock">
+        <div class="private-label">PRIVATE INTERNAL DECISION PREP — not public marketing copy</div>
+        <div class="eyebrow">Decision 1 / Supabase expanded-schema DDL/admin unblock</div><h2>Approve only a privileged admin schema install and non-secret read-only verification — or hold.</h2>
+        <div class="decision-grid">
+          <div class="decision warn"><span class="tag warn">Decision box</span><h3><code>t_fa6eb9c1</code> — Apply expanded Supabase Growth OS mirror schema</h3><p>Prepared SQL:</p><div class="decision-line"><code>/Users/jeff/.openclaw/projects/mountain-west-growth-os/supabase/phase6-11-combined-growth-os-schema.sql</code></div><p>Choices: HOLD / GO ADMIN DDL ONLY / REVISE.</p></div>
+          <div class="decision blocked"><span class="tag blocked">Narrow scope only</span><h3>Manual admin steps if GO</h3><ul><li>Open the target Supabase project with DDL authority.</li><li>Apply the prepared phase 6-11 schema SQL.</li><li>Refresh PostgREST schema cache if needed.</li><li>Capture non-secret read-only evidence that expanded tables exist.</li><li>Only then unblock the parent so dependencies promote normally.</li></ul></div>
+        </div>
+        <div class="callout">Not approved here: agent-executed DDL, row mutation, sync, backfill, public dashboard claims, CRM/HighLevel/Clio mutation, workflow action, outreach, or client-facing use.</div>
+      </article>
+
+      <article class="slide warn" id="slide-4" data-title="HighLevel access unblock">
+        <div class="private-label">PRIVATE INTERNAL DECISION PREP — not public marketing copy</div>
+        <div class="eyebrow">Decision 2 / HighLevel API-browser read-only repair</div><h2>Repair access before trusting HighLevel state. Mutation still needs a separate exact approval.</h2>
+        <div class="decision-grid">
+          <div class="decision warn"><span class="tag warn">Decision box</span><h3><code>t_7884ab57</code> — Durable HighLevel access blocker</h3><p>Location: Whiteford Schell IP / <code>tm68WWMrcAa3TqQbEAMa</code>.</p><p>Choices: HOLD / GO READ-ONLY ACCESS REPAIR ONLY / REVISE.</p><div class="decision-line">Current posture: harmless <code>/workflows</code> probes have returned HTTP 403, Cloudflare Error 1010, or location-token access errors.</div></div>
+          <div class="decision blocked"><span class="tag blocked">No mutation lane</span><h3>Read-only repair sequence</h3><ul><li>Confirm intended location, token/access path, scopes, and user context.</li><li>Resolve Cloudflare / LeadConnector access errors.</li><li>Run harmless read-only workflow/location/user checks.</li><li>Run exact-record dry-run only if read-only probe passes.</li><li>Require a separate current Jeff approval before any live write.</li></ul></div>
+        </div>
+        <div class="callout">No contacts, opportunities, tags, fields, owners, pipeline movement, workflow activation/enrollment, email/SMS, notifications, or test sends are approved by this deck.</div>
+      </article>
+
+      <article class="slide hold" id="slide-5" data-title="Post-unblock queue">
+        <div class="private-label">PRIVATE INTERNAL DECISION PREP — not public marketing copy</div>
+        <div class="eyebrow">Post-unblock backfill queue</div><h2>If a parent is verified, let dependency order do the work. Do not manually force children.</h2>
+        <div class="queue-grid">
+          <div class="queue-card blocked"><span class="tag blocked">Supabase gated queue</span><h3>Dated mirror and expanded backfill tasks</h3><p>These promote only after <code>t_fa6eb9c1</code> schema install and read-only verification.</p><div class="task-list"><div class="task-chip">t_7d361e6b</div><div class="task-chip">t_cf8c4471</div><div class="task-chip">t_77403651</div><div class="task-chip">t_4a921ae0</div><div class="task-chip">t_5fb0187c</div><div class="task-chip">t_fd629798</div><div class="task-chip">t_188a1685</div><div class="task-chip">t_c2333511</div><div class="task-chip">t_93ea0e7a</div><div class="task-chip">t_53d470c6</div></div></div>
+          <div class="queue-card blocked"><span class="tag blocked">HighLevel gated queue</span><h3><code>t_54454a74</code> — 2026-05-22 HighLevel sync</h3><p>May promote only after read-only access repair plus upstream state still supports it.</p><ul><li>Current 2026-05-22 payload likely remains a documented no-op: zero validated prospects and zero Agent Targeting work items.</li><li>Any live mutation still requires exact recipient/payload/records/timing/suppression/rollback approval.</li></ul></div>
+        </div>
+        <div class="callout">Completed partial/core mirror reports for 2026-05-14, 05-15, 05-17, and 05-21 are candidates for expanded verification/backfill, not proof that expanded tables exist.</div>
+      </article>
+
+      <article class="slide safe" id="slide-6" data-title="Opt-in consent posture">
+        <div class="private-label">PRIVATE INTERNAL DECISION PREP — not public marketing copy</div>
+        <div class="eyebrow">Opt-in / consent posture</div><h2>Current HighLevel routing model is literal opt-in only.</h2>
+        <div class="three-col">
+          <div class="card safe"><span class="tag safe">Allowed internally</span><h3>Documented routing architecture</h3><p>The funnel map now treats <code>newsletter:ai</code>, workflow trigger tags, and email-sequence routing as checkbox-gated opt-in only.</p></div>
+          <div class="card blocked"><span class="tag blocked">Non-consented HOLD</span><h3>No auto-send posture</h3><p>Non-opted records stay <code>newsletter:not-consented</code>, <code>consent_basis=no_email_opt_in</code>, and <code>approval_status=no-auto-send</code>.</p></div>
+          <div class="card warn"><span class="tag warn">Next approval required</span><h3>Before any live routing</h3><p>Attorney/privacy/brand/deliverability/source-current review and exact Jeff approval remain required before a live HighLevel edit, workflow activation, tag, sequence, send, or sync.</p></div>
+        </div>
+        <div class="callout">Useful browser/on-page value may be prepared for non-consented users only as separately approved internal design work; it must not become email enrollment or workflow routing.</div>
+      </article>
+
+      <article class="slide safe" id="slide-7" data-title="Safe internal actions">
+        <div class="private-label">PRIVATE INTERNAL DECISION PREP — not public marketing copy</div>
+        <div class="eyebrow">Next safe internal actions</div><h2>Jeff can advance one narrow internal lane without authorizing public or live-system movement.</h2>
+        <div class="flow">
+          <div class="flow-row warn"><div class="label">1 / Supabase</div><p>Choose HOLD or GO ADMIN DDL ONLY; if GO, capture read-only evidence before unblocking <code>t_fa6eb9c1</code>.</p><span class="tag warn">Admin only</span></div>
+          <div class="flow-row warn"><div class="label">2 / HighLevel</div><p>Choose HOLD or GO READ-ONLY ACCESS REPAIR ONLY; verify location, scopes, and harmless read-only probe before dry-run planning.</p><span class="tag warn">Read-only</span></div>
+          <div class="flow-row blocked"><div class="label">3 / Sources</div><p>Choose HOLD PROSPECT EXPANSION or GO SOURCE SMOKE TEST ONLY. Prospect expansion requires later pass evidence and review gates.</p><span class="tag blocked">No outreach</span></div>
+          <div class="flow-row safe"><div class="label">4 / Ursa Major</div><p>Prepare no-tag, source-current, attorney-review-ready final-copy candidate only; no posting, tagging, commenting, DMs, or scheduling.</p><span class="tag safe">Draft only</span></div>
+          <div class="flow-row safe"><div class="label">5 / AI Invention File</div><p>Use as private scorecard/landing-page conversion refinement around non-confidential human-contribution documentation.</p><span class="tag safe">Internal copy</span></div>
+          <div class="flow-row safe"><div class="label">6 / Operator behavior</div><p>Pick one gate, capture evidence, unblock the right parent, and let dependencies promote normally. Do not force-start children.</p><span class="tag safe">Dependency safe</span></div>
+        </div>
+      </article>
+
+      <article class="slide final" id="slide-8" data-title="Guardrails">
+        <div class="private-label">PRIVATE INTERNAL DECISION PREP — not public marketing copy</div>
+        <div class="eyebrow">Guardrails / red banner</div><h2>If it reaches a prospect, publishes publicly, or changes a live system, stop.</h2>
+        <div class="wall-grid">
+          <div class="wall-card blocked"><h3>No outward motion</h3><ul><li>No email, SMS, newsletters, DMs, LinkedIn messages, comments, tags, posts, Social Planner actions, ads, YouTube release, public route/page deployment, or client/prospect-facing use.</li><li>No claim that attorney, ethics, privacy, conflicts, suppression, source-current, brand, deliverability, or Jeff approval has been granted.</li><li>No confidential, privileged, trade-secret, customer, vendor, security, personnel, cap-table, transaction, matter-specific, or regulated facts should be collected through public channels.</li></ul></div>
+          <div class="wall-card blocked"><h3>No live-system mutation</h3><ul><li>No HighLevel contact, opportunity, tag, field, campaign, sequence, workflow, enrollment, owner assignment, notification, or pipeline-stage change.</li><li>No Supabase DDL, sync, backfill, Clio write, CRM mutation, booking, analytics write, source-provider restoration, or prospect expansion from this deck.</li><li>No external network calls, forms, hidden delivery mechanisms, or execute controls are embedded here.</li></ul></div>
+          <div class="wall-card blocked"><h3>No local-RAG shortcut</h3><ul><li>QMD and business-development RAG are internal strategy/rubric support only.</li><li>They are not Gate 1 current public-source prospect evidence.</li><li>They cannot replace source-current public evidence, suppression/conflicts review, privacy/ethics review, or exact approval before prospect/public/outreach/live-system action.</li></ul></div>
+        </div>
+      </article>
+
+      <article class="slide" id="slide-9" data-title="Source anchors">
+        <div class="private-label">PRIVATE INTERNAL DECISION PREP — not public marketing copy</div>
+        <div class="eyebrow">Source anchors</div><h2>The PM packet and direct files remain controlling. This deck is a visual decision aid.</h2>
+        <div class="source-list">
+          <div class="source-item"><h3>Controlling PM decision packet</h3><p>/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/decision-packets/2026-05-22_late_night_growth_os_decision_packet.md</p></div>
+          <div class="source-item"><h3>Prepared combined Supabase SQL</h3><p>/Users/jeff/.openclaw/projects/mountain-west-growth-os/supabase/phase6-11-combined-growth-os-schema.sql</p></div>
+          <div class="source-item"><h3>HighLevel location gate</h3><p>Whiteford Schell IP / location ID tm68WWMrcAa3TqQbEAMa / read-only access currently blocked by HTTP 403, Cloudflare Error 1010, or location-token access errors.</p></div>
+          <div class="source-item"><h3>Local RAG evidence boundary</h3><p>QMD and the business-development RAG corpus can support internal strategy and rubric thinking only. Direct, source-current public evidence and the required review/approval gates remain controlling for any prospect-facing, public, outreach, or live-system step.</p></div>
+          <div class="source-item"><h3>Bottom line</h3><p>Jeff can safely decide HOLD or one internal gate. Until a gate is verified and separately approved, public, CRM, workflow, source/prospect, send, social, ad, Clio, Supabase mutation/backfill, and client-facing actions stay on HOLD.</p></div>
+        </div>
+        <div class="source-path">Deck: /Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/decks/2026-05-22_growth_os_approval_command_center.html</div>
+      </article>
+    </section>
+  </main>
+  <nav class="controls" aria-label="Slide navigation"><button type="button" id="prev" aria-label="Previous slide">‹</button><div class="slide-count" id="count">1 / 9</div><div class="title" id="slideTitle">Private status</div><button type="button" id="next" aria-label="Next slide">›</button></nav>
+  <script>
+    (()=>{const slides=Array.from(document.querySelectorAll('.slide'));const deck=document.getElementById('deck');const count=document.getElementById('count');const title=document.getElementById('slideTitle');const prev=document.getElementById('prev');const next=document.getElementById('next');const storageKey='wf_2026_05_22_growth_os_approval_command_center_slide';let index=0;function scaleDeck(){const margin=48;const sx=(window.innerWidth-margin)/1920;const sy=(window.innerHeight-margin)/1080;deck.style.transform=`scale(${Math.min(sx,sy,1)})`}function show(nextIndex){index=Math.min(Math.max(nextIndex,0),slides.length-1);slides.forEach((slide,i)=>{slide.classList.toggle('active',i===index);slide.setAttribute('aria-hidden',i===index?'false':'true')});count.textContent=`${index+1} / ${slides.length}`;title.textContent=slides[index].dataset.title||`Slide ${index+1}`;prev.disabled=index===0;next.disabled=index===slides.length-1;try{localStorage.setItem(storageKey,String(index))}catch(error){}if(location.hash!==`#slide-${index+1}`)history.replaceState(null,'',`#slide-${index+1}`)}prev.addEventListener('click',()=>show(index-1));next.addEventListener('click',()=>show(index+1));window.addEventListener('resize',scaleDeck);window.addEventListener('keydown',event=>{if(event.target&&['INPUT','TEXTAREA','SELECT','BUTTON'].includes(event.target.tagName))return;if(event.key==='ArrowRight'||event.key==='PageDown'||event.key===' ')show(index+1);if(event.key==='ArrowLeft'||event.key==='PageUp')show(index-1);if(event.key==='Home')show(0);if(event.key==='End')show(slides.length-1)});const hashMatch=location.hash.match(/^#slide-(\d+)$/);if(hashMatch){index=Number(hashMatch[1])-1}else{try{const saved=localStorage.getItem(storageKey);if(saved!==null)index=Number(saved)}catch(error){}}scaleDeck();show(index)})();
+  </script>
+</body>
+</html>

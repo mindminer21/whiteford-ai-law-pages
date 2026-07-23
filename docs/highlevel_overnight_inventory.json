@@ -1,0 +1,2530 @@
+{
+  "locationId": "tm68WWMrcAa3TqQbEAMa",
+  "results": {
+    "calendars": {
+      "data": {
+        "calendars": [
+          {
+            "allowBookingAfterUnit": "days",
+            "allowBookingForUnit": "days",
+            "allowCancellation": true,
+            "allowReschedule": true,
+            "appoinmentPerDay": 9007199254740991,
+            "appoinmentPerSlot": 1,
+            "autoConfirm": true,
+            "availabilities": [],
+            "availabilityType": 0,
+            "calendarType": "service_booking",
+            "consentLabel": "I confirm that I want to receive messages from this company using any contact information I provide.",
+            "description": "",
+            "enableRecurring": false,
+            "eventColor": "#039BE5",
+            "eventTitle": "{{contact.name}}",
+            "eventType": "RoundRobin_OptimizeForEqualDistribution",
+            "formId": "",
+            "formSubmitThanksMessage": "Thank you for your appointment request. We will contact you shortly to confirm your request. Please call our office at {{location.phone}} if you have any questions.",
+            "formSubmitType": "ThankYouMessage",
+            "googleInvitationEmails": false,
+            "guestType": "collect_detail",
+            "id": "4YbCpI0p7kG00YQWIFnR",
+            "isActive": false,
+            "locationId": "tm68WWMrcAa3TqQbEAMa",
+            "name": "Accident Case Representation",
+            "notes": "Phone:- {{contact.phone}}\nEmail:- {{contact.email}}\n\nNeed to make a change to this event?\nReschedule:-\n{{reschedule_link}}\n\nCancel:-\n{{cancellation_link}}",
+            "notifications": [],
+            "openHours": [
+              {
+                "daysOfTheWeek": [
+                  1
+                ],
+                "hours": [
+                  {
+                    "closeHour": 17,
+                    "closeMinute": 0,
+                    "openHour": 9,
+                    "openMinute": 0
+                  }
+                ]
+              },
+              {
+                "daysOfTheWeek": [
+                  2
+                ],
+                "hours": [
+                  {
+                    "closeHour": 17,
+                    "closeMinute": 0,
+                    "openHour": 9,
+                    "openMinute": 0
+                  }
+                ]
+              },
+              {
+                "daysOfTheWeek": [
+                  3
+                ],
+                "hours": [
+                  {
+                    "closeHour": 17,
+                    "closeMinute": 0,
+                    "openHour": 9,
+                    "openMinute": 0
+                  }
+                ]
+              },
+              {
+                "daysOfTheWeek": [
+                  4
+                ],
+                "hours": [
+                  {
+                    "closeHour": 17,
+                    "closeMinute": 0,
+                    "openHour": 9,
+                    "openMinute": 0
+                  }
+                ]
+              },
+              {
+                "daysOfTheWeek": [
+                  5
+                ],
+                "hours": [
+                  {
+                    "closeHour": 17,
+                    "closeMinute": 0,
+                    "openHour": 9,
+                    "openMinute": 0
+                  }
+                ]
+              },
+              {
+                "daysOfTheWeek": [
+                  6
+                ],
+                "hours": [
+                  {
+                    "closeHour": 17,
+                    "closeMinute": 0,
+                    "openHour": 9,
+                    "openMinute": 0
+                  }
+                ]
+              }
+            ],
+            "pixelId": "",
+            "preBuffer": 0,
+            "preBufferUnit": "mins",
+            "recurring": {
+              "bookingOption": "skip",
+              "bookingOverlapDefaultStatus": "",
+              "count": 1,
+              "freq": "DAILY",
+              "interval": null,
+              "monthDays": [],
+              "weekDays": []
+            },
+            "shouldAssignContactToTeamMember": false,
+            "shouldSkipAssigningContactForExisting": false,
+            "slotBuffer": 0,
+            "slotBufferUnit": "mins",
+            "slotDuration": 60,
+            "slotDurationUnit": "mins",
+            "slotInterval": 15,
+            "slotIntervalUnit": "mins",
+            "stickyContact": false,
+            "teamMembers": [],
+            "widgetSlug": "accidentcaserepresentation-ffba2d2a-da7b-4f75-8dc8-601487ab0156",
+            "widgetType": "default"
+          },
+          {
+            "allowBookingAfterUnit": "days",
+            "allowBookingForUnit": "days",
+            "allowCancellation": true,
+            "allowReschedule": true,
+            "appoinmentPerDay": 9007199254740991,
+            "appoinmentPerSlot": 1,
+            "autoConfirm": true,
+            "availabilities": [],
+            "availabilityType": 0,
+            "calendarType": "service_booking",
+            "consentLabel": "I confirm that I want to receive messages from this company using any contact information I provide.",
+            "description": "",
+            "enableRecurring": false,
+            "eventColor": "#039BE5",
+            "eventTitle": "{{contact.name}}",
+            "eventType": "RoundRobin_OptimizeForEqualDistribution",
+            "formId": "",
+            "formSubmitThanksMessage": "Thank you for your appointment request. We will contact you shortly to confirm your request. Please call our office at {{location.phone}} if you have any questions.",
+            "formSubmitType": "ThankYouMessage",
+            "googleInvitationEmails": false,
+            "guestType": "collect_detail",
+            "id": "6lSMz63sdbqbHw6Suswy",
+            "isActive": false,
+            "locationId": "tm68WWMrcAa3TqQbEAMa",
+            "name": "Wrongful Death Claims",
+            "notes": "Phone:- {{contact.phone}}\nEmail:- {{contact.email}}\n\nNeed to make a change to this event?\nReschedule:-\n{{reschedule_link}}\n\nCancel:-\n{{cancellation_link}}",
+            "notifications": [],
+            "openHours": [
+              {
+                "daysOfTheWeek": [
+                  1
+                ],
+                "hours": [
+                  {
+                    "closeHour": 17,
+                    "closeMinute": 0,
+                    "openHour": 9,
+                    "openMinute": 0
+                  }
+                ]
+              },
+              {
+                "daysOfTheWeek": [
+                  2
+                ],
+                "hours": [
+                  {
+                    "closeHour": 17,
+                    "closeMinute": 0,
+                    "openHour": 9,
+                    "openMinute": 0
+                  }
+                ]
+              },
+              {
+                "daysOfTheWeek": [
+                  3
+                ],
+                "hours": [
+                  {
+                    "closeHour": 17,
+                    "closeMinute": 0,
+                    "openHour": 9,
+                    "openMinute": 0
+                  }
+                ]
+              },
+              {
+                "daysOfTheWeek": [
+                  4
+                ],
+                "hours": [
+                  {
+                    "closeHour": 17,
+                    "closeMinute": 0,
+                    "openHour": 9,
+                    "openMinute": 0
+                  }
+                ]
+              },
+              {
+                "daysOfTheWeek": [
+                  5
+                ],
+                "hours": [
+                  {
+                    "closeHour": 17,
+                    "closeMinute": 0,
+                    "openHour": 9,
+                    "openMinute": 0
+                  }
+                ]
+              },
+              {
+                "daysOfTheWeek": [
+                  6
+                ],
+                "hours": [
+                  {
+                    "closeHour": 17,
+                    "closeMinute": 0,
+                    "openHour": 9,
+                    "openMinute": 0
+                  }
+                ]
+              }
+            ],
+            "pixelId": "",
+            "preBuffer": 0,
+            "preBufferUnit": "mins",
+            "recurring": {
+              "bookingOption": "skip",
+              "bookingOverlapDefaultStatus": "",
+              "count": 1,
+              "freq": "DAILY",
+              "interval": null,
+              "monthDays": [],
+              "weekDays": []
+            },
+            "shouldAssignContactToTeamMember": false,
+            "shouldSkipAssigningContactForExisting": false,
+            "slotBuffer": 0,
+            "slotBufferUnit": "mins",
+            "slotDuration": 60,
+            "slotDurationUnit": "mins",
+            "slotInterval": 15,
+            "slotIntervalUnit": "mins",
+            "stickyContact": false,
+            "teamMembers": [],
+            "widgetSlug": "wrongfuldeathclaims-d92ce8e8-7226-49d0-abae-5e7c1159ebaf",
+            "widgetType": "default"
+          },
+          {
+            "allowBookingAfterUnit": "days",
+            "allowBookingForUnit": "days",
+            "allowCancellation": true,
+            "allowReschedule": true,
+            "appoinmentPerDay": "",
+            "appoinmentPerSlot": 1,
+            "autoConfirm": true,
+            "availabilities": [],
+            "availabilityType": 0,
+            "calendarType": "event",
+            "consentLabel": "I confirm that I want to receive messages from this company using any contact information I provide.",
+            "description": "",
+            "enableRecurring": false,
+            "eventColor": "#039BE5",
+            "eventTitle": "{{contact.name}}",
+            "formId": "",
+            "formSubmitThanksMessage": "Thank you for your appointment request. We will contact you shortly to confirm your request. Please call our office at {{location.phone}} if you have any questions.",
+            "formSubmitType": "ThankYouMessage",
+            "googleInvitationEmails": false,
+            "guestType": "collect_detail",
+            "id": "EXzg5IT1jm4lDvpC5wjY",
+            "isActive": true,
+            "locationId": "tm68WWMrcAa3TqQbEAMa",
+            "meetingLocation": "",
+            "name": "Schedule an Appointment",
+            "notes": "Phone:- {{contact.phone}}\nEmail:- {{contact.email}}\n\nNeed to make a change to this event?\nReschedule:-\n{{reschedule_link}}\n\nCancel:-\n{{cancellation_link}}",
+            "notifications": [
+              {
+                "selectedUsers": "",
+                "shouldSendToContact": false,
+                "shouldSendToGuest": false,
+                "shouldSendToSelectedUsers": false,
+                "shouldSendToUser": false,
+                "templateId": "default",
+                "type": "email"
+              }
+            ],
+            "openHours": [
+              {
+                "daysOfTheWeek": [
+                  1
+                ],
+                "hours": [
+                  {
+                    "closeHour": 17,
+                    "closeMinute": 0,
+                    "openHour": 8,
+                    "openMinute": 0
+                  }
+                ]
+              },
+              {
+                "daysOfTheWeek": [
+                  2
+                ],
+                "hours": [
+                  {
+                    "closeHour": 17,
+                    "closeMinute": 0,
+                    "openHour": 8,
+                    "openMinute": 0
+                  }
+                ]
+              },
+              {
+                "daysOfTheWeek": [
+                  3
+                ],
+                "hours": [
+                  {
+                    "closeHour": 17,
+                    "closeMinute": 0,
+                    "openHour": 8,
+                    "openMinute": 0
+                  }
+                ]
+              },
+              {
+                "daysOfTheWeek": [
+                  4
+                ],
+                "hours": [
+                  {
+                    "closeHour": 17,
+                    "closeMinute": 0,
+                    "openHour": 8,
+                    "openMinute": 0
+                  }
+                ]
+              },
+              {
+                "daysOfTheWeek": [
+                  5
+                ],
+                "hours": [
+                  {
+                    "closeHour": 17,
+                    "closeMinute": 0,
+                    "openHour": 8,
+                    "openMinute": 0
+                  }
+                ]
+              }
+            ],
+            "pixelId": "",
+            "preBuffer": 0,
+            "preBufferUnit": "mins",
+            "recurring": {
+              "bookingOption": "skip",
+              "bookingOverlapDefaultStatus": "",
+              "count": 1,
+              "freq": "DAILY",
+              "interval": null,
+              "monthDays": [],
+              "weekDays": []
+            },
+            "shouldAssignContactToTeamMember": false,
+            "shouldSkipAssigningContactForExisting": false,
+            "slotBuffer": 0,
+            "slotBufferUnit": "mins",
+            "slotDuration": 30,
+            "slotDurationUnit": "mins",
+            "slotInterval": 30,
+            "slotIntervalUnit": "mins",
+            "stickyContact": false,
+            "widgetSlug": "scheduleanappointmentcallwithus-230ad544-8f6f-4125-9d14-f1b202f0becc-7fdb3832-39a9-4c80-a146-60233fb444a1-aaa07f1f-456b-4ccc-81e4-adb0ad437aa3-0b2d0529-cb48-461f-b8b5-712b398e91eb-fcbf65a8-70d2-4009-b786-ac4166822f0b-0f63997e-5577-46ae-9f21-00d7deb09698-e6c21248-3365-4355-9454-17fdbd70ec1e-8b95828a-650c-41a7-9b5b-453855dce734-8dda7b22-1142-4021-8dfc-111b3ef84155-f97c6afe-ae0a-48f4-a6cb-868f7ec9020c-5c4b1d30-8e32-4a3d-9142-617df2faa33d-15d6fb8b-f278-4503-98e4-f435ca7bb65e-1cb0ec42-d374-4a1a-b923-59c59dcc4791-c04f60e7-15a7-4cfc-a977-30d02f1c83fe-9e2a0269-9b69-4caa-95c7-327b47eef86a-768f1c66-54c0-48d8-a033-7c21b6c8fedf-e468fc2d-0694-45b3-a391-fbecf62ee37f",
+            "widgetType": "default"
+          },
+          {
+            "allowBookingAfterUnit": "days",
+            "allowBookingForUnit": "days",
+            "allowCancellation": true,
+            "allowReschedule": true,
+            "appoinmentPerDay": 9007199254740991,
+            "appoinmentPerSlot": 1,
+            "autoConfirm": true,
+            "availabilities": [],
+            "availabilityType": 0,
+            "calendarType": "service_booking",
+            "consentLabel": "I confirm that I want to receive messages from this company using any contact information I provide.",
+            "description": "",
+            "enableRecurring": false,
+            "eventColor": "#039BE5",
+            "eventTitle": "{{contact.name}}",
+            "eventType": "RoundRobin_OptimizeForEqualDistribution",
+            "formId": "",
+            "formSubmitThanksMessage": "Thank you for your appointment request. We will contact you shortly to confirm your request. Please call our office at {{location.phone}} if you have any questions.",
+            "formSubmitType": "ThankYouMessage",
+            "googleInvitationEmails": false,
+            "guestType": "collect_detail",
+            "id": "OEpvAIakknbKFlpbsoAx",
+            "isActive": false,
+            "locationId": "tm68WWMrcAa3TqQbEAMa",
+            "name": "Medical Malpractice Claims",
+            "notes": "Phone:- {{contact.phone}}\nEmail:- {{contact.email}}\n\nNeed to make a change to this event?\nReschedule:-\n{{reschedule_link}}\n\nCancel:-\n{{cancellation_link}}",
+            "notifications": [],
+            "openHours": [
+              {
+                "daysOfTheWeek": [
+                  1
+                ],
+                "hours": [
+                  {
+                    "closeHour": 0,
+                    "closeMinute": 0,
+                    "openHour": 0,
+                    "openMinute": 0
+                  }
+                ]
+              },
+              {
+                "daysOfTheWeek": [
+                  2
+                ],
+                "hours": [
+                  {
+                    "closeHour": 0,
+                    "closeMinute": 0,
+                    "openHour": 0,
+                    "openMinute": 0
+                  }
+                ]
+              },
+              {
+                "daysOfTheWeek": [
+                  3
+                ],
+                "hours": [
+                  {
+                    "closeHour": 0,
+                    "closeMinute": 0,
+                    "openHour": 0,
+                    "openMinute": 0
+                  }
+                ]
+              },
+              {
+                "daysOfTheWeek": [
+                  4
+                ],
+                "hours": [
+                  {
+                    "closeHour": 0,
+                    "closeMinute": 0,
+                    "openHour": 0,
+                    "openMinute": 0
+                  }
+                ]
+              },
+              {
+                "daysOfTheWeek": [
+                  5
+                ],
+                "hours": [
+                  {
+                    "closeHour": 0,
+                    "closeMinute": 0,
+                    "openHour": 0,
+                    "openMinute": 0
+                  }
+                ]
+              },
+              {
+                "daysOfTheWeek": [
+                  6
+                ],
+                "hours": [
+                  {
+                    "closeHour": 0,
+                    "closeMinute": 0,
+                    "openHour": 0,
+                    "openMinute": 0
+                  }
+                ]
+              }
+            ],
+            "pixelId": "",
+            "preBuffer": 0,
+            "preBufferUnit": "mins",
+            "recurring": {
+              "bookingOption": "skip",
+              "bookingOverlapDefaultStatus": "",
+              "count": 1,
+              "freq": "DAILY",
+              "interval": null,
+              "monthDays": [],
+              "weekDays": []
+            },
+            "shouldAssignContactToTeamMember": false,
+            "shouldSkipAssigningContactForExisting": false,
+            "slotBuffer": 0,
+            "slotBufferUnit": "mins",
+            "slotDuration": 60,
+            "slotDurationUnit": "mins",
+            "slotInterval": 15,
+            "slotIntervalUnit": "mins",
+            "stickyContact": false,
+            "teamMembers": [],
+            "widgetSlug": "medicalmalpracticeclaims-1c3a7945-cdfe-4ebb-b369-00d574558df9",
+            "widgetType": "default"
+          },
+          {
+            "allowBookingAfterUnit": "days",
+            "allowBookingForUnit": "days",
+            "allowCancellation": true,
+            "allowReschedule": true,
+            "appoinmentPerDay": 9007199254740991,
+            "appoinmentPerSlot": 1,
+            "autoConfirm": true,
+            "availabilities": [],
+            "availabilityType": 0,
+            "calendarType": "service_booking",
+            "consentLabel": "I confirm that I want to receive messages from this company using any contact information I provide.",
+            "description": "",
+            "enableRecurring": false,
+            "eventColor": "#039BE5",
+            "eventTitle": "{{contact.name}}",
+            "eventType": "RoundRobin_OptimizeForEqualDistribution",
+            "formId": "",
+            "formSubmitThanksMessage": "Thank you for your appointment request. We will contact you shortly to confirm your request. Please call our office at {{location.phone}} if you have any questions.",
+            "formSubmitType": "ThankYouMessage",
+            "googleInvitationEmails": false,
+            "guestType": "collect_detail",
+            "id": "ckUY9Qte2xpvRGaCkRUh",
+            "isActive": false,
+            "locationId": "tm68WWMrcAa3TqQbEAMa",
+            "name": "Slip and Fall / Premises Liability",
+            "notes": "Phone:- {{contact.phone}}\nEmail:- {{contact.email}}\n\nNeed to make a change to this event?\nReschedule:-\n{{reschedule_link}}\n\nCancel:-\n{{cancellation_link}}",
+            "notifications": [],
+            "openHours": [
+              {
+                "daysOfTheWeek": [
+                  1
+                ],
+                "hours": [
+                  {
+                    "closeHour": 17,
+                    "closeMinute": 0,
+                    "openHour": 9,
+                    "openMinute": 0
+                  }
+                ]
+              },
+              {
+                "daysOfTheWeek": [
+                  2
+                ],
+                "hours": [
+                  {
+                    "closeHour": 17,
+                    "closeMinute": 0,
+                    "openHour": 9,
+                    "openMinute": 0
+                  }
+                ]
+              },
+              {
+                "daysOfTheWeek": [
+                  3
+                ],
+                "hours": [
+                  {
+                    "closeHour": 17,
+                    "closeMinute": 0,
+                    "openHour": 9,
+                    "openMinute": 0
+                  }
+                ]
+              },
+              {
+                "daysOfTheWeek": [
+                  4
+                ],
+                "hours": [
+                  {
+                    "closeHour": 17,
+                    "closeMinute": 0,
+                    "openHour": 9,
+                    "openMinute": 0
+                  }
+                ]
+              },
+              {
+                "daysOfTheWeek": [
+                  5
+                ],
+                "hours": [
+                  {
+                    "closeHour": 17,
+                    "closeMinute": 0,
+                    "openHour": 9,
+                    "openMinute": 0
+                  }
+                ]
+              },
+              {
+                "daysOfTheWeek": [
+                  6
+                ],
+                "hours": [
+                  {
+                    "closeHour": 17,
+                    "closeMinute": 0,
+                    "openHour": 9,
+                    "openMinute": 0
+                  }
+                ]
+              }
+            ],
+            "pixelId": "",
+            "preBuffer": 0,
+            "preBufferUnit": "mins",
+            "recurring": {
+              "bookingOption": "skip",
+              "bookingOverlapDefaultStatus": "",
+              "count": 1,
+              "freq": "DAILY",
+              "interval": null,
+              "monthDays": [],
+              "weekDays": []
+            },
+            "shouldAssignContactToTeamMember": false,
+            "shouldSkipAssigningContactForExisting": false,
+            "slotBuffer": 0,
+            "slotBufferUnit": "mins",
+            "slotDuration": 60,
+            "slotDurationUnit": "mins",
+            "slotInterval": 15,
+            "slotIntervalUnit": "mins",
+            "stickyContact": false,
+            "teamMembers": [],
+            "widgetSlug": "slipandfallpremisesliability-af16a37e-6af2-464b-9c32-aff7db459672",
+            "widgetType": "default"
+          }
+        ],
+        "traceId": "1d4da524-5fba-45d3-a708-e60869f32721"
+      },
+      "ok": true,
+      "status": 200
+    },
+    "custom_fields": {
+      "data": {
+        "customFields": [
+          {
+            "dataType": "LARGE_TEXT",
+            "dateAdded": "2026-05-06T04:49:35.003Z",
+            "documentType": "field",
+            "fieldKey": "contact.ai_patent_checks",
+            "id": "0mv2zSrrPiwTw3Eufuwk",
+            "locationId": "tm68WWMrcAa3TqQbEAMa",
+            "model": "contact",
+            "name": "AI Patent Checks",
+            "parentId": "L2UbwKorpLWlVqMwP3e5",
+            "placeholder": "ai_patent_checks",
+            "position": 900,
+            "standard": false
+          },
+          {
+            "dataType": "TEXT",
+            "dateAdded": "2026-05-06T05:26:57.456Z",
+            "documentType": "field",
+            "fieldKey": "contact.linkedin_draft_status",
+            "id": "1dnBYpzcllC3f3Hp9O1j",
+            "locationId": "tm68WWMrcAa3TqQbEAMa",
+            "model": "contact",
+            "name": "LinkedIn Draft Status",
+            "parentId": "L2UbwKorpLWlVqMwP3e5",
+            "placeholder": "linkedin_draft_status",
+            "position": 1500,
+            "standard": false
+          },
+          {
+            "dataType": "TEXT",
+            "dateAdded": "2026-05-06T04:49:33.774Z",
+            "documentType": "field",
+            "fieldKey": "contact.ai_patent_stage",
+            "id": "7pf3mgT5ttvFjBjEpg5m",
+            "locationId": "tm68WWMrcAa3TqQbEAMa",
+            "model": "contact",
+            "name": "AI Patent Stage",
+            "parentId": "L2UbwKorpLWlVqMwP3e5",
+            "placeholder": "ai_patent_stage",
+            "position": 800,
+            "standard": false
+          },
+          {
+            "dataType": "NUMERICAL",
+            "dateAdded": "2026-05-06T04:49:29.274Z",
+            "documentType": "field",
+            "fieldKey": "contact.ai_risk_score",
+            "id": "9gjvKtASWn49eo5mLeuB",
+            "locationId": "tm68WWMrcAa3TqQbEAMa",
+            "model": "contact",
+            "name": "AI Risk Score",
+            "parentId": "L2UbwKorpLWlVqMwP3e5",
+            "placeholder": "ai_risk_score",
+            "position": 450,
+            "standard": false
+          },
+          {
+            "dataType": "LARGE_TEXT",
+            "dateAdded": "2026-05-05T05:02:34.658Z",
+            "documentType": "field",
+            "fieldKey": "contact.message",
+            "id": "B39oECpotGn8r8N7FXBH",
+            "locationId": "tm68WWMrcAa3TqQbEAMa",
+            "model": "contact",
+            "name": "Message",
+            "parentId": "1IjLlNRAUSsrFMGiVXsY",
+            "placeholder": "",
+            "position": 50,
+            "standard": false
+          },
+          {
+            "dataType": "TEXT",
+            "dateAdded": "2026-05-06T05:26:52.430Z",
+            "documentType": "field",
+            "fieldKey": "contact.linkedin_profile_url",
+            "id": "CwiY3lYPwAsHlaMb1on3",
+            "locationId": "tm68WWMrcAa3TqQbEAMa",
+            "model": "contact",
+            "name": "LinkedIn Profile URL",
+            "parentId": "L2UbwKorpLWlVqMwP3e5",
+            "placeholder": "linkedin_profile_url",
+            "position": 1100,
+            "standard": false
+          },
+          {
+            "dataType": "TEXT",
+            "dateAdded": "2026-05-06T04:49:25.999Z",
+            "documentType": "field",
+            "fieldKey": "contact.source_page",
+            "id": "INEppd3YGJBDLfHerE9a",
+            "locationId": "tm68WWMrcAa3TqQbEAMa",
+            "model": "contact",
+            "name": "Source Page",
+            "parentId": "L2UbwKorpLWlVqMwP3e5",
+            "placeholder": "source_page",
+            "position": 200,
+            "standard": false
+          },
+          {
+            "dataType": "TEXT",
+            "dateAdded": "2026-05-06T05:26:58.751Z",
+            "documentType": "field",
+            "fieldKey": "contact.pipeline_next_action",
+            "id": "JRtUG5UvKRPGyqCydBUp",
+            "locationId": "tm68WWMrcAa3TqQbEAMa",
+            "model": "contact",
+            "name": "Pipeline Next Action",
+            "parentId": "L2UbwKorpLWlVqMwP3e5",
+            "placeholder": "pipeline_next_action",
+            "position": 1600,
+            "standard": false
+          },
+          {
+            "dataType": "NUMERICAL",
+            "dateAdded": "2026-05-06T04:49:33.077Z",
+            "documentType": "field",
+            "fieldKey": "contact.ai_patent_score",
+            "id": "L78KuFhyFafq5PSp5MjR",
+            "locationId": "tm68WWMrcAa3TqQbEAMa",
+            "model": "contact",
+            "name": "AI Patent Score",
+            "parentId": "L2UbwKorpLWlVqMwP3e5",
+            "placeholder": "ai_patent_score",
+            "position": 750,
+            "standard": false
+          },
+          {
+            "dataType": "TEXT",
+            "dateAdded": "2026-05-06T05:26:51.128Z",
+            "documentType": "field",
+            "fieldKey": "contact.decision_maker_role",
+            "id": "M4EqfbzqtpbZ7iokYiZt",
+            "locationId": "tm68WWMrcAa3TqQbEAMa",
+            "model": "contact",
+            "name": "Decision Maker Role",
+            "parentId": "L2UbwKorpLWlVqMwP3e5",
+            "placeholder": "decision_maker_role",
+            "position": 1000,
+            "standard": false
+          },
+          {
+            "dataType": "LARGE_TEXT",
+            "dateAdded": "2026-05-06T05:26:56.166Z",
+            "documentType": "field",
+            "fieldKey": "contact.outreach_hypothesis",
+            "id": "Mh63JQKArJIIK6dV0b2k",
+            "locationId": "tm68WWMrcAa3TqQbEAMa",
+            "model": "contact",
+            "name": "Outreach Hypothesis",
+            "parentId": "L2UbwKorpLWlVqMwP3e5",
+            "placeholder": "outreach_hypothesis",
+            "position": 1400,
+            "standard": false
+          },
+          {
+            "dataType": "TEXT",
+            "dateAdded": "2026-05-06T05:26:54.900Z",
+            "documentType": "field",
+            "fieldKey": "contact.approval_status",
+            "id": "PZQ4DD5Dy4qJG9pTsNM3",
+            "locationId": "tm68WWMrcAa3TqQbEAMa",
+            "model": "contact",
+            "name": "Approval Status",
+            "parentId": "L2UbwKorpLWlVqMwP3e5",
+            "placeholder": "approval_status",
+            "position": 1300,
+            "standard": false
+          },
+          {
+            "dataType": "NUMERICAL",
+            "dateAdded": "2026-05-06T05:26:53.674Z",
+            "documentType": "field",
+            "fieldKey": "contact.enrichment_confidence",
+            "id": "QVtRYlJ0KXfrawxb6uZv",
+            "locationId": "tm68WWMrcAa3TqQbEAMa",
+            "model": "contact",
+            "name": "Enrichment Confidence",
+            "parentId": "L2UbwKorpLWlVqMwP3e5",
+            "placeholder": "enrichment_confidence",
+            "position": 1200,
+            "standard": false
+          },
+          {
+            "dataType": "TEXT",
+            "dateAdded": "2026-05-06T04:49:24.061Z",
+            "documentType": "field",
+            "fieldKey": "contact.campaign_key",
+            "id": "Qz7tTt2gHbiIKEuOKf9Q",
+            "locationId": "tm68WWMrcAa3TqQbEAMa",
+            "model": "contact",
+            "name": "Campaign Key",
+            "parentId": "L2UbwKorpLWlVqMwP3e5",
+            "placeholder": "campaign_key",
+            "position": 50,
+            "standard": false
+          },
+          {
+            "dataType": "LARGE_TEXT",
+            "dateAdded": "2026-05-06T04:49:32.442Z",
+            "documentType": "field",
+            "fieldKey": "contact.ai_readiness_checks",
+            "id": "TVTNLJnRkTMoWJiXIa6Q",
+            "locationId": "tm68WWMrcAa3TqQbEAMa",
+            "model": "contact",
+            "name": "AI Readiness Checks",
+            "parentId": "L2UbwKorpLWlVqMwP3e5",
+            "placeholder": "ai_readiness_checks",
+            "position": 700,
+            "standard": false
+          },
+          {
+            "dataType": "TEXT",
+            "dateAdded": "2026-05-06T05:26:54.250Z",
+            "documentType": "field",
+            "fieldKey": "contact.consent_basis",
+            "id": "TvCAwsNbVg94JrEBM3e0",
+            "locationId": "tm68WWMrcAa3TqQbEAMa",
+            "model": "contact",
+            "name": "Consent Basis",
+            "parentId": "L2UbwKorpLWlVqMwP3e5",
+            "placeholder": "consent_basis",
+            "position": 1250,
+            "standard": false
+          },
+          {
+            "dataType": "TEXT",
+            "dateAdded": "2026-05-06T04:49:25.307Z",
+            "documentType": "field",
+            "fieldKey": "contact.authority_pillar",
+            "id": "UQ78yAPlH4UAIZ8juHR0",
+            "locationId": "tm68WWMrcAa3TqQbEAMa",
+            "model": "contact",
+            "name": "Authority Pillar",
+            "parentId": "L2UbwKorpLWlVqMwP3e5",
+            "placeholder": "authority_pillar",
+            "position": 150,
+            "standard": false
+          },
+          {
+            "dataType": "LARGE_TEXT",
+            "dateAdded": "2026-05-06T04:49:31.840Z",
+            "documentType": "field",
+            "fieldKey": "contact.ai_use_cases",
+            "id": "UlFRPwpAbUzvKQZeN0HA",
+            "locationId": "tm68WWMrcAa3TqQbEAMa",
+            "model": "contact",
+            "name": "AI Use Cases",
+            "parentId": "L2UbwKorpLWlVqMwP3e5",
+            "placeholder": "ai_use_cases",
+            "position": 650,
+            "standard": false
+          },
+          {
+            "dataType": "TEXT",
+            "dateAdded": "2026-05-06T04:49:27.232Z",
+            "documentType": "field",
+            "fieldKey": "contact.youtube_topic",
+            "id": "ZrgezIZJxwAryrX5vWcy",
+            "locationId": "tm68WWMrcAa3TqQbEAMa",
+            "model": "contact",
+            "name": "YouTube Topic",
+            "parentId": "L2UbwKorpLWlVqMwP3e5",
+            "placeholder": "youtube_topic",
+            "position": 300,
+            "standard": false
+          },
+          {
+            "dataType": "TEXT",
+            "dateAdded": "2026-05-06T04:49:35.628Z",
+            "documentType": "field",
+            "fieldKey": "contact.role",
+            "id": "bDDyFlZKHlwIULA2OqgJ",
+            "locationId": "tm68WWMrcAa3TqQbEAMa",
+            "model": "contact",
+            "name": "Role",
+            "parentId": "L2UbwKorpLWlVqMwP3e5",
+            "placeholder": "role",
+            "position": 950,
+            "standard": false
+          },
+          {
+            "dataType": "TEXT",
+            "dateAdded": "2026-05-06T04:49:27.983Z",
+            "documentType": "field",
+            "fieldKey": "contact.lead_magnet",
+            "id": "e3SJHNsUNdW67ouLWFYQ",
+            "locationId": "tm68WWMrcAa3TqQbEAMa",
+            "model": "contact",
+            "name": "Lead Magnet",
+            "parentId": "L2UbwKorpLWlVqMwP3e5",
+            "placeholder": "lead_magnet",
+            "position": 350,
+            "standard": false
+          },
+          {
+            "dataType": "TEXT",
+            "dateAdded": "2026-05-06T04:49:28.648Z",
+            "documentType": "field",
+            "fieldKey": "contact.recommended_offer",
+            "id": "edel6dKsWHAFFUlB2mBM",
+            "locationId": "tm68WWMrcAa3TqQbEAMa",
+            "model": "contact",
+            "name": "Recommended Offer",
+            "parentId": "L2UbwKorpLWlVqMwP3e5",
+            "placeholder": "recommended_offer",
+            "position": 400,
+            "standard": false
+          },
+          {
+            "dataType": "TEXT",
+            "dateAdded": "2026-05-06T05:26:55.512Z",
+            "documentType": "field",
+            "fieldKey": "contact.last_human_review_at",
+            "id": "hYph7No8j1yDAbX1K4g7",
+            "locationId": "tm68WWMrcAa3TqQbEAMa",
+            "model": "contact",
+            "name": "Last Human Review At",
+            "parentId": "L2UbwKorpLWlVqMwP3e5",
+            "placeholder": "last_human_review_at",
+            "position": 1350,
+            "standard": false
+          },
+          {
+            "dataType": "TEXT",
+            "dateAdded": "2026-05-06T05:26:53.049Z",
+            "documentType": "field",
+            "fieldKey": "contact.enrichment_source_url",
+            "id": "iGk7SSq6CtsZbLPyuB9i",
+            "locationId": "tm68WWMrcAa3TqQbEAMa",
+            "model": "contact",
+            "name": "Enrichment Source URL",
+            "parentId": "L2UbwKorpLWlVqMwP3e5",
+            "placeholder": "enrichment_source_url",
+            "position": 1150,
+            "standard": false
+          },
+          {
+            "dataType": "TEXT",
+            "dateAdded": "2026-05-06T04:49:30.507Z",
+            "documentType": "field",
+            "fieldKey": "contact.ai_score_band",
+            "id": "kWP4zmf9VwL5andDQfEk",
+            "locationId": "tm68WWMrcAa3TqQbEAMa",
+            "model": "contact",
+            "name": "AI Score Band",
+            "parentId": "L2UbwKorpLWlVqMwP3e5",
+            "placeholder": "ai_score_band",
+            "position": 550,
+            "standard": false
+          },
+          {
+            "dataType": "TEXT",
+            "dateAdded": "2026-05-06T04:49:24.663Z",
+            "documentType": "field",
+            "fieldKey": "contact.campaign_label",
+            "id": "ktyUD9eDp9A3v5WVNzvu",
+            "locationId": "tm68WWMrcAa3TqQbEAMa",
+            "model": "contact",
+            "name": "Campaign Label",
+            "parentId": "L2UbwKorpLWlVqMwP3e5",
+            "placeholder": "campaign_label",
+            "position": 100,
+            "standard": false
+          },
+          {
+            "dataType": "NUMERICAL",
+            "dateAdded": "2026-05-06T04:49:29.908Z",
+            "documentType": "field",
+            "fieldKey": "contact.ai_readiness_score",
+            "id": "meQ6hnsgWOYZzBcMmm2E",
+            "locationId": "tm68WWMrcAa3TqQbEAMa",
+            "model": "contact",
+            "name": "AI Readiness Score",
+            "parentId": "L2UbwKorpLWlVqMwP3e5",
+            "placeholder": "ai_readiness_score",
+            "position": 500,
+            "standard": false
+          },
+          {
+            "dataType": "TEXT",
+            "dateAdded": "2026-05-06T04:49:31.114Z",
+            "documentType": "field",
+            "fieldKey": "contact.ai_recommended_offer",
+            "id": "n356Iz93Y6U0ByWFFpGn",
+            "locationId": "tm68WWMrcAa3TqQbEAMa",
+            "model": "contact",
+            "name": "AI Recommended Offer",
+            "parentId": "L2UbwKorpLWlVqMwP3e5",
+            "placeholder": "ai_recommended_offer",
+            "position": 600,
+            "standard": false
+          },
+          {
+            "dataType": "TEXT",
+            "dateAdded": "2026-05-06T04:49:26.606Z",
+            "documentType": "field",
+            "fieldKey": "contact.source_channel",
+            "id": "qBbuCGIureBlrA5sHmRf",
+            "locationId": "tm68WWMrcAa3TqQbEAMa",
+            "model": "contact",
+            "name": "Source Channel",
+            "parentId": "L2UbwKorpLWlVqMwP3e5",
+            "placeholder": "source_channel",
+            "position": 250,
+            "standard": false
+          },
+          {
+            "dataType": "LARGE_TEXT",
+            "dateAdded": "2026-05-06T05:26:56.840Z",
+            "documentType": "field",
+            "fieldKey": "contact.personalized_content_angle",
+            "id": "qat9gBfJHUk0LTrqozZx",
+            "locationId": "tm68WWMrcAa3TqQbEAMa",
+            "model": "contact",
+            "name": "Personalized Content Angle",
+            "parentId": "L2UbwKorpLWlVqMwP3e5",
+            "placeholder": "personalized_content_angle",
+            "position": 1450,
+            "standard": false
+          },
+          {
+            "dataType": "TEXT",
+            "dateAdded": "2026-05-06T05:26:51.731Z",
+            "documentType": "field",
+            "fieldKey": "contact.decision_maker_priority",
+            "id": "sxb5burpn9gj6Su9UHjh",
+            "locationId": "tm68WWMrcAa3TqQbEAMa",
+            "model": "contact",
+            "name": "Decision Maker Priority",
+            "parentId": "L2UbwKorpLWlVqMwP3e5",
+            "placeholder": "decision_maker_priority",
+            "position": 1050,
+            "standard": false
+          },
+          {
+            "dataType": "TEXT",
+            "dateAdded": "2026-05-06T05:26:58.177Z",
+            "documentType": "field",
+            "fieldKey": "contact.suggested_offer_lane",
+            "id": "tZxdA0AeQ2YuJO5gy8t7",
+            "locationId": "tm68WWMrcAa3TqQbEAMa",
+            "model": "contact",
+            "name": "Suggested Offer Lane",
+            "parentId": "L2UbwKorpLWlVqMwP3e5",
+            "placeholder": "suggested_offer_lane",
+            "position": 1550,
+            "standard": false
+          },
+          {
+            "dataType": "TEXT",
+            "dateAdded": "2026-05-06T04:49:34.350Z",
+            "documentType": "field",
+            "fieldKey": "contact.ai_patent_score_band",
+            "id": "xh6AfuK3kI9YCbkL3Wko",
+            "locationId": "tm68WWMrcAa3TqQbEAMa",
+            "model": "contact",
+            "name": "AI Patent Score Band",
+            "parentId": "L2UbwKorpLWlVqMwP3e5",
+            "placeholder": "ai_patent_score_band",
+            "position": 850,
+            "standard": false
+          }
+        ],
+        "traceId": "fbc13797-73f2-4537-b46f-d0a2c874bbcc"
+      },
+      "ok": true,
+      "status": 200
+    },
+    "forms": {
+      "data": {
+        "forms": [
+          {
+            "id": "jAr3ZhXUJyVpdhcvMvD7",
+            "locationId": "tm68WWMrcAa3TqQbEAMa",
+            "name": "Contact Us"
+          },
+          {
+            "id": "w9D9l80WArtfeNvQkHFT",
+            "locationId": "tm68WWMrcAa3TqQbEAMa",
+            "name": "Marketing Form - Claim Offer"
+          },
+          {
+            "id": "WDIC0LBSBgZzFGSdbQHl",
+            "locationId": "tm68WWMrcAa3TqQbEAMa",
+            "name": "Newsletter Subscriptions"
+          }
+        ],
+        "total": 3,
+        "traceId": "4e8b5d88-b90a-417c-ba51-7ce9e1140775"
+      },
+      "ok": true,
+      "status": 200
+    },
+    "location": {
+      "data": {
+        "location": {
+          "address": "2128 W. 32nd Ave.",
+          "automaticMobileAppInvite": false,
+          "brandId": "p2ZBYQC7GKpKfVbqvI5N",
+          "business": {
+            "address": "2128 W. 32nd Ave.",
+            "city": "Denver",
+            "country": "US",
+            "email": "",
+            "name": "Whiteford Schell IP",
+            "postalCode": "80211",
+            "state": "Colorado",
+            "timezone": "US/Mountain",
+            "website": "https://www.schellip.com"
+          },
+          "city": "Denver",
+          "companyId": "uLKy8lB9v0xYw2XB8GDJ",
+          "country": "US",
+          "currency": "",
+          "dateAdded": "2026-05-05T05:02:28.851Z",
+          "defaultEmailService": "",
+          "domain": "",
+          "email": "jeff@schellip.com",
+          "firstName": "Jeff",
+          "id": "tm68WWMrcAa3TqQbEAMa",
+          "isAgencySubAccount": true,
+          "lastName": "Schell",
+          "logoUrl": "",
+          "name": "Whiteford Schell IP",
+          "permissions": {
+            "adManagerEnabled": true,
+            "adwordsReportingEnabled": true,
+            "affiliateManagerEnabled": true,
+            "agentReportingEnabled": true,
+            "appointmentsEnabled": true,
+            "attributionsReportingEnabled": true,
+            "bloggingEnabled": true,
+            "botServiceEnabled": true,
+            "bulkRequestsEnabled": true,
+            "campaignsEnabled": true,
+            "contactsEnabled": true,
+            "conversationsEnabled": true,
+            "dashboardStatsEnabled": true,
+            "emailBuilderEnabled": true,
+            "facebookAdsReportingEnabled": true,
+            "facebookMessengerEnabled": true,
+            "formsEnabled": true,
+            "funnelsEnabled": true,
+            "gmbCallTrackingEnabled": true,
+            "gmbMessagingEnabled": true,
+            "htmlBuilderEnabled": true,
+            "launchpadEnabled": true,
+            "marketingEnabled": true,
+            "membershipEnabled": true,
+            "opportunitiesEnabled": true,
+            "phoneCallEnabled": true,
+            "proposalsEnabled": true,
+            "qrCodesEnabled": true,
+            "quizzesEnabled": true,
+            "reviewsEnabled": true,
+            "settingsEnabled": true,
+            "smsEmailTemplatesEnabled": true,
+            "surveysEnabled": true,
+            "tagsEnabled": true,
+            "textToPayEnabled": true,
+            "triggerLinksEnabled": true,
+            "triggersEnabled": true,
+            "webChatEnabled": true,
+            "websitesEnabled": true,
+            "workflowsEnabled": true
+          },
+          "phone": "303-900-8783",
+          "postalCode": "80211",
+          "settings": {
+            "allowDuplicateContact": false,
+            "allowDuplicateOpportunity": false,
+            "allowFacebookNameMerge": false,
+            "contactUniqueIdentifiers": [
+              "email",
+              "phone"
+            ],
+            "crmSettings": {
+              "deSyncOwners": true,
+              "syncFollowers": {
+                "contact": true,
+                "opportunity": true
+              }
+            },
+            "disableContactTimezone": false,
+            "saasSettings": {
+              "saasMode": "not_activated",
+              "twilioRebilling": {
+                "enabled": false,
+                "markup": 10
+              }
+            }
+          },
+          "snapshotId": "684c083187a7aaea7d174d32",
+          "social": {
+            "blogRss": "",
+            "facebookUrl": "",
+            "foursquare": "",
+            "googlePlacesId": "",
+            "googlePlus": "",
+            "instagram": "",
+            "linkedIn": "",
+            "pinterest": "",
+            "twitter": "",
+            "yelp": "",
+            "youtube": ""
+          },
+          "state": "Colorado",
+          "timezone": "US/Mountain",
+          "website": "https://www.schellip.com"
+        },
+        "traceId": "1d906e3c-99f7-4e51-a022-b8f3aaa6045f"
+      },
+      "ok": true,
+      "status": 200
+    },
+    "opportunities_sample": {
+      "data": {
+        "meta": {
+          "currentPage": 1,
+          "nextPage": 2,
+          "nextPageUrl": "https://services.leadconnectorhq.com/opportunities/search?location_id=tm68WWMrcAa3TqQbEAMa&limit=10&startAfter=1777959831495&startAfterId=lcoW6WNO5MppIVV96IvZ",
+          "prevPage": null,
+          "startAfter": 1777959831495,
+          "startAfterId": "lcoW6WNO5MppIVV96IvZ",
+          "total": 29
+        },
+        "opportunities": [
+          {
+            "assignedTo": null,
+            "attributions": [],
+            "contact": {
+              "companyName": "AION Robotics Corporation",
+              "email": "nickn@aionrobotics.com",
+              "id": "soFFCLLxwWfU5oFTQcKJ",
+              "name": "Nicholas Nunno",
+              "phone": "+13034205175",
+              "score": [],
+              "tags": [
+                "growth-os-lead",
+                "growth-os-ui",
+                "growth-os-no-autosend",
+                "growth-os-nightly-qwen",
+                "growth-os-segment-ai-patent",
+                "growth-os-stage-research-staged"
+              ]
+            },
+            "contactId": "soFFCLLxwWfU5oFTQcKJ",
+            "createdAt": "2026-05-06T06:52:29.745Z",
+            "customFields": [],
+            "effectiveProbability": 13.33,
+            "followers": [],
+            "forecastProbability": null,
+            "id": "mp5BRh2qiLJkloZCCT9E",
+            "lastStageChangeAt": "2026-05-06T06:52:29.746Z",
+            "lastStatusChangeAt": "2026-05-06T06:52:29.746Z",
+            "locationId": "tm68WWMrcAa3TqQbEAMa",
+            "lostReasonId": null,
+            "monetaryValue": 0,
+            "name": "AION Robotics Corporation \u2014 Agent Targeting",
+            "pipelineId": "Tbx4tA6wHv5lTwZPSHyZ",
+            "pipelineStageId": "fd569cf4-979b-43b8-bd0f-78e807e80ff1",
+            "pipelineStageUId": "fd569cf4-979b-43b8-bd0f-78e807e80ff1",
+            "relations": [
+              {
+                "associationId": "OPPORTUNITIES_CONTACTS_ASSOCIATION",
+                "attributed": null,
+                "companyName": "AION Robotics Corporation",
+                "contactName": "Nicholas Nunno",
+                "email": "nickn@aionrobotics.com",
+                "fullName": "Nicholas Nunno",
+                "objectKey": "contact",
+                "phone": "+13034205175",
+                "primary": true,
+                "recordId": "soFFCLLxwWfU5oFTQcKJ",
+                "relationId": "mp5BRh2qiLJkloZCCT9E",
+                "tags": [
+                  "growth-os-lead",
+                  "growth-os-ui",
+                  "growth-os-no-autosend",
+                  "growth-os-nightly-qwen",
+                  "growth-os-segment-ai-patent",
+                  "growth-os-stage-research-staged"
+                ]
+              }
+            ],
+            "sort": [
+              1778050349745,
+              "soFFCLLxwWfU5oFTQcKJ"
+            ],
+            "source": "Growth OS nightly Qwen research (prospect_089c4bc541c05da752169c7a)",
+            "status": "open",
+            "updatedAt": "2026-05-06T06:52:29.745Z"
+          },
+          {
+            "assignedTo": null,
+            "attributions": [],
+            "contact": {
+              "companyName": "Board in a Bag",
+              "id": "x27ywKJ03kgoylR7mKEh",
+              "name": "Board in a Bag",
+              "score": [],
+              "tags": [
+                "growth-os-lead",
+                "growth-os-ui",
+                "growth-os-no-autosend",
+                "growth-os-segment-product-ecommerce",
+                "growth-os-stage-researched"
+              ]
+            },
+            "contactId": "x27ywKJ03kgoylR7mKEh",
+            "createdAt": "2026-05-05T05:43:57.911Z",
+            "customFields": [],
+            "effectiveProbability": 6.67,
+            "followers": [],
+            "forecastProbability": null,
+            "id": "wbNaI3OwXMgxzsTC3HiJ",
+            "lastStageChangeAt": "2026-05-05T05:43:57.911Z",
+            "lastStatusChangeAt": "2026-05-05T05:43:57.911Z",
+            "locationId": "tm68WWMrcAa3TqQbEAMa",
+            "lostReasonId": null,
+            "monetaryValue": 0,
+            "name": "Board in a Bag \u2014 Growth OS Lead",
+            "pipelineId": "Tbx4tA6wHv5lTwZPSHyZ",
+            "pipelineStageId": "c1e14510-2d11-41ee-b51a-b71025aed5e1",
+            "pipelineStageUId": "c1e14510-2d11-41ee-b51a-b71025aed5e1",
+            "relations": [
+              {
+                "associationId": "OPPORTUNITIES_CONTACTS_ASSOCIATION",
+                "attributed": null,
+                "companyName": "Board in a Bag",
+                "contactName": "Board in a Bag",
+                "email": null,
+                "fullName": "Board in a Bag",
+                "objectKey": "contact",
+                "phone": null,
+                "primary": true,
+                "recordId": "x27ywKJ03kgoylR7mKEh",
+                "relationId": "wbNaI3OwXMgxzsTC3HiJ",
+                "tags": [
+                  "growth-os-lead",
+                  "growth-os-ui",
+                  "growth-os-no-autosend",
+                  "growth-os-segment-product-ecommerce",
+                  "growth-os-stage-researched"
+                ]
+              }
+            ],
+            "sort": [
+              1777959837911,
+              "x27ywKJ03kgoylR7mKEh"
+            ],
+            "source": "Growth OS UI / Supabase lead (prod-board-in-a-bag)",
+            "status": "open",
+            "updatedAt": "2026-05-05T05:43:57.911Z"
+          },
+          {
+            "assignedTo": null,
+            "attributions": [],
+            "contact": {
+              "companyName": "Simple Body",
+              "id": "zlRFlVY25TfCO47LPRK8",
+              "name": "Simple Body",
+              "score": [],
+              "tags": [
+                "growth-os-lead",
+                "growth-os-ui",
+                "growth-os-no-autosend",
+                "growth-os-segment-product-ecommerce",
+                "growth-os-stage-researched"
+              ]
+            },
+            "contactId": "zlRFlVY25TfCO47LPRK8",
+            "createdAt": "2026-05-05T05:43:57.075Z",
+            "customFields": [],
+            "effectiveProbability": 6.67,
+            "followers": [],
+            "forecastProbability": null,
+            "id": "akyFg3TBAv1ICx6sQN8z",
+            "lastStageChangeAt": "2026-05-05T05:43:57.075Z",
+            "lastStatusChangeAt": "2026-05-05T05:43:57.075Z",
+            "locationId": "tm68WWMrcAa3TqQbEAMa",
+            "lostReasonId": null,
+            "monetaryValue": 0,
+            "name": "Simple Body \u2014 Growth OS Lead",
+            "pipelineId": "Tbx4tA6wHv5lTwZPSHyZ",
+            "pipelineStageId": "c1e14510-2d11-41ee-b51a-b71025aed5e1",
+            "pipelineStageUId": "c1e14510-2d11-41ee-b51a-b71025aed5e1",
+            "relations": [
+              {
+                "associationId": "OPPORTUNITIES_CONTACTS_ASSOCIATION",
+                "attributed": null,
+                "companyName": "Simple Body",
+                "contactName": "Simple Body",
+                "email": null,
+                "fullName": "Simple Body",
+                "objectKey": "contact",
+                "phone": null,
+                "primary": true,
+                "recordId": "zlRFlVY25TfCO47LPRK8",
+                "relationId": "akyFg3TBAv1ICx6sQN8z",
+                "tags": [
+                  "growth-os-lead",
+                  "growth-os-ui",
+                  "growth-os-no-autosend",
+                  "growth-os-segment-product-ecommerce",
+                  "growth-os-stage-researched"
+                ]
+              }
+            ],
+            "sort": [
+              1777959837075,
+              "zlRFlVY25TfCO47LPRK8"
+            ],
+            "source": "Growth OS UI / Supabase lead (prod-simple-body)",
+            "status": "open",
+            "updatedAt": "2026-05-05T05:43:57.075Z"
+          },
+          {
+            "assignedTo": null,
+            "attributions": [],
+            "contact": {
+              "companyName": "Seed Theory Skincare",
+              "id": "Esin7HrPGy8aiD4HtG2A",
+              "name": "Seed Theory Skincare",
+              "score": [],
+              "tags": [
+                "growth-os-lead",
+                "growth-os-ui",
+                "growth-os-no-autosend",
+                "growth-os-segment-product-ecommerce",
+                "growth-os-stage-researched"
+              ]
+            },
+            "contactId": "Esin7HrPGy8aiD4HtG2A",
+            "createdAt": "2026-05-05T05:43:56.209Z",
+            "customFields": [],
+            "effectiveProbability": 6.67,
+            "followers": [],
+            "forecastProbability": null,
+            "id": "nDvbXbCogwzqsQGsxm51",
+            "lastStageChangeAt": "2026-05-05T05:43:56.210Z",
+            "lastStatusChangeAt": "2026-05-05T05:43:56.210Z",
+            "locationId": "tm68WWMrcAa3TqQbEAMa",
+            "lostReasonId": null,
+            "monetaryValue": 0,
+            "name": "Seed Theory Skincare \u2014 Growth OS Lead",
+            "pipelineId": "Tbx4tA6wHv5lTwZPSHyZ",
+            "pipelineStageId": "c1e14510-2d11-41ee-b51a-b71025aed5e1",
+            "pipelineStageUId": "c1e14510-2d11-41ee-b51a-b71025aed5e1",
+            "relations": [
+              {
+                "associationId": "OPPORTUNITIES_CONTACTS_ASSOCIATION",
+                "attributed": null,
+                "companyName": "Seed Theory Skincare",
+                "contactName": "Seed Theory Skincare",
+                "email": null,
+                "fullName": "Seed Theory Skincare",
+                "objectKey": "contact",
+                "phone": null,
+                "primary": true,
+                "recordId": "Esin7HrPGy8aiD4HtG2A",
+                "relationId": "nDvbXbCogwzqsQGsxm51",
+                "tags": [
+                  "growth-os-lead",
+                  "growth-os-ui",
+                  "growth-os-no-autosend",
+                  "growth-os-segment-product-ecommerce",
+                  "growth-os-stage-researched"
+                ]
+              }
+            ],
+            "sort": [
+              1777959836209,
+              "Esin7HrPGy8aiD4HtG2A"
+            ],
+            "source": "Growth OS UI / Supabase lead (prod-seed-theory)",
+            "status": "open",
+            "updatedAt": "2026-05-05T05:43:56.209Z"
+          },
+          {
+            "assignedTo": null,
+            "attributions": [],
+            "contact": {
+              "companyName": "Nectr Bottle Co.",
+              "id": "Bzwt1eVsS3sY3vA46XvM",
+              "name": "Nectr Bottle Co.",
+              "score": [],
+              "tags": [
+                "growth-os-lead",
+                "growth-os-ui",
+                "growth-os-no-autosend",
+                "growth-os-segment-product-ecommerce",
+                "growth-os-stage-researched"
+              ]
+            },
+            "contactId": "Bzwt1eVsS3sY3vA46XvM",
+            "createdAt": "2026-05-05T05:43:55.601Z",
+            "customFields": [],
+            "effectiveProbability": 6.67,
+            "followers": [],
+            "forecastProbability": null,
+            "id": "XIoXSXkXWOetaSkaBchX",
+            "lastStageChangeAt": "2026-05-05T05:43:55.602Z",
+            "lastStatusChangeAt": "2026-05-05T05:43:55.601Z",
+            "locationId": "tm68WWMrcAa3TqQbEAMa",
+            "lostReasonId": null,
+            "monetaryValue": 0,
+            "name": "Nectr Bottle Co. \u2014 Growth OS Lead",
+            "pipelineId": "Tbx4tA6wHv5lTwZPSHyZ",
+            "pipelineStageId": "c1e14510-2d11-41ee-b51a-b71025aed5e1",
+            "pipelineStageUId": "c1e14510-2d11-41ee-b51a-b71025aed5e1",
+            "relations": [
+              {
+                "associationId": "OPPORTUNITIES_CONTACTS_ASSOCIATION",
+                "attributed": null,
+                "companyName": "Nectr Bottle Co.",
+                "contactName": "Nectr Bottle Co.",
+                "email": null,
+                "fullName": "Nectr Bottle Co.",
+                "objectKey": "contact",
+                "phone": null,
+                "primary": true,
+                "recordId": "Bzwt1eVsS3sY3vA46XvM",
+                "relationId": "XIoXSXkXWOetaSkaBchX",
+                "tags": [
+                  "growth-os-lead",
+                  "growth-os-ui",
+                  "growth-os-no-autosend",
+                  "growth-os-segment-product-ecommerce",
+                  "growth-os-stage-researched"
+                ]
+              }
+            ],
+            "sort": [
+              1777959835601,
+              "Bzwt1eVsS3sY3vA46XvM"
+            ],
+            "source": "Growth OS UI / Supabase lead (prod-nectr)",
+            "status": "open",
+            "updatedAt": "2026-05-05T05:43:55.601Z"
+          },
+          {
+            "assignedTo": null,
+            "attributions": [],
+            "contact": {
+              "companyName": "ReNu",
+              "id": "aA7VyGDiHznrX4yjSB7X",
+              "name": "ReNu Growth OS Lead",
+              "score": [],
+              "tags": [
+                "growth-os-lead",
+                "growth-os-ui",
+                "growth-os-no-autosend",
+                "growth-os-segment-product-ecommerce",
+                "growth-os-stage-researched"
+              ]
+            },
+            "contactId": "aA7VyGDiHznrX4yjSB7X",
+            "createdAt": "2026-05-05T05:43:54.722Z",
+            "customFields": [],
+            "effectiveProbability": 6.67,
+            "followers": [],
+            "forecastProbability": null,
+            "id": "cbieB5tG40nQynXiZi8R",
+            "lastStageChangeAt": "2026-05-05T05:43:54.722Z",
+            "lastStatusChangeAt": "2026-05-05T05:43:54.722Z",
+            "locationId": "tm68WWMrcAa3TqQbEAMa",
+            "lostReasonId": null,
+            "monetaryValue": 0,
+            "name": "ReNu \u2014 Growth OS Lead",
+            "pipelineId": "Tbx4tA6wHv5lTwZPSHyZ",
+            "pipelineStageId": "c1e14510-2d11-41ee-b51a-b71025aed5e1",
+            "pipelineStageUId": "c1e14510-2d11-41ee-b51a-b71025aed5e1",
+            "relations": [
+              {
+                "associationId": "OPPORTUNITIES_CONTACTS_ASSOCIATION",
+                "attributed": null,
+                "companyName": "ReNu",
+                "contactName": "ReNu Growth OS Lead",
+                "email": null,
+                "fullName": "ReNu Growth OS Lead",
+                "objectKey": "contact",
+                "phone": null,
+                "primary": true,
+                "recordId": "aA7VyGDiHznrX4yjSB7X",
+                "relationId": "cbieB5tG40nQynXiZi8R",
+                "tags": [
+                  "growth-os-lead",
+                  "growth-os-ui",
+                  "growth-os-no-autosend",
+                  "growth-os-segment-product-ecommerce",
+                  "growth-os-stage-researched"
+                ]
+              }
+            ],
+            "sort": [
+              1777959834722,
+              "aA7VyGDiHznrX4yjSB7X"
+            ],
+            "source": "Growth OS UI / Supabase lead (prod-renu)",
+            "status": "open",
+            "updatedAt": "2026-05-05T05:43:54.722Z"
+          },
+          {
+            "assignedTo": null,
+            "attributions": [],
+            "contact": {
+              "companyName": "Kamber Labs",
+              "id": "e4QvJFBsLQ0s5PILuS5h",
+              "name": "Kamber Labs",
+              "score": [],
+              "tags": [
+                "growth-os-lead",
+                "growth-os-ui",
+                "growth-os-no-autosend",
+                "growth-os-segment-product-ecommerce",
+                "growth-os-stage-researched"
+              ]
+            },
+            "contactId": "e4QvJFBsLQ0s5PILuS5h",
+            "createdAt": "2026-05-05T05:43:53.840Z",
+            "customFields": [],
+            "effectiveProbability": 6.67,
+            "followers": [],
+            "forecastProbability": null,
+            "id": "N1ohRuUmH6WyuBMA9RcG",
+            "lastStageChangeAt": "2026-05-05T05:43:53.840Z",
+            "lastStatusChangeAt": "2026-05-05T05:43:53.840Z",
+            "locationId": "tm68WWMrcAa3TqQbEAMa",
+            "lostReasonId": null,
+            "monetaryValue": 0,
+            "name": "Kamber Labs \u2014 Growth OS Lead",
+            "pipelineId": "Tbx4tA6wHv5lTwZPSHyZ",
+            "pipelineStageId": "c1e14510-2d11-41ee-b51a-b71025aed5e1",
+            "pipelineStageUId": "c1e14510-2d11-41ee-b51a-b71025aed5e1",
+            "relations": [
+              {
+                "associationId": "OPPORTUNITIES_CONTACTS_ASSOCIATION",
+                "attributed": null,
+                "companyName": "Kamber Labs",
+                "contactName": "Kamber Labs",
+                "email": null,
+                "fullName": "Kamber Labs",
+                "objectKey": "contact",
+                "phone": null,
+                "primary": true,
+                "recordId": "e4QvJFBsLQ0s5PILuS5h",
+                "relationId": "N1ohRuUmH6WyuBMA9RcG",
+                "tags": [
+                  "growth-os-lead",
+                  "growth-os-ui",
+                  "growth-os-no-autosend",
+                  "growth-os-segment-product-ecommerce",
+                  "growth-os-stage-researched"
+                ]
+              }
+            ],
+            "sort": [
+              1777959833840,
+              "e4QvJFBsLQ0s5PILuS5h"
+            ],
+            "source": "Growth OS UI / Supabase lead (prod-kamber-labs)",
+            "status": "open",
+            "updatedAt": "2026-05-05T05:43:53.840Z"
+          },
+          {
+            "assignedTo": null,
+            "attributions": [],
+            "contact": {
+              "companyName": "Mountain Drifter",
+              "id": "H23emd3AUvXBFDsOlGLg",
+              "name": "Mountain Drifter",
+              "score": [],
+              "tags": [
+                "growth-os-lead",
+                "growth-os-ui",
+                "growth-os-no-autosend",
+                "growth-os-segment-product-ecommerce",
+                "growth-os-stage-researched"
+              ]
+            },
+            "contactId": "H23emd3AUvXBFDsOlGLg",
+            "createdAt": "2026-05-05T05:43:53.053Z",
+            "customFields": [],
+            "effectiveProbability": 6.67,
+            "followers": [],
+            "forecastProbability": null,
+            "id": "FhIMW8Yc7gs1SpHoR3j6",
+            "lastStageChangeAt": "2026-05-05T05:43:53.054Z",
+            "lastStatusChangeAt": "2026-05-05T05:43:53.053Z",
+            "locationId": "tm68WWMrcAa3TqQbEAMa",
+            "lostReasonId": null,
+            "monetaryValue": 0,
+            "name": "Mountain Drifter \u2014 Growth OS Lead",
+            "pipelineId": "Tbx4tA6wHv5lTwZPSHyZ",
+            "pipelineStageId": "c1e14510-2d11-41ee-b51a-b71025aed5e1",
+            "pipelineStageUId": "c1e14510-2d11-41ee-b51a-b71025aed5e1",
+            "relations": [
+              {
+                "associationId": "OPPORTUNITIES_CONTACTS_ASSOCIATION",
+                "attributed": null,
+                "companyName": "Mountain Drifter",
+                "contactName": "Mountain Drifter",
+                "email": null,
+                "fullName": "Mountain Drifter",
+                "objectKey": "contact",
+                "phone": null,
+                "primary": true,
+                "recordId": "H23emd3AUvXBFDsOlGLg",
+                "relationId": "FhIMW8Yc7gs1SpHoR3j6",
+                "tags": [
+                  "growth-os-lead",
+                  "growth-os-ui",
+                  "growth-os-no-autosend",
+                  "growth-os-segment-product-ecommerce",
+                  "growth-os-stage-researched"
+                ]
+              }
+            ],
+            "sort": [
+              1777959833053,
+              "H23emd3AUvXBFDsOlGLg"
+            ],
+            "source": "Growth OS UI / Supabase lead (prod-mountain-drifter)",
+            "status": "open",
+            "updatedAt": "2026-05-05T05:43:53.053Z"
+          },
+          {
+            "assignedTo": null,
+            "attributions": [],
+            "contact": {
+              "companyName": "Mindsmith",
+              "id": "LCm5PWnC2EGzsSxC0Vgn",
+              "name": "Mindsmith Growth OS Lead",
+              "score": [],
+              "tags": [
+                "growth-os-lead",
+                "growth-os-ui",
+                "growth-os-no-autosend",
+                "growth-os-segment-funded-startups",
+                "growth-os-stage-researched"
+              ]
+            },
+            "contactId": "LCm5PWnC2EGzsSxC0Vgn",
+            "createdAt": "2026-05-05T05:43:52.212Z",
+            "customFields": [],
+            "effectiveProbability": 6.67,
+            "followers": [],
+            "forecastProbability": null,
+            "id": "Hi1liYDgDpzDUMArNKZR",
+            "lastStageChangeAt": "2026-05-05T05:43:52.213Z",
+            "lastStatusChangeAt": "2026-05-05T05:43:52.212Z",
+            "locationId": "tm68WWMrcAa3TqQbEAMa",
+            "lostReasonId": null,
+            "monetaryValue": 0,
+            "name": "Mindsmith \u2014 Growth OS Lead",
+            "pipelineId": "Tbx4tA6wHv5lTwZPSHyZ",
+            "pipelineStageId": "c1e14510-2d11-41ee-b51a-b71025aed5e1",
+            "pipelineStageUId": "c1e14510-2d11-41ee-b51a-b71025aed5e1",
+            "relations": [
+              {
+                "associationId": "OPPORTUNITIES_CONTACTS_ASSOCIATION",
+                "attributed": null,
+                "companyName": "Mindsmith",
+                "contactName": "Mindsmith Growth OS Lead",
+                "email": null,
+                "fullName": "Mindsmith Growth OS Lead",
+                "objectKey": "contact",
+                "phone": null,
+                "primary": true,
+                "recordId": "LCm5PWnC2EGzsSxC0Vgn",
+                "relationId": "Hi1liYDgDpzDUMArNKZR",
+                "tags": [
+                  "growth-os-lead",
+                  "growth-os-ui",
+                  "growth-os-no-autosend",
+                  "growth-os-segment-funded-startups",
+                  "growth-os-stage-researched"
+                ]
+              }
+            ],
+            "sort": [
+              1777959832212,
+              "LCm5PWnC2EGzsSxC0Vgn"
+            ],
+            "source": "Growth OS UI / Supabase lead (funded-mindsmith)",
+            "status": "open",
+            "updatedAt": "2026-05-05T05:43:52.212Z"
+          },
+          {
+            "assignedTo": null,
+            "attributions": [],
+            "contact": {
+              "companyName": "AskElephant",
+              "id": "lcoW6WNO5MppIVV96IvZ",
+              "name": "AskElephant Growth OS Lead",
+              "score": [],
+              "tags": [
+                "growth-os-lead",
+                "growth-os-ui",
+                "growth-os-no-autosend",
+                "growth-os-segment-ai-software",
+                "growth-os-stage-researched"
+              ]
+            },
+            "contactId": "lcoW6WNO5MppIVV96IvZ",
+            "createdAt": "2026-05-05T05:43:51.495Z",
+            "customFields": [],
+            "effectiveProbability": 6.67,
+            "followers": [],
+            "forecastProbability": null,
+            "id": "OgtJXd1naPjgJJnXkaW0",
+            "lastStageChangeAt": "2026-05-05T05:43:51.495Z",
+            "lastStatusChangeAt": "2026-05-05T05:43:51.495Z",
+            "locationId": "tm68WWMrcAa3TqQbEAMa",
+            "lostReasonId": null,
+            "monetaryValue": 0,
+            "name": "AskElephant \u2014 Growth OS Lead",
+            "pipelineId": "Tbx4tA6wHv5lTwZPSHyZ",
+            "pipelineStageId": "c1e14510-2d11-41ee-b51a-b71025aed5e1",
+            "pipelineStageUId": "c1e14510-2d11-41ee-b51a-b71025aed5e1",
+            "relations": [
+              {
+                "associationId": "OPPORTUNITIES_CONTACTS_ASSOCIATION",
+                "attributed": null,
+                "companyName": "AskElephant",
+                "contactName": "AskElephant Growth OS Lead",
+                "email": null,
+                "fullName": "AskElephant Growth OS Lead",
+                "objectKey": "contact",
+                "phone": null,
+                "primary": true,
+                "recordId": "lcoW6WNO5MppIVV96IvZ",
+                "relationId": "OgtJXd1naPjgJJnXkaW0",
+                "tags": [
+                  "growth-os-lead",
+                  "growth-os-ui",
+                  "growth-os-no-autosend",
+                  "growth-os-segment-ai-software",
+                  "growth-os-stage-researched"
+                ]
+              }
+            ],
+            "sort": [
+              1777959831495,
+              "lcoW6WNO5MppIVV96IvZ"
+            ],
+            "source": "Growth OS UI / Supabase lead (ai-askelephant)",
+            "status": "open",
+            "updatedAt": "2026-05-05T05:43:51.495Z"
+          }
+        ],
+        "traceId": "c99560e2-29ba-9a1d-8f3e-1cf97a41963c"
+      },
+      "ok": true,
+      "status": 200
+    },
+    "pipelines": {
+      "data": {
+        "pipelines": [
+          {
+            "dateAdded": "2026-05-05T05:02:36.118Z",
+            "dateUpdated": "2026-05-05T05:02:36.118Z",
+            "id": "y3uIrF5EroDUNeq5EY2n",
+            "locationId": "tm68WWMrcAa3TqQbEAMa",
+            "name": "Marketing Pipeline",
+            "originId": "r5zcTe2caECir69HDcZQ",
+            "stages": [
+              {
+                "id": "abfb1b30-4e9e-4ada-bbf5-2ed3335a4b2b",
+                "name": "New Lead",
+                "originId": "OGE4NDNjZDQtM2IxYS00NmFhLTljMGQtNGVmZGNjMDZiNDE1",
+                "position": 0,
+                "showInFunnel": true,
+                "showInPieChart": true,
+                "stageWinProbability": 8.33
+              },
+              {
+                "id": "a9d33ec5-7ba4-407d-a058-9375887b9fd4",
+                "name": "Initial Contact",
+                "originId": "OWUwYjU4NjUtNTk0Ni00OTcxLWJkYWYtOTdkMGM0ZjI0NmY3",
+                "position": 1,
+                "showInFunnel": true,
+                "showInPieChart": true,
+                "stageWinProbability": 16.67
+              },
+              {
+                "id": "cbd2ab72-8089-486a-a38a-794ff76e3118",
+                "name": "Qualification",
+                "originId": "Yzg2ZTVjMTgtYTE2Ny00MDZhLWE3YjYtYWY0MTM2Y2YyZWYz",
+                "position": 2,
+                "showInFunnel": true,
+                "showInPieChart": true,
+                "stageWinProbability": 25
+              },
+              {
+                "id": "3f8c210c-3e66-4bfc-8fab-0ba1459b8ea1",
+                "name": "Free Consultation Scheduled",
+                "originId": "NTYyYzIwNjktNjEyYS00MTExLWEwN2MtMWRmOGViMjNlOTYz",
+                "position": 3,
+                "showInFunnel": true,
+                "showInPieChart": true,
+                "stageWinProbability": 33.33
+              },
+              {
+                "id": "d7ab6056-7d4b-4621-9a63-44564a5c042b",
+                "name": "Case Evaluation & Intake",
+                "originId": "NGI1MzY3NjUtMTcwYS00YjYzLTgxMzctNmRjMGEzMDhhOWQz",
+                "position": 4,
+                "showInFunnel": true,
+                "showInPieChart": true,
+                "stageWinProbability": 41.67
+              },
+              {
+                "id": "a18e115d-50e9-4bb8-bac3-9d27cdc07f01",
+                "name": "Retainer / Agreement Signed",
+                "originId": "YjBiMzQ4M2MtNTA3My00ZDI0LTk2YTctZTQ1ZjlkM2IxMjc5",
+                "position": 5,
+                "showInFunnel": true,
+                "showInPieChart": true,
+                "stageWinProbability": 50
+              },
+              {
+                "id": "a40d5ee0-dac3-480c-8136-3d5c4959e3f5",
+                "name": "Investigation & Case Building",
+                "originId": "Yjc0NjJlYTEtMjZkMi00YzBkLThhMjEtMzdjZjVhNmM1MGE4",
+                "position": 6,
+                "showInFunnel": true,
+                "showInPieChart": true,
+                "stageWinProbability": 58.33
+              },
+              {
+                "id": "3711032e-1c1c-46a5-859d-980990eafdde",
+                "name": "Negotiation or Litigation Prep",
+                "originId": "Y2I5NDc3YTUtNjU2Yi00ODM1LTg0YjYtMTgxOGRhZjdhM2Zk",
+                "position": 7,
+                "showInFunnel": true,
+                "showInPieChart": true,
+                "stageWinProbability": 66.67
+              },
+              {
+                "id": "93f3b9be-fb4e-4d50-ba7b-a056d939ed49",
+                "name": "Case Resolution",
+                "originId": "OGM3ZTUwYTAtMGFiNy00YzIxLTk4YjUtN2IzODhjOTVkOGI0",
+                "position": 8,
+                "showInFunnel": true,
+                "showInPieChart": true,
+                "stageWinProbability": 75
+              },
+              {
+                "id": "d28db7d9-d51c-4745-bcee-4e11591d87cd",
+                "name": "Post-Case Follow-Up",
+                "originId": "ZjA3YTRiODYtOWVmZS00YjIwLThkNmItYWM1OTEzMWFkMTdh",
+                "position": 9,
+                "showInFunnel": true,
+                "showInPieChart": true,
+                "stageWinProbability": 83.33
+              },
+              {
+                "id": "3ba61308-b97a-4782-a52c-b09eb6449362",
+                "name": "Review Request",
+                "originId": "YmI4MjRmNDYtNmJkZS00OTVhLWFiNjgtY2I2NTM4YmE3MDdk",
+                "position": 10,
+                "showInFunnel": true,
+                "showInPieChart": true,
+                "stageWinProbability": 91.67
+              }
+            ],
+            "useOpportunityProbability": false
+          },
+          {
+            "colorRenderMode": "bg-tint",
+            "dateAdded": "2026-05-05T05:36:23.867Z",
+            "dateUpdated": "2026-05-06T06:31:10.406Z",
+            "id": "Tbx4tA6wHv5lTwZPSHyZ",
+            "locationId": "tm68WWMrcAa3TqQbEAMa",
+            "name": "Whiteford Schell IP Pipeline",
+            "showInFunnel": true,
+            "showInPieChart": true,
+            "stages": [
+              {
+                "color": "#64748B",
+                "id": "c1e14510-2d11-41ee-b51a-b71025aed5e1",
+                "name": "New Lead",
+                "position": 0,
+                "showInFunnel": true,
+                "showInPieChart": true,
+                "stageWinProbability": 6.67
+              },
+              {
+                "color": "#64748B",
+                "id": "fd569cf4-979b-43b8-bd0f-78e807e80ff1",
+                "name": "Agent Targeting",
+                "position": 1,
+                "showInFunnel": true,
+                "showInPieChart": true,
+                "stageWinProbability": 13.33
+              },
+              {
+                "color": "#64748B",
+                "id": "fbd84fbe-ed49-4246-b644-a557cf5a508c",
+                "name": "Targeting Packet Ready",
+                "position": 2,
+                "showInFunnel": true,
+                "showInPieChart": true,
+                "stageWinProbability": 20
+              },
+              {
+                "color": "#64748B",
+                "id": "9d794930-a9a3-4efd-bb4e-9d203f9c5919",
+                "name": "Approved for Agent-Assisted Outreach",
+                "position": 3,
+                "showInFunnel": true,
+                "showInPieChart": true,
+                "stageWinProbability": 26.67
+              },
+              {
+                "color": "#64748B",
+                "id": "2da549c4-9123-4118-b997-6d72cc7f4ece",
+                "name": "Initial Contact",
+                "position": 4,
+                "showInFunnel": true,
+                "showInPieChart": true,
+                "stageWinProbability": 33.33
+              },
+              {
+                "color": "#64748B",
+                "id": "5eb0cbff-ea87-440a-90e1-edfffae7bf29",
+                "name": "Qualification",
+                "position": 5,
+                "showInFunnel": true,
+                "showInPieChart": true,
+                "stageWinProbability": 40
+              },
+              {
+                "color": "#16A34A",
+                "id": "5ee7decd-7521-46dd-901b-a6bd1874ee94",
+                "name": "Prospect Meeting Scheduled",
+                "position": 6,
+                "showInFunnel": true,
+                "showInPieChart": true,
+                "stageWinProbability": 46.67
+              },
+              {
+                "color": "#64748B",
+                "id": "1ed9c280-802a-455b-a77c-a84238f25c8b",
+                "name": "Case Evaluation & Intake",
+                "position": 7,
+                "showInFunnel": true,
+                "showInPieChart": true,
+                "stageWinProbability": 53.33
+              },
+              {
+                "color": "#64748B",
+                "id": "4dfd1098-7425-4d6b-bb32-2644708d3a6c",
+                "name": "Compliance Review",
+                "position": 8,
+                "showInFunnel": true,
+                "showInPieChart": true,
+                "stageWinProbability": 60
+              },
+              {
+                "color": "#64748B",
+                "id": "f38c7a47-a100-4621-9800-f80aa962282c",
+                "name": "Jeff / Whiteford Review",
+                "position": 9,
+                "showInFunnel": true,
+                "showInPieChart": true,
+                "stageWinProbability": 66.67
+              },
+              {
+                "color": "#64748B",
+                "id": "4fa62be4-b950-4f34-96ba-649f137ffc12",
+                "name": "Contacted / Sent",
+                "position": 10,
+                "showInFunnel": true,
+                "showInPieChart": true,
+                "stageWinProbability": 73.33
+              },
+              {
+                "color": "#64748B",
+                "id": "2d500b90-f248-4ccb-8293-1aae19c57d9e",
+                "name": "Replied / Needs Triage",
+                "position": 11,
+                "showInFunnel": true,
+                "showInPieChart": true,
+                "stageWinProbability": 80
+              },
+              {
+                "color": "#64748B",
+                "id": "91db4075-fdb4-459f-a447-8be3dee4bf50",
+                "name": "Legal Judgment Escalation",
+                "position": 12,
+                "showInFunnel": true,
+                "showInPieChart": true,
+                "stageWinProbability": 86.67
+              },
+              {
+                "color": "#DC2626",
+                "id": "143ee9d4-74e3-4c5c-ab6d-23e154372b1b",
+                "name": "Suppressed / Do Not Contact",
+                "position": 13,
+                "showInFunnel": true,
+                "showInPieChart": true,
+                "stageWinProbability": 93.33
+              }
+            ],
+            "useOpportunityProbability": false
+          }
+        ],
+        "traceId": "ed705216-dc8f-4a66-ac2a-603332f34440"
+      },
+      "ok": true,
+      "status": 200
+    },
+    "surveys": {
+      "data": {
+        "surveys": [],
+        "total": 0,
+        "traceId": "1422eaca-7e9a-4ad2-871e-e1a4d4a8a3ca"
+      },
+      "ok": true,
+      "status": 200
+    },
+    "tags": {
+      "data": {
+        "tags": [
+          {
+            "id": "MxzqQUAAeGriKBueipfq",
+            "locationId": "tm68WWMrcAa3TqQbEAMa",
+            "name": "brand:whiteford-schellip"
+          },
+          {
+            "id": "3nRTFHptUVsDFMTedMIz",
+            "locationId": "tm68WWMrcAa3TqQbEAMa",
+            "name": "enrichment:needs-research"
+          },
+          {
+            "id": "36GlfxjuLWR55FPsltsQ",
+            "locationId": "tm68WWMrcAa3TqQbEAMa",
+            "name": "enrichment:public-source"
+          },
+          {
+            "id": "TfK0kuN0yLfgIhdgN76O",
+            "locationId": "tm68WWMrcAa3TqQbEAMa",
+            "name": "follow-up"
+          },
+          {
+            "id": "s6ho3MUxIhvRkRNcWjMi",
+            "locationId": "tm68WWMrcAa3TqQbEAMa",
+            "name": "growth-os-human-approved"
+          },
+          {
+            "id": "vS7SXUAaoaB02KG43E6E",
+            "locationId": "tm68WWMrcAa3TqQbEAMa",
+            "name": "growth-os-lead"
+          },
+          {
+            "id": "UK1OMezlWy7JHcrpUzea",
+            "locationId": "tm68WWMrcAa3TqQbEAMa",
+            "name": "growth-os-nightly-qwen"
+          },
+          {
+            "id": "vumeviBF8WXZZdI64zWE",
+            "locationId": "tm68WWMrcAa3TqQbEAMa",
+            "name": "growth-os-no-autosend"
+          },
+          {
+            "id": "xiwqGyjpU0nEjL4H3oTA",
+            "locationId": "tm68WWMrcAa3TqQbEAMa",
+            "name": "growth-os-segment-ai-patent"
+          },
+          {
+            "id": "1WT6lnF33FvBPo4u5Sb6",
+            "locationId": "tm68WWMrcAa3TqQbEAMa",
+            "name": "growth-os-segment-ai-software"
+          },
+          {
+            "id": "U5Ul2JSY6AAJ5g6QwLzw",
+            "locationId": "tm68WWMrcAa3TqQbEAMa",
+            "name": "growth-os-segment-funded-startups"
+          },
+          {
+            "id": "rzAAQ1h0G2rEO8VjRpAF",
+            "locationId": "tm68WWMrcAa3TqQbEAMa",
+            "name": "growth-os-segment-product-ecommerce"
+          },
+          {
+            "id": "vmVen8IP7GSAuWnNKk0T",
+            "locationId": "tm68WWMrcAa3TqQbEAMa",
+            "name": "growth-os-segment-referral-partners"
+          },
+          {
+            "id": "eGpzrFR4uJ7oCDC14Lw4",
+            "locationId": "tm68WWMrcAa3TqQbEAMa",
+            "name": "growth-os-stage-research-staged"
+          },
+          {
+            "id": "kVoqMvt0UOncqmxwW0YS",
+            "locationId": "tm68WWMrcAa3TqQbEAMa",
+            "name": "growth-os-stage-researched"
+          },
+          {
+            "id": "yn7oGfehRUWfJkJ8ZLl4",
+            "locationId": "tm68WWMrcAa3TqQbEAMa",
+            "name": "growth-os-staging"
+          },
+          {
+            "id": "OO9eTne2mTzyG5vRVyJN",
+            "locationId": "tm68WWMrcAa3TqQbEAMa",
+            "name": "growth-os-ui"
+          },
+          {
+            "id": "S4oVUIw8pXHACJEj5p6t",
+            "locationId": "tm68WWMrcAa3TqQbEAMa",
+            "name": "high priority"
+          },
+          {
+            "id": "SZ1VWuu7A8kAVpTDc1F0",
+            "locationId": "tm68WWMrcAa3TqQbEAMa",
+            "name": "interest:ai-compliance"
+          },
+          {
+            "id": "isgN68rHai067UsUbosa",
+            "locationId": "tm68WWMrcAa3TqQbEAMa",
+            "name": "interest:ai-patent-law"
+          },
+          {
+            "id": "vAasc4oplv4L2ITjcKHR",
+            "locationId": "tm68WWMrcAa3TqQbEAMa",
+            "name": "interest:ma-readiness"
+          },
+          {
+            "id": "U3IETGpVAAUsCA2GAdX4",
+            "locationId": "tm68WWMrcAa3TqQbEAMa",
+            "name": "interest:tech-ogc"
+          },
+          {
+            "id": "aeMI5TVvDleFPBfx2aEI",
+            "locationId": "tm68WWMrcAa3TqQbEAMa",
+            "name": "leadmagnet:ai-compliance-gameplan"
+          },
+          {
+            "id": "q7OYTozjWdpqPbY6xsvi",
+            "locationId": "tm68WWMrcAa3TqQbEAMa",
+            "name": "leadmagnet:ai-patent-scorecard"
+          },
+          {
+            "id": "Y6gtxKo1wQ9kWYcPejda",
+            "locationId": "tm68WWMrcAa3TqQbEAMa",
+            "name": "leadmagnet:ma-readiness-checklist"
+          },
+          {
+            "id": "J5hcj9jHgrmkTlfAz9AX",
+            "locationId": "tm68WWMrcAa3TqQbEAMa",
+            "name": "leadmagnet:tech-gc-checklist"
+          },
+          {
+            "id": "DWMSyc3Cw4jH1JuzGF23",
+            "locationId": "tm68WWMrcAa3TqQbEAMa",
+            "name": "newsletter:ai"
+          },
+          {
+            "id": "b5VVbfvd8b2NKsVC8MYr",
+            "locationId": "tm68WWMrcAa3TqQbEAMa",
+            "name": "newsletter:daily-ai-authority"
+          },
+          {
+            "id": "PuS7pqcwDAgU9CzjjgCD",
+            "locationId": "tm68WWMrcAa3TqQbEAMa",
+            "name": "newsletter:not-consented"
+          },
+          {
+            "id": "bu16A0s2sRH6exC76L1n",
+            "locationId": "tm68WWMrcAa3TqQbEAMa",
+            "name": "ops:approval-approved"
+          },
+          {
+            "id": "bCLd2Y9Jzbzqrua1AhkR",
+            "locationId": "tm68WWMrcAa3TqQbEAMa",
+            "name": "ops:approval-required"
+          },
+          {
+            "id": "64eUrZMlpVPdoxmZ2Caw",
+            "locationId": "tm68WWMrcAa3TqQbEAMa",
+            "name": "ops:approval-revise"
+          },
+          {
+            "id": "LdM5qIWsDwLvVCfrq0uw",
+            "locationId": "tm68WWMrcAa3TqQbEAMa",
+            "name": "ops:no-auto-send"
+          },
+          {
+            "id": "wvmJlzZHsWnGok6dsgGs",
+            "locationId": "tm68WWMrcAa3TqQbEAMa",
+            "name": "outreach:do-not-send"
+          },
+          {
+            "id": "VnOEdpHqNLxVePLM1EPm",
+            "locationId": "tm68WWMrcAa3TqQbEAMa",
+            "name": "outreach:personalized-draft-ready"
+          },
+          {
+            "id": "ndibHiKrITYMwK0R2RMf",
+            "locationId": "tm68WWMrcAa3TqQbEAMa",
+            "name": "social:attorney-review-required"
+          },
+          {
+            "id": "hOh6qwPRf06R9FoB10lg",
+            "locationId": "tm68WWMrcAa3TqQbEAMa",
+            "name": "social:linkedin-draft"
+          },
+          {
+            "id": "QOkhwSzdB6YaRZl4XfaF",
+            "locationId": "tm68WWMrcAa3TqQbEAMa",
+            "name": "warm lead"
+          },
+          {
+            "id": "UgFtJxRzDJuuXzwv0O7d",
+            "locationId": "tm68WWMrcAa3TqQbEAMa",
+            "name": "whiteford-mountain-west"
+          },
+          {
+            "id": "aLH8Z1rmQSfjFIRHagGy",
+            "locationId": "tm68WWMrcAa3TqQbEAMa",
+            "name": "workflow:ai-compliance-readiness"
+          },
+          {
+            "id": "WZfRXwccEjnHflOUL9Nt",
+            "locationId": "tm68WWMrcAa3TqQbEAMa",
+            "name": "workflow:ai-patent-strategy"
+          },
+          {
+            "id": "KLeXxBMdVCFhFI3fkyTr",
+            "locationId": "tm68WWMrcAa3TqQbEAMa",
+            "name": "workflow:draft-only"
+          },
+          {
+            "id": "vBjCsu6UEeaEOmvu0vhc",
+            "locationId": "tm68WWMrcAa3TqQbEAMa",
+            "name": "workflow:ma-readiness"
+          },
+          {
+            "id": "OyNFjnYsvxfH3xBXcAhS",
+            "locationId": "tm68WWMrcAa3TqQbEAMa",
+            "name": "workflow:manual-start"
+          },
+          {
+            "id": "JUG30WwG9bNmdUzT2Tn9",
+            "locationId": "tm68WWMrcAa3TqQbEAMa",
+            "name": "workflow:tech-gc-launchpad"
+          }
+        ],
+        "traceId": "d4922dfe-2d02-4db8-a5b5-eb96a6e66939"
+      },
+      "ok": true,
+      "status": 200
+    },
+    "users": {
+      "data": {
+        "traceId": "3ad1790b-3d82-4d1a-a794-b39fe9f1914d",
+        "users": []
+      },
+      "ok": true,
+      "status": 200
+    },
+    "workflow_email_campaigns_draft": {
+      "error": "{\"status\":422,\"options\":{},\"message\":[\"limit must not be greater than 20\"],\"name\":\"UnprocessableEntityException\",\"error\":\"Unprocessable Entity\",\"statusCode\":422,\"traceId\":\"7410a890-f5cf-41d2-815f-81d1f325ff18\"}",
+      "ok": false,
+      "status": 422
+    },
+    "workflows": {
+      "data": {
+        "traceId": "e06a3df7-eff4-47c5-969a-fa33956d9681",
+        "workflows": [
+          {
+            "createdAt": "2026-05-05T05:02:42.414Z",
+            "id": "bd952a80-46d3-419f-900d-e9add46ca003",
+            "locationId": "tm68WWMrcAa3TqQbEAMa",
+            "name": "1. New Lead Nurture (Fast 5) - Claim Offer",
+            "status": "draft",
+            "updatedAt": "2026-05-05T05:02:45.621Z",
+            "version": 2
+          },
+          {
+            "createdAt": "2026-05-05T05:02:42.605Z",
+            "id": "0a1749da-af77-4d51-ba2e-8a1027ca66b5",
+            "locationId": "tm68WWMrcAa3TqQbEAMa",
+            "name": "2. Appointment Confirmation + Reminders",
+            "status": "draft",
+            "updatedAt": "2026-05-05T05:02:45.510Z",
+            "version": 2
+          },
+          {
+            "createdAt": "2026-05-05T05:02:42.810Z",
+            "id": "dcf4b664-4d02-4465-bf88-1be1a1e6ea34",
+            "locationId": "tm68WWMrcAa3TqQbEAMa",
+            "name": "3. Appt No Show",
+            "status": "draft",
+            "updatedAt": "2026-05-05T05:02:45.529Z",
+            "version": 2
+          },
+          {
+            "createdAt": "2026-05-05T05:02:43.002Z",
+            "id": "622a2611-afe0-4d02-b848-f5c3e81130e1",
+            "locationId": "tm68WWMrcAa3TqQbEAMa",
+            "name": "4. New Sale - Send Review Request",
+            "status": "draft",
+            "updatedAt": "2026-05-05T05:02:45.368Z",
+            "version": 2
+          },
+          {
+            "createdAt": "2026-05-05T05:02:43.194Z",
+            "id": "28cfdf24-11ec-47b6-9830-3aa3bc827cf0",
+            "locationId": "tm68WWMrcAa3TqQbEAMa",
+            "name": "5. Long-Term Nurture",
+            "status": "draft",
+            "updatedAt": "2026-05-05T05:02:45.118Z",
+            "version": 2
+          },
+          {
+            "createdAt": "2026-05-05T05:02:43.428Z",
+            "id": "39b5c831-10d4-4005-89f5-64307403158f",
+            "locationId": "tm68WWMrcAa3TqQbEAMa",
+            "name": "6. Stale Leads",
+            "status": "draft",
+            "updatedAt": "2026-05-05T05:02:45.383Z",
+            "version": 2
+          },
+          {
+            "createdAt": "2026-05-06T07:14:52.048Z",
+            "id": "424fd134-b34b-494f-a337-2aba0dec3060",
+            "locationId": "tm68WWMrcAa3TqQbEAMa",
+            "name": "AI Patent Strategy Campaign",
+            "status": "draft",
+            "updatedAt": "2026-05-06T07:17:24.700Z",
+            "version": 2
+          }
+        ]
+      },
+      "ok": true,
+      "status": 200
+    }
+  },
+  "safety": {
+    "activatedWorkflows": false,
+    "createdContacts": false,
+    "deletedAssets": false,
+    "enrolledContacts": false,
+    "readOnlyInventory": true,
+    "sentEmails": false,
+    "sentSms": false
+  }
+}

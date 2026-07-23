@@ -1,0 +1,72 @@
+{
+  "task": {
+    "id": "t_789e3d40",
+    "title": "Assemble HighLevel no-mutation Sunday option matrix - 2026-05-10",
+    "body": "Turn Sunday Box D into a concise no-mutation HighLevel option matrix for Jeff: documentation-only, read-only inspection, sandbox-only semantics check, exact later Draft/Off remediation, or hold.\n\nSource anchors:\n- /Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/digests/2026-05-10_sunday_morning_decision_packet.md\n- /Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/highlevel_no_mutation_authority_tech_gc_approval_checklist_2026-05-09.md\n- /Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/highlevel_safe_consent_gate_remediation_packet_2026-05-09.md\n- /Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/highlevel_guardrail_v2_post_approval_verification_packet_2026-05-08.md\n\nDeliverable expected:\n- /Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/highlevel_sunday_no_mutation_option_matrix_2026-05-10.md\n\nMake it operator-safe: list exactly what each option permits, forbids, prerequisite approvals, evidence capture, stop/rollback conditions, and why no HighLevel mutation is authorized by this task.\n\n\nGuardrails for this task:\n- Internal/draft/local documentation or local prototype work only.\n- Do not send emails/SMS/DMs, enroll contacts, activate/test/start workflows, publish pages, post or tag/comment/message on LinkedIn/social, launch ads, write to Clio, or make public/client-facing changes.\n- Do not run Supabase DDL, gated backfill/sync, or mirror sync; keep t_fa6eb9c1/t_53d470c6 as human-only blockers.\n- Do not mutate live HighLevel/CRM/Supabase records. If any credential, approval, browser login, or live-system action is required, block with exact manual unblock steps instead of proceeding.\n- Update docs/KANBAN_DELIVERABLE_INDEX.md and leave the standard Deliverable/Summary/Next action Kanban comment when complete.",
+    "assignee": "highlevel-ops",
+    "status": "running",
+    "priority": 80,
+    "tenant": "whiteford-mountain-west",
+    "workspace_kind": "dir",
+    "workspace_path": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages",
+    "created_by": "overnight-watchdog",
+    "created_at": 1778395149,
+    "started_at": 1778395169,
+    "completed_at": null,
+    "result": null,
+    "skills": []
+  },
+  "latest_summary": null,
+  "parents": [],
+  "children": [
+    "t_5f6eb002"
+  ],
+  "comments": [],
+  "events": [
+    {
+      "kind": "created",
+      "payload": {
+        "assignee": "highlevel-ops",
+        "status": "ready",
+        "parents": [],
+        "tenant": "whiteford-mountain-west",
+        "skills": null
+      },
+      "created_at": 1778395149,
+      "run_id": null
+    },
+    {
+      "kind": "claimed",
+      "payload": {
+        "lock": "Jeffs-MacBook-Pro-2.local:40522",
+        "expires": 1778396069,
+        "run_id": 403
+      },
+      "created_at": 1778395169,
+      "run_id": 403
+    },
+    {
+      "kind": "spawned",
+      "payload": {
+        "pid": 40525
+      },
+      "created_at": 1778395169,
+      "run_id": 403
+    }
+  ],
+  "runs": [
+    {
+      "id": 403,
+      "profile": "highlevel-ops",
+      "step_key": null,
+      "status": "running",
+      "outcome": null,
+      "summary": null,
+      "error": null,
+      "metadata": null,
+      "worker_pid": 40525,
+      "started_at": 1778395169,
+      "ended_at": null
+    }
+  ]
+}

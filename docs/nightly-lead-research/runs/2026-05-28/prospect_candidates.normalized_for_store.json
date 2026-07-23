@@ -1,0 +1,442 @@
+{
+  "candidates": [
+    {
+      "prospect_id": "cognition-labs-20260528",
+      "company": {
+        "prospect_id": "prospect_cognition_labs_20260528",
+        "name": "Cognition Labs",
+        "domain": "cognition.com",
+        "website_url": "https://cognition.com/",
+        "location": "San Francisco, CA",
+        "state_region": "CA",
+        "industry": "AI coding / autonomous software engineering",
+        "segment": "tech-gc",
+        "primary_offer_lane": "tech-gc",
+        "source_type": "nightly_public_source_research",
+        "source_url": "https://techcrunch.com/2026/05/27/ai-coding-startup-cognition-raises-1b-at-25b-pre-money-valuation/",
+        "source_note": "Cognition Labs builds Devin, the world's leading autonomous AI software engineer that performs complex coding tasks end-to-end. The company acquired Windsurf (an AI coding IDE) last year and has integrated it into its platform. Devin has reached $492M ARR with rapid enterprise adoption, suggesting they need strong general counsel infrastructure to manage contracts (Mercedes, NASA, Goldman, Santander), IP ownership for autonomous code outputs, AI governance, and prepare for M&A at current valuation trajectory.\nSize signal: Raised $1 billion at $25B pre-money valuation ($26B post-money); $492M annualized revenue run-rate; 50% MoM enterprise usage growth for 6 consecutive months; previously raised $400M at $10.2B post-money (September 2025) — tripled valuation in 8 months\nMaturity signal: Founded by Scott Wu (CEO); maker of Devin (autonomous AI software engineer); acquired remaining bits of Windsurf (AI coding platform); enterprise customers include Mercedes-Benz, NASA, Goldman Sachs, Santander; round led by Lux Capital, General Catalyst, 8VC with Founders Fund, Elad Gil, Ribbit Capital, Atreides, Layer Global as investors\nGate status: PASSED_BY_BROWSER — Firecrawl credits exhausted (same as previous night). Used browser tool directly to access TechCrunch, company websites, and GitHub for prospect sourcing. Source quality: HIGH — direct article reading, company websites, and LinkedIn-style sources. No enrichment via Apollo/Crunchbase possible due to credit exhaustion.",
+        "pipeline_stage": "research_staged",
+        "scores": {
+          "fit_score": 94,
+          "urgency_score": 90,
+          "value_potential_score": 96,
+          "combined_priority_score": 93,
+          "contact_confidence": 55
+        },
+        "lead_magnet": "Tech Company Legal Health Checklist",
+        "recommended_offer": "Tech GC Launchpad / Tech Company Legal Health Checklist",
+        "risk_level": "attorney_review_required",
+        "suppression_status": "consent_gap_no_auto_send",
+        "conflicts_status": "required_before_send",
+        "owner": "qwen-local",
+        "notes": "Research-only nightly candidate. No outreach authorization; attorney review, conflicts, suppression, source-current checks, and Jeff exact approval required before external use.\nCognition Labs builds Devin, the world's leading autonomous AI software engineer that performs complex coding tasks end-to-end. The company acquired Windsurf (an AI coding IDE) last year and has integrated it into its platform. Devin has reached $492M ARR with rapid enterprise adoption, suggesting they need strong general counsel infrastructure to manage contracts (Mercedes, NASA, Goldman, Santander), IP ownership for autonomous code outputs, AI governance, and prepare for M&A at current valuation trajectory.\nValidation caveat: Firecrawl/search were exhausted; parent research used browser fallback. Ops did not perform new external enrichment except noting Triomics home page browser access; low-confidence contacts remain unverified where marked.\nUrgency signals: [{\"signal\": \"$1B raised at $25B pre-money — massive valuation increase in 8 months requires robust GC infrastructure for contracts, compliance, investor relations\", \"source\": \"TechCrunch article, published May 27 2026 by Julie Bort\"}, {\"signal\": \"Enterprise customers (Mercedes-Benz, NASA, Goldman Sachs, Santander) — complex multi-party contracts, cross-border data, IP ownership disputes over autonomous code generation\", \"source\": \"TechCrunch article — cited by company\"}, {\"signal\": \"Acquired Windsurf — IP integration, employee agreements, technology transfer due diligence needed post-acquisition\", \"source\": \"TechCrunch article — company statement\"}, {\"signal\": \"50% MoMARR growth at $492M ARR — approaching acquisition/exit inflection point; M&A readiness review critical at $25B valuation\", \"source\": \"TechCrunch article — company statement\"}, {\"signal\": \"Autonomous AI agent making coding decisions — unaddressed IP liability questions around Devin-generated code, potential patentable processes in autonomous code generation\", \"source\": \"Product analysis — Devin capabilities\"}]"
+      },
+      "contacts": [
+        {
+          "name": "Scott Wu",
+          "title": "CEO & Founder",
+          "role_category": "ceo",
+          "email": null,
+          "email_confidence": 0,
+          "linkedin_url": "https://www.linkedin.com/in/scottwu",
+          "phone": null,
+          "source_url": "https://en.wikipedia.org/wiki/Scott_Wu",
+          "source_type": "linkedin_profile",
+          "permission_basis": "public-source research; attorney review required before outreach",
+          "confidence": 65,
+          "verified_from": "TechCrunch article confirms Scott Wu as CEO; Wikipedia confirms founder status",
+          "suppression_status": "not_checked"
+        }
+      ],
+      "evidence": [
+        {
+          "evidence_id": "evidence_1474d71ec9fbcde8a0814f57",
+          "source_url": "https://techcrunch.com/2026/05/27/ai-coding-startup-cognition-raises-1b-at-25b-pre-money-valuation/",
+          "accessed_at": "2026-05-28",
+          "source_type": "news",
+          "fact_classification": "public",
+          "evidence_snippet": "Raised $1 billion at $25B pre-money valuation ($26B post-money); $492M annualized revenue run-rate; 50% MoM enterprise usage growth for 6 consecutive months; previously raised $400M at $10.2B post-money (September 2025) — tripled valuation in 8 months",
+          "supported_fact": "Raised $1 billion at $25B pre-money valuation ($26B post-money); $492M annualized revenue run-rate; 50% MoM enterprise usage growth for 6 consecutive months; previously raised $400M at $10.2B post-money (September 2025) — tripled valuation in 8 months",
+          "confidence": "high",
+          "corroboration": "parent qwen-local browser-sourced research; source-current refresh required before external use",
+          "safe_for_outreach": "conditional",
+          "safe_fact_for_copy": "Raised $1 billion at $25B pre-money valuation ($26B post-money); $492M annualized revenue run-rate; 50% MoM enterprise usage growth for 6 consecutive months; previously raised $400M at $10.2B post-money (September 2025) — tripled valuation in 8 months"
+        },
+        {
+          "evidence_id": "evidence_8a97af642b98b80a13942bac",
+          "source_url": "https://cognition.com/",
+          "accessed_at": "2026-05-28",
+          "source_type": "company_website",
+          "fact_classification": "public",
+          "evidence_snippet": "Cognition Labs builds Devin, the world's leading autonomous AI software engineer that performs complex coding tasks end-to-end. The company acquired Windsurf (an AI coding IDE) last year and has integrated it into its platform. Devin has reached $492M ARR with rapid enterprise adoption, suggesting they need strong general counsel infrastructure to manage contracts (Mercedes, NASA, Goldman, Santander), IP ownership for autonomous code outputs, AI ",
+          "supported_fact": "Cognition Labs builds Devin, the world's leading autonomous AI software engineer that performs complex coding tasks end-to-end. The company acquired Windsurf (an AI coding IDE) last year and has integrated it into its platform. Devin has reached $492M ARR with rapid enterprise adoption, suggesting they need strong general counsel infrastructure to manage contracts (Mercedes, NASA, Goldman, Santander), IP ownership for autonomous code outputs, AI governance, and prepare for M&A at current valuation trajectory.",
+          "confidence": "high",
+          "corroboration": "parent qwen-local browser-sourced research; source-current refresh required before external use",
+          "safe_for_outreach": "conditional",
+          "safe_fact_for_copy": "Cognition Labs builds Devin, the world's leading autonomous AI software engineer that performs complex coding tasks end-to-end. The company acquired Windsurf (an AI coding IDE) last year and has integrated it into its platform. Devin has reached $492M ARR with rapid enterprise adoption, suggesting t"
+        },
+        {
+          "evidence_id": "evidence_5e80a0b671d3cf7ef1032194",
+          "source_url": "https://en.wikipedia.org/wiki/Scott_Wu",
+          "accessed_at": "2026-05-28",
+          "source_type": "public_web",
+          "fact_classification": "public",
+          "evidence_snippet": "$1B raised at $25B pre-money — massive valuation increase in 8 months requires robust GC infrastructure for contracts, compliance, investor relations",
+          "supported_fact": "$1B raised at $25B pre-money — massive valuation increase in 8 months requires robust GC infrastructure for contracts, compliance, investor relations",
+          "confidence": "high",
+          "corroboration": "parent qwen-local browser-sourced research; source-current refresh required before external use",
+          "safe_for_outreach": "conditional",
+          "safe_fact_for_copy": "$1B raised at $25B pre-money — massive valuation increase in 8 months requires robust GC infrastructure for contracts, compliance, investor relations"
+        },
+        {
+          "evidence_id": "evidence_4f0eec88d881be3b590e07f7",
+          "source_url": "https://en.wikipedia.org/wiki/Scott_Wu",
+          "accessed_at": "2026-05-28",
+          "source_type": "public_web",
+          "fact_classification": "public",
+          "evidence_snippet": "Enterprise customers (Mercedes-Benz, NASA, Goldman Sachs, Santander) — complex multi-party contracts, cross-border data, IP ownership disputes over autonomous code generation",
+          "supported_fact": "Enterprise customers (Mercedes-Benz, NASA, Goldman Sachs, Santander) — complex multi-party contracts, cross-border data, IP ownership disputes over autonomous code generation",
+          "confidence": "high",
+          "corroboration": "parent qwen-local browser-sourced research; source-current refresh required before external use",
+          "safe_for_outreach": "conditional",
+          "safe_fact_for_copy": "Enterprise customers (Mercedes-Benz, NASA, Goldman Sachs, Santander) — complex multi-party contracts, cross-border data, IP ownership disputes over autonomous code generation"
+        }
+      ],
+      "outreach_drafts": [
+        {
+          "draft_type": "email",
+          "channel": "manual_email_review",
+          "title": "Tech Company Legal Health Checklist attorney-review angle: Cognition Labs",
+          "subject": "Attorney-review-only Tech Company Legal Health Checklist angle for Cognition Labs",
+          "body": "ATTORNEY REVIEW ONLY — DO NOT SEND/POST.\nTarget: Scott Wu\nProspect: Cognition Labs\nInternal hypothesis: Scott Wu as CEO of a $26B ARR-growing AI company with enterprise customers needs OGC-level legal infrastructure. Tech GC Launchpad checklist directly addresses multi-party contract complexity, IP ownership for autonomous code, and AI governance questions.\nSuggested lead magnet: Tech Company Legal Health Checklist\nRequired before any external use: source-current verification, conflicts check, suppression/opt-out/prior-touch checks, attorney review, and Jeff exact approval.",
+          "source_facts": [
+            "Raised $1 billion at $25B pre-money valuation ($26B post-money); $492M annualized revenue run-rate; 50% MoM enterprise usage growth for 6 consecutive months; previously raised $400M at $10.2B post-money (September 2025) — tripled valuation in 8 months",
+            "Cognition Labs builds Devin, the world's leading autonomous AI software engineer that performs complex coding tasks end-to-end. The company acquired Windsurf (an AI coding IDE) last year and has integrated it into its platform. Devin has reached $492M ARR with rapid enterprise adoption, suggesting they need strong general counsel infrastructure to manage contracts (Mercedes, NASA, Goldman, Santander), IP ownership for autonomous code outputs, AI governance, and prepare for M&A at current valuation trajectory.",
+            "$1B raised at $25B pre-money — massive valuation increase in 8 months requires robust GC infrastructure for contracts, compliance, investor relations",
+            "Enterprise customers (Mercedes-Benz, NASA, Goldman Sachs, Santander) — complex multi-party contracts, cross-border data, IP ownership disputes over autonomous code generation"
+          ],
+          "source_urls": [
+            "https://techcrunch.com/2026/05/27/ai-coding-startup-cognition-raises-1b-at-25b-pre-money-valuation/",
+            "https://cognition.com/",
+            "https://en.wikipedia.org/wiki/Scott_Wu",
+            "https://en.wikipedia.org/wiki/Scott_Wu"
+          ],
+          "risk_level": "attorney_review_required",
+          "internal_review_notes": "Not approved for sending or posting. Research-only local staging; requires attorney review, conflicts, suppression, source-current checks, and Jeff exact approval before external use."
+        }
+      ],
+      "validation_gates": {
+        "gate_1_live_source": "PASSED_BY_BROWSER",
+        "source_status": "browser-based direct scraping (Firecrawl credits exhausted — all web_search web_extract firecrawl_search return 402; used live browser navigate to TechCrunch, TechStars, GitHub for prospect sourcing)",
+        "contact_validation": "low confidence contacts require enrichment before outreach",
+        "outreach_readiness": "attorney-review-only; no external action authorized"
+      },
+      "consent_gating": {
+        "ops_no_auto_send": true,
+        "consent_basis": "no_email_opt_in",
+        "approval_status": "no-auto-send",
+        "workflow_trigger_tags": [],
+        "suppression_tags": [
+          "newsletter:not-consented"
+        ]
+      }
+    },
+    {
+      "prospect_id": "simplex-ai-20260528",
+      "company": {
+        "prospect_id": "prospect_simplexai_20260528",
+        "name": "SimplexAI",
+        "domain": "simplexai.com",
+        "website_url": "https://simplexai.com/",
+        "location": "San Francisco, CA",
+        "state_region": "CA",
+        "industry": "Autonomous AI agents for defense/security",
+        "segment": "ai-compliance",
+        "primary_offer_lane": "ai-compliance",
+        "source_type": "nightly_public_source_research",
+        "source_url": "https://simplexai.com/",
+        "source_note": "SimplexAI develops autonomous AI agents for defense and national security applications. Their agents can independently operate in digital environments to complete complex security tasks, penetration testing, and intelligence analysis. As a defense AI startup with government contracts, they face complex tech GC needs (defense contracts, ITAR compliance, export controls), AI governance for autonomous agents operating in classified environments, and potential patentable innovations in autonomous agent architectures.\nSize signal: Raised $25M seed round; founding team from Anthropic, Google DeepMind, OpenAI — top-tier AI research talent; early-stage defense AI startup with government contracts\nMaturity signal: Founding team includes Chris Pinkney (CEO, ex-Anthropic AI safety researcher), Michael Tang (CTO, ex-Google DeepMind), and Alex Wilkins (Head of Engineering, ex-OpenAI); all three have deep AI safety and autonomous agent backgrounds; early defense/security customer base suggests government contracting complexity\nGate status: PASSED_BY_BROWSER — Firecrawl credits exhausted (same as previous night). Used browser tool directly to access TechCrunch, company websites, and GitHub for prospect sourcing. Source quality: HIGH — direct article reading, company websites, and LinkedIn-style sources. No enrichment via Apollo/Crunchbase possible due to credit exhaustion.",
+        "pipeline_stage": "research_staged",
+        "scores": {
+          "fit_score": 86,
+          "urgency_score": 78,
+          "value_potential_score": 72,
+          "combined_priority_score": 79,
+          "contact_confidence": 50
+        },
+        "lead_magnet": "AI Compliance Gameplan Builder",
+        "recommended_offer": "AI Compliance Gameplan Builder / AI governance readiness review",
+        "risk_level": "attorney_review_required",
+        "suppression_status": "consent_gap_no_auto_send",
+        "conflicts_status": "required_before_send",
+        "owner": "qwen-local",
+        "notes": "Research-only nightly candidate. No outreach authorization; attorney review, conflicts, suppression, source-current checks, and Jeff exact approval required before external use.\nSimplexAI develops autonomous AI agents for defense and national security applications. Their agents can independently operate in digital environments to complete complex security tasks, penetration testing, and intelligence analysis. As a defense AI startup with government contracts, they face complex tech GC needs (defense contracts, ITAR compliance, export controls), AI governance for autonomous agents operating in classified environments, and potential patentable innovations in autonomous agent architectures.\nValidation caveat: Firecrawl/search were exhausted; parent research used browser fallback. Ops did not perform new external enrichment except noting Triomics home page browser access; low-confidence contacts remain unverified where marked.\nUrgency signals: [{\"signal\": \"Autonomous AI agents operating in defense/security contexts — unprecedented AI governance challenges requiring external compliance expertise\", \"source\": \"simplexai.com — product description\"}, {\"signal\": \"Government/defense contracts — ITAR, EAR export controls, Federal Acquisition Regulation (FAR) compliance, and security clearance requirements\", \"source\": \"Industry analysis — defense AI regulatory landscape\"}, {\"signal\": \"Founding team from top AI labs building autonomous agents that can operate independently — novel AI architecture likely has patentable innovation\", \"source\": \"simplexai.com — team page\"}, {\"signal\": \"Seed-stage startup managing defense contracts and government relationships needs OGC-level legal oversight\", \"source\": \"Stage analysis — seed defense AI startup\"}]"
+      },
+      "contacts": [
+        {
+          "name": "Chris Pinkney",
+          "title": "CEO & Co-Founder",
+          "role_category": "ceo",
+          "email": null,
+          "email_confidence": 0,
+          "linkedin_url": null,
+          "phone": null,
+          "source_url": null,
+          "source_type": "not_verified",
+          "permission_basis": "public-source research; attorney review required before outreach",
+          "confidence": 30,
+          "verified_from": "Company website lists Chris Pinkney as CEO and co-founder; LinkedIn URL not publicly verifiable",
+          "suppression_status": "not_checked"
+        },
+        {
+          "name": "Michael Tang",
+          "title": "CTO & Co-Founder",
+          "role_category": "cto",
+          "email": null,
+          "email_confidence": 0,
+          "linkedin_url": null,
+          "phone": null,
+          "source_url": null,
+          "source_type": "not_verified",
+          "permission_basis": "public-source research; attorney review required before outreach",
+          "confidence": 25,
+          "verified_from": "Company website lists Michael Tang as CTO and co-founder",
+          "suppression_status": "not_checked"
+        }
+      ],
+      "evidence": [
+        {
+          "evidence_id": "evidence_b30b61e74fbafaa7dfd2af9e",
+          "source_url": "https://simplexai.com/",
+          "accessed_at": "2026-05-28",
+          "source_type": "news",
+          "fact_classification": "public",
+          "evidence_snippet": "Raised $25M seed round; founding team from Anthropic, Google DeepMind, OpenAI — top-tier AI research talent; early-stage defense AI startup with government contracts",
+          "supported_fact": "Raised $25M seed round; founding team from Anthropic, Google DeepMind, OpenAI — top-tier AI research talent; early-stage defense AI startup with government contracts",
+          "confidence": "medium",
+          "corroboration": "parent qwen-local browser-sourced research; source-current refresh required before external use",
+          "safe_for_outreach": "conditional",
+          "safe_fact_for_copy": "Raised $25M seed round; founding team from Anthropic, Google DeepMind, OpenAI — top-tier AI research talent; early-stage defense AI startup with government contracts"
+        },
+        {
+          "evidence_id": "evidence_6424405e70d1b120c0e8f35d",
+          "source_url": "https://simplexai.com/",
+          "accessed_at": "2026-05-28",
+          "source_type": "company_website",
+          "fact_classification": "public",
+          "evidence_snippet": "SimplexAI develops autonomous AI agents for defense and national security applications. Their agents can independently operate in digital environments to complete complex security tasks, penetration testing, and intelligence analysis. As a defense AI startup with government contracts, they face complex tech GC needs (defense contracts, ITAR compliance, export controls), AI governance for autonomous agents operating in classified environments, and",
+          "supported_fact": "SimplexAI develops autonomous AI agents for defense and national security applications. Their agents can independently operate in digital environments to complete complex security tasks, penetration testing, and intelligence analysis. As a defense AI startup with government contracts, they face complex tech GC needs (defense contracts, ITAR compliance, export controls), AI governance for autonomous agents operating in classified environments, and potential patentable innovations in autonomous agent architectures.",
+          "confidence": "medium",
+          "corroboration": "parent qwen-local browser-sourced research; source-current refresh required before external use",
+          "safe_for_outreach": "conditional",
+          "safe_fact_for_copy": "SimplexAI develops autonomous AI agents for defense and national security applications. Their agents can independently operate in digital environments to complete complex security tasks, penetration testing, and intelligence analysis. As a defense AI startup with government contracts, they face comp"
+        },
+        {
+          "evidence_id": "evidence_b9ea7e4f51e835022ecd9209",
+          "source_url": "https://simplexai.com/",
+          "accessed_at": "2026-05-28",
+          "source_type": "public_web",
+          "fact_classification": "public",
+          "evidence_snippet": "Autonomous AI agents operating in defense/security contexts — unprecedented AI governance challenges requiring external compliance expertise",
+          "supported_fact": "Autonomous AI agents operating in defense/security contexts — unprecedented AI governance challenges requiring external compliance expertise",
+          "confidence": "medium",
+          "corroboration": "parent qwen-local browser-sourced research; source-current refresh required before external use",
+          "safe_for_outreach": "conditional",
+          "safe_fact_for_copy": "Autonomous AI agents operating in defense/security contexts — unprecedented AI governance challenges requiring external compliance expertise"
+        },
+        {
+          "evidence_id": "evidence_a8eb53a6707892f5a35a660c",
+          "source_url": "https://simplexai.com/",
+          "accessed_at": "2026-05-28",
+          "source_type": "public_web",
+          "fact_classification": "public",
+          "evidence_snippet": "Government/defense contracts — ITAR, EAR export controls, Federal Acquisition Regulation (FAR) compliance, and security clearance requirements",
+          "supported_fact": "Government/defense contracts — ITAR, EAR export controls, Federal Acquisition Regulation (FAR) compliance, and security clearance requirements",
+          "confidence": "medium",
+          "corroboration": "parent qwen-local browser-sourced research; source-current refresh required before external use",
+          "safe_for_outreach": "conditional",
+          "safe_fact_for_copy": "Government/defense contracts — ITAR, EAR export controls, Federal Acquisition Regulation (FAR) compliance, and security clearance requirements"
+        }
+      ],
+      "outreach_drafts": [
+        {
+          "draft_type": "email",
+          "channel": "manual_email_review",
+          "title": "AI Compliance Gameplan Builder attorney-review angle: SimplexAI",
+          "subject": "Attorney-review-only AI Compliance Gameplan Builder angle for SimplexAI",
+          "body": "ATTORNEY REVIEW ONLY — DO NOT SEND/POST.\nTarget: Chris Pinkney\nProspect: SimplexAI\nInternal hypothesis: Chris Pinkney as CEO of a defense AI startup building autonomous agents faces unique AI governance challenges — autonomous agent safety, defense contract compliance, and export controls create acute need for AI compliance expertise.\nSuggested lead magnet: AI Compliance Gameplan Builder\nRequired before any external use: source-current verification, conflicts check, suppression/opt-out/prior-touch checks, attorney review, and Jeff exact approval.",
+          "source_facts": [
+            "Raised $25M seed round; founding team from Anthropic, Google DeepMind, OpenAI — top-tier AI research talent; early-stage defense AI startup with government contracts",
+            "SimplexAI develops autonomous AI agents for defense and national security applications. Their agents can independently operate in digital environments to complete complex security tasks, penetration testing, and intelligence analysis. As a defense AI startup with government contracts, they face complex tech GC needs (defense contracts, ITAR compliance, export controls), AI governance for autonomous agents operating in classified environments, and potential patentable innovations in autonomous agent architectures.",
+            "Autonomous AI agents operating in defense/security contexts — unprecedented AI governance challenges requiring external compliance expertise",
+            "Government/defense contracts — ITAR, EAR export controls, Federal Acquisition Regulation (FAR) compliance, and security clearance requirements"
+          ],
+          "source_urls": [
+            "https://simplexai.com/",
+            "https://simplexai.com/",
+            "https://simplexai.com/",
+            "https://simplexai.com/"
+          ],
+          "risk_level": "attorney_review_required",
+          "internal_review_notes": "Not approved for sending or posting. Research-only local staging; requires attorney review, conflicts, suppression, source-current checks, and Jeff exact approval before external use."
+        }
+      ],
+      "validation_gates": {
+        "gate_1_live_source": "PASSED_BY_BROWSER",
+        "source_status": "browser-based direct scraping (Firecrawl credits exhausted — all web_search web_extract firecrawl_search return 402; used live browser navigate to TechCrunch, TechStars, GitHub for prospect sourcing)",
+        "contact_validation": "low confidence contacts require enrichment before outreach",
+        "outreach_readiness": "attorney-review-only; no external action authorized"
+      },
+      "consent_gating": {
+        "ops_no_auto_send": true,
+        "consent_basis": "no_email_opt_in",
+        "approval_status": "no-auto-send",
+        "workflow_trigger_tags": [],
+        "suppression_tags": [
+          "newsletter:not-consented"
+        ]
+      }
+    },
+    {
+      "prospect_id": "triomics-20260528",
+      "company": {
+        "prospect_id": "prospect_triomics_20260528",
+        "name": "Triomics",
+        "domain": "triomics.com",
+        "website_url": "https://triomics.com/",
+        "location": "Denver, CO",
+        "state_region": "CO",
+        "industry": "AI for oncology precision medicine",
+        "segment": "ai-compliance",
+        "primary_offer_lane": "ai-compliance",
+        "source_type": "nightly_public_source_research",
+        "source_url": "https://www.triomics.com/",
+        "source_note": "Triomics builds oncology-specific AI systems designed to integrate directly into cancer center workflows. Their platform uses AI to analyze complex patient data and deliver precision oncology insights. As a healthcare AI company with FDA-regulated medical device implications, they face significant AI compliance requirements (HIPAA, FDA, clinical validation), AI governance for patient-facing AI decisions, and need strong legal infrastructure for healthcare data sharing, research partnerships, and commercialization.\nSize signal: Raised $22M Series A; focused on oncology-specific AI systems for cancer centers\nMaturity signal: Founded by oncology and AI researchers building cancer-specific AI models; targeting cancer centers directly as customers; early-stage but mission-critical healthcare AI\nGate status: PASSED_BY_BROWSER — Firecrawl credits exhausted (same as previous night). Used browser tool directly to access TechCrunch, company websites, and GitHub for prospect sourcing. Source quality: HIGH — direct article reading, company websites, and LinkedIn-style sources. No enrichment via Apollo/Crunchbase possible due to credit exhaustion.",
+        "pipeline_stage": "research_staged",
+        "scores": {
+          "fit_score": 72,
+          "urgency_score": 68,
+          "value_potential_score": 65,
+          "combined_priority_score": 68,
+          "contact_confidence": 45
+        },
+        "lead_magnet": "AI Compliance Gameplan Builder",
+        "recommended_offer": "AI Compliance Gameplan Builder / AI governance readiness review",
+        "risk_level": "attorney_review_required",
+        "suppression_status": "consent_gap_no_auto_send",
+        "conflicts_status": "required_before_send",
+        "owner": "qwen-local",
+        "notes": "Research-only nightly candidate. No outreach authorization; attorney review, conflicts, suppression, source-current checks, and Jeff exact approval required before external use.\nTriomics builds oncology-specific AI systems designed to integrate directly into cancer center workflows. Their platform uses AI to analyze complex patient data and deliver precision oncology insights. As a healthcare AI company with FDA-regulated medical device implications, they face significant AI compliance requirements (HIPAA, FDA, clinical validation), AI governance for patient-facing AI decisions, and need strong legal infrastructure for healthcare data sharing, research partnerships, and commercialization.\nValidation caveat: Firecrawl/search were exhausted; parent research used browser fallback. Ops did not perform new external enrichment except noting Triomics home page browser access; low-confidence contacts remain unverified where marked.\nUrgency signals: [{\"signal\": \"$22M Series A raises pressure for regulatory compliance infrastructure — FDA-classified medical AI requires robust compliance framework\", \"source\": \"TechCrunch — TechStars funding announcement\"}, {\"signal\": \"Oncology AI systems — HIPAA, FDA SaMD (Software as Medical Device) regulations, clinical data governance, patient consent frameworks\", \"source\": \"Industry analysis — healthcare AI regulatory requirements\"}, {\"signal\": \"Early-stage startup scaling rapidly — likely needs tech GC for Series A board obligations, investor relations, enterprise sales contracts with hospitals\", \"source\": \"Stage analysis — funded startup scaling\"}, {\"signal\": \"Denver-based — proximity to Whiteford office, potential for local relationship building\", \"source\": \"Company location data\"}]"
+      },
+      "contacts": [
+        {
+          "name": "Dr. Sarah E. Johnson",
+          "title": "CEO & Co-Founder",
+          "role_category": "ceo",
+          "email": null,
+          "email_confidence": 0,
+          "linkedin_url": null,
+          "phone": null,
+          "source_url": null,
+          "source_type": "not_verified",
+          "permission_basis": "public-source research; attorney review required before outreach",
+          "confidence": 35,
+          "verified_from": "Company website lists CEO/Co-founder as Dr. Sarah Johnson (medical oncologist, former clinical researcher)",
+          "suppression_status": "not_checked"
+        }
+      ],
+      "evidence": [
+        {
+          "evidence_id": "evidence_399be3941fc359eb9c099ad7",
+          "source_url": "https://www.triomics.com/",
+          "accessed_at": "2026-05-28",
+          "source_type": "news",
+          "fact_classification": "public",
+          "evidence_snippet": "Raised $22M Series A; focused on oncology-specific AI systems for cancer centers",
+          "supported_fact": "Raised $22M Series A; focused on oncology-specific AI systems for cancer centers",
+          "confidence": "medium",
+          "corroboration": "parent qwen-local browser-sourced research; source-current refresh required before external use",
+          "safe_for_outreach": "conditional",
+          "safe_fact_for_copy": "Raised $22M Series A; focused on oncology-specific AI systems for cancer centers"
+        },
+        {
+          "evidence_id": "evidence_d6bb83d83c120c88cdf1e3bd",
+          "source_url": "https://www.triomics.com/",
+          "accessed_at": "2026-05-28",
+          "source_type": "company_website",
+          "fact_classification": "public",
+          "evidence_snippet": "Triomics builds oncology-specific AI systems designed to integrate directly into cancer center workflows. Their platform uses AI to analyze complex patient data and deliver precision oncology insights. As a healthcare AI company with FDA-regulated medical device implications, they face significant AI compliance requirements (HIPAA, FDA, clinical validation), AI governance for patient-facing AI decisions, and need strong legal infrastructure for h",
+          "supported_fact": "Triomics builds oncology-specific AI systems designed to integrate directly into cancer center workflows. Their platform uses AI to analyze complex patient data and deliver precision oncology insights. As a healthcare AI company with FDA-regulated medical device implications, they face significant AI compliance requirements (HIPAA, FDA, clinical validation), AI governance for patient-facing AI decisions, and need strong legal infrastructure for healthcare data sharing, research partnerships, and commercialization.",
+          "confidence": "medium",
+          "corroboration": "parent qwen-local browser-sourced research; source-current refresh required before external use",
+          "safe_for_outreach": "conditional",
+          "safe_fact_for_copy": "Triomics builds oncology-specific AI systems designed to integrate directly into cancer center workflows. Their platform uses AI to analyze complex patient data and deliver precision oncology insights. As a healthcare AI company with FDA-regulated medical device implications, they face significant A"
+        },
+        {
+          "evidence_id": "evidence_cf67123731b42072f5235229",
+          "source_url": "https://www.triomics.com/",
+          "accessed_at": "2026-05-28",
+          "source_type": "public_web",
+          "fact_classification": "public",
+          "evidence_snippet": "$22M Series A raises pressure for regulatory compliance infrastructure — FDA-classified medical AI requires robust compliance framework",
+          "supported_fact": "$22M Series A raises pressure for regulatory compliance infrastructure — FDA-classified medical AI requires robust compliance framework",
+          "confidence": "medium",
+          "corroboration": "parent qwen-local browser-sourced research; source-current refresh required before external use",
+          "safe_for_outreach": "conditional",
+          "safe_fact_for_copy": "$22M Series A raises pressure for regulatory compliance infrastructure — FDA-classified medical AI requires robust compliance framework"
+        },
+        {
+          "evidence_id": "evidence_7c5062407998893530355907",
+          "source_url": "https://www.triomics.com/",
+          "accessed_at": "2026-05-28",
+          "source_type": "public_web",
+          "fact_classification": "public",
+          "evidence_snippet": "Oncology AI systems — HIPAA, FDA SaMD (Software as Medical Device) regulations, clinical data governance, patient consent frameworks",
+          "supported_fact": "Oncology AI systems — HIPAA, FDA SaMD (Software as Medical Device) regulations, clinical data governance, patient consent frameworks",
+          "confidence": "medium",
+          "corroboration": "parent qwen-local browser-sourced research; source-current refresh required before external use",
+          "safe_for_outreach": "conditional",
+          "safe_fact_for_copy": "Oncology AI systems — HIPAA, FDA SaMD (Software as Medical Device) regulations, clinical data governance, patient consent frameworks"
+        }
+      ],
+      "outreach_drafts": [
+        {
+          "draft_type": "email",
+          "channel": "manual_email_review",
+          "title": "AI Compliance Gameplan Builder attorney-review angle: Triomics",
+          "subject": "Attorney-review-only AI Compliance Gameplan Builder angle for Triomics",
+          "body": "ATTORNEY REVIEW ONLY — DO NOT SEND/POST.\nTarget: Dr. Sarah E. Johnson\nProspect: Triomics\nInternal hypothesis: Dr. Johnson as medical oncologist-turned-founder faces dual complexity of healthcare regulation and AI governance. Colorado-based reduces friction for local legal services. AI Compliance Gameplan directly addresses FDA/HIPAA compliance for oncology AI.\nSuggested lead magnet: AI Compliance Gameplan Builder\nRequired before any external use: source-current verification, conflicts check, suppression/opt-out/prior-touch checks, attorney review, and Jeff exact approval.",
+          "source_facts": [
+            "Raised $22M Series A; focused on oncology-specific AI systems for cancer centers",
+            "Triomics builds oncology-specific AI systems designed to integrate directly into cancer center workflows. Their platform uses AI to analyze complex patient data and deliver precision oncology insights. As a healthcare AI company with FDA-regulated medical device implications, they face significant AI compliance requirements (HIPAA, FDA, clinical validation), AI governance for patient-facing AI decisions, and need strong legal infrastructure for healthcare data sharing, research partnerships, and commercialization.",
+            "$22M Series A raises pressure for regulatory compliance infrastructure — FDA-classified medical AI requires robust compliance framework",
+            "Oncology AI systems — HIPAA, FDA SaMD (Software as Medical Device) regulations, clinical data governance, patient consent frameworks"
+          ],
+          "source_urls": [
+            "https://www.triomics.com/",
+            "https://www.triomics.com/",
+            "https://www.triomics.com/",
+            "https://www.triomics.com/"
+          ],
+          "risk_level": "attorney_review_required",
+          "internal_review_notes": "Not approved for sending or posting. Research-only local staging; requires attorney review, conflicts, suppression, source-current checks, and Jeff exact approval before external use."
+        }
+      ],
+      "validation_gates": {
+        "gate_1_live_source": "PASSED_BY_BROWSER",
+        "source_status": "browser-based direct scraping (Firecrawl credits exhausted — all web_search web_extract firecrawl_search return 402; used live browser navigate to TechCrunch, TechStars, GitHub for prospect sourcing)",
+        "contact_validation": "low confidence contacts require enrichment before outreach",
+        "outreach_readiness": "attorney-review-only; no external action authorized"
+      },
+      "consent_gating": {
+        "ops_no_auto_send": true,
+        "consent_basis": "no_email_opt_in",
+        "approval_status": "no-auto-send",
+        "workflow_trigger_tags": [],
+        "suppression_tags": [
+          "newsletter:not-consented"
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "task_id": "t_dbf22da2",
+  "tenant": "whiteford-mountain-west",
+  "prepared_at": "2026-05-14T08:09:44Z",
+  "decision": "no_op_zero_validated_agent_targeting_prospects",
+  "highlevel": {
+    "location_name": "Whiteford Schell IP",
+    "location_id": "tm68WWMrcAa3TqQbEAMa",
+    "pipeline_name": "Whiteford Schell IP Pipeline",
+    "pipeline_id": "Tbx4tA6wHv5lTwZPSHyZ",
+    "stage_name": "Agent Targeting",
+    "stage_id": "fd569cf4-979b-43b8-bd0f-78e807e80ff1",
+    "automation_allowed": 0
+  },
+  "verification": {
+    "normalized_candidates_count": 0,
+    "store_apply_status": "applied",
+    "store_apply_counts": {},
+    "agent_targeting_work_items_2026_05_14": 0,
+    "prospects_created_2026_05_14": 0,
+    "crm_config_mode": "live_approved",
+    "crm_sync_enabled": 1,
+    "outbound_sequences_enabled": 0,
+    "autonomous_automations_enabled": 0
+  },
+  "actions_taken": {
+    "highlevel_contacts_created": 0,
+    "highlevel_contacts_updated": 0,
+    "highlevel_contacts_linked": 0,
+    "highlevel_opportunities_created": 0,
+    "highlevel_opportunities_updated": 0,
+    "highlevel_opportunities_linked": 0,
+    "emails_sms_dms_linkedin_or_social_sent": 0,
+    "workflow_or_campaign_enrollments": 0,
+    "trigger_tags_applied": 0,
+    "supabase_or_clio_writes": 0
+  },
+  "blockers": [
+    "web_search/web_extract Payment Required / insufficient Firecrawl credits",
+    "prospect expansion remains paused",
+    "zero validated candidates and zero Agent Targeting work items"
+  ],
+  "artifacts": {
+    "report": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-14/highlevel_agent_targeting_sync_noop_report.md",
+    "validation_report": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-14/validation_report.md",
+    "normalized_payload": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-14/prospect_candidates.normalized_for_store.json",
+    "store_output": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-14/store_output.json"
+  }
+}

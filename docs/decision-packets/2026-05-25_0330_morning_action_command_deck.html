@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Private Morning Action Command Deck — Whiteford / Schell IP — 2026-05-25 03:30</title>
+  <style>
+    :root{
+      --ink:#003756;--ink-deep:#121827;--charcoal:#243447;--muted:#596676;--paper:#fffdf8;--bg:#f5f1e8;
+      --line:#d8d0c3;--line-strong:#b8ab99;--gold:#b99057;--blue:#213f77;
+      --safe:#315f4f;--safe-bg:#edf5f0;--hold:#8d332d;--hold-bg:#fff0ed;--warn:#77531b;--warn-bg:#fff7e6;
+      --white:#fff;--shadow:0 30px 100px rgba(0,43,69,.18)
+    }
+    *{box-sizing:border-box}html,body{height:100%}
+    body{margin:0;overflow:hidden;color:var(--ink);background:linear-gradient(90deg,rgba(0,55,86,.045) 1px,transparent 1px),linear-gradient(180deg,rgba(0,55,86,.035) 1px,transparent 1px),var(--bg);background-size:80px 80px;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,Helvetica,sans-serif}
+    button{font:inherit}button:focus-visible,a:focus-visible{outline:4px solid rgba(33,63,119,.42);outline-offset:4px}
+    code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;background:#f0ebe2;border:1px solid rgba(216,208,195,.95);padding:2px 7px;overflow-wrap:anywhere;color:#18314a}
+    .skip{position:absolute;left:18px;top:18px;z-index:30;transform:translateY(-82px);padding:10px 14px;background:var(--ink-deep);color:#fff;border-radius:999px;text-decoration:none}.skip:focus{transform:translateY(0)}
+    .viewport{position:fixed;inset:0;display:grid;place-items:center;padding:24px}.deck{width:1920px;height:1080px;position:relative;transform-origin:center center;background:var(--paper);border:1px solid var(--line-strong);box-shadow:var(--shadow);overflow:hidden}.slide{position:absolute;inset:0;display:none;padding:76px 96px 84px;background:var(--paper);opacity:0;transform:translateX(14px);transition:opacity 150ms ease,transform 150ms ease}.slide.active{display:block;opacity:1;transform:translateX(0)}
+    .slide:before{content:"";position:absolute;inset:0 0 auto 0;height:12px;background:linear-gradient(90deg,var(--ink-deep),var(--ink),var(--gold))}.slide.hold:before,.slide.wall:before{background:linear-gradient(90deg,var(--hold),var(--ink-deep))}.slide.safe:before{background:linear-gradient(90deg,var(--safe),var(--ink))}.slide.warn:before{background:linear-gradient(90deg,var(--warn),var(--ink))}.slide.blue:before{background:linear-gradient(90deg,var(--blue),var(--ink))}
+    .texture{position:absolute;right:-260px;top:-300px;width:760px;height:760px;border-radius:50%;border:1px solid rgba(185,144,87,.25);background:radial-gradient(circle,rgba(185,144,87,.13),rgba(185,144,87,.035) 58%,transparent 60%);pointer-events:none}
+    h1,h2,h3,p{margin:0}h1{font-size:76px;line-height:.99;letter-spacing:-.055em;max-width:1320px;text-wrap:balance}h2{font-size:55px;line-height:1;letter-spacing:-.045em;max-width:1560px;text-wrap:balance}h3{font-size:27px;line-height:1.08;letter-spacing:-.02em}.lead{font-size:30px;line-height:1.34;color:var(--muted);max-width:1270px;margin-top:30px}.eyebrow{font-size:17px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink);font-weight:850;margin-bottom:22px}.footer-note,.source-path{position:absolute;left:96px;right:96px;bottom:38px;color:var(--muted);font-size:18px}.source-path{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:15px;overflow-wrap:anywhere}
+    .hero-grid{display:grid;grid-template-columns:1fr 470px;gap:74px;align-items:end;height:100%}.hero-main{align-self:center}.side-panel{align-self:center;border:1px solid var(--line);background:#fffaf1;padding:34px}.verdict{font-size:25px;line-height:1.28;font-weight:760;color:var(--ink-deep)}.meta-table{margin-top:30px;border-top:1px solid var(--line)}.meta-row{display:flex;justify-content:space-between;gap:20px;border-bottom:1px solid var(--line);padding:15px 0;font-size:18px}.meta-row span{color:var(--muted)}.meta-row strong{text-align:right}.pill-row{display:flex;flex-wrap:wrap;gap:13px;margin-top:34px}.pill,.tag{display:inline-flex;align-items:center;border:1px solid var(--line);border-radius:999px;padding:9px 13px;font-size:15px;font-weight:850;text-transform:uppercase;letter-spacing:.08em}.tag{margin-bottom:18px}.blocked,.tag.blocked{background:var(--hold-bg);border-color:#e0b2aa;color:var(--hold)}.safe,.tag.safe{background:var(--safe-bg);border-color:#b8d0c3;color:var(--safe)}.warn,.tag.warn{background:var(--warn-bg);border-color:#e0c789;color:var(--warn)}.blue-tag{background:#edf2ff;border-color:#cbd7f2;color:var(--blue)}
+    .two-col{display:grid;grid-template-columns:1fr 1fr;gap:30px;margin-top:42px}.three-col{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:42px}.four-col{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:40px}.card,.gate,.decision-box{border:1px solid var(--line);background:var(--white);padding:27px;min-height:282px}.card.blocked,.gate.blocked,.decision-box.blocked{background:var(--hold-bg);border-color:#e3b6af}.card.safe,.gate.safe,.decision-box.safe{background:var(--safe-bg);border-color:#b8d0c3}.card.warn,.gate.warn,.decision-box.warn{background:var(--warn-bg);border-color:#e0c789}.card p,.gate p,.decision-box p,.lane p,.source-item p{font-size:22px;line-height:1.34;color:var(--muted);margin-top:14px}.card ul,.gate ul,.decision-box ul{margin:18px 0 0 22px;padding:0}.card li,.gate li,.decision-box li{font-size:21px;line-height:1.32;color:var(--muted);margin:10px 0}.callout{margin-top:34px;border:1px solid var(--line);background:#fffaf1;padding:23px 28px;font-size:25px;line-height:1.32;color:var(--ink-deep);font-weight:690}.decision-line{margin-top:18px;padding:18px;background:rgba(255,255,255,.66);border:1px dashed rgba(0,55,86,.24);font-size:20px;line-height:1.4;color:var(--charcoal)}
+    .status-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-top:38px}.status-row{display:grid;grid-template-columns:255px 1fr;gap:22px;align-items:start;border:1px solid var(--line);background:#fff;padding:22px 24px}.status-row p{font-size:21px;line-height:1.34;color:var(--muted);margin-top:0}.label{font-size:17px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink);font-weight:850}.decision-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:38px}.decision-grid .decision-box{min-height:360px}.decision-grid.two{grid-template-columns:repeat(2,1fr)}.lane-grid{display:grid;grid-template-rows:repeat(6,1fr);gap:13px;margin-top:30px}.lane{display:grid;grid-template-columns:330px 1fr 295px;gap:22px;align-items:center;border:1px solid var(--line);background:#fff;padding:16px 22px}.lane.safe{background:var(--safe-bg);border-color:#b8d0c3}.lane.warn{background:var(--warn-bg);border-color:#e0c789}.lane.blocked{background:var(--hold-bg);border-color:#e3b6af}.source-list{display:grid;gap:18px;margin-top:34px}.source-item{border:1px solid var(--line);background:#fff;padding:20px 24px}.source-item h3{font-size:24px}.source-item p{font-size:18px;line-height:1.35;color:var(--muted);font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;overflow-wrap:anywhere}.wall-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:40px}.wall-card{border:1px solid #e3b6af;background:var(--hold-bg);padding:32px}.wall-card ul{margin:16px 0 0 22px;padding:0}.wall-card li{font-size:23px;line-height:1.34;margin:11px 0;color:#5b3833}.controls{position:fixed;right:28px;bottom:24px;z-index:20;display:flex;align-items:center;gap:12px;background:rgba(255,253,248,.92);border:1px solid var(--line);box-shadow:0 10px 40px rgba(0,43,69,.12);padding:10px 12px}.controls button{width:44px;height:44px;border:1px solid var(--line-strong);background:#fff;color:var(--ink);font-size:32px;line-height:1;cursor:pointer}.controls button:disabled{opacity:.35;cursor:not-allowed}.slide-count{font-variant-numeric:tabular-nums;font-size:16px;color:var(--muted);min-width:58px;text-align:center}
+    @media (prefers-reduced-motion:reduce){.slide{transition:none}}
+    @media print{body{overflow:visible;background:#fff}.viewport{position:static;display:block;padding:0}.deck{width:auto;height:auto;transform:none!important;border:0;box-shadow:none}.slide{position:relative;display:block!important;opacity:1!important;transform:none!important;page-break-after:always;width:100vw;height:56.25vw;min-height:720px;border:1px solid #ddd}.controls,.skip{display:none!important}h1{font-size:54pt}h2{font-size:38pt}.lead{font-size:18pt}.card p,.gate p,.decision-box p,.lane p,.card li,.gate li,.decision-box li,.wall-card li{font-size:14pt}.lane{grid-template-columns:1fr}.status-grid,.decision-grid,.decision-grid.two,.two-col,.three-col,.four-col,.wall-grid{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <a href="#slide-1" class="skip">Skip to deck</a>
+  <main class="viewport" aria-label="Whiteford/Schell IP private morning action command deck">
+    <section class="deck" id="deck" aria-live="polite">
+      <article class="slide active hold" id="slide-1" data-title="Current posture">
+        <div class="texture"></div>
+        <div class="hero-grid">
+          <div class="hero-main">
+            <div class="eyebrow">Private / local command deck / no live action</div>
+            <h1>HOLD is the default. This morning is for decisions, not execution.</h1>
+            <p class="lead">This deck converts the 2026-05-25 03:30 MDT Growth OS action brief into a sparse internal review surface for Jeff and authorized Whiteford/Schell IP reviewers. It is not external copy, not CRM instruction, not launch approval, and not permission to contact prospects.</p>
+            <div class="pill-row"><span class="pill blocked">Default HOLD</span><span class="pill safe">Private decision prep</span><span class="pill blocked">No execute controls</span></div>
+          </div>
+          <aside class="side-panel">
+            <p class="verdict">Two internal assets are ready for review; two system gates remain blocked; one prospect lane remains HOLD; every outward/live action still requires a separate exact approval.</p>
+            <div class="meta-table"><div class="meta-row"><span>Task</span><strong>t_c909a4b2</strong></div><div class="meta-row"><span>Source brief</span><strong>t_32da79e3</strong></div><div class="meta-row"><span>Date</span><strong>2026-05-25 03:30 MDT</strong></div><div class="meta-row"><span>Status</span><strong>Private / internal only</strong></div></div>
+          </aside>
+        </div>
+      </article>
+
+      <article class="slide warn" id="slide-2" data-title="Overnight status">
+        <div class="eyebrow">Overnight status</div><h2>Useful review assets exist. No safe live-action lane appeared.</h2>
+        <div class="status-grid">
+          <div class="status-row"><div class="label">Weekly YouTube</div><p>Script packets, SEO support, legal/ethics/SEO review, and QMD refresh are complete for internal/manual attorney-review production planning only.</p></div>
+          <div class="status-row"><div class="label">Nightly Qwen</div><p>Rhoda AI, Machina Labs, and Mind Robotics were identified/staged locally. All stay attorney-review-only with <code>external_action_allowed=0</code> and no live sync.</p></div>
+          <div class="status-row"><div class="label">Machina Labs</div><p>Agent Targeting packet passed review with constraints and is ready for private attorney review only. It does not authorize external copy, named-recipient targeting, or CRM work.</p></div>
+          <div class="status-row"><div class="label">Mind Robotics</div><p>Still HOLD pending Rivian/Mind Robotics conflict review and domain canonicalization before any progression, source-current work for external use, or named-recipient drafting.</p></div>
+        </div>
+        <div class="callout">Business-development discipline applied: solve one narrow diagnostic problem, earn trust through useful private review assets, and keep legal follow-up opt-in-only, educational, attorney-review-gated, and no-hype.</div>
+      </article>
+
+      <article class="slide hold" id="slide-3" data-title="Blocker gates">
+        <div class="eyebrow">Blocker gates</div><h2>The operating blockers are human/admin gates. Do not route around them.</h2>
+        <div class="two-col">
+          <div class="card blocked"><span class="tag blocked">Blocker 1</span><h3>Supabase expanded Growth OS mirror schema</h3><p>Read-only watchdog check: core <code>prospects</code> returns 200. Expanded tables <code>source_evidence</code>, <code>suppression_checks</code>, <code>outreach_drafts</code>, <code>crm_sync_batches</code>, and <code>content_topics</code> still return 404/PGRST205.</p><ul><li>Prepared SQL exists.</li><li>No local DDL path exists.</li><li>Mirror/backfill children stay dependency-gated.</li></ul></div>
+          <div class="card blocked"><span class="tag blocked">Blocker 2</span><h3>HighLevel Agent Targeting token/location repair</h3><p>Harmless read-only <code>/workflows?locationId=tm68WWMrcAa3TqQbEAMa</code> probe returns HTTP 403 Cloudflare/LeadConnector Error 1010 with configured secret.</p><ul><li>Human/operator access repair only.</li><li>First post-repair action is read-only probe/dry-run.</li><li>No contacts, opportunities, tags, workflows, sends, or enrollments.</li></ul></div>
+        </div>
+      </article>
+
+      <article class="slide safe" id="slide-4" data-title="Ready review assets">
+        <div class="eyebrow">Ready review assets</div><h2>Use these as internal evidence and decision prep, not execution surfaces.</h2>
+        <div class="four-col">
+          <div class="gate safe"><span class="tag safe">Review-ready</span><h3>Weekly YouTube chain</h3><p>Three internal recording packets plus SEO support and review are available for manual attorney-review production planning.</p></div>
+          <div class="gate safe"><span class="tag safe">Packet-ready</span><h3>Machina Labs packet</h3><p>Private internal attorney-review packet is ready to evaluate whether the AI Patent Strategy Scorecard / invention-file diagnostic is the right next-step framing.</p></div>
+          <div class="gate warn"><span class="tag warn">Staged only</span><h3>Nightly prospects</h3><p>Rhoda AI and Machina Labs are locally staged; Mind Robotics remains HOLD; all live-system and outreach lanes are closed.</p></div>
+          <div class="gate safe"><span class="tag safe">Memory support</span><h3>QMD refreshes</h3><p>QMD helps locate indexed artifacts, but direct Markdown files and Kanban handoffs remain controlling.</p></div>
+        </div>
+      </article>
+
+      <article class="slide warn" id="slide-5" data-title="Decision boxes 1-3">
+        <div class="eyebrow">Exact decision boxes / review and system gates</div><h2>Choose only the narrow internal meaning of each box.</h2>
+        <div class="decision-grid">
+          <div class="decision-box safe"><span class="tag safe">Decision 1</span><h3>Weekly YouTube authority chain</h3><p>Options: GO / HOLD / REVISE / AUTHORIZE READ-ONLY SOURCE-CURRENT CHECK ONLY.</p><div class="decision-line">GO means internal/manual attorney-review production planning only. Source-current authorization means a private read-only check before exact-copy approval. No recording release, upload, page mutation, schema, email, social, or client-facing use.</div></div>
+          <div class="decision-box safe"><span class="tag safe">Decision 2</span><h3>Machina Labs Agent Targeting packet</h3><p>Options: GO / HOLD / REVISE / AUTHORIZE READ-ONLY SOURCE-CURRENT CHECK ONLY.</p><div class="decision-line">GO means private/internal attorney-review prep only. Source-current authorization means separate contact-path/source-quality verification with no LinkedIn-only targeting and no implied aerospace/defense, government, investor, customer, or relationship claims.</div></div>
+          <div class="decision-box blocked"><span class="tag blocked">Decision 3</span><h3>Supabase expanded schema</h3><p>Options: GO / HOLD / REVISE / AUTHORIZE READ-ONLY SOURCE-CURRENT CHECK ONLY.</p><div class="decision-line">GO means a human/admin may apply the prepared SQL through a DDL-capable approved path. Agent DDL, row mutation, sync, backfill, dashboard claims, CRM mutation, or outreach remain not approved.</div></div>
+        </div>
+      </article>
+
+      <article class="slide warn" id="slide-6" data-title="Decision boxes 4-6">
+        <div class="eyebrow">Exact decision boxes / access, hold, source-current</div><h2>Repair evidence quality before asking content to carry risk.</h2>
+        <div class="decision-grid">
+          <div class="decision-box blocked"><span class="tag blocked">Decision 4</span><h3>HighLevel token/location repair</h3><p>Options: GO / HOLD / REVISE / AUTHORIZE READ-ONLY SOURCE-CURRENT CHECK ONLY.</p><div class="decision-line">GO means token/location/API repair only. Read-only verification after repair must stop on 401, 403, Error 1010, wrong location, missing scope, missing field/user, or mismatch. No mutation or workflow testing.</div></div>
+          <div class="decision-box blocked"><span class="tag blocked">Decision 5</span><h3>Mind Robotics HOLD</h3><p>Default option: HOLD.</p><div class="decision-line">Any GO should be interpreted only as internal legal/conflicts review scoping. Conflict review, domain canonicalization, source-current evidence, suppression, and exact approval are required before any progression or external/live-system use.</div></div>
+          <div class="decision-box warn"><span class="tag warn">Decision 6</span><h3>Follow-up source-current lane</h3><p>Pick at most one narrow diagnostic question.</p><div class="decision-line">Authorized output should be a private memo: question, sources checked, pass/fail/caveat table, internal-review-only statement, and exact next approval gate. No mutation, sends, posts, enrollments, or prospect contact.</div></div>
+        </div>
+      </article>
+
+      <article class="slide blue" id="slide-7" data-title="30-minute sequence">
+        <div class="eyebrow">30-minute sequence</div><h2>Keep the meeting bounded. Pick review gates, then stop.</h2>
+        <div class="lane-grid">
+          <div class="lane safe"><div class="label">0:00–0:03</div><p>Confirm the default posture: internal review only; no live actions.</p><div class="tag blocked">No execution</div></div>
+          <div class="lane safe"><div class="label">0:03–0:09</div><p>Open weekly YouTube review and choose GO/HOLD/REVISE/source-current-only.</p><div class="tag safe">Planning only</div></div>
+          <div class="lane safe"><div class="label">0:09–0:15</div><p>Open Machina Labs review and choose private-attorney-review or source-current-only posture.</p><div class="tag safe">Packet review</div></div>
+          <div class="lane warn"><div class="label">0:15–0:20</div><p>Decide whether Supabase gets human/admin schema attention today.</p><div class="tag warn">Admin gate</div></div>
+          <div class="lane warn"><div class="label">0:20–0:25</div><p>Decide whether HighLevel access repair gets operator attention today.</p><div class="tag warn">Access gate</div></div>
+          <div class="lane blocked"><div class="label">0:25–0:30</div><p>Confirm Mind Robotics HOLD and choose at most one follow-up source-current lane, or stop.</p><div class="tag blocked">HOLD default</div></div>
+        </div>
+      </article>
+
+      <article class="slide wall" id="slide-8" data-title="No-live-action boundary">
+        <div class="eyebrow">No-live-action boundary</div><h2>If it leaves private review or changes a live system, stop.</h2>
+        <div class="wall-grid"><div class="wall-card"><h3>No outward motion</h3><ul><li>No email, SMS, DMs, LinkedIn/social posts, comments, tags, ads, newsletters, YouTube release, public route/page deployment, client/prospect-facing use, or source/prospect expansion.</li><li>No claim that attorney, ethics, privacy, conflicts, suppression, source-current, brand, accessibility, deliverability, technical SEO, or Jeff approval has been granted.</li><li>No confidential, privileged, invention, patent strategy, customer, defense program, government-contract, trade-secret, or legal-question facts should be requested through any first-touch asset.</li></ul></div><div class="wall-card"><h3>No live-system mutation</h3><ul><li>No HighLevel contact, opportunity, tag, field, owner, campaign, sequence, workflow, enrollment, notification, or pipeline-stage change.</li><li>No Supabase DDL, row mutation, mirror sync, backfill, Clio write, CRM mutation, booking, analytics mutation, marketing automation, or workflow testing.</li><li>No forms, external network calls, execute controls, public assets, or hidden delivery mechanisms are embedded here.</li></ul></div></div>
+        <div class="callout">This HTML is self-contained. The only interactive controls are local slide navigation and keyboard movement.</div>
+      </article>
+
+      <article class="slide" id="slide-9" data-title="Source anchors">
+        <div class="eyebrow">Source anchors</div><h2>The action brief and direct files remain controlling. This deck is only a visual decision aid.</h2>
+        <div class="source-list">
+          <div class="source-item"><h3>Controlling action brief</h3><p>/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/decision-packets/2026-05-25_0330_morning_growth_os_action_brief.md</p></div>
+          <div class="source-item"><h3>Deck implementation note</h3><p>/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/decision-packets/2026-05-25_0330_morning_action_command_deck_note.md</p></div>
+          <div class="source-item"><h3>HighLevel location</h3><p>Whiteford Schell IP / location ID tm68WWMrcAa3TqQbEAMa / read-only workflow probe currently blocked by HTTP 403 Cloudflare / LeadConnector Error 1010.</p></div>
+          <div class="source-item"><h3>Bottom line</h3><p>Jeff can safely make internal review and repair-gate decisions. Public, CRM, workflow, Supabase, Clio, send, social, ad, source/prospect expansion, and client-facing actions stay on HOLD.</p></div>
+        </div>
+        <div class="source-path">Deck: /Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/decision-packets/2026-05-25_0330_morning_action_command_deck.html</div>
+      </article>
+    </section>
+  </main>
+  <nav class="controls" aria-label="Slide navigation"><button type="button" id="prev" aria-label="Previous slide">‹</button><div class="slide-count" id="count">1 / 9</div><button type="button" id="next" aria-label="Next slide">›</button></nav>
+  <script>
+    (()=>{const slides=Array.from(document.querySelectorAll('.slide'));const deck=document.getElementById('deck');const count=document.getElementById('count');const prev=document.getElementById('prev');const next=document.getElementById('next');const storageKey='wf_2026_05_25_0330_morning_action_command_deck_slide';let index=0;function scaleDeck(){const margin=48;const sx=(window.innerWidth-margin)/1920;const sy=(window.innerHeight-margin)/1080;deck.style.transform=`scale(${Math.min(sx,sy,1)})`}function show(nextIndex){index=Math.min(Math.max(nextIndex,0),slides.length-1);slides.forEach((slide,i)=>{slide.classList.toggle('active',i===index);slide.setAttribute('aria-hidden',i===index?'false':'true')});count.textContent=`${index+1} / ${slides.length}`;prev.disabled=index===0;next.disabled=index===slides.length-1;try{localStorage.setItem(storageKey,String(index))}catch(error){}if(location.hash!==`#slide-${index+1}`)history.replaceState(null,'',`#slide-${index+1}`)}prev.addEventListener('click',()=>show(index-1));next.addEventListener('click',()=>show(index+1));window.addEventListener('resize',scaleDeck);window.addEventListener('keydown',event=>{if(event.target&&['INPUT','TEXTAREA','SELECT'].includes(event.target.tagName))return;if(event.key==='ArrowRight'||event.key==='PageDown'||event.key===' ')show(index+1);if(event.key==='ArrowLeft'||event.key==='PageUp')show(index-1);if(event.key==='Home')show(0);if(event.key==='End')show(slides.length-1)});const hashMatch=location.hash.match(/^#slide-(\d+)$/);if(hashMatch){index=Number(hashMatch[1])-1}else{try{const saved=localStorage.getItem(storageKey);if(saved!==null)index=Number(saved)}catch(error){}}scaleDeck();show(index)})();
+  </script>
+</body>
+</html>

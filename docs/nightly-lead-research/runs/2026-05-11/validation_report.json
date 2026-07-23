@@ -1,0 +1,63 @@
+{
+  "database": "/Users/jeff/.openclaw/projects/mountain-west-growth-os/data/growth-os.sqlite",
+  "dry_run_path": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-11/store_dry_run.json",
+  "normalized_payload": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-11/prospect_candidates.normalized_for_store.json",
+  "run_label": "2026-05-11",
+  "safety_status": "local SQLite staging and local work item only; no HighLevel, Supabase DDL/mirror, Apollo, Clio, email, LinkedIn/social, workflow, public publishing, ads, or client-facing action performed",
+  "schema_validation": "passed via prospect_research_store.py --dry-run after watchdog-used normalized payload; original ops worker applied local SQLite staging before protocol violation",
+  "semantic_validation_warnings": [
+    {
+      "company": "Kore.ai",
+      "issue": "Firecrawl/web_extract credits were exhausted; evidence is curl/title/meta limited. Treat source facts as low-use/verification-required before any external copy.",
+      "severity": "high"
+    },
+    {
+      "company": "Kore.ai",
+      "issue": "Named contact confidence is 20 and LinkedIn URL is unverified; do not use named-contact outreach until official/high-confidence verification plus conflicts/suppression checks are complete.",
+      "severity": "high"
+    },
+    {
+      "company": "Kore.ai",
+      "issue": "Enterprise-scale, Bay Area/India footprint is outside default Colorado/Mountain West mid-market priority. Keep as low-priority Agent Targeting/watchlist unless Jeff approves national enterprise targeting.",
+      "severity": "medium"
+    },
+    {
+      "company": "Kore.ai",
+      "issue": "No outreach drafts, approval items, or suppression checks were created; external_action_allowed remains 0 and all CRM/social/email/workflow/public actions are blocked.",
+      "severity": "high"
+    }
+  ],
+  "staged_summary": [
+    {
+      "company": "Kore.ai",
+      "contacts": 1,
+      "domain": "kore.ai",
+      "drafts": 0,
+      "evidence": 2,
+      "lane": "tech-gc",
+      "pending_sync_records": 1,
+      "priority": 58,
+      "prospect_id": "prospect_ae4ea495016fb286698d44da",
+      "work_item_id": "work_nightly_agent_targeting_d9e8526442f6ac499abd",
+      "work_item_inserted": true
+    }
+  ],
+  "store_counts": {
+    "approval_items": 0,
+    "contacts": 1,
+    "crm_sync_records": 1,
+    "opportunities": 1,
+    "outreach_drafts": 0,
+    "prospects": 1,
+    "source_evidence": 2,
+    "suppression_checks": 0
+  },
+  "store_output_path": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-11/store_output.json",
+  "validated_at": "2026-05-11T10:53:18+00:00",
+  "work_items_inserted": [
+    "work_nightly_agent_targeting_d9e8526442f6ac499abd"
+  ],
+  "work_items_verified": [
+    "work_nightly_agent_targeting_d9e8526442f6ac499abd"
+  ]
+}

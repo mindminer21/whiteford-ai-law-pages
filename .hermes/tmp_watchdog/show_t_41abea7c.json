@@ -1,0 +1,72 @@
+{
+  "task": {
+    "id": "t_41abea7c",
+    "title": "Prepare Box A Tech GC local/no-token QA execution packet - 2026-05-10",
+    "body": "Use the passed Sunday decision packet and review deck to turn Box A into a one-page operator-ready execution packet for Jeff's later manual approval decision.\n\nSource anchors:\n- /Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/digests/2026-05-10_sunday_morning_decision_packet.md\n- /Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/digests/2026-05-10_sunday_decision_packet_review_deck.html\n- /Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/controlled-pilot/tech_gc_local_no_token_qa_harness_plan_2026-05-09.md\n- /Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/controlled-pilot/tech_gc_controlled_pilot_morning_approval_checklist_2026-05-09.md\n\nDeliverable expected:\n- /Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/controlled-pilot/tech_gc_box_a_local_no_token_qa_execution_packet_2026-05-10.md\n\nThe packet should include: exact scope, prerequisites, synthetic-only payload rules, evidence folder naming, pass/fail stop conditions, copy/paste approval/hold text, and a clear statement that this does not run QA or authorize live systems by itself.\n\n\nGuardrails for this task:\n- Internal/draft/local documentation or local prototype work only.\n- Do not send emails/SMS/DMs, enroll contacts, activate/test/start workflows, publish pages, post or tag/comment/message on LinkedIn/social, launch ads, write to Clio, or make public/client-facing changes.\n- Do not run Supabase DDL, gated backfill/sync, or mirror sync; keep t_fa6eb9c1/t_53d470c6 as human-only blockers.\n- Do not mutate live HighLevel/CRM/Supabase records. If any credential, approval, browser login, or live-system action is required, block with exact manual unblock steps instead of proceeding.\n- Update docs/KANBAN_DELIVERABLE_INDEX.md and leave the standard Deliverable/Summary/Next action Kanban comment when complete.",
+    "assignee": "pm",
+    "status": "running",
+    "priority": 82,
+    "tenant": "whiteford-mountain-west",
+    "workspace_kind": "dir",
+    "workspace_path": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages",
+    "created_by": "overnight-watchdog",
+    "created_at": 1778395149,
+    "started_at": 1778395169,
+    "completed_at": null,
+    "result": null,
+    "skills": []
+  },
+  "latest_summary": null,
+  "parents": [],
+  "children": [
+    "t_5f6eb002"
+  ],
+  "comments": [],
+  "events": [
+    {
+      "kind": "created",
+      "payload": {
+        "assignee": "pm",
+        "status": "ready",
+        "parents": [],
+        "tenant": "whiteford-mountain-west",
+        "skills": null
+      },
+      "created_at": 1778395149,
+      "run_id": null
+    },
+    {
+      "kind": "claimed",
+      "payload": {
+        "lock": "Jeffs-MacBook-Pro-2.local:40522",
+        "expires": 1778396069,
+        "run_id": 401
+      },
+      "created_at": 1778395169,
+      "run_id": 401
+    },
+    {
+      "kind": "spawned",
+      "payload": {
+        "pid": 40523
+      },
+      "created_at": 1778395169,
+      "run_id": 401
+    }
+  ],
+  "runs": [
+    {
+      "id": 401,
+      "profile": "pm",
+      "step_key": null,
+      "status": "running",
+      "outcome": null,
+      "summary": null,
+      "error": null,
+      "metadata": null,
+      "worker_pid": 40523,
+      "started_at": 1778395169,
+      "ended_at": null
+    }
+  ]
+}

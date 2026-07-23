@@ -1,0 +1,139 @@
+{
+  "prospect_id": "layup-parts-20260603",
+  "company": {
+    "prospect_id": "prospect_layup_parts_20260603",
+    "name": "Layup Parts",
+    "domain": "layupparts.com",
+    "website_url": "https://layupparts.com",
+    "company_linkedin_url": null,
+    "location": "Huntington Beach, CA",
+    "state_region": null,
+    "industry": "Composites Manufacturing Platform (Defense/Dual-Use)",
+    "segment": "ai-patent",
+    "primary_offer_lane": "ai-patent",
+    "source_type": "nightly_public_source_research",
+    "source_url": "https://techcrunch.com/2026/06/02/ex-anduril-engineer-raises-42m-to-build-the-amazon-of-composite-parts/",
+    "source_note": "Platform to make ordering custom carbon fiber/fiberglass parts as easy as Amazon. Founded by ex-Anduril engineer Zack Eakin (formerly Chip Ganassi Racing, Boring Company). Uses software to reduce composite part production from manual to zero-click workflow: customer data in, shapes out. Backed by Founders Fund, Lux Capital, Marlinspike.\nAI-driven manufacturing software; reducing composite part production workflow through software automation; ex-Anduril defense background with dual-use applications\nUrgency signals: Series A $42M funding (past 6 months) — +15; Major product launch / category creation (Amazon of composites) — +15; Hiring to move into bigger facility — +10 (judgment, less clear signal); Backed by Founders Fund (Palin) and Marlinspike (defense AI) — +15; Ex-Anduril + Palmer Luckey involvement — +15; Moving from seed to growth stage (inventor documentation likely not formalized) — +5 (judgment)\nGate status: BROWSER_FALLBACK_RESUMED from parent qwen-local research; ops staging did not perform live enrichment or external source refresh.",
+    "pipeline_stage": "research_staged",
+    "scores": {
+      "fit_score": 88,
+      "urgency_score": 70,
+      "value_potential_score": 60,
+      "combined_priority_score": 74
+    },
+    "lead_magnet": "AI Patent Strategy Scorecard",
+    "recommended_offer": "AI IP Protection & Patent Strategy",
+    "risk_level": "attorney_review_required",
+    "suppression_status": "consent_gap_no_auto_send",
+    "conflicts_status": "required_before_send",
+    "owner": "qwen-local",
+    "notes": "Research-only nightly candidate. No outreach authorization; attorney review, conflicts, suppression, source-current checks, contact validation, and Jeff exact approval required before external use.\nOutreach readiness: research_only; consent basis: no_email_opt_in; approval status: no-auto-send.\nNamed contacts staged for attorney-review-only internal research: Zack Eakin (Founder and CEO)\nKey facts: Series A $42M; HQ Huntington Beach, CA; 60 employees; Zack Eakin as founder/CEO; background from Anduril, Boring Company, Chip Ganassi Racing; carbon fiber/fiberglass custom parts platform; Founders Fund and Lux Capital backers; Company website accessible — domain verification\nNext action: Strong AI-patent fit (88 combined priority 74). Defense/dual-use angle adds IP sensitivity. Single verified contact (Eakin). LinkedIn URL needs validation. California-based — no Mtn.West claim.\nRemediation before outreach: Gate 4: LinkedIn URL for Eakin requires independent validation; Gate 5: Personal LinkedIn not confirmed from official company source yet; Gate 6: No Mountain West claim needed — California national scope\nMountain West relevance: none claimed — national/international prospect scope only.\nValidation caveat: parent research used browser fallback after Firecrawl/search/extract quota failures; source-current checks remain required before external use."
+  },
+  "contacts": [
+    {
+      "contact_id": "contact_027a9143bfd2cf49340cec8a",
+      "name": "Zack Eakin",
+      "title": "Founder and CEO",
+      "role_category": "founder",
+      "email": null,
+      "linkedin_url": null,
+      "phone": null,
+      "source_type": "public_source_or_client_input",
+      "source_url": "https://techcrunch.com/2026/06/02/ex-anduril-engineer-raises-42m-to-build-the-amazon-of-composite-parts/",
+      "confidence": 85,
+      "permission_basis": "public-source research; attorney review required before outreach; no email opt-in; no auto-send",
+      "suppression_status": "consent_gap_no_auto_send",
+      "notes": "Named CEO in TechCrunch article; previous roles: Chip Ganassi Racing (carbon fiber), Boring Company (first engineer, 2017), Anduril (engineer, 2021). ~20 years composite experience. LinkedIn URL requires validation.\nUnverified LinkedIn candidate held out of contact.linkedin_url: https://www.linkedin.com/in/zack-eakin-engineer/"
+    }
+  ],
+  "evidence": [
+    {
+      "evidence_id": "evidence_847bd990c850d3cb6038588a",
+      "source_url": "https://techcrunch.com/2026/06/02/ex-anduril-engineer-raises-42m-to-build-the-amazon-of-composite-parts/",
+      "accessed_at": "2026-06-03",
+      "source_type": "techcrunch_article",
+      "fact_classification": "public",
+      "evidence_snippet": "Series A $42M; HQ Huntington Beach, CA; 60 employees; Zack Eakin as founder/CEO; background from Anduril, Boring Company, Chip Ganassi Racing; carbon fiber/fiberglass custom parts platform; Founders Fund and Lux Capital backers",
+      "supported_fact": "Series A $42M; HQ Huntington Beach, CA; 60 employees; Zack Eakin as founder/CEO; background from Anduril, Boring Company, Chip Ganassi Racing; carbon fiber/fiberglass custom parts platform; Founders Fund and Lux Capital backers",
+      "confidence": "medium_high",
+      "corroboration": "parent qwen-local browser-fallback research; source-current refresh required before external use",
+      "safe_for_outreach": "conditional",
+      "safe_fact_for_copy": "Series A $42M; HQ Huntington Beach, CA; 60 employees; Zack Eakin as founder/CEO; background from Anduril, Boring Company, Chip Ganassi Racing; carbon fiber/fiberglass custom parts platform; Founders Fund and Lux Capital backers"
+    },
+    {
+      "evidence_id": "evidence_4f37030d18f86c90e4c612e3",
+      "source_url": "https://layupparts.com",
+      "accessed_at": "2026-06-03",
+      "source_type": "first-party_website",
+      "fact_classification": "public",
+      "evidence_snippet": "Company website accessible — domain verification",
+      "supported_fact": "Company website accessible — domain verification",
+      "confidence": "medium_high",
+      "corroboration": "parent qwen-local browser-fallback research; source-current refresh required before external use",
+      "safe_for_outreach": "conditional",
+      "safe_fact_for_copy": "Company website accessible — domain verification"
+    }
+  ],
+  "outreach_drafts": [
+    {
+      "draft_type": "educational",
+      "channel": "manual_email_review",
+      "title": "AI Patent Strategy Scorecard attorney-review angle: Layup Parts",
+      "subject": "Attorney-review-only AI Patent Strategy Scorecard angle for Layup Parts",
+      "body": "ATTORNEY REVIEW ONLY — DO NOT SEND/POST.\nTarget: Zack Eakin (Founder and CEO)\nProspect: Layup Parts\nInternal hypothesis: Layup Parts is building a zero-click, software-driven composite parts ordering platform — a novel AI-assisted manufacturing workflow with clear invention potential. As a ~2-year-old startup scaling from seed, the founder likely has technical invention documentation but may not have formalized patent strategy before the rapid Series A validation accelerates competitor responses.\nSuggested lead magnet: AI Patent Strategy Scorecard\nUpstream draft marker retained for review context only; no final copy approved:\n[CANDIDATE — FOR JEFF REVIEW]\nRequired before any external use: source-current verification, named contact/LinkedIn validation, conflicts check, suppression/opt-out/prior-touch checks, attorney review, and Jeff exact approval.",
+      "source_facts": [
+        "Series A $42M; HQ Huntington Beach, CA; 60 employees; Zack Eakin as founder/CEO; background from Anduril, Boring Company, Chip Ganassi Racing; carbon fiber/fiberglass custom parts platform; Founders Fund and Lux Capital backers",
+        "Company website accessible — domain verification"
+      ],
+      "source_urls": [
+        "https://techcrunch.com/2026/06/02/ex-anduril-engineer-raises-42m-to-build-the-amazon-of-composite-parts/",
+        "https://layupparts.com"
+      ],
+      "risk_level": "attorney_review_required",
+      "internal_review_notes": "Not approved for sending or posting. Research-only local staging; requires attorney review, conflicts, suppression, source-current checks, contact validation, and Jeff exact approval before external use."
+    }
+  ],
+  "validation_gates": {
+    "gate_1_live_source": "PARENT_BROWSER_FALLBACK_PAYLOAD_ONLY",
+    "source_status": "curl RSS + browser article extraction from parent qwen-local research; Firecrawl credits exhausted",
+    "contact_validation": "passed for named contacts only; Cyera company-level only",
+    "linkedin_validation": "pending; no verified personal LinkedIn promoted to contact field",
+    "outreach_readiness": "attorney-review-only research_only; no external action authorized"
+  },
+  "consent_gating": {
+    "ops_no_auto_send": true,
+    "consent_basis": "no_email_opt_in",
+    "approval_status": "no-auto-send",
+    "workflow_trigger_tags": [],
+    "suppression_tags": [
+      "newsletter:not-consented"
+    ]
+  },
+  "source_candidate_path": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-06-03/prospect_candidates.json",
+  "normalized_store_path": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-06-03/prospect_candidates.normalized_for_store.json",
+  "source_packet_prospect_id": "layup-parts-20260603",
+  "local_growth_os_prospect_id": "prospect_layup_parts_20260603",
+  "task": "prepare_internal_attorney_review_agent_targeting_packet",
+  "guardrails": {
+    "external_action_allowed": false,
+    "approval_required": true,
+    "no_outreach_no_workflows_no_social_no_clio_no_live_sync": true,
+    "required_before_external_use": [
+      "Jeff exact approval",
+      "attorney review",
+      "conflicts check",
+      "suppression/opt-out/prior-touch check",
+      "source-current verification",
+      "named decision-maker/contact and LinkedIn validation"
+    ]
+  },
+  "work_item_id": "work_nightly_agent_targeting_20260603_0101db1a4c5d51474f7cb473",
+  "input_path": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-06-03/agent-targeting-work-items/layup-parts.json",
+  "output_path": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-06-03/agent-targeting-packets/layup-parts-agent-targeting-packet.md",
+  "remediation_checklist": [
+    "Attorney review required before external use.",
+    "Named decision-maker/contact and LinkedIn validation required before any outreach.",
+    "Conflicts, suppression/opt-out, prior-touch, and source-current checks required before any outreach.",
+    "Do not send, post, tag, trigger workflows, sync live CRM/Supabase, or write Clio without Jeff exact approval."
+  ]
+}

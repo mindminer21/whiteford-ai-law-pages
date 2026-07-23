@@ -1,0 +1,101 @@
+{
+  "verified_at": "2026-05-27T05:03:17+00:00",
+  "db": "/Users/jeff/.openclaw/projects/mountain-west-growth-os/data/growth-os.sqlite",
+  "normalized_payload": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-26/prospect_candidates.normalized_for_store.json",
+  "work_items_created_or_replaced": [
+    {
+      "work_item_id": "work_nightly_agent_targeting_20260526_f37357719e62c69522cb8334",
+      "company": "Physical Intelligence (π)",
+      "priority": 82,
+      "input_path": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-26/agent-targeting-work-items/physical-intelligence-pi.json",
+      "local_growth_os_prospect_id": "prospect_physical_intelligence_20260526"
+    },
+    {
+      "work_item_id": "work_nightly_agent_targeting_20260526_6a9f8cd813efea9a0f556725",
+      "company": "XBOW",
+      "priority": 78,
+      "input_path": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-26/agent-targeting-work-items/xbow.json",
+      "local_growth_os_prospect_id": "prospect_xbow_20260526"
+    },
+    {
+      "work_item_id": "work_nightly_agent_targeting_20260526_1158240c96050fec237f9e78",
+      "company": "Patlytics",
+      "priority": 74,
+      "input_path": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-26/agent-targeting-work-items/patlytics.json",
+      "local_growth_os_prospect_id": "prospect_patlytics_20260526"
+    }
+  ],
+  "staged_prospects": [
+    {
+      "prospect_id": "prospect_physical_intelligence_20260526",
+      "company_name": "Physical Intelligence (π)",
+      "domain": "pi.website",
+      "segment": "ai-patent",
+      "pipeline_stage": "research_staged",
+      "suppression_status": "consent_gap_no_auto_send",
+      "conflicts_status": "required_before_send"
+    },
+    {
+      "prospect_id": "prospect_xbow_20260526",
+      "company_name": "XBOW",
+      "domain": "xbow.com",
+      "segment": "tech-gc",
+      "pipeline_stage": "research_staged",
+      "suppression_status": "consent_gap_no_auto_send",
+      "conflicts_status": "required_before_send"
+    },
+    {
+      "prospect_id": "prospect_patlytics_20260526",
+      "company_name": "Patlytics",
+      "domain": "patlytics.ai",
+      "segment": "ai-patent",
+      "pipeline_stage": "research_staged",
+      "suppression_status": "consent_gap_no_auto_send",
+      "conflicts_status": "required_before_send"
+    }
+  ],
+  "table_counts_after": {
+    "prospects": 49,
+    "contacts": 44,
+    "opportunities": 60,
+    "source_evidence": 86,
+    "outreach_drafts": 31,
+    "approval_items": 63,
+    "crm_sync_records": 42,
+    "suppression_checks": 31,
+    "work_items": 26
+  },
+  "work_items_20260526": [
+    {
+      "work_item_id": "work_nightly_agent_targeting_20260526_f37357719e62c69522cb8334",
+      "title": "Prepare attorney-review Agent Targeting packet: Physical Intelligence (π)",
+      "stage": "queued",
+      "priority": 82,
+      "input_path": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-26/agent-targeting-work-items/physical-intelligence-pi.json",
+      "external_action_allowed": 0,
+      "approval_required": 1,
+      "blocker": "External actions blocked: no outreach, email/SMS, workflow activation/enrollment, trigger tags, LinkedIn/social action, Clio writes, public/client-facing changes, or live CRM/Supabase sync without Jeff exact approval; attorney review, conflicts, suppression, source-current verification, and opt-out checks required before external use."
+    },
+    {
+      "work_item_id": "work_nightly_agent_targeting_20260526_6a9f8cd813efea9a0f556725",
+      "title": "Prepare attorney-review Agent Targeting packet: XBOW",
+      "stage": "queued",
+      "priority": 78,
+      "input_path": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-26/agent-targeting-work-items/xbow.json",
+      "external_action_allowed": 0,
+      "approval_required": 1,
+      "blocker": "External actions blocked: no outreach, email/SMS, workflow activation/enrollment, trigger tags, LinkedIn/social action, Clio writes, public/client-facing changes, or live CRM/Supabase sync without Jeff exact approval; attorney review, conflicts, suppression, source-current verification, and opt-out checks required before external use."
+    },
+    {
+      "work_item_id": "work_nightly_agent_targeting_20260526_1158240c96050fec237f9e78",
+      "title": "Prepare attorney-review Agent Targeting packet: Patlytics",
+      "stage": "queued",
+      "priority": 74,
+      "input_path": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-26/agent-targeting-work-items/patlytics.json",
+      "external_action_allowed": 0,
+      "approval_required": 1,
+      "blocker": "External actions blocked: no outreach, email/SMS, workflow activation/enrollment, trigger tags, LinkedIn/social action, Clio writes, public/client-facing changes, or live CRM/Supabase sync without Jeff exact approval; attorney review, conflicts, suppression, source-current verification, and opt-out checks required before external use. Patlytics also requires competitor-adjacency review before any external use."
+    }
+  ],
+  "safety_decision": "local/internal attorney-review-only staging; no external action authorized"
+}

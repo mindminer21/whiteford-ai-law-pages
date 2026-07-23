@@ -1,0 +1,351 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>2026-05-12 Lead Magnet Result / Thank-You Option Board</title>
+  <style>
+    :root {
+      --ink: #121827;
+      --navy: #213f77;
+      --violet: #683ab7;
+      --gold: #b99057;
+      --cream: #fffdf8;
+      --sand: #f7f5ef;
+      --line: #d8d0c3;
+      --soft-line: #e5ded2;
+      --muted: #5d6678;
+      --blue-soft: #eef3fb;
+      --green-soft: #e7f0ea;
+      --warn-soft: #f7eddc;
+      --danger-soft: #f8e7df;
+      --shadow: 0 24px 60px rgba(18, 24, 39, 0.14);
+      --radius: 0;
+      --focus: 0 0 0 4px rgba(104, 58, 183, 0.22), 0 0 0 1px var(--violet);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--sand);
+      color: var(--ink);
+      font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+    }
+    a, button, input, select, summary { font: inherit; }
+    a { color: inherit; }
+    :focus-visible { outline: none; box-shadow: var(--focus); }
+    .skip-link {
+      position: absolute; left: 1rem; top: -4rem; z-index: 20;
+      background: var(--ink); color: white; padding: .75rem 1rem; text-decoration: none;
+    }
+    .skip-link:focus { top: 1rem; }
+    .wrap { width: min(1180px, calc(100% - 32px)); margin: 0 auto; }
+    .topbar {
+      border-bottom: 1px solid var(--line); background: var(--cream); position: sticky; top: 0; z-index: 10;
+    }
+    .topbar-inner { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: .85rem 0; }
+    .brand { display: flex; align-items: center; gap: .75rem; min-width: 0; }
+    .mark { width: 42px; height: 42px; border: 1px solid var(--navy); display: grid; place-items: center; color: var(--navy); font-weight: 800; letter-spacing: -.08em; }
+    .eyebrow { color: var(--violet); font-size: .74rem; letter-spacing: .2em; text-transform: uppercase; font-weight: 800; }
+    .muted { color: var(--muted); }
+    .small { font-size: .84rem; }
+    .pill { display: inline-flex; align-items: center; gap: .45rem; padding: .36rem .58rem; border: 1px solid var(--line); background: white; font-size: .76rem; font-weight: 800; text-transform: uppercase; letter-spacing: .12em; }
+    .pill.hold { border-color: #7f2d1d; background: var(--danger-soft); color: #7f2d1d; }
+    .hero { padding: 3.25rem 0 2rem; border-bottom: 1px solid var(--line); background: linear-gradient(120deg, var(--cream), #f2eee3); }
+    h1 { margin: .8rem 0 0; font-size: clamp(2.4rem, 7vw, 5.9rem); line-height: .96; letter-spacing: -.055em; max-width: 1030px; }
+    .lead { margin: 1.25rem 0 0; max-width: 830px; color: #354054; font-size: clamp(1rem, 1.8vw, 1.22rem); line-height: 1.72; }
+    .hero-grid { margin-top: 1.6rem; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: .85rem; }
+    .note-card, .qa-card { border: 1px solid var(--line); background: rgba(255,255,255,.72); padding: 1rem; }
+    .note-card strong { display: block; margin-bottom: .35rem; }
+    .board { padding: 2rem 0 3rem; }
+    .section-title { display: flex; align-items: end; justify-content: space-between; gap: 1rem; margin-bottom: 1rem; }
+    h2 { margin: 0; font-size: clamp(1.7rem, 3vw, 2.65rem); line-height: 1.05; letter-spacing: -.035em; }
+    h3 { margin: 0; font-size: 1.35rem; line-height: 1.15; letter-spacing: -.02em; }
+    h4 { margin: 0; font-size: 1rem; }
+    .variant-shell { display: grid; gap: 1.25rem; }
+    .variant { border: 1px solid var(--line); background: var(--cream); box-shadow: var(--shadow); overflow: clip; }
+    .variant-header { display: flex; align-items: start; justify-content: space-between; gap: 1rem; padding: 1rem; border-bottom: 1px solid var(--line); background: white; }
+    .stance { color: var(--violet); text-transform: uppercase; letter-spacing: .18em; font-size: .72rem; font-weight: 900; margin-bottom: .3rem; }
+    .variant-body { padding: 1rem; }
+    .mock-label { margin-bottom: .85rem; display: flex; flex-wrap: wrap; gap: .5rem; align-items: center; }
+    .no-live { background: #121827; color: white; border-color: #121827; }
+    .draft { background: var(--warn-soft); color: #6b4b13; border-color: #d2b47b; }
+    .grid-2 { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(320px, .72fr); gap: 1rem; }
+    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: .75rem; }
+    .card { border: 1px solid var(--line); background: white; padding: 1rem; }
+    .soft { background: var(--blue-soft); border-color: #b8cae6; }
+    .warm { background: var(--warn-soft); border-color: #d9bf8d; }
+    .green { background: var(--green-soft); border-color: #b9d0c4; }
+    .dark { background: var(--ink); color: white; border-color: var(--ink); }
+    .score { display: flex; align-items: center; justify-content: center; width: 5.25rem; height: 5.25rem; border: 1px solid var(--navy); background: var(--blue-soft); color: var(--navy); font-size: 2.35rem; font-weight: 800; }
+    .progress { height: .55rem; background: var(--soft-line); margin-top: .45rem; overflow: hidden; }
+    .bar { height: 100%; background: var(--gold); }
+    ul.clean { list-style: none; padding: 0; margin: .7rem 0 0; display: grid; gap: .55rem; }
+    ul.clean li { border-left: 2px solid var(--gold); padding-left: .72rem; color: #354054; }
+    .cta-row { display: flex; flex-wrap: wrap; gap: .65rem; margin-top: 1rem; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; min-height: 2.75rem; padding: .72rem 1rem; border: 1px solid var(--ink); background: var(--ink); color: white; text-decoration: none; font-weight: 800; cursor: default; }
+    .btn.secondary { background: transparent; color: var(--ink); border-color: var(--line); }
+    .btn.safe { background: var(--navy); border-color: var(--navy); }
+    .btn[aria-disabled="true"] { opacity: .82; cursor: not-allowed; }
+    .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: .72rem; margin-top: .85rem; }
+    label.field { display: grid; gap: .34rem; font-size: .82rem; font-weight: 800; color: var(--ink); }
+    input[type="text"], input[type="email"], select { min-height: 2.65rem; border: 1px solid #c8beb0; background: white; padding: .55rem .65rem; color: var(--ink); }
+    .checkline { display: flex; align-items: start; gap: .6rem; margin-top: .8rem; color: #354054; font-size: .88rem; }
+    .checkline input { margin-top: .25rem; accent-color: var(--navy); }
+    .split-preview { display: grid; grid-template-columns: .78fr 1.22fr; min-height: 450px; }
+    .split-nav { background: var(--ink); color: white; padding: 1rem; display: flex; flex-direction: column; justify-content: space-between; }
+    .split-main { padding: 1rem; background: #fbfaf6; }
+    .route-list { display: grid; gap: .6rem; margin-top: .8rem; }
+    .route { display: grid; grid-template-columns: auto 1fr auto; gap: .6rem; align-items: start; padding: .8rem; border: 1px solid var(--line); background: white; }
+    .num { width: 1.8rem; height: 1.8rem; border: 1px solid var(--gold); display: grid; place-items: center; color: #6b4b13; font-weight: 800; }
+    .tabs { display: flex; gap: .45rem; flex-wrap: wrap; border-bottom: 1px solid var(--line); padding-bottom: .75rem; margin-bottom: .9rem; }
+    .tab { border: 1px solid var(--line); background: white; padding: .55rem .75rem; font-size: .82rem; font-weight: 800; }
+    .tab[aria-selected="true"] { background: var(--ink); color: white; border-color: var(--ink); }
+    .comparison { margin-top: 1.25rem; border: 1px solid var(--line); background: white; overflow-x: auto; }
+    table { width: 100%; border-collapse: collapse; min-width: 760px; }
+    th, td { padding: .85rem; border-bottom: 1px solid var(--soft-line); text-align: left; vertical-align: top; }
+    th { background: var(--cream); font-size: .82rem; text-transform: uppercase; letter-spacing: .12em; color: var(--muted); }
+    .footer { border-top: 1px solid var(--line); background: var(--cream); padding: 1.5rem 0; color: var(--muted); }
+    details { border: 1px solid var(--line); background: white; padding: .8rem 1rem; margin-top: 1rem; }
+    summary { cursor: pointer; font-weight: 900; }
+    @media (max-width: 940px) {
+      .hero-grid, .grid-2, .grid-3, .split-preview { grid-template-columns: 1fr; }
+      .variant-header, .section-title { align-items: stretch; flex-direction: column; }
+      .topbar-inner { align-items: start; flex-direction: column; }
+    }
+    @media (max-width: 640px) {
+      .wrap { width: min(100% - 20px, 1180px); }
+      .hero { padding-top: 2rem; }
+      .form-grid { grid-template-columns: 1fr; }
+      .score { width: 4.3rem; height: 4.3rem; font-size: 1.9rem; }
+      .variant-body, .variant-header { padding: .8rem; }
+      .card { padding: .85rem; }
+    }
+    @media print {
+      .topbar { position: static; }
+      .btn, .skip-link { display: none; }
+      body { background: white; }
+      .variant { break-inside: avoid; box-shadow: none; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#option-board">Skip to option board</a>
+  <header class="topbar" aria-label="Private local prototype header">
+    <div class="wrap topbar-inner">
+      <div class="brand">
+        <div class="mark" aria-hidden="true">WF</div>
+        <div>
+          <div class="eyebrow">Whiteford / Schell IP private prototype</div>
+          <div class="small muted">Lead magnet result-state option board · generated 2026-05-12 · no live systems touched</div>
+        </div>
+      </div>
+      <span class="pill hold">No-live-action decision aid</span>
+    </div>
+  </header>
+
+  <main id="option-board">
+    <section class="hero">
+      <div class="wrap">
+        <span class="pill draft">Draft review artifact</span>
+        <h1>Result and thank-you state options for consent-gated legal lead magnets.</h1>
+        <p class="lead">This private/local board compares three conservative implementation directions for the post-assessment state: fulfill useful browser value first, keep optional marketing consent separate and unchecked, preserve no-token/no-workflow QA posture, and route each lead magnet to its matching Whiteford/Schell IP next step without triggering external action.</p>
+        <div class="hero-grid" aria-label="Design guardrails">
+          <div class="note-card"><strong>Pre-gate value first</strong><span class="small muted">Show band, top gaps, and a practical first action before asking for email report delivery or nurture.</span></div>
+          <div class="note-card"><strong>Consent remains optional</strong><span class="small muted">Marketing consent is a separate unchecked checkbox; non-subscribers keep browser-only value and no workflow enrollment.</span></div>
+          <div class="note-card"><strong>No-token/no-workflow QA posture</strong><span class="small muted">All CTAs below are disabled or marked draft. This file does not call HighLevel, Supabase, Clio, LinkedIn, email, SMS, or production APIs.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="board">
+      <div class="wrap variant-shell">
+        <div class="section-title">
+          <div>
+            <div class="eyebrow">Option set</div>
+            <h2>Three layouts to review</h2>
+          </div>
+          <p class="small muted">Recommended default: Option B for the current Tech GC/AI Compliance/AI Patent pattern, with Option A language for lower-risk lanes.</p>
+        </div>
+
+        <article class="variant" id="option-a" aria-labelledby="a-title">
+          <div class="variant-header">
+            <div>
+              <div class="stance">Option A · Conservative</div>
+              <h3 id="a-title">Single-column trust receipt</h3>
+              <p class="small muted">Best when legal-risk clarity and calm review matter more than conversion pressure.</p>
+            </div>
+            <span class="pill no-live">Static mock · no submit</span>
+          </div>
+          <div class="variant-body">
+            <div class="mock-label"><span class="pill draft">Mock state: Tech Company Legal Health Checklist</span><span class="pill">Route: /colorado-tech-general-counsel#lead-magnet</span></div>
+            <div class="grid-2">
+              <div class="card">
+                <div class="eyebrow">Your legal health snapshot is ready</div>
+                <div style="display:flex; align-items:start; justify-content:space-between; gap:1rem; margin-top:.7rem;">
+                  <div>
+                    <h3>Overall readiness band: Good foundation with visible gaps</h3>
+                    <p class="muted">Draft educational snapshot based on non-confidential categorical answers. Use this to choose a first cleanup workstream, not as legal advice or a privileged submission.</p>
+                  </div>
+                  <div class="score" aria-label="Example readiness score 68">68</div>
+                </div>
+                <div class="grid-3" style="margin-top:1rem;">
+                  <div class="card soft"><strong>Lowest category</strong><br><span class="small muted">Data + AI</span></div>
+                  <div class="card warm"><strong>First cleanup</strong><br><span class="small muted">AI/data inventory controls</span></div>
+                  <div class="card green"><strong>Email status</strong><br><span class="small muted">Off unless separately checked</span></div>
+                </div>
+                <h4 style="margin-top:1rem;">Top category gaps</h4>
+                <ul class="clean">
+                  <li>Build a practical data and AI inventory before vendor, customer, or regulatory questions land.</li>
+                  <li>Put lightweight AI guardrails around confidentiality, human review, vendor terms, and records.</li>
+                </ul>
+                <div class="cta-row"><a class="btn secondary" href="#" aria-disabled="true">Print / save PDF only</a><a class="btn secondary" href="#" aria-disabled="true">Review related diagnostic route</a></div>
+              </div>
+              <aside class="card warm" aria-label="Consent separation">
+                <span class="pill hold">No outbound follow-up</span>
+                <h3 style="margin-top:.8rem;">Want the full report by email?</h3>
+                <p class="muted">Optional and unchecked. The browser snapshot stays available even if the visitor does not request email delivery.</p>
+                <div class="form-grid">
+                  <label class="field">Name<input type="text" value="Draft Visitor" aria-label="Draft name" /></label>
+                  <label class="field">Email<input type="email" value="review@example.com" aria-label="Draft email" /></label>
+                  <label class="field">Company<input type="text" value="Example Co." aria-label="Draft company" /></label>
+                  <label class="field">Role category<select aria-label="Draft role category"><option>Founder / CEO</option></select></label>
+                </div>
+                <label class="checkline"><input type="checkbox" /> <span>Yes, send me the report and related educational emails. Optional; I can unsubscribe at any time. Do not submit confidential facts.</span></label>
+                <p class="small muted">If unchecked: no report email, nurture workflow, SMS, DM, social message, or other outbound follow-up.</p>
+                <div class="cta-row"><a class="btn" href="#" aria-disabled="true">Disabled: no live submit</a></div>
+              </aside>
+            </div>
+          </div>
+        </article>
+
+        <article class="variant" id="option-b" aria-labelledby="b-title">
+          <div class="variant-header">
+            <div>
+              <div class="stance">Option B · Strong fit</div>
+              <h3 id="b-title">Two-panel diagnostic result plus consent drawer</h3>
+              <p class="small muted">Best balance for the existing app pattern: strong result value, clear next routes, and visibly separate opt-in.</p>
+            </div>
+            <span class="pill no-live">Recommended review direction</span>
+          </div>
+          <div class="variant-body">
+            <div class="mock-label"><span class="pill draft">Mock state: AI Compliance Gameplan Builder</span><span class="pill">Route: /ai-compliance-gameplan#builder</span><span class="pill">CTA: AI Compliance Readiness Sprint</span></div>
+            <div class="split-preview">
+              <nav class="split-nav" aria-label="Result navigation mock">
+                <div>
+                  <div class="eyebrow" style="color:#d8c59b;">Gameplan ready</div>
+                  <h3 style="margin-top:.7rem;">Elevated implementation need</h3>
+                  <p class="small" style="color:#d8dde8;">No attorney-client relationship. Source-current/public claims must be rechecked before any public or external use.</p>
+                  <div class="score" style="background:transparent;color:white;border-color:#d8c59b;margin-top:1rem;" aria-label="Example compliance score 61">61</div>
+                </div>
+                <div class="route-list">
+                  <span class="pill" style="background:transparent;color:white;border-color:rgba(255,255,255,.25);">No HighLevel token used</span>
+                  <span class="pill" style="background:transparent;color:white;border-color:rgba(255,255,255,.25);">No workflow triggered</span>
+                </div>
+              </nav>
+              <div class="split-main">
+                <div class="tabs" role="tablist" aria-label="Mock result tabs">
+                  <button class="tab" role="tab" aria-selected="true">Priority workstreams</button>
+                  <button class="tab" role="tab" aria-selected="false">10-day fixes</button>
+                  <button class="tab" role="tab" aria-selected="false">Email options</button>
+                </div>
+                <div class="grid-2" style="grid-template-columns:1fr .75fr;">
+                  <div>
+                    <div class="route-list">
+                      <div class="route"><span class="num">1</span><div><strong>Data sensitivity matrix</strong><br><span class="small muted">Map prompts, uploads, logs, model training, and retention before new AI expansion.</span></div><span class="pill draft">Pre-gate</span></div>
+                      <div class="route"><span class="num">2</span><div><strong>Vendor terms triage</strong><br><span class="small muted">Review data use, IP/output rights, confidentiality, audit rights, and security obligations.</span></div><span class="pill draft">Pre-gate</span></div>
+                      <div class="route"><span class="num">3</span><div><strong>Human-review rules</strong><br><span class="small muted">Define review, override, escalation, and records for consequential AI outputs.</span></div><span class="pill draft">Pre-gate</span></div>
+                    </div>
+                    <div class="cta-row"><a class="btn safe" href="#" aria-disabled="true">Disabled: request report</a><a class="btn secondary" href="#" aria-disabled="true">Print gameplan</a></div>
+                  </div>
+                  <aside class="card">
+                    <h4>Optional report and nurture</h4>
+                    <p class="small muted">Business email can unlock a copy of the report. Marketing education is a separate unchecked consent choice.</p>
+                    <label class="checkline"><input type="checkbox" /> <span>Send the report only if approved safeguards and suppression checks pass.</span></label>
+                    <label class="checkline"><input type="checkbox" /> <span>Separately opt into related AI governance educational emails.</span></label>
+                    <div class="card warm" style="margin-top:.8rem;"><strong>No-token QA copy</strong><br><span class="small muted">In local preview, show a neutral message: “The gameplan is ready, but live lead routing needs configuration.”</span></div>
+                  </aside>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="variant" id="option-c" aria-labelledby="c-title">
+          <div class="variant-header">
+            <div>
+              <div class="stance">Option C · Divergent</div>
+              <h3 id="c-title">Decision-board thank-you page with lead-magnet route cards</h3>
+              <p class="small muted">Best if Jeff wants one review surface for branching into related diagnostics without enrolling users into cross-lane workflows.</p>
+            </div>
+            <span class="pill no-live">Route mock only</span>
+          </div>
+          <div class="variant-body">
+            <div class="mock-label"><span class="pill draft">Mock state: AI Patent Strategy Scorecard</span><span class="pill">Route: /ai-patent-strategy-scorecard#scorecard</span><span class="pill">CTA: AI Patent Strategy Sprint</span></div>
+            <div class="grid-2">
+              <section class="card soft">
+                <div class="eyebrow">Scorecard result</div>
+                <h3 style="margin-top:.6rem;">Strategy needs tightening</h3>
+                <p class="muted">Draft non-confidential result: preserve human-contribution, ownership, vendor-rights, and disclosure-timing evidence before filing, fundraising, or enterprise customer pressure.</p>
+                <div class="grid-3" style="margin-top:1rem;">
+                  <div><strong>Score</strong><div class="progress"><div class="bar" style="width:58%"></div></div><span class="small muted">58 / 100</span></div>
+                  <div><strong>Gap map</strong><div class="progress"><div class="bar" style="width:72%"></div></div><span class="small muted">Ownership + records</span></div>
+                  <div><strong>Consent</strong><div class="progress"><div class="bar" style="width:0%"></div></div><span class="small muted">Unchecked by default</span></div>
+                </div>
+                <details>
+                  <summary>Keyboard/focus review note</summary>
+                  <p class="small muted">Use native details/summary, visible focus rings, large hit targets, and readable one-column stacking below tablet width. Any real implementation should preserve button disabled states when disclaimer/email prerequisites are missing.</p>
+                </details>
+              </section>
+              <aside class="card">
+                <h3>Choose the next route manually</h3>
+                <p class="small muted">These are informational route cards only. They should not tag, enroll, send, post, schedule, DM, or create CRM records.</p>
+                <div class="route-list">
+                  <div class="route"><span class="num">A</span><div><strong>AI Patent Strategy Scorecard</strong><br><span class="small muted">Current lane. Keep CTA on AI Patent Strategy Sprint.</span></div><span class="pill">/ai-patent-strategy-scorecard</span></div>
+                  <div class="route"><span class="num">B</span><div><strong>AI Compliance Gameplan</strong><br><span class="small muted">Show only if AI governance/vendor/data answers justify separate self-directed review.</span></div><span class="pill">/ai-compliance-gameplan</span></div>
+                  <div class="route"><span class="num">C</span><div><strong>Tech Company Legal Health Checklist</strong><br><span class="small muted">Broad operating-system route for contracts, IP, workforce, data/AI, and financing.</span></div><span class="pill">/colorado-tech-general-counsel</span></div>
+                  <div class="route"><span class="num">D</span><div><strong>Founder M&A Readiness Checklist</strong><br><span class="small muted">Use when diligence, financing, buyer, or strategic-transaction pressure appears.</span></div><span class="pill">/colorado-startup-ma-lawyer</span></div>
+                </div>
+                <div class="cta-row"><a class="btn secondary" href="#" aria-disabled="true">Disabled: review route only</a></div>
+              </aside>
+            </div>
+          </div>
+        </article>
+
+        <section class="comparison" aria-labelledby="compare-title">
+          <table>
+            <caption id="compare-title" style="text-align:left;padding:.9rem;font-weight:900;">Head-to-head recommendation</caption>
+            <thead><tr><th>Dimension</th><th>Option A · Conservative</th><th>Option B · Strong fit</th><th>Option C · Divergent</th></tr></thead>
+            <tbody>
+              <tr><td>Best use</td><td>Lowest-risk trust receipt and calm non-subscriber result.</td><td>Default pattern for current interactive lead magnets.</td><td>Future thank-you hub if route branching needs a separate decision surface.</td></tr>
+              <tr><td>Pre-gate value</td><td>Band, score, top gaps, first cleanup action.</td><td>Band, priority workstreams, 10-day fixes, roadmap preview.</td><td>Result plus route cards; useful but more navigation-oriented.</td></tr>
+              <tr><td>Consent clarity</td><td>Very explicit; email block is visibly separate.</td><td>Strong; report delivery and marketing nurture can be split into two checkboxes.</td><td>Requires careful copy so related diagnostics do not look like workflow enrollment.</td></tr>
+              <tr><td>QA posture</td><td>Simple to static-test for no outbound/no workflow language.</td><td>Best for no-token preview messaging and lane-specific CTA checks.</td><td>Needs extra route-card tests to avoid accidental cross-lane automation implications.</td></tr>
+              <tr><td>My take</td><td>Use language pattern from A where risk is highest.</td><td>Use as the primary review direction.</td><td>Keep as a later experiment, not the first implementation.</td></tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section class="qa-card" aria-labelledby="qa-title">
+          <div class="eyebrow">QA checklist for any later implementation</div>
+          <h2 id="qa-title">Non-negotiables before live use</h2>
+          <ul class="clean">
+            <li>Default marketing consent unchecked; workflow trigger tag only after affirmative opt-in.</li>
+            <li>Non-subscriber path clearly says browser-only/no report email/no nurture workflow/no SMS/no DM/no social/no outbound follow-up.</li>
+            <li>Result copy remains educational and non-diagnostic; no promises about compliance, patentability, valuation, transaction outcome, or risk elimination.</li>
+            <li>Every CTA routes to the matching lead magnet/service path and remains disabled in this prototype.</li>
+            <li>HighLevel/Supabase/Clio/API calls stay absent during local/no-token QA.</li>
+            <li>Keyboard focus is visible, native controls are reachable, and mobile layout stacks into a readable single column.</li>
+          </ul>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap small">Private/local artifact for Jeff/Whiteford review. Draft copy only. No live CRM record, email, SMS, social post, workflow, tag, opportunity, Supabase row, Clio matter, or LinkedIn action is created by this HTML file.</div>
+  </footer>
+</body>
+</html>

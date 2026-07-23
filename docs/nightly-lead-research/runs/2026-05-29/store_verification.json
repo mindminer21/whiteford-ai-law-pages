@@ -1,0 +1,91 @@
+{
+  "db": "/Users/jeff/.openclaw/projects/mountain-west-growth-os/data/growth-os.sqlite",
+  "checked_at": "2026-05-29T13:05:30+00:00",
+  "table_counts": {
+    "prospects": 56,
+    "contacts": 52,
+    "opportunities": 67,
+    "source_evidence": 114,
+    "outreach_drafts": 38,
+    "approval_items": 70,
+    "crm_sync_records": 49,
+    "suppression_checks": 38,
+    "work_items": 33
+  },
+  "staged_prospects": [
+    {
+      "prospect_id": "prospect_anthropic_20260529",
+      "company_name": "Anthropic",
+      "domain": "anthropic.com",
+      "segment": "ma-readiness",
+      "pipeline_stage": "research_staged",
+      "suppression_status": "consent_gap_no_auto_send",
+      "conflicts_status": "required_before_send"
+    },
+    {
+      "prospect_id": "prospect_asana_stackai_acquisition_20260529",
+      "company_name": "Asana / StackAI (Acquisition)",
+      "domain": "asana.com",
+      "segment": "ma-readiness",
+      "pipeline_stage": "research_staged",
+      "suppression_status": "consent_gap_no_auto_send",
+      "conflicts_status": "required_before_send"
+    },
+    {
+      "prospect_id": "prospect_glean_20260529",
+      "company_name": "Glean",
+      "domain": "glean.com",
+      "segment": "ai-patent",
+      "pipeline_stage": "research_staged",
+      "suppression_status": "consent_gap_no_auto_send",
+      "conflicts_status": "required_before_send"
+    },
+    {
+      "prospect_id": "prospect_h1_healthcare_data_platform_20260529",
+      "company_name": "H1 (Healthcare Data Platform)",
+      "domain": "h1.co",
+      "segment": "ai-compliance",
+      "pipeline_stage": "research_staged",
+      "suppression_status": "consent_gap_no_auto_send",
+      "conflicts_status": "required_before_send"
+    }
+  ],
+  "work_item_rows": [
+    {
+      "work_item_id": "work_nightly_agent_targeting_20260529_e60bb1e2d046737a8795e015",
+      "title": "Prepare internal attorney-review agent-targeting packet: Glean",
+      "stage": "queued",
+      "priority": 90,
+      "external_action_allowed": 0,
+      "approval_required": 1,
+      "input_path": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-29/agent-targeting-work-items/glean.json"
+    },
+    {
+      "work_item_id": "work_nightly_agent_targeting_20260529_2b7d90a5cd48313e188a1a4c",
+      "title": "Prepare internal attorney-review agent-targeting packet: Anthropic",
+      "stage": "queued",
+      "priority": 80,
+      "external_action_allowed": 0,
+      "approval_required": 1,
+      "input_path": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-29/agent-targeting-work-items/anthropic.json"
+    },
+    {
+      "work_item_id": "work_nightly_agent_targeting_20260529_a98c57f3e80b94fa5d7af146",
+      "title": "Prepare internal attorney-review agent-targeting packet: H1 (Healthcare Data Platform)",
+      "stage": "queued",
+      "priority": 70,
+      "external_action_allowed": 0,
+      "approval_required": 1,
+      "input_path": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-29/agent-targeting-work-items/h1-healthcare-data-platform.json"
+    },
+    {
+      "work_item_id": "work_nightly_agent_targeting_20260529_6c50df7e004f37626b6cb12d",
+      "title": "Prepare internal attorney-review agent-targeting packet: Asana / StackAI (Acquisition)",
+      "stage": "queued",
+      "priority": 60,
+      "external_action_allowed": 0,
+      "approval_required": 1,
+      "input_path": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-29/agent-targeting-work-items/asana-stackai-acquisition.json"
+    }
+  ]
+}

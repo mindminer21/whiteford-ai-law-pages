@@ -1,0 +1,353 @@
+
+╭──────────── Hermes Agent v0.12.0 (2026.4.30) · upstream aa88dcc5 ────────────╮
+│                                       Available Tools                        │
+│    ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⡀⠀⣀⣀⠀⢀⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀     browser-cdp: browser_cdp,              │
+│    ⠀⠀⠀⠀⠀⠀⢀⣠⣴⣾⣿⣿⣇⠸⣿⣿⠇⣸⣿⣿⣷⣦⣄⡀⠀⠀⠀⠀⠀⠀     browser_dialog                         │
+│    ⠀⢀⣠⣴⣶⠿⠋⣩⡿⣿⡿⠻⣿⡇⢠⡄⢸⣿⠟⢿⣿⢿⣍⠙⠿⣶⣦⣄⡀⠀     discord: discord                       │
+│    ⠀⠀⠉⠉⠁⠶⠟⠋⠀⠉⠀⢀⣈⣁⡈⢁⣈⣁⡀⠀⠉⠀⠙⠻⠶⠈⠉⠉⠀⠀     discord_admin: discord_admin           │
+│    ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣴⣿⡿⠛⢁⡈⠛⢿⣿⣦⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀     file: patch, read_file, search_files,  │
+│    ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠿⣿⣦⣤⣈⠁⢠⣴⣿⠿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀     write_file                             │
+│    ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠉⠻⢿⣿⣦⡉⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀     hermes-yuanbao: yb_query_group_info,   │
+│    ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⢷⣦⣈⠛⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀     ...                                    │
+│    ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⣴⠦⠈⠙⠿⣦⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀     homeassistant: ha_call_service,        │
+│    ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸⣿⣤⡈⠁⢤⣿⠇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀     ha_get_state, ...                      │
+│    ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠛⠷⠄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀     image_gen: image_generate              │
+│    ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⠑⢶⣄⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀     kanban: kanban_block, kanban_comment,  │
+│    ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⠁⢰⡆⠈⡿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀     ...                                    │
+│    ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠳⠈⣡⠞⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀     (and 7 more toolsets...)               │
+│    ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀                                            │
+│                                       Available Skills                       │
+│    qwen3.6:35b-a3b · Nous Research    apple: apple-notes, apple-reminders,   │
+│  /Users/jeff/Documents/Codex/2026-0…  findmy, imessage                       │
+│    Session: 20260506_002931_0db838    autonomous-ai-agents: claude-code,     │
+│                                       codex, hermes-agent, opencode          │
+│                                       creative: architecture-diagram,        │
+│                                       ascii-art, ascii-video, b...           │
+│                                       data-science: jupyter-live-kernel      │
+│                                       devops: kanban-orchestrator,           │
+│                                       kanban-worker, webhook-sub...          │
+│                                       domain: business-development-rag       │
+│                                       email: himalaya                        │
+│                                       gaming: minecraft-modpack-server,      │
+│                                       pokemon-player                         │
+│                                       general: dogfood, yuanbao              │
+│                                       github: codebase-inspection,           │
+│                                       github-auth, github-code-r...          │
+│                                       mcp: native-mcp                        │
+│                                       media: gif-search, heartmula,          │
+│                                       songsee, spotify, youtub...            │
+│                                       mlops: audiocraft-audio-generation,    │
+│                                       axolotl, dspy, eva...                  │
+│                                       note-taking: obsidian                  │
+│                                       productivity: airtable,                │
+│                                       google-workspace, linear, maps,        │
+│                                       nano-...                               │
+│                                       red-teaming: godmode                   │
+│                                       research: arxiv, blogwatcher,          │
+│                                       llm-wiki, polymarket, qmd, ...         │
+│                                       smart-home: openhue                    │
+│                                       social-media: xurl                     │
+│                                       software-development:                  │
+│                                       debugging-hermes-tui-commands,         │
+│                                       hermes-agent-ski...                    │
+│                                                                              │
+│                                       Profile: qwen-local                    │
+│                                       12 tools · 91 skills · /help for       │
+│                                       commands                               │
+╰──────────────────────────────────────────────────────────────────────────────╯
+
+Query: # Nightly Qwen Prospect Research Agent Prompt
+
+You are the Whiteford/Schell IP local Qwen prospect research agent running 
+overnight on Jeff's local Ollama model.
+
+Your mission is to identify, research, score, and stage high-potential prospects
+who would receive immediate value from one of Jeff's productized 
+Whiteford/Schell IP legal-service lead magnets and possible next-step offerings.
+
+You must operate as a research and staging agent only unless the current task 
+includes explicit written approval for exact live writes. You must not send 
+emails, send LinkedIn messages, connect with anyone, post publicly, activate 
+HighLevel workflows, enroll contacts in campaigns, write to Clio, run paid ads, 
+or perform any external outreach.
+
+Working directory:
+/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-
+ai-law-pages
+
+Local Growth OS database:
+/Users/jeff/.openclaw/projects/mountain-west-growth-os/data/growth-os.sqlite
+
+Required context files to read before acting:
+- docs/highlevel_campaign_implementation_plan.md
+- docs/highlevel_ops_execution_blueprint.md
+- docs/highlevel_ops_research_synthesis.md
+- highlevel_ai_authority_funnel_map.md, if present
+- docs/plans/qwen_nightly_prospecting_agent_plan.md
+
+Core offer lanes:
+
+1. AI Patent Strategy Sprint
+   Lead magnet: AI Patent Strategy Scorecard
+   Route: /ai-patent-strategy-scorecard
+   Tags: workflow:ai-patent-strategy, leadmagnet:ai-patent-scorecard, 
+interest:ai-patent-law
+   Ideal prospects: AI/ML, robotics, software, data, medtech, autonomy, 
+cybersecurity, fintech, or scientific/engineering companies with protectable 
+technical systems, recent product launches, funding, public technical 
+disclosures, or founder/CTO decision makers.
+
+2. AI Compliance Readiness Sprint / AI Governance Gameplan
+   Lead magnet: AI Compliance Gameplan Builder
+   Routes: /ai-compliance-gameplan and /colorado-ai-compliance-lawyer
+   Tags: workflow:ai-compliance-readiness, leadmagnet:ai-compliance-gameplan, 
+interest:ai-compliance
+   Ideal prospects: companies deploying AI in customer-facing or consequential 
+workflows, HR, lending, insurance, healthcare, education, housing, risk scoring,
+pricing, marketing personalization, vendor management, or other AI governance 
+contexts.
+
+3. Tech Company OGC Launchpad
+   Lead magnet: Tech Company Legal Health Checklist
+   Route: /colorado-tech-general-counsel
+   Tags: workflow:tech-gc-launchpad, leadmagnet:tech-gc-checklist, 
+interest:tech-ogc
+   Ideal prospects: growth-stage tech companies without obvious full-time GC, 
+showing signs of legal complexity across contracts, hiring, IP ownership, 
+privacy, financing, AI use, vendor/customer terms, enterprise sales, or 
+expansion.
+
+4. Founder M&A Readiness Review
+   Lead magnet: Founder M&A Readiness Checklist
+   Route: /colorado-startup-ma-lawyer
+   Tags: workflow:ma-readiness, leadmagnet:ma-readiness-checklist, 
+interest:ma-readiness
+   Ideal prospects: founder-owned, VC-backed, PE-backed, or bootstrapped 
+technology companies likely approaching sale, recap, acquisition, strategic 
+partnership, or diligence-sensitive events.
+
+Public-source rules:
+- Use only public sources: company websites, leadership pages, public press 
+releases, public job postings, investor portfolio pages, credible news/trade 
+articles, public patent databases, government/SEC/state sources, official public
+profile URLs found by search.
+- Do not scrape behind logins.
+- Do not use private/confidential information.
+- Do not collect sensitive personal information.
+- Every material factual claim must be tied to a source URL and evidence note.
+
+Scoring:
+For every company, assign:
+- primary_offer_lane
+- secondary_offer_lanes, if any
+- fit_score, 0-100
+- urgency_score, 0-100
+- value_potential_score, 0-100
+- evidence_confidence, low/medium/medium_high/high
+- combined_priority_score, 0-100
+- outreach_readiness_status: research_only, draft_ready, needs_attorney_review, 
+or suppress
+
+Decision-maker role targets:
+- AI patent: founder, CEO, CTO, head of product, VP engineering, 
+inventor/technical cofounder.
+- AI compliance: CEO, COO, GC/legal lead, risk/compliance leader, HR leader, 
+product leader, privacy/security leader.
+- Tech OGC: CEO, founder, COO, CFO, head of operations, lean GC/legal ops.
+- M&A readiness: founder, CEO, CFO, COO, owner, corp dev, public investor/board 
+contact when appropriate.
+
+Nightly batch limits unless Jeff has approved a larger run:
+- New companies: maximum 10.
+- Contacts: maximum 2 per company.
+- Outreach drafts: maximum 5.
+- Live GHL writes: 0.
+- Live Supabase writes: 0.
+
+Data destination policy:
+Default allowed destination is local Growth OS staging only. You may prepare 
+JSON payloads and pending sync records, but do not call live GHL or Supabase 
+APIs unless the prompt includes exact approval for that run.
+
+Required lead depth:
+Prefer first-party data supplied through a lead magnet or landing-page flow. If 
+unavailable or incomplete, perform public-source enrichment and, if separately 
+configured and authorized, Apollo.io enrichment. For qualified leads, attempt to
+capture at minimum: company name, domain, website, location, industry, key 
+product/service facts, AI/IP/compliance/GC/M&A relevance, key person name, 
+title, role category, business email, LinkedIn URL, phone number if 
+publicly/lawfully available or voluntarily supplied, source URLs, confidence, 
+permission basis, suggested offer lane, recommended lead magnet, suggested 
+Cal.com/appointment or message path, and suggested outreach vector. Apollo.io 
+may enrich missing contact fields only; it does not authorize outreach or 
+campaign enrollment.
+
+Preferred local writes:
+- prospects
+- contacts
+- opportunities
+- source_evidence
+- outreach_drafts
+- approval_items
+- duplicate_candidates
+- suppression_checks
+- crm_sync_records with pending/not_checked status only
+
+Outreach vector drafting:
+Draft only attorney-review content. The draft should be value-first and 
+educational. It should connect:
+1. A public, sourced fact about the prospect.
+2. A likely business/legal readiness issue.
+3. The matching free lead magnet.
+4. The possible productized service next step.
+
+Do not say or imply:
+- that Whiteford guarantees results;
+- that the prospect is noncompliant;
+- that a patent is available;
+- that a deal will close;
+- that legal advice is being provided;
+- that an attorney-client relationship exists.
+
+Digest output:
+Create or update:
+docs/nightly-lead-research/runs/YYYY-MM-DD/digest.md
+
+Digest must include:
+- Executive summary.
+- Top prospects researched.
+- Evidence URLs.
+- Primary and secondary offer lanes.
+- Lead magnet recommendation.
+- Key contacts and confidence.
+- Outreach vector suggestions.
+- Drafts created for review.
+- Records written or staged.
+- Suppression/conflicts/confidence issues.
+- Recommended next Kanban tasks.
+
+If you cannot safely write structured records, write a JSON report under:
+docs/nightly-lead-research/runs/YYYY-MM-DD/prospect_candidates.json
+
+Final response requirements:
+- State exactly what you researched.
+- State how many prospects, contacts, evidence records, drafts, and approval 
+items were created or staged.
+- State that no external outreach, live CRM write, workflow activation, or 
+social action occurred.
+- Provide the digest path.
+
+CONTROLLED TEST MODE for Whiteford/Schell IP local Qwen prospect research.
+
+Use the standard nightly prompt in 
+docs/nightly_qwen_prospect_research_prompt.md, but override these limits for 
+this run:
+- Research exactly 1 high-potential public-source prospect.
+- Prefer a Colorado / Mountain West AI company or technology company with clear 
+fit for AI patent strategy, AI compliance, tech OGC, or M&A readiness.
+- Identify up to 1 key person.
+- Capture company name, domain/website, location, industry, key relevance facts,
+key person name/title, email if publicly available, LinkedIn URL if publicly 
+available, phone if publicly available, source URLs, confidence, suggested offer
+lane, recommended lead magnet, and suggested outreach vector.
+- Do not use Apollo.io in this test run.
+- Do not write to HighLevel.
+- Do not write to Supabase.
+- Do not send outreach.
+- Do not activate workflows.
+- Write a candidate JSON report to 
+docs/nightly-lead-research/runs/YYYY-MM-DD-controlled-test/prospect_candidates.j
+son.
+- If and only if the candidate has enough evidence, use 
+scripts/prospect_research_store.py to stage it in local Growth OS SQLite.
+- Write a human-review digest to 
+docs/nightly-lead-research/runs/YYYY-MM-DD-controlled-test/digest.md.
+- Final response must include counts and paths.
+Initializing agent...
+────────────────────────────────────────
+
+
+╭─ ⚕ Hermes ───────────────────────────────────────────────────────────────────╮
+    Let me start by reading the required context files and understanding the current setup.
+╰──────────────────────────────────────────────────────────────────────────────╯
+  ┊ 📖 preparing read_file…
+  ┊ 📖 preparing read_file…
+  ┊ 📖 preparing read_file…
+  ┊ 📖 preparing read_file…
+  ┊ 📖 preparing read_file…
+  ┊ 📖 preparing read_file…
+  ┊ 📖 preparing read_file…
+  ┊ 📖 read      /Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/highlevel_campaign_implementation_plan.md  1.1s
+  ┊ 📖 read      /Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/highlevel_ops_execution_blueprint.md  1.1s
+  ┊ 📖 read      /Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/highlevel_ops_research_synthesis.md  1.1s
+  ┊ 📖 read      /Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/highlevel_ai_authority_funnel_map.md  0.9s
+  ┊ 📖 read      /Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/plans/qwen_nightly_prospecting_agent_plan.md  0.9s
+  ┊ 📖 read      /Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly_qwen_prospect_research_prompt.md  1.1s
+  ┊ 📖 read      /Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/scripts/prospect_research_store.py  0.9s
+
+╭─ ⚕ Hermes ───────────────────────────────────────────────────────────────────╮
+    Good, I have all the context files loaded. Let me also check the existing Growth OS database schema to know what tables and columns are available.
+╰──────────────────────────────────────────────────────────────────────────────╯
+  ┊ 💻 preparing terminal…
+  ┊ 💻 preparing terminal…
+  ┊ 💻 $         sqlite3 /Users/jeff/.openclaw/projects/mountain-west-growth-os/data/growth-os.sqlite ".tables"  0.3s
+  ┊ 💻 $         sqlite3 /Users/jeff/.openclaw/projects/mountain-west-growth-os/data/growth-os.sqlite "pragma table_info(prospects);" && echo "---CONTACTS---" && sqlite3 /Users/jeff/.openclaw/projects/mountain-west-growth-os/data/growth-os.sqlite "pragma table_info(contacts);" && echo "---OPPORTUNITIES---" && sqlite3 /Users/jeff/.openclaw/projects/mountain-west-growth-os/data/growth-os.sqlite "pragma table_info(opportunities);"  0.3s
+
+╭─ ⚕ Hermes ───────────────────────────────────────────────────────────────────╮
+    Now let me research a real prospect. I'll search for a Colorado/Mountain West AI company with good fit signals.
+╰──────────────────────────────────────────────────────────────────────────────╯
+  ┊ 🔍 preparing web_search…
+  ┊ 🔍 preparing web_search…
+  ┊ 🔍 search    Colorado AI startup tech company 2025 2026 funding product machine learning Denver Boulder  2.3s
+  ┊ 🔍 search    Colorado AI company robotics computer vision autonomous Mountain West technology  3.0s
+
+╭─ ⚕ Hermes ───────────────────────────────────────────────────────────────────╮
+    Let me dig deeper into specific Colorado AI/robotics companies for a real prospect.
+╰──────────────────────────────────────────────────────────────────────────────╯
+  ┊ 🔍 preparing web_search…
+  ┊ 🔍 preparing web_search…
+  ┊ 🔍 preparing web_search…
+  ┊ 🔍 search    Hypergiant Industries Colorado Denver AI machine learning founder CEO team  1.6s
+  ┊ 🔍 search    AMP Robotics Colorado AI computer vision sorting robotics founder CEO  1.9s
+  ┊ 🔍 search    Scythe Robotics ASI autonomous vehicles Colorado founder  1.6s
+
+╭─ ⚕ Hermes ───────────────────────────────────────────────────────────────────╮
+    Let me look for a more targeted, still-independent Colorado AI/robotics company that fits well.
+╰──────────────────────────────────────────────────────────────────────────────╯
+  ┊ 🔍 preparing web_search…
+  ┊ 🔍 preparing web_search…
+  ┊ 🔍 search    Colorado autonomous robotics startup 2025 2026 independent founder CTO machine vision  3.0s
+  ┊ 🔍 search    site:builtincolorado.com AI robotics startup Denver Boulder Colorado 2025 2026  1.8s
+
+╭─ ⚕ Hermes ───────────────────────────────────────────────────────────────────╮
+    Let me research specific Colorado AI companies that fit the lanes well.
+╰──────────────────────────────────────────────────────────────────────────────╯
+  ┊ 🔍 preparing web_search…
+  ┊ 🔍 preparing web_search…
+  ┊ 🔍 search    CleanRobotics TrashBot Colorado AI computer vision startup founder  1.4s
+  ┊ 🔍 search    Aion Robotics Denver CO founder CEO AI humanoid robots company website  1.7s
+
+╭─ ⚕ Hermes ───────────────────────────────────────────────────────────────────╮
+    AION Robotics in Denver looks like a strong candidate. Let me get more details.
+╰──────────────────────────────────────────────────────────────────────────────╯
+  ┊ 📄 preparing web_extract…
+  ┊ 🔍 preparing web_search…
+  ┊ 📄 fetch     www.aionrobotics.com +2  225.6s
+  (tip) That tool ran for a while. Use /verbose to cycle tool-progress display modes (all -> new -> off -> verbose). This tip only shows once.
+  ┊ 🔍 search    Aurora Innovation Colorado Boulder autonomous vehicle startup AI patent funding 2025 2026  1.9s
+
+╭─ ⚕ Hermes ───────────────────────────────────────────────────────────────────╮
+    AION Robotics is a strong candidate. Let me get more details to confirm.
+╰──────────────────────────────────────────────────────────────────────────────╯
+  ┊ 🔍 preparing web_search…
+  ┊ 🔍 preparing web_search…
+  ┊ 🔍 search    AION Robotics Denver Colorado funding investors pitch AI autonomous robots M6 L4  1.5s
+  ┊ 🔍 search    Nicholas Nunno CEO AION Robotics background engineering business  1.7s
+
+╭─ ⚕ Hermes ───────────────────────────────────────────────────────────────────╮
+    Now I have enough information to build a controlled-test prospect candidate. Let me create the directories and output files.
+╰──────────────────────────────────────────────────────────────────────────────╯
+  ┊ 💻 preparing terminal…
+  ┊ 💻 $         mkdir -p /Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-06-controlled-test  0.5s
+
+╭─ ⚕ Hermes ───────────────────────────────────────────────────────────────────╮

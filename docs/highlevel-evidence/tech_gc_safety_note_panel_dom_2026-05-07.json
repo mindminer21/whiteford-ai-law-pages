@@ -1,0 +1,54 @@
+{
+  "capturedAt": "2026-05-07T12:38:49.026Z",
+  "url": "https://client-app-automation-workflows.leadconnectorhq.com/location/tm68WWMrcAa3TqQbEAMa/workflow/dee4450a-1b7b-4597-9fa4-9c7b7423b848",
+  "title": "Workflow",
+  "bodyText": "Skip to main content\nWorkflows list\n\nWF | Intake | Whiteford | Tech GC Launchpad | Draft\n\nSaved\nStandard Builder\n\nBuilder\n\nSettings\n\nEnrollment History\n\nExecution Logs\n\nTest Workflow\n\nDraft\n\nPublish\n\nTech GC Launchpad Safety + Review Note\nConsent Gate — lead magnet email opt-in required before nurture\nOpted in / eligible for fut...\n\nIf \"Tags\" includes \"newsletter:ai\"\n\nNot opted in / suppressed /...\nWhen none of the conditions are met\nEND\nEND\nContact TagContact Tag Added - workflow:tech-gc-launchpad\nTag Added includes \"workflow:tech-gc-launchpad\"\nStats\nAdd New Trigger\nAdd\n124%\n\nLearn more\n\nAdd Notes\n\nAdds a note to the contact record\n\nACTION NAME\nTITLE\nNOTE\n\nDRAFT/OFF ONLY. Do not publish. Do not enroll contacts. Do not enable emails/SMS. External sends require approval:external-send-approved plus Jeff exact approval. Live CRM mutations require separate approval.\n\nSource lane: Tech GC Launchpad / Colorado Tech Company Legal Health Checklist. Trigger tag: workflow:tech-gc-launchpad. Recommended fields: authority_pillar=Tech Outside General Counsel; lead_magnet=Colorado Tech Company Legal Health Checklist; recommended_offer=Tech Company OGC Launchpad; suggested_offer_lane=tech-gc; approval_status=pending; consent_basis=unknown pending review unless captured; pipeline_next_action=Map legal operating needs and decide whether OGC Launchpad review is appropriate.\n\nBefore any external action: confirm DND/unsubscribe/suppression, consent basis, approval status, absence of outreach:do-not-send, and presence of approval:external-send-approved. Imported/researched prospects remain internal-review-only.\n\nOpportunity handling is recommendation-only: Find Opportunity in Whiteford Schell IP Pipeline before any create/update; no duplicate and no live stage movement without separate approval. If no existing opportunity, recommend New Lead stage only after approval.\n\nFuture email assets are placeholders only and must stay disabled/off unless separately approved: 69fae713e1364318517a1e97; wait 2 days; 69fae714e2f2ac3f34cea769; wait 3 days; 69fae715092f9ba066511737; wait 5 days; 69fae716b403f2fcddb84f89. No SMS, no social, no webhook/callout, no test send.\n\nLegal/ethics guardrail: informational only; no legal advice; no attorney-client relationship; no confidential details before conflicts and engagement approval.\n\n0 characters | 0 words\nCOLOR\nDelete\nCancel\nSave action",
+  "selected": [
+    {
+      "className": "vue-flow__node vue-flow__node-action selected selectable",
+      "text": "Tech GC Launchpad Safety + Review Note"
+    }
+  ],
+  "nodes": [
+    {
+      "i": 0,
+      "className": "vue-flow__node vue-flow__node-action selected selectable",
+      "text": "Tech GC Launchpad Safety + Review Note"
+    },
+    {
+      "i": 1,
+      "className": "vue-flow__node vue-flow__node-action selectable",
+      "text": "Consent Gate — lead magnet email opt-in required before nurture"
+    },
+    {
+      "i": 2,
+      "className": "vue-flow__node vue-flow__node-branch selectable",
+      "text": "Opted in / eligible for fut...\n\nIf \"Tags\" includes \"newsletter:ai\""
+    },
+    {
+      "i": 3,
+      "className": "vue-flow__node vue-flow__node-none selectable",
+      "text": "Not opted in / suppressed /...\nWhen none of the conditions are met"
+    },
+    {
+      "i": 4,
+      "className": "vue-flow__node vue-flow__node-end selectable",
+      "text": "END"
+    },
+    {
+      "i": 5,
+      "className": "vue-flow__node vue-flow__node-end selectable",
+      "text": "END"
+    },
+    {
+      "i": 6,
+      "className": "vue-flow__node vue-flow__node-trigger selectable",
+      "text": "Contact TagContact Tag Added - workflow:tech-gc-launchpad\nTag Added includes \"workflow:tech-gc-launchpad\"\nStats"
+    },
+    {
+      "i": 7,
+      "className": "vue-flow__node vue-flow__node-newTrigger selectable",
+      "text": "Add New Trigger"
+    }
+  ]
+}

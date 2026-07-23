@@ -1,0 +1,25 @@
+{
+  "run_metadata": {
+    "run_label": "2026-05-27",
+    "generated_at": "2026-05-27",
+    "run_directory": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-27",
+    "run_worker": "qwen-local (kanban task t_569500d7)",
+    "source_status": "EXHAUSTED — all web_search and web_extract calls fail with Payment Required (Firecrawl credits depleted)",
+    "alternate_search_tested": true,
+    "alternate_search_status": "EXHAUSTED — firecrawl_search also returns HTTP 402",
+    "qmd_available": true,
+    "business_dev_corpus_available": false,
+    "session_date": "2026-05-27 (manual re-run attempt)"
+  },
+  "source_payload": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-27/prospect_candidates.json",
+  "candidates": [],
+  "gate_failure": {
+    "gate": "1",
+    "name": "Live-source extraction required",
+    "status": "FAILED",
+    "blocker": "Firecrawl credits exhausted. web_search returns Payment Required. firecrawl_search (MCP) also returns HTTP 402. No live-source replacement is configured for the qwen-local profile.",
+    "consequence": "Per the nightly prompt: stop prospect staging; write source_unavailable_report.md; produce empty/no-op packet artifacts."
+  },
+  "note": "Gate 1 failed for the second consecutive night. No prospects researched, scored, or staged. The qwen-local agent cannot substitute model memory for live-source extraction per the prompt's explicit prohibition. This run is a manual re-attempt after the overnight cron run also hit credit exhaustion.",
+  "normalization_note": "Normalized prospect_candidates -> candidates for scripts/prospect_research_store.py; no candidate records were invented."
+}

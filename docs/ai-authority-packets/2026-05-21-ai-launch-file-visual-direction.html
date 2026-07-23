@@ -1,0 +1,417 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Whiteford AI Launch File — Visual Direction</title>
+  <style>
+    :root {
+      --ink: #003756;
+      --ink-hover: #154e73;
+      --ink-deep: #002b45;
+      --accent: #632ddd;
+      --accent-soft: #9d74ff;
+      --accent-wash: rgba(99, 45, 221, 0.08);
+      --paper: #ffffff;
+      --paper-soft: #f7f8fa;
+      --paper-warm: #fffdf8;
+      --line: rgba(0, 55, 86, 0.12);
+      --line-strong: rgba(0, 55, 86, 0.22);
+      --risk-low: #4f8c5b;
+      --risk-mid: #c99334;
+      --risk-high: #b14b3d;
+      --shadow: 0 28px 80px -48px rgba(0, 55, 86, 0.58);
+      --radius: 2px;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background:
+        linear-gradient(rgba(0, 55, 86, 0.032) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 55, 86, 0.032) 1px, transparent 1px),
+        var(--paper-soft);
+      background-size: 28px 28px;
+      color: var(--ink);
+      font-family: "DM Sans", Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    main {
+      max-width: 1440px;
+      margin: 0 auto;
+      padding: 36px;
+    }
+
+    .board {
+      overflow: hidden;
+      border: 1px solid var(--line-strong);
+      background: var(--paper);
+      box-shadow: var(--shadow);
+    }
+
+    .brand-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 24px;
+      padding: 18px 28px;
+      border-bottom: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.92);
+    }
+
+    .lockup {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      font-weight: 650;
+      letter-spacing: -0.02em;
+    }
+
+    .lockup span:first-child {
+      color: var(--ink-deep);
+      font-size: 18px;
+    }
+
+    .divider { width: 1px; height: 24px; background: var(--line-strong); }
+
+    .mono {
+      font-family: "IBM Plex Mono", "SFMono-Regular", Consolas, ui-monospace, monospace;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-size: 11px;
+      color: var(--ink-hover);
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) 420px;
+      gap: 42px;
+      padding: 58px 56px 44px;
+      border-bottom: 1px solid var(--line);
+      background:
+        radial-gradient(circle at 78% 18%, rgba(99, 45, 221, 0.10), transparent 34%),
+        linear-gradient(180deg, var(--paper-warm), var(--paper));
+    }
+
+    h1 {
+      max-width: 760px;
+      margin: 18px 0 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(48px, 6vw, 86px);
+      font-weight: 400;
+      letter-spacing: -0.045em;
+      line-height: 0.95;
+      text-wrap: balance;
+    }
+
+    .hero p {
+      max-width: 660px;
+      margin: 24px 0 0;
+      color: var(--ink-hover);
+      font-size: 20px;
+      line-height: 1.55;
+      text-wrap: pretty;
+    }
+
+    .source-card {
+      align-self: end;
+      border: 1px solid var(--line-strong);
+      background: rgba(255,255,255,.78);
+      padding: 24px;
+    }
+
+    .source-card h2 {
+      margin: 12px 0 14px;
+      font-size: 24px;
+      line-height: 1.15;
+      letter-spacing: -0.03em;
+    }
+
+    .source-card p {
+      margin: 0;
+      font-size: 15px;
+      line-height: 1.55;
+    }
+
+    .system-map {
+      display: grid;
+      grid-template-columns: 1fr 320px;
+      min-height: 560px;
+    }
+
+    .file-grid {
+      position: relative;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+      padding: 34px;
+      border-right: 1px solid var(--line);
+      background: var(--paper);
+    }
+
+    .file-grid::before {
+      position: absolute;
+      inset: 50% 44px auto;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(99,45,221,.35), transparent);
+      content: "";
+    }
+
+    .node {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 210px;
+      border: 1px solid var(--line-strong);
+      background: var(--paper-warm);
+      padding: 22px;
+      transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease;
+    }
+
+    .node:hover {
+      transform: translateY(-2px);
+      border-color: rgba(99,45,221,.48);
+      box-shadow: 0 24px 70px -46px rgba(0, 55, 86, .58);
+    }
+
+    .node:nth-child(2), .node:nth-child(5) { background: var(--paper); }
+    .node:nth-child(3) { border-color: rgba(201, 147, 52, .42); }
+    .node:nth-child(6) { border-color: rgba(177, 75, 61, .42); }
+
+    .step {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 18px;
+    }
+
+    .step strong {
+      color: var(--accent);
+      font-family: "IBM Plex Mono", ui-monospace, monospace;
+      font-size: 12px;
+      letter-spacing: .12em;
+    }
+
+    .status-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 999px;
+      background: var(--risk-low);
+      box-shadow: 0 0 0 5px rgba(79,140,91,.12);
+    }
+
+    .node:nth-child(3) .status-dot { background: var(--risk-mid); box-shadow: 0 0 0 5px rgba(201,147,52,.14); }
+    .node:nth-child(6) .status-dot { background: var(--risk-high); box-shadow: 0 0 0 5px rgba(177,75,61,.13); }
+
+    .node h3 {
+      margin: 0;
+      font-size: 26px;
+      line-height: 1.04;
+      letter-spacing: -0.035em;
+    }
+
+    .node p {
+      margin: 16px 0 0;
+      color: var(--ink-hover);
+      font-size: 15px;
+      line-height: 1.45;
+    }
+
+    .asks {
+      padding: 34px 30px;
+      background: linear-gradient(180deg, #f9fafb, #fff);
+    }
+
+    .asks h2 {
+      margin: 14px 0 24px;
+      font-size: 34px;
+      line-height: 1;
+      letter-spacing: -0.04em;
+    }
+
+    .ask-list {
+      display: grid;
+      gap: 12px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .ask-list li {
+      border: 1px solid var(--line);
+      background: var(--paper);
+      padding: 15px 16px;
+      color: var(--ink-hover);
+      font-size: 15px;
+      line-height: 1.35;
+    }
+
+    .ask-list strong {
+      display: block;
+      margin-bottom: 3px;
+      color: var(--ink);
+      font-size: 14px;
+      letter-spacing: -0.01em;
+    }
+
+    .cta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      padding: 24px 30px;
+      border-top: 1px solid var(--line);
+      background: var(--ink-deep);
+      color: #fff;
+    }
+
+    .cta p {
+      margin: 0;
+      color: rgba(255,255,255,.78);
+      font-size: 15px;
+      line-height: 1.45;
+    }
+
+    .cta strong { display: block; color: #fff; font-size: 18px; }
+
+    .button {
+      min-height: 46px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 18px;
+      border: 1px solid rgba(255,255,255,.36);
+      background: #fff;
+      color: var(--ink-deep);
+      font-weight: 700;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .figma-notes {
+      margin-top: 18px;
+      color: var(--ink-hover);
+      font-size: 13px;
+      line-height: 1.5;
+    }
+
+    @media (max-width: 980px) {
+      main { padding: 18px; }
+      .hero, .system-map { grid-template-columns: 1fr; }
+      .file-grid { grid-template-columns: 1fr 1fr; border-right: 0; border-bottom: 1px solid var(--line); }
+      .source-card { align-self: stretch; }
+    }
+
+    @media (max-width: 640px) {
+      .brand-bar, .cta { align-items: flex-start; flex-direction: column; }
+      .hero { padding: 36px 24px; }
+      .file-grid { grid-template-columns: 1fr; padding: 22px; }
+      .node { min-height: 174px; }
+      h1 { font-size: 46px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { scroll-behavior: auto !important; transition: none !important; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="board" aria-labelledby="page-title">
+      <div class="brand-bar">
+        <div class="lockup" aria-label="Whiteford and Schell IP visual lockup">
+          <span>WHITEFORD</span>
+          <span class="divider" aria-hidden="true"></span>
+          <span>Schell IP</span>
+        </div>
+        <div class="mono">Draft visual direction · AI authority packet</div>
+      </div>
+
+      <header class="hero">
+        <div>
+          <div class="mono">Colorado + Mountain West technology companies</div>
+          <h1 id="page-title">The AI Launch File</h1>
+          <p>A board-ready legal operating layer before an AI feature reaches customers, enterprise procurement, investors, or diligence.</p>
+        </div>
+        <aside class="source-card" aria-label="Design positioning note">
+          <div class="mono">Design posture</div>
+          <h2>Legal systems map, not a fake dashboard.</h2>
+          <p>Use calm paper texture, squared cards, restrained violet pathing, and concrete operating records. The visual should feel like an executive file Jeff can walk through in a client conversation.</p>
+        </aside>
+      </header>
+
+      <section class="system-map" aria-label="AI Launch File system map">
+        <div class="file-grid">
+          <article class="node">
+            <div>
+              <div class="step"><strong>01 / OWNER</strong><span class="status-dot"></span></div>
+              <h3>Use case + internal owner</h3>
+              <p>What the system does, where it sits in product or workflow, and who maintains the record.</p>
+            </div>
+          </article>
+          <article class="node">
+            <div>
+              <div class="step"><strong>02 / FLOW</strong><span class="status-dot"></span></div>
+              <h3>Data + model path</h3>
+              <p>Inputs, outputs, retention, restrictions, and whether sensitive information is involved.</p>
+            </div>
+          </article>
+          <article class="node">
+            <div>
+              <div class="step"><strong>03 / TERMS</strong><span class="status-dot"></span></div>
+              <h3>Vendor + contract controls</h3>
+              <p>Confidentiality, IP ownership, security, audit, indemnity, and customer promise alignment.</p>
+            </div>
+          </article>
+          <article class="node">
+            <div>
+              <div class="step"><strong>04 / REVIEW</strong><span class="status-dot"></span></div>
+              <h3>Human review + escalation</h3>
+              <p>How exceptions, high-impact outputs, notices, explanations, and approvals are handled.</p>
+            </div>
+          </article>
+          <article class="node">
+            <div>
+              <div class="step"><strong>05 / IP</strong><span class="status-dot"></span></div>
+              <h3>IP + evidence record</h3>
+              <p>Invention notes, authorship signals, assignments, trade secret controls, and product history.</p>
+            </div>
+          </article>
+          <article class="node">
+            <div>
+              <div class="step"><strong>06 / SCREEN</strong><span class="status-dot"></span></div>
+              <h3>Sensitive decision screen</h3>
+              <p>Employment, finance, housing, insurance, education, health, or similar exposure before launch.</p>
+            </div>
+          </article>
+        </div>
+
+        <aside class="asks">
+          <div class="mono">Who asks later?</div>
+          <h2>Design for the predictable request list.</h2>
+          <ul class="ask-list">
+            <li><strong>Enterprise procurement</strong>Vendor, security, data, audit, and explanation questions.</li>
+            <li><strong>Investor diligence</strong>Product risk, IP ownership, compliance posture, and records.</li>
+            <li><strong>Buyer diligence</strong>Evidence that AI use is controlled, assignable, and explainable.</li>
+            <li><strong>Board / management</strong>Owner map, escalation path, and readiness priorities.</li>
+            <li><strong>Regulator or customer</strong>Documented basis for how the company governs the use case.</li>
+          </ul>
+        </aside>
+      </section>
+
+      <footer class="cta">
+        <p><strong>Start with the Colorado Tech Company Legal Health Checklist.</strong> Use this visual to introduce the AI Launch File as one layer of a broader technology-company legal operating system.</p>
+        <a class="button" href="/colorado-tech-general-counsel">/colorado-tech-general-counsel</a>
+      </footer>
+    </section>
+
+    <p class="figma-notes">Figma handoff: build as a 1440px desktop frame with reusable card components, mono eyebrow labels, and token styles for ink, violet, paper, soft paper, line, and risk states. Keep the composition sparse; do not add icons or fake metrics.</p>
+  </main>
+</body>
+</html>

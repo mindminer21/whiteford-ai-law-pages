@@ -1,0 +1,202 @@
+{
+  "apply": false,
+  "customFields": {
+    "ai_patent_checks": {
+      "dataType": "LARGE_TEXT",
+      "fieldKey": "contact.ai_patent_checks",
+      "id": "0mv2zSrrPiwTw3Eufuwk",
+      "name": "AI Patent Checks",
+      "status": "existing"
+    },
+    "ai_patent_score": {
+      "dataType": "NUMERICAL",
+      "fieldKey": "contact.ai_patent_score",
+      "id": "L78KuFhyFafq5PSp5MjR",
+      "name": "AI Patent Score",
+      "status": "existing"
+    },
+    "ai_patent_score_band": {
+      "dataType": "TEXT",
+      "fieldKey": "contact.ai_patent_score_band",
+      "id": "xh6AfuK3kI9YCbkL3Wko",
+      "name": "AI Patent Score Band",
+      "status": "existing"
+    },
+    "ai_patent_stage": {
+      "dataType": "TEXT",
+      "fieldKey": "contact.ai_patent_stage",
+      "id": "7pf3mgT5ttvFjBjEpg5m",
+      "name": "AI Patent Stage",
+      "status": "existing"
+    },
+    "ai_readiness_checks": {
+      "dataType": "LARGE_TEXT",
+      "fieldKey": "contact.ai_readiness_checks",
+      "id": "TVTNLJnRkTMoWJiXIa6Q",
+      "name": "AI Readiness Checks",
+      "status": "existing"
+    },
+    "ai_readiness_score": {
+      "dataType": "NUMERICAL",
+      "fieldKey": "contact.ai_readiness_score",
+      "id": "meQ6hnsgWOYZzBcMmm2E",
+      "name": "AI Readiness Score",
+      "status": "existing"
+    },
+    "ai_recommended_offer": {
+      "dataType": "TEXT",
+      "fieldKey": "contact.ai_recommended_offer",
+      "id": "n356Iz93Y6U0ByWFFpGn",
+      "name": "AI Recommended Offer",
+      "status": "existing"
+    },
+    "ai_risk_score": {
+      "dataType": "NUMERICAL",
+      "fieldKey": "contact.ai_risk_score",
+      "id": "9gjvKtASWn49eo5mLeuB",
+      "name": "AI Risk Score",
+      "status": "existing"
+    },
+    "ai_score_band": {
+      "dataType": "TEXT",
+      "fieldKey": "contact.ai_score_band",
+      "id": "kWP4zmf9VwL5andDQfEk",
+      "name": "AI Score Band",
+      "status": "existing"
+    },
+    "ai_use_cases": {
+      "dataType": "LARGE_TEXT",
+      "fieldKey": "contact.ai_use_cases",
+      "id": "UlFRPwpAbUzvKQZeN0HA",
+      "name": "AI Use Cases",
+      "status": "existing"
+    },
+    "authority_pillar": {
+      "dataType": "TEXT",
+      "fieldKey": "contact.authority_pillar",
+      "id": "UQ78yAPlH4UAIZ8juHR0",
+      "name": "Authority Pillar",
+      "status": "existing"
+    },
+    "campaign_key": {
+      "dataType": "TEXT",
+      "fieldKey": "contact.campaign_key",
+      "id": "Qz7tTt2gHbiIKEuOKf9Q",
+      "name": "Campaign Key",
+      "status": "existing"
+    },
+    "campaign_label": {
+      "dataType": "TEXT",
+      "fieldKey": "contact.campaign_label",
+      "id": "ktyUD9eDp9A3v5WVNzvu",
+      "name": "Campaign Label",
+      "status": "existing"
+    },
+    "lead_magnet": {
+      "dataType": "TEXT",
+      "fieldKey": "contact.lead_magnet",
+      "id": "e3SJHNsUNdW67ouLWFYQ",
+      "name": "Lead Magnet",
+      "status": "existing"
+    },
+    "recommended_offer": {
+      "dataType": "TEXT",
+      "fieldKey": "contact.recommended_offer",
+      "id": "edel6dKsWHAFFUlB2mBM",
+      "name": "Recommended Offer",
+      "status": "existing"
+    },
+    "role": {
+      "dataType": "TEXT",
+      "fieldKey": "contact.role",
+      "id": "bDDyFlZKHlwIULA2OqgJ",
+      "name": "Role",
+      "status": "existing"
+    },
+    "source_channel": {
+      "dataType": "TEXT",
+      "fieldKey": "contact.source_channel",
+      "id": "qBbuCGIureBlrA5sHmRf",
+      "name": "Source Channel",
+      "status": "existing"
+    },
+    "source_page": {
+      "dataType": "TEXT",
+      "fieldKey": "contact.source_page",
+      "id": "INEppd3YGJBDLfHerE9a",
+      "name": "Source Page",
+      "status": "existing"
+    },
+    "youtube_topic": {
+      "dataType": "TEXT",
+      "fieldKey": "contact.youtube_topic",
+      "id": "ZrgezIZJxwAryrX5vWcy",
+      "name": "YouTube Topic",
+      "status": "existing"
+    }
+  },
+  "locationId": "tm68WWMrcAa3TqQbEAMa",
+  "tags": {
+    "interest:ai-compliance": {
+      "id": "SZ1VWuu7A8kAVpTDc1F0",
+      "status": "existing"
+    },
+    "interest:ai-patent-law": {
+      "id": "isgN68rHai067UsUbosa",
+      "status": "existing"
+    },
+    "interest:ma-readiness": {
+      "id": "vAasc4oplv4L2ITjcKHR",
+      "status": "existing"
+    },
+    "interest:tech-ogc": {
+      "id": "U3IETGpVAAUsCA2GAdX4",
+      "status": "existing"
+    },
+    "leadmagnet:ai-compliance-gameplan": {
+      "id": "aeMI5TVvDleFPBfx2aEI",
+      "status": "existing"
+    },
+    "leadmagnet:ai-patent-scorecard": {
+      "id": "q7OYTozjWdpqPbY6xsvi",
+      "status": "existing"
+    },
+    "leadmagnet:ma-readiness-checklist": {
+      "id": "Y6gtxKo1wQ9kWYcPejda",
+      "status": "existing"
+    },
+    "leadmagnet:tech-gc-checklist": {
+      "id": "J5hcj9jHgrmkTlfAz9AX",
+      "status": "existing"
+    },
+    "newsletter:ai": {
+      "id": "DWMSyc3Cw4jH1JuzGF23",
+      "status": "existing"
+    },
+    "newsletter:not-consented": {
+      "id": "PuS7pqcwDAgU9CzjjgCD",
+      "status": "existing"
+    },
+    "whiteford-mountain-west": {
+      "id": "UgFtJxRzDJuuXzwv0O7d",
+      "status": "existing"
+    },
+    "workflow:ai-compliance-readiness": {
+      "id": "aLH8Z1rmQSfjFIRHagGy",
+      "status": "existing"
+    },
+    "workflow:ai-patent-strategy": {
+      "id": "WZfRXwccEjnHflOUL9Nt",
+      "status": "existing"
+    },
+    "workflow:ma-readiness": {
+      "id": "vBjCsu6UEeaEOmvu0vhc",
+      "status": "existing"
+    },
+    "workflow:tech-gc-launchpad": {
+      "id": "JUG30WwG9bNmdUzT2Tn9",
+      "status": "existing"
+    }
+  },
+  "warnings": []
+}

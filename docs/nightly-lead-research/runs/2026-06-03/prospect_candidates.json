@@ -1,0 +1,390 @@
+{
+  "run_metadata": {
+    "run_date": "2026-06-03",
+    "run_label": "2026-06-03-qwen-nightly",
+    "source_tools": {
+      "web_search": "402 Payment Required - Insufficient credits",
+      "web_extract": "402 Payment Required - Insufficient credits",
+      "browser_fallback": "operational — TechCrunch article extraction",
+      "source_unavailable_report": "superseded — BROWSER_FALLBACK_RESUMED"
+    },
+    "prospect_count": 3,
+    "gate_summary": {
+      "source_extraction": "BROWSER_FALLBACK_RESUMED — curl + browser extraction confirmed operational",
+      "canonical_domain_status": "verified for all 3 prospects",
+      "contact_confidence_note": "named contacts from TechCrunch articles only; LinkedIn URLs need independent verification",
+      "mountain_west_support": "none claimed — prospects are national/international"
+    },
+    "consent_gating": "All prospects researched_only — ops:no-auto-send=true, no_email_opt_in, no workflow trigger tags"
+  },
+  "prospects": [
+    {
+      "company": {
+        "name": "Coralogix",
+        "domain": "coralogix.com",
+        "website": "https://coralogix.com",
+        "location_hq": "Boston, MA (founded in Israel; offices in India)",
+        "industry": "AI Observability / AI Monitoring Platform",
+        "size_signal": "Series F, $1.6B valuation, ~600 employees, $100M+ ARR",
+        "maturity_signal": "Founded 2014, 12 years old; 11 months between Series E and F",
+        "product_service_summary": "Software monitoring platform for logs, metrics, and traces with proprietary AI agent 'Olly' and agentic CLI interfaces. Competes with Datadog, New Relic, Splunk. Over 5,000 customers including IBM, Tradeweb, JFrog. More than 30 enterprise customers spend $1M+ annually.",
+        "ai_relevance": "Proprietary AI agent (Olly) + agentic interfaces for incident investigation; betting the company on AI-agent monitoring as a category; AI used in R&D for observability workflows"
+      },
+      "lane_classification": {
+        "primary_lane": "ai-patent",
+        "primary_lane_score": 4,
+        "primary_fit_score": 92,
+        "secondary_lanes": [
+          {"lane": "tech-gc", "score": 3},
+          {"lane": "ai-compliance", "score": 3}
+        ],
+        "lead_magnet_fit_lane": "ai-patent",
+        "lead_magnet_fit_tier": "very_high",
+        "lead_magnet_consented": false,
+        "branch_signals": {
+          "ai_patent": true,
+          "ai_compliance": true,
+          "tech_gc": true,
+          "ma_readiness": false
+        }
+      },
+      "scores": {
+        "fit_score": 92,
+        "urgency_score": 75,
+        "value_potential_score": 85,
+        "combined_priority_score": 85,
+        "contact_confidence": 80
+      },
+      "urgency_signals_applied": [
+        "Series F + $200M funding (past 12 months) — +15",
+        "Major product pivot to AI-agent observability (new category bet) — +15",
+        "11 months from Series E to F — rapid expansion velocity — +15",
+        "Revenue growth 60% YoY — +15",
+        "30+ enterprise customers at $1M+ ARR — +15",
+        "AI observability category is time-sensitive as AI-agent deployment accelerates — +5 (judgment)"
+      ],
+      "contacts": [
+        {
+          "name": "Ariel Assaraf",
+          "title": "Co-founder and CEO",
+          "role_category": "ceo",
+          "email": null,
+          "email_confidence": 0,
+          "linkedin_url": null,
+          "phone": null,
+          "source_url": "https://techcrunch.com/2026/06/03/coralogix-raises-200m-in-race-to-build-the-monitoring-layer-for-ai-agents/",
+          "confidence": 80,
+          "notes": "Pictured in TechCrunch article as CEO; named in interview. LinkedIn not extracted from article. Email likely ariel@coralogix.com but unverified."
+        },
+        {
+          "name": "Yoni Farin",
+          "title": "Co-founder",
+          "role_category": "founder",
+          "email": null,
+          "email_confidence": 0,
+          "linkedin_url": null,
+          "phone": null,
+          "source_url": "https://techcrunch.com/2026/06/03/coralogix-raises-200m-in-race-to-build-the-monitoring-layer-for-ai-agents/",
+          "confidence": 75,
+          "notes": "Named in article image caption as co-founder. LinkedIn not extracted from article."
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://techcrunch.com/2026/06/03/coralogix-raises-200m-in-race-to-build-the-monitoring-layer-for-ai-agents/",
+          "accessed_date": "2026-06-03",
+          "source_type": "press_release",
+          "supports_fact": "Series F $200M at $1.6B valuation; Ariel Assaraf named as CEO; company founded 2014; Boston HQ; 600+ employees; $100M+ ARR; 5000+ customers; AI agent Olly",
+          "confident": true,
+          "safe_for_outreach": true
+        },
+        {
+          "url": "https://coralogix.com",
+          "accessed_date": "2026-06-03",
+          "source_type": "company_website",
+          "supports_fact": "Company website — coralogix.com verified as live accessible domain",
+          "confident": true,
+          "safe_for_outreach": true
+        }
+      ],
+      "outreach": {
+        "status": "research_only",
+        "suggested_lead_magnet": "AI Patent Strategy Scorecard",
+        "suggested_lead_magnet_route": "/ai-patent-strategy-scorecard",
+        "outreach_hypothesis": "Coralogix's proprietary AI agent (Olly) and agentic CLI interfaces represent active, protectable AI innovation with clear patent strategy needs. Their rapid expansion from traditional observability to AI-agent monitoring (Series F in 11 months) likely means invention disclosure processes are accelerating — a common inflection point where AI-assisted R&D attribution and freedom-to-operate reviews become critical before competitive patent disclosures.",
+        "draft_ready": false,
+        "outreach_vector_options": ["educational_resource_note", "watchlist"]
+      },
+      "consent_gating": {
+        "ops_no_auto_send": true,
+        "consent_basis": "no_email_opt_in",
+        "approval_status": "no-auto-send",
+        "workflow_trigger_tags": [],
+        "suppression_tags": ["newsletter:not-consented"]
+      },
+      "linkedin_awareness_post_draft": {
+        "draft_text": "[CANDIDATE — FOR JEFF REVIEW]",
+        "company_tag_candidate": "@Coralogix",
+        "key_contact_tag_candidate": null,
+        "hook_source_url": "https://techcrunch.com/2026/06/03/coralogix-raises-200m-in-race-to-build-the-monitoring-layer-for-ai-agents/",
+        "lead_magnet_route": "/ai-patent-strategy-scorecard",
+        "lane": "ai-patent",
+        "status": "attorney_review_only"
+      },
+      "suppression": {
+        "conflict_of_interest": false,
+        "existing_representation": false,
+        "preference_match": null,
+        "consent_gap": true,
+        "suppress_reason": null
+      },
+      "next_action": {
+        "recommended": "attorney_review",
+        "notes": "High combined priority (85). First-party evidence from TechCrunch funding article + live website. Contact LinkedIn needs independent verification. No Mtn.West claim — national scope. Recommend attorney review for outreach draft focused on AI patent strategy for AI-agent companies."
+      },
+      "remediation_gate_checklist": [
+        "Gate 4: LinkedIn URLs for Assaraf/Farin not yet extracted — verify via search before CRM enrichment",
+        "Gate 5: No personal LinkedIn URL stored — company LinkedIn only if found, stored as company_linkedin_url",
+        "Gate 6: No Mountain West claim needed — national scope for AI patent lead magnet"
+      ]
+    },
+    {
+      "company": {
+        "name": "Layup Parts",
+        "domain": "layupparts.com",
+        "website": "https://layupparts.com",
+        "location_hq": "Huntington Beach, CA",
+        "industry": "Composites Manufacturing Platform (Defense/Dual-Use)",
+        "size_signal": "Series A, $42M new round + $9M seed (~$51M total); ~60 employees",
+        "maturity_signal": "~2 years old (founded ~2024 after Eakin left Anduril); transitioning from seed to growth",
+        "product_service_summary": "Platform to make ordering custom carbon fiber/fiberglass parts as easy as Amazon. Founded by ex-Anduril engineer Zack Eakin (formerly Chip Ganassi Racing, Boring Company). Uses software to reduce composite part production from manual to zero-click workflow: customer data in, shapes out. Backed by Founders Fund, Lux Capital, Marlinspike.",
+        "ai_relevance": "AI-driven manufacturing software; reducing composite part production workflow through software automation; ex-Anduril defense background with dual-use applications"
+      },
+      "lane_classification": {
+        "primary_lane": "ai-patent",
+        "primary_lane_score": 4,
+        "primary_fit_score": 88,
+        "secondary_lanes": [
+          {"lane": "ma-readiness", "score": 2},
+          {"lane": "tech-gc", "score": 2}
+        ],
+        "lead_magnet_fit_lane": "ai-patent",
+        "lead_magnet_fit_tier": "high",
+        "lead_magnet_consented": false,
+        "branch_signals": {
+          "ai_patent": true,
+          "ai_compliance": false,
+          "tech_gc": true,
+          "ma_readiness": true
+        }
+      },
+      "scores": {
+        "fit_score": 88,
+        "urgency_score": 70,
+        "value_potential_score": 60,
+        "combined_priority_score": 74,
+        "contact_confidence": 85
+      },
+      "urgency_signals_applied": [
+        "Series A $42M funding (past 6 months) — +15",
+        "Major product launch / category creation (Amazon of composites) — +15",
+        "Hiring to move into bigger facility — +10 (judgment, less clear signal)",
+        "Backed by Founders Fund (Palin) and Marlinspike (defense AI) — +15",
+        "Ex-Anduril + Palmer Luckey involvement — +15",
+        "Moving from seed to growth stage (inventor documentation likely not formalized) — +5 (judgment)"
+      ],
+      "contacts": [
+        {
+          "name": "Zack Eakin",
+          "title": "Founder and CEO",
+          "role_category": "founder",
+          "email": null,
+          "email_confidence": 0,
+          "linkedin_url": "https://www.linkedin.com/in/zack-eakin-engineer/",
+          "phone": null,
+          "source_url": "https://techcrunch.com/2026/06/02/ex-anduril-engineer-raises-42m-to-build-the-amazon-of-composite-parts/",
+          "confidence": 85,
+          "notes": "Named CEO in TechCrunch article; previous roles: Chip Ganassi Racing (carbon fiber), Boring Company (first engineer, 2017), Anduril (engineer, 2021). ~20 years composite experience. LinkedIn URL requires validation."
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://techcrunch.com/2026/06/02/ex-anduril-engineer-raises-42m-to-build-the-amazon-of-composite-parts/",
+          "accessed_date": "2026-06-03",
+          "source_type": "press_release",
+          "supports_fact": "Series A $42M; HQ Huntington Beach, CA; 60 employees; Zack Eakin as founder/CEO; background from Anduril, Boring Company, Chip Ganassi Racing; carbon fiber/fiberglass custom parts platform; Founders Fund and Lux Capital backers",
+          "confident": true,
+          "safe_for_outreach": true
+        },
+        {
+          "url": "https://layupparts.com",
+          "accessed_date": "2026-06-03",
+          "source_type": "company_website",
+          "supports_fact": "Company website accessible — domain verification",
+          "confident": true,
+          "safe_for_outreach": true
+        }
+      ],
+      "outreach": {
+        "status": "research_only",
+        "suggested_lead_magnet": "AI Patent Strategy Scorecard",
+        "suggested_lead_magnet_route": "/ai-patent-strategy-scorecard",
+        "outreach_hypothesis": "Layup Parts is building a zero-click, software-driven composite parts ordering platform — a novel AI-assisted manufacturing workflow with clear invention potential. As a ~2-year-old startup scaling from seed, the founder likely has technical invention documentation but may not have formalized patent strategy before the rapid Series A validation accelerates competitor responses.",
+        "draft_ready": false,
+        "outreach_vector_options": ["educational_resource_note", "watchlist"]
+      },
+      "consent_gating": {
+        "ops_no_auto_send": true,
+        "consent_basis": "no_email_opt_in",
+        "approval_status": "no-auto-send",
+        "workflow_trigger_tags": [],
+        "suppression_tags": ["newsletter:not-consented"]
+      },
+      "linkedin_awareness_post_draft": {
+        "draft_text": "[CANDIDATE — FOR JEFF REVIEW]",
+        "company_tag_candidate": "@LayupParts",
+        "key_contact_tag_candidate": null,
+        "hook_source_url": "https://techcrunch.com/2026/06/02/ex-anduril-engineer-raises-42m-to-build-the-amazon-of-composite-parts/",
+        "lead_magnet_route": "/ai-patent-strategy-scorecard",
+        "lane": "ai-patent",
+        "status": "attorney_review_only"
+      },
+      "suppression": {
+        "conflict_of_interest": false,
+        "existing_representation": false,
+        "preference_match": null,
+        "consent_gap": true,
+        "suppress_reason": null
+      },
+      "next_action": {
+        "recommended": "attorney_review",
+        "notes": "Strong AI-patent fit (88 combined priority 74). Defense/dual-use angle adds IP sensitivity. Single verified contact (Eakin). LinkedIn URL needs validation. California-based — no Mtn.West claim."
+      },
+      "remediation_gate_checklist": [
+        "Gate 4: LinkedIn URL for Eakin requires independent validation",
+        "Gate 5: Personal LinkedIn not confirmed from official company source yet",
+        "Gate 6: No Mountain West claim needed — California national scope"
+      ]
+    },
+    {
+      "company": {
+        "name": "Cyera",
+        "domain": "cyera.com",
+        "website": "https://cyera.com",
+        "location_hq": "Not specified in article (likely NYC/Bay Area — data security company)",
+        "industry": "Data Storage Security / Enterprise AI Data Governance",
+        "size_signal": "Series F $400M (Feb 2026) at $9B; now finalizing $300M+ Series F at $12B; $150M+ ARR; 500+ new hires in 2025",
+        "maturity_signal": "Founded 2021; 5 years old; post-Series F scaling phase; revenue tripled in 2025",
+        "product_service_summary": "Data storage security platform that safeguards enterprise data from attackers weaponizing AI. One-fifth of Fortune 500 are customers. Acquired Ryft (Index Ventures-backed) and Genie Security (<1yr old). Revenue >$150M ARR. 80x ARR multiple ($12B valuation). Operating losses from aggressive sales hiring (500 headcount additions).",
+        "ai_relevance": "Platform explicitly positioned around defending enterprise data against AI-weaponized attackers; AI compliance and governance exposure very high given Fortune 500 customer base, rapid M&A, and AI security claims"
+      },
+      "lane_classification": {
+        "primary_lane": "ai-compliance",
+        "primary_lane_score": 4,
+        "primary_fit_score": 85,
+        "secondary_lanes": [
+          {"lane": "tech-gc", "score": 3},
+          {"lane": "ai-patent", "score": 2}
+        ],
+        "lead_magnet_fit_lane": "ai-compliance",
+        "lead_magnet_fit_tier": "very_high",
+        "lead_magnet_consented": false,
+        "branch_signals": {
+          "ai_patent": true,
+          "ai_compliance": true,
+          "tech_gc": true,
+          "ma_readiness": false
+        }
+      },
+      "scores": {
+        "fit_score": 85,
+        "urgency_score": 80,
+        "value_potential_score": 90,
+        "combined_priority_score": 85,
+        "contact_confidence": 50
+      },
+      "urgency_signals_applied": [
+        "Series F + $300M funding (past 6 months) — +15",
+        "Acquisition of Ryft and Genie Security — strategic expansion — +15",
+        "500+ headcount additions in 2025 — hiring surge — +15",
+        "Fortune 500 customer base (1/5) — enterprise governance exposure — +15",
+        "Data security + AI positioning — regulatory exposure (Colorado AI Act, enterprise vendor AI risk) — +15",
+        "Operating losses despite massive revenue — M&A consolidation signal — +5 (judgment)"
+      ],
+      "contacts": [
+        {
+          "name": "Not specified in article",
+          "title": "Unknown",
+          "role_category": "other",
+          "email": null,
+          "email_confidence": 0,
+          "linkedin_url": null,
+          "phone": null,
+          "source_url": "https://techcrunch.com/2026/06/02/cyera-eyes-12b-valuation-at-80x-arr-multiple-despite-operating-losses/",
+          "confidence": 20,
+          "notes": "No named contact in TechCrunch article. Company spokeperson declined to comment. Gate 4 fails — cannot stage named contact. Downgrade to company-level research only."
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://techcrunch.com/2026/06/02/cyera-eyes-12b-valuation-at-80x-arr-multiple-despite-operating-losses/",
+          "accessed_date": "2026-06-03",
+          "source_type": "press_release",
+          "supports_fact": "Data storage security company; $12B valuation at 80x ARR; $300M+ finalizing round (Evolution Equity Partners); $150M+ ARR; founded 2021; 500+ jobs in 2025; Fortune 500 customers (1/5); acquired Ryft and Genie Security",
+          "confident": true,
+          "safe_for_outreach": true
+        },
+        {
+          "url": "https://cyera.com",
+          "accessed_date": "2026-06-03",
+          "source_type": "company_website",
+          "supports_fact": "Company website — domain verification",
+          "confident": true,
+          "safe_for_outreach": true
+        }
+      ],
+      "outreach": {
+        "status": "research_only",
+        "suggested_lead_magnet": "AI Compliance Gameplan Builder",
+        "suggested_lead_magnet_route": "/ai-compliance-gameplan",
+        "outreach_hypothesis": "Cyera's massive expansion (80x ARR multiple, 500+ headcount additions, acquisitions of Ryft and Genie) and explicit AI-weaponized defense positioning creates significant AI governance exposure. As a growing enterprise data security company with Fortune 500 customers, their compliance framework for their own AI tooling and data handling is a critical readiness signal — especially as Colorado AI Act and enterprise vendor AI risk frameworks mature.",
+        "draft_ready": false,
+        "outreach_vector_options": ["educational_resource_note", "watchlist"]
+      },
+      "consent_gating": {
+        "ops_no_auto_send": true,
+        "consent_basis": "no_email_opt_in",
+        "approval_status": "no-auto-send",
+        "workflow_trigger_tags": [],
+        "suppression_tags": ["newsletter:not-consented"]
+      },
+      "linkedin_awarement_post_draft": {
+        "draft_text": "[CANDIDATE — FOR JEFF REVIEW]",
+        "company_tag_candidate": "@Cyera",
+        "key_contact_tag_candidate": null,
+        "hook_source_url": "https://techcrunch.com/2026/06/02/cyera-eyes-12b-valuation-at-80x-arr-multiple-despite-operating-losses/",
+        "lead_magnet_route": "/ai-compliance-gameplan",
+        "lane": "ai-compliance",
+        "status": "attorney_review_only"
+      },
+      "suppression": {
+        "conflict_of_interest": false,
+        "existing_representation": false,
+        "preference_match": null,
+        "consent_gap": true,
+        "suppress_reason": null
+      },
+      "next_action": {
+        "recommended": "attorney_review",
+        "notes": "Very-high AI compliance fit (85 combined priority 85). High value (90). BUT: no named contact identified — Gate 4 forces research_only with company-level research only. Need to research leadership team separately before CRM enrichment. Recommend tech-GC lane as alternative follow-up if no contact found."
+      },
+      "remediation_gate_checklist": [
+        "Gate 4 FAILED: No named contact found in primary article source — cannot stage named-person outreach",
+        "Remediation: Research leadership team via cyera.com/team or Crunchbase before CRM progression",
+        "Gate 5: No LinkedIn URLs — company-level only until verification",
+        "Gate 6: No Mountain West claim needed"
+      ],
+      "contact_confidence_note": "CONTACT_CONFIDENCE BELOW 60 — research_only stage; no named recipient draft until leadership team is identified and verified"
+    }
+  ]
+}

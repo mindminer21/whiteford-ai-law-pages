@@ -1,0 +1,22 @@
+{
+  "campaignKey": "ai-compliance",
+  "sourcePage": "/ai-compliance-gameplan",
+  "sourceChannel": "jeff-production-smoke-test",
+  "contact": {
+    "name": "TEST Jeff Production AI Compliance",
+    "email": "jeff+whiteford-prod-ai-compliance-test@schellip.com",
+    "company": "Whiteford Production Test Company",
+    "role": "Internal production smoke test",
+    "subscribe": true
+  },
+  "assessment": {
+    "riskScore": 37,
+    "readinessScore": 81,
+    "tags": ["internal-test", "production-smoke-test"]
+  },
+  "aiComplianceGameplan": {
+    "maturityLevel": "Production smoke test",
+    "topGaps": ["Vendor review", "Governance owner"],
+    "recommendedNextStep": "Internal production smoke-test review only"
+  }
+}

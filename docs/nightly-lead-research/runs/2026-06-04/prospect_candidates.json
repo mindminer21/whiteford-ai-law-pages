@@ -1,0 +1,8 @@
+{
+  "run_date": "2026-06-04",
+  "run_label": "nightly_qwen_prospect_research",
+  "status": "halted",
+  "halt_reason": "Live source extraction unavailable — Firecrawl credits exhausted; browser fallback not available in session toolset.",
+  "prospect_count": 0,
+  "prospect_candidates": []
+}

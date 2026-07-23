@@ -1,0 +1,135 @@
+{
+  "run_mode": "controlled_test",
+  "created_at": "2026-05-06T06:42:29+00:00",
+  "live_writes": {
+    "ghl": false,
+    "supabase": false,
+    "apollo": false,
+    "outreach": false
+  },
+  "candidates": [
+    {
+      "company": {
+        "name": "AION Robotics Corporation",
+        "domain": "aionrobotics.com",
+        "website_url": "https://www.aionrobotics.com/",
+        "location": "Arvada / Denver metro, Colorado",
+        "state_region": "Colorado / Mountain West",
+        "industry": "Autonomous robotics / rugged industrial AI systems",
+        "segment": "ai-patent",
+        "primary_offer_lane": "ai-patent",
+        "secondary_offer_lanes": [
+          "tech-gc",
+          "ma-readiness"
+        ],
+        "source_type": "controlled_test_public_source_research",
+        "source_url": "https://www.aionrobotics.com/",
+        "source_note": "Company site positions AION as American-made rugged autonomous tools with onboard AI and hardened autonomy for outdoor industrial jobsites.",
+        "scores": {
+          "fit_score": 90,
+          "urgency_score": 72,
+          "value_potential_score": 78,
+          "combined_priority_score": 83
+        },
+        "lead_magnet": "AI Patent Strategy Scorecard",
+        "recommended_offer": "AI Patent Strategy Sprint",
+        "pipeline_stage": "research_staged",
+        "risk_level": "attorney_review_required",
+        "suppression_status": "not_checked",
+        "conflicts_status": "required_before_send",
+        "notes": "Strong AI patent fit: rugged autonomous vehicles, edge AI sensing, onboard compute, C3 command/control, M6 and L4 autonomous vehicle platform, investor-facing AI labor framing. Secondary tech OGC / M&A readiness fit due to investor portal, funding/investor materials, industrial customers, and likely IP/contracts/commercial legal complexity. Suggested next action: attorney review of an educational AI Patent Strategy Scorecard invitation; do not contact until conflicts/suppression/approval checks clear. Cal.com routing: if approved, CTA should offer either the scorecard first or a short AI patent strategy readiness discussion using Jeff-approved scheduling URL."
+      },
+      "contacts": [
+        {
+          "name": "Nicholas Nunno",
+          "title": "CEO / Founder / Product Architect",
+          "role_category": "founder_ceo_technical_product",
+          "email": "nickn@aionrobotics.com",
+          "linkedin_url": "https://www.linkedin.com/in/nicholas-nunno-212992bb",
+          "phone": "(303) 420-5175",
+          "source_type": "public_directory_and_company_contact_research",
+          "source_url": "https://www.aionrobotics.com/investors",
+          "confidence": 72,
+          "permission_basis": "public-source research; attorney review, suppression check, and conflicts/pre-contact clearance required before outreach",
+          "suppression_status": "not_checked"
+        }
+      ],
+      "evidence": [
+        {
+          "source_url": "https://www.aionrobotics.com/",
+          "source_type": "company_website",
+          "fact_classification": "public",
+          "evidence_snippet": "AION markets rugged autonomous vehicles with onboard Artificial Intelligence and hardened autonomy for mines, oilfields, construction, infrastructure, methane monitoring, and harsh environments.",
+          "supported_fact": "AION uses AI-enabled autonomous robotics in industrial settings, creating strong AI patent strategy and tech legal-readiness relevance.",
+          "confidence": "high",
+          "corroboration": "official company website",
+          "safe_for_outreach": "yes",
+          "safe_fact_for_copy": "public positioning around onboard AI, hardened autonomy, and rugged autonomous industrial tools"
+        },
+        {
+          "source_url": "https://www.aionrobotics.com/",
+          "source_type": "company_website",
+          "fact_classification": "public",
+          "evidence_snippet": "AION describes C3, M6, and L4 products including edge AI sensing, onboard compute, physical task execution, no-code deployment, payload and runtime specs.",
+          "supported_fact": "The product platform likely includes protectable technical systems, software/control architecture, sensor integration, and product-roadmap IP considerations.",
+          "confidence": "high",
+          "corroboration": "official company website",
+          "safe_for_outreach": "yes",
+          "safe_fact_for_copy": "public details about C3, M6, L4, edge AI sensing, onboard compute, and autonomous site-management vehicles"
+        },
+        {
+          "source_url": "https://www.aionrobotics.com/investors",
+          "source_type": "company_investor_page",
+          "fact_classification": "public",
+          "evidence_snippet": "Investor page identifies Nicholas Nunno as CEO with 20 years in Engineering & Business Management and frames the company around physical manifestations of AI and automation of dull, dirty, dangerous tasks.",
+          "supported_fact": "Nicholas Nunno appears to be an appropriate founder/CEO decision maker for AI patent strategy and productized tech legal readiness outreach.",
+          "confidence": "high",
+          "corroboration": "official company investor page",
+          "safe_for_outreach": "yes",
+          "safe_fact_for_copy": "public investor-page role and AI labor automation framing"
+        },
+        {
+          "source_url": "https://www.zoominfo.com/pic/aion-robotics/456188162",
+          "source_type": "public_business_directory",
+          "fact_classification": "public",
+          "evidence_snippet": "ZoomInfo lists AION Robotics at 19000 Hwy 72, Arvada, CO, 80007; phone (303) 420-5175; website www.aionrobotics.com; Nicholas Nunno as CEO.",
+          "supported_fact": "Public business directory supports company location, general phone, website, and CEO identity, but contact details should be verified before use.",
+          "confidence": "medium",
+          "corroboration": "third-party business directory",
+          "safe_for_outreach": "conditional",
+          "safe_fact_for_copy": "Arvada, Colorado company location and public company phone, subject to verification"
+        },
+        {
+          "source_url": "https://contactout.com/Nicholas-Nunno-316738188",
+          "source_type": "public_contact_directory",
+          "fact_classification": "public",
+          "evidence_snippet": "ContactOut profile identifies Nicholas Nunno as Founder / Product Architect at AION Robotics and indicates work email/phone data exists; direct personal details should be verified and handled conservatively.",
+          "supported_fact": "Third-party contact directory supports Nicholas Nunno role and suggests business email availability; use only after verification and attorney review.",
+          "confidence": "medium",
+          "corroboration": "third-party contact directory plus official investor page role confirmation",
+          "safe_for_outreach": "conditional",
+          "safe_fact_for_copy": "Nicholas Nunno founder/product architect role, with contact data requiring verification"
+        }
+      ],
+      "outreach_drafts": [
+        {
+          "draft_type": "email",
+          "channel": "manual_email_review",
+          "title": "AION Robotics AI Patent Strategy Scorecard invitation",
+          "subject": "AI invention documentation for rugged autonomous systems",
+          "body": "Attorney-review draft only \u2014 not approved to send.\n\nNicholas, I saw AION Robotics\u2019 public materials describing rugged autonomous vehicles with onboard AI, edge sensing, C3 command/control, and M6/L4 site-management platforms for industrial jobsites. For companies building AI-enabled physical systems, one useful early exercise is pressure-testing whether the invention record clearly captures human technical contribution, ownership, product-roadmap priorities, and the boundary between patent and trade-secret protection.\n\nJeff Schell has a free AI Patent Strategy Scorecard intended as an educational readiness tool for founders and technical leaders. It is not legal advice, but it may help identify where an AI Patent Strategy Sprint would or would not be worth discussing.\n\nSuggested CTA after approval: invite Nicholas to complete the AI Patent Strategy Scorecard first; if the score indicates high readiness, offer Jeff\u2019s approved Cal.com scheduling link for a short strategy discussion.",
+          "source_facts": [
+            "AION public materials describe rugged autonomous vehicles with onboard AI, edge sensing, C3 command/control, and M6/L4 site-management platforms.",
+            "Investor page identifies Nicholas Nunno as CEO and frames AION around physical manifestations of AI."
+          ],
+          "source_urls": [
+            "https://www.aionrobotics.com/",
+            "https://www.aionrobotics.com/investors"
+          ],
+          "risk_level": "attorney_review_required",
+          "internal_review_notes": "Verify contact data, run conflicts/suppression checks, and confirm Jeff-approved Cal.com URL before any outreach."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,148 @@
+{
+  "task": "prepare_internal_attorney_review_agent_targeting_packet",
+  "company": {
+    "prospect_id": "prospect_mind_robotics_20260525",
+    "name": "Mind Robotics",
+    "domain": "mindrobotics.ai",
+    "website_url": "https://www.mindrobotics.ai/",
+    "location": "Palo Alto, CA (spinout from Rivian, Normal, IL)",
+    "state_region": "California",
+    "industry": "AI industrial robotics / humanoid robots / physical AI",
+    "segment": "ai-patent",
+    "primary_offer_lane": "ai-patent",
+    "source_type": "nightly_public_source_research",
+    "source_url": "https://www.wsj.com/business/autos/rivian-ceos-robotics-spinoff-raises-400-million-4c54a9a0",
+    "source_note": "Mind Robotics is building AI-enabled industrial robots for factory and manufacturing work. Founded and led by Rivian CEO RJ Scaringe as a spinout in late 2025. Rivian is a partner and major shareholder, providing data on manufacturing processes. Aiming to deploy humanoid-style robots for physical automation in industrial settings. Total funding over $1 billion.",
+    "pipeline_stage": "research_staged",
+    "scores": {
+      "fit_score": 90,
+      "urgency_score": 70,
+      "value_potential_score": 75,
+      "combined_priority_score": 80,
+      "contact_confidence": 65
+    },
+    "lead_magnet": "AI Patent Strategy Scorecard",
+    "recommended_offer": "AI Patent Strategy Scorecard / attorney-review Agent Targeting packet",
+    "risk_level": "attorney_review_required",
+    "suppression_status": "consent_gap_no_auto_send",
+    "conflicts_status": "required_before_send",
+    "owner": "qwen-local",
+    "notes": "Research-only nightly candidate. No outreach authorization; attorney review, conflicts, suppression, and source-current checks required before external use.\nMind Robotics is building AI-enabled industrial robots for factory and manufacturing work. Founded and led by Rivian CEO RJ Scaringe as a spinout in late 2025. Rivian is a partner and major shareholder, providing data on manufacturing processes. Aiming to deploy humanoid-style robots for physical automation in industrial settings. Total funding over $1 billion.\nSize signal: Founded late 2025; $500M Series A + $400M follow-on by Kleiner Perkins; total >$1B funding\nMaturity signal: Spinout from Rivian (EV company founded 2009, IPO'd); parent Rivian PE-backed aging fund; founder RJ Scaringe has exit context\nValidation gates: {\"gate_1_live_source\": \"PASS\", \"gate_2_domain_canonical\": \"INFO — mindrobotics.ai domain not directly verified for content. RJ Scaringe and Mind Robotics confirmed via WSJ/Forbes/BusinessWire. Domain canonicalization needs attention.\", \"gate_3_current_urls\": \"INFO — News sources (WSJ, Forbes, BusinessWire) returned content. Company domain not directly verified.\", \"gate_4_contact_validation\": \"MODERATE — RJ Scaringe confirmed via multiple news sources as Mind Robotics founder. Title verified as Founder/Chairman. Rivian CEO confirmed. No direct business email.\", \"gate_5_linkedin_hygiene\": \"INFO — RJ Scaringe LinkedIn not directly located or verified. Name found in news articles. Should be verified via search if LinkedIn tagging is intended.\", \"gate_6_geographic_support\": \"HQ appears to be Palo Alto, CA (spinout from Rivian, Normal, IL). No Mountain West claim.\", \"gate_7_outreach_readiness\": \"draft_ready for attorney review only. M&A secondary angle adds unique value. No workflow trigger tags. ops:no-auto-send = true.\"}\nConflict caution: Mind Robotics / Rivian conflict-of-interest check required."
+  },
+  "contacts": [
+    {
+      "name": "RJ Scaringe",
+      "title": "Founder, Chairman of Board (Mind Robotics); CEO (Rivian)",
+      "role_category": "ceo",
+      "email": null,
+      "linkedin_url": null,
+      "phone": null,
+      "source_type": "news",
+      "source_url": "https://www.wsj.com/business/autos/rivian-ceos-robotics-spinoff-raises-400-million-4c54a9a0",
+      "confidence": 65,
+      "permission_basis": "public-source research; attorney review required before outreach",
+      "suppression_status": "not_checked",
+      "notes": "Multiple independent news sources (WSJ, Forbes, BusinessWire, LinkedIn posts) confirm RJ Scaringe as founder/creator of Mind Robotics spinout and current Rivian CEO"
+    }
+  ],
+  "evidence": [
+    {
+      "source_url": "https://www.wsj.com/business/autos/rivian-ceos-robotics-spinoff-raises-400-million-4c54a9a0",
+      "accessed_at": "2026-05-25",
+      "source_type": "news",
+      "fact_classification": "public",
+      "evidence_snippet": "Rivian CEO RJ Scaringe founded Mind Robotics as spinout in late 2025; raised $400M Kleiner Perkins; total >$1B",
+      "supported_fact": "Rivian CEO RJ Scaringe founded Mind Robotics as spinout in late 2025; raised $400M Kleiner Perkins; total >$1B",
+      "confidence": "high",
+      "corroboration": "public source cited in nightly research packet",
+      "safe_for_outreach": "conditional",
+      "safe_fact_for_copy": "Rivian CEO RJ Scaringe founded Mind Robotics as spinout in late 2025; raised $400M Kleiner Perkins; total >$1B"
+    },
+    {
+      "source_url": "https://www.businesswire.com/news/home/20260311414783/en/Mind-Robotics-Announces-%24500M-Financing-to-Support-Deployment-of-AI-Powered-Robots-at-Industrial-Scale",
+      "accessed_at": "2026-05-25",
+      "source_type": "press_release",
+      "fact_classification": "public",
+      "evidence_snippet": "$500M Series A co-led by Accel and Andreessen horowitz; building/deploying AI-powered robots for manufacturing",
+      "supported_fact": "$500M Series A co-led by Accel and Andreessen horowitz; building/deploying AI-powered robots for manufacturing",
+      "confidence": "high",
+      "corroboration": "public source cited in nightly research packet",
+      "safe_for_outreach": "conditional",
+      "safe_fact_for_copy": "$500M Series A co-led by Accel and Andreessen horowitz; building/deploying AI-powered robots for manufacturing"
+    },
+    {
+      "source_url": "https://www.forbes.com/sites/edgarsten/2026/05/19/rivian-founders-new-company-aims-to-evolve-humanoid-robots/",
+      "accessed_at": "2026-05-25",
+      "source_type": "news",
+      "fact_classification": "public",
+      "evidence_snippet": "Mind Robotics aims to evolve humanoid robots; Rivian connection confirmed by Forbes",
+      "supported_fact": "Mind Robotics aims to evolve humanoid robots; Rivian connection confirmed by Forbes",
+      "confidence": "high",
+      "corroboration": "public source cited in nightly research packet",
+      "safe_for_outreach": "conditional",
+      "safe_fact_for_copy": "Mind Robotics aims to evolve humanoid robots; Rivian connection confirmed by Forbes"
+    }
+  ],
+  "outreach_drafts": [
+    {
+      "draft_type": "email",
+      "channel": "manual_email_review",
+      "title": "AI patent scorecard attorney-review angle: Mind Robotics",
+      "subject": "Attorney-review-only AI patent strategy angle for Mind Robotics",
+      "body": "ATTORNEY REVIEW ONLY — DO NOT SEND.\nTarget: RJ Scaringe\nPublic fact hook / hypothesis: Mind Robotics is a Rivian spinout with >$1B in funding focusing on AI-powered industrial robots. The dual relevance to AI Patent Strategy (deep technical AI/robotics with significant IP potential) and M&A Readiness (aging Rivian PE fund, spinout structure, subsidiary relationships) makes this a particularly interesting prospect. As a newly founded company with massive capital and a founder who has built and exited a company (Rivian), there is both IP creation urgency and future transaction proximity. The AI Patent Strategy Scorecard is the primary lead magnet; M&A readiness is a secondary consideration for the attorney.\nSuggested lead magnet: AI Patent Strategy Scorecard — /ai-patent-strategy-scorecard\nLinkedIn awareness draft exists for internal review only; do not post or tag without exact approval.\n\nInternal LinkedIn awareness draft:\nA company founded late 2025 just crossed $1 billion in funding.\n\nThat's fast.\n\nBut the real question for any company building AI-powered robots isn't how much they raised.\n\nIt's whether they documented the right things before the right people started asking.\n\nFor a spinout from an IPO'd EV company going into humanoid robotics:\n- the parent-child IP relationships need to be clean,\n- the human-contribution-to-AI-inventions needs to be defensible,\n- and the disclosure timeline needs to be planned — not reactive.\n\nFor #founders: spinout IP is your hardest IP. Get it right from day one.\nFor #investors: valuation is easy. IP ownership is where the real risk lives.\nFor #robotics-engineers: your documentation is as important as your prototype.\n\nEducational starting point: AI Patent Strategy Scorecard\nhttps://whiteford-ai-law-pages.vercel.app/ai-patent-strategy-scorecard\n\nGuardrail: no outreach, email/SMS, workflow enrollment, trigger tags, LinkedIn/social action, Clio write, live CRM/Supabase sync, public/client-facing use, or send without Jeff exact approval plus attorney/conflicts/suppression review.",
+      "source_facts": [
+        "Rivian CEO RJ Scaringe founded Mind Robotics as spinout in late 2025; raised $400M Kleiner Perkins; total >$1B",
+        "$500M Series A co-led by Accel and Andreessen horowitz; building/deploying AI-powered robots for manufacturing",
+        "Mind Robotics aims to evolve humanoid robots; Rivian connection confirmed by Forbes"
+      ],
+      "source_urls": [
+        "https://www.wsj.com/business/autos/rivian-ceos-robotics-spinoff-raises-400-million-4c54a9a0",
+        "https://www.businesswire.com/news/home/20260311414783/en/Mind-Robotics-Announces-%24500M-Financing-to-Support-Deployment-of-AI-Powered-Robots-at-Industrial-Scale",
+        "https://www.forbes.com/sites/edgarsten/2026/05/19/rivian-founders-new-company-aims-to-evolve-humanoid-robots/"
+      ],
+      "risk_level": "attorney_review_required",
+      "internal_review_notes": "Not approved for sending. Research-only local staging; requires attorney review, conflicts, suppression, source-current checks, and Jeff exact approval before external use."
+    }
+  ],
+  "source_candidate_path": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-25/prospect_candidates.json",
+  "normalized_store_path": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-25/prospect_candidates.normalized_for_store.json",
+  "guardrails": {
+    "external_action_allowed": false,
+    "approval_required": true,
+    "no_outreach_no_workflows_no_social_no_clio_no_live_sync": true,
+    "required_before_external_use": [
+      "Jeff exact approval",
+      "attorney review",
+      "conflicts check",
+      "suppression/opt-out check",
+      "source-current verification"
+    ]
+  },
+  "validation_gates": {
+    "gate_1_live_source": "PASS",
+    "gate_2_domain_canonical": "INFO — mindrobotics.ai domain not directly verified for content. RJ Scaringe and Mind Robotics confirmed via WSJ/Forbes/BusinessWire. Domain canonicalization needs attention.",
+    "gate_3_current_urls": "INFO — News sources (WSJ, Forbes, BusinessWire) returned content. Company domain not directly verified.",
+    "gate_4_contact_validation": "MODERATE — RJ Scaringe confirmed via multiple news sources as Mind Robotics founder. Title verified as Founder/Chairman. Rivian CEO confirmed. No direct business email.",
+    "gate_5_linkedin_hygiene": "INFO — RJ Scaringe LinkedIn not directly located or verified. Name found in news articles. Should be verified via search if LinkedIn tagging is intended.",
+    "gate_6_geographic_support": "HQ appears to be Palo Alto, CA (spinout from Rivian, Normal, IL). No Mountain West claim.",
+    "gate_7_outreach_readiness": "draft_ready for attorney review only. M&A secondary angle adds unique value. No workflow trigger tags. ops:no-auto-send = true."
+  },
+  "consent_gating": {
+    "ops_no_auto_send": true,
+    "consent_basis": "no_email_opt_in",
+    "approval_status": "no-auto-send",
+    "workflow_trigger_tags": [],
+    "suppression_tags": [
+      "newsletter:not-consented"
+    ]
+  },
+  "source_packet_prospect_id": "mind-robotics-20260525",
+  "local_growth_os_prospect_id": "prospect_mind_robotics_20260525",
+  "work_item_id": "work_nightly_agent_targeting_20260525_7248b1f771bf454d7328c416",
+  "remediation_checklist": [
+    "Attorney review required before external use.",
+    "Conflicts, suppression/opt-out, prior-touch, and source-current checks required before any outreach.",
+    "Do not send, post, tag, trigger workflows, sync live CRM/Supabase, or write Clio without Jeff exact approval.",
+    "Mind Robotics / Rivian conflict-of-interest check required before any outreach or external use."
+  ]
+}

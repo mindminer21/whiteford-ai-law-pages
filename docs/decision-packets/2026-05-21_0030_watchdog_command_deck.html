@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Private Watchdog Command Deck — Whiteford / Schell IP — 2026-05-21 00:30</title>
+  <style>
+    :root{
+      --ink:#003756;--ink-deep:#002b45;--charcoal:#243447;--muted:#596676;--paper:#fffdf8;--bg:#f5f1e8;
+      --line:#d8d0c3;--line-strong:#b8ab99;--accent:#5a32a3;--accent-soft:#f0eaff;--gold:#b99057;
+      --safe:#315f4f;--safe-bg:#edf5f0;--hold:#8d332d;--hold-bg:#fff0ed;--warn:#77531b;--warn-bg:#fff7e6;
+      --white:#fff;--shadow:0 30px 100px rgba(0,43,69,.18)
+    }
+    *{box-sizing:border-box}html,body{height:100%}
+    body{margin:0;overflow:hidden;color:var(--ink);background:linear-gradient(90deg,rgba(0,55,86,.045) 1px,transparent 1px),linear-gradient(180deg,rgba(0,55,86,.035) 1px,transparent 1px),var(--bg);background-size:80px 80px;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,Helvetica,sans-serif}
+    button{font:inherit}button:focus-visible,a:focus-visible{outline:4px solid rgba(90,50,163,.45);outline-offset:4px}
+    code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;background:#f0ebe2;border:1px solid rgba(216,208,195,.95);padding:2px 7px;overflow-wrap:anywhere;color:#18314a}
+    .skip{position:absolute;left:18px;top:18px;z-index:30;transform:translateY(-82px);padding:10px 14px;background:var(--ink-deep);color:#fff;border-radius:999px;text-decoration:none}.skip:focus{transform:translateY(0)}
+    .viewport{position:fixed;inset:0;display:grid;place-items:center;padding:24px}.deck{width:1920px;height:1080px;position:relative;transform-origin:center center;background:var(--paper);border:1px solid var(--line-strong);box-shadow:var(--shadow);overflow:hidden}.slide{position:absolute;inset:0;display:none;padding:76px 96px 84px;background:var(--paper);opacity:0;transform:translateX(14px);transition:opacity 150ms ease,transform 150ms ease}.slide.active{display:block;opacity:1;transform:translateX(0)}
+    .slide:before{content:"";position:absolute;inset:0 0 auto 0;height:12px;background:linear-gradient(90deg,var(--ink-deep),var(--ink),var(--gold))}.slide.hold:before,.slide.wall:before{background:linear-gradient(90deg,var(--hold),var(--ink-deep))}.slide.safe:before{background:linear-gradient(90deg,var(--safe),var(--ink))}.slide.warn:before{background:linear-gradient(90deg,var(--warn),var(--ink))}.slide.accent:before{background:linear-gradient(90deg,var(--accent),var(--ink))}
+    .texture{position:absolute;right:-260px;top:-300px;width:760px;height:760px;border-radius:50%;border:1px solid rgba(185,144,87,.25);background:radial-gradient(circle,rgba(185,144,87,.13),rgba(185,144,87,.035) 58%,transparent 60%);pointer-events:none}
+    h1,h2,h3,p{margin:0}h1{font-size:78px;line-height:.99;letter-spacing:-.055em;max-width:1360px;text-wrap:balance}h2{font-size:56px;line-height:1;letter-spacing:-.045em;max-width:1560px;text-wrap:balance}h3{font-size:27px;line-height:1.08;letter-spacing:-.02em}.lead{font-size:30px;line-height:1.34;color:var(--muted);max-width:1260px;margin-top:30px}.eyebrow{font-size:17px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink);font-weight:850;margin-bottom:22px}.footer-note,.source-path{position:absolute;left:96px;right:96px;bottom:38px;color:var(--muted);font-size:18px}.source-path{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:15px;overflow-wrap:anywhere}
+    .hero-grid{display:grid;grid-template-columns:1fr 470px;gap:74px;align-items:end;height:100%}.hero-main{align-self:center}.side-panel{align-self:center;border:1px solid var(--line);background:#fffaf1;padding:34px}.verdict{font-size:25px;line-height:1.28;font-weight:760;color:var(--ink-deep)}.meta-table{margin-top:30px;border-top:1px solid var(--line)}.meta-row{display:flex;justify-content:space-between;gap:20px;border-bottom:1px solid var(--line);padding:15px 0;font-size:18px}.meta-row span{color:var(--muted)}.meta-row strong{text-align:right}.pill-row{display:flex;flex-wrap:wrap;gap:13px;margin-top:34px}.pill,.tag{display:inline-flex;align-items:center;border:1px solid var(--line);border-radius:999px;padding:9px 13px;font-size:15px;font-weight:850;text-transform:uppercase;letter-spacing:.08em}.tag{margin-bottom:18px}.blocked,.tag.blocked{background:var(--hold-bg);border-color:#e0b2aa;color:var(--hold)}.safe,.tag.safe{background:var(--safe-bg);border-color:#b8d0c3;color:var(--safe)}.warn,.tag.warn{background:var(--warn-bg);border-color:#e0c789;color:var(--warn)}.accent-tag{background:var(--accent-soft);border-color:#d7caff;color:#421a9b}
+    .two-col{display:grid;grid-template-columns:1fr 1fr;gap:30px;margin-top:42px}.three-col{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:42px}.four-col{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:40px}.five-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:18px;margin-top:38px}.card,.gate,.decision-box{border:1px solid var(--line);background:var(--white);padding:27px;min-height:282px}.card.blocked,.gate.blocked,.decision-box.blocked{background:var(--hold-bg);border-color:#e3b6af}.card.safe,.gate.safe,.decision-box.safe{background:var(--safe-bg);border-color:#b8d0c3}.card.warn,.gate.warn,.decision-box.warn{background:var(--warn-bg);border-color:#e0c789}.card p,.gate p,.decision-box p,.lane p,.source-item p{font-size:22px;line-height:1.34;color:var(--muted);margin-top:14px}.card ul,.gate ul,.decision-box ul{margin:18px 0 0 22px;padding:0}.card li,.gate li,.decision-box li{font-size:21px;line-height:1.32;color:var(--muted);margin:10px 0}.callout{margin-top:34px;border:1px solid var(--line);background:#fffaf1;padding:23px 28px;font-size:25px;line-height:1.32;color:var(--ink-deep);font-weight:690}.decision-line{margin-top:18px;padding:18px;background:rgba(255,255,255,.66);border:1px dashed rgba(0,55,86,.24);font-size:20px;line-height:1.4;color:var(--charcoal)}
+    .status-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-top:38px}.status-row{display:grid;grid-template-columns:255px 1fr;gap:22px;align-items:start;border:1px solid var(--line);background:#fff;padding:22px 24px}.status-row p{font-size:21px;line-height:1.34;color:var(--muted);margin-top:0}.label{font-size:17px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink);font-weight:850}.decision-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:38px}.decision-grid .decision-box{min-height:360px}.decision-grid.two{grid-template-columns:repeat(2,1fr)}.lane-grid{display:grid;grid-template-rows:repeat(5,1fr);gap:15px;margin-top:32px}.lane{display:grid;grid-template-columns:340px 1fr 280px;gap:22px;align-items:center;border:1px solid var(--line);background:#fff;padding:18px 22px}.lane.safe{background:var(--safe-bg);border-color:#b8d0c3}.lane.warn{background:var(--warn-bg);border-color:#e0c789}.lane.blocked{background:var(--hold-bg);border-color:#e3b6af}.source-list{display:grid;gap:18px;margin-top:34px}.source-item{border:1px solid var(--line);background:#fff;padding:20px 24px}.source-item h3{font-size:24px}.source-item p{font-size:18px;line-height:1.35;color:var(--muted);font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;overflow-wrap:anywhere}.wall-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:40px}.wall-card{border:1px solid #e3b6af;background:var(--hold-bg);padding:32px}.wall-card ul{margin:16px 0 0 22px;padding:0}.wall-card li{font-size:23px;line-height:1.34;margin:11px 0;color:#5b3833}.controls{position:fixed;right:28px;bottom:24px;z-index:20;display:flex;align-items:center;gap:12px;background:rgba(255,253,248,.92);border:1px solid var(--line);box-shadow:0 10px 40px rgba(0,43,69,.12);padding:10px 12px}.controls button{width:44px;height:44px;border:1px solid var(--line-strong);background:#fff;color:var(--ink);font-size:32px;line-height:1;cursor:pointer}.controls button:disabled{opacity:.35;cursor:not-allowed}.slide-count{min-width:74px;text-align:center;font-size:16px;font-weight:850;color:var(--charcoal)}
+    @media (prefers-reduced-motion:reduce){.slide{transition:none}}
+    @media print{body{overflow:visible;background:#fff}.viewport{position:static;display:block;padding:0}.deck{width:auto;height:auto;transform:none!important;border:0;box-shadow:none}.slide{position:relative;display:block!important;opacity:1!important;transform:none!important;page-break-after:always;width:100vw;height:56.25vw;min-height:720px;border:1px solid #ddd}.controls,.skip{display:none!important}h1{font-size:54pt}h2{font-size:38pt}.lead{font-size:18pt}.card p,.gate p,.decision-box p,.lane p,.card li,.gate li,.decision-box li,.wall-card li{font-size:14pt}.five-grid{grid-template-columns:repeat(2,1fr)}.lane{grid-template-columns:1fr}.status-grid,.decision-grid,.decision-grid.two{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <a href="#slide-1" class="skip">Skip to deck</a>
+  <main class="viewport" aria-label="Whiteford/Schell IP private watchdog command deck">
+    <section class="deck" id="deck" aria-live="polite">
+      <article class="slide active hold" id="slide-1" data-title="Current posture">
+        <div class="texture"></div>
+        <div class="hero-grid">
+          <div class="hero-main">
+            <div class="eyebrow">Private / local command deck / no live action</div>
+            <h1>HOLD remains correct. The morning work is choosing one internal gate.</h1>
+            <p class="lead">This deck converts the 2026-05-21 00:30 MDT watchdog action brief into a sparse decision surface for Jeff and authorized Whiteford reviewers. It does not approve public launch, live-system mutation, outreach, social activity, workflow enrollment, DDL, sync, backfill, or client/prospect-facing use.</p>
+            <div class="pill-row"><span class="pill blocked">Default HOLD</span><span class="pill safe">Private decision prep</span><span class="pill blocked">No execute controls</span></div>
+          </div>
+          <aside class="side-panel">
+            <p class="verdict">The board is not waiting on more copy. It is paused behind two durable access/admin blockers plus review-only content and final-magnet gates.</p>
+            <div class="meta-table"><div class="meta-row"><span>Task</span><strong>t_685181b7</strong></div><div class="meta-row"><span>Source brief</span><strong>t_06e3f1e5</strong></div><div class="meta-row"><span>Date</span><strong>2026-05-21 00:30 MDT</strong></div><div class="meta-row"><span>Status</span><strong>Private / internal only</strong></div></div>
+          </aside>
+        </div>
+      </article>
+
+      <article class="slide warn" id="slide-2" data-title="One-screen state">
+        <div class="eyebrow">One-screen watchdog state</div><h2>No new safe live-action lane appeared overnight.</h2>
+        <div class="status-grid">
+          <div class="status-row"><div class="label">Supabase</div><p>Core <code>prospects</code> still reads 200 OK. Expanded tables still return 404/PGRST205 and local DDL execution remains unavailable to the agent.</p></div>
+          <div class="status-row"><div class="label">HighLevel</div><p>Whiteford Schell IP location <code>tm68WWMrcAa3TqQbEAMa</code> still fails harmless read-only <code>/workflows</code> probes with HTTP 403 / Cloudflare Error 1010.</p></div>
+          <div class="status-row"><div class="label">Sources</div><p>May 20 digest still supports a source-blocked zero-candidate posture. Prospect expansion remains HOLD until neutral smoke tests pass.</p></div>
+          <div class="status-row"><div class="label">Review assets</div><p>Vorto, final-magnet, browser-value, digest, and QMD artifacts are internal review surfaces only, not launch or outreach approval.</p></div>
+        </div>
+        <div class="callout">Operating rule: pick one private gate, name owner and stop rule, then verify with non-mutating evidence before any downstream task moves.</div>
+      </article>
+
+      <article class="slide hold" id="slide-3" data-title="Two durable blockers">
+        <div class="eyebrow">Two durable blockers</div><h2>These are human/admin gates. Do not route around them with agent work.</h2>
+        <div class="two-col">
+          <div class="card blocked"><span class="tag blocked">Blocker 1</span><h3>Supabase expanded-schema DDL/admin unblock</h3><p>Expanded tables remain missing or unavailable through schema cache: <code>source_evidence</code>, <code>suppression_checks</code>, <code>outreach_drafts</code>, <code>crm_sync_batches</code>, <code>ghl_sync_links</code>, and <code>content_topics</code>.</p><ul><li>Prepared SQL exists for admin-approved application.</li><li>Mirror/backfill children stay dependency-gated until table existence is verified.</li></ul></div>
+          <div class="card blocked"><span class="tag blocked">Blocker 2</span><h3>HighLevel read-only access repair</h3><p>The LeadConnector access path is blocked before any trustworthy current-state verification can run.</p><ul><li>Repair token, location binding, scopes, and Cloudflare/IP/browser/API access.</li><li>First action after repair is read-only verification only; no CRM or workflow mutation.</li></ul></div>
+        </div>
+        <div class="callout">These blockers are durable because each controls evidence quality. Without them, downstream sync, workflow, and pipeline claims are not safe.</div>
+      </article>
+
+      <article class="slide safe" id="slide-4" data-title="Safe handoffs">
+        <div class="eyebrow">Currently safe handoffs</div><h2>Use these as internal evidence and decision prep, not as execution surfaces.</h2>
+        <div class="four-col">
+          <div class="gate safe"><span class="tag safe">No-op</span><h3>Nightly validation</h3><p>May 20 validation and Agent Targeting sync completed as local no-ops because there were zero validated candidates and zero safe work items.</p></div>
+          <div class="gate safe"><span class="tag safe">Memory</span><h3>Digest and QMD support</h3><p>The daily digest and QMD refresh help locate prior handoffs. Direct source files and Kanban handoffs remain controlling.</p></div>
+          <div class="gate safe"><span class="tag safe">Review-ready</span><h3>Final-magnet routing</h3><p>Consent routing and browser-value plans are internally review-ready, still not public-launch approved.</p></div>
+          <div class="gate safe"><span class="tag safe">Draft-only</span><h3>Vorto and diligence room</h3><p>May 20 content assets are draft/review assets only. No posting, tagging, social planner scheduling, or outreach is authorized.</p></div>
+        </div>
+        <div class="callout">Business-development discipline: solve one narrow diagnostic problem, earn engaged time/trust before consultation, and keep follow-up opt-in-only plus attorney-review-gated.</div>
+      </article>
+
+      <article class="slide warn" id="slide-5" data-title="Decision boxes 1-2">
+        <div class="eyebrow">Exact decision boxes / access and schema</div><h2>Approve only the narrow internal repair, or hold.</h2>
+        <div class="decision-grid two">
+          <div class="decision-box warn"><span class="tag warn">Decision 1</span><h3>Supabase DDL/admin unblock</h3><p>Choose: HOLD, GO ADMIN DDL ONLY, or REVISE.</p><div class="decision-line">If GO: Jeff/admin applies prepared phase 6-11 SQL through a privileged path, verifies expanded tables through non-secret read-only evidence, refreshes schema cache if needed, then lets dependency-gated mirror/backfill tasks promote normally.</div><div class="decision-line">Not approved: agent-executed DDL without admin credentials, row mutation, mirror sync, backfill, CRM/HighLevel/Clio mutation, public claims, outreach, or client/prospect-facing use.</div></div>
+          <div class="decision-box warn"><span class="tag warn">Decision 2</span><h3>HighLevel read-only access repair</h3><p>Choose: HOLD, GO READ-ONLY ACCESS REPAIR ONLY, or REVISE.</p><div class="decision-line">If GO: repair location-bound Private Integration token, scopes, and API/browser/IP access for <code>tm68WWMrcAa3TqQbEAMa</code>; run harmless read-only <code>/workflows</code> and exact-record dry-run verification only.</div><div class="decision-line">Stop on 401, 403, Error 1010, wrong location, missing field/user, or scope mismatch. No contacts, tags, opportunities, owners, stages, workflows, enrollments, sends, or notifications.</div></div>
+        </div>
+      </article>
+
+      <article class="slide warn" id="slide-6" data-title="Decision boxes 3-5">
+        <div class="eyebrow">Exact decision boxes / source, content, final magnet</div><h2>The remaining approvals are review or smoke-test lanes, not launch lanes.</h2>
+        <div class="decision-grid">
+          <div class="decision-box blocked"><span class="tag blocked">Decision 3</span><h3>Source access / prospect HOLD-GO</h3><p>Choose: HOLD PROSPECT EXPANSION, GO SOURCE ACCESS SMOKE TEST ONLY, GO NARROW PROSPECT RERUN AFTER PASS, or REVISE.</p><div class="decision-line">A smoke test does not authorize outreach. Named-company work requires current public-source proof, validation, suppression/conflicts/prior-touch checks, and review gates.</div></div>
+          <div class="decision-box safe"><span class="tag safe">Decision 4</span><h3>Vorto exact-copy cleanup</h3><p>Choose: HOLD, GO INTERNAL EXACT-COPY CLEANUP ONLY, or REVISE.</p><div class="decision-line">If GO: prepare no-tag/no-placeholder review copy with caveats, exact CTA URL or CTA-hold note, source-currentness notes, and conflicts/suppression/prior-touch placeholders. No posting or scheduling.</div></div>
+          <div class="decision-box safe"><span class="tag safe">Decision 5</span><h3>Final-magnet privacy and QA</h3><p>Choose: HOLD, GO ATTORNEY-PRIVACY REDLINE ONLY, GO LOCAL NO-TOKEN PRODUCT QA ONLY, GO BOTH INTERNAL LANES, or REVISE.</p><div class="decision-line">Preserve explicit optional opt-in, no-confidential-info acknowledgement, no legal advice, no attorney-client relationship, and no automated fulfillment unless separately approved.</div></div>
+        </div>
+      </article>
+
+      <article class="slide accent" id="slide-7" data-title="Next internal lane">
+        <div class="eyebrow">Next internal lane</div><h2>Recommended order: repair evidence gates before asking content to carry risk.</h2>
+        <div class="lane-grid">
+          <div class="lane warn"><div class="label">1 / Supabase</div><p>Jeff/admin chooses the DDL path and verifies expanded table existence through non-secret read-only evidence.</p><div class="tag warn">Admin only</div></div>
+          <div class="lane warn"><div class="label">2 / HighLevel</div><p>Jeff/operator repairs read-only access, then verifies the Whiteford location and fields before any sync or workflow reliance.</p><div class="tag warn">Read-only</div></div>
+          <div class="lane blocked"><div class="label">3 / Sources</div><p>Jeff chooses HOLD/GO on live-source restoration smoke tests. Prospect expansion remains HOLD until smoke tests pass.</p><div class="tag blocked">No outreach</div></div>
+          <div class="lane safe"><div class="label">4 / Review copy</div><p>Vorto cleanup may proceed only as internal exact-copy review preparation with caveats and no public/social action.</p><div class="tag safe">Draft only</div></div>
+          <div class="lane safe"><div class="label">5 / Product QA</div><p>Final-magnet attorney/privacy redline and local no-token browser-value QA can proceed as internal evidence only.</p><div class="tag safe">Local only</div></div>
+        </div>
+      </article>
+
+      <article class="slide wall" id="slide-8" data-title="No-live-action boundary">
+        <div class="eyebrow">No-live-action boundary</div><h2>If it leaves private review or changes a live system, stop.</h2>
+        <div class="wall-grid"><div class="wall-card"><h3>No outward motion</h3><ul><li>No email, SMS, DMs, LinkedIn/social posts, comments, tags, ads, newsletters, YouTube release, public route/page deployment, or client/prospect-facing use.</li><li>No claim that attorney, ethics, privacy, conflicts, suppression, source-current, brand, accessibility, deliverability, or Jeff approval has been granted.</li><li>No confidential, privileged, trade-secret, customer, vendor, security, personnel, cap-table, transaction, matter-specific, or regulated facts should be collected through public channels.</li></ul></div><div class="wall-card"><h3>No live-system mutation</h3><ul><li>No HighLevel contact, opportunity, tag, field, campaign, sequence, workflow, enrollment, owner assignment, notification, or pipeline-stage change.</li><li>No Supabase DDL, sync, backfill, Clio write, CRM mutation, booking, analytics, marketing automation, source-provider restoration, or prospect expansion from this deck.</li><li>No forms, external network calls, execute controls, public assets, or hidden delivery mechanisms are embedded here.</li></ul></div></div>
+        <div class="callout">This HTML is self-contained. The only interactive controls are local slide navigation and keyboard movement.</div>
+      </article>
+
+      <article class="slide" id="slide-9" data-title="Source anchors">
+        <div class="eyebrow">Source anchors</div><h2>The action brief and direct files remain controlling. This deck is a visual decision aid.</h2>
+        <div class="source-list">
+          <div class="source-item"><h3>Controlling action brief</h3><p>/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/decision-packets/2026-05-21_0030_watchdog_action_brief.md</p></div>
+          <div class="source-item"><h3>Prepared combined Supabase SQL</h3><p>/Users/jeff/.openclaw/projects/mountain-west-growth-os/supabase/phase6-11-combined-growth-os-schema.sql</p></div>
+          <div class="source-item"><h3>HighLevel location</h3><p>Whiteford Schell IP / location ID tm68WWMrcAa3TqQbEAMa / read-only access currently blocked by HTTP 403 Cloudflare / LeadConnector Error 1010.</p></div>
+          <div class="source-item"><h3>Bottom line</h3><p>Jeff can safely decide one internal gate. Until that gate passes, public, CRM, workflow, source/prospect, send, social, ad, Clio, Supabase mutation/backfill, and client-facing actions stay on HOLD.</p></div>
+        </div>
+        <div class="source-path">Deck: /Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/decision-packets/2026-05-21_0030_watchdog_command_deck.html</div>
+      </article>
+    </section>
+  </main>
+  <nav class="controls" aria-label="Slide navigation"><button type="button" id="prev" aria-label="Previous slide">‹</button><div class="slide-count" id="count">1 / 9</div><button type="button" id="next" aria-label="Next slide">›</button></nav>
+  <script>
+    (()=>{const slides=Array.from(document.querySelectorAll('.slide'));const deck=document.getElementById('deck');const count=document.getElementById('count');const prev=document.getElementById('prev');const next=document.getElementById('next');const storageKey='wf_2026_05_21_0030_watchdog_command_deck_slide';let index=0;function scaleDeck(){const margin=48;const sx=(window.innerWidth-margin)/1920;const sy=(window.innerHeight-margin)/1080;deck.style.transform=`scale(${Math.min(sx,sy,1)})`}function show(nextIndex){index=Math.min(Math.max(nextIndex,0),slides.length-1);slides.forEach((slide,i)=>{slide.classList.toggle('active',i===index);slide.setAttribute('aria-hidden',i===index?'false':'true')});count.textContent=`${index+1} / ${slides.length}`;prev.disabled=index===0;next.disabled=index===slides.length-1;try{localStorage.setItem(storageKey,String(index))}catch(error){}if(location.hash!==`#slide-${index+1}`)history.replaceState(null,'',`#slide-${index+1}`)}prev.addEventListener('click',()=>show(index-1));next.addEventListener('click',()=>show(index+1));window.addEventListener('resize',scaleDeck);window.addEventListener('keydown',event=>{if(event.target&&['INPUT','TEXTAREA','SELECT'].includes(event.target.tagName))return;if(event.key==='ArrowRight'||event.key==='PageDown'||event.key===' ')show(index+1);if(event.key==='ArrowLeft'||event.key==='PageUp')show(index-1);if(event.key==='Home')show(0);if(event.key==='End')show(slides.length-1)});const hashMatch=location.hash.match(/^#slide-(\d+)$/);if(hashMatch){index=Number(hashMatch[1])-1}else{try{const saved=localStorage.getItem(storageKey);if(saved!==null)index=Number(saved)}catch(error){}}scaleDeck();show(index)})();
+  </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+{
+  "run_metadata": {
+    "run_id": "2026-05-10",
+    "run_label": "2026-05-10",
+    "run_date": "2026-05-10",
+    "generated_at": "2026-05-10T01:30:00Z",
+    "status": "stopped_gate_1",
+    "stop_reason": "live_source_extraction_failed",
+    "stop_details": {
+      "web_search": {
+        "status": "failed",
+        "error": "Payment Required: Insufficient Firecrawl credits",
+        "affected": "company discovery, public-source validation"
+      },
+      "web_extract": {
+        "status": "failed",
+        "error": "Payment Required: Insufficient Firecrawl credits",
+        "affected": "page verification, domain canonicalization, contact validation, stale-page checks"
+      },
+      "recommended_fix": "Upgrade Firecrawl plan or reconfigure search provider. Jeff to approve run restart after recovery."
+    }
+  },
+  "candidates": []
+}

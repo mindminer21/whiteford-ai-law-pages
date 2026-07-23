@@ -1,0 +1,16 @@
+{
+  "night": "2026-05-19",
+  "status": "no_op_pause_and_source_blocked",
+  "reason": "Prospect expansion paused since 2026-05-06 while lead magnets and HighLevel workflows are tightened. Additionally, Firecrawl web_search and web_extract both returned Payment Required (12th consecutive night). New companies were NOT searched.",
+  "prospects": [],
+  "prospect_count": 0,
+  "quality_gate": {
+    "gate_1_web_search": "FAILED — Payment Required",
+    "gate_1_web_extract": "FAILED — Payment Required",
+    "prospect_pause_active": true,
+    "pause_since": "2026-05-06",
+    "consecutive_gate_failures": 12
+  },
+  "generated_at": "2026-05-19T01:40:00-06:00",
+  "candidates": []
+}

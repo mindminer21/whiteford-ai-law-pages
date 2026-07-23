@@ -1,0 +1,158 @@
+[
+  {
+    "prospect_name": "Glean",
+    "company_info": "Enterprise AI search platform. 7 years old. Consumption-based pricing. Top-line crosses $300M as AI budget-cutting becomes its major selling point. Strong enterprise buyer intent signals.",
+    "key_person": "Arvind Jain",
+    "key_person_title": "CEO & Founder",
+    "email": null,
+    "linkedin_url": null,
+    "phone": null,
+    "source_url": "https://techcrunch.com/2026/05/28/gleans-top-line-crosses-300m/",
+    "funding_stage": "Series E+",
+    "funding_amount": "$300M ARR (annualized run-rate)",
+    "valuation": "$7.2B implied",
+    "confidence": "high",
+    "permission_basis": "public news coverage",
+    "scoring": {
+      "relevance_score": 9,
+      "lead_magnet_fit": "AI enterprise search + consumption pricing = strong case for IP protection of search algorithms and enterprise data handling frameworks. Company is scaling rapidly, making IP portfolio management a likely priority.",
+      "packet_suggestions": [
+        "Guide: IP Strategy for Enterprise AI SaaS (patents, trade secrets, data licensing)",
+        "Case study: How AI search companies protect competitive advantage through IP"
+      ]
+    },
+    "suggested_offer_lane": "AI IP Protection & Patent Strategy",
+    "suggested_lead_magnet": "Enterprise AI IP Readiness Assessment",
+    "outreach_hypothesis": "Glean's $300M ARR milestone and consumption pricing model create both revenue scale and IP vulnerability at the same time.",
+    "safe_next_action": "Monitor for Series E+ completion signals; draft educational outreach re: IP portfolio scaling during hyper-scale growth."
+  },
+  {
+    "prospect_name": "Anthropic",
+    "company_info": "AI safety lab and foundation model developer. Announced $65B raise nearing $1T valuation ahead of IPO. Released Opus 4.8 with new dynamic workflow tool. Major AI market mover.",
+    "key_person": "Dario Hassabis",
+    "key_person_title": "CEO & Co-Founder",
+    "email": null,
+    "linkedin_url": null,
+    "phone": null,
+    "source_url": "https://techcrunch.com/2026/05/28/anthropic-raises-65-billion-1-trillion-valuation/",
+    "funding_stage": "Pre-IPO ($65B raise)",
+    "funding_amount": "$65B",
+    "valuation": "~$1T",
+    "confidence": "high",
+    "permission_basis": "public IPO/funding news",
+    "scoring": {
+      "relevance_score": 8,
+      "lead_magnet_fit": "IPO preparation stage = natural IP audit and portfolio strategy opportunity. Foundation model patents, training data IP, and model architecture protections are core business assets.",
+      "packet_suggestions": [
+        "Guide: AI Foundation Model IP Strategy Ahead of IPO (patent filings, data rights, model trade secrets)",
+        "Checklist: IP Due Diligence for AI IPO"
+      ]
+    },
+    "suggested_offer_lane": "AI IPO IP Preparation & Patent Strategy",
+    "suggested_lead_magnet": "AI IP Due Diligence Checklist for IPO",
+    "outreach_hypothesis": "At $1T valuation and preparing for IPO, Anthropic faces critical IP portfolio review requirements.",
+    "safe_next_action": "Monitor IPO filings (S-1); draft educational outreach re: IPO IP preparation for AI companies."
+  },
+  {
+    "prospect_name": "H1 (Healthcare Data Platform)",
+    "company_info": "9-year-old healthcare AI data platform. Raised $40M led by CVS. CEO Ariel Katz. Positioning: core-data SaaS vs. workflow-SaaS.",
+    "key_person": "Ariel Katz",
+    "key_person_title": "CEO & Founder",
+    "email": null,
+    "linkedin_url": null,
+    "phone": null,
+    "source_url": "https://techcrunch.com/2026/05/28/h1-secures-40m-from-cvs/",
+    "funding_stage": "Series A/B",
+    "funding_amount": "$40M",
+    "valuation": "$750M (previous round)",
+    "confidence": "high",
+    "permission_basis": "public funding news",
+    "scoring": {
+      "relevance_score": 7,
+      "lead_magnet_fit": "Healthcare data IP is highly sensitive. Core-data SaaS positioning implies proprietary data infrastructure. HIPAA + AI intersection = regulatory IP need.",
+      "packet_suggestions": [
+        "Guide: Healthcare Data IP Strategy (patents, HIPAA compliance for AI, data licensing)",
+        "Case study: Building defensible data moats in healthcare AI"
+      ]
+    },
+    "suggested_offer_lane": "Healthcare AI Data IP Strategy",
+    "suggested_lead_magnet": "Healthcare AI Data Rights & Patent Guide",
+    "outreach_hypothesis": "CVS-backed $40M raise signals scale-up for H1 — proprietary data pipelines and algorithms are their primary competitive advantage.",
+    "safe_next_action": "Draft outreach re: healthcare data IP protections during growth phase."
+  },
+  {
+    "prospect_name": "Unidentified Chip Startup (AI Memory)",
+    "company_info": "Chip startup raised $135M. Thesis: AI's biggest bottleneck is memory, not compute. Article by Kate Park. Company name not identified from available sources.",
+    "key_person": null,
+    "key_person_title": null,
+    "email": null,
+    "linkedin_url": null,
+    "phone": null,
+    "source_url": "https://techcrunch.com/2026/05/28/chip-startup-135m-ai-memory/",
+    "funding_stage": "Series A/B",
+    "funding_amount": "$135M",
+    "valuation": "unknown",
+    "confidence": "low",
+    "permission_basis": "public news coverage (partial)",
+    "scoring": {
+      "relevance_score": 4,
+      "lead_magnet_fit": "Insufficient data. AI chip/hardware companies typically pursue aggressive patent strategies but company name unknown.",
+      "packet_suggestions": ["N/A — insufficient company data"]
+    },
+    "suggested_offer_lane": "TBD",
+    "suggested_lead_magnet": "TBD",
+    "outreach_hypothesis": "Unknown — requires company name identification and article access.",
+    "safe_next_action": "Needs re-search with known company name. Flag for follow-up."
+  },
+  {
+    "prospect_name": "Asana / StackAI (Acquisition)",
+    "company_info": "Asana (productivity platform) acquires StackAI (no-code agent-builder startup). AI agent-building technology enters Asana's platform. Asana is public (NYSE: ASANA).",
+    "key_person": "Duxin Sui",
+    "key_person_title": "StackAI CEO & Founder",
+    "email": null,
+    "linkedin_url": null,
+    "phone": null,
+    "source_url": "https://techcrunch.com/2026/05/28/asana-acquires-no-code-agent-builder-stackai/",
+    "funding_stage": "Acquired",
+    "funding_amount": "undisclosed",
+    "valuation": "undisclosed",
+    "confidence": "medium",
+    "permission_basis": "public acquisition news",
+    "scoring": {
+      "relevance_score": 6,
+      "lead_magnet_fit": "AI agent acquisition = IP transfer and integration opportunity. StackAI's no-code agent technology may involve novel workflow automation IP.",
+      "packet_suggestions": [
+        "Guide: IP Due Diligence for AI Platform Acquisitions",
+        "Checklist: Patent Transfer & Integration for AI Agent Acquisitions"
+      ]
+    },
+    "suggested_offer_lane": "AI Acquisition IP Due Diligence",
+    "suggested_lead_magnet": "AI M&A IP Checklist",
+    "outreach_hypothesis": "StackAI's no-code agent-building technology likely involves novel IP assets worth protecting and integrating.",
+    "safe_next_action": "Monitor acquisition terms and IP integration disclosures."
+  },
+  {
+    "prospect_name": "Slate Auto",
+    "company_info": "EV startup. Announces pricing and preorders on June 24. Previously raised small pre-seed round.",
+    "key_person": "TBD",
+    "key_person_title": "TBD",
+    "email": null,
+    "linkedin_url": null,
+    "phone": null,
+    "source_url": "https://techcrunch.com/2026/05/28/slate-auto-ev-pricing-preorder-2026/",
+    "funding_stage": "Pre-seed",
+    "funding_amount": "small pre-seed",
+    "valuation": "unknown",
+    "confidence": "low",
+    "permission_basis": "public EV industry news (headline only)",
+    "scoring": {
+      "relevance_score": 3,
+      "lead_magnet_fit": "EV start-ups may face patent challenges in battery/motor/software aspects. Lower priority vs. pure AI companies. Insufficient data for firm assessment.",
+      "packet_suggestions": ["N/A — EV auto sector, moderate fit; skip unless follow-up shows strong IP signals"]
+    },
+    "suggested_offer_lane": "Auto/Manufacturing IP (low priority)",
+    "suggested_lead_magnet": "N/A — auto sector, lower priority",
+    "outreach_hypothesis": "With pricing announcement June 24, Slate Auto is in product-to-market phase. Pre-seed stage suggests lower likelihood of structured IP operations.",
+    "safe_next_action": "Low priority — may revisit after June 24 if commercial momentum is strong."
+  }
+]

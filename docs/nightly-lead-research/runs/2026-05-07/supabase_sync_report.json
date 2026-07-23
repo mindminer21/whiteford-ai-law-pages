@@ -1,0 +1,116 @@
+{
+  "task_id": "t_539e8920",
+  "run_date": "2026-05-07",
+  "sync_executed_at_utc": "2026-05-07T09:42:57Z",
+  "source_db": "/Users/jeff/.openclaw/projects/mountain-west-growth-os/data/growth-os.sqlite",
+  "target_project": "https://yidxnmxvtohaldkbypcv.supabase.co",
+  "sync_id": "sync-2026-05-07T09-42-57-789Z-daa9d3f2",
+  "sync_status": "partial",
+  "rows_attempted": 640,
+  "rows_synced": 99,
+  "remote_core_table_counts": {
+    "prospects": 35,
+    "approval_items": 55,
+    "agent_events": 6,
+    "work_items": 9,
+    "model_runs": 0,
+    "qa_reviews": 0
+  },
+  "nightly_prospects_verified_remote": [
+    {
+      "prospect_id": "prospect_bd2e46b6a31bc423d3064218",
+      "company_name": "PickNik Robotics"
+    },
+    {
+      "prospect_id": "prospect_bba8ec0dec6e73619770860d",
+      "company_name": "Electra"
+    },
+    {
+      "prospect_id": "prospect_bea9dbd287cb8fcf077720d0",
+      "company_name": "Flatfile (also rebranded company name: Obvious)"
+    }
+  ],
+  "nightly_work_items_verified_remote": [
+    {
+      "work_item_id": "work_nightly_agent_targeting_6c492c2ae5ff71c32f3e",
+      "work_type": "agent_targeting_packet",
+      "external_action_allowed": false
+    },
+    {
+      "work_item_id": "work_nightly_agent_targeting_92ca00eb4e75f5e07b1d",
+      "work_type": "agent_targeting_packet",
+      "external_action_allowed": false
+    },
+    {
+      "work_item_id": "work_nightly_agent_targeting_9e331922b7ef2980d8f1",
+      "work_type": "agent_targeting_packet",
+      "external_action_allowed": false
+    }
+  ],
+  "nightly_approval_items_verified_remote": [
+    {
+      "approval_item_id": "approval_2934f896e869b53f601fcc7b",
+      "item_type": "outreach_draft",
+      "related_id": "draft_94c6ee56a40e38dc6cafc029",
+      "title": "Review outreach draft: PickNik Robotics - Attorney-review LinkedIn awareness draft: PickNik Robotics",
+      "approval_status": "pending"
+    },
+    {
+      "approval_item_id": "approval_0d80d9cead2d95c4236cd859",
+      "item_type": "outreach_draft",
+      "related_id": "draft_5390e813d3512e5b744d36a5",
+      "title": "Review outreach draft: Electra - Attorney-review LinkedIn awareness draft: Electra",
+      "approval_status": "pending"
+    },
+    {
+      "approval_item_id": "approval_1b30f906a673bf469f3953c0",
+      "item_type": "outreach_draft",
+      "related_id": "draft_23bf6537385d43536d4d325c",
+      "title": "Review outreach draft: Flatfile (also rebranded company name: Obvious) - Attorney-review LinkedIn awareness draft: Flatfile (also rebranded company name: Obvious)",
+      "approval_status": "pending"
+    }
+  ],
+  "blocked_missing_remote_tables": [
+    "source_evidence",
+    "suppression_checks",
+    "compliance_reviews",
+    "outreach_drafts",
+    "draft_audit_trail",
+    "outreach_channels",
+    "send_authorization_rules",
+    "execution_authorizations",
+    "ghl_sync_links",
+    "crm_integration_config",
+    "crm_field_mappings",
+    "crm_sync_batches",
+    "crm_sync_records",
+    "crm_audit_log",
+    "ghl_pipeline_blueprints",
+    "ghl_pipeline_stage_mappings",
+    "ghl_stage_action_rules",
+    "content_lanes",
+    "content_topics",
+    "content_sources",
+    "content_assets",
+    "kpi_snapshots",
+    "cohort_tracking",
+    "offer_performance",
+    "agent_productivity_metrics",
+    "weekly_growth_reports",
+    "hardening_checks",
+    "duplicate_candidates",
+    "source_freshness_checks",
+    "backup_exports"
+  ],
+  "prepared_schema_unblock_artifact": "/Users/jeff/.openclaw/projects/mountain-west-growth-os/supabase/phase6-11-combined-growth-os-schema.sql",
+  "prior_schema_blocker_report": "/Users/jeff/.openclaw/projects/mountain-west-growth-os/reports/2026-05-06-supabase-expanded-schema-blocker.md",
+  "safety_scope": [
+    "internal Supabase mirror only",
+    "no outreach sent",
+    "no workflows activated",
+    "no LinkedIn actions",
+    "no Clio writes",
+    "no ads launched",
+    "no public/client-facing changes"
+  ]
+}

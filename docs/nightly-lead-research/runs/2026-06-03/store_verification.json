@@ -1,0 +1,71 @@
+{
+  "counts": {
+    "prospects": 68,
+    "contacts": 60,
+    "opportunities": 79,
+    "source_evidence": 138,
+    "outreach_drafts": 50,
+    "approval_items": 82,
+    "crm_sync_records": 61,
+    "suppression_checks": 50,
+    "work_items": 45
+  },
+  "row_checks": [
+    {
+      "company": "Coralogix",
+      "prospect_id": "prospect_coralogix_20260603",
+      "prospect_rows": 1,
+      "contact_rows": 2,
+      "evidence_rows": 2,
+      "draft_rows": 1,
+      "approval_rows": 1,
+      "suppression_rows": 1,
+      "sync_rows": 1,
+      "work_item_rows": 1,
+      "external_action_allowed_sum": 0
+    },
+    {
+      "company": "Layup Parts",
+      "prospect_id": "prospect_layup_parts_20260603",
+      "prospect_rows": 1,
+      "contact_rows": 1,
+      "evidence_rows": 2,
+      "draft_rows": 1,
+      "approval_rows": 1,
+      "suppression_rows": 1,
+      "sync_rows": 1,
+      "work_item_rows": 1,
+      "external_action_allowed_sum": 0
+    },
+    {
+      "company": "Cyera",
+      "prospect_id": "prospect_cyera_20260603",
+      "prospect_rows": 1,
+      "contact_rows": 0,
+      "evidence_rows": 2,
+      "draft_rows": 1,
+      "approval_rows": 1,
+      "suppression_rows": 1,
+      "sync_rows": 1,
+      "work_item_rows": 1,
+      "external_action_allowed_sum": 0
+    }
+  ],
+  "inserted_or_replaced_work_item_rows": 3,
+  "safety_external_action_allowed_total": 0,
+  "warnings": [
+    "Layup Parts: personal LinkedIn URL for Zack Eakin not independently verified; retained in notes only and not promoted as a verified contact field.",
+    "Cyera: held out placeholder/low-confidence contact 'Not specified in article'; company-level only until leadership verified.",
+    "Cyera: no person-level contact staged; Gate 4 requires leadership/contact remediation before any named outreach."
+  ],
+  "artifacts": {
+    "source": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-06-03/prospect_candidates.json",
+    "normalized": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-06-03/prospect_candidates.normalized_for_store.json",
+    "dry_run": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-06-03/store_dry_run.json",
+    "store_output": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-06-03/store_output.json",
+    "verification": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-06-03/store_verification.json",
+    "backup": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-06-03/growth-os.before_t_2aff8ce4.sqlite",
+    "work_items_dir": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-06-03/agent-targeting-work-items",
+    "validation_report": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-06-03/validation_report.md"
+  }
+}

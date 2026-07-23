@@ -1,0 +1,220 @@
+{
+  "expectedCount": 37,
+  "fieldKeyRiskCount": 0,
+  "fieldKeyRisks": [],
+  "generatedAt": "2026-05-08T12:34:26.256939+00:00",
+  "locationId": "tm68WWMrcAa3TqQbEAMa",
+  "missing": [
+    {
+      "key": "privacy_guardrail_version",
+      "name": "Privacy Guardrail Version",
+      "type": "TEXT"
+    },
+    {
+      "key": "public_form_input_type",
+      "name": "Public Form Input Type",
+      "type": "TEXT"
+    },
+    {
+      "key": "disclaimer_acknowledged",
+      "name": "Disclaimer Acknowledged",
+      "type": "TEXT"
+    },
+    {
+      "key": "report_requested",
+      "name": "Report Requested",
+      "type": "TEXT"
+    },
+    {
+      "key": "ai_compliance_maturity_level",
+      "name": "AI Compliance Maturity Level",
+      "type": "TEXT"
+    },
+    {
+      "key": "ai_compliance_category_scores",
+      "name": "AI Compliance Category Scores",
+      "type": "LARGE_TEXT"
+    },
+    {
+      "key": "ai_compliance_top_gaps",
+      "name": "AI Compliance Top Gaps",
+      "type": "LARGE_TEXT"
+    },
+    {
+      "key": "ai_compliance_recommended_next_step",
+      "name": "AI Compliance Recommended Next Step",
+      "type": "TEXT"
+    },
+    {
+      "key": "ai_compliance_heat_map",
+      "name": "AI Compliance Heat Map",
+      "type": "LARGE_TEXT"
+    },
+    {
+      "key": "ai_compliance_10_day_fixes",
+      "name": "AI Compliance 10 Day Fixes",
+      "type": "LARGE_TEXT"
+    },
+    {
+      "key": "ai_compliance_roadmap_30_60_90",
+      "name": "AI Compliance Roadmap 30 60 90",
+      "type": "LARGE_TEXT"
+    },
+    {
+      "key": "ai_compliance_report_version",
+      "name": "AI Compliance Report Version",
+      "type": "TEXT"
+    },
+    {
+      "key": "ai_patent_privacy_guardrail_version",
+      "name": "AI Patent Privacy Guardrail Version",
+      "type": "TEXT"
+    },
+    {
+      "key": "ai_patent_report_version",
+      "name": "AI Patent Report Version",
+      "type": "TEXT"
+    },
+    {
+      "key": "ai_patent_recommended_next_step",
+      "name": "AI Patent Recommended Next Step",
+      "type": "TEXT"
+    },
+    {
+      "key": "ma_readiness_privacy_guardrail_version",
+      "name": "M&A Readiness Privacy Guardrail Version",
+      "type": "TEXT"
+    },
+    {
+      "key": "ma_readiness_input_type",
+      "name": "M&A Readiness Input Type",
+      "type": "TEXT"
+    },
+    {
+      "key": "ma_readiness_report_version",
+      "name": "M&A Readiness Report Version",
+      "type": "TEXT"
+    },
+    {
+      "key": "ma_readiness_score",
+      "name": "M&A Readiness Score",
+      "type": "NUMERICAL"
+    },
+    {
+      "key": "ma_readiness_band",
+      "name": "M&A Readiness Band",
+      "type": "TEXT"
+    },
+    {
+      "key": "ma_readiness_answers_json",
+      "name": "M&A Readiness Answers JSON",
+      "type": "LARGE_TEXT"
+    },
+    {
+      "key": "tech_legal_health_privacy_guardrail_version",
+      "name": "Tech Legal Health Privacy Guardrail Version",
+      "type": "TEXT"
+    },
+    {
+      "key": "tech_legal_health_report_version",
+      "name": "Tech Legal Health Report Version",
+      "type": "TEXT"
+    },
+    {
+      "key": "tech_legal_health_score",
+      "name": "Tech Legal Health Score",
+      "type": "NUMERICAL"
+    },
+    {
+      "key": "tech_legal_health_band",
+      "name": "Tech Legal Health Band",
+      "type": "TEXT"
+    },
+    {
+      "key": "tech_legal_health_company_moment",
+      "name": "Tech Legal Health Company Moment",
+      "type": "TEXT"
+    },
+    {
+      "key": "tech_legal_health_lowest_category",
+      "name": "Tech Legal Health Lowest Category",
+      "type": "TEXT"
+    },
+    {
+      "key": "tech_legal_health_category_scores",
+      "name": "Tech Legal Health Category Scores",
+      "type": "LARGE_TEXT"
+    },
+    {
+      "key": "tech_legal_health_top_actions",
+      "name": "Tech Legal Health Top Actions",
+      "type": "LARGE_TEXT"
+    },
+    {
+      "key": "tech_legal_health_branch_signals",
+      "name": "Tech Legal Health Branch Signals",
+      "type": "LARGE_TEXT"
+    },
+    {
+      "key": "tech_legal_health_answers_json",
+      "name": "Tech Legal Health Answers JSON",
+      "type": "LARGE_TEXT"
+    }
+  ],
+  "missingCount": 31,
+  "pass": false,
+  "present": [
+    {
+      "actualFieldKey": "contact.approval_status",
+      "actualType": "TEXT",
+      "id": "PZQ4DD5Dy4qJG9pTsNM3",
+      "key": "approval_status",
+      "name": "Approval Status",
+      "type": "TEXT"
+    },
+    {
+      "actualFieldKey": "contact.consent_basis",
+      "actualType": "TEXT",
+      "id": "TvCAwsNbVg94JrEBM3e0",
+      "key": "consent_basis",
+      "name": "Consent Basis",
+      "type": "TEXT"
+    },
+    {
+      "actualFieldKey": "contact.ai_patent_score",
+      "actualType": "NUMERICAL",
+      "id": "L78KuFhyFafq5PSp5MjR",
+      "key": "ai_patent_score",
+      "name": "AI Patent Score",
+      "type": "NUMERICAL"
+    },
+    {
+      "actualFieldKey": "contact.ai_patent_stage",
+      "actualType": "TEXT",
+      "id": "7pf3mgT5ttvFjBjEpg5m",
+      "key": "ai_patent_stage",
+      "name": "AI Patent Stage",
+      "type": "TEXT"
+    },
+    {
+      "actualFieldKey": "contact.ai_patent_score_band",
+      "actualType": "TEXT",
+      "id": "xh6AfuK3kI9YCbkL3Wko",
+      "key": "ai_patent_score_band",
+      "name": "AI Patent Score Band",
+      "type": "TEXT"
+    },
+    {
+      "actualFieldKey": "contact.ai_patent_checks",
+      "actualType": "LARGE_TEXT",
+      "id": "0mv2zSrrPiwTw3Eufuwk",
+      "key": "ai_patent_checks",
+      "name": "AI Patent Checks",
+      "type": "LARGE_TEXT"
+    }
+  ],
+  "presentCount": 6,
+  "scope": "read-only/dry-run field comparison only; no HighLevel mutation endpoints used",
+  "typeMismatchCount": 0,
+  "typeMismatches": []
+}

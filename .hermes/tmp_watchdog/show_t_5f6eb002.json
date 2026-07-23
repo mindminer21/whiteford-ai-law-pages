@@ -1,0 +1,48 @@
+{
+  "task": {
+    "id": "t_5f6eb002",
+    "title": "Review Sunday internal readiness tranche - 2026-05-10",
+    "body": "Review the Sunday internal-only readiness tranche after all parent tasks complete.\n\nParents to review:\n- t_41abea7c: Box A Tech GC local/no-token QA execution packet\n- t_cd533490: Tech GC synthetic no-token QA fixture bundle\n- t_789e3d40: HighLevel no-mutation Sunday option matrix\n- t_fb43fa2b: Sunday authority recording cold-open packet\n\nDeliverable expected:\n- /Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/reviews/2026-05-10_sunday_internal_readiness_tranche_review.md\n\nReview for legal marketing/ethics/privacy/data-minimization/no-ACR posture, no-external-action compliance, Supabase/HighLevel/Clio/live-system boundaries, route/CTA correctness, source-current caveats, and whether any artifact could mislead Jeff into thinking live action is approved. Pass/block with exact required revisions.\n\n\nGuardrails for this task:\n- Internal/draft/local documentation or local prototype work only.\n- Do not send emails/SMS/DMs, enroll contacts, activate/test/start workflows, publish pages, post or tag/comment/message on LinkedIn/social, launch ads, write to Clio, or make public/client-facing changes.\n- Do not run Supabase DDL, gated backfill/sync, or mirror sync; keep t_fa6eb9c1/t_53d470c6 as human-only blockers.\n- Do not mutate live HighLevel/CRM/Supabase records. If any credential, approval, browser login, or live-system action is required, block with exact manual unblock steps instead of proceeding.\n- Update docs/KANBAN_DELIVERABLE_INDEX.md and leave the standard Deliverable/Summary/Next action Kanban comment when complete.",
+    "assignee": "reviewer",
+    "status": "todo",
+    "priority": 78,
+    "tenant": "whiteford-mountain-west",
+    "workspace_kind": "dir",
+    "workspace_path": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages",
+    "created_by": "overnight-watchdog",
+    "created_at": 1778395149,
+    "started_at": null,
+    "completed_at": null,
+    "result": null,
+    "skills": []
+  },
+  "latest_summary": null,
+  "parents": [
+    "t_41abea7c",
+    "t_789e3d40",
+    "t_cd533490",
+    "t_fb43fa2b"
+  ],
+  "children": [],
+  "comments": [],
+  "events": [
+    {
+      "kind": "created",
+      "payload": {
+        "assignee": "reviewer",
+        "status": "todo",
+        "parents": [
+          "t_41abea7c",
+          "t_cd533490",
+          "t_789e3d40",
+          "t_fb43fa2b"
+        ],
+        "tenant": "whiteford-mountain-west",
+        "skills": null
+      },
+      "created_at": 1778395149,
+      "run_id": null
+    }
+  ],
+  "runs": []
+}

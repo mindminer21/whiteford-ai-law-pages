@@ -1,0 +1,101 @@
+{
+  "verified_at": "2026-05-25T08:19:39+00:00",
+  "db": "/Users/jeff/.openclaw/projects/mountain-west-growth-os/data/growth-os.sqlite",
+  "normalized_payload": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-25/prospect_candidates.normalized_for_store.json",
+  "work_items_created_or_replaced": [
+    {
+      "work_item_id": "work_nightly_agent_targeting_20260525_6985b28a57cd2be14ee03004",
+      "company": "Machina Labs",
+      "priority": 80,
+      "input_path": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-25/agent-targeting-work-items/machina-labs.json",
+      "local_growth_os_prospect_id": "prospect_machina_labs_20260525"
+    },
+    {
+      "work_item_id": "work_nightly_agent_targeting_20260525_fb899646d1907dfadf94dd72",
+      "company": "Rhoda AI",
+      "priority": 83,
+      "input_path": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-25/agent-targeting-work-items/rhoda-ai.json",
+      "local_growth_os_prospect_id": "prospect_rhoda_ai_20260524"
+    },
+    {
+      "work_item_id": "work_nightly_agent_targeting_20260525_7248b1f771bf454d7328c416",
+      "company": "Mind Robotics",
+      "priority": 80,
+      "input_path": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-25/agent-targeting-work-items/mind-robotics.json",
+      "local_growth_os_prospect_id": "prospect_mind_robotics_20260525"
+    }
+  ],
+  "staged_prospects": [
+    {
+      "prospect_id": "prospect_machina_labs_20260525",
+      "company_name": "Machina Labs",
+      "domain": "machinalabs.ai",
+      "segment": "ai-patent",
+      "pipeline_stage": "research_staged",
+      "suppression_status": "consent_gap_no_auto_send",
+      "conflicts_status": "required_before_send"
+    },
+    {
+      "prospect_id": "prospect_rhoda_ai_20260524",
+      "company_name": "Rhoda AI",
+      "domain": "rhoda.ai",
+      "segment": "ai-patent",
+      "pipeline_stage": "research_staged",
+      "suppression_status": "consent_gap_no_auto_send",
+      "conflicts_status": "required_before_send"
+    },
+    {
+      "prospect_id": "prospect_mind_robotics_20260525",
+      "company_name": "Mind Robotics",
+      "domain": "mindrobotics.ai",
+      "segment": "ai-patent",
+      "pipeline_stage": "research_staged",
+      "suppression_status": "consent_gap_no_auto_send",
+      "conflicts_status": "required_before_send"
+    }
+  ],
+  "table_counts_after": {
+    "prospects": 46,
+    "contacts": 37,
+    "opportunities": 57,
+    "source_evidence": 76,
+    "outreach_drafts": 28,
+    "approval_items": 60,
+    "crm_sync_records": 39,
+    "suppression_checks": 28,
+    "work_items": 23
+  },
+  "work_items_20260525": [
+    {
+      "work_item_id": "work_nightly_agent_targeting_20260525_fb899646d1907dfadf94dd72",
+      "title": "Prepare attorney-review Agent Targeting packet: Rhoda AI",
+      "stage": "queued",
+      "priority": 83,
+      "input_path": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-25/agent-targeting-work-items/rhoda-ai.json",
+      "external_action_allowed": 0,
+      "approval_required": 1,
+      "blocker": "External actions blocked: no outreach, email/SMS, workflow activation/enrollment, trigger tags, LinkedIn/social action, Clio writes, public/client-facing changes, or live CRM/Supabase sync without Jeff exact approval; attorney review, conflicts, suppression, source-current verification, and opt-out checks required before external use."
+    },
+    {
+      "work_item_id": "work_nightly_agent_targeting_20260525_6985b28a57cd2be14ee03004",
+      "title": "Prepare attorney-review Agent Targeting packet: Machina Labs",
+      "stage": "queued",
+      "priority": 80,
+      "input_path": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-25/agent-targeting-work-items/machina-labs.json",
+      "external_action_allowed": 0,
+      "approval_required": 1,
+      "blocker": "External actions blocked: no outreach, email/SMS, workflow activation/enrollment, trigger tags, LinkedIn/social action, Clio writes, public/client-facing changes, or live CRM/Supabase sync without Jeff exact approval; attorney review, conflicts, suppression, source-current verification, and opt-out checks required before external use."
+    },
+    {
+      "work_item_id": "work_nightly_agent_targeting_20260525_7248b1f771bf454d7328c416",
+      "title": "Prepare attorney-review Agent Targeting packet: Mind Robotics",
+      "stage": "queued",
+      "priority": 80,
+      "input_path": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-25/agent-targeting-work-items/mind-robotics.json",
+      "external_action_allowed": 0,
+      "approval_required": 1,
+      "blocker": "External actions blocked: no outreach, email/SMS, workflow activation/enrollment, trigger tags, LinkedIn/social action, Clio writes, public/client-facing changes, or live CRM/Supabase sync without Jeff exact approval; attorney review, conflicts, suppression, source-current verification, and opt-out checks required before external use. Mind Robotics also requires Rivian conflict-of-interest check before any external use."
+    }
+  ],
+  "safety_decision": "local/internal attorney-review-only staging; no external action authorized"
+}

@@ -67,6 +67,13 @@ const APPS = [
       "branchSignals",
       "answers",
       "reportVersion: \"tech-legal-health-privacy-guardrail-v2\"",
+      "aiUseRegisterSnapshot",
+      "AI Use Register Snapshot",
+      "Use case + owner",
+      "Data + decision exposure",
+      "Vendor/IP/contract terms",
+      "Human review + evidence trail",
+      "ai-use-register-snapshot-v1",
       "Your legal health snapshot is ready.",
       "Overall readiness band",
       "Top category gaps",
@@ -89,20 +96,63 @@ const APPS = [
       "reportVersion: \"founder-ma-readiness-privacy-guardrail-v2\"",
     ],
   },
+  {
+    name: "Investor Outreach Kanban",
+    campaignKey: "investor-outreach",
+    component: "src/components/investor-outreach-kanban.tsx",
+    confirmationFlow: true,
+    payloadTokens: [
+      "investorOutreach",
+      "phase: \"contact\"",
+      "phase: \"confirm\"",
+      "phase: \"plan\"",
+      "confirmationToken",
+      "emailConfirmed: true",
+      "targetRound",
+      "investorCategories",
+      "investorRegions",
+      "introSources",
+      "portfolioResearchQueue",
+      "portfolioMatches",
+      "portfolioEnrichmentVersion",
+      "CEO portfolio research",
+      "Verified matches",
+      "kanbanStageCounts",
+      "reportVersion",
+      "investor-outreach-kanban-privacy-guardrail-v1",
+      "Start building my customized investor outreach plan.",
+      "Check your email.",
+      "Customizing and populating your investor list.",
+      "suggestedIntroSources",
+      "Is your IP appropriately positioned to reach out to investors?",
+      "https://cal.com/jeffschell/talktoapatentlawyer?overlayCalendar=true",
+    ],
+  },
 ];
 
 for (const app of APPS) {
   const source = read(app.component);
   assert.match(source, new RegExp(`campaignKey:\\s*\"${app.campaignKey}\"`), `${app.name} campaign key must be explicit`);
-  assert.match(source, /if \(!disclaimerAccepted\)/, `${app.name} must block submit handler without disclaimer acceptance`);
-  assert.match(source, /disabled=\{[^}]*!disclaimerAccepted/, `${app.name} request/inputs must be disabled before disclaimer acceptance`);
-  assert.match(source, /disclaimerAccepted,/, `${app.name} must submit disclaimerAccepted`);
-  assert.match(source, /reportRequested:\s*true/, `${app.name} must submit reportRequested true`);
-  assert.match(source, /privacyGuardrailVersion,/, `${app.name} must submit shared guardrail version`);
-  assert.match(source, /publicFormInputType,/, `${app.name} must submit shared compact input type`);
-  assert.match(source, /subscribe:\s*false/, `${app.name} optional marketing consent must default unchecked`);
-  assert.match(source, /contact\.subscribe/, `${app.name} must branch on marketing opt-in`);
-  assert.match(source, /!contact\.subscribe/, `${app.name} must allow/report messaging without marketing opt-in`);
+  if (app.confirmationFlow) {
+    assert.doesNotMatch(source, /if \(!disclaimerAccepted\)|disabled=\{[^}]*!disclaimerAccepted|disclaimerAccepted,/, `${app.name} must not use the initial legal checkbox gate`);
+    assert.doesNotMatch(source, /Introduction sources you can activate/, `${app.name} must not collect introduction-source inputs`);
+    assert.doesNotMatch(source, /No opt-in selected/, `${app.name} must not present the old no-opt-in board-only copy`);
+    assert.doesNotMatch(source, /HighLevel will send/, `${app.name} must not identify HighLevel as the confirmation email sender`);
+    assert.match(source, /reportRequested:\s*true/, `${app.name} plan phase must submit reportRequested true`);
+    assert.match(source, /privacyGuardrailVersion,/, `${app.name} plan phase must submit shared guardrail version`);
+    assert.match(source, /publicFormInputType,/, `${app.name} plan phase must submit shared compact input type`);
+    assert.match(source, /subscribe:\s*false/, `${app.name} must explicitly avoid marketing consent in contact and plan payloads`);
+  } else {
+    assert.match(source, /if \(!disclaimerAccepted\)/, `${app.name} must block submit handler without disclaimer acceptance`);
+    assert.match(source, /disabled=\{[^}]*!disclaimerAccepted/, `${app.name} request/inputs must be disabled before disclaimer acceptance`);
+    assert.match(source, /disclaimerAccepted,/, `${app.name} must submit disclaimerAccepted`);
+    assert.match(source, /reportRequested:\s*true/, `${app.name} must submit reportRequested true`);
+    assert.match(source, /privacyGuardrailVersion,/, `${app.name} must submit shared guardrail version`);
+    assert.match(source, /publicFormInputType,/, `${app.name} must submit shared compact input type`);
+    assert.match(source, /subscribe:\s*false/, `${app.name} optional marketing consent must default unchecked`);
+    assert.match(source, /contact\.subscribe/, `${app.name} must branch on marketing opt-in`);
+    assert.match(source, /!contact\.subscribe/, `${app.name} must allow/report messaging without marketing opt-in`);
+  }
   assert.doesNotMatch(source, /workflow:[a-z0-9-]+/i, `${app.name} frontend must not hard-code workflow trigger tags`);
   for (const token of app.payloadTokens) {
     assert.ok(source.includes(token), `${app.name} missing compact payload token: ${token}`);
@@ -115,36 +165,34 @@ const learnPages = [
     source: read("src/app/page.tsx"),
     brandMarker: 'className="brand-lockup"',
     footerMarker: 'className="footer-lockup"',
-    needsReportSlot: false,
   },
   {
     name: "AI Legal Risk Triage",
     source: read("src/lib/learn/ai-risk-triage.ts"),
     brandMarker: '<div class="brand-lockup">',
     footerMarker: '<div class="footer-lockup">',
-    needsReportSlot: true,
+    startHref: "/ai-risk-triage/start",
   },
   {
     name: "Patent Moat Scorecard",
     source: read("src/lib/learn/patent-moat-scorecard.ts"),
     brandMarker: '<div class="brand-lockup">',
     footerMarker: '<div class="footer-lockup">',
-    needsReportSlot: true,
+    startHref: "/patent-moat-scorecard/start",
   },
   {
     name: "AI Governance Readiness Plan",
     source: read("src/lib/learn/governance-plan.ts"),
     brandMarker: '<div class="brand-lockup">',
     footerMarker: '<div class="footer-lockup">',
-    needsReportSlot: true,
+    startHref: "/governance-plan/start",
   },
   {
     name: "Outside Counsel Playbook",
     source: read("src/app/outside-counsel-playbook/page.tsx"),
     brandMarker: 'className="brand-lockup"',
     footerMarker: 'className="footer-lockup"',
-    needsReportSlot: false,
-    hasEmailPdfForm: true,
+    startHref: "/outside-counsel-playbook/start",
   },
 ];
 
@@ -163,9 +211,12 @@ for (const asset of [
 
 const globals = read("src/app/globals.css");
 const layout = read("src/app/layout.tsx");
+const rootPage = read("src/app/page.tsx");
 const learnHtmlPage = read("src/components/learn-html-page.tsx");
-const learnHtmlWithFlow = read("src/components/learn-html-with-flow.tsx");
+const leadMagnetStartPage = read("src/components/lead-magnet-start-page.tsx");
 const leadMagnetFlow = read("src/components/lead-magnet-flow.tsx");
+const searchMagnetFlow = read("src/components/search-magnet-flow.tsx");
+const searchMagnetConfig = read("src/lib/search-magnets/configs.ts");
 const magnetConfig = read("src/lib/magnets/finalization.ts");
 const leadRoute = read("src/app/api/leads/route.ts");
 const outsideCounselRoute = read("src/app/outside-counsel-playbook/page.tsx");
@@ -188,10 +239,13 @@ for (const page of learnPages) {
   assert.ok(source.includes("Attorney advertising"), `${page.name} missing attorney advertising notation`);
   assert.doesNotMatch(source, /workflow:[a-z0-9-]+/i, `${page.name} must not hard-code workflow trigger tags`);
   assert.doesNotMatch(source, /<textarea/i, `${page.name} must not request confidential free text`);
-  if (!page.hasEmailPdfForm) {
-    assert.doesNotMatch(source, /<form|<input/i, `${page.name} must not request user-entered confidential information in milestone 1`);
+  assert.doesNotMatch(source, /<form|<input/i, `${page.name} landing page must not request user-entered confidential information`);
+  assert.doesNotMatch(source, /data-learn-report-slot=/, `${page.name} landing page must not embed the lead magnet form`);
+  assert.doesNotMatch(source, /href=["']#start/i, `${page.name} CTA must not scroll to an embedded form`);
+  if (page.startHref) {
+    assert.ok(source.includes(`href="${page.startHref}"`) || source.includes(`href={\"${page.startHref}\"}`), `${page.name} must link CTA to ${page.startHref}`);
   }
-  assert.doesNotMatch(source, /href=["']\/start|href=["'][^"']*\/start/i, `${page.name} must not link to /start placeholder routes`);
+  assert.doesNotMatch(source, /href=["']\/start["']/i, `${page.name} must not link to the old generic /start placeholder route`);
   assert.doesNotMatch(source, /Interactive tool launching once Whiteford compliance review is complete/, `${page.name} must not show compliance-review pending language`);
 
   assertOrder(
@@ -204,30 +258,111 @@ for (const page of learnPages) {
     ["Whiteford Taylor Preston", "footer-divider", "Schell IP"],
     `${page.name} footer lockup`,
   );
-
-  if (page.needsReportSlot) {
-    assert.ok(source.includes("data-learn-report-slot="), `${page.name} missing report form slot`);
-    assert.ok(source.includes("data-cal-link=\"jeffschell/meeting-with-jeff-schell\""), `${page.name} missing Cal.com button link`);
-    assert.doesNotMatch(source, /Cal\("init"|app\.cal\.com\/embed\/embed\.js/i, `${page.name} must not embed per-page Cal.com script`);
-  }
+  assert.doesNotMatch(source, /Cal\("init"|app\.cal\.com\/embed\/embed\.js/i, `${page.name} must not embed per-page Cal.com script`);
 }
 
-assert.ok(learnHtmlPage.includes("LearnHtmlWithFlow"), "Learn HTML renderer must delegate to the portal wrapper");
-assert.ok(learnHtmlWithFlow.includes("LeadMagnetFlow"), "Learn HTML portal wrapper must mount the finalized lead magnet flow");
-assert.ok(learnHtmlWithFlow.includes("data-learn-report-slot"), "Learn HTML portal wrapper must target the stable report request slot");
+assert.ok(learnHtmlPage.includes("content.markup"), "Learn HTML renderer must keep the Claude markup server-rendered");
+assert.doesNotMatch(learnHtmlPage, /LeadMagnetFlow|LearnFlowPortal|data-learn-report-slot/, "Learn landing renderer must not mount forms into landing pages");
+assert.ok(leadMagnetStartPage.includes("LeadMagnetFlow"), "Standalone start page shell must mount the finalized lead magnet flow");
+assert.ok(leadMagnetStartPage.includes("learn-start-page"), "Standalone start page shell must use the start-page visual system");
+for (const route of [
+  ["src/app/ai-risk-triage/start/page.tsx", "ai-risk-triage", "/ai-risk-triage"],
+  ["src/app/patent-moat-scorecard/start/page.tsx", "patent-moat-scorecard", "/patent-moat-scorecard"],
+  ["src/app/governance-plan/start/page.tsx", "governance-plan", "/governance-plan"],
+  ["src/app/outside-counsel-playbook/start/page.tsx", "outside-counsel-playbook", "/outside-counsel-playbook"],
+]) {
+  const [file, slug, backHref] = route;
+  assert.ok(exists(file), `Standalone start route missing: ${file}`);
+  const source = read(file);
+  assert.ok(source.includes("LeadMagnetStartPage"), `${file} must render the standalone start-page shell`);
+  assert.ok(source.includes(`magnetConfigs["${slug}"]`), `${file} must use the correct magnet config`);
+  assert.ok(source.includes(`backHref="${backHref}"`), `${file} must link back to its landing page`);
+  assert.ok(source.includes("robots: { index: false, follow: false }"), `${file} must noindex the form-only page`);
+}
+for (const route of [
+  "src/app/investor-outreach-kanban/start/page.tsx",
+  "src/app/investor-outreach-kanban/check-email/page.tsx",
+  "src/app/investor-outreach-kanban/confirm/page.tsx",
+  "src/app/investor-outreach-kanban/round/page.tsx",
+  "src/app/investor-outreach-kanban/categories/page.tsx",
+  "src/app/investor-outreach-kanban/markets/page.tsx",
+  "src/app/investor-outreach-kanban/stage/page.tsx",
+  "src/app/investor-outreach-kanban/data-room/page.tsx",
+  "src/app/investor-outreach-kanban/customizing/page.tsx",
+  "src/app/investor-outreach-kanban/board/page.tsx",
+]) {
+  assert.ok(exists(route), `Investor outreach sequential route missing: ${route}`);
+  assert.ok(read(route).includes("InvestorOutreachKanban"), `${route} must render the investor outreach flow component`);
+  assert.ok(read(route).includes("robots: { index: false, follow: false }"), `${route} must noindex the sequential flow page`);
+}
+
+for (const route of [
+  "colorado-non-compete-checker",
+  "trademark-brand-precheck",
+  "patent-readiness",
+  "sale-readiness-audit",
+]) {
+  const pagePath = `src/app/${route}/page.tsx`;
+  assert.ok(exists(pagePath), `Search-demand magnet route missing: ${pagePath}`);
+  const source = read(pagePath);
+  assert.ok(source.includes("SearchMagnetFlow"), `${pagePath} must render the shared search magnet flow`);
+  assert.ok(source.includes(`const slug = "${route}"`), `${pagePath} must use the correct route slug`);
+  assert.ok(searchMagnetConfig.includes(`"${route}"`), `${route} must exist in the source-of-truth config port`);
+  assert.ok(rootPage.includes(`href: "/${route}"`), `Directory must link to /${route}`);
+}
+
+for (const token of [
+  "MAGNET_CONFIG",
+  "colorado-non-compete-checker",
+  "trademark-brand-precheck",
+  "patent-readiness",
+  "sale-readiness-audit",
+  "lead-magnet",
+  "non-compete-checker",
+  "trademark-precheck",
+  "patent-readiness",
+  "sale-readiness",
+  "This tool is for general informational purposes only and is not legal advice",
+  "not a trademark clearance opinion",
+  "not a patentability opinion",
+  "Attorney advertising",
+]) {
+  assert.ok(searchMagnetConfig.includes(token), `Search magnet config missing source token: ${token}`);
+}
+
+for (const token of [
+  "view === \"capture\"",
+  "lead_captured",
+  "completed",
+  "config.consentText",
+  "validEmail",
+  "scoreSearchMagnet",
+  "dimensionBarTone",
+  "config.resultDisclaimer",
+  "https://cal.com/jeffschell/talktoapatentlawyer",
+  "A copy of this summary is queued",
+]) {
+  assert.ok(searchMagnetFlow.includes(token), `Search magnet flow missing token: ${token}`);
+}
+
 for (const token of [
   "Name",
   "Work email",
+  "Title",
   "Company name",
   "type=\"radio\"",
   "type=\"checkbox\"",
   "permission_acknowledged",
+  "contact_title",
   "qualifying_status",
   "magnet_slug",
   "/api/leads",
   "data-assessment-question",
   "All answers are categorical",
   "not submitted confidential",
+  "Start questionnaire",
+  "Next question",
+  "Download customized PDF report",
 ]) {
   assert.ok(`${leadMagnetFlow} ${magnetConfig}`.includes(token), `Final lead magnet flow missing token: ${token}`);
 }
@@ -258,6 +393,8 @@ for (const token of [
   "last_magnet_completed_at",
   "magnet_history",
   "outsideCounselPdfUrl",
+  "generateAssessmentReportPdf",
+  "contact_title",
 ]) {
   assert.ok(`${leadRoute} ${magnetConfig}`.includes(token), `Final /api/leads route missing token: ${token}`);
 }
@@ -276,7 +413,6 @@ for (const source of [
   assert.match(source, /\.brand-logo-schellip\s*\{\s*height:\s*17px;/, "Mobile Schell IP logo height must be 17px");
 }
 
-const rootPage = read("src/app/page.tsx");
 assert.ok(rootPage.includes('href: "/governance-plan"'), "Directory must link to /governance-plan");
 assert.ok(rootPage.includes('href: "/outside-counsel-playbook"'), "Directory must link to /outside-counsel-playbook");
 assert.ok(rootPage.includes("PDF · 5 pages"), "Directory must show the outside counsel PDF meta line");
@@ -291,10 +427,28 @@ for (const token of [
   "ai_compliance_heat_map",
   "workflowPattern:",
   "Only add the workflow trigger tag",
+  "sendInvestorOutreachConfirmationEmail",
+  "RESEND_API_KEY",
+  "highLevelContactUpsert",
+  "contact_title",
+  "investor_outreach_confirmation_sender",
+  "app_resend",
+  "investor_outreach_portfolio_research_queue",
+  "investor_outreach_portfolio_matches",
+  "investor_outreach_portfolio_match_count",
+  "investor_outreach_portfolio_enrichment_version",
+  "Email confirmation is required before requesting the investor outreach board.",
+  "handleSearchMagnetSubmission",
+  "validateSearchMagnetPayload",
+  "search_magnet_event",
+  "search_magnet_score",
+  "search_magnet_dimensions",
+  "search_magnet_prioritized_actions",
+  "search_magnet_consent",
 ]) {
   assert.ok(route.includes(token), `API route missing static guardrail token: ${token}`);
 }
 
 console.log(
-  "Static lead-magnet guardrail parity passed: four apps have disclaimer gates, unchecked optional marketing consent, report request without opt-in, shared guardrail metadata, compact payload tokens, and no frontend workflow trigger tags.",
+  "Static lead-magnet guardrail parity passed: interactive apps have disclaimer gates, unchecked optional marketing consent, report request without opt-in, shared guardrail metadata, compact payload tokens, and no frontend workflow trigger tags.",
 );

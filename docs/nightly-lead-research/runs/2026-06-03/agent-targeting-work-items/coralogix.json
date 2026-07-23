@@ -1,0 +1,154 @@
+{
+  "prospect_id": "coralogix-20260603",
+  "company": {
+    "prospect_id": "prospect_coralogix_20260603",
+    "name": "Coralogix",
+    "domain": "coralogix.com",
+    "website_url": "https://coralogix.com",
+    "company_linkedin_url": null,
+    "location": "Boston, MA (founded in Israel; offices in India)",
+    "state_region": null,
+    "industry": "AI Observability / AI Monitoring Platform",
+    "segment": "ai-patent",
+    "primary_offer_lane": "ai-patent",
+    "source_type": "nightly_public_source_research",
+    "source_url": "https://techcrunch.com/2026/06/03/coralogix-raises-200m-in-race-to-build-the-monitoring-layer-for-ai-agents/",
+    "source_note": "Software monitoring platform for logs, metrics, and traces with proprietary AI agent 'Olly' and agentic CLI interfaces. Competes with Datadog, New Relic, Splunk. Over 5,000 customers including IBM, Tradeweb, JFrog. More than 30 enterprise customers spend $1M+ annually.\nProprietary AI agent (Olly) + agentic interfaces for incident investigation; betting the company on AI-agent monitoring as a category; AI used in R&D for observability workflows\nUrgency signals: Series F + $200M funding (past 12 months) — +15; Major product pivot to AI-agent observability (new category bet) — +15; 11 months from Series E to F — rapid expansion velocity — +15; Revenue growth 60% YoY — +15; 30+ enterprise customers at $1M+ ARR — +15; AI observability category is time-sensitive as AI-agent deployment accelerates — +5 (judgment)\nGate status: BROWSER_FALLBACK_RESUMED from parent qwen-local research; ops staging did not perform live enrichment or external source refresh.",
+    "pipeline_stage": "research_staged",
+    "scores": {
+      "fit_score": 92,
+      "urgency_score": 75,
+      "value_potential_score": 85,
+      "combined_priority_score": 85
+    },
+    "lead_magnet": "AI Patent Strategy Scorecard",
+    "recommended_offer": "AI IP Protection & Patent Strategy",
+    "risk_level": "attorney_review_required",
+    "suppression_status": "consent_gap_no_auto_send",
+    "conflicts_status": "required_before_send",
+    "owner": "qwen-local",
+    "notes": "Research-only nightly candidate. No outreach authorization; attorney review, conflicts, suppression, source-current checks, contact validation, and Jeff exact approval required before external use.\nOutreach readiness: research_only; consent basis: no_email_opt_in; approval status: no-auto-send.\nNamed contacts staged for attorney-review-only internal research: Ariel Assaraf (Co-founder and CEO), Yoni Farin (Co-founder)\nKey facts: Series F $200M at $1.6B valuation; Ariel Assaraf named as CEO; company founded 2014; Boston HQ; 600+ employees; $100M+ ARR; 5000+ customers; AI agent Olly; Company website — coralogix.com verified as live accessible domain\nNext action: High combined priority (85). First-party evidence from TechCrunch funding article + live website. Contact LinkedIn needs independent verification. No Mtn.West claim — national scope. Recommend attorney review for outreach draft focused on AI patent strategy for AI-agent companies.\nRemediation before outreach: Gate 4: LinkedIn URLs for Assaraf/Farin not yet extracted — verify via search before CRM enrichment; Gate 5: No personal LinkedIn URL stored — company LinkedIn only if found, stored as company_linkedin_url; Gate 6: No Mountain West claim needed — national scope for AI patent lead magnet\nMountain West relevance: none claimed — national/international prospect scope only.\nValidation caveat: parent research used browser fallback after Firecrawl/search/extract quota failures; source-current checks remain required before external use."
+  },
+  "contacts": [
+    {
+      "contact_id": "contact_fb94577e5e164602d96d4674",
+      "name": "Ariel Assaraf",
+      "title": "Co-founder and CEO",
+      "role_category": "ceo",
+      "email": null,
+      "linkedin_url": null,
+      "phone": null,
+      "source_type": "public_source_or_client_input",
+      "source_url": "https://techcrunch.com/2026/06/03/coralogix-raises-200m-in-race-to-build-the-monitoring-layer-for-ai-agents/",
+      "confidence": 80,
+      "permission_basis": "public-source research; attorney review required before outreach; no email opt-in; no auto-send",
+      "suppression_status": "consent_gap_no_auto_send",
+      "notes": "Pictured in TechCrunch article as CEO; named in interview. LinkedIn not extracted from article. Email likely ariel@coralogix.com but unverified."
+    },
+    {
+      "contact_id": "contact_9558f758e3b734c5049967c4",
+      "name": "Yoni Farin",
+      "title": "Co-founder",
+      "role_category": "founder",
+      "email": null,
+      "linkedin_url": null,
+      "phone": null,
+      "source_type": "public_source_or_client_input",
+      "source_url": "https://techcrunch.com/2026/06/03/coralogix-raises-200m-in-race-to-build-the-monitoring-layer-for-ai-agents/",
+      "confidence": 75,
+      "permission_basis": "public-source research; attorney review required before outreach; no email opt-in; no auto-send",
+      "suppression_status": "consent_gap_no_auto_send",
+      "notes": "Named in article image caption as co-founder. LinkedIn not extracted from article."
+    }
+  ],
+  "evidence": [
+    {
+      "evidence_id": "evidence_36a7e16919932e0d1d6ea2b1",
+      "source_url": "https://techcrunch.com/2026/06/03/coralogix-raises-200m-in-race-to-build-the-monitoring-layer-for-ai-agents/",
+      "accessed_at": "2026-06-03",
+      "source_type": "techcrunch_article",
+      "fact_classification": "public",
+      "evidence_snippet": "Series F $200M at $1.6B valuation; Ariel Assaraf named as CEO; company founded 2014; Boston HQ; 600+ employees; $100M+ ARR; 5000+ customers; AI agent Olly",
+      "supported_fact": "Series F $200M at $1.6B valuation; Ariel Assaraf named as CEO; company founded 2014; Boston HQ; 600+ employees; $100M+ ARR; 5000+ customers; AI agent Olly",
+      "confidence": "medium_high",
+      "corroboration": "parent qwen-local browser-fallback research; source-current refresh required before external use",
+      "safe_for_outreach": "conditional",
+      "safe_fact_for_copy": "Series F $200M at $1.6B valuation; Ariel Assaraf named as CEO; company founded 2014; Boston HQ; 600+ employees; $100M+ ARR; 5000+ customers; AI agent Olly"
+    },
+    {
+      "evidence_id": "evidence_5f87f62e955809a4047e8dea",
+      "source_url": "https://coralogix.com",
+      "accessed_at": "2026-06-03",
+      "source_type": "first-party_website",
+      "fact_classification": "public",
+      "evidence_snippet": "Company website — coralogix.com verified as live accessible domain",
+      "supported_fact": "Company website — coralogix.com verified as live accessible domain",
+      "confidence": "medium_high",
+      "corroboration": "parent qwen-local browser-fallback research; source-current refresh required before external use",
+      "safe_for_outreach": "conditional",
+      "safe_fact_for_copy": "Company website — coralogix.com verified as live accessible domain"
+    }
+  ],
+  "outreach_drafts": [
+    {
+      "draft_type": "educational",
+      "channel": "manual_email_review",
+      "title": "AI Patent Strategy Scorecard attorney-review angle: Coralogix",
+      "subject": "Attorney-review-only AI Patent Strategy Scorecard angle for Coralogix",
+      "body": "ATTORNEY REVIEW ONLY — DO NOT SEND/POST.\nTarget: Ariel Assaraf (Co-founder and CEO), Yoni Farin (Co-founder)\nProspect: Coralogix\nInternal hypothesis: Coralogix's proprietary AI agent (Olly) and agentic CLI interfaces represent active, protectable AI innovation with clear patent strategy needs. Their rapid expansion from traditional observability to AI-agent monitoring (Series F in 11 months) likely means invention disclosure processes are accelerating — a common inflection point where AI-assisted R&D attribution and freedom-to-operate reviews become critical before competitive patent disclosures.\nSuggested lead magnet: AI Patent Strategy Scorecard\nUpstream draft marker retained for review context only; no final copy approved:\n[CANDIDATE — FOR JEFF REVIEW]\nRequired before any external use: source-current verification, named contact/LinkedIn validation, conflicts check, suppression/opt-out/prior-touch checks, attorney review, and Jeff exact approval.",
+      "source_facts": [
+        "Series F $200M at $1.6B valuation; Ariel Assaraf named as CEO; company founded 2014; Boston HQ; 600+ employees; $100M+ ARR; 5000+ customers; AI agent Olly",
+        "Company website — coralogix.com verified as live accessible domain"
+      ],
+      "source_urls": [
+        "https://techcrunch.com/2026/06/03/coralogix-raises-200m-in-race-to-build-the-monitoring-layer-for-ai-agents/",
+        "https://coralogix.com"
+      ],
+      "risk_level": "attorney_review_required",
+      "internal_review_notes": "Not approved for sending or posting. Research-only local staging; requires attorney review, conflicts, suppression, source-current checks, contact validation, and Jeff exact approval before external use."
+    }
+  ],
+  "validation_gates": {
+    "gate_1_live_source": "PARENT_BROWSER_FALLBACK_PAYLOAD_ONLY",
+    "source_status": "curl RSS + browser article extraction from parent qwen-local research; Firecrawl credits exhausted",
+    "contact_validation": "passed for named contacts only; Cyera company-level only",
+    "linkedin_validation": "pending; no verified personal LinkedIn promoted to contact field",
+    "outreach_readiness": "attorney-review-only research_only; no external action authorized"
+  },
+  "consent_gating": {
+    "ops_no_auto_send": true,
+    "consent_basis": "no_email_opt_in",
+    "approval_status": "no-auto-send",
+    "workflow_trigger_tags": [],
+    "suppression_tags": [
+      "newsletter:not-consented"
+    ]
+  },
+  "source_candidate_path": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-06-03/prospect_candidates.json",
+  "normalized_store_path": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-06-03/prospect_candidates.normalized_for_store.json",
+  "source_packet_prospect_id": "coralogix-20260603",
+  "local_growth_os_prospect_id": "prospect_coralogix_20260603",
+  "task": "prepare_internal_attorney_review_agent_targeting_packet",
+  "guardrails": {
+    "external_action_allowed": false,
+    "approval_required": true,
+    "no_outreach_no_workflows_no_social_no_clio_no_live_sync": true,
+    "required_before_external_use": [
+      "Jeff exact approval",
+      "attorney review",
+      "conflicts check",
+      "suppression/opt-out/prior-touch check",
+      "source-current verification",
+      "named decision-maker/contact and LinkedIn validation"
+    ]
+  },
+  "work_item_id": "work_nightly_agent_targeting_20260603_112833783ae1dbad3024deb9",
+  "input_path": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-06-03/agent-targeting-work-items/coralogix.json",
+  "output_path": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-06-03/agent-targeting-packets/coralogix-agent-targeting-packet.md",
+  "remediation_checklist": [
+    "Attorney review required before external use.",
+    "Named decision-maker/contact and LinkedIn validation required before any outreach.",
+    "Conflicts, suppression/opt-out, prior-touch, and source-current checks required before any outreach.",
+    "Do not send, post, tag, trigger workflows, sync live CRM/Supabase, or write Clio without Jeff exact approval."
+  ]
+}

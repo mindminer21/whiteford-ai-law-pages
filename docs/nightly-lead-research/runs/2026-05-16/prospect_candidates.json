@@ -1,0 +1,55 @@
+{
+  "run_info": {
+    "run_label": "2026-05-16",
+    "run_time": "2026-05-16",
+    "agent": "Whiteford/Schell IP local Qwen prospect research agent (qwen3.6:35b-a3b)",
+    "status": "source_unavailable_stopped",
+    "prospect_count": 0,
+    "contact_count": 0,
+    "draft_count": 0
+  },
+  "preflight": {
+    "live_source_tools": {
+      "web_search": {
+        "status": "failed",
+        "error": "Payment Required: Insufficient credits"
+      },
+      "web_extract": {
+        "status": "failed",
+        "error": "Payment Required: Insufficient credits"
+      }
+    },
+    "local_rag": {
+      "business_dev_corpus": "available",
+      "qmd_collections": "available",
+      "can_replace_live_source": false
+    },
+    "gate_1_result": "failed",
+    "staging_halted": true
+  },
+  "prospects": [],
+  "contacts": [],
+  "outreach_drafts": [],
+  "source_evidence": [],
+  "approval_items": [],
+  "crm_sync_records": [],
+  "duplicate_candidates": [],
+  "suppression_checks": [],
+  "remediation": {
+    "required": [
+      "Restore live-source access (upgrade Firecrawl plan, configure alternative tool, or verify quota)",
+      "Re-run preflight smoke test with https://example.com",
+      "Begin prospect research using validated live-source tools",
+      "Apply all seven mandatory hard gates from the nightly prompt"
+    ],
+    "gates_failed": [
+      {
+        "gate": "Gate 1 - Live-source extraction required",
+        "requirement": "At least two independently accessible public URLs for any company-level prospect.",
+        "status": "failed",
+        "remediation": "No prospects can be researched until live-source access is restored."
+      }
+    ]
+  },
+  "candidates": []
+}

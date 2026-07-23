@@ -1,0 +1,65 @@
+{
+  "run_mode": "research_only",
+  "run_label": "2026-05-09 nightly batch (source blocked)",
+  "created_at": "2026-05-09T01:30:00-06:00",
+  "model_profile": "qwen3.6:35b-a3b (qwen-local via Hermes / CLI)",
+  "tool_limitations": {
+    "web_search": "FAILED — Payment Required: Insufficient credits on firecrawl.dev (3 attempts) ",
+    "web_extract": "FAILED — Payment Required: Insufficient credits on firecrawl.dev (2 attempts)",
+    "curl_probe": "PARTIALLY_AVAILABLE — confirmed whiteford.com 200, but no prospect-level data returned",
+    "qmd_rag": "NOT_BUILD — better-sqlite3 ABI mismatch with newer Node; index needs rebuild",
+    "business_dev_rag": "NOT_BUILD — index file missing"
+  },
+  "gate_failures": {
+    "gate_1_live_source_extraction": {
+      "status": "FAIL",
+      "reason": "web_search and web_extract both returned 'Payment Required' across all calls. No prospect staging possible without live-source extraction.",
+      "blocked_fields": [
+        "company.domain validation",
+        "company.website_url verification",
+        "company.location / industry confirmation",
+        "company.primary_offer_lane scoring",
+        "company.scores (fit_score, urgency_score, value_potential_score, combined_priority_score)",
+        "evidence records",
+        "contact name/title verification",
+        "contact.linkedin_url hygiene check",
+        "Mountain West relevance claim support"
+      ]
+    }
+  },
+  "prospects": [],
+  "contacts": [],
+  "source_evidence": [],
+  "outreach_drafts": [],
+  "approval_items": [],
+  "suppression_checks": [],
+  "crm_sync_records": [],
+  "supabase_sync_records": [],
+  "summary": {
+    "prospects_researched": 0,
+    "prospects_blocked": 0,
+    "prospects_staged": 0,
+    "contacts_staged": 0,
+    "evidence_rows_written": 0,
+    "outreach_drafts": 0,
+    "approval_items": 0,
+    "live_writes": {
+      "highlevel": 0,
+      "supabase": 0,
+      "apollo_io": 0,
+      "outreach_sent": 0,
+      "linkedin_action": 0
+    }
+  },
+  "required_actions": [
+    "Renew or configure firecrawl.dev credits to restore web_search and web_extract",
+    "If sources are restored, run against all four lanes (AI Patent, AI Compliance, Tech GC, M&A Readiness)",
+    "Validate each candidate against Gates 2-7 before staging",
+    "Write full evidence rows and lead_magnet_fit_lane/tier for each prospect"
+  ],
+  "deliverable_paths": {
+    "prospect_candidates_json": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-09/prospect_candidates.json",
+    "digest_md": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-09/digest.md",
+    "source_unavailable_report.md": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-09/source_unavailable_report.md"
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "batchId": "ghl-agent-targeting-sync-dryrun-2026-05-07T09-42-51-619243Z-afa5c007",
+  "blocked": 0,
+  "completed_at": "2026-05-07T09:42:52.630370Z",
+  "contactsCreated": 0,
+  "contactsLinked": 0,
+  "created_at": "2026-05-07T09:42:51.619243Z",
+  "live": false,
+  "locationId": "tm68WWMrcAa3TqQbEAMa",
+  "opportunitiesCreated": 0,
+  "opportunitiesLinked": 0,
+  "pipelineId": "Tbx4tA6wHv5lTwZPSHyZ",
+  "records": [
+    {
+      "company_name": "Electra",
+      "contactPayloadPath": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-07/highlevel_agent_targeting_payloads/ghl-agent-targeting-sync-dryrun-2026-05-07T09-42-51-619243Z-afa5c007-prospect_bba8ec0dec6e73619770860d-contact-payload.json",
+      "prospect_id": "prospect_bba8ec0dec6e73619770860d",
+      "status": "dry_run_ready"
+    },
+    {
+      "company_name": "Flatfile (also rebranded company name: Obvious)",
+      "contactPayloadPath": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-07/highlevel_agent_targeting_payloads/ghl-agent-targeting-sync-dryrun-2026-05-07T09-42-51-619243Z-afa5c007-prospect_bea9dbd287cb8fcf077720d0-contact-payload.json",
+      "prospect_id": "prospect_bea9dbd287cb8fcf077720d0",
+      "status": "dry_run_ready"
+    },
+    {
+      "company_name": "PickNik Robotics",
+      "contactPayloadPath": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-07/highlevel_agent_targeting_payloads/ghl-agent-targeting-sync-dryrun-2026-05-07T09-42-51-619243Z-afa5c007-prospect_bd2e46b6a31bc423d3064218-contact-payload.json",
+      "prospect_id": "prospect_bd2e46b6a31bc423d3064218",
+      "status": "dry_run_ready"
+    }
+  ],
+  "safety": {
+    "company_level_contacts_used": true,
+    "dnd_enabled_on_created_contacts": true,
+    "no_linkedin_actions": true,
+    "no_sends": true,
+    "no_tags_added": true,
+    "no_workflow_enrollment": true
+  },
+  "selected": 3,
+  "stageId": "fd569cf4-979b-43b8-bd0f-78e807e80ff1",
+  "stageName": "Agent Targeting",
+  "status": "dry_run_ok",
+  "syncedRecords": 0
+}

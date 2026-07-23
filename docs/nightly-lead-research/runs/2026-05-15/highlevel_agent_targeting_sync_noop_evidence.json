@@ -1,0 +1,59 @@
+{
+  "task_id": "t_0a44df5e",
+  "tenant": "whiteford-mountain-west",
+  "prepared_at": "2026-05-15T07:42:21Z",
+  "decision": "no_op_zero_validated_agent_targeting_prospects",
+  "highlevel": {
+    "location_name": "Whiteford Schell IP",
+    "location_id": "tm68WWMrcAa3TqQbEAMa",
+    "pipeline_name": "Whiteford Schell IP Pipeline",
+    "pipeline_id": "Tbx4tA6wHv5lTwZPSHyZ",
+    "stage_name": "Agent Targeting",
+    "stage_id": "fd569cf4-979b-43b8-bd0f-78e807e80ff1",
+    "automation_allowed": 0
+  },
+  "verification": {
+    "source_packet": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-15/prospect_candidates.json",
+    "source_packet_candidates_count": 0,
+    "store_apply_status": "applied",
+    "store_apply_counts": {},
+    "agent_targeting_work_items_2026_05_15": 0,
+    "prospects_created_2026_05_15": 0,
+    "crm_config_id": "ghl-whiteford-schell-ip",
+    "crm_config_mode": "live_approved",
+    "crm_sync_enabled": 1,
+    "outbound_sequences_enabled": 0,
+    "autonomous_automations_enabled": 0,
+    "stage_mapping_id": "whiteford-schell-ip-agent-targeting",
+    "stage_mapping_blueprint_id": "ghl-pipeline-whiteford-schell-ip",
+    "stage_mapping_local_stage": "agent-targeting",
+    "stage_mapping_ghl_stage_name": "Agent Targeting",
+    "stage_mapping_external_stage_id": "fd569cf4-979b-43b8-bd0f-78e807e80ff1",
+    "stage_mapping_automation_allowed": 0
+  },
+  "actions_taken": {
+    "highlevel_contacts_created": 0,
+    "highlevel_contacts_updated": 0,
+    "highlevel_contacts_linked": 0,
+    "highlevel_opportunities_created": 0,
+    "highlevel_opportunities_updated": 0,
+    "highlevel_opportunities_linked": 0,
+    "emails_sms_dms_linkedin_or_social_sent": 0,
+    "workflow_or_campaign_enrollments": 0,
+    "trigger_tags_applied": 0,
+    "supabase_or_clio_writes": 0,
+    "public_or_client_facing_actions": 0
+  },
+  "blockers": [
+    "web_search/web_extract Payment Required / insufficient Firecrawl credits prevented live-source validation",
+    "zero validated candidates, contacts, evidence rows, outreach drafts, approval items, CRM sync records, and Agent Targeting work items",
+    "no exact Jeff approval for live HighLevel mutation of any specific record in this run"
+  ],
+  "artifacts": {
+    "report": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-15/highlevel_agent_targeting_sync_noop_report.md",
+    "validation_report": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-15/validation_report.md",
+    "source_packet": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-15/prospect_candidates.json",
+    "store_output": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-15/store_output.json",
+    "store_verification": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-15/store_verification.json"
+  }
+}

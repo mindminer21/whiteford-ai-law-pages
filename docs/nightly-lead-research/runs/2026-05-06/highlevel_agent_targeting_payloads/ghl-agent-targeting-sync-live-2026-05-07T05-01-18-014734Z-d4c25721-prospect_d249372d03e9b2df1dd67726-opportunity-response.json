@@ -1,0 +1,39 @@
+{
+  "body": {
+    "opportunity": {
+      "contact": {
+        "companyName": "Rigetti Computing",
+        "followers": [],
+        "id": "u8I3Yr7RTDSHJlpp7WyS",
+        "name": "Rigetti Computing Agent Targeting",
+        "tags": []
+      },
+      "contactId": "u8I3Yr7RTDSHJlpp7WyS",
+      "createdAt": "2026-05-07T05:01:22.964Z",
+      "followers": [],
+      "id": "lG8g7kmVJ6JXx7tD4NES",
+      "internalSource": {
+        "apiVersion": "2021-07-28",
+        "channel": "OAUTH",
+        "id": "69f97a4042f2b054fe684553",
+        "source": "INTEGRATION",
+        "type": "CREATED"
+      },
+      "isAttribute": false,
+      "lastActionDate": "2026-05-07T05:01:22.964Z",
+      "lastStageChangeAt": "2026-05-07T05:01:22.964Z",
+      "lastStatusChangeAt": "2026-05-07T05:01:22.964Z",
+      "locationId": "tm68WWMrcAa3TqQbEAMa",
+      "monetaryValue": 0,
+      "name": "Rigetti Computing \u2014 Agent Targeting",
+      "pipelineId": "Tbx4tA6wHv5lTwZPSHyZ",
+      "pipelineStageId": "fd569cf4-979b-43b8-bd0f-78e807e80ff1",
+      "source": "Growth OS nightly prospect research - Agent Targeting (prospect_d249372d03e9b2df1dd67726)",
+      "status": "open",
+      "updatedAt": "2026-05-07T05:01:22.964Z"
+    },
+    "traceId": "0f35f4de-06ed-4b69-873d-0270ace90107"
+  },
+  "ok": true,
+  "status": 201
+}

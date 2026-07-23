@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { LeadMagnetFlow } from "@/components/lead-magnet-flow";
-import { complianceText, magnetConfigs } from "@/lib/magnets/finalization";
+import { complianceText } from "@/lib/magnets/finalization";
 
 export const metadata: Metadata = {
   title: "Outside Counsel Playbook for Tech Companies",
@@ -200,18 +199,6 @@ const pageStyles = `
   border-top: 2px solid var(--accent-soft);
   border-right: 2px solid var(--accent-soft);
 }
-.outside-counsel-page .pdf-thumb-label {
-  position: absolute;
-  top: 16px;
-  left: -28px;
-  font-family: var(--font-mono), "IBM Plex Mono", ui-monospace, monospace;
-  font-size: 10px;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--accent-soft);
-  writing-mode: vertical-rl;
-  transform: rotate(180deg);
-}
 .outside-counsel-page section { padding: 100px 0; }
 .outside-counsel-page .section-eyebrow {
   font-family: var(--font-mono), "IBM Plex Mono", ui-monospace, monospace;
@@ -298,12 +285,31 @@ const pageStyles = `
 .outside-counsel-page .fee-preview .section-eyebrow { color: var(--accent-soft); }
 .outside-counsel-page .fee-preview .section-title { color: var(--paper); }
 .outside-counsel-page .fee-preview .section-title em { color: rgba(255,255,255,0.7); }
-.outside-counsel-page .fee-preview .section-lede { color: rgba(255,255,255,0.7); }
+.outside-counsel-page .fee-preview .section-lede { color: rgba(255,255,255,0.7); margin-bottom: 28px; }
+.outside-counsel-page .fee-brand-lockup {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin: 0 0 48px;
+}
+.outside-counsel-page .fee-brand-lockup img {
+  display: block;
+  width: auto;
+  object-fit: contain;
+}
+.outside-counsel-page .fee-brand-whiteford { height: 28px; }
+.outside-counsel-page .fee-brand-schellip { height: 22px; }
+.outside-counsel-page .fee-brand-divider {
+  width: 1px;
+  height: 28px;
+  background: rgba(255,255,255,0.24);
+  flex: 0 0 auto;
+}
 .outside-counsel-page .tier-row {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1px;
-  margin-top: 40px;
+  margin-top: 0;
   background: rgba(157,116,255,0.22);
   border: 1px solid rgba(157,116,255,0.22);
 }
@@ -408,7 +414,6 @@ const pageStyles = `
   .outside-counsel-page .hero-form input { border-right: 1px solid rgba(255,255,255,0.18); }
   .outside-counsel-page .hero-form button { justify-content: center; }
   .outside-counsel-page .pdf-thumb { transform: none; max-width: 280px; }
-  .outside-counsel-page .pdf-thumb-label { display: none; }
   .outside-counsel-page .inside-grid { grid-template-columns: 1fr; }
   .outside-counsel-page .inside-card { border-right: none; border-bottom: 1px solid var(--line-strong); }
   .outside-counsel-page .inside-card:last-child { border-bottom: none; }
@@ -425,6 +430,10 @@ const pageStyles = `
   .outside-counsel-page .brand-divider { height: 22px; }
   .outside-counsel-page .brand-bar .container { align-items: flex-start; flex-direction: column; gap: 8px; }
   .outside-counsel-page .brand-bar-meta { font-size: 10px; }
+  .outside-counsel-page .fee-brand-lockup { margin-bottom: 32px; }
+  .outside-counsel-page .fee-brand-whiteford { height: 22px; }
+  .outside-counsel-page .fee-brand-schellip { height: 17px; }
+  .outside-counsel-page .fee-brand-divider { height: 22px; }
 }
 `;
 
@@ -465,7 +474,6 @@ export default function OutsideCounselPlaybookPage() {
               height={149}
             />
           </div>
-          <span className="brand-bar-meta">Attorney advertising · learn.schellip.com</span>
         </div>
       </div>
 
@@ -477,17 +485,18 @@ export default function OutsideCounselPlaybookPage() {
               The patent-forward outside counsel playbook <em>for tech companies.</em>
             </h1>
             <p className="hero-sub">
-              Get the 5-page framework for patent value, investment readiness, clean governance,
-              and the fixed-fee monthly structure built for technology-company outside counsel work.
+              Get the playbook for patent value, investment readieness, clean governance, and the
+              counsel you need to support you.
             </p>
-            <LeadMagnetFlow config={magnetConfigs["outside-counsel-playbook"]} />
-            <span className="hero-meta">
-              5-page PDF · arrives in your inbox · public link delivered by email
-            </span>
+            <a className="btn-primary" href="/outside-counsel-playbook/start">
+              Send me the playbook
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true">
+                <path d="M3 9h12M10 4l5 5-5 5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="square" />
+              </svg>
+            </a>
           </div>
           <div className="hero-visual">
             <div className="pdf-thumb">
-              <span className="pdf-thumb-label">5-page PDF</span>
               <Image
                 src="/logos/playbook-cover.png"
                 alt="Outside Counsel Playbook PDF cover"
@@ -603,6 +612,25 @@ export default function OutsideCounselPlaybookPage() {
             defined scope, predictable billing, and quarterly true-ups. Four tiers, scoped by
             company stage and the cadence of corporate activity.
           </p>
+          <div className="fee-brand-lockup" aria-label="Whiteford and Schell IP">
+            <img
+              className="fee-brand-whiteford"
+              src="/logos/whiteford-white-on-navy.png"
+              alt="Whiteford Taylor Preston"
+              width={900}
+              height={270}
+              loading="lazy"
+            />
+            <span className="fee-brand-divider" aria-hidden="true" />
+            <img
+              className="fee-brand-schellip"
+              src="/logos/schellip-white.png"
+              alt="Schell IP"
+              width={982}
+              height={149}
+              loading="lazy"
+            />
+          </div>
           <div className="tier-row">
             <div className="tier">
               <div className="tier-label">FOUNDATION</div>

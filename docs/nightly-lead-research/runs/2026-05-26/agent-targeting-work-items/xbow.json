@@ -1,0 +1,169 @@
+{
+  "prospect_id": "xbow-20260526",
+  "company": {
+    "prospect_id": "prospect_xbow_20260526",
+    "name": "XBOW",
+    "domain": "xbow.com",
+    "website_url": "https://xbow.com/",
+    "location": "Seattle, WA",
+    "state_region": "WA",
+    "industry": "AI-powered offensive security / autonomous hacking",
+    "segment": "tech-gc",
+    "primary_offer_lane": "tech-gc",
+    "source_type": "nightly_public_source_research",
+    "source_url": "https://xbow.com/",
+    "source_note": "XBOW builds an autonomous offensive security platform that applies AI reasoning and adversarial workflows modeled on real-world attack techniques. Continuous, machine-speed application testing. Trained by elite human hackers to mimic real adversary thinking. Deployed at Fortune 500 companies. Co-founded by Oege de Moor (creator of GitHub Copilot & GitHub Advanced Security) and Mike Horton.\n$120M Series C at $1B+ valuation; total ~$195M (Seed + Series B + Series C); investors include DFJ Growth, Northzone, Sequoia, NVIDIA, Samsung, SentinelOne\nFounded Jan 2024; reached unicorn status <2 years; topped HackerOne leaderboard; Fortune 500 deployments",
+    "pipeline_stage": "research_staged",
+    "scores": {
+      "fit_score": 88,
+      "urgency_score": 70,
+      "value_potential_score": 75,
+      "combined_priority_score": 78,
+      "contact_confidence": 70
+    },
+    "lead_magnet": "AI Patent Strategy Scorecard",
+    "recommended_offer": "AI Patent Strategy Scorecard / attorney-review Agent Targeting packet (/ai-patent-strategy-scorecard)",
+    "risk_level": "attorney_review_required",
+    "suppression_status": "consent_gap_no_auto_send",
+    "conflicts_status": "required_before_send",
+    "owner": "qwen-local",
+    "notes": "Research-only nightly candidate. No outreach authorization; attorney review, conflicts, suppression, source-current checks, and Jeff exact approval required before external use.\nXBOW builds an autonomous offensive security platform that applies AI reasoning and adversarial workflows modeled on real-world attack techniques. Continuous, machine-speed application testing. Trained by elite human hackers to mimic real adversary thinking. Deployed at Fortune 500 companies. Co-founded by Oege de Moor (creator of GitHub Copilot & GitHub Advanced Security) and Mike Horton.\nSize signal: $120M Series C at $1B+ valuation; total ~$195M (Seed + Series B + Series C); investors include DFJ Growth, Northzone, Sequoia, NVIDIA, Samsung, SentinelOne\nMaturity signal: Founded Jan 2024; reached unicorn status <2 years; topped HackerOne leaderboard; Fortune 500 deployments\nValidation gates: {\"gate_1_live_source\": \"PASS — web_search and web_extract both operational\", \"gate_2_domain_canonical\": \"PASS — xbow.com verified as official domain\", \"gate_3_current_urls\": \"PASS — xbow.com/news and xbow.com returned content\", \"gate_4_contact_validation\": \"MODERATE — Oege de Moor (CEO) confirmed via xbow.com/news and Geekwire. Mike Horton (Co-founder) confirmed via Tracxn. Direct email not available.\", \"gate_5_linkedin_hygiene\": \"INFO — LinkedIn URLs for contacts not located. Oege de Moor may have a public LinkedIn profile; should be verified via search if LinkedIn tagging is intended.\", \"gate_6_geographic_support\": \"HQ is Seattle, WA — Pacific Northwest. No Mountain West claim. Industry-wide relevance for AI/patent/Tech GC strategy.\", \"gate_7_outreach_readiness\": \"draft_ready for attorney review only. ops:no-auto-send = true.\"}\nNext action: {'recommended': 'attorney_review', 'notes': 'Strong Tech GC + AI Patent dual-lane prospect. Founder with Copilot IP background makes this uniquely interesting. Oege de Moor LinkedIn handle needs verification for tagging. Consider Tech GC lane as primary (cybersecurity + AI) with AI Patent as secondary.'}"
+  },
+  "contacts": [
+    {
+      "name": "Oege de Moor",
+      "title": "Founder & CEO",
+      "role_category": "ceo",
+      "email": null,
+      "email_confidence": 0,
+      "linkedin_url": null,
+      "phone": null,
+      "source_url": "https://xbow.com/news/xbow-raises-120m-to-scale",
+      "source_type": "company_press_release",
+      "permission_basis": "public-source research; attorney review required before outreach",
+      "confidence": 75,
+      "verified_from": "xbow.com/news confirms Oege de Moor as founder/CEO; his GitHub Copilot creator status confirmed via multiple sources",
+      "suppression_status": "not_checked",
+      "notes": "xbow.com/news confirms Oege de Moor as founder/CEO; his GitHub Copilot creator status confirmed via multiple sources"
+    },
+    {
+      "name": "Mike Horton",
+      "title": "Co-founder",
+      "role_category": "co_founder",
+      "email": null,
+      "email_confidence": 0,
+      "linkedin_url": null,
+      "phone": null,
+      "source_url": "https://tracxn.com/d/companies/xbow/__Cfo_nfEx1K6ohIzSzhKlwf0IRl2CGCu1ywVn64pc8vw",
+      "source_type": "crunchbase_profileref",
+      "permission_basis": "public-source research; attorney review required before outreach",
+      "confidence": 65,
+      "verified_from": "Tracxn lists Mike Horton as co-founder; xbow.com/news references 'co-founded by Oege de Moor and Mike Horton'",
+      "suppression_status": "not_checked",
+      "notes": "Tracxn lists Mike Horton as co-founder; xbow.com/news references 'co-founded by Oege de Moor and Mike Horton'"
+    }
+  ],
+  "evidence": [
+    {
+      "evidence_id": "evidence_c893c35ab061052562a76e1f",
+      "source_url": "https://xbow.com/news/xbow-raises-120m-to-scale",
+      "accessed_at": "2026-05-26",
+      "source_type": "company_press_release",
+      "fact_classification": "public",
+      "evidence_snippet": "$120M Series C at $1B+ val; DFJ Growth & Northzone leads; Oege de Moor confirms as founder/CEO; GitHub Copilot creator",
+      "supported_fact": "$120M Series C at $1B+ val; DFJ Growth & Northzone leads; Oege de Moor confirms as founder/CEO; GitHub Copilot creator",
+      "confidence": "high",
+      "corroboration": "public source cited in nightly research packet",
+      "safe_for_outreach": "conditional",
+      "safe_fact_for_copy": "$120M Series C at $1B+ val; DFJ Growth & Northzone leads; Oege de Moor confirms as founder/CEO; GitHub Copilot creator"
+    },
+    {
+      "evidence_id": "evidence_1ba8be76abc4600542c99c6e",
+      "source_url": "https://www.geekwire.com/2026/xbow-the-unicorn-with-a-seattle-mailbox-raises-another-35m-for-its-autonomous-hacking-platform/",
+      "accessed_at": "2026-05-26",
+      "source_type": "news",
+      "fact_classification": "public",
+      "evidence_snippet": "Seattle-based unicorn; NVIDIA, Samsung, SentinelOne investors; AI-driven offensive security platform",
+      "supported_fact": "Seattle-based unicorn; NVIDIA, Samsung, SentinelOne investors; AI-driven offensive security platform",
+      "confidence": "high",
+      "corroboration": "public source cited in nightly research packet",
+      "safe_for_outreach": "conditional",
+      "safe_fact_for_copy": "Seattle-based unicorn; NVIDIA, Samsung, SentinelOne investors; AI-driven offensive security platform"
+    },
+    {
+      "evidence_id": "evidence_3e95f858f8a0430b88f5325a",
+      "source_url": "https://xbow.com/",
+      "accessed_at": "2026-05-26",
+      "source_type": "company_website",
+      "fact_classification": "public",
+      "evidence_snippet": "Official site confirms autonomous hacker platform; deployed at Fortune 500",
+      "supported_fact": "Official site confirms autonomous hacker platform; deployed at Fortune 500",
+      "confidence": "high",
+      "corroboration": "public source cited in nightly research packet",
+      "safe_for_outreach": "conditional",
+      "safe_fact_for_copy": "Official site confirms autonomous hacker platform; deployed at Fortune 500"
+    }
+  ],
+  "outreach_drafts": [
+    {
+      "draft_type": "email",
+      "channel": "manual_email_review",
+      "title": "AI Patent Strategy Scorecard attorney-review angle: XBOW",
+      "subject": "Attorney-review-only AI Patent Strategy Scorecard angle for XBOW",
+      "body": "ATTORNEY REVIEW ONLY — DO NOT SEND/POST.\nTarget: Oege de Moor\nPublic fact hook / hypothesis: XBOW is a unicorn-speed company founded by Oege de Moor (GitHub Copilot creator) at the intersection of AI and offensive security. The autonomous hacker concept — AI mimicking human adversary thinking — is inherently novel IP territory. With $120M Series C and Fortune 500 deployments, they're scaling rapidly and likely generating significant patentable technology. The founder's deep IP background (Copilot creation) makes him both a savvy IP person and a person who understands Whiteford's value proposition intimately.\nSuggested lead magnet: AI Patent Strategy Scorecard — /ai-patent-strategy-scorecard\nLinkedIn awareness draft exists for internal review only; do not post, tag, or trigger workflows without exact approval.\n\nInternal LinkedIn awareness draft:\n$120 million. Unicorn status. Created by the guy who built GitHub Copilot.\n\nOege de Moor didn't just build Copilot. He understood something deeper: when AI can think like an expert, the hard part isn't the AI — it's protecting the IP that makes the AI work.\n\nHis latest move? An autonomous AI that doesn't just find bugs — it thinks like a real adversary. Machine-speed. Continuous.\n\nBut here's the question most AI companies haven't answered yet:\n\nWho owns the inventions when the AI is doing the innovating? And can the company later prove which parts were AI-generated vs. human-designed?\n\nFor #AI-security: the IP question just got harder. The model is the product. The model's training data is the moat. The documentation of human contribution is the patent.\n\nEducational starting point: AI Patent Strategy Scorecard\nhttps://whiteford-ai-law-pages.vercel.app/ai-patent-strategy-scorecard\n\nGuardrail: no outreach, email/SMS, workflow enrollment, trigger tags, LinkedIn/social action, Clio writes, public/client-facing changes, or live CRM/Supabase sync without Jeff exact approval.",
+      "source_facts": [
+        "$120M Series C at $1B+ val; DFJ Growth & Northzone leads; Oege de Moor confirms as founder/CEO; GitHub Copilot creator",
+        "Seattle-based unicorn; NVIDIA, Samsung, SentinelOne investors; AI-driven offensive security platform",
+        "Official site confirms autonomous hacker platform; deployed at Fortune 500"
+      ],
+      "source_urls": [
+        "https://xbow.com/news/xbow-raises-120m-to-scale",
+        "https://www.geekwire.com/2026/xbow-the-unicorn-with-a-seattle-mailbox-raises-another-35m-for-its-autonomous-hacking-platform/",
+        "https://xbow.com/"
+      ],
+      "risk_level": "attorney_review_required",
+      "internal_review_notes": "Not approved for sending or posting. Research-only local staging; requires attorney review, conflicts, suppression, source-current checks, and Jeff exact approval before external use."
+    }
+  ],
+  "validation_gates": {
+    "gate_1_live_source": "PASS — web_search and web_extract both operational",
+    "gate_2_domain_canonical": "PASS — xbow.com verified as official domain",
+    "gate_3_current_urls": "PASS — xbow.com/news and xbow.com returned content",
+    "gate_4_contact_validation": "MODERATE — Oege de Moor (CEO) confirmed via xbow.com/news and Geekwire. Mike Horton (Co-founder) confirmed via Tracxn. Direct email not available.",
+    "gate_5_linkedin_hygiene": "INFO — LinkedIn URLs for contacts not located. Oege de Moor may have a public LinkedIn profile; should be verified via search if LinkedIn tagging is intended.",
+    "gate_6_geographic_support": "HQ is Seattle, WA — Pacific Northwest. No Mountain West claim. Industry-wide relevance for AI/patent/Tech GC strategy.",
+    "gate_7_outreach_readiness": "draft_ready for attorney review only. ops:no-auto-send = true."
+  },
+  "consent_gating": {
+    "ops_no_auto_send": true,
+    "consent_basis": "no_email_opt_in",
+    "approval_status": "no-auto-send",
+    "workflow_trigger_tags": [],
+    "suppression_tags": [
+      "newsletter:not-consented"
+    ]
+  },
+  "source_candidate_path": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-26/prospect_candidates.json",
+  "normalized_store_path": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-26/prospect_candidates.normalized_for_store.json",
+  "source_packet_prospect_id": "xbow-20260526",
+  "local_growth_os_prospect_id": "prospect_xbow_20260526",
+  "task": "prepare_internal_attorney_review_agent_targeting_packet",
+  "guardrails": {
+    "external_action_allowed": false,
+    "approval_required": true,
+    "no_outreach_no_workflows_no_social_no_clio_no_live_sync": true,
+    "required_before_external_use": [
+      "Jeff exact approval",
+      "attorney review",
+      "conflicts check",
+      "suppression/opt-out check",
+      "source-current verification"
+    ]
+  },
+  "work_item_id": "work_nightly_agent_targeting_20260526_6a9f8cd813efea9a0f556725",
+  "remediation_checklist": [
+    "Attorney review required before external use.",
+    "Conflicts, suppression/opt-out, prior-touch, and source-current checks required before any outreach.",
+    "Do not send, post, tag, trigger workflows, sync live CRM/Supabase, or write Clio without Jeff exact approval."
+  ]
+}

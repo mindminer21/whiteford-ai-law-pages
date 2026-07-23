@@ -1,0 +1,91 @@
+{
+  "task_id": "t_31c183aa",
+  "validated_at": "2026-05-28T08:35:43+00:00",
+  "source_payload": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-28/prospect_candidates.json",
+  "normalized_payload": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-28/prospect_candidates.normalized_for_store.json",
+  "dry_run": {
+    "status": "dry_run",
+    "candidates": 3,
+    "db": "/Users/jeff/.openclaw/projects/mountain-west-growth-os/data/growth-os.sqlite"
+  },
+  "store_output": {
+    "status": "applied",
+    "counts": {
+      "prospects": 3,
+      "contacts": 4,
+      "opportunities": 3,
+      "source_evidence": 12,
+      "outreach_drafts": 3,
+      "approval_items": 3,
+      "crm_sync_records": 3,
+      "suppression_checks": 3
+    },
+    "db": "/Users/jeff/.openclaw/projects/mountain-west-growth-os/data/growth-os.sqlite"
+  },
+  "verification_path": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-28/store_verification.json",
+  "backup_path": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-28/growth-os.before_t_31c183aa.sqlite",
+  "staged_prospects": [
+    {
+      "prospect_id": "prospect_cognition_labs_20260528",
+      "company_name": "Cognition Labs",
+      "domain": "cognition.com",
+      "segment": "tech-gc",
+      "pipeline_stage": "research_staged",
+      "suppression_status": "consent_gap_no_auto_send",
+      "conflicts_status": "required_before_send"
+    },
+    {
+      "prospect_id": "prospect_simplexai_20260528",
+      "company_name": "SimplexAI",
+      "domain": "simplexai.com",
+      "segment": "ai-compliance",
+      "pipeline_stage": "research_staged",
+      "suppression_status": "consent_gap_no_auto_send",
+      "conflicts_status": "required_before_send"
+    },
+    {
+      "prospect_id": "prospect_triomics_20260528",
+      "company_name": "Triomics",
+      "domain": "triomics.com",
+      "segment": "ai-compliance",
+      "pipeline_stage": "research_staged",
+      "suppression_status": "consent_gap_no_auto_send",
+      "conflicts_status": "required_before_send"
+    }
+  ],
+  "work_items": [
+    {
+      "work_item_id": "work_nightly_agent_targeting_20260528_3c9ae85ed6048fd96deff71e",
+      "company": "Cognition Labs",
+      "priority": 93,
+      "input_path": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-28/agent-targeting-work-items/cognition-labs.json",
+      "local_growth_os_prospect_id": "prospect_cognition_labs_20260528"
+    },
+    {
+      "work_item_id": "work_nightly_agent_targeting_20260528_a088a1f1fdefa7a8428b01cc",
+      "company": "SimplexAI",
+      "priority": 79,
+      "input_path": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-28/agent-targeting-work-items/simplexai.json",
+      "local_growth_os_prospect_id": "prospect_simplexai_20260528"
+    },
+    {
+      "work_item_id": "work_nightly_agent_targeting_20260528_28e60f10d0578fbe8e3ed051",
+      "company": "Triomics",
+      "priority": 68,
+      "input_path": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-28/agent-targeting-work-items/triomics.json",
+      "local_growth_os_prospect_id": "prospect_triomics_20260528"
+    }
+  ],
+  "warnings": [
+    "Cognition Labs: non-Mountain-West HQ (San Francisco, CA); do not make Mountain West/local claim.",
+    "Cognition Labs: contact confidence 55 — enrichment/source-current verification required before any outreach.",
+    "SimplexAI: contact Chris Pinkney has no public profile/source URL in payload; retained as low-confidence/no-outreach target pending enrichment.",
+    "SimplexAI: contact Michael Tang has no public profile/source URL in payload; retained as low-confidence/no-outreach target pending enrichment.",
+    "SimplexAI: non-Mountain-West HQ (San Francisco, CA); do not make Mountain West/local claim.",
+    "SimplexAI: contact confidence 50 — enrichment/source-current verification required before any outreach.",
+    "Triomics: contact Dr. Sarah E. Johnson has no public profile/source URL in payload; retained as low-confidence/no-outreach target pending enrichment.",
+    "Triomics: contact confidence 45 — enrichment/source-current verification required before any outreach.",
+    "All outreach and LinkedIn awareness drafts are attorney-review-only and must not be sent, posted, tagged, synced live, or enrolled in workflows."
+  ],
+  "safety_decision": "Records and work items are staged locally only with external_action_allowed=0 and approval_required=1. No outreach, sends, workflow activation/enrollment, trigger tags, LinkedIn/social action, Clio write, public/client-facing use, or live CRM/Supabase/HighLevel sync is authorized."
+}

@@ -141,6 +141,40 @@ export const campaigns = {
       },
     ],
   },
+  "investor-outreach": {
+    label: "Investor Outreach Kanban Nurture",
+    authorityPillar: "Fundraising Readiness and IP Diligence",
+    leadMagnet: "Investor Outreach Kanban",
+    triggerTag: "workflow:investor-outreach-kanban",
+    tags: ["leadmagnet:investor-outreach-kanban", "interest:fundraising-readiness"],
+    recommendedOffer: "Founder Fundraising Readiness Review",
+    emails: [
+      {
+        subject: "Your investor outreach board",
+        preview: "A practical way to turn investor lists into a fundraising workflow.",
+        body:
+          "The board is a starting point for organizing investor fit, warm introductions, meeting follow-up, data-room readiness, diligence, funding, and archive hygiene. It is not legal advice, but it can help you see where process and legal readiness intersect.",
+      },
+      {
+        subject: "Warm introductions need a process",
+        preview: "Investor outreach usually breaks down between list-building and introduction requests.",
+        body:
+          "A useful fundraising workflow separates investor fit from introduction paths. The practical next step is to identify the strongest warm path, prepare a short non-confidential forwardable blurb, and track every investor by stage.",
+      },
+      {
+        subject: "What to tighten before investor diligence",
+        preview: "Data-room gaps often appear after the first good meeting.",
+        body:
+          "Before diligence starts, founders should know where IP ownership records, patent and trade-secret posture, cap table support, customer contracts, AI/data/privacy issues, and employment documents live. A cleanup pass before diligence can change the conversation.",
+      },
+      {
+        subject: "When fundraising readiness becomes legal readiness",
+        preview: "A board can show when a focused review would help.",
+        body:
+          "When investor meetings start moving toward follow-up and diligence, a focused fundraising readiness review can identify IP, contracts, governance, AI/data, and data-room issues before they slow the round.",
+      },
+    ],
+  },
 } as const;
 
 export type CampaignKey = keyof typeof campaigns;

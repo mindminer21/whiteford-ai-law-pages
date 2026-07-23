@@ -1,0 +1,238 @@
+{
+  "apply": false,
+  "assets": {
+    "WF | Email | AI Compliance Gameplan | 01 Deliver Gameplan | Draft": {
+      "lane": "ai-compliance",
+      "leadMagnet": "AI Compliance Gameplan Builder",
+      "name": "WF | Email | AI Compliance Gameplan | 01 Deliver Gameplan | Draft",
+      "offer": "AI Compliance Readiness Sprint",
+      "preview": "A practical next-step map for AI governance and legal readiness.",
+      "route": "/ai-compliance-gameplan",
+      "sequence": 1,
+      "status": "planned",
+      "subject": "Your AI compliance gameplan"
+    },
+    "WF | Email | AI Compliance Gameplan | 02 Vendor Risk | Draft": {
+      "lane": "ai-compliance",
+      "leadMagnet": "AI Compliance Gameplan Builder",
+      "name": "WF | Email | AI Compliance Gameplan | 02 Vendor Risk | Draft",
+      "offer": "AI Compliance Readiness Sprint",
+      "preview": "AI legal readiness often starts with the contract stack.",
+      "route": "/ai-compliance-gameplan",
+      "sequence": 2,
+      "status": "planned",
+      "subject": "Vendor risk is often the first AI legal risk"
+    },
+    "WF | Email | AI Compliance Gameplan | 03 Colorado AI Readiness | Draft": {
+      "lane": "ai-compliance",
+      "leadMagnet": "AI Compliance Gameplan Builder",
+      "name": "WF | Email | AI Compliance Gameplan | 03 Colorado AI Readiness | Draft",
+      "offer": "AI Compliance Readiness Sprint",
+      "preview": "Treat unsettled law as a readiness workstream.",
+      "route": "/ai-compliance-gameplan",
+      "sequence": 3,
+      "status": "planned",
+      "subject": "Colorado AI readiness without overreacting"
+    },
+    "WF | Email | AI Compliance Gameplan | 04 Sprint CTA | Draft": {
+      "lane": "ai-compliance",
+      "leadMagnet": "AI Compliance Gameplan Builder",
+      "name": "WF | Email | AI Compliance Gameplan | 04 Sprint CTA | Draft",
+      "offer": "AI Compliance Readiness Sprint",
+      "preview": "The goal is repeatable governance, not one-off panic.",
+      "route": "/ai-compliance-gameplan",
+      "sequence": 4,
+      "status": "planned",
+      "subject": "Turn AI use into a legal operating system"
+    },
+    "WF | Email | AI Patent Strategy Scorecard | 01 Deliver Scorecard | Draft": {
+      "lane": "ai-patent",
+      "leadMagnet": "AI Patent Strategy Scorecard",
+      "name": "WF | Email | AI Patent Strategy Scorecard | 01 Deliver Scorecard | Draft",
+      "offer": "AI Patent Strategy Sprint",
+      "preview": "What to document before AI-assisted R&D becomes a patent problem.",
+      "route": "/ai-patent-strategy-scorecard",
+      "sequence": 1,
+      "status": "planned",
+      "subject": "Your AI patent strategy scorecard"
+    },
+    "WF | Email | AI Patent Strategy Scorecard | 02 AI Invention Records | Draft": {
+      "lane": "ai-patent",
+      "leadMagnet": "AI Patent Strategy Scorecard",
+      "name": "WF | Email | AI Patent Strategy Scorecard | 02 AI Invention Records | Draft",
+      "offer": "AI Patent Strategy Sprint",
+      "preview": "The AI tool is not the inventor. The human contribution still matters.",
+      "route": "/ai-patent-strategy-scorecard",
+      "sequence": 2,
+      "status": "planned",
+      "subject": "The mistake founders make with AI-assisted invention"
+    },
+    "WF | Email | AI Patent Strategy Scorecard | 03 Legal Moat | Draft": {
+      "lane": "ai-patent",
+      "leadMagnet": "AI Patent Strategy Scorecard",
+      "name": "WF | Email | AI Patent Strategy Scorecard | 03 Legal Moat | Draft",
+      "offer": "AI Patent Strategy Sprint",
+      "preview": "Patents, trade secrets, contracts, and roadmap decisions work together.",
+      "route": "/ai-patent-strategy-scorecard",
+      "sequence": 3,
+      "status": "planned",
+      "subject": "Build the legal moat before the demo gets copied"
+    },
+    "WF | Email | AI Patent Strategy Scorecard | 04 Sprint CTA | Draft": {
+      "lane": "ai-patent",
+      "leadMagnet": "AI Patent Strategy Scorecard",
+      "name": "WF | Email | AI Patent Strategy Scorecard | 04 Sprint CTA | Draft",
+      "offer": "AI Patent Strategy Sprint",
+      "preview": "A bounded review can help decide what to protect, document, or defer.",
+      "route": "/ai-patent-strategy-scorecard",
+      "sequence": 4,
+      "status": "planned",
+      "subject": "When an AI patent strategy sprint is useful"
+    },
+    "WF | Email | Founder M&A Readiness | 01 Deliver Checklist | Draft": {
+      "lane": "ma-readiness",
+      "leadMagnet": "Founder M&A Readiness Checklist",
+      "name": "WF | Email | Founder M&A Readiness | 01 Deliver Checklist | Draft",
+      "offer": "Founder M&A Readiness Review",
+      "preview": "Start cleaning up the issues a buyer will ask about later.",
+      "route": "/colorado-startup-ma-lawyer",
+      "sequence": 1,
+      "status": "planned",
+      "subject": "Your founder M&A readiness checklist"
+    },
+    "WF | Email | Founder M&A Readiness | 02 Deal Friction | Draft": {
+      "lane": "ma-readiness",
+      "leadMagnet": "Founder M&A Readiness Checklist",
+      "name": "WF | Email | Founder M&A Readiness | 02 Deal Friction | Draft",
+      "offer": "Founder M&A Readiness Review",
+      "preview": "The diligence problems that show up before price becomes the issue.",
+      "route": "/colorado-startup-ma-lawyer",
+      "sequence": 2,
+      "status": "planned",
+      "subject": "Three non-financial risks that slow tech deals"
+    },
+    "WF | Email | Founder M&A Readiness | 03 Buyer Questions | Draft": {
+      "lane": "ma-readiness",
+      "leadMagnet": "Founder M&A Readiness Checklist",
+      "name": "WF | Email | Founder M&A Readiness | 03 Buyer Questions | Draft",
+      "offer": "Founder M&A Readiness Review",
+      "preview": "A little cleanup before diligence can change the conversation.",
+      "route": "/colorado-startup-ma-lawyer",
+      "sequence": 3,
+      "status": "planned",
+      "subject": "What a buyer will ask before you are ready"
+    },
+    "WF | Email | Founder M&A Readiness | 04 Review CTA | Draft": {
+      "lane": "ma-readiness",
+      "leadMagnet": "Founder M&A Readiness Checklist",
+      "name": "WF | Email | Founder M&A Readiness | 04 Review CTA | Draft",
+      "offer": "Founder M&A Readiness Review",
+      "preview": "Map diligence cleanup before the process controls you.",
+      "route": "/colorado-startup-ma-lawyer",
+      "sequence": 4,
+      "status": "planned",
+      "subject": "When a founder M&A readiness review is useful"
+    },
+    "WF | Email | Tech GC Launchpad | 01 Deliver Checklist | Draft": {
+      "lane": "tech-gc",
+      "leadMagnet": "Tech Company Legal Health Checklist",
+      "name": "WF | Email | Tech GC Launchpad | 01 Deliver Checklist | Draft",
+      "offer": "Tech Company OGC Launchpad",
+      "preview": "A practical way to see where the company is carrying legal drag.",
+      "route": "/colorado-tech-general-counsel",
+      "sequence": 1,
+      "status": "planned",
+      "subject": "Your technology-company legal health checklist"
+    },
+    "WF | Email | Tech GC Launchpad | 02 Legal Infrastructure | Draft": {
+      "lane": "tech-gc",
+      "leadMagnet": "Tech Company Legal Health Checklist",
+      "name": "WF | Email | Tech GC Launchpad | 02 Legal Infrastructure | Draft",
+      "offer": "Tech Company OGC Launchpad",
+      "preview": "What changes when a technology company starts to scale.",
+      "route": "/colorado-tech-general-counsel",
+      "sequence": 2,
+      "status": "planned",
+      "subject": "From patent strategy to company legal infrastructure"
+    },
+    "WF | Email | Tech GC Launchpad | 03 Milestone Readiness | Draft": {
+      "lane": "tech-gc",
+      "leadMagnet": "Tech Company Legal Health Checklist",
+      "name": "WF | Email | Tech GC Launchpad | 03 Milestone Readiness | Draft",
+      "offer": "Tech Company OGC Launchpad",
+      "preview": "Legal readiness should match the next business event.",
+      "route": "/colorado-tech-general-counsel",
+      "sequence": 3,
+      "status": "planned",
+      "subject": "What to fix before hiring, fundraising, or selling"
+    },
+    "WF | Email | Tech GC Launchpad | 04 Launchpad CTA | Draft": {
+      "lane": "tech-gc",
+      "leadMagnet": "Tech Company Legal Health Checklist",
+      "name": "WF | Email | Tech GC Launchpad | 04 Launchpad CTA | Draft",
+      "offer": "Tech Company OGC Launchpad",
+      "preview": "A bounded legal operating review can create the roadmap.",
+      "route": "/colorado-tech-general-counsel",
+      "sequence": 4,
+      "status": "planned",
+      "subject": "When an outside GC launchpad is useful"
+    }
+  },
+  "errors": [
+    "list email campaigns failed: GET /emails/public/v2/locations/tm68WWMrcAa3TqQbEAMa/campaigns failed HTTP 404: {\"message\":\"Cannot GET /emails/public/v2/locations/tm68WWMrcAa3TqQbEAMa/campaigns?limit=20&offset=0&search=WF+%7C+Email\",\"error\":\"Not Found\",\"statusCode\":404}"
+  ],
+  "locationId": "tm68WWMrcAa3TqQbEAMa",
+  "safety": {
+    "activatedWorkflows": false,
+    "createdContacts": false,
+    "createdDraftEmailCampaignAssetsOnly": true,
+    "enrolledContacts": false,
+    "sentEmails": false,
+    "workflowAutomationCreation": "manual_ui_required_or_unavailable_via_safe_public_api"
+  },
+  "selectedUser": {
+    "email": "jeff@schellip.com",
+    "id": "jeff@schellip.com",
+    "name": "Jeff Schell"
+  },
+  "selectedUserSource": "GHL_USER_ID environment override",
+  "users": [],
+  "workflowCampaignsDraftList": [
+    {
+      "createdAt": "2026-05-05T05:03:21.424Z",
+      "deleted": false,
+      "id": "69f97a19232869917a4a863b",
+      "name": "5. Long-Term Nurture",
+      "sourceId": "28cfdf24-11ec-47b6-9830-3aa3bc827cf0",
+      "status": "draft",
+      "updatedAt": "2026-05-05T05:03:21.424Z"
+    },
+    {
+      "createdAt": "2026-05-05T05:03:19.865Z",
+      "deleted": false,
+      "id": "69f97a170b9869859e76b260",
+      "name": "1. New Lead Nurture (Fast 5) - Claim Offer",
+      "sourceId": "bd952a80-46d3-419f-900d-e9add46ca003",
+      "status": "draft",
+      "updatedAt": "2026-05-05T05:03:19.865Z"
+    },
+    {
+      "createdAt": "2026-05-05T05:03:19.851Z",
+      "deleted": false,
+      "id": "69f97a170b9869d15376b25c",
+      "name": "3. Appt No Show",
+      "sourceId": "dcf4b664-4d02-4465-bf88-1be1a1e6ea34",
+      "status": "draft",
+      "updatedAt": "2026-05-05T05:03:19.851Z"
+    },
+    {
+      "createdAt": "2026-05-05T05:03:19.831Z",
+      "deleted": false,
+      "id": "69f97a170b9869d3bf76b258",
+      "name": "2. Appointment Confirmation + Reminders",
+      "sourceId": "0a1749da-af77-4d51-ba2e-8a1027ca66b5",
+      "status": "draft",
+      "updatedAt": "2026-05-05T05:03:19.831Z"
+    }
+  ]
+}

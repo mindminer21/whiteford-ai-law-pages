@@ -1,0 +1,813 @@
+{
+  "capturedAt": "2026-05-07T12:37:02.882Z",
+  "url": "https://client-app-automation-workflows.leadconnectorhq.com/location/tm68WWMrcAa3TqQbEAMa/workflow/dee4450a-1b7b-4597-9fa4-9c7b7423b848",
+  "title": "Workflow",
+  "bodyText": "Skip to main content\nWorkflows list\n\nWF | Intake | Whiteford | Tech GC Launchpad | Draft\n\nSaved\nStandard Builder\n\nBuilder\n\nSettings\n\nEnrollment History\n\nExecution Logs\n\nTest Workflow\n\nDraft\n\nPublish\n\nTech GC Launchpad Safety + Review Note\nConsent Gate — lead magnet email opt-in required before nurture\nOpted in / eligible for fut...\n\nIf \"Tags\" includes \"newsletter:ai\"\n\nNot opted in / suppressed /...\nWhen none of the conditions are met\nEND\nEND\nContact TagContact Tag Added - workflow:tech-gc-launchpad\nTag Added includes \"workflow:tech-gc-launchpad\"\nStats\nAdd New Trigger\nAdd\n124%\n\nLearn more\n\nContact Tag\n\nRuns when the specified tag is applied or cleared.\n\nCHOOSE A WORKFLOW TRIGGER\nContact Tag\nWORKFLOW TRIGGER NAME\nFILTERS\nTag Added\nworkflow:tech-gc-launchpad\n Add filters\nDelete\nCancel\nSave Trigger",
+  "nodes": [
+    {
+      "i": 0,
+      "className": "vue-flow__node vue-flow__node-action selectable",
+      "text": "Tech GC Launchpad Safety + Review Note",
+      "aria": null,
+      "rect": {
+        "x": 540.4664916992188,
+        "y": 225.35992431640625,
+        "width": 298.578857421875,
+        "height": 88.32958984375,
+        "top": 225.35992431640625,
+        "left": 540.4664916992188,
+        "bottom": 313.68951416015625,
+        "right": 839.0453491210938
+      }
+    },
+    {
+      "i": 1,
+      "className": "vue-flow__node vue-flow__node-action selectable",
+      "text": "Consent Gate — lead magnet email opt-in required before nurture",
+      "aria": null,
+      "rect": {
+        "x": 540.4664916992188,
+        "y": 424.4124755859375,
+        "width": 298.578857421875,
+        "height": 102.014404296875,
+        "top": 424.4124755859375,
+        "left": 540.4664916992188,
+        "bottom": 526.4268798828125,
+        "right": 839.0453491210938
+      }
+    },
+    {
+      "i": 2,
+      "className": "vue-flow__node vue-flow__node-branch selected selectable",
+      "text": "Opted in / eligible for fut...\n\nIf \"Tags\" includes \"newsletter:ai\"",
+      "aria": null,
+      "rect": {
+        "x": 378.73626708984375,
+        "y": 623.465087890625,
+        "width": 301.0670166015625,
+        "height": 89.5736083984375,
+        "top": 623.465087890625,
+        "left": 378.73626708984375,
+        "bottom": 713.0386962890625,
+        "right": 679.8032836914062
+      }
+    },
+    {
+      "i": 3,
+      "className": "vue-flow__node vue-flow__node-none selectable",
+      "text": "Not opted in / suppressed /...\nWhen none of the conditions are met",
+      "aria": null,
+      "rect": {
+        "x": 702.1967163085938,
+        "y": 623.465087890625,
+        "width": 301.06695556640625,
+        "height": 89.5736083984375,
+        "top": 623.465087890625,
+        "left": 702.1967163085938,
+        "bottom": 713.0386962890625,
+        "right": 1003.263671875
+      }
+    },
+    {
+      "i": 4,
+      "className": "vue-flow__node vue-flow__node-end selectable",
+      "text": "END",
+      "aria": null,
+      "rect": {
+        "x": 378.73626708984375,
+        "y": 822.5176391601562,
+        "width": 298.578857421875,
+        "height": 32.34600830078125,
+        "top": 822.5176391601562,
+        "left": 378.73626708984375,
+        "bottom": 854.8636474609375,
+        "right": 677.3151245117188
+      }
+    },
+    {
+      "i": 5,
+      "className": "vue-flow__node vue-flow__node-end selectable",
+      "text": "END",
+      "aria": null,
+      "rect": {
+        "x": 702.1967163085938,
+        "y": 822.5176391601562,
+        "width": 298.57879638671875,
+        "height": 32.34600830078125,
+        "top": 822.5176391601562,
+        "left": 702.1967163085938,
+        "bottom": 854.8636474609375,
+        "right": 1000.7755126953125
+      }
+    },
+    {
+      "i": 6,
+      "className": "vue-flow__node vue-flow__node-trigger selectable",
+      "text": "Contact TagContact Tag Added - workflow:tech-gc-launchpad\nTag Added includes \"workflow:tech-gc-launchpad\"\nStats",
+      "aria": null,
+      "rect": {
+        "x": 381.84649658203125,
+        "y": -147.86361694335938,
+        "width": 301.06695556640625,
+        "height": 187.8558349609375,
+        "top": -147.86361694335938,
+        "left": 381.84649658203125,
+        "bottom": 39.992218017578125,
+        "right": 682.9134521484375
+      }
+    },
+    {
+      "i": 7,
+      "className": "vue-flow__node vue-flow__node-newTrigger selectable",
+      "text": "Add New Trigger",
+      "aria": null,
+      "rect": {
+        "x": 699.0864868164062,
+        "y": -147.86361694335938,
+        "width": 298.578857421875,
+        "height": 186.6117706298828,
+        "top": -147.86361694335938,
+        "left": 699.0864868164062,
+        "bottom": 38.74815368652344,
+        "right": 997.6653442382812
+      }
+    }
+  ],
+  "controls": [
+    {
+      "i": 0,
+      "tag": "A",
+      "id": "",
+      "text": "Skip to main content",
+      "aria": null,
+      "disabled": false,
+      "className": "sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-1/4 focus:opacity-100 focus:bg-white focus:px-2 focus:border focus:border-black focus:z-50"
+    },
+    {
+      "i": 1,
+      "tag": "BUTTON",
+      "id": "cmp-header__link--workflow-list",
+      "text": "Workflows list",
+      "aria": "Workflows list",
+      "disabled": false,
+      "className": "n-button n-button--default-type n-button--large-type icon-only hl-text-btn mt-2 mt-2"
+    },
+    {
+      "i": 2,
+      "tag": "DIV",
+      "id": "cmp-header__txt--edit-workflow-name-parent",
+      "text": "WF | Intake | Whiteford | Tech GC Launchpad | Draft",
+      "aria": null,
+      "disabled": false,
+      "className": "flex justify-center items-center rounded ring-1 ring-transparent focus-within:ring-1 focus-within:ring-primary-700 cursor-pointer hover:bg-gray-100"
+    },
+    {
+      "i": 3,
+      "tag": "BUTTON",
+      "id": "cmp-header__btn--changelog",
+      "text": "Recent Changes",
+      "aria": "Recent Changes",
+      "disabled": false,
+      "className": "n-button n-button--default-type n-button--medium-type quaternary icon-only hl-text-btn bg-white rounded-lg border border-black transition-colors customButton hover:bg-gray-50 hover:border-gray-400 undo-redo-group-button bg-white rounded-lg border border-black transition-colors customButton hover:bg-gray-50 hover:border-gray-400 undo-redo-group-button"
+    },
+    {
+      "i": 4,
+      "tag": "BUTTON",
+      "id": "cmp-header__btn--undo",
+      "text": "Undo",
+      "aria": "Undo",
+      "disabled": true,
+      "className": "n-button n-button--default-type n-button--medium-type n-button--disabled quaternary icon-only hl-text-btn bg-white rounded-lg border transition-color customButton undo-redo-group-button bg-white rounded-lg border transition-color customButton undo-redo-group-button"
+    },
+    {
+      "i": 5,
+      "tag": "BUTTON",
+      "id": "cmp-header__btn--redo",
+      "text": "Redo",
+      "aria": "Redo",
+      "disabled": true,
+      "className": "n-button n-button--default-type n-button--medium-type n-button--disabled quaternary icon-only hl-text-btn bg-white rounded-lg border hover:bg-gray-500 transition-color customButton undo-redo-group-button bg-white rounded-lg border hover:bg-gray-500 transition-color customButton undo-redo-group-button"
+    },
+    {
+      "i": 6,
+      "tag": "BUTTON",
+      "id": "workflow-builder-fullscreen-toggle",
+      "text": "",
+      "aria": null,
+      "disabled": false,
+      "className": "n-button n-button--ghost-type n-button--large-type icon-only rounded-md rounded-md"
+    },
+    {
+      "i": 7,
+      "tag": "BUTTON",
+      "id": "cmp-action-bar__btn--test-workflow",
+      "text": "Test Workflow",
+      "aria": "Test Workflow",
+      "disabled": false,
+      "className": "n-button n-button--tertiary-type n-button--small-type mr-3"
+    },
+    {
+      "i": 8,
+      "tag": "BUTTON",
+      "id": "workflow-builder-tab-workflow-comments",
+      "text": "",
+      "aria": null,
+      "disabled": false,
+      "className": "n-button n-button--ghost-type n-button--large-type icon-only rounded-md rounded-md"
+    },
+    {
+      "i": 9,
+      "tag": "BUTTON",
+      "id": "workflow-builder-tab-error-highlight",
+      "text": "",
+      "aria": null,
+      "disabled": false,
+      "className": "n-button n-button--ghost-type n-button--large-type icon-only rounded-md rounded-md"
+    },
+    {
+      "i": 10,
+      "tag": "BUTTON",
+      "id": "workflow-builder-tab-stats-view",
+      "text": "",
+      "aria": null,
+      "disabled": false,
+      "className": "n-button n-button--ghost-type n-button--large-type icon-only rounded-md rounded-md"
+    },
+    {
+      "i": 11,
+      "tag": "BUTTON",
+      "id": "workflow-builder-tab-sticky-notes",
+      "text": "",
+      "aria": null,
+      "disabled": false,
+      "className": "n-button n-button--ghost-type n-button--large-type icon-only rounded-md rounded-md"
+    },
+    {
+      "i": 12,
+      "tag": "BUTTON",
+      "id": "workflow-builder-tab-workflow-switcher",
+      "text": "",
+      "aria": null,
+      "disabled": false,
+      "className": "n-button n-button--ghost-type n-button--large-type icon-only rounded-md rounded-md"
+    },
+    {
+      "i": 13,
+      "tag": "BUTTON",
+      "id": "workflow-builder-tab-search-and-replace",
+      "text": "",
+      "aria": null,
+      "disabled": false,
+      "className": "n-button n-button--ghost-type n-button--large-type icon-only rounded-md rounded-md"
+    },
+    {
+      "i": 14,
+      "tag": "BUTTON",
+      "id": "workflow-builder-tab-version-history",
+      "text": "",
+      "aria": null,
+      "disabled": false,
+      "className": "n-button n-button--ghost-type n-button--large-type icon-only rounded-md rounded-md"
+    },
+    {
+      "i": 15,
+      "tag": "BUTTON",
+      "id": "workflow-builder-tab-ai-chat",
+      "text": "",
+      "aria": null,
+      "disabled": false,
+      "className": "n-button n-button--ghost-type n-button--large-type icon-only rounded-md text-purple-700 rounded-md text-purple-700"
+    },
+    {
+      "i": 16,
+      "tag": "g",
+      "id": "",
+      "text": "Edge from 3ad895f4-862a-4b29-9d17-130c3050370e to 097b602a-c159-4c61-9030-aa2e5002e69f",
+      "aria": "Edge from 3ad895f4-862a-4b29-9d17-130c3050370e to 097b602a-c159-4c61-9030-aa2e5002e69f",
+      "disabled": false,
+      "className": "[object SVGAnimatedString]"
+    },
+    {
+      "i": 17,
+      "tag": "g",
+      "id": "",
+      "text": "Edge from 097b602a-c159-4c61-9030-aa2e5002e69f to e9d41d90-c7de-4ea9-918a-f9a9c9c726da",
+      "aria": "Edge from 097b602a-c159-4c61-9030-aa2e5002e69f to e9d41d90-c7de-4ea9-918a-f9a9c9c726da",
+      "disabled": false,
+      "className": "[object SVGAnimatedString]"
+    },
+    {
+      "i": 18,
+      "tag": "g",
+      "id": "",
+      "text": "Edge from 097b602a-c159-4c61-9030-aa2e5002e69f to a1d77787-f79e-4bf9-b828-5eb09872d838",
+      "aria": "Edge from 097b602a-c159-4c61-9030-aa2e5002e69f to a1d77787-f79e-4bf9-b828-5eb09872d838",
+      "disabled": false,
+      "className": "[object SVGAnimatedString]"
+    },
+    {
+      "i": 19,
+      "tag": "g",
+      "id": "",
+      "text": "Edge from e9d41d90-c7de-4ea9-918a-f9a9c9c726da to e9d41d90-c7de-4ea9-918a-f9a9c9c726da-end",
+      "aria": "Edge from e9d41d90-c7de-4ea9-918a-f9a9c9c726da to e9d41d90-c7de-4ea9-918a-f9a9c9c726da-end",
+      "disabled": false,
+      "className": "[object SVGAnimatedString]"
+    },
+    {
+      "i": 20,
+      "tag": "g",
+      "id": "",
+      "text": "Edge from a1d77787-f79e-4bf9-b828-5eb09872d838 to a1d77787-f79e-4bf9-b828-5eb09872d838-end",
+      "aria": "Edge from a1d77787-f79e-4bf9-b828-5eb09872d838 to a1d77787-f79e-4bf9-b828-5eb09872d838-end",
+      "disabled": false,
+      "className": "[object SVGAnimatedString]"
+    },
+    {
+      "i": 21,
+      "tag": "g",
+      "id": "",
+      "text": "Edge from cgoyTbkGAmRcvtG88QTR to 3ad895f4-862a-4b29-9d17-130c3050370e",
+      "aria": "Edge from cgoyTbkGAmRcvtG88QTR to 3ad895f4-862a-4b29-9d17-130c3050370e",
+      "disabled": false,
+      "className": "[object SVGAnimatedString]"
+    },
+    {
+      "i": 22,
+      "tag": "g",
+      "id": "",
+      "text": "Edge from add-new-trigger to 3ad895f4-862a-4b29-9d17-130c3050370e",
+      "aria": "Edge from add-new-trigger to 3ad895f4-862a-4b29-9d17-130c3050370e",
+      "disabled": false,
+      "className": "[object SVGAnimatedString]"
+    },
+    {
+      "i": 23,
+      "tag": "BUTTON",
+      "id": "3ad895f4-862a-4b29-9d17-130c3050370e-plus-button",
+      "text": "Add Action",
+      "aria": "Add Action",
+      "disabled": false,
+      "className": "n-button n-button--default-type n-button--medium-type quaternary icon-only plus-button bg-gray-100 w-6 h-6 group-hover:bg-blue-100 border border-dashed border-gray-300 plus-button bg-gray-100 w-6 h-6 group-hover:bg-blue-100 border border-dashed border-gray-300"
+    },
+    {
+      "i": 24,
+      "tag": "BUTTON",
+      "id": "e9d41d90-c7de-4ea9-918a-f9a9c9c726da-plus-button",
+      "text": "Add Action",
+      "aria": "Add Action",
+      "disabled": false,
+      "className": "n-button n-button--default-type n-button--medium-type quaternary icon-only plus-button bg-gray-100 w-6 h-6 group-hover:bg-blue-100 border border-dashed border-gray-300 plus-button bg-gray-100 w-6 h-6 group-hover:bg-blue-100 border border-dashed border-gray-300"
+    },
+    {
+      "i": 25,
+      "tag": "BUTTON",
+      "id": "a1d77787-f79e-4bf9-b828-5eb09872d838-plus-button",
+      "text": "Add Action",
+      "aria": "Add Action",
+      "disabled": false,
+      "className": "n-button n-button--default-type n-button--medium-type quaternary icon-only plus-button bg-gray-100 w-6 h-6 group-hover:bg-blue-100 border border-dashed border-gray-300 plus-button bg-gray-100 w-6 h-6 group-hover:bg-blue-100 border border-dashed border-gray-300"
+    },
+    {
+      "i": 26,
+      "tag": "DIV",
+      "id": "",
+      "text": "Tech GC Launchpad Safety + Review Note",
+      "aria": null,
+      "disabled": false,
+      "className": "vue-flow__node vue-flow__node-action selectable"
+    },
+    {
+      "i": 27,
+      "tag": "DIV",
+      "id": "",
+      "text": "Tech GC Launchpad Safety + Review Note",
+      "aria": "Tech GC Launchpad Safety + Review Note Action",
+      "disabled": false,
+      "className": "flex flex-col items-center relative node-parent"
+    },
+    {
+      "i": 28,
+      "tag": "BUTTON",
+      "id": "root-plus-button",
+      "text": "Add Action",
+      "aria": "Add Action",
+      "disabled": false,
+      "className": "n-button n-button--default-type n-button--medium-type quaternary icon-only plus-button bg-gray-100 w-6 h-6 group-hover:bg-blue-100 border border-dashed border-gray-300 plus-button bg-gray-100 w-6 h-6 group-hover:bg-blue-100 border border-dashed border-gray-300"
+    },
+    {
+      "i": 29,
+      "tag": "BUTTON",
+      "id": "node-disable-controls-button-3ad895f4-862a-4b29-9d17-130c3050370e",
+      "text": "Disable action",
+      "aria": "Disable action",
+      "disabled": false,
+      "className": "n-button n-button--default-type n-button--small-type icon-only hl-text-btn node-disable-controls-button bg-white rounded-md p-1 node-disable-control node-disable-controls-button bg-white rounded-md p-1 node-disable-control"
+    },
+    {
+      "i": 30,
+      "tag": "DIV",
+      "id": "",
+      "text": "Tech GC Launchpad Safety + Review Note",
+      "aria": null,
+      "disabled": false,
+      "className": "flex content-between items-center px-3 py-4 text-gray-600 text-xs font-regular node-draggable relative outline-none"
+    },
+    {
+      "i": 31,
+      "tag": "BUTTON",
+      "id": "",
+      "text": "",
+      "aria": null,
+      "disabled": false,
+      "className": "cursor-pointer bg-transparent p-1 border-0 text-gray-400 hover:text-primary-500 hover:bg-gray-100 rounded-md"
+    },
+    {
+      "i": 32,
+      "tag": "DIV",
+      "id": "",
+      "text": "Consent Gate — lead magnet email opt-in required before nurture",
+      "aria": null,
+      "disabled": false,
+      "className": "vue-flow__node vue-flow__node-action selectable"
+    },
+    {
+      "i": 33,
+      "tag": "DIV",
+      "id": "",
+      "text": "Consent Gate — lead magnet email opt-in required before nurture",
+      "aria": "Consent Gate — lead magnet email opt-in required before nurture Action",
+      "disabled": false,
+      "className": "flex flex-col items-center relative node-parent"
+    },
+    {
+      "i": 34,
+      "tag": "DIV",
+      "id": "",
+      "text": "Consent Gate — lead magnet email opt-in required before nurture",
+      "aria": null,
+      "disabled": false,
+      "className": "flex content-between items-center px-3 py-4 text-gray-600 text-xs font-regular node-draggable relative outline-none"
+    },
+    {
+      "i": 35,
+      "tag": "BUTTON",
+      "id": "",
+      "text": "",
+      "aria": null,
+      "disabled": false,
+      "className": "cursor-pointer bg-transparent p-1 border-0 text-gray-400 hover:text-primary-500 hover:bg-gray-100 rounded-md"
+    },
+    {
+      "i": 36,
+      "tag": "DIV",
+      "id": "",
+      "text": "Opted in / eligible for fut...\n\nIf \"Tags\" includes \"newsletter:ai\"",
+      "aria": null,
+      "disabled": false,
+      "className": "vue-flow__node vue-flow__node-branch selected selectable"
+    },
+    {
+      "i": 37,
+      "tag": "DIV",
+      "id": "",
+      "text": "Opted in / eligible for fut...",
+      "aria": null,
+      "disabled": false,
+      "className": "flex items-center justify-center w-60 px-1 flex-1 text-center h-5"
+    },
+    {
+      "i": 38,
+      "tag": "DIV",
+      "id": "",
+      "text": "If \"Tags\" includes \"newsletter:ai\"",
+      "aria": null,
+      "disabled": false,
+      "className": ""
+    },
+    {
+      "i": 39,
+      "tag": "DIV",
+      "id": "",
+      "text": "Not opted in / suppressed /...\nWhen none of the conditions are met",
+      "aria": null,
+      "disabled": false,
+      "className": "vue-flow__node vue-flow__node-none selectable"
+    },
+    {
+      "i": 40,
+      "tag": "DIV",
+      "id": "",
+      "text": "Not opted in / suppressed /...",
+      "aria": null,
+      "disabled": false,
+      "className": "flex items-center justify-center w-60 px-1 flex-1 text-center h-5"
+    },
+    {
+      "i": 41,
+      "tag": "DIV",
+      "id": "",
+      "text": "When none of the conditions are met",
+      "aria": null,
+      "disabled": false,
+      "className": ""
+    },
+    {
+      "i": 42,
+      "tag": "DIV",
+      "id": "",
+      "text": "END",
+      "aria": null,
+      "disabled": false,
+      "className": "vue-flow__node vue-flow__node-end selectable"
+    },
+    {
+      "i": 43,
+      "tag": "DIV",
+      "id": "",
+      "text": "END",
+      "aria": null,
+      "disabled": false,
+      "className": "vue-flow__node vue-flow__node-end selectable"
+    },
+    {
+      "i": 44,
+      "tag": "DIV",
+      "id": "",
+      "text": "Contact TagContact Tag Added - workflow:tech-gc-launchpad\nTag Added includes \"workflow:tech-gc-launchpad\"\nStats",
+      "aria": null,
+      "disabled": false,
+      "className": "vue-flow__node vue-flow__node-trigger selectable"
+    },
+    {
+      "i": 45,
+      "tag": "DIV",
+      "id": "",
+      "text": "Contact TagContact Tag Added - workflow:tech-gc-launchpad",
+      "aria": "Contact Tag Added - workflow:tech-gc-launchpad Trigger",
+      "disabled": false,
+      "className": "flex content-start items-center py-2 px-3"
+    },
+    {
+      "i": 46,
+      "tag": "BUTTON",
+      "id": "view-stats-details-button",
+      "text": "Stats",
+      "aria": null,
+      "disabled": false,
+      "className": "n-button n-button--primary-type n-button--small-type icon-only hl-text-btn text-primary-700 text-primary-700"
+    },
+    {
+      "i": 47,
+      "tag": "DIV",
+      "id": "",
+      "text": "Add New Trigger",
+      "aria": null,
+      "disabled": false,
+      "className": "vue-flow__node vue-flow__node-newTrigger selectable"
+    },
+    {
+      "i": 48,
+      "tag": "BUTTON",
+      "id": "add-node",
+      "text": "Add",
+      "aria": null,
+      "disabled": false,
+      "className": "n-button n-button--default-type n-button--medium-type rounded-md"
+    },
+    {
+      "i": 49,
+      "tag": "BUTTON",
+      "id": "cursor-mode-toggle",
+      "text": "",
+      "aria": null,
+      "disabled": false,
+      "className": "n-button n-button--default-type n-button--medium-type w-12 h-12"
+    },
+    {
+      "i": 50,
+      "tag": "BUTTON",
+      "id": "workflow-zoom-in",
+      "text": "",
+      "aria": null,
+      "disabled": false,
+      "className": "n-button n-button--default-type n-button--medium-type w-12 h-12"
+    },
+    {
+      "i": 51,
+      "tag": "BUTTON",
+      "id": "workflow-zoom-value",
+      "text": "124%",
+      "aria": null,
+      "disabled": false,
+      "className": "n-button n-button--default-type n-button--medium-type w-12 h-14 p-1"
+    },
+    {
+      "i": 52,
+      "tag": "BUTTON",
+      "id": "workflow-zoom-out",
+      "text": "",
+      "aria": null,
+      "disabled": false,
+      "className": "n-button n-button--default-type n-button--medium-type w-12 h-12"
+    },
+    {
+      "i": 53,
+      "tag": "BUTTON",
+      "id": "workflow-fit-to-screen",
+      "text": "",
+      "aria": null,
+      "disabled": false,
+      "className": "n-button n-button--default-type n-button--medium-type w-12 h-12"
+    },
+    {
+      "i": 54,
+      "tag": "BUTTON",
+      "id": "workflow-keyboard-shortcuts",
+      "text": "",
+      "aria": null,
+      "disabled": false,
+      "className": "n-button n-button--default-type n-button--large-type icon-only rounded-md workflow-keyboard-shortcuts rounded-md workflow-keyboard-shortcuts"
+    },
+    {
+      "i": 55,
+      "tag": "INPUT",
+      "id": "",
+      "text": "2026.04.07",
+      "aria": null,
+      "disabled": false,
+      "className": "border py-2 rounded px-2 font-medium text-sm w-full focus:ring-curious-blue-500 focus:border-curious-blue-500 border-gray-300"
+    },
+    {
+      "i": 56,
+      "tag": "BUTTON",
+      "id": "",
+      "text": "",
+      "aria": null,
+      "disabled": false,
+      "className": "vdpClearInput"
+    },
+    {
+      "i": 57,
+      "tag": "INPUT",
+      "id": "",
+      "text": "2026.05.07",
+      "aria": null,
+      "disabled": false,
+      "className": "border py-2 rounded px-2 font-medium text-sm w-full focus:ring-curious-blue-500 focus:border-curious-blue-500 border-gray-300"
+    },
+    {
+      "i": 58,
+      "tag": "BUTTON",
+      "id": "",
+      "text": "",
+      "aria": null,
+      "disabled": false,
+      "className": "vdpClearInput"
+    },
+    {
+      "i": 59,
+      "tag": "BUTTON",
+      "id": "cmp-stat-modal__btn--refresh",
+      "text": "",
+      "aria": null,
+      "disabled": false,
+      "className": "inline-flex items-center justify-center rounded focus:outline-none transition ease-in-out duration-150 border border-transparent font-medium  text-curious-blue-500  border-curious-blue-600 hover:bg-curious-blue-100 focus:outline-none focus:border-curious-blue-300 focus:shadow-outline-indigo px-2.5 py-1.5 text-xs leading-4 hl-btn ml-2"
+    },
+    {
+      "i": 60,
+      "tag": "BUTTON",
+      "id": "cmp-stat-modal__btn--export-csv",
+      "text": "export",
+      "aria": null,
+      "disabled": false,
+      "className": "inline-flex items-center justify-center rounded focus:outline-none transition ease-in-out duration-150 border border-transparent font-medium  text-curious-blue-500  border-curious-blue-600 hover:bg-curious-blue-100 focus:outline-none focus:border-curious-blue-300 focus:shadow-outline-indigo px-4 py-2 leading-5 text-sm hl-btn"
+    },
+    {
+      "i": 61,
+      "tag": "BUTTON",
+      "id": "",
+      "text": "Previous",
+      "aria": null,
+      "disabled": true,
+      "className": "inline-flex items-center justify-center rounded focus:outline-none transition ease-in-out duration-150  border border-gray-300 font-medium  text-gray-700 hover:text-gray-500 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue px-4 py-2 leading-5 text-sm hl-btn mr-3"
+    },
+    {
+      "i": 62,
+      "tag": "BUTTON",
+      "id": "",
+      "text": "Next",
+      "aria": null,
+      "disabled": true,
+      "className": "inline-flex items-center justify-center rounded focus:outline-none transition ease-in-out duration-150  border border-gray-300 font-medium  text-gray-700 hover:text-gray-500 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue px-4 py-2 leading-5 text-sm hl-btn"
+    },
+    {
+      "i": 63,
+      "tag": "BUTTON",
+      "id": "sidebar-prev-action-button",
+      "text": "Previous",
+      "aria": "Previous",
+      "disabled": true,
+      "className": "n-button n-button--default-type n-button--small-type n-button--disabled quaternary icon-only"
+    },
+    {
+      "i": 64,
+      "tag": "BUTTON",
+      "id": "sidebar-next-action-button",
+      "text": "Next",
+      "aria": "Next",
+      "disabled": false,
+      "className": "n-button n-button--default-type n-button--small-type quaternary icon-only"
+    },
+    {
+      "i": 65,
+      "tag": "BUTTON",
+      "id": "pg-actions__btn--learn-more",
+      "text": "Learn more",
+      "aria": null,
+      "disabled": false,
+      "className": "n-button n-button--tertiary-type n-button--small-type p-2 h-7 rounded mr-2"
+    },
+    {
+      "i": 66,
+      "tag": "BUTTON",
+      "id": "expand_panel_button",
+      "text": "",
+      "aria": null,
+      "disabled": false,
+      "className": "n-button n-button--default-type n-button--small-type quaternary icon-only"
+    },
+    {
+      "i": 67,
+      "tag": "BUTTON",
+      "id": "close_panel_button",
+      "text": "Close panel",
+      "aria": "Close panel",
+      "disabled": false,
+      "className": "n-button n-button--default-type n-button--small-type quaternary icon-only"
+    },
+    {
+      "i": 68,
+      "tag": "BUTTON",
+      "id": "options-menu",
+      "text": "Contact Tag",
+      "aria": null,
+      "disabled": false,
+      "className": "inline-flex content-between justify-between w-full rounded-md border border-gray-300 px-4 py-2 bg-white text-sm leading-5 font-medium text-gray-700 hover:text-gray-500 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-gray-50 active:text-gray-800 transition ease-in-out duration-150"
+    },
+    {
+      "i": 69,
+      "tag": "INPUT",
+      "id": "",
+      "text": "Contact Tag Added - workflow:tech-gc-launchpad",
+      "aria": null,
+      "disabled": false,
+      "className": "border-color-battleship focus:shadow-focus block w-full shadow-sm focus:ring-curious-blue-500 focus:border-curious-blue-500 sm:text-sm border-gray-300 rounded w-full"
+    },
+    {
+      "i": 70,
+      "tag": "BUTTON",
+      "id": "options-menu",
+      "text": "Tag Added",
+      "aria": null,
+      "disabled": false,
+      "className": "inline-flex content-between justify-between w-full rounded-md border border-gray-300 px-4 py-2 bg-white text-sm leading-5 font-medium text-gray-700 hover:text-gray-500 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-gray-50 active:text-gray-800 transition ease-in-out duration-150"
+    },
+    {
+      "i": 71,
+      "tag": "INPUT",
+      "id": "uisearchselect-input-search",
+      "text": "",
+      "aria": null,
+      "disabled": false,
+      "className": "border focus:shadow-focus block w-full shadow-sm focus:ring-curious-blue-500 focus:border-curious-blue-500 border-gray-300 rounded text-sm"
+    },
+    {
+      "i": 72,
+      "tag": "BUTTON",
+      "id": "pg-actions__btn--delete-action-trigger",
+      "text": "Delete",
+      "aria": null,
+      "disabled": false,
+      "className": "n-button n-button--default-type n-button--medium-type text-red-600 hover:text-red-500"
+    },
+    {
+      "i": 73,
+      "tag": "BUTTON",
+      "id": "cancel-button-aside-section",
+      "text": "Cancel",
+      "aria": null,
+      "disabled": false,
+      "className": "n-button n-button--default-type n-button--medium-type mr-2"
+    },
+    {
+      "i": 74,
+      "tag": "BUTTON",
+      "id": "pg-actions__btn--save-action-trigger",
+      "text": "Save Trigger",
+      "aria": null,
+      "disabled": false,
+      "className": "n-button n-button--primary-type n-button--medium-type pg-actions__btn--save-trigger-contact_tag"
+    }
+  ]
+}

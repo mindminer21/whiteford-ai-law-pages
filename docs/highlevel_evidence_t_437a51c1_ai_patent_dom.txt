@@ -1,0 +1,75 @@
+HighLevel DOM evidence — t_437a51c1 — AI Patent Strategy Scorecard
+Captured: 2026-05-06 15:08 MDT via Chrome CDP iframe text extraction
+URL: https://app.gohighlevel.com/location/tm68WWMrcAa3TqQbEAMa/workflow/8dbff7fd-caa0-49b3-ba16-bd46b4a1f1d7/advanced-canvas
+
+Observed text excerpt:
+Skip to main content
+Back to Workflows
+
+WF | Intake | Whiteford | AI Patent Strategy Scorecard | Draft
+
+Saved
+Advanced Builder
+
+Builder
+
+Settings
+
+Enrollment History
+
+Execution Logs
+
+Test Workflow
+
+Draft
+
+Publish
+
+Contact Tag Added - workflow:ai-patent-strategy
+Add Internal Note - DND Suppression Guard
+
+(Default Path)
+
+Add Internal Note - Newsletter Consent Guard
+#1 Create Internal Review Task for Jeff
+Check for High-Fit (Internal Determination)
+
+AND
+
+If "Tags" includes "high-fit"
+High-Fit: Internal - Create Note and Task
+
+AND
+
+If "Forecast Probability" equal to "50"
+Moderate-Fit: Internal - Add Placeholder Note
+
+NONE
+
+When none of the conditions are met
+
+None
+Add Internal Note - Placeholder for Draft Email Asset #1
+Add Internal Note - Placeholder for Draft Email Asset #2
+Add Internal Note - Placeholder for Draft Email Asset #3
+Check for Existing Opportunity
+
+AND
+
+If "Opportunity name" is not empty
+Contact Has Existing Opportunity
+
+NONE
+
+When none of the conditions are met
+
+Contact Has No Existing Opportunity
+Add Internal Note - Placeholder for Draft Email Asset #4
+Add Internal Note - Future External-Send Approval Needed
+Add
+
+Notes:
+- Workflow remained Draft/Saved in Advanced Builder.
+- Existing DND and Newsletter Consent Guard internal-note nodes are present.
+- No structural advanced-canvas edit was attempted or saved.
+- Publish and Test Workflow were not clicked.

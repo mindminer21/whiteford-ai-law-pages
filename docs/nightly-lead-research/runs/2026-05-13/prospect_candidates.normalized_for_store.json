@@ -1,0 +1,12 @@
+{
+  "run_date": "2026-05-13",
+  "run_label": "2026-05-13-nightly",
+  "source_file": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-13/prospect_candidates.json",
+  "normalized_at": "2026-05-13T08:15:22Z",
+  "candidates": [],
+  "normalization_notes": [
+    "Converted qwen-local prospects[]/halted no-op packet shape to prospect_research_store.py candidates[] schema.",
+    "Preserved Gate 1 failure/no-live-source blocker; this is an intentionally empty local staging payload.",
+    "No external action, live CRM write, Supabase write, HighLevel write, workflow activation, outreach, social action, or Clio write is authorized."
+  ]
+}

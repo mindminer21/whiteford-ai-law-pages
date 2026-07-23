@@ -11,6 +11,23 @@ const root = path.resolve(__dirname, "..");
 const routePath = path.join(root, "src/app/api/leads/route.ts");
 const campaignsPath = path.join(root, "src/lib/campaigns.ts");
 const magnetsPath = path.join(root, "src/lib/magnets/finalization.ts");
+const reportPdfPath = path.join(root, "src/lib/magnets/report-pdf.ts");
+const confirmationTokenPath = path.join(root, "src/lib/investor-outreach/confirmation-token.ts");
+const investorEmailPath = path.join(root, "src/lib/email/investor-outreach-confirmation.ts");
+const searchMagnetConfigPath = path.join(root, "src/lib/search-magnets/configs.ts");
+
+const reportPdfSource = fs
+  .readFileSync(reportPdfPath, "utf8")
+  .replace(
+    'from "./finalization";',
+    `from ${JSON.stringify(pathToFileURL(magnetsPath).href)};`,
+  )
+  .replace(
+    'from "@/lib/magnets/finalization";',
+    `from ${JSON.stringify(pathToFileURL(magnetsPath).href)};`,
+  );
+const tempReportPdfPath = path.join(os.tmpdir(), `whiteford-report-pdf-${process.pid}.ts`);
+fs.writeFileSync(tempReportPdfPath, reportPdfSource);
 
 const routeSource = fs
   .readFileSync(routePath, "utf8")
@@ -21,6 +38,22 @@ const routeSource = fs
   .replace(
     'from "@/lib/magnets/finalization";',
     `from ${JSON.stringify(pathToFileURL(magnetsPath).href)};`,
+  )
+  .replace(
+    'import { generateAssessmentReportPdf } from "@/lib/magnets/report-pdf";',
+    `import { generateAssessmentReportPdf } from ${JSON.stringify(pathToFileURL(tempReportPdfPath).href)};`,
+  )
+  .replace(
+    'from "@/lib/investor-outreach/confirmation-token";',
+    `from ${JSON.stringify(pathToFileURL(confirmationTokenPath).href)};`,
+  )
+  .replace(
+    'from "@/lib/email/investor-outreach-confirmation";',
+    `from ${JSON.stringify(pathToFileURL(investorEmailPath).href)};`,
+  )
+  .replace(
+    'import { isSearchMagnetRoute, searchMagnetConfigs } from "@/lib/search-magnets/configs";',
+    `import { isSearchMagnetRoute, searchMagnetConfigs } from ${JSON.stringify(pathToFileURL(searchMagnetConfigPath).href)};`,
   );
 
 const tempRoutePath = path.join(os.tmpdir(), `whiteford-leads-route-${process.pid}.ts`);
@@ -28,10 +61,12 @@ fs.writeFileSync(tempRoutePath, routeSource);
 
 delete process.env.GHL_PRIVATE_INTEGRATION_TOKEN;
 delete process.env.GHL_LOCATION_ID;
+delete process.env.RESEND_API_KEY;
 
 const { POST } = await import(pathToFileURL(tempRoutePath).href);
 
 fs.unlinkSync(tempRoutePath);
+fs.unlinkSync(tempReportPdfPath);
 
 const APPROVED_GUARDRAIL_VERSION = "lead-magnet-guardrail-v2";
 
@@ -204,6 +239,321 @@ function assertCase(data, campaignKey, subscribeMarker) {
   assertNoClientWorkflowTags(tags);
 }
 
+function assertFinalConsentCase(data, subscribeMarker) {
+  const hasOptIn = subscribeMarker === true;
+  const tags = data.payload.tags;
+  const routing = data.campaignRouting;
+
+  assert.equal(data.highlevel, "preview");
+  assert.equal(data.crm_mode, "preview");
+  assert.equal(data.payload.locationId, undefined);
+  assert.equal(tags.some((tag) => tag.startsWith("workflow:")), false);
+  assert.equal(routing.triggerTag, null);
+  assert.deepEqual(routing.emailSequence, []);
+
+  if (hasOptIn) {
+    assert.equal(tags.includes("newsletter:ai"), true);
+    assert.equal(tags.includes("newsletter:not-consented"), false);
+    assert.equal(fieldValue(data, "consent_basis"), `lead_magnet_email_opt_in:${data.magnet_slug}`);
+    assert.equal(fieldValue(data, "approval_status"), "pending");
+    assert.equal(routing.consentBasis, `lead_magnet_email_opt_in:${data.magnet_slug}`);
+    return;
+  }
+
+  assert.equal(tags.includes("newsletter:ai"), false);
+  assert.equal(tags.includes("newsletter:not-consented"), true);
+  assert.equal(fieldValue(data, "consent_basis"), "no_email_opt_in");
+  assert.equal(fieldValue(data, "approval_status"), "no-auto-send");
+  assert.equal(routing.consentBasis, "no_email_opt_in");
+}
+
+function buildInvestorContactPayload(extra = {}) {
+  return {
+    campaignKey: "investor-outreach",
+    sourcePage: "investor-outreach-kanban/start",
+    sourceChannel: "api-consent-test",
+    contact: {
+      name: "Ada Lovelace",
+      email: "ada.investor@test.invalid",
+      company: "Analytical Engines Inc",
+      role: "Founder / CEO",
+      subscribe: false,
+    },
+    investorOutreach: {
+      phase: "contact",
+    },
+    ...extra,
+  };
+}
+
+function buildInvestorPlanPayload(extra = {}) {
+  return {
+    campaignKey: "investor-outreach",
+    sourcePage: "investor-outreach-kanban/data-room",
+    sourceChannel: "api-consent-test",
+    reportRequested: true,
+    privacyGuardrailVersion: APPROVED_GUARDRAIL_VERSION,
+    publicFormInputType: "categorical_non_confidential",
+    contact: {
+      name: "Ada Lovelace",
+      email: "ada.investor@test.invalid",
+      company: "Analytical Engines Inc",
+      role: "Founder / CEO",
+      subscribe: false,
+    },
+    investorOutreach: {
+      phase: "plan",
+      emailConfirmed: true,
+      targetRound: "Seed",
+      investorCategories: ["AI", "SaaS"],
+      investorRegions: ["Colorado / Utah"],
+      currentStage: "Find investors",
+      introSources: ["Founder peers", "Lawyers / accountants", "Angels / scouts"],
+      dataRoomStatus: "Skeleton folders only",
+      portfolioResearchQueue: [
+        {
+          investorSegment: "AI - Seed",
+          targetCompany: "Analytical Engines Inc",
+          targetRound: "Seed",
+          category: "AI",
+          region: "Colorado / Utah",
+          signalListUrl: "https://signal.nfx.com/investor-lists/top-ai-seed-investors",
+          researchBrief: "Identify relevant portfolio companies and verify CEO/founder public business contact details before outreach.",
+          requiredFields: ["Investor name", "Portfolio company", "CEO/founder name", "CEO public business contact", "Source URL"],
+        },
+      ],
+      portfolioMatches: [
+        {
+          investorName: "Example Ventures",
+          investorFirm: "Example Ventures",
+          portfolioCompany: "Example AI Robotics",
+          relevanceToUserCompany: "AI workflow category fit",
+          relevanceTags: ["AI", "SaaS"],
+          ceoName: "Ada Founder",
+          ceoTitle: "CEO",
+          ceoEmail: "ada@example-ai.test",
+          ceoLinkedIn: "https://www.linkedin.com/in/ada-founder",
+          sourceUrl: "https://example-ai.test/team",
+          verificationStatus: "verified_public",
+        },
+      ],
+      portfolioEnrichmentVersion: "investor-portfolio-company-ceo-enrichment-v1",
+      kanbanStageCounts: { find_investors: 3, identify_introduction_sources: 2 },
+      reportVersion: "test",
+    },
+    ...extra,
+  };
+}
+
+function assertNoInvestorNurtureRouting(data) {
+  const tags = data.payload?.tags ?? [];
+
+  assert.equal(tags.includes("workflow:investor-outreach-kanban"), false);
+  assert.equal(tags.includes("newsletter:ai"), false);
+  assert.equal(tags.includes("newsletter:not-consented"), false);
+  assert.deepEqual(data.campaignRouting.emailSequence, []);
+}
+
+{
+  const data = await postLead(buildInvestorContactPayload());
+
+  assert.equal(data.mode, "preview");
+  assert.equal(data.highlevel, "not_called");
+  assert.equal(data.emailDelivery.mode, "preview");
+  assert.match(data.emailDelivery.confirmationUrl, /\/investor-outreach-kanban\/confirm\?token=/);
+  assert.equal(data.campaignRouting.triggerTag, null);
+  assert.equal(data.campaignRouting.highLevelContactUpsert, "after_email_confirmation");
+  assert.match(data.campaignRouting.workflowPattern, /HighLevel is not called until the user confirms/);
+  assertNoInvestorNurtureRouting(data);
+
+  const confirmationToken = new URL(data.emailDelivery.confirmationUrl).searchParams.get("token");
+  const confirmed = await postLead({
+    campaignKey: "investor-outreach",
+    sourcePage: "investor-outreach-kanban/confirm",
+    sourceChannel: "api-consent-test",
+    contact: {
+      subscribe: false,
+    },
+    investorOutreach: {
+      phase: "confirm",
+      confirmationToken,
+    },
+  });
+
+  assertPreview(confirmed);
+  assert.equal(confirmed.payload.firstName, "Ada");
+  assert.equal(confirmed.payload.lastName, "Lovelace");
+  assert.equal(confirmed.payload.email, "ada.investor@test.invalid");
+  assert.equal(confirmed.payload.companyName, "Analytical Engines Inc");
+  assert.equal(confirmed.contact.company, "Analytical Engines Inc");
+  assert.equal(fieldValue(confirmed, "role"), "Founder / CEO");
+  assert.equal(fieldValue(confirmed, "contact_title"), "Founder / CEO");
+  assert.equal(fieldValue(confirmed, "investor_outreach_phase"), "confirmed_contact");
+  assert.equal(fieldValue(confirmed, "investor_outreach_confirmation_status"), "confirmed");
+  assert.equal(fieldValue(confirmed, "investor_outreach_email_confirmed"), "true");
+  assert.equal(fieldValue(confirmed, "investor_outreach_confirmation_sender"), "app_resend");
+}
+
+{
+  const data = await postLead(buildInvestorPlanPayload());
+  const tags = data.payload.tags;
+
+  assertPreview(data);
+  assert.equal(data.payload.firstName, "Ada");
+  assert.equal(data.payload.lastName, "Lovelace");
+  assert.equal(data.payload.email, "ada.investor@test.invalid");
+  assert.equal(data.payload.companyName, "Analytical Engines Inc");
+  assert.equal(tags.some((tag) => tag.startsWith("workflow:")), false);
+  assert.equal(data.campaignRouting.triggerTag, null);
+  assertNoInvestorNurtureRouting(data);
+  assert.equal(fieldValue(data, "role"), "Founder / CEO");
+  assert.equal(fieldValue(data, "contact_title"), "Founder / CEO");
+  assert.equal(fieldValue(data, "investor_outreach_phase"), "plan");
+  assert.equal(fieldValue(data, "investor_outreach_email_confirmed"), "true");
+  assert.equal(fieldValue(data, "investor_outreach_target_round"), "Seed");
+  assert.match(fieldValue(data, "investor_outreach_categories"), /AI \| SaaS/);
+  assert.match(fieldValue(data, "investor_outreach_regions"), /Colorado \/ Utah/);
+  assert.match(fieldValue(data, "investor_outreach_intro_sources"), /Founder peers/);
+  assert.equal(fieldValue(data, "investor_outreach_data_room_status"), "Skeleton folders only");
+  assert.match(fieldValue(data, "investor_outreach_portfolio_research_queue"), /CEO public business contact/);
+  assert.match(fieldValue(data, "investor_outreach_portfolio_matches"), /Example AI Robotics/);
+  assert.match(fieldValue(data, "investor_outreach_portfolio_matches"), /Ada Founder/);
+  assert.equal(fieldValue(data, "investor_outreach_portfolio_match_count"), 1);
+  assert.equal(fieldValue(data, "investor_outreach_portfolio_enrichment_version"), "investor-portfolio-company-ceo-enrichment-v1");
+}
+
+await rejectLead(
+  buildInvestorPlanPayload({
+    investorOutreach: {
+      ...buildInvestorPlanPayload().investorOutreach,
+      emailConfirmed: false,
+    },
+  }),
+  /Email confirmation is required/,
+);
+
+await rejectLead(
+  buildInvestorContactPayload({
+    contact: {
+      name: "Ada Lovelace",
+      email: "ada.investor@test.invalid",
+      company: "Analytical Engines Inc",
+      role: "",
+      subscribe: false,
+    },
+  }),
+  /Name, email, company, and title are required/,
+);
+
+function buildSearchMagnetPayload(event = "lead_captured", extra = {}) {
+  const completed = event === "completed";
+  return {
+    sourcePage: "colorado-non-compete-checker",
+    sourceChannel: "api-consent-test",
+    contact: {
+      name: "Ada Lovelace",
+      email: "ada.search@test.invalid",
+      company: "Analytical Engines Inc",
+      role: "Founder / CEO",
+      subscribe: true,
+    },
+    searchMagnet: {
+      slug: "colorado-non-compete-checker",
+      magnetId: "colorado-non-compete-checker",
+      event,
+      tags: ["client-forged-tag"],
+      score: completed ? 12 : undefined,
+      scoreMax: completed ? 24 : undefined,
+      scorePercent: completed ? 50 : undefined,
+      tier: completed ? "Material gaps" : undefined,
+      dimensions: completed
+        ? {
+            enforceability: { label: "Enforceability", raw: 6, max: 8, pct: 75 },
+            procedure: { label: "Notice & process", raw: 2, max: 4, pct: 50 },
+          }
+        : undefined,
+      prioritizedActions: completed
+        ? [
+            "Have your non-compete and non-solicitation templates reviewed against the 2026 threshold ($130,014) and the narrowed 2025 exceptions — restrictions below the threshold are generally void.",
+            "Move restrictive-covenant notice to a separate, standalone document delivered before offer acceptance (or 14 days before it takes effect for current workers) — a notice defect alone can void the covenant.",
+          ]
+        : undefined,
+      answers: completed ? { 0: 1, 1: 2 } : undefined,
+      resultVersion: "search-magnet-config-v1",
+    },
+    ...extra,
+  };
+}
+
+{
+  const data = await postLead(buildSearchMagnetPayload("lead_captured"));
+  const tags = data.payload.tags;
+
+  assertPreview(data);
+  assert.equal(data.event, "lead_captured");
+  assert.equal(data.payload.firstName, "Ada");
+  assert.equal(data.payload.lastName, "Lovelace");
+  assert.equal(data.payload.email, "ada.search@test.invalid");
+  assert.equal(data.payload.companyName, "Analytical Engines Inc");
+  assert.equal(tags.includes("lead-magnet"), true);
+  assert.equal(tags.includes("non-compete-checker"), true);
+  assert.equal(tags.includes("client-forged-tag"), false);
+  assert.equal(fieldValue(data, "role"), "Founder / CEO");
+  assert.equal(fieldValue(data, "contact_title"), "Founder / CEO");
+  assert.equal(fieldValue(data, "search_magnet_slug"), "colorado-non-compete-checker");
+  assert.equal(fieldValue(data, "search_magnet_event"), "lead_captured");
+  assert.equal(fieldValue(data, "consent_basis"), "search_magnet_consent:colorado-non-compete-checker");
+  assert.equal(data.campaignRouting.triggerTag, null);
+  assert.deepEqual(data.campaignRouting.emailSequence, []);
+}
+
+{
+  const data = await postLead(buildSearchMagnetPayload("completed"));
+  assertPreview(data);
+  assert.equal(data.event, "completed");
+  assert.equal(fieldValue(data, "search_magnet_event"), "completed");
+  assert.equal(fieldValue(data, "search_magnet_score"), 12);
+  assert.equal(fieldValue(data, "search_magnet_score_max"), 24);
+  assert.equal(fieldValue(data, "search_magnet_score_percent"), 50);
+  assert.equal(fieldValue(data, "search_magnet_tier"), "Material gaps");
+  assert.match(fieldValue(data, "search_magnet_dimensions"), /Enforceability/);
+  assert.match(fieldValue(data, "search_magnet_prioritized_actions"), /2026 threshold/);
+  assert.match(fieldValue(data, "search_magnet_answers"), /"0":1/);
+}
+
+await rejectLead(
+  buildSearchMagnetPayload("lead_captured", {
+    contact: {
+      name: "Ada Lovelace",
+      email: "ada.search@test.invalid",
+      company: "Analytical Engines Inc",
+      role: "Founder / CEO",
+      subscribe: false,
+    },
+  }),
+  /Consent is required/,
+);
+
+await rejectLead(
+  buildSearchMagnetPayload("completed", {
+    searchMagnet: {
+      ...buildSearchMagnetPayload("completed").searchMagnet,
+      slug: "client-invented-magnet",
+    },
+  }),
+  /search magnet route is not approved/,
+);
+
+await rejectLead(
+  buildSearchMagnetPayload("completed", {
+    searchMagnet: {
+      ...buildSearchMagnetPayload("completed").searchMagnet,
+      dimensions: undefined,
+    },
+  }),
+  /dimension scores/,
+);
+
 for (const campaignKey of Object.keys(CAMPAIGNS)) {
   for (const subscribeMarker of [true, false, "missing"]) {
     const data = await postLead(buildPayload(campaignKey, subscribeMarker));
@@ -293,13 +643,43 @@ await rejectLead(
   assert.equal(data.payload.tags.includes("newsletter:ai"), false);
   assert.equal(data.payload.tags.includes("leadmagnet:forged"), false);
   assert.equal(data.payload.tags.includes("newsletter:not-consented"), true);
+  assert.equal(customField(data, "tech_legal_health_ai_use_register_snapshot"), undefined);
   assert.equal(customField(data, "ai_recommended_offer"), undefined);
+}
+
+{
+  const payload = buildPayload("tech-gc", false);
+  payload.techLegalHealth = {
+    score: 66,
+    band: "Operational legal drag",
+    companyMoment: "enterprise sales motion",
+    categoryScores: { contracts: 2 },
+    lowestCategory: "Data + AI",
+    topActions: ["Create an AI use register"],
+    branchSignals: ["signal:ai-compliance"],
+    answers: ["ai-controls:1"],
+    aiUseRegisterSnapshot: {
+      inventory: "Scattered use, no register",
+      ownerMap: "Informal owner",
+      exposureCategory: "Customer data or customer-facing output",
+      vendorTerms: "Some terms reviewed",
+      humanReview: "Ad hoc review",
+      score: 40,
+      nextStep: "Create a non-confidential AI use register before vendor renewal, product launch, financing, or diligence.",
+      reportVersion: "ai-use-register-snapshot-v1",
+    },
+    reportVersion: "test",
+  };
+
+  const data = await postLead(payload);
+  assert.match(fieldValue(data, "tech_legal_health_ai_use_register_snapshot"), /ai-use-register-snapshot-v1/);
 }
 
 function buildFinalPayload(magnet_slug, answers = null, extra = {}) {
   return {
     name: "Ada Lovelace",
     email: `final-${magnet_slug}@test.invalid`,
+    contact_title: "General Counsel",
     company: "Example Test Co",
     qualifying_status:
       magnet_slug === "patent-moat-scorecard"
@@ -368,8 +748,13 @@ const governanceAnswers = {
   assert.equal(data.payload.tags.includes("risk-tier-foundational"), true);
   assert.equal(fieldValue(data, "last_magnet_slug"), "ai-risk-triage");
   assert.equal(fieldValue(data, "last_magnet_score"), 3);
+  assert.equal(fieldValue(data, "contact_title"), "General Counsel");
   assert.equal(fieldValue(data, "risk_triage_governance_score"), 0);
   assert.equal(data.actions.length, 3);
+  assert.equal(data.report.content_type, "application/pdf");
+  assert.match(data.report.filename, /example-test-co-ai-risk-triage-report\.pdf/);
+  assert.ok(Buffer.from(data.report.base64, "base64").toString("utf8").startsWith("%PDF-1.4"));
+  assertFinalConsentCase(data, "missing");
 }
 
 {
@@ -381,6 +766,8 @@ const governanceAnswers = {
   assert.equal(data.payload.tags.includes("magnet-patent-moat-scorecard"), true);
   assert.equal(data.payload.tags.includes("moat-mode-investor"), true);
   assert.equal(fieldValue(data, "moat_exit_fit"), 0);
+  assert.equal(data.report.content_type, "application/pdf");
+  assertFinalConsentCase(data, "missing");
 }
 
 {
@@ -390,6 +777,8 @@ const governanceAnswers = {
   assert.equal(data.tier.tag, "gov-tier-prefoundation");
   assert.equal(fieldValue(data, "gov_q1_use_policy"), 0);
   assert.equal(fieldValue(data, "gov_q9_outside_counsel"), 0);
+  assert.equal(data.report.content_type, "application/pdf");
+  assertFinalConsentCase(data, "missing");
 }
 
 {
@@ -399,6 +788,24 @@ const governanceAnswers = {
   assert.equal(data.payload.tags.includes("magnet-outside-counsel-playbook"), true);
   assert.equal(fieldValue(data, "last_magnet_score"), null);
   assert.equal(fieldValue(data, "last_magnet_pdf_url"), "https://learn.schellip.com/pdfs/outside-counsel-playbook.pdf");
+  assertFinalConsentCase(data, "missing");
+}
+
+for (const [magnetSlug, answers, extra] of [
+  ["ai-risk-triage", riskAnswers, {}],
+  ["patent-moat-scorecard", moatAnswers, { mode: "founder" }],
+  ["governance-plan", governanceAnswers, {}],
+  ["outside-counsel-playbook", null, {}],
+]) {
+  for (const subscribeMarker of [true, false, "missing"]) {
+    const data = await postLead(
+      buildFinalPayload(magnetSlug, answers, {
+        ...extra,
+        ...(subscribeMarker === "missing" ? {} : { subscribe: subscribeMarker }),
+      }),
+    );
+    assertFinalConsentCase(data, subscribeMarker);
+  }
 }
 
 await rejectLead(
@@ -411,6 +818,11 @@ await rejectLead(
   /Permission acknowledgment is required/,
 );
 
+await rejectLead(
+  { ...buildFinalPayload("ai-risk-triage", riskAnswers), contact_title: "" },
+  /Contact title is required/,
+);
+
 console.log(
-  "API guardrail behavior passed in no-token preview mode: legacy consent routing, final magnet scoring, final tags/custom fields, download payload validation, and opt-in-only legacy workflows.",
+  "API guardrail behavior passed in no-token preview mode: regular and final-magnet consent routing, final magnet scoring, final tags/custom fields, download payload validation, and opt-in-only workflow/newsletter posture.",
 );

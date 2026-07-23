@@ -1,0 +1,56 @@
+{
+  "counts": {
+    "prospects": 65,
+    "contacts": 57,
+    "opportunities": 76,
+    "source_evidence": 132,
+    "outreach_drafts": 47,
+    "approval_items": 79,
+    "crm_sync_records": 58,
+    "suppression_checks": 47,
+    "work_items": 42
+  },
+  "row_checks": [
+    {
+      "company": "WindBorne Systems",
+      "prospect_id": "prospect_windborne_systems_20260602",
+      "prospect_rows": 1,
+      "contact_rows": 0,
+      "evidence_rows": 2,
+      "draft_rows": 1,
+      "approval_rows": 1,
+      "suppression_rows": 1,
+      "sync_rows": 1,
+      "work_item_rows": 1,
+      "external_action_allowed_sum": 0
+    },
+    {
+      "company": "Mach Industries",
+      "prospect_id": "prospect_mach_industries_20260602",
+      "prospect_rows": 1,
+      "contact_rows": 0,
+      "evidence_rows": 2,
+      "draft_rows": 1,
+      "approval_rows": 1,
+      "suppression_rows": 1,
+      "sync_rows": 1,
+      "work_item_rows": 1,
+      "external_action_allowed_sum": 0
+    },
+    {
+      "company": "Gigascale Capital",
+      "prospect_id": "prospect_gigascale_capital_20260602",
+      "prospect_rows": 1,
+      "contact_rows": 0,
+      "evidence_rows": 2,
+      "draft_rows": 1,
+      "approval_rows": 1,
+      "suppression_rows": 1,
+      "sync_rows": 1,
+      "work_item_rows": 1,
+      "external_action_allowed_sum": 0
+    }
+  ],
+  "inserted_work_item_rows": 3,
+  "safety_external_action_allowed_total": 0
+}

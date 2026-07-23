@@ -1,0 +1,28 @@
+{
+  "task_id": "t_b09102c2",
+  "validated_at": "2026-05-27T07:44:16+00:00",
+  "source_payload": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-27/prospect_candidates.json",
+  "normalized_payload": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-27/prospect_candidates.normalized_for_store.json",
+  "dry_run": {
+    "status": "dry_run",
+    "candidates": 0,
+    "db": "/Users/jeff/.openclaw/projects/mountain-west-growth-os/data/growth-os.sqlite"
+  },
+  "store_output": {
+    "status": "applied",
+    "counts": {},
+    "db": "/Users/jeff/.openclaw/projects/mountain-west-growth-os/data/growth-os.sqlite"
+  },
+  "verification_path": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-27/store_verification.json",
+  "backup_path": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-27/growth-os.before_t_b09102c2.sqlite",
+  "candidate_count": 0,
+  "staged_prospects": [],
+  "work_items": [],
+  "warnings": [
+    "Gate 1 live-source extraction failed upstream because Firecrawl/web search credits are exhausted (HTTP 402).",
+    "No candidates were available; staging was a verified no-op.",
+    "No local Agent Targeting work items were created because there are no validated prospects.",
+    "Supabase and HighLevel sync remain blocked by existing task gates; no live CRM/Supabase/HighLevel mutation is authorized."
+  ],
+  "safety_decision": "Local/internal validation only. No outreach, workflow activation/enrollment, trigger tags, LinkedIn/social action, Clio write, public/client-facing use, or live CRM/Supabase/HighLevel sync is authorized."
+}

@@ -728,8 +728,7 @@ export const magnetConfigs = {
     kind: "download",
     title: "Outside Counsel Playbook",
     formTitle: "Send the Outside Counsel Playbook",
-    formDescription:
-      "Enter your contact details and permission acknowledgment. The playbook is delivered through the HighLevel follow-up workflow.",
+    formDescription: "",
     buttonLabel: "Send me the playbook",
     statusLegend: "What best describes your current need?",
     statusOptions: [

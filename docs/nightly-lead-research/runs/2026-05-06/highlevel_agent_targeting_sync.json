@@ -1,0 +1,64 @@
+{
+  "batchId": "ghl-agent-targeting-sync-live-2026-05-07T05-01-18-014734Z-d4c25721",
+  "blocked": 0,
+  "completed_at": "2026-05-07T05:01:23.372440Z",
+  "contactsCreated": 3,
+  "contactsLinked": 0,
+  "created_at": "2026-05-07T05:01:18.014734Z",
+  "live": true,
+  "locationId": "tm68WWMrcAa3TqQbEAMa",
+  "opportunitiesCreated": 3,
+  "opportunitiesLinked": 0,
+  "pipelineId": "Tbx4tA6wHv5lTwZPSHyZ",
+  "records": [
+    {
+      "company_name": "Kodiak Robotics",
+      "contactId": "U9kfeAN9w8ZRLj5nXIz8",
+      "contactPayloadPath": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-06/highlevel_agent_targeting_payloads/ghl-agent-targeting-sync-live-2026-05-07T05-01-18-014734Z-d4c25721-prospect_c6c776b4596056a65d055c7c-contact-payload.json",
+      "contactResponsePath": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-06/highlevel_agent_targeting_payloads/ghl-agent-targeting-sync-live-2026-05-07T05-01-18-014734Z-d4c25721-prospect_c6c776b4596056a65d055c7c-contact-response.json",
+      "opportunityId": "JbzdcCHJaBgpIJyt7ccc",
+      "opportunityPayloadPath": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-06/highlevel_agent_targeting_payloads/ghl-agent-targeting-sync-live-2026-05-07T05-01-18-014734Z-d4c25721-prospect_c6c776b4596056a65d055c7c-opportunity-payload.json",
+      "opportunityResponsePath": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-06/highlevel_agent_targeting_payloads/ghl-agent-targeting-sync-live-2026-05-07T05-01-18-014734Z-d4c25721-prospect_c6c776b4596056a65d055c7c-opportunity-response.json",
+      "prospect_id": "prospect_c6c776b4596056a65d055c7c",
+      "stageName": "Agent Targeting",
+      "status": "synced"
+    },
+    {
+      "company_name": "Nexar",
+      "contactId": "W4Nl8orLw9XRbxuqFSvu",
+      "contactPayloadPath": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-06/highlevel_agent_targeting_payloads/ghl-agent-targeting-sync-live-2026-05-07T05-01-18-014734Z-d4c25721-prospect_c542c95f73995e2dbd2a15c3-contact-payload.json",
+      "contactResponsePath": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-06/highlevel_agent_targeting_payloads/ghl-agent-targeting-sync-live-2026-05-07T05-01-18-014734Z-d4c25721-prospect_c542c95f73995e2dbd2a15c3-contact-response.json",
+      "opportunityId": "NzoQ2XJ4biAJWiUhKHgT",
+      "opportunityPayloadPath": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-06/highlevel_agent_targeting_payloads/ghl-agent-targeting-sync-live-2026-05-07T05-01-18-014734Z-d4c25721-prospect_c542c95f73995e2dbd2a15c3-opportunity-payload.json",
+      "opportunityResponsePath": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-06/highlevel_agent_targeting_payloads/ghl-agent-targeting-sync-live-2026-05-07T05-01-18-014734Z-d4c25721-prospect_c542c95f73995e2dbd2a15c3-opportunity-response.json",
+      "prospect_id": "prospect_c542c95f73995e2dbd2a15c3",
+      "stageName": "Agent Targeting",
+      "status": "synced"
+    },
+    {
+      "company_name": "Rigetti Computing",
+      "contactId": "u8I3Yr7RTDSHJlpp7WyS",
+      "contactPayloadPath": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-06/highlevel_agent_targeting_payloads/ghl-agent-targeting-sync-live-2026-05-07T05-01-18-014734Z-d4c25721-prospect_d249372d03e9b2df1dd67726-contact-payload.json",
+      "contactResponsePath": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-06/highlevel_agent_targeting_payloads/ghl-agent-targeting-sync-live-2026-05-07T05-01-18-014734Z-d4c25721-prospect_d249372d03e9b2df1dd67726-contact-response.json",
+      "opportunityId": "lG8g7kmVJ6JXx7tD4NES",
+      "opportunityPayloadPath": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-06/highlevel_agent_targeting_payloads/ghl-agent-targeting-sync-live-2026-05-07T05-01-18-014734Z-d4c25721-prospect_d249372d03e9b2df1dd67726-opportunity-payload.json",
+      "opportunityResponsePath": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-06/highlevel_agent_targeting_payloads/ghl-agent-targeting-sync-live-2026-05-07T05-01-18-014734Z-d4c25721-prospect_d249372d03e9b2df1dd67726-opportunity-response.json",
+      "prospect_id": "prospect_d249372d03e9b2df1dd67726",
+      "stageName": "Agent Targeting",
+      "status": "synced"
+    }
+  ],
+  "safety": {
+    "company_level_contacts_used": true,
+    "dnd_enabled_on_created_contacts": true,
+    "no_linkedin_actions": true,
+    "no_sends": true,
+    "no_tags_added": true,
+    "no_workflow_enrollment": true
+  },
+  "selected": 3,
+  "stageId": "fd569cf4-979b-43b8-bd0f-78e807e80ff1",
+  "stageName": "Agent Targeting",
+  "status": "ok",
+  "syncedRecords": 3
+}

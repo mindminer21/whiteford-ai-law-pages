@@ -1,0 +1,3220 @@
+{
+  "source": "https://signal.nfx.com",
+  "retrieved_publicly": true,
+  "total_links": 357,
+  "items": [
+    {
+      "label": "Marketplaces seed",
+      "slug": "top-marketplaces-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-marketplaces-seed-investors",
+      "stage": "seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Seed"
+    },
+    {
+      "label": "SaaS seed",
+      "slug": "top-saas-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-saas-seed-investors",
+      "stage": "seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Seed"
+    },
+    {
+      "label": "FinTech seed",
+      "slug": "top-fintech-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-fintech-seed-investors",
+      "stage": "seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Seed"
+    },
+    {
+      "label": "Enterprise seed",
+      "slug": "top-enterprise-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-enterprise-seed-investors",
+      "stage": "seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Seed"
+    },
+    {
+      "label": "Advertising",
+      "slug": "top-advertising-pre-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-advertising-pre-seed-investors",
+      "stage": "pre-seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Pre-Seed"
+    },
+    {
+      "label": "AgTech",
+      "slug": "top-agtech-pre-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-agtech-pre-seed-investors",
+      "stage": "pre-seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Pre-Seed"
+    },
+    {
+      "label": "AI",
+      "slug": "top-ai-pre-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-ai-pre-seed-investors",
+      "stage": "pre-seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Pre-Seed"
+    },
+    {
+      "label": "Analytics",
+      "slug": "top-analytics-pre-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-analytics-pre-seed-investors",
+      "stage": "pre-seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Pre-Seed"
+    },
+    {
+      "label": "AR/VR",
+      "slug": "top-ar-vr-pre-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-ar-vr-pre-seed-investors",
+      "stage": "pre-seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Pre-Seed"
+    },
+    {
+      "label": "AudioTech",
+      "slug": "top-audiotech-pre-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-audiotech-pre-seed-investors",
+      "stage": "pre-seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Pre-Seed"
+    },
+    {
+      "label": "AutoTech",
+      "slug": "top-autotech-pre-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-autotech-pre-seed-investors",
+      "stage": "pre-seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Pre-Seed"
+    },
+    {
+      "label": "BioTech",
+      "slug": "top-biotech-pre-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-biotech-pre-seed-investors",
+      "stage": "pre-seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Pre-Seed"
+    },
+    {
+      "label": "Chemicals",
+      "slug": "top-chemicals-pre-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-chemicals-pre-seed-investors",
+      "stage": "pre-seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Pre-Seed"
+    },
+    {
+      "label": "ClimateTech/CleanTech",
+      "slug": "top-climatetech-cleantech-pre-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-climatetech-cleantech-pre-seed-investors",
+      "stage": "pre-seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Pre-Seed"
+    },
+    {
+      "label": "Cloud Infrastructure",
+      "slug": "top-cloud-infrastructure-pre-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-cloud-infrastructure-pre-seed-investors",
+      "stage": "pre-seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Pre-Seed"
+    },
+    {
+      "label": "ConstructionTech",
+      "slug": "top-constructiontech-pre-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-constructiontech-pre-seed-investors",
+      "stage": "pre-seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Pre-Seed"
+    },
+    {
+      "label": "Consumer Health",
+      "slug": "top-consumer-health-pre-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-consumer-health-pre-seed-investors",
+      "stage": "pre-seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Pre-Seed"
+    },
+    {
+      "label": "Consumer Internet",
+      "slug": "top-consumer-internet-pre-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-consumer-internet-pre-seed-investors",
+      "stage": "pre-seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Pre-Seed"
+    },
+    {
+      "label": "Cosmetics",
+      "slug": "top-cosmetics-pre-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-cosmetics-pre-seed-investors",
+      "stage": "pre-seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Pre-Seed"
+    },
+    {
+      "label": "Creator/Passion Economy",
+      "slug": "top-creator-passion-economy-pre-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-creator-passion-economy-pre-seed-investors",
+      "stage": "pre-seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Pre-Seed"
+    },
+    {
+      "label": "Cybersecurity",
+      "slug": "top-cybersecurity-pre-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-cybersecurity-pre-seed-investors",
+      "stage": "pre-seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Pre-Seed"
+    },
+    {
+      "label": "Data Services",
+      "slug": "top-data-services-pre-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-data-services-pre-seed-investors",
+      "stage": "pre-seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Pre-Seed"
+    },
+    {
+      "label": "DeepTech",
+      "slug": "top-deeptech-pre-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-deeptech-pre-seed-investors",
+      "stage": "pre-seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Pre-Seed"
+    },
+    {
+      "label": "DefenseTech",
+      "slug": "top-defensetech-pre-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-defensetech-pre-seed-investors",
+      "stage": "pre-seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Pre-Seed"
+    },
+    {
+      "label": "Developer Tools",
+      "slug": "top-developer-tools-pre-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-developer-tools-pre-seed-investors",
+      "stage": "pre-seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Pre-Seed"
+    },
+    {
+      "label": "Diagnostics",
+      "slug": "top-diagnostics-pre-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-diagnostics-pre-seed-investors",
+      "stage": "pre-seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Pre-Seed"
+    },
+    {
+      "label": "Digital Health",
+      "slug": "top-digital-health-pre-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-digital-health-pre-seed-investors",
+      "stage": "pre-seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Pre-Seed"
+    },
+    {
+      "label": "Direct-to-Consumer (DTC)",
+      "slug": "top-direct-to-consumer-dtc-pre-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-direct-to-consumer-dtc-pre-seed-investors",
+      "stage": "pre-seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Pre-Seed"
+    },
+    {
+      "label": "Drug Delivery",
+      "slug": "top-drug-delivery-pre-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-drug-delivery-pre-seed-investors",
+      "stage": "pre-seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Pre-Seed"
+    },
+    {
+      "label": "E-commerce",
+      "slug": "top-e-commerce-pre-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-e-commerce-pre-seed-investors",
+      "stage": "pre-seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Pre-Seed"
+    },
+    {
+      "label": "Education",
+      "slug": "top-education-pre-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-education-pre-seed-investors",
+      "stage": "pre-seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Pre-Seed"
+    },
+    {
+      "label": "EnergyTech",
+      "slug": "top-energytech-pre-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-energytech-pre-seed-investors",
+      "stage": "pre-seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Pre-Seed"
+    },
+    {
+      "label": "Enterprise Applications",
+      "slug": "top-enterprise-applications-pre-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-enterprise-applications-pre-seed-investors",
+      "stage": "pre-seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Pre-Seed"
+    },
+    {
+      "label": "Enterprise Infrastructure",
+      "slug": "top-enterprise-infrastructure-pre-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-enterprise-infrastructure-pre-seed-investors",
+      "stage": "pre-seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Pre-Seed"
+    },
+    {
+      "label": "Enterprise",
+      "slug": "top-enterprise-pre-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-enterprise-pre-seed-investors",
+      "stage": "pre-seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Pre-Seed"
+    },
+    {
+      "label": "Entertainment & Sports",
+      "slug": "top-entertainment-sports-pre-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-entertainment-sports-pre-seed-investors",
+      "stage": "pre-seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Pre-Seed"
+    },
+    {
+      "label": "Fashion",
+      "slug": "top-fashion-pre-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-fashion-pre-seed-investors",
+      "stage": "pre-seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Pre-Seed"
+    },
+    {
+      "label": "FinTech",
+      "slug": "top-fintech-pre-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-fintech-pre-seed-investors",
+      "stage": "pre-seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Pre-Seed"
+    },
+    {
+      "label": "Food and Beverage",
+      "slug": "top-food-and-beverage-pre-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-food-and-beverage-pre-seed-investors",
+      "stage": "pre-seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Pre-Seed"
+    },
+    {
+      "label": "Future of Work",
+      "slug": "top-future-of-work-pre-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-future-of-work-pre-seed-investors",
+      "stage": "pre-seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Pre-Seed"
+    },
+    {
+      "label": "Games",
+      "slug": "top-games-pre-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-games-pre-seed-investors",
+      "stage": "pre-seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Pre-Seed"
+    },
+    {
+      "label": "Gaming/eSports",
+      "slug": "top-gaming-esports-pre-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-gaming-esports-pre-seed-investors",
+      "stage": "pre-seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Pre-Seed"
+    },
+    {
+      "label": "General Tech",
+      "slug": "top-general-tech-pre-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-general-tech-pre-seed-investors",
+      "stage": "pre-seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Pre-Seed"
+    },
+    {
+      "label": "Generative Tech/AI",
+      "slug": "top-generative-tech-pre-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-generative-tech-pre-seed-investors",
+      "stage": "pre-seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Pre-Seed"
+    },
+    {
+      "label": "Gig Economy",
+      "slug": "top-gig-economy-pre-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-gig-economy-pre-seed-investors",
+      "stage": "pre-seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Pre-Seed"
+    },
+    {
+      "label": "GovTech",
+      "slug": "top-govtech-pre-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-govtech-pre-seed-investors",
+      "stage": "pre-seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Pre-Seed"
+    },
+    {
+      "label": "Hardware",
+      "slug": "top-hardware-pre-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-hardware-pre-seed-investors",
+      "stage": "pre-seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Pre-Seed"
+    },
+    {
+      "label": "Health & Hospital Services",
+      "slug": "top-health-hospital-services-pre-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-health-hospital-services-pre-seed-investors",
+      "stage": "pre-seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Pre-Seed"
+    },
+    {
+      "label": "Health IT",
+      "slug": "top-health-it-pre-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-health-it-pre-seed-investors",
+      "stage": "pre-seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Pre-Seed"
+    },
+    {
+      "label": "Human Capital/HRTech",
+      "slug": "top-human-capital-hrtech-pre-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-human-capital-hrtech-pre-seed-investors",
+      "stage": "pre-seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Pre-Seed"
+    },
+    {
+      "label": "Impact",
+      "slug": "top-impact-pre-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-impact-pre-seed-investors",
+      "stage": "pre-seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Pre-Seed"
+    },
+    {
+      "label": "Insurance",
+      "slug": "top-insurance-pre-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-insurance-pre-seed-investors",
+      "stage": "pre-seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Pre-Seed"
+    },
+    {
+      "label": "IoT",
+      "slug": "top-iot-pre-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-iot-pre-seed-investors",
+      "stage": "pre-seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Pre-Seed"
+    },
+    {
+      "label": "LegalTech",
+      "slug": "top-legaltech-pre-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-legaltech-pre-seed-investors",
+      "stage": "pre-seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Pre-Seed"
+    },
+    {
+      "label": "Local Services",
+      "slug": "top-local-services-pre-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-local-services-pre-seed-investors",
+      "stage": "pre-seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Pre-Seed"
+    },
+    {
+      "label": "Lodging/Hospitality",
+      "slug": "top-lodging-hospitality-pre-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-lodging-hospitality-pre-seed-investors",
+      "stage": "pre-seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Pre-Seed"
+    },
+    {
+      "label": "Logistics",
+      "slug": "top-logistics-pre-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-logistics-pre-seed-investors",
+      "stage": "pre-seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Pre-Seed"
+    },
+    {
+      "label": "Manufacturing",
+      "slug": "top-manufacturing-pre-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-manufacturing-pre-seed-investors",
+      "stage": "pre-seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Pre-Seed"
+    },
+    {
+      "label": "MarketingTech",
+      "slug": "top-marketingtech-pre-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-marketingtech-pre-seed-investors",
+      "stage": "pre-seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Pre-Seed"
+    },
+    {
+      "label": "Marketplaces",
+      "slug": "top-marketplaces-pre-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-marketplaces-pre-seed-investors",
+      "stage": "pre-seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Pre-Seed"
+    },
+    {
+      "label": "Material Science",
+      "slug": "top-material-science-pre-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-material-science-pre-seed-investors",
+      "stage": "pre-seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Pre-Seed"
+    },
+    {
+      "label": "Media/Content",
+      "slug": "top-media-content-pre-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-media-content-pre-seed-investors",
+      "stage": "pre-seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Pre-Seed"
+    },
+    {
+      "label": "Medical Devices",
+      "slug": "top-medical-devices-pre-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-medical-devices-pre-seed-investors",
+      "stage": "pre-seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Pre-Seed"
+    },
+    {
+      "label": "Messaging",
+      "slug": "top-messaging-pre-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-messaging-pre-seed-investors",
+      "stage": "pre-seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Pre-Seed"
+    },
+    {
+      "label": "Parenting/Families",
+      "slug": "top-parenting-families-pre-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-parenting-families-pre-seed-investors",
+      "stage": "pre-seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Pre-Seed"
+    },
+    {
+      "label": "Payments",
+      "slug": "top-payments-pre-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-payments-pre-seed-investors",
+      "stage": "pre-seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Pre-Seed"
+    },
+    {
+      "label": "Pharmaceuticals",
+      "slug": "top-pharmaceuticals-pre-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-pharmaceuticals-pre-seed-investors",
+      "stage": "pre-seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Pre-Seed"
+    },
+    {
+      "label": "Real Estate/PropTech",
+      "slug": "top-real-estate-proptech-pre-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-real-estate-proptech-pre-seed-investors",
+      "stage": "pre-seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Pre-Seed"
+    },
+    {
+      "label": "Retail",
+      "slug": "top-retail-pre-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-retail-pre-seed-investors",
+      "stage": "pre-seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Pre-Seed"
+    },
+    {
+      "label": "Robotics",
+      "slug": "top-robotics-pre-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-robotics-pre-seed-investors",
+      "stage": "pre-seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Pre-Seed"
+    },
+    {
+      "label": "SaaS",
+      "slug": "top-saas-pre-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-saas-pre-seed-investors",
+      "stage": "pre-seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Pre-Seed"
+    },
+    {
+      "label": "Sales & CRM",
+      "slug": "top-sales-crm-pre-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-sales-crm-pre-seed-investors",
+      "stage": "pre-seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Pre-Seed"
+    },
+    {
+      "label": "Security",
+      "slug": "top-security-pre-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-security-pre-seed-investors",
+      "stage": "pre-seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Pre-Seed"
+    },
+    {
+      "label": "Semiconductors",
+      "slug": "top-semiconductors-pre-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-semiconductors-pre-seed-investors",
+      "stage": "pre-seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Pre-Seed"
+    },
+    {
+      "label": "Smart Cities/UrbanTech",
+      "slug": "top-smart-cities-urbantech-pre-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-smart-cities-urbantech-pre-seed-investors",
+      "stage": "pre-seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Pre-Seed"
+    },
+    {
+      "label": "SMB Software",
+      "slug": "top-smb-software-pre-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-smb-software-pre-seed-investors",
+      "stage": "pre-seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Pre-Seed"
+    },
+    {
+      "label": "Social Commerce",
+      "slug": "top-social-commerce-pre-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-social-commerce-pre-seed-investors",
+      "stage": "pre-seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Pre-Seed"
+    },
+    {
+      "label": "Social Networks",
+      "slug": "top-social-networks-pre-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-social-networks-pre-seed-investors",
+      "stage": "pre-seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Pre-Seed"
+    },
+    {
+      "label": "Space",
+      "slug": "top-space-pre-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-space-pre-seed-investors",
+      "stage": "pre-seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Pre-Seed"
+    },
+    {
+      "label": "Supply Chain Tech",
+      "slug": "top-supply-chain-tech-pre-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-supply-chain-tech-pre-seed-investors",
+      "stage": "pre-seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Pre-Seed"
+    },
+    {
+      "label": "Therapeutics",
+      "slug": "top-therapeutics-pre-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-therapeutics-pre-seed-investors",
+      "stage": "pre-seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Pre-Seed"
+    },
+    {
+      "label": "TransportationTech",
+      "slug": "top-transportationtech-pre-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-transportationtech-pre-seed-investors",
+      "stage": "pre-seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Pre-Seed"
+    },
+    {
+      "label": "Travel",
+      "slug": "top-travel-pre-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-travel-pre-seed-investors",
+      "stage": "pre-seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Pre-Seed"
+    },
+    {
+      "label": "Web3/Blockchain",
+      "slug": "top-web3-blockchain-pre-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-web3-blockchain-pre-seed-investors",
+      "stage": "pre-seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Pre-Seed"
+    },
+    {
+      "label": "Web3/Crypto",
+      "slug": "top-web3-crypto-pre-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-web3-crypto-pre-seed-investors",
+      "stage": "pre-seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Pre-Seed"
+    },
+    {
+      "label": "Wellness & Fitness",
+      "slug": "top-wellness-fitness-pre-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-wellness-fitness-pre-seed-investors",
+      "stage": "pre-seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Pre-Seed"
+    },
+    {
+      "label": "Advertising",
+      "slug": "top-advertising-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-advertising-seed-investors",
+      "stage": "seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Seed"
+    },
+    {
+      "label": "AgTech",
+      "slug": "top-agtech-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-agtech-seed-investors",
+      "stage": "seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Seed"
+    },
+    {
+      "label": "AI",
+      "slug": "top-ai-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-ai-seed-investors",
+      "stage": "seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Seed"
+    },
+    {
+      "label": "Analytics",
+      "slug": "top-analytics-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-analytics-seed-investors",
+      "stage": "seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Seed"
+    },
+    {
+      "label": "AR/VR",
+      "slug": "top-ar-vr-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-ar-vr-seed-investors",
+      "stage": "seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Seed"
+    },
+    {
+      "label": "AudioTech",
+      "slug": "top-audiotech-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-audiotech-seed-investors",
+      "stage": "seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Seed"
+    },
+    {
+      "label": "AutoTech",
+      "slug": "top-autotech-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-autotech-seed-investors",
+      "stage": "seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Seed"
+    },
+    {
+      "label": "BioTech",
+      "slug": "top-biotech-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-biotech-seed-investors",
+      "stage": "seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Seed"
+    },
+    {
+      "label": "Chemicals",
+      "slug": "top-chemicals-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-chemicals-seed-investors",
+      "stage": "seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Seed"
+    },
+    {
+      "label": "ClimateTech/CleanTech",
+      "slug": "top-climatetech-cleantech-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-climatetech-cleantech-seed-investors",
+      "stage": "seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Seed"
+    },
+    {
+      "label": "Cloud Infrastructure",
+      "slug": "top-cloud-infrastructure-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-cloud-infrastructure-seed-investors",
+      "stage": "seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Seed"
+    },
+    {
+      "label": "ConstructionTech",
+      "slug": "top-constructiontech-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-constructiontech-seed-investors",
+      "stage": "seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Seed"
+    },
+    {
+      "label": "Consumer Health",
+      "slug": "top-consumer-health-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-consumer-health-seed-investors",
+      "stage": "seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Seed"
+    },
+    {
+      "label": "Consumer Internet",
+      "slug": "top-consumer-internet-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-consumer-internet-seed-investors",
+      "stage": "seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Seed"
+    },
+    {
+      "label": "Cosmetics",
+      "slug": "top-cosmetics-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-cosmetics-seed-investors",
+      "stage": "seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Seed"
+    },
+    {
+      "label": "Creator/Passion Economy",
+      "slug": "top-creator-passion-economy-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-creator-passion-economy-seed-investors",
+      "stage": "seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Seed"
+    },
+    {
+      "label": "Cybersecurity",
+      "slug": "top-cybersecurity-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-cybersecurity-seed-investors",
+      "stage": "seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Seed"
+    },
+    {
+      "label": "Data Services",
+      "slug": "top-data-services-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-data-services-seed-investors",
+      "stage": "seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Seed"
+    },
+    {
+      "label": "DeepTech",
+      "slug": "top-deeptech-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-deeptech-seed-investors",
+      "stage": "seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Seed"
+    },
+    {
+      "label": "DefenseTech",
+      "slug": "top-defensetech-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-defensetech-seed-investors",
+      "stage": "seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Seed"
+    },
+    {
+      "label": "Developer Tools",
+      "slug": "top-developer-tools-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-developer-tools-seed-investors",
+      "stage": "seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Seed"
+    },
+    {
+      "label": "Diagnostics",
+      "slug": "top-diagnostics-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-diagnostics-seed-investors",
+      "stage": "seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Seed"
+    },
+    {
+      "label": "Digital Health",
+      "slug": "top-digital-health-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-digital-health-seed-investors",
+      "stage": "seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Seed"
+    },
+    {
+      "label": "Direct-to-Consumer (DTC)",
+      "slug": "top-direct-to-consumer-dtc-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-direct-to-consumer-dtc-seed-investors",
+      "stage": "seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Seed"
+    },
+    {
+      "label": "Drug Delivery",
+      "slug": "top-drug-delivery-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-drug-delivery-seed-investors",
+      "stage": "seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Seed"
+    },
+    {
+      "label": "E-commerce",
+      "slug": "top-e-commerce-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-e-commerce-seed-investors",
+      "stage": "seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Seed"
+    },
+    {
+      "label": "Education",
+      "slug": "top-education-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-education-seed-investors",
+      "stage": "seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Seed"
+    },
+    {
+      "label": "EnergyTech",
+      "slug": "top-energytech-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-energytech-seed-investors",
+      "stage": "seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Seed"
+    },
+    {
+      "label": "Enterprise Applications",
+      "slug": "top-enterprise-applications-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-enterprise-applications-seed-investors",
+      "stage": "seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Seed"
+    },
+    {
+      "label": "Enterprise Infrastructure",
+      "slug": "top-enterprise-infrastructure-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-enterprise-infrastructure-seed-investors",
+      "stage": "seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Seed"
+    },
+    {
+      "label": "Entertainment & Sports",
+      "slug": "top-entertainment-sports-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-entertainment-sports-seed-investors",
+      "stage": "seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Seed"
+    },
+    {
+      "label": "Fashion",
+      "slug": "top-fashion-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-fashion-seed-investors",
+      "stage": "seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Seed"
+    },
+    {
+      "label": "Food and Beverage",
+      "slug": "top-food-and-beverage-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-food-and-beverage-seed-investors",
+      "stage": "seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Seed"
+    },
+    {
+      "label": "Future of Work",
+      "slug": "top-future-of-work-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-future-of-work-seed-investors",
+      "stage": "seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Seed"
+    },
+    {
+      "label": "Games",
+      "slug": "top-games-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-games-seed-investors",
+      "stage": "seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Seed"
+    },
+    {
+      "label": "Gaming/eSports",
+      "slug": "top-gaming-esports-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-gaming-esports-seed-investors",
+      "stage": "seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Seed"
+    },
+    {
+      "label": "General Tech",
+      "slug": "top-general-tech-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-general-tech-seed-investors",
+      "stage": "seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Seed"
+    },
+    {
+      "label": "Generative Tech/AI",
+      "slug": "top-generative-tech-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-generative-tech-seed-investors",
+      "stage": "seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Seed"
+    },
+    {
+      "label": "Gig Economy",
+      "slug": "top-gig-economy-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-gig-economy-seed-investors",
+      "stage": "seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Seed"
+    },
+    {
+      "label": "GovTech",
+      "slug": "top-govtech-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-govtech-seed-investors",
+      "stage": "seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Seed"
+    },
+    {
+      "label": "Hardware",
+      "slug": "top-hardware-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-hardware-seed-investors",
+      "stage": "seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Seed"
+    },
+    {
+      "label": "Health & Hospital Services",
+      "slug": "top-health-hospital-services-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-health-hospital-services-seed-investors",
+      "stage": "seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Seed"
+    },
+    {
+      "label": "Health IT",
+      "slug": "top-health-it-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-health-it-seed-investors",
+      "stage": "seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Seed"
+    },
+    {
+      "label": "Human Capital/HRTech",
+      "slug": "top-human-capital-hrtech-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-human-capital-hrtech-seed-investors",
+      "stage": "seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Seed"
+    },
+    {
+      "label": "Impact",
+      "slug": "top-impact-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-impact-seed-investors",
+      "stage": "seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Seed"
+    },
+    {
+      "label": "Insurance",
+      "slug": "top-insurance-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-insurance-seed-investors",
+      "stage": "seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Seed"
+    },
+    {
+      "label": "IoT",
+      "slug": "top-iot-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-iot-seed-investors",
+      "stage": "seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Seed"
+    },
+    {
+      "label": "LegalTech",
+      "slug": "top-legaltech-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-legaltech-seed-investors",
+      "stage": "seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Seed"
+    },
+    {
+      "label": "Local Services",
+      "slug": "top-local-services-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-local-services-seed-investors",
+      "stage": "seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Seed"
+    },
+    {
+      "label": "Lodging/Hospitality",
+      "slug": "top-lodging-hospitality-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-lodging-hospitality-seed-investors",
+      "stage": "seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Seed"
+    },
+    {
+      "label": "Logistics",
+      "slug": "top-logistics-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-logistics-seed-investors",
+      "stage": "seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Seed"
+    },
+    {
+      "label": "Manufacturing",
+      "slug": "top-manufacturing-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-manufacturing-seed-investors",
+      "stage": "seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Seed"
+    },
+    {
+      "label": "MarketingTech",
+      "slug": "top-marketingtech-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-marketingtech-seed-investors",
+      "stage": "seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Seed"
+    },
+    {
+      "label": "Material Science",
+      "slug": "top-material-science-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-material-science-seed-investors",
+      "stage": "seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Seed"
+    },
+    {
+      "label": "Media/Content",
+      "slug": "top-media-content-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-media-content-seed-investors",
+      "stage": "seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Seed"
+    },
+    {
+      "label": "Medical Devices",
+      "slug": "top-medical-devices-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-medical-devices-seed-investors",
+      "stage": "seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Seed"
+    },
+    {
+      "label": "Messaging",
+      "slug": "top-messaging-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-messaging-seed-investors",
+      "stage": "seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Seed"
+    },
+    {
+      "label": "Parenting/Families",
+      "slug": "top-parenting-families-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-parenting-families-seed-investors",
+      "stage": "seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Seed"
+    },
+    {
+      "label": "Payments",
+      "slug": "top-payments-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-payments-seed-investors",
+      "stage": "seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Seed"
+    },
+    {
+      "label": "Pharmaceuticals",
+      "slug": "top-pharmaceuticals-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-pharmaceuticals-seed-investors",
+      "stage": "seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Seed"
+    },
+    {
+      "label": "Real Estate/PropTech",
+      "slug": "top-real-estate-proptech-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-real-estate-proptech-seed-investors",
+      "stage": "seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Seed"
+    },
+    {
+      "label": "Retail",
+      "slug": "top-retail-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-retail-seed-investors",
+      "stage": "seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Seed"
+    },
+    {
+      "label": "Robotics",
+      "slug": "top-robotics-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-robotics-seed-investors",
+      "stage": "seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Seed"
+    },
+    {
+      "label": "Sales & CRM",
+      "slug": "top-sales-crm-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-sales-crm-seed-investors",
+      "stage": "seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Seed"
+    },
+    {
+      "label": "Security",
+      "slug": "top-security-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-security-seed-investors",
+      "stage": "seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Seed"
+    },
+    {
+      "label": "Semiconductors",
+      "slug": "top-semiconductors-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-semiconductors-seed-investors",
+      "stage": "seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Seed"
+    },
+    {
+      "label": "Smart Cities/UrbanTech",
+      "slug": "top-smart-cities-urbantech-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-smart-cities-urbantech-seed-investors",
+      "stage": "seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Seed"
+    },
+    {
+      "label": "SMB Software",
+      "slug": "top-smb-software-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-smb-software-seed-investors",
+      "stage": "seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Seed"
+    },
+    {
+      "label": "Social Commerce",
+      "slug": "top-social-commerce-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-social-commerce-seed-investors",
+      "stage": "seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Seed"
+    },
+    {
+      "label": "Social Networks",
+      "slug": "top-social-networks-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-social-networks-seed-investors",
+      "stage": "seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Seed"
+    },
+    {
+      "label": "Space",
+      "slug": "top-space-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-space-seed-investors",
+      "stage": "seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Seed"
+    },
+    {
+      "label": "Supply Chain Tech",
+      "slug": "top-supply-chain-tech-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-supply-chain-tech-seed-investors",
+      "stage": "seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Seed"
+    },
+    {
+      "label": "Therapeutics",
+      "slug": "top-therapeutics-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-therapeutics-seed-investors",
+      "stage": "seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Seed"
+    },
+    {
+      "label": "TransportationTech",
+      "slug": "top-transportationtech-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-transportationtech-seed-investors",
+      "stage": "seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Seed"
+    },
+    {
+      "label": "Travel",
+      "slug": "top-travel-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-travel-seed-investors",
+      "stage": "seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Seed"
+    },
+    {
+      "label": "Web3/Blockchain",
+      "slug": "top-web3-blockchain-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-web3-blockchain-seed-investors",
+      "stage": "seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Seed"
+    },
+    {
+      "label": "Web3/Crypto",
+      "slug": "top-web3-crypto-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-web3-crypto-seed-investors",
+      "stage": "seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Seed"
+    },
+    {
+      "label": "Wellness & Fitness",
+      "slug": "top-wellness-fitness-seed-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-wellness-fitness-seed-investors",
+      "stage": "seed",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Seed"
+    },
+    {
+      "label": "Advertising",
+      "slug": "top-advertising-series-a-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-advertising-series-a-investors",
+      "stage": "series-a",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Series A"
+    },
+    {
+      "label": "AgTech",
+      "slug": "top-agtech-series-a-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-agtech-series-a-investors",
+      "stage": "series-a",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Series A"
+    },
+    {
+      "label": "AI",
+      "slug": "top-ai-series-a-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-ai-series-a-investors",
+      "stage": "series-a",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Series A"
+    },
+    {
+      "label": "Analytics",
+      "slug": "top-analytics-series-a-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-analytics-series-a-investors",
+      "stage": "series-a",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Series A"
+    },
+    {
+      "label": "AR/VR",
+      "slug": "top-ar-vr-series-a-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-ar-vr-series-a-investors",
+      "stage": "series-a",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Series A"
+    },
+    {
+      "label": "AudioTech",
+      "slug": "top-audiotech-series-a-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-audiotech-series-a-investors",
+      "stage": "series-a",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Series A"
+    },
+    {
+      "label": "AutoTech",
+      "slug": "top-autotech-series-a-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-autotech-series-a-investors",
+      "stage": "series-a",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Series A"
+    },
+    {
+      "label": "BioTech",
+      "slug": "top-biotech-series-a-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-biotech-series-a-investors",
+      "stage": "series-a",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Series A"
+    },
+    {
+      "label": "Chemicals",
+      "slug": "top-chemicals-series-a-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-chemicals-series-a-investors",
+      "stage": "series-a",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Series A"
+    },
+    {
+      "label": "ClimateTech/CleanTech",
+      "slug": "top-climatetech-cleantech-series-a-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-climatetech-cleantech-series-a-investors",
+      "stage": "series-a",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Series A"
+    },
+    {
+      "label": "Cloud Infrastructure",
+      "slug": "top-cloud-infrastructure-series-a-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-cloud-infrastructure-series-a-investors",
+      "stage": "series-a",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Series A"
+    },
+    {
+      "label": "ConstructionTech",
+      "slug": "top-constructiontech-series-a-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-constructiontech-series-a-investors",
+      "stage": "series-a",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Series A"
+    },
+    {
+      "label": "Consumer Health",
+      "slug": "top-consumer-health-series-a-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-consumer-health-series-a-investors",
+      "stage": "series-a",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Series A"
+    },
+    {
+      "label": "Consumer Internet",
+      "slug": "top-consumer-internet-series-a-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-consumer-internet-series-a-investors",
+      "stage": "series-a",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Series A"
+    },
+    {
+      "label": "Cosmetics",
+      "slug": "top-cosmetics-series-a-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-cosmetics-series-a-investors",
+      "stage": "series-a",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Series A"
+    },
+    {
+      "label": "Creator/Passion Economy",
+      "slug": "top-creator-passion-economy-series-a-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-creator-passion-economy-series-a-investors",
+      "stage": "series-a",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Series A"
+    },
+    {
+      "label": "Cybersecurity",
+      "slug": "top-cybersecurity-series-a-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-cybersecurity-series-a-investors",
+      "stage": "series-a",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Series A"
+    },
+    {
+      "label": "Data Services",
+      "slug": "top-data-services-series-a-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-data-services-series-a-investors",
+      "stage": "series-a",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Series A"
+    },
+    {
+      "label": "DeepTech",
+      "slug": "top-deeptech-series-a-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-deeptech-series-a-investors",
+      "stage": "series-a",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Series A"
+    },
+    {
+      "label": "DefenseTech",
+      "slug": "top-defensetech-series-a-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-defensetech-series-a-investors",
+      "stage": "series-a",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Series A"
+    },
+    {
+      "label": "Developer Tools",
+      "slug": "top-developer-tools-series-a-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-developer-tools-series-a-investors",
+      "stage": "series-a",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Series A"
+    },
+    {
+      "label": "Diagnostics",
+      "slug": "top-diagnostics-series-a-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-diagnostics-series-a-investors",
+      "stage": "series-a",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Series A"
+    },
+    {
+      "label": "Digital Health",
+      "slug": "top-digital-health-series-a-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-digital-health-series-a-investors",
+      "stage": "series-a",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Series A"
+    },
+    {
+      "label": "Direct-to-Consumer (DTC)",
+      "slug": "top-direct-to-consumer-dtc-series-a-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-direct-to-consumer-dtc-series-a-investors",
+      "stage": "series-a",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Series A"
+    },
+    {
+      "label": "Drug Delivery",
+      "slug": "top-drug-delivery-series-a-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-drug-delivery-series-a-investors",
+      "stage": "series-a",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Series A"
+    },
+    {
+      "label": "E-commerce",
+      "slug": "top-e-commerce-series-a-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-e-commerce-series-a-investors",
+      "stage": "series-a",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Series A"
+    },
+    {
+      "label": "Education",
+      "slug": "top-education-series-a-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-education-series-a-investors",
+      "stage": "series-a",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Series A"
+    },
+    {
+      "label": "EnergyTech",
+      "slug": "top-energytech-series-a-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-energytech-series-a-investors",
+      "stage": "series-a",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Series A"
+    },
+    {
+      "label": "Enterprise Applications",
+      "slug": "top-enterprise-applications-series-a-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-enterprise-applications-series-a-investors",
+      "stage": "series-a",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Series A"
+    },
+    {
+      "label": "Enterprise Infrastructure",
+      "slug": "top-enterprise-infrastructure-series-a-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-enterprise-infrastructure-series-a-investors",
+      "stage": "series-a",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Series A"
+    },
+    {
+      "label": "Enterprise",
+      "slug": "top-enterprise-series-a-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-enterprise-series-a-investors",
+      "stage": "series-a",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Series A"
+    },
+    {
+      "label": "Entertainment & Sports",
+      "slug": "top-entertainment-sports-series-a-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-entertainment-sports-series-a-investors",
+      "stage": "series-a",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Series A"
+    },
+    {
+      "label": "Fashion",
+      "slug": "top-fashion-series-a-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-fashion-series-a-investors",
+      "stage": "series-a",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Series A"
+    },
+    {
+      "label": "FinTech",
+      "slug": "top-fintech-series-a-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-fintech-series-a-investors",
+      "stage": "series-a",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Series A"
+    },
+    {
+      "label": "Food and Beverage",
+      "slug": "top-food-and-beverage-series-a-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-food-and-beverage-series-a-investors",
+      "stage": "series-a",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Series A"
+    },
+    {
+      "label": "Future of Work",
+      "slug": "top-future-of-work-series-a-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-future-of-work-series-a-investors",
+      "stage": "series-a",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Series A"
+    },
+    {
+      "label": "Games",
+      "slug": "top-games-series-a-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-games-series-a-investors",
+      "stage": "series-a",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Series A"
+    },
+    {
+      "label": "Gaming/eSports",
+      "slug": "top-gaming-esports-series-a-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-gaming-esports-series-a-investors",
+      "stage": "series-a",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Series A"
+    },
+    {
+      "label": "General Tech",
+      "slug": "top-general-tech-series-a-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-general-tech-series-a-investors",
+      "stage": "series-a",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Series A"
+    },
+    {
+      "label": "Generative Tech/AI",
+      "slug": "top-generative-tech-series-a-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-generative-tech-series-a-investors",
+      "stage": "series-a",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Series A"
+    },
+    {
+      "label": "Gig Economy",
+      "slug": "top-gig-economy-series-a-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-gig-economy-series-a-investors",
+      "stage": "series-a",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Series A"
+    },
+    {
+      "label": "GovTech",
+      "slug": "top-govtech-series-a-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-govtech-series-a-investors",
+      "stage": "series-a",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Series A"
+    },
+    {
+      "label": "Hardware",
+      "slug": "top-hardware-series-a-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-hardware-series-a-investors",
+      "stage": "series-a",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Series A"
+    },
+    {
+      "label": "Health & Hospital Services",
+      "slug": "top-health-hospital-services-series-a-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-health-hospital-services-series-a-investors",
+      "stage": "series-a",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Series A"
+    },
+    {
+      "label": "Health IT",
+      "slug": "top-health-it-series-a-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-health-it-series-a-investors",
+      "stage": "series-a",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Series A"
+    },
+    {
+      "label": "Human Capital/HRTech",
+      "slug": "top-human-capital-hrtech-series-a-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-human-capital-hrtech-series-a-investors",
+      "stage": "series-a",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Series A"
+    },
+    {
+      "label": "Impact",
+      "slug": "top-impact-series-a-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-impact-series-a-investors",
+      "stage": "series-a",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Series A"
+    },
+    {
+      "label": "Insurance",
+      "slug": "top-insurance-series-a-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-insurance-series-a-investors",
+      "stage": "series-a",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Series A"
+    },
+    {
+      "label": "IoT",
+      "slug": "top-iot-series-a-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-iot-series-a-investors",
+      "stage": "series-a",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Series A"
+    },
+    {
+      "label": "LegalTech",
+      "slug": "top-legaltech-series-a-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-legaltech-series-a-investors",
+      "stage": "series-a",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Series A"
+    },
+    {
+      "label": "Local Services",
+      "slug": "top-local-services-series-a-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-local-services-series-a-investors",
+      "stage": "series-a",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Series A"
+    },
+    {
+      "label": "Lodging/Hospitality",
+      "slug": "top-lodging-hospitality-series-a-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-lodging-hospitality-series-a-investors",
+      "stage": "series-a",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Series A"
+    },
+    {
+      "label": "Logistics",
+      "slug": "top-logistics-series_a-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-logistics-series_a-investors",
+      "stage": "other",
+      "kind": "region",
+      "count": null,
+      "stageLabel": "Other Lists"
+    },
+    {
+      "label": "Manufacturing",
+      "slug": "top-manufacturing-series_a-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-manufacturing-series_a-investors",
+      "stage": "other",
+      "kind": "region",
+      "count": null,
+      "stageLabel": "Other Lists"
+    },
+    {
+      "label": "MarketingTech",
+      "slug": "top-marketingtech-series-a-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-marketingtech-series-a-investors",
+      "stage": "series-a",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Series A"
+    },
+    {
+      "label": "Marketplaces",
+      "slug": "top-marketplaces-series-a-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-marketplaces-series-a-investors",
+      "stage": "series-a",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Series A"
+    },
+    {
+      "label": "Material Science",
+      "slug": "top-material-science-series-a-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-material-science-series-a-investors",
+      "stage": "series-a",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Series A"
+    },
+    {
+      "label": "Media/Content",
+      "slug": "top-media-content-series-a-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-media-content-series-a-investors",
+      "stage": "series-a",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Series A"
+    },
+    {
+      "label": "Medical Devices",
+      "slug": "top-medical-devices-series-a-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-medical-devices-series-a-investors",
+      "stage": "series-a",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Series A"
+    },
+    {
+      "label": "Messaging",
+      "slug": "top-messaging-series-a-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-messaging-series-a-investors",
+      "stage": "series-a",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Series A"
+    },
+    {
+      "label": "Parenting/Families",
+      "slug": "top-parenting-families-series-a-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-parenting-families-series-a-investors",
+      "stage": "series-a",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Series A"
+    },
+    {
+      "label": "Payments",
+      "slug": "top-payments-series-a-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-payments-series-a-investors",
+      "stage": "series-a",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Series A"
+    },
+    {
+      "label": "Pharmaceuticals",
+      "slug": "top-pharmaceuticals-series-a-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-pharmaceuticals-series-a-investors",
+      "stage": "series-a",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Series A"
+    },
+    {
+      "label": "Real Estate/PropTech",
+      "slug": "top-real-estate-proptech-series-a-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-real-estate-proptech-series-a-investors",
+      "stage": "series-a",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Series A"
+    },
+    {
+      "label": "Retail",
+      "slug": "top-retail-series-a-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-retail-series-a-investors",
+      "stage": "series-a",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Series A"
+    },
+    {
+      "label": "Robotics",
+      "slug": "top-robotics-series-a-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-robotics-series-a-investors",
+      "stage": "series-a",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Series A"
+    },
+    {
+      "label": "SaaS",
+      "slug": "top-saas-series-a-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-saas-series-a-investors",
+      "stage": "series-a",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Series A"
+    },
+    {
+      "label": "Sales & CRM",
+      "slug": "top-sales-crm-series-a-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-sales-crm-series-a-investors",
+      "stage": "series-a",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Series A"
+    },
+    {
+      "label": "Security",
+      "slug": "top-security-series-a-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-security-series-a-investors",
+      "stage": "series-a",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Series A"
+    },
+    {
+      "label": "Semiconductors",
+      "slug": "top-semiconductors-series-a-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-semiconductors-series-a-investors",
+      "stage": "series-a",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Series A"
+    },
+    {
+      "label": "Smart Cities/UrbanTech",
+      "slug": "top-smart-cities-urbantech-series-a-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-smart-cities-urbantech-series-a-investors",
+      "stage": "series-a",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Series A"
+    },
+    {
+      "label": "SMB Software",
+      "slug": "top-smb-software-series-a-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-smb-software-series-a-investors",
+      "stage": "series-a",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Series A"
+    },
+    {
+      "label": "Social Commerce",
+      "slug": "top-social-commerce-series-a-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-social-commerce-series-a-investors",
+      "stage": "series-a",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Series A"
+    },
+    {
+      "label": "Social Networks",
+      "slug": "top-social-networks-series-a-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-social-networks-series-a-investors",
+      "stage": "series-a",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Series A"
+    },
+    {
+      "label": "Space",
+      "slug": "top-space-series_a-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-space-series_a-investors",
+      "stage": "other",
+      "kind": "region",
+      "count": null,
+      "stageLabel": "Other Lists"
+    },
+    {
+      "label": "Supply Chain Tech",
+      "slug": "top-supply-chain-tech-series-a-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-supply-chain-tech-series-a-investors",
+      "stage": "series-a",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Series A"
+    },
+    {
+      "label": "Therapeutics",
+      "slug": "top-therapeutics-series-a-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-therapeutics-series-a-investors",
+      "stage": "series-a",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Series A"
+    },
+    {
+      "label": "TransportationTech",
+      "slug": "top-transportationtech-series-a-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-transportationtech-series-a-investors",
+      "stage": "series-a",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Series A"
+    },
+    {
+      "label": "Travel",
+      "slug": "top-travel-series-a-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-travel-series-a-investors",
+      "stage": "series-a",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Series A"
+    },
+    {
+      "label": "Web3/Blockchain",
+      "slug": "top-web3-blockchain-series-a-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-web3-blockchain-series-a-investors",
+      "stage": "series-a",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Series A"
+    },
+    {
+      "label": "Web3/Crypto",
+      "slug": "top-web3-crypto-series-a-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-web3-crypto-series-a-investors",
+      "stage": "series-a",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Series A"
+    },
+    {
+      "label": "Wellness & Fitness",
+      "slug": "top-wellness-fitness-series-a-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-wellness-fitness-series-a-investors",
+      "stage": "series-a",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Series A"
+    },
+    {
+      "label": "Angel, Scout, and Solo-Capitalists",
+      "slug": "top-angel-scout-and-solo-capitalists-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-angel-scout-and-solo-capitalists-investors",
+      "stage": "other",
+      "kind": "region",
+      "count": null,
+      "stageLabel": "Other Lists"
+    },
+    {
+      "label": "Austin",
+      "slug": "top-austin-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-austin-investors",
+      "stage": "other",
+      "kind": "region",
+      "count": null,
+      "stageLabel": "Other Lists"
+    },
+    {
+      "label": "Boston / New England",
+      "slug": "top-boston-new-england-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-boston-new-england-investors",
+      "stage": "other",
+      "kind": "region",
+      "count": null,
+      "stageLabel": "Other Lists"
+    },
+    {
+      "label": "British Columbia",
+      "slug": "top-british-columbia-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-british-columbia-investors",
+      "stage": "other",
+      "kind": "region",
+      "count": null,
+      "stageLabel": "Other Lists"
+    },
+    {
+      "label": "Canada",
+      "slug": "top-canada-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-canada-investors",
+      "stage": "other",
+      "kind": "region",
+      "count": null,
+      "stageLabel": "Other Lists"
+    },
+    {
+      "label": "Colorado / Utah",
+      "slug": "top-colorado-utah-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-colorado-utah-investors",
+      "stage": "other",
+      "kind": "region",
+      "count": null,
+      "stageLabel": "Other Lists"
+    },
+    {
+      "label": "Diverse",
+      "slug": "top-diverse-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-diverse-investors",
+      "stage": "other",
+      "kind": "region",
+      "count": null,
+      "stageLabel": "Other Lists"
+    },
+    {
+      "label": "Female",
+      "slug": "top-female-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-female-investors",
+      "stage": "other",
+      "kind": "region",
+      "count": null,
+      "stageLabel": "Other Lists"
+    },
+    {
+      "label": "Israel",
+      "slug": "top-israel-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-israel-investors",
+      "stage": "other",
+      "kind": "region",
+      "count": null,
+      "stageLabel": "Other Lists"
+    },
+    {
+      "label": "LatAm (Latin America)",
+      "slug": "top-latam-latin-america-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-latam-latin-america-investors",
+      "stage": "other",
+      "kind": "region",
+      "count": null,
+      "stageLabel": "Other Lists"
+    },
+    {
+      "label": "London",
+      "slug": "top-london-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-london-investors",
+      "stage": "other",
+      "kind": "region",
+      "count": null,
+      "stageLabel": "Other Lists"
+    },
+    {
+      "label": "Los Angeles / Southern California",
+      "slug": "top-los-angeles-southern-california-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-los-angeles-southern-california-investors",
+      "stage": "other",
+      "kind": "region",
+      "count": null,
+      "stageLabel": "Other Lists"
+    },
+    {
+      "label": "Midwest",
+      "slug": "top-midwest-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-midwest-investors",
+      "stage": "other",
+      "kind": "region",
+      "count": null,
+      "stageLabel": "Other Lists"
+    },
+    {
+      "label": "New York City",
+      "slug": "top-new-york-city-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-new-york-city-investors",
+      "stage": "other",
+      "kind": "region",
+      "count": null,
+      "stageLabel": "Other Lists"
+    },
+    {
+      "label": "Raleigh-Durham / Southeast US",
+      "slug": "top-raleigh-durham-southeast-us-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-raleigh-durham-southeast-us-investors",
+      "stage": "other",
+      "kind": "region",
+      "count": null,
+      "stageLabel": "Other Lists"
+    },
+    {
+      "label": "San Francisco Bay Area",
+      "slug": "top-san-francisco-bay-area-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-san-francisco-bay-area-investors",
+      "stage": "other",
+      "kind": "region",
+      "count": null,
+      "stageLabel": "Other Lists"
+    },
+    {
+      "label": "Seattle / Portland",
+      "slug": "top-seattle-portland-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-seattle-portland-investors",
+      "stage": "other",
+      "kind": "region",
+      "count": null,
+      "stageLabel": "Other Lists"
+    },
+    {
+      "label": "Washington, D.C.",
+      "slug": "top-washington-d-c-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-washington-d-c-investors",
+      "stage": "other",
+      "kind": "region",
+      "count": null,
+      "stageLabel": "Other Lists"
+    },
+    {
+      "label": "Investors who invested in diverse founders",
+      "slug": "top-who-invested-in-diverse-founders-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-who-invested-in-diverse-founders-investors",
+      "stage": "other",
+      "kind": "region",
+      "count": null,
+      "stageLabel": "Other Lists"
+    },
+    {
+      "label": "Investors who invested in female founders",
+      "slug": "top-who-invested-in-female-founders-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-who-invested-in-female-founders-investors",
+      "stage": "other",
+      "kind": "region",
+      "count": null,
+      "stageLabel": "Other Lists"
+    },
+    {
+      "label": "Investors who were founders",
+      "slug": "top-who-were-founders-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-who-were-founders-investors",
+      "stage": "other",
+      "kind": "region",
+      "count": null,
+      "stageLabel": "Other Lists"
+    },
+    {
+      "label": "Advertising",
+      "slug": "top-advertising-series-b-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-advertising-series-b-investors",
+      "stage": "series-b",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Series B"
+    },
+    {
+      "label": "AgTech",
+      "slug": "top-agtech-series-b-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-agtech-series-b-investors",
+      "stage": "series-b",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Series B"
+    },
+    {
+      "label": "AI",
+      "slug": "top-ai-series-b-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-ai-series-b-investors",
+      "stage": "series-b",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Series B"
+    },
+    {
+      "label": "Analytics",
+      "slug": "top-analytics-series-b-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-analytics-series-b-investors",
+      "stage": "series-b",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Series B"
+    },
+    {
+      "label": "AR/VR",
+      "slug": "top-ar-vr-series-b-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-ar-vr-series-b-investors",
+      "stage": "series-b",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Series B"
+    },
+    {
+      "label": "AudioTech",
+      "slug": "top-audiotech-series-b-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-audiotech-series-b-investors",
+      "stage": "series-b",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Series B"
+    },
+    {
+      "label": "AutoTech",
+      "slug": "top-autotech-series-b-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-autotech-series-b-investors",
+      "stage": "series-b",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Series B"
+    },
+    {
+      "label": "BioTech",
+      "slug": "top-biotech-series-b-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-biotech-series-b-investors",
+      "stage": "series-b",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Series B"
+    },
+    {
+      "label": "Chemicals",
+      "slug": "top-chemicals-series-b-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-chemicals-series-b-investors",
+      "stage": "series-b",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Series B"
+    },
+    {
+      "label": "ClimateTech/CleanTech",
+      "slug": "top-climatetech-cleantech-series-b-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-climatetech-cleantech-series-b-investors",
+      "stage": "series-b",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Series B"
+    },
+    {
+      "label": "Cloud Infrastructure",
+      "slug": "top-cloud-infrastructure-series-b-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-cloud-infrastructure-series-b-investors",
+      "stage": "series-b",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Series B"
+    },
+    {
+      "label": "ConstructionTech",
+      "slug": "top-constructiontech-series-b-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-constructiontech-series-b-investors",
+      "stage": "series-b",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Series B"
+    },
+    {
+      "label": "Consumer Health",
+      "slug": "top-consumer-health-series-b-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-consumer-health-series-b-investors",
+      "stage": "series-b",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Series B"
+    },
+    {
+      "label": "Consumer Internet",
+      "slug": "top-consumer-internet-series-b-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-consumer-internet-series-b-investors",
+      "stage": "series-b",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Series B"
+    },
+    {
+      "label": "Cosmetics",
+      "slug": "top-cosmetics-series-b-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-cosmetics-series-b-investors",
+      "stage": "series-b",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Series B"
+    },
+    {
+      "label": "Creator/Passion Economy",
+      "slug": "top-creator-passion-economy-series-b-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-creator-passion-economy-series-b-investors",
+      "stage": "series-b",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Series B"
+    },
+    {
+      "label": "Cybersecurity",
+      "slug": "top-cybersecurity-series-b-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-cybersecurity-series-b-investors",
+      "stage": "series-b",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Series B"
+    },
+    {
+      "label": "Data Services",
+      "slug": "top-data-services-series-b-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-data-services-series-b-investors",
+      "stage": "series-b",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Series B"
+    },
+    {
+      "label": "DeepTech",
+      "slug": "top-deeptech-series-b-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-deeptech-series-b-investors",
+      "stage": "series-b",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Series B"
+    },
+    {
+      "label": "DefenseTech",
+      "slug": "top-defensetech-series-b-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-defensetech-series-b-investors",
+      "stage": "series-b",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Series B"
+    },
+    {
+      "label": "Developer Tools",
+      "slug": "top-developer-tools-series-b-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-developer-tools-series-b-investors",
+      "stage": "series-b",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Series B"
+    },
+    {
+      "label": "Diagnostics",
+      "slug": "top-diagnostics-series-b-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-diagnostics-series-b-investors",
+      "stage": "series-b",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Series B"
+    },
+    {
+      "label": "Digital Health",
+      "slug": "top-digital-health-series-b-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-digital-health-series-b-investors",
+      "stage": "series-b",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Series B"
+    },
+    {
+      "label": "Direct-to-Consumer (DTC)",
+      "slug": "top-direct-to-consumer-dtc-series-b-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-direct-to-consumer-dtc-series-b-investors",
+      "stage": "series-b",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Series B"
+    },
+    {
+      "label": "Drug Delivery",
+      "slug": "top-drug-delivery-series-b-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-drug-delivery-series-b-investors",
+      "stage": "series-b",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Series B"
+    },
+    {
+      "label": "E-commerce",
+      "slug": "top-e-commerce-series-b-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-e-commerce-series-b-investors",
+      "stage": "series-b",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Series B"
+    },
+    {
+      "label": "Education",
+      "slug": "top-education-series-b-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-education-series-b-investors",
+      "stage": "series-b",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Series B"
+    },
+    {
+      "label": "EnergyTech",
+      "slug": "top-energytech-series-b-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-energytech-series-b-investors",
+      "stage": "series-b",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Series B"
+    },
+    {
+      "label": "Enterprise Applications",
+      "slug": "top-enterprise-applications-series-b-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-enterprise-applications-series-b-investors",
+      "stage": "series-b",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Series B"
+    },
+    {
+      "label": "Enterprise Infrastructure",
+      "slug": "top-enterprise-infrastructure-series-b-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-enterprise-infrastructure-series-b-investors",
+      "stage": "series-b",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Series B"
+    },
+    {
+      "label": "Enterprise",
+      "slug": "top-enterprise-series-b-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-enterprise-series-b-investors",
+      "stage": "series-b",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Series B"
+    },
+    {
+      "label": "Entertainment & Sports",
+      "slug": "top-entertainment-sports-series-b-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-entertainment-sports-series-b-investors",
+      "stage": "series-b",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Series B"
+    },
+    {
+      "label": "Fashion",
+      "slug": "top-fashion-series-b-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-fashion-series-b-investors",
+      "stage": "series-b",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Series B"
+    },
+    {
+      "label": "FinTech",
+      "slug": "top-fintech-series-b-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-fintech-series-b-investors",
+      "stage": "series-b",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Series B"
+    },
+    {
+      "label": "Food and Beverage",
+      "slug": "top-food-and-beverage-series-b-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-food-and-beverage-series-b-investors",
+      "stage": "series-b",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Series B"
+    },
+    {
+      "label": "Future of Work",
+      "slug": "top-future-of-work-series-b-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-future-of-work-series-b-investors",
+      "stage": "series-b",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Series B"
+    },
+    {
+      "label": "Games",
+      "slug": "top-games-series-b-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-games-series-b-investors",
+      "stage": "series-b",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Series B"
+    },
+    {
+      "label": "Gaming/eSports",
+      "slug": "top-gaming-esports-series-b-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-gaming-esports-series-b-investors",
+      "stage": "series-b",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Series B"
+    },
+    {
+      "label": "General Tech",
+      "slug": "top-general-tech-series-b-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-general-tech-series-b-investors",
+      "stage": "series-b",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Series B"
+    },
+    {
+      "label": "Generative Tech/AI",
+      "slug": "top-generative-tech-series-b-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-generative-tech-series-b-investors",
+      "stage": "series-b",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Series B"
+    },
+    {
+      "label": "Gig Economy",
+      "slug": "top-gig-economy-series-b-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-gig-economy-series-b-investors",
+      "stage": "series-b",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Series B"
+    },
+    {
+      "label": "GovTech",
+      "slug": "top-govtech-series-b-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-govtech-series-b-investors",
+      "stage": "series-b",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Series B"
+    },
+    {
+      "label": "Hardware",
+      "slug": "top-hardware-series-b-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-hardware-series-b-investors",
+      "stage": "series-b",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Series B"
+    },
+    {
+      "label": "Health & Hospital Services",
+      "slug": "top-health-hospital-services-series-b-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-health-hospital-services-series-b-investors",
+      "stage": "series-b",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Series B"
+    },
+    {
+      "label": "Health IT",
+      "slug": "top-health-it-series-b-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-health-it-series-b-investors",
+      "stage": "series-b",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Series B"
+    },
+    {
+      "label": "Human Capital/HRTech",
+      "slug": "top-human-capital-hrtech-series-b-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-human-capital-hrtech-series-b-investors",
+      "stage": "series-b",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Series B"
+    },
+    {
+      "label": "Impact",
+      "slug": "top-impact-series-b-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-impact-series-b-investors",
+      "stage": "series-b",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Series B"
+    },
+    {
+      "label": "Insurance",
+      "slug": "top-insurance-series-b-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-insurance-series-b-investors",
+      "stage": "series-b",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Series B"
+    },
+    {
+      "label": "IoT",
+      "slug": "top-iot-series-b-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-iot-series-b-investors",
+      "stage": "series-b",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Series B"
+    },
+    {
+      "label": "LegalTech",
+      "slug": "top-legaltech-series-b-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-legaltech-series-b-investors",
+      "stage": "series-b",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Series B"
+    },
+    {
+      "label": "Local Services",
+      "slug": "top-local-services-series-b-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-local-services-series-b-investors",
+      "stage": "series-b",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Series B"
+    },
+    {
+      "label": "Lodging/Hospitality",
+      "slug": "top-lodging-hospitality-series-b-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-lodging-hospitality-series-b-investors",
+      "stage": "series-b",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Series B"
+    },
+    {
+      "label": "Logistics",
+      "slug": "top-logistics-series_b-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-logistics-series_b-investors",
+      "stage": "other",
+      "kind": "region",
+      "count": null,
+      "stageLabel": "Other Lists"
+    },
+    {
+      "label": "Manufacturing",
+      "slug": "top-manufacturing-series_b-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-manufacturing-series_b-investors",
+      "stage": "other",
+      "kind": "region",
+      "count": null,
+      "stageLabel": "Other Lists"
+    },
+    {
+      "label": "MarketingTech",
+      "slug": "top-marketingtech-series-b-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-marketingtech-series-b-investors",
+      "stage": "series-b",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Series B"
+    },
+    {
+      "label": "Marketplaces",
+      "slug": "top-marketplaces-series-b-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-marketplaces-series-b-investors",
+      "stage": "series-b",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Series B"
+    },
+    {
+      "label": "Material Science",
+      "slug": "top-material-science-series-b-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-material-science-series-b-investors",
+      "stage": "series-b",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Series B"
+    },
+    {
+      "label": "Media/Content",
+      "slug": "top-media-content-series-b-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-media-content-series-b-investors",
+      "stage": "series-b",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Series B"
+    },
+    {
+      "label": "Medical Devices",
+      "slug": "top-medical-devices-series-b-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-medical-devices-series-b-investors",
+      "stage": "series-b",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Series B"
+    },
+    {
+      "label": "Messaging",
+      "slug": "top-messaging-series-b-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-messaging-series-b-investors",
+      "stage": "series-b",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Series B"
+    },
+    {
+      "label": "Parenting/Families",
+      "slug": "top-parenting-families-series-b-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-parenting-families-series-b-investors",
+      "stage": "series-b",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Series B"
+    },
+    {
+      "label": "Payments",
+      "slug": "top-payments-series-b-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-payments-series-b-investors",
+      "stage": "series-b",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Series B"
+    },
+    {
+      "label": "Pharmaceuticals",
+      "slug": "top-pharmaceuticals-series-b-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-pharmaceuticals-series-b-investors",
+      "stage": "series-b",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Series B"
+    },
+    {
+      "label": "Real Estate/PropTech",
+      "slug": "top-real-estate-proptech-series-b-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-real-estate-proptech-series-b-investors",
+      "stage": "series-b",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Series B"
+    },
+    {
+      "label": "Retail",
+      "slug": "top-retail-series-b-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-retail-series-b-investors",
+      "stage": "series-b",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Series B"
+    },
+    {
+      "label": "Robotics",
+      "slug": "top-robotics-series-b-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-robotics-series-b-investors",
+      "stage": "series-b",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Series B"
+    },
+    {
+      "label": "SaaS",
+      "slug": "top-saas-series-b-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-saas-series-b-investors",
+      "stage": "series-b",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Series B"
+    },
+    {
+      "label": "Sales & CRM",
+      "slug": "top-sales-crm-series-b-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-sales-crm-series-b-investors",
+      "stage": "series-b",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Series B"
+    },
+    {
+      "label": "Security",
+      "slug": "top-security-series-b-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-security-series-b-investors",
+      "stage": "series-b",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Series B"
+    },
+    {
+      "label": "Semiconductors",
+      "slug": "top-semiconductors-series-b-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-semiconductors-series-b-investors",
+      "stage": "series-b",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Series B"
+    },
+    {
+      "label": "Smart Cities/UrbanTech",
+      "slug": "top-smart-cities-urbantech-series-b-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-smart-cities-urbantech-series-b-investors",
+      "stage": "series-b",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Series B"
+    },
+    {
+      "label": "SMB Software",
+      "slug": "top-smb-software-series-b-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-smb-software-series-b-investors",
+      "stage": "series-b",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Series B"
+    },
+    {
+      "label": "Social Commerce",
+      "slug": "top-social-commerce-series-b-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-social-commerce-series-b-investors",
+      "stage": "series-b",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Series B"
+    },
+    {
+      "label": "Social Networks",
+      "slug": "top-social-networks-series-b-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-social-networks-series-b-investors",
+      "stage": "series-b",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Series B"
+    },
+    {
+      "label": "Space",
+      "slug": "top-space-series_b-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-space-series_b-investors",
+      "stage": "other",
+      "kind": "region",
+      "count": null,
+      "stageLabel": "Other Lists"
+    },
+    {
+      "label": "Supply Chain Tech",
+      "slug": "top-supply-chain-tech-series-b-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-supply-chain-tech-series-b-investors",
+      "stage": "series-b",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Series B"
+    },
+    {
+      "label": "Therapeutics",
+      "slug": "top-therapeutics-series-b-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-therapeutics-series-b-investors",
+      "stage": "series-b",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Series B"
+    },
+    {
+      "label": "TransportationTech",
+      "slug": "top-transportationtech-series-b-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-transportationtech-series-b-investors",
+      "stage": "series-b",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Series B"
+    },
+    {
+      "label": "Travel",
+      "slug": "top-travel-series-b-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-travel-series-b-investors",
+      "stage": "series-b",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Series B"
+    },
+    {
+      "label": "Web3/Blockchain",
+      "slug": "top-web3-blockchain-series-b-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-web3-blockchain-series-b-investors",
+      "stage": "series-b",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Series B"
+    },
+    {
+      "label": "Web3/Crypto",
+      "slug": "top-web3-crypto-series-b-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-web3-crypto-series-b-investors",
+      "stage": "series-b",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Series B"
+    },
+    {
+      "label": "Wellness & Fitness",
+      "slug": "top-wellness-fitness-series-b-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-wellness-fitness-series-b-investors",
+      "stage": "series-b",
+      "kind": "category",
+      "count": null,
+      "stageLabel": "Series B"
+    },
+    {
+      "label": "General Tech Pre Seed (1) \u2022 Seed (1) +246",
+      "slug": "top-middle-east-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-middle-east-investors",
+      "stage": "other",
+      "kind": "region",
+      "count": null,
+      "stageLabel": "Other Lists"
+    },
+    {
+      "label": "DefenseTech Pre Seed (2) \u2022 Seed (2) \u2022 Series A (2) \u2022 Series B (2) +246",
+      "slug": "top-mena-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-mena-investors",
+      "stage": "other",
+      "kind": "region",
+      "count": null,
+      "stageLabel": "Other Lists"
+    },
+    {
+      "label": "DefenseTech Pre Seed (1) \u2022 Seed (1) \u2022 Series B (1) +246",
+      "slug": "top-africa-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-africa-investors",
+      "stage": "other",
+      "kind": "region",
+      "count": null,
+      "stageLabel": "Other Lists"
+    },
+    {
+      "label": "+246",
+      "slug": "top-alsace-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-alsace-investors",
+      "stage": "other",
+      "kind": "region",
+      "count": null,
+      "stageLabel": "Other Lists"
+    },
+    {
+      "label": "+246",
+      "slug": "top-flemish-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-flemish-investors",
+      "stage": "other",
+      "kind": "region",
+      "count": null,
+      "stageLabel": "Other Lists"
+    },
+    {
+      "label": "+246",
+      "slug": "top-alberta-canada-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-alberta-canada-investors",
+      "stage": "other",
+      "kind": "region",
+      "count": null,
+      "stageLabel": "Other Lists"
+    },
+    {
+      "label": "+246",
+      "slug": "top-nova-scotia-canada-investors",
+      "href": "https://signal.nfx.com/investor-lists/top-nova-scotia-canada-investors",
+      "stage": "other",
+      "kind": "region",
+      "count": null,
+      "stageLabel": "Other Lists"
+    },
+    {
+      "label": "See the methodology.",
+      "slug": "methodology",
+      "href": "https://signal.nfx.com/investor-lists/methodology",
+      "stage": "other",
+      "kind": "region",
+      "count": null,
+      "stageLabel": "Other Lists"
+    }
+  ]
+}

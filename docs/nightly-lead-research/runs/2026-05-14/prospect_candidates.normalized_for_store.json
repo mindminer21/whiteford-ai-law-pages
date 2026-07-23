@@ -1,0 +1,11 @@
+{
+  "run_label": "2026-05-14",
+  "status": "blocked_source_unavailable",
+  "expansion_paused": true,
+  "source_blocker": {
+    "web_search": "Payment Required: Insufficient credits (Firecrawl)",
+    "web_extract": "Payment Required: Insufficient credits (Firecrawl)"
+  },
+  "next_step": "Restore Firecrawl credits or alternative source backend. Then re-run smoke tests before prospect discovery resumes.",
+  "candidates": []
+}

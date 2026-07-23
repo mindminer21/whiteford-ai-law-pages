@@ -1,0 +1,65 @@
+{
+  "generated_for_task": "t_e370191d",
+  "generated_at_local": "2026-05-15",
+  "status": "internal_read_only_no_mutation",
+  "sqlite_access": "read-only URI mode=ro&immutable=1 plus PRAGMA query_only=ON",
+  "source_artifacts": [
+    "docs/growth-os/data-hygiene/2026-05-15_growth_os_data_hygiene_cleanup_packet.md",
+    "docs/growth-os/data-hygiene/2026-05-15_growth_os_data_hygiene_cleanup_packet_evidence.json",
+    "docs/reviews/2026-05-15_data_hygiene_consent_gate_review.md",
+    "/Users/jeff/.openclaw/projects/mountain-west-growth-os/data/growth-os.sqlite"
+  ],
+  "duplicate_groups": [
+    {
+      "company": "Great Sky",
+      "ids": ["ai-great-sky", "funded-great-sky"],
+      "duplicate_id": "dup-ai-great-sky-funded-great-sky",
+      "match_reason": "exact company-name match",
+      "confidence": 0.95,
+      "review_status": "pending",
+      "domains": ["raising.fi", "raising.fi"],
+      "opportunities": ["ghl-lead-ai-great-sky", "ghl-lead-funded-great-sky"],
+      "drafts": ["phase6-ai_product_legal_risk_brief-ai-great-sky", "phase6-educational_email-funded-great-sky"],
+      "suppression_checks": ["sup-phase6-ai_product_legal_risk_brief-ai-great-sky", "sup-phase6-educational_email-funded-great-sky"],
+      "approval_items": ["approval-phase6-ai_product_legal_risk_brief-ai-great-sky", "approval-phase6-educational_email-funded-great-sky"],
+      "execution_authorizations": ["auth-phase6-educational_email-funded-great-sky"],
+      "posture": "HOLD; no merge approved; future canonical row TBD by exact approval packet"
+    },
+    {
+      "company": "Pluto Bio",
+      "ids": ["ai-pluto-bio", "funded-pluto-bio"],
+      "duplicate_id": "dup-ai-pluto-bio-funded-pluto-bio",
+      "match_reason": "exact company-name match",
+      "confidence": 0.95,
+      "review_status": "pending",
+      "domains": ["pluto.bio", "pluto.bio"],
+      "opportunities": ["ghl-lead-ai-pluto-bio", "ghl-lead-funded-pluto-bio"],
+      "drafts": ["phase6-ai_product_legal_risk_brief-ai-pluto-bio"],
+      "suppression_checks": ["sup-phase6-ai_product_legal_risk_brief-ai-pluto-bio"],
+      "approval_items": ["approval-phase6-ai_product_legal_risk_brief-ai-pluto-bio"],
+      "execution_authorizations": [],
+      "posture": "HOLD; no merge approved; future canonical row TBD by exact approval packet"
+    },
+    {
+      "company": "Swimlane",
+      "ids": ["ai-swimlane", "funded-swimlane"],
+      "duplicate_id": "dup-ai-swimlane-funded-swimlane",
+      "match_reason": "exact company-name match",
+      "confidence": 0.95,
+      "review_status": "pending",
+      "domains": ["www.builtincolorado.com", "www.builtincolorado.com"],
+      "opportunities": ["ghl-lead-ai-swimlane", "ghl-lead-funded-swimlane"],
+      "drafts": [],
+      "suppression_checks": [],
+      "approval_items": [],
+      "execution_authorizations": [],
+      "posture": "HOLD; no merge approved; future canonical row TBD by exact approval packet; source_evidence table row not found for exact target URL in read-only query"
+    }
+  ],
+  "global_posture": {
+    "merge_approved": false,
+    "mutation_approved": false,
+    "external_action_approved": false,
+    "recommended_next_step": "separate no-mutation exact canonicalization execution draft, then exact Jeff/Whiteford approval before any mutation"
+  }
+}

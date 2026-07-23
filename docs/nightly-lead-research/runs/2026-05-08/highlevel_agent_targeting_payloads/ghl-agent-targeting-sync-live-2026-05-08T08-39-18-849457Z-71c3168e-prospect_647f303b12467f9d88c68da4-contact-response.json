@@ -1,0 +1,55 @@
+{
+  "body": {
+    "contact": {
+      "companyName": "Manifest OS",
+      "country": "US",
+      "createdBy": {
+        "channel": "OAUTH",
+        "source": "INTEGRATION",
+        "sourceId": "69f97a4042f2b054fe684553",
+        "timestamp": "2026-05-08T08:39:19.394Z"
+      },
+      "customFields": [],
+      "dateAdded": "2026-05-08T08:39:19.394Z",
+      "dateUpdated": "2026-05-08T08:39:19.394Z",
+      "deleted": false,
+      "dnd": true,
+      "dndDate": "2026-05-08T08:39:19.395Z",
+      "dndSettings": {
+        "Call": {
+          "message": "Internal agent targeting placeholder; no outreach until Jeff approval.",
+          "status": "active"
+        },
+        "SMS": {
+          "message": "Internal agent targeting placeholder; no outreach until Jeff approval.",
+          "status": "active"
+        },
+        "WhatsApp": {
+          "message": "Internal agent targeting placeholder; no outreach until Jeff approval.",
+          "status": "active"
+        }
+      },
+      "firstName": "Manifest",
+      "firstNameLowerCase": "manifest",
+      "fullNameLowerCase": "manifest os agent targeting",
+      "id": "bEuSTw2QeCCF43JihiW8",
+      "lastName": "OS Agent Targeting",
+      "lastNameLowerCase": "os agent targeting",
+      "lastSessionActivityAt": "2026-05-08T08:39:19.395Z",
+      "lastUpdatedBy": {
+        "channel": "OAUTH",
+        "source": "INTEGRATION",
+        "sourceId": "69f97a4042f2b054fe684553",
+        "timestamp": "2026-05-08T08:39:19.394Z"
+      },
+      "locationId": "tm68WWMrcAa3TqQbEAMa",
+      "source": "Growth OS nightly prospect research - Agent Targeting (prospect_647f303b12467f9d88c68da4)",
+      "tags": [],
+      "type": "lead",
+      "website": "https://manifestos.com/"
+    },
+    "traceId": "fac47f91-25fc-42b5-b94d-7b4f9c1ddd56"
+  },
+  "ok": true,
+  "status": 201
+}

@@ -6,9 +6,13 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "test:leads": "node --experimental-strip-types tests/verify_lead_magnet_api_consent.mjs",
+    "test:lead-static": "node tests/verify_lead_magnet_static_guardrails.mjs",
+    "test:portal-static": "node tests/verify_client_portal_static_guardrails.mjs"
   },
   "dependencies": {
+    "lucide-react": "^1.14.0",
     "next": "16.2.4",
     "react": "19.2.4",
     "react-dom": "19.2.4"

@@ -1,0 +1,134 @@
+{
+  "prospect_id": "cognition-labs-inc-cognition-20260530",
+  "company": {
+    "prospect_id": "prospect_cognition_20260530",
+    "name": "Cognition Labs, Inc. (Cognition)",
+    "domain": "cognition.ai",
+    "website_url": "https://www.cognition.ai/",
+    "location": "San Francisco, CA (inferred); HQ unverified in this run",
+    "state_region": null,
+    "industry": "AI software / autonomous agents / developer tools",
+    "segment": "ai-patent",
+    "primary_offer_lane": "ai-patent",
+    "source_type": "nightly_public_source_research",
+    "source_url": "https://techcrunch.com/2026/05/29/cognitions-scott-wu-says-ai-coding-agents-shouldnt-replace-humans/",
+    "source_note": "Cognition operates Devin, the first autonomous software engineer. The company raised $1B at a $26B valuation (2-year-old startup). Devin now powers 89% of code committed by Cognition engineers and is integrated into Windsurf (acquired competitor). Customers include Citigroup, Mercedes-Benz, Goldman Sachs, US Army, NASA, Lowe's, Rivian, Cisco, Dell, Zillow, Anduril, and Cloudflare (all public-facing via the Cognition website). Launched Cognition for Government (Feb 2026). CEO is Scott Wu (co-founder, age ~24).\nGate status: normalized from parent nightly qwen-local browser-fallback payload; no live enrichment performed by ops staging.",
+    "pipeline_stage": "research_staged",
+    "scores": {
+      "fit_score": 86,
+      "urgency_score": 90,
+      "value_potential_score": 91,
+      "combined_priority_score": 89
+    },
+    "lead_magnet": "AI Patent Strategy Scorecard",
+    "recommended_offer": "AI IP Protection & Patent Strategy",
+    "risk_level": "attorney_review_required",
+    "suppression_status": "consent_gap_no_auto_send",
+    "conflicts_status": "required_before_send",
+    "owner": "qwen-local",
+    "notes": "Research-only nightly candidate. No outreach authorization; attorney review, conflicts, suppression, source-current checks, and Jeff exact approval required before external use.\nUpstream description: Cognition operates Devin, the first autonomous software engineer. The company raised $1B at a $26B valuation (2-year-old startup). Devin now powers 89% of code committed by Cognition engineers and is integrated into Windsurf (acquired competitor). Customers include Citigroup, Mercedes-Benz, Goldman Sachs, US Army, NASA, Lowe's, Rivian, Cisco, Dell, Zillow, Anduril, and Cloudflare (all public-facing via the Cognition website). Launched Cognition for Government (Feb 2026). CEO is Scott Wu (co-founder, age ~24).\nRecent events: Raised $1B at $26B valuation (TechCrunch, Scott Wu says Devin shouldn't replace humans — May 29, 2026); Devin in Windsurf integration (April 15, 2026); Cognition for Government launch (Feb 25, 2026); Devin 2.2 release (Feb 24, 2026); SWE-1.6 research preview (March 1, 2026); Windsurf acquisition earlier in 2026\nIP signals: Autonomous agent architecture (Devin self-driving software development) is a highly novel IP domain; Government deployment (Cognition for Government) increases IP protection urgency for national security applications; Acquired Windsurf — IP integration and licensing implications; Patent strategy increasingly critical for AI agent companies as the autonomous coding space fills with competitors (OpenAI Codex, Claude Code, Cursor, Replit, etc.); 26B valuation puts Cognition in unicorn territory — potential M&A target or IPO pipeline, increasing IP due diligence pressure\nAI compliance signals: Government deployment (Cognition for Government, US Army, Navy) increases AI governance and compliance exposure; Autonomous software development agents operate in high-risk domains (defense, finance, healthcare) — AI compliance frameworks increasingly relevant; Customer base includes regulated industries: financial services (Goldman Sachs, Citigroup), defense (US Army, Anduril), real estate (Zillow, Lowe's), government\nOutreach readiness: research_only; consent basis: no_email_opt_in\nValidation caveat: Ops normalized the parent qwen-local/browser-fallback payload only; no new external enrichment or source-current verification was performed during this staging task."
+  },
+  "contacts": [
+    {
+      "name": "Scott Wu",
+      "title": "CEO & Co-founder",
+      "role_category": "ceo",
+      "email": null,
+      "linkedin_url": null,
+      "phone": null,
+      "source_url": "https://techcrunch.com/2026/05/29/cognitions-scott-wu-says-ai-coding-agents-shouldnt-replace-humans/",
+      "source_type": "public_source_contact_reference",
+      "permission_basis": "public-source research; attorney review required before outreach",
+      "confidence": 75,
+      "suppression_status": "not_checked"
+    }
+  ],
+  "evidence": [
+    {
+      "evidence_id": "evidence_25a988bde458550d96141695",
+      "source_url": "https://techcrunch.com/2026/05/29/cognitions-scott-wu-says-ai-coding-agents-shouldnt-replace-humans/",
+      "accessed_at": "2026-05-30",
+      "source_type": "news",
+      "fact_classification": "public",
+      "evidence_snippet": "Cognition raised $1B; maker of Devin AI coding agent; 89% of code committed by Devin; CEO Scott Wu; acquired Windsurf; Government launch Feb 2026",
+      "supported_fact": "Cognition raised $1B; maker of Devin AI coding agent; 89% of code committed by Devin; CEO Scott Wu; acquired Windsurf; Government launch Feb 2026",
+      "confidence": "high",
+      "corroboration": "parent qwen-local browser-fallback research; source-current refresh required before external use",
+      "safe_for_outreach": "conditional",
+      "safe_fact_for_copy": "Cognition raised $1B; maker of Devin AI coding agent; 89% of code committed by Devin; CEO Scott Wu; acquired Windsurf; Government launch Feb 2026"
+    },
+    {
+      "evidence_id": "evidence_04d754e557e1c7a76c154b42",
+      "source_url": "https://www.cognition.ai/",
+      "accessed_at": "2026-05-30",
+      "source_type": "first_party_website",
+      "fact_classification": "public",
+      "evidence_snippet": "Cognition operates Devin, autonomous software engineer; customers include Citigroup, Mercedes, Goldman Sachs, US Army, NASA, Lowe's, Anduril, Cisco, Dell, Zillow, Rivian, Cloudflare; LinkedIn and X presence",
+      "supported_fact": "Cognition operates Devin, autonomous software engineer; customers include Citigroup, Mercedes, Goldman Sachs, US Army, NASA, Lowe's, Anduril, Cisco, Dell, Zillow, Rivian, Cloudflare; LinkedIn and X presence",
+      "confidence": "high",
+      "corroboration": "parent qwen-local browser-fallback research; source-current refresh required before external use",
+      "safe_for_outreach": "conditional",
+      "safe_fact_for_copy": "Cognition operates Devin, autonomous software engineer; customers include Citigroup, Mercedes, Goldman Sachs, US Army, NASA, Lowe's, Anduril, Cisco, Dell, Zillow, Rivian, Cloudflare; LinkedIn and X presence"
+    }
+  ],
+  "outreach_drafts": [
+    {
+      "draft_type": "educational",
+      "channel": "manual_email_review",
+      "title": "AI Patent Strategy Scorecard attorney-review angle: Cognition Labs, Inc. (Cognition)",
+      "subject": "Attorney-review-only AI Patent Strategy Scorecard angle for Cognition Labs, Inc. (Cognition)",
+      "body": "ATTORNEY REVIEW ONLY — DO NOT SEND/POST.\nTarget: Scott Wu\nProspect: Cognition Labs, Inc. (Cognition)\nInternal hypothesis: Cognition raised $1B; maker of Devin AI coding agent; 89% of code committed by Devin; CEO Scott Wu; acquired Windsurf; Government launch Feb 2026\nSuggested lead magnet: AI Patent Strategy Scorecard\n\nUpstream draft text retained for review context only; it is not approved final copy:\nSubject: Devin's IP posture at $26B valuation\n\nScott,\n\nCognition's $26B valuation and the government deployment of Devin puts your autonomous agent IP in one of the most contested spaces in all of AI. As the line between \"agent\" and \"autonomous software engineer\" blurs, patent claims around self-driving development, recursive agent design, and multi-agent code generation are becoming the primary battleground.\n\nWith Windsurf acquired, US government deployment, and customers spanning defense (US Army, Anduril), finance (Goldman Sachs), and enterprise (Cisco, Dell) — your IP portfolio is both the company's crown jewel and its most scrutinized asset.\n\nWe published an AI Patent Strategy Scorecard that covers 15 critical gaps in autonomous-agent IP portfolios, including:\n- Agent orchestration architecture claims\n- Autonomous planning/execution methodology\n- Multi-agent handoff and context management\n- Licensing considerations for acquired agent products\n\nAt your scale, IP strategy transitions from a defensive exercise to a core valuation driver. Worth reviewing as Devin 2.2 ships.\n\nEducational content only — not legal advice. Attended for attorney review.\n\nRequired before any external use: source-current verification, correct contact validation, conflicts check, suppression/opt-out/prior-touch checks, attorney review, and Jeff exact approval.",
+      "source_facts": [
+        "Cognition raised $1B; maker of Devin AI coding agent; 89% of code committed by Devin; CEO Scott Wu; acquired Windsurf; Government launch Feb 2026",
+        "Cognition operates Devin, autonomous software engineer; customers include Citigroup, Mercedes, Goldman Sachs, US Army, NASA, Lowe's, Anduril, Cisco, Dell, Zillow, Rivian, Cloudflare; LinkedIn and X presence"
+      ],
+      "source_urls": [
+        "https://techcrunch.com/2026/05/29/cognitions-scott-wu-says-ai-coding-agents-shouldnt-replace-humans/",
+        "https://www.cognition.ai/"
+      ],
+      "risk_level": "attorney_review_required",
+      "internal_review_notes": "Not approved for sending or posting. Research-only local staging; requires attorney review, conflicts, suppression, source-current checks, and Jeff exact approval before external use."
+    }
+  ],
+  "validation_gates": {
+    "gate_1_live_source": "PARENT_BROWSER_FALLBACK_PAYLOAD_ONLY",
+    "source_status": "Parent qwen-local used browser fallback after Firecrawl/search/extract quota failures; ops staging did not re-browse or enrich.",
+    "contact_validation": "contacts require source-current validation and enrichment before outreach",
+    "outreach_readiness": "attorney-review-only; no external action authorized"
+  },
+  "consent_gating": {
+    "ops_no_auto_send": true,
+    "consent_basis": "no_email_opt_in",
+    "approval_status": "no-auto-send",
+    "workflow_trigger_tags": [],
+    "suppression_tags": [
+      "newsletter:not-consented"
+    ]
+  },
+  "source_candidate_path": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-30/prospect_candidates.json",
+  "normalized_store_path": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-30/prospect_candidates.normalized_for_store.json",
+  "source_packet_prospect_id": "cognition-labs-inc-cognition-20260530",
+  "local_growth_os_prospect_id": "prospect_cognition_20260530",
+  "task": "prepare_internal_attorney_review_agent_targeting_packet",
+  "guardrails": {
+    "external_action_allowed": false,
+    "approval_required": true,
+    "no_outreach_no_workflows_no_social_no_clio_no_live_sync": true,
+    "required_before_external_use": [
+      "Jeff exact approval",
+      "attorney review",
+      "conflicts check",
+      "suppression/opt-out/prior-touch check",
+      "source-current verification",
+      "contact identity correction/enrichment where flagged"
+    ]
+  },
+  "work_item_id": "work_nightly_agent_targeting_20260530_7dd0c1761715a07ff225932b",
+  "input_path": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-30/agent-targeting-work-items/cognition-labs-inc-cognition.json",
+  "output_path": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-30/agent-targeting-packets/cognition-labs-inc-cognition-agent-targeting-packet.md",
+  "remediation_checklist": [
+    "Attorney review required before external use.",
+    "Conflicts, suppression/opt-out, prior-touch, and source-current checks required before any outreach.",
+    "Do not send, post, tag, trigger workflows, sync live CRM/Supabase, or write Clio without Jeff exact approval."
+  ]
+}

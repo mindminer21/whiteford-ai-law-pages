@@ -1,0 +1,36 @@
+{
+  "run_label": "2026-05-09",
+  "validated_at": "2026-05-09T08:43:13+00:00",
+  "input_packet": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-09/prospect_candidates.json",
+  "schema_validation": "passed via prospect_research_store.py --dry-run after normalization from prospects[] to candidates[]; candidates count is 0 because Gate 1 live-source extraction failed",
+  "normalized_payload": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-09/prospect_candidates.normalized_for_store.json",
+  "dry_run_path": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-09/store_dry_run.json",
+  "store_output_path": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-09/store_output.json",
+  "database": "/Users/jeff/.openclaw/projects/mountain-west-growth-os/data/growth-os.sqlite",
+  "source_gate_status": "blocked",
+  "source_gate_blocker": "web_search and web_extract both returned 'Payment Required' across all calls. No prospect staging possible without live-source extraction.",
+  "tool_limitations": {
+    "web_search": "FAILED \u2014 Payment Required: Insufficient credits on firecrawl.dev (3 attempts) ",
+    "web_extract": "FAILED \u2014 Payment Required: Insufficient credits on firecrawl.dev (2 attempts)",
+    "curl_probe": "PARTIALLY_AVAILABLE \u2014 confirmed whiteford.com 200, but no prospect-level data returned",
+    "qmd_rag": "NOT_BUILD \u2014 better-sqlite3 ABI mismatch with newer Node; index needs rebuild",
+    "business_dev_rag": "NOT_BUILD \u2014 index file missing"
+  },
+  "store_counts": {},
+  "staged_summary": [],
+  "work_items_inserted": [],
+  "semantic_validation_warnings": [
+    {
+      "severity": "blocking",
+      "company": null,
+      "issue": "No prospects were available to validate or stage because web_search/web_extract failed with Firecrawl Payment Required; no source evidence, contacts, drafts, sync records, or agent-targeting work items were created."
+    }
+  ],
+  "safety_status": "local validation/staging no-op only; no HighLevel/Supabase/Apollo/Clio/email/LinkedIn/workflow/public actions performed",
+  "next_actions": [
+    "Renew or configure firecrawl.dev credits to restore web_search and web_extract",
+    "If sources are restored, run against all four lanes (AI Patent, AI Compliance, Tech GC, M&A Readiness)",
+    "Validate each candidate against Gates 2-7 before staging",
+    "Write full evidence rows and lead_magnet_fit_lane/tier for each prospect"
+  ]
+}

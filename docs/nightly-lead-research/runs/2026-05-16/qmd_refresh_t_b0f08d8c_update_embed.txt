@@ -1,0 +1,26 @@
+COMMAND: qmd update
+Updating 2 collection(s)...
+
+[1/2] whiteford-ai-law-pages (**/*.md)
+Collection: /Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages (**/*.md)
+
+Indexed: 13 new, 1 updated, 381 unchanged, 0 removed
+Cleaned up 1 orphaned content hash(es)
+
+[2/2] business-development-books (**/*.md)
+Collection: /Users/jeff/.hermes/knowledge/business-development/qmd-export (**/*.md)
+
+Indexed: 0 new, 0 updated, 6 unchanged, 0 removed
+
+✓ All collections updated.
+
+Run 'qmd embed' to update embeddings (14 unique hashes need vectors)
+
+COMMAND: qmd embed --max-docs-per-batch 50 --max-batch-mb 10
+Model: hf:ggml-org/embeddinggemma-300M-GGUF/embeddinggemma-300M-Q8_0.gguf
+
+Batch: 50 docs / 10.0 MB
+
+██████████████████████████████ 100%                                    
+
+✓ Done! Embedded 170 chunks from 14 documents in 4s

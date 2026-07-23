@@ -1,0 +1,64 @@
+{
+  "run_label": "2026-05-06",
+  "validated_at": "2026-05-07T04:52:04+00:00",
+  "schema_validation": "passed via prospect_research_store.py --dry-run",
+  "store_output_path": "/Users/jeff/Documents/Codex/2026-05-05/i-want-to-install-hermes-agent/whiteford-ai-law-pages/docs/nightly-lead-research/runs/2026-05-06/store_output.json",
+  "database": "/Users/jeff/.openclaw/projects/mountain-west-growth-os/data/growth-os.sqlite",
+  "staged_summary": [
+    {
+      "company": "Rigetti Computing",
+      "prospect_id": "prospect_d249372d03e9b2df1dd67726",
+      "domain": "rigetti.com",
+      "stage_status": "staged",
+      "contacts": 2,
+      "work_item_id": "work_nightly_agent_targeting_a2124de0cc59fed06b53",
+      "work_item_inserted": true
+    },
+    {
+      "company": "Nexar",
+      "prospect_id": "prospect_c542c95f73995e2dbd2a15c3",
+      "domain": "nexar.com",
+      "stage_status": "staged",
+      "contacts": 2,
+      "work_item_id": "work_nightly_agent_targeting_cfc6d7ea6fc45a6e2ffd",
+      "work_item_inserted": true
+    },
+    {
+      "company": "Kodiak Robotics",
+      "prospect_id": "prospect_c6c776b4596056a65d055c7c",
+      "domain": "kodiak.ai",
+      "stage_status": "staged",
+      "contacts": 2,
+      "work_item_id": "work_nightly_agent_targeting_342cdb2db5260e24bc78",
+      "work_item_inserted": true
+    }
+  ],
+  "semantic_validation_warnings": [
+    {
+      "severity": "high",
+      "company": "Rigetti Computing",
+      "issue": "Candidate contact and leadership names do not match current extracted Rigetti about page: extracted page lists Dr. Subodh Kulkarni as President/CEO, David Rivas as CTO, and Jeffrey Bertelsen as CFO; candidate listed \"Sub cool\" and Rob Mortensen. Treat contacts as unverified before sync/outreach."
+    },
+    {
+      "severity": "high",
+      "company": "Nexar",
+      "issue": "Candidate uses nexar.com but describes AI fleet/computer-vision/dash-cam style business. Extracted nexar.com is an electronics/Altium ecosystem API and supply-chain platform; getnexar.com is the dash-cam brand. Treat company/domain/offer mapping as unresolved before sync/outreach."
+    },
+    {
+      "severity": "high",
+      "company": "Kodiak Robotics",
+      "issue": "Candidate contacts Tim Heister/Alex Vins did not match extracted Kodiak company page, which identifies Don Burnette as Founder and CEO. Candidate source URL https://www.kodiak.ai/about returned a moved/not-found page; current pages are kodiak.ai/company and kodiak.ai/technology."
+    },
+    {
+      "severity": "medium",
+      "company": "Payload summary",
+      "issue": "Payload summary says ai-patent count is 3 and total_contacts_sourced is 5, but records contain 2 ai-patent plus 1 ai-compliance candidates and the store inserted 6 contacts due duplicate Nexar contact entries."
+    }
+  ],
+  "safety_status": "local staging only; external_action_allowed=0 on work items and outreach drafts; suppression/conflicts remain not_checked/required_before_send",
+  "work_items_inserted": [
+    "work_nightly_agent_targeting_a2124de0cc59fed06b53",
+    "work_nightly_agent_targeting_cfc6d7ea6fc45a6e2ffd",
+    "work_nightly_agent_targeting_342cdb2db5260e24bc78"
+  ]
+}

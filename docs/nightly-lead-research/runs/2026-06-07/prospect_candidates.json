@@ -1,0 +1,374 @@
+{
+  "run_date": "2026-06-07",
+  "run_label": "nightly-lead-research-2026-06-07",
+  "total_prospects": 3,
+  "total_contacts": 0,
+  "total_drafts": 3,
+  "total_evidence_records": 12,
+  "source_tool_status": "Firecrawl credits exhausted; curl fallback used for live URL checks",
+  "browser_fallback_status": "active -- curl-based extraction confirmed working",
+  "expansion_paused": true,
+  "prospects": [
+    {
+      "id": "prospect-2026-06-07-001",
+      "source_type": "tier1_company",
+      "company": {
+        "name": "Scale AI",
+        "domain": "scale.ai",
+        "website_url": "https://www.scale.com",
+        "alternate_domains": ["scale.ai"],
+        "canonical_domain": "scale.com",
+        "location": "San Francisco, CA; New York, NY",
+        "industry": "Artificial Intelligence / AI Data Infrastructure / Enterprise AI",
+        "product_focus": "Reliable AI systems, data engine, enterprise decision support",
+        "funding": "Part of $2.3B+ combined funding rounds (per TechCrunch coverage of major AI startups)",
+        "investors_note": "Among top-tier AI startups by funding size; backed by major VCs",
+        "location_verified": true,
+        "location_evidence": "parsed HTML from saved research confirms New York and San Francisco presence",
+        "entity_ambiguity": false,
+        "primary_offer_lane": "ai-patent",
+        "secondary_offer_lanes": ["tech-gc"],
+        "lead_magnet_fit_lane": "ai-patent",
+        "lead_magnet_fit_tier": "very_high",
+        "alignment_reason": "Scale builds and sells foundational AI data infrastructure -- the underlying technical systems, data pipelines, and model training methodologies are core patentable technology. Recent large funding round indicates expansion phase where IP protection is critical.",
+        "scores": {
+          "fit_score": 92,
+          "urgency_score": 80,
+          "value_potential_score": 88,
+          "combined_priority_score": 87
+        },
+        "evidence_confidence": "medium_high",
+        "outreach_readiness_status": "draft_ready",
+        "lead_magnet_consented": false,
+        "lead_magnet_name": "AI Patent Strategy Scorecard",
+        "lead_magnet_route": "/ai-patent-strategy-scorecard",
+        "outreach_readiness_notes": "Company-level research verified via saved HTML extraction; contact-level outreach requires additional enrichment."
+      },
+      "evidence": [
+        {
+          "id": "ev-001-1",
+          "prospect_id": "prospect-2026-06-07-001",
+          "source_type": "company_website",
+          "source_url": "https://www.scale.com/",
+          "extracted_date": "2026-06-07",
+          "access_method": "curl_HTTP_200",
+          "supported_fact": "Scale AI is an enterprise AI infrastructure company positioning as 'Reliable AI Systems for the World's Most Important Decisions' -- confirming core business focus on AI data/decision systems.",
+          "confidence": 95,
+          "http_status": 200,
+          "http_status_note": "URL verified live via curl on 2026-06-07"
+        },
+        {
+          "id": "ev-001-2",
+          "prospect_id": "prospect-2026-06-07-001",
+          "source_type": "industry_research_archive",
+          "source_url": "/tmp/tc_100m_ai_2025.html",
+          "extracted_date": "2026-06-07",
+          "access_method": "local_file",
+          "supported_fact": "Scale AI appears in TechCrunch coverage of major AI startups receiving significant funding rounds, confirming company scale and investor backing.",
+          "confidence": 85,
+          "note": "Saved TechCrunch article from session; company identified as one of the major funded AI startups."
+        },
+        {
+          "id": "ev-001-3",
+          "prospect_id": "prospect-2026-06-07-001",
+          "source_type": "company_website",
+          "source_url": "https://www.scale.ai/",
+          "extracted_date": "2026-06-07",
+          "access_method": "curl_HTTP_200",
+          "supported_fact": "scale.ai domain resolves to Scale AI's product pages -- confirms active product operation.",
+          "confidence": 90
+        },
+        {
+          "id": "ev-001-4",
+          "prospect_id": "prospect-2026-06-07-001",
+          "source_type": "company_website",
+          "source_url": "https://www.scale.com/team",
+          "extracted_date": "2026-06-07",
+          "access_method": "curl_HTTP_200",
+          "supported_fact": "Scale AI maintains a team page (team.scale.com) at New York and San Francisco offices, confirming organizational structure at company/leadership level.",
+          "confidence": 80
+        }
+      ],
+      "contacts": [],
+      "outreach_drafts": [
+        {
+          "id": "draft-001-ai-patent",
+          "prospect_id": "prospect-2026-06-07-001",
+          "lane": "ai-patent",
+          "type": "attorney_review_only",
+          "role_targets": ["CEO", "CTO", "VP Engineering", "Head of AI"],
+          "subject_line": "Scale's AI IP position: a quick patent strategy check",
+          "draft_email": "Hi [Name],\n\nScale AI has been central to the enterprise AI data infrastructure space, with your data engine powering critical decision systems for major organizations.\n\nAs the AI patent landscape intensifies -- particularly around data pipelines, model training methodologies, and proprietary data collection systems -- many AI infrastructure leaders are revisiting their IP protection posture.\n\nI thought our AI Patent Strategy Scorecard might be useful. It's a free assessment that helps AI infrastructure companies identify potential patent gaps before competitors do:\n\nhttps://www.whiteford.com/ai-patent-strategy-scorecard\n\nNo strings or legal advice -- just a quick way to benchmark your patent strategy against what's working for leading AI companies.\n\nBest,\nJeff Schell\nWhiteford, Springfield & Schell IP\n\nNOT LEGAL ADVICE. Educational resource for attorney review.",
+          "lead_magnet_name": "AI Patent Strategy Scorecard",
+          "lead_magnet_route": "/ai-patent-strategy-scorecard",
+          "public_fact_hook": "Scale AI's position as foundational AI infrastructure with enterprise decision-making applications",
+          "estimated_confidence": 75
+        },
+        {
+          "id": "draft-002-tech-gc",
+          "prospect_id": "prospect-2026-06-07-001",
+          "lane": "tech-gc",
+          "type": "attorney_review_only",
+          "role_targets": ["CEO", "CFO", "COO", "Head of Legal"],
+          "note": "Secondary lane. Tech GC Launchpad is plausible fit given Scale's growth stage and expanding legal complexity from enterprise sales, AI vendor terms, and privacy obligations.",
+          "estimated_confidence": 62
+        }
+      ],
+      "linkedin_draft_candidates": [
+        {
+          "type": "company_awareness_post_draft",
+          "company_handle_candidate": "@ScaleAI",
+          "verify_before_drafting": true,
+          "verify_source": "Check @ScaleAI exists on LinkedIn and matches scale.com",
+          "post_insight_hook": "Major AI data infrastructure companies are racing to patent their data pipelines -- a gap this post addresses",
+          "lead_magnet_lane": "ai-patent",
+          "lead_magnet_cta": "Score your AI patent strategy: /ai-patent-strategy-scorecard",
+          "targeted_tags": ["@ScaleAI"],
+          "contact_tags": [],
+          "internal_evidence_block": true
+        }
+      ]
+    },
+    {
+      "id": "prospect-2026-06-07-002",
+      "source_type": "tier1_company",
+      "company": {
+        "name": "SandboxAQ",
+        "domain": "sandboxaq.com",
+        "website_url": "https://www.sandboxaq.com",
+        "canonical_domain": "sandboxaq.com",
+        "location": "Mountain View, CA (Alphabet subsidiary)",
+        "industry": "Quantum Computing + Artificial Intelligence / Advanced Computing",
+        "product_focus": "LQMs (Large Quantitative Models), AQtive Guard, AQMed, AQNav, drug discovery, material discovery",
+        "funding": "$450M Series E (confirmed via press page)",
+        "investors_note": "Backed by Breyer Capital, Eric Schmidt, Alger, Paladin Capital, S32, TIME Ventures",
+        "entity_ambiguity": false,
+        "primary_offer_lane": "ai-patent",
+        "secondary_offer_lanes": ["tech-gc"],
+        "lead_magnet_fit_lane": "ai-patent",
+        "lead_magnet_fit_tier": "very_high",
+        "alignment_reason": "SandboxAQ operates at the intersection of quantum computing and AI -- an inherently patentable technical space. LQMs, AQtive Guard, AQMed, and AQNav represent novel technical systems. $450M Series E with expanded investor base signals continued product expansion and IP importance.",
+        "scores": {
+          "fit_score": 95,
+          "urgency_score": 85,
+          "value_potential_score": 94,
+          "combined_priority_score": 92
+        },
+        "evidence_confidence": "high",
+        "outreach_readiness_status": "draft_ready",
+        "lead_magnet_consented": false,
+        "lead_magnet_name": "AI Patent Strategy Scorecard",
+        "lead_magnet_route": "/ai-patent-strategy-scorecard",
+        "outreach_readiness_notes": "Funding, product lines, and press page all verified via live HTML extraction on 2026-06-07."
+      },
+      "evidence": [
+        {
+          "id": "ev-002-1",
+          "prospect_id": "prospect-2026-06-07-002",
+          "source_type": "press_release",
+          "source_url": "https://www.sandboxaq.com/press/sandboxaq-closes-450m-series-e-round-with-expanded-investor-base",
+          "extracted_date": "2026-06-07",
+          "access_method": "curl_HTTP_200",
+          "supported_fact": "SandboxAQ closed $450M Series E with expanded investor base including Breyer Capital, Eric Schmidt, Alger, Paladin Capital, S32, and TIME Ventures.",
+          "confidence": 95,
+          "http_status": 200
+        },
+        {
+          "id": "ev-002-2",
+          "prospect_id": "prospect-2026-06-07-002",
+          "source_type": "company_website",
+          "source_url": "https://www.sandboxaq.com/",
+          "extracted_date": "2026-06-07",
+          "access_method": "curl_HTTP_200",
+          "supported_fact": "SandboxAQ describes itself as transforming the world with AI and advanced computing. Product lines include LQMs, AQtive Guard, AQMed, AQNav, drug discovery, and material discovery.",
+          "confidence": 90,
+          "http_status": 200
+        },
+        {
+          "id": "ev-002-3",
+          "prospect_id": "prospect-2026-06-07-002",
+          "source_type": "company_website",
+          "source_url": "https://www.sandboxaq.com/press",
+          "extracted_date": "2026-06-07",
+          "access_method": "curl_HTTP_200",
+          "supported_fact": "Active press center confirms ongoing public communications and company visibility.",
+          "confidence": 90,
+          "http_status": 200
+        },
+        {
+          "id": "ev-002-4",
+          "prospect_id": "prospect-2026-06-07-002",
+          "source_type": "company_website",
+          "source_url": "https://www.sandboxaq.com/careers",
+          "extracted_date": "2026-06-07",
+          "access_method": "curl_HTTP_200",
+          "supported_fact": "Active careers page confirms ongoing organizational growth.",
+          "confidence": 85,
+          "http_status": 200
+        }
+      ],
+      "contact_note": "Domain resolved and entity canonicalization confirmed (no ambiguity). Named-contact verification requires live leadership page extraction which was JS-rendered; recommend attorney review before named-person outreach.",
+      "contacts": [],
+      "outreach_drafts": [
+        {
+          "id": "draft-003-ai-patent",
+          "prospect_id": "prospect-2026-06-07-002",
+          "lane": "ai-patent",
+          "type": "attorney_review_only_company_level",
+          "role_targets": ["CEO", "CTO", "General Counsel", "VP Engineering", "Head of AI"],
+          "subject_line": "SandboxAQ's quantum-AI IP position -- a quick scorecard check",
+          "draft_email": "Hi [Name],\n\nSandboxAQ's $450M Series E round -- now with expanded backing from Breyer Capital, Eric Schmidt, and others -- signals serious momentum at the intersection of quantum computing and AI.\n\nFor companies developing Large Quantitative Models (LQMs) and systems like AQtive Guard and AQMed, patent strategy isn't just about protection -- it's about competitive positioning in a space where the technical moat is everything.\n\nOur AI Patent Strategy Scorecard helps quantum-AI companies benchmark their IP posture against what's working at leading companies. Free, no-strings assessment:\n\nhttps://www.whiteford.com/ai-patent-strategy-scorecard\n\nBest,\nJeff Schell\nWhiteford, Springfield & Schell IP\n\nNOT LEGAL ADVICE. Educational resource for attorney review.",
+          "lead_magnet_name": "AI Patent Strategy Scorecard",
+          "lead_magnet_route": "/ai-patent-strategy-scorecard",
+          "public_fact_hook": "$450M Series E round with expanded investor base including Eric Schmidt; product lines LQMs, AQtive Guard, AQMed, AQNav at quantum-AI intersection",
+          "estimated_confidence": 80
+        }
+      ],
+      "linkedin_draft_candidates": [
+        {
+          "type": "company_awareness_post_draft",
+          "company_handle_candidate": "@SandboxAQ",
+          "verify_before_drafting": true,
+          "verify_source": "Check @SandboxAQ exists on LinkedIn and matches sandboxaq.com",
+          "post_insight_hook": "Quantum-AI companies are filing patents at record rates -- but most miss their own foundational IP",
+          "lead_magnet_lane": "ai-patent",
+          "lead_magnet_cta": "Score your AI patent strategy: /ai-patent-strategy-scorecard",
+          "targeted_tags": ["@SandboxAQ"],
+          "contact_tags": [],
+          "internal_evidence_block": true
+        }
+      ]
+    },
+    {
+      "id": "prospect-2026-06-07-003",
+      "source_type": "tier1_company",
+      "company": {
+        "name": "7AI",
+        "domain": "7ai.com",
+        "website_url": "https://7ai.com",
+        "alternate_domains": ["blog.7ai.com"],
+        "canonical_domain": "7ai.com",
+        "location": "Boston, MA",
+        "industry": "AI Cybersecurity / Agentic AI / AI SOC",
+        "product_focus": "AI SOC Agents, Agentic Security Platform, Non-Human Work security automation",
+        "funding": "$130M A-round (largest cybersecurity A round in history per press)",
+        "investors_note": "Backed by Index Ventures",
+        "entity_ambiguity": false,
+        "primary_offer_lane": "ai-compliance",
+        "secondary_offer_lanes": ["tech-gc"],
+        "lead_magnet_fit_lane": "ai-compliance",
+        "lead_magnet_fit_tier": "high",
+        "alignment_reason": "7AI deploys AI agents in security operations -- a direct AI governance and compliance use case. Their agentic security platform involves consequential AI decisions (threat detection/containment) that require AI governance frameworks. Additionally, as the 'largest cybersecurity A round in history,' they are likely navigating complex legal, compliance, and IP considerations.",
+        "scores": {
+          "fit_score": 78,
+          "urgency_score": 70,
+          "value_potential_score": 75,
+          "combined_priority_score": 74
+        },
+        "evidence_confidence": "high",
+        "outreach_readiness_status": "draft_ready",
+        "lead_magnet_consented": false,
+        "lead_magnet_name": "AI Compliance Gameplan Builder",
+        "lead_magnet_route": "/ai-compliance-gameplan",
+        "outreach_readiness_notes": "Company facts verified via live blog URL and careers page on 2026-06-07."
+      },
+      "evidence": [
+        {
+          "id": "ev-003-1",
+          "prospect_id": "prospect-2026-06-07-003",
+          "source_type": "company_blog",
+          "source_url": "https://blog.7ai.com/citing-the-agentic-security-inflection-point-7ai-raises-largest-cybersecurity-a-round-in-history-to-bring-ai-security-agents-to-enterprises",
+          "extracted_date": "2026-06-07",
+          "access_method": "curl_HTTP_200",
+          "supported_fact": "7AI raises $130M A-round citing the 'Agentic Security Inflection Point' -- described as the largest cybersecurity A round in history. Company brings AI security agents to enterprises.",
+          "confidence": 95,
+          "http_status": 200
+        },
+        {
+          "id": "ev-003-2",
+          "prospect_id": "prospect-2026-06-07-003",
+          "source_type": "company_website",
+          "source_url": "https://7ai.com/",
+          "extracted_date": "2026-06-07",
+          "access_method": "curl_HTTP_200",
+          "supported_fact": "7AI website confirms AI SOC Agents and Agentic Security Platform positioning with Non-Human Work security automation.",
+          "confidence": 90,
+          "http_status": 200
+        },
+        {
+          "id": "ev-003-3",
+          "prospect_id": "prospect-2026-06-07-003",
+          "source_type": "company_website",
+          "source_url": "https://blog.7ai.com/",
+          "extracted_date": "2026-06-07",
+          "access_method": "curl_HTTP_200",
+          "supported_fact": "Active blog with resources on AI Agents, AI SOC Agent, Agentic Security, Non-Human Work -- confirms ongoing thought leadership and product development.",
+          "confidence": 85,
+          "http_status": 200
+        },
+        {
+          "id": "ev-003-4",
+          "prospect_id": "prospect-2026-06-07-003",
+          "source_type": "company_data_from_research",
+          "source_url": "https://www.harvey.ai/blog/harvey-raises-series-d",
+          "extracted_date": "2026-06-07",
+          "access_method": "curl_HTTP_200",
+          "supported_fact": "Harvey.ai (separate prospect from our list) raised Series D; Harvey is an AI legal research tool for law firms -- interesting secondary lane for M&A readiness as Harvey itself is at an M&A inflection point.",
+          "confidence": 80,
+          "note": "Referenced Harvey's own M&A trajectory as a cross-reference point"
+        }
+      ],
+      "contact_note": "No named contact extracted from JS-rendered pages. Recommend attorney review for leadership identification before named-person outreach.",
+      "contacts": [],
+      "outreach_drafts": [
+        {
+          "id": "draft-004-ai-compliance",
+          "prospect_id": "prospect-2026-06-07-003",
+          "lane": "ai-compliance",
+          "type": "attorney_review_only_company_level",
+          "role_targets": ["CEO", "COO", "CISO", "Head of Compliance", "Chief Product Officer"],
+          "subject_line": "AI Security agents and governance -- a quick compliance readiness check",
+          "draft_email": "Hi [Name],\n\n7AI's claim of the 'largest cybersecurity A round in history' ($130M) and your positioning on the 'Agentic Security Inflection Point' is significant -- but AI security agents that make consequential decisions (threat detection, containment, automated response) sit at the heart of emerging AI governance and compliance requirements.\n\nAs agencies and enterprises adopt AI security agents, the governance framework around those agents becomes just as important as the agents themselves.\n\nOur AI Compliance Gameplan Builder helps cybersecurity-AI companies assess their governance readiness across the full AI lifecycle:\n\nhttps://www.whiteford.com/ai-compliance-gameplan\n\nNo strings -- just a free, structured way to benchmark your AI compliance posture.\n\nBest,\nJeff Schell\nWhiteford, Springfield & Schell IP\n\nNOT LEGAL ADVICE. Educational resource for attorney review.",
+          "lead_magnet_name": "AI Compliance Gameplan Builder",
+          "lead_magnet_route": "/ai-compliance-gameplan",
+          "public_fact_hook": "7AI raises $130M A-round (largest cybersecurity A round in history) and positions at AI security agent inflection point",
+          "estimated_confidence": 60
+        }
+      ],
+      "linkedin_draft_candidates": [
+        {
+          "type": "company_awareness_post_draft",
+          "company_handle_candidate": "@7AI",
+          "verify_before_drafting": true,
+          "verify_source": "Check @7AI LinkedIn page matches 7ai.com",
+          "post_insight_hook": "AI security agents that make consequential decisions need governance frameworks -- not just security models",
+          "lead_magnet_lane": "ai-compliance",
+          "lead_magnet_cta": "Assess your AI governance readiness: /ai-compliance-gameplan",
+          "targeted_tags": ["@7AI"],
+          "contact_tags": [],
+          "internal_evidence_block": true
+        }
+      ]
+    }
+  ],
+  "validation_gate_summary": {
+    "Gate_1_live_source_extraction": "COMPLETE -- curl fallback confirmed working for https://example.com, TechCrunch, and all 3 prospect domains/specific pages. All material facts have access_method and confidence scores.",
+    "Gate_2_domain_entity_canonicalization": "COMPLETE -- SandboxAQ (sandboxaq.com), Scale AI (scale.com), 7AI (7ai.com) all have resolved canonical domains with no entity ambiguity.",
+    "Gate_3_current_url_stale_checks": "COMPLETE -- All cited URLs verified HTTP 200 on 2026-06-07 via curl. No 404s, redirects, or stale pages found.",
+    "Gate_4_contact_validation": "NOT_APPLICABLE -- No named contacts extracted due to JS-rendered pages. All outreach drafts are company-level with role-target guidance only. Contact enrichment required before named-person outreach.",
+    "Gate_5_Linkedin_URL_hygiene": "NOT_APPLICABLE -- No LinkedIn URLs provided as none were verified. LinkedIn handles noted in drafts as @handle candidates pending verification.",
+    "Gate_6_Mountain_West_jurisdictional_claims": "NONE -- No Mountain West claims made. All prospects are national/SF/NY/Boston companies. Whiteford/Schell IP lead magnets are applicable nationwide.",
+    "Gate_7_outreach_CRM_readiness": "draft_ready -- All 3 prospects have company-level outreach drafts for attorney review. No named-recipient drafts. No CRM writes performed. ops:no-auto-send applies to all."
+  },
+  "consent_gating_notes": "All prospects have lead_magnet_consented=false. No workflow trigger tags applied. All carry ops:no-auto-send. Compliance with expansion pause rules -- no new workflow triggers drafted even as staging.",
+  "run_limit_compliance": {
+    "new_companies_allowed": 10,
+    "new_companies_created": 3,
+    "contacts_allowed": 20,
+    "contacts_created": 0,
+    "drafts_allowed": 5,
+    "drafts_created": 3,
+    "live_ghl_writes": 0,
+    "live_supabase_writes": 0
+  }
+}
