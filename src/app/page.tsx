@@ -3,11 +3,11 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Interactive Legal Readiness Tools",
   description:
-    "Four marketing-only lead magnet previews from Schell IP and Whiteford for AI risk, patent moat, AI governance readiness, and patent-forward outside counsel.",
+    "Interactive legal readiness tools from Schell IP and Whiteford for AI risk, patent moat, AI governance readiness, outside counsel, and the Patent Moat book companion worksheets.",
   openGraph: {
     title: "Interactive Legal Readiness Tools",
     description:
-      "Four marketing-only lead magnet previews from Schell IP and Whiteford for AI risk, patent moat, AI governance readiness, and patent-forward outside counsel.",
+      "Interactive legal readiness tools from Schell IP and Whiteford for AI risk, patent moat, AI governance readiness, outside counsel, and the Patent Moat book companion worksheets.",
     url: "/",
     images: ["/logos/whiteford-white-on-navy-full.png"],
   },
@@ -66,6 +66,58 @@ const tools = [
     visual: "playbook",
     action: "Open the playbook",
   },
+  {
+    href: "/disclosure-self-audit",
+    meta: "9 questions · The Patent Moat, Ch. 2",
+    title: (
+      <>
+        The Disclosure <em>Self-Audit</em>
+      </>
+    ),
+    description:
+      "Every launch, demo, and sale starts a patent clock. Find out which clocks are running and what is still protectable.",
+    visual: "disclosure",
+    action: "Open the audit",
+  },
+  {
+    href: "/chain-of-title-audit",
+    meta: "10 questions · The Patent Moat, Ch. 3",
+    title: (
+      <>
+        The Chain-of-Title <em>Audit</em>
+      </>
+    ),
+    description:
+      "Inventions start out owned by the human inventor. Check every ownership link between the people who invented and the company that needs to own.",
+    visual: "chain",
+    action: "Open the audit",
+  },
+  {
+    href: "/routing-matrix",
+    meta: "6 questions · The Patent Moat, Ch. 4",
+    title: (
+      <>
+        The Routing <em>Matrix</em>
+      </>
+    ),
+    description:
+      "Patent, trade secret, publish, or nothing. Two questions route every piece of what you have built - and score how consciously it happened.",
+    visual: "routing",
+    action: "Open the matrix",
+  },
+  {
+    href: "/ip-data-room-checklist",
+    meta: "10 questions · The Patent Moat, Ch. 7",
+    title: (
+      <>
+        The IP Data Room <em>Checklist</em>
+      </>
+    ),
+    description:
+      "The diligence checklist is not a secret. Score how much of the standard IP diligence exam your data room could pass today.",
+    visual: "dataroom",
+    action: "Open the checklist",
+  },
 ] as const;
 
 function ArrowIcon() {
@@ -118,6 +170,124 @@ function PreviewVisual({ type }: { type: (typeof tools)[number]["visual"] }) {
         <text x="18" y="124" fill="#154E73" fontSize="10" fontFamily="var(--mono)">
           2 STRUCTURE · 4 DRAFT · 3 GAP
         </text>
+      </svg>
+    );
+  }
+
+  if (type === "disclosure") {
+    return (
+      <svg viewBox="0 0 320 132" role="img" aria-label="Disclosure timeline preview">
+        <line x1="24" y1="66" x2="296" y2="66" stroke="rgba(0,55,86,0.25)" strokeWidth="2" />
+        {[64, 128, 192, 256].map((x, index) => (
+          <circle
+            key={x}
+            cx={x}
+            cy="66"
+            r={index === 2 ? 10 : 6}
+            fill={index === 2 ? "rgba(177,75,61,0.2)" : "rgba(99,45,221,0.18)"}
+            stroke={index === 2 ? "#b14b3d" : "#4a1fb0"}
+            strokeWidth="2"
+          />
+        ))}
+        <text x="24" y="112" fill="#154E73" fontSize="10" fontFamily="var(--mono)">
+          BLOG · DEMO DAY · PILOT · FILING DEADLINE
+        </text>
+      </svg>
+    );
+  }
+
+  if (type === "chain") {
+    return (
+      <svg viewBox="0 0 320 132" role="img" aria-label="Chain of title preview">
+        {[24, 96, 168, 240].map((x, index) => (
+          <rect
+            key={x}
+            x={x}
+            y="46"
+            width="56"
+            height="40"
+            rx="20"
+            fill="none"
+            stroke={index === 2 ? "#b14b3d" : "#4a1fb0"}
+            strokeWidth="2"
+            strokeDasharray={index === 2 ? "5 5" : undefined}
+          />
+        ))}
+        <text x="24" y="112" fill="#154E73" fontSize="10" fontFamily="var(--mono)">
+          INVENTOR → ASSIGNMENT → RECORDS → COMPANY
+        </text>
+      </svg>
+    );
+  }
+
+  if (type === "routing") {
+    return (
+      <svg viewBox="0 0 320 132" role="img" aria-label="Routing matrix preview">
+        {[
+          { x: 60, y: 8, label: "PATENT", strong: true },
+          { x: 164, y: 8, label: "SECRET", strong: false },
+          { x: 60, y: 62, label: "PUBLISH", strong: false },
+          { x: 164, y: 62, label: "NOTHING", strong: false },
+        ].map((cell) => (
+          <g key={cell.label}>
+            <rect
+              x={cell.x}
+              y={cell.y}
+              width="98"
+              height="48"
+              fill={cell.strong ? "rgba(99,45,221,0.18)" : "none"}
+              stroke={cell.strong ? "#4a1fb0" : "rgba(0,55,86,0.25)"}
+              strokeWidth={cell.strong ? 2 : 1}
+            />
+            <text
+              x={cell.x + 49}
+              y={cell.y + 29}
+              textAnchor="middle"
+              fill="#154E73"
+              fontSize="10"
+              fontFamily="var(--mono)"
+            >
+              {cell.label}
+            </text>
+          </g>
+        ))}
+        <text x="60" y="126" fill="#154E73" fontSize="10" fontFamily="var(--mono)">
+          ONE ROUTE PER PIECE
+        </text>
+      </svg>
+    );
+  }
+
+  if (type === "dataroom") {
+    return (
+      <svg viewBox="0 0 320 132" role="img" aria-label="IP data room checklist preview">
+        {[0, 1, 2, 3].map((row) => (
+          <g key={row}>
+            <rect
+              x="24"
+              y={10 + row * 28}
+              width="18"
+              height="18"
+              fill={row < 3 ? "rgba(79,140,91,0.16)" : "rgba(177,75,61,0.14)"}
+              stroke={row < 3 ? "#4f8c5b" : "#b14b3d"}
+            />
+            {row < 3 ? (
+              <path
+                d={`M28 ${19 + row * 28}l4 4 7 -8`}
+                fill="none"
+                stroke="#4f8c5b"
+                strokeWidth="2"
+              />
+            ) : null}
+            <rect
+              x="58"
+              y={14 + row * 28}
+              width={row < 3 ? 220 : 150}
+              height="10"
+              fill="rgba(0,55,86,0.12)"
+            />
+          </g>
+        ))}
       </svg>
     );
   }
@@ -179,12 +349,13 @@ export default function Home() {
         <div className="container">
           <div className="directory-eyebrow">Whiteford · Schell IP learning tools</div>
           <h1>
-            Four practical legal readiness tools for <em>AI-era technology companies.</em>
+            Practical legal readiness tools for <em>AI-era technology companies.</em>
           </h1>
           <p>
             Preview the marketing surface for the AI risk, patent moat, governance, and outside
-            counsel lead magnets. The approved tools now render inline results and route follow-up
-            through HighLevel.
+            counsel lead magnets, plus the companion worksheets from The Patent Moat by Jeff
+            Schell. The approved tools render inline results and route follow-up through
+            HighLevel.
           </p>
         </div>
       </section>
