@@ -13,7 +13,11 @@ export type MagnetSlug =
   | "ai-risk-triage"
   | "patent-moat-scorecard"
   | "governance-plan"
-  | "outside-counsel-playbook";
+  | "outside-counsel-playbook"
+  | "disclosure-self-audit"
+  | "chain-of-title-audit"
+  | "routing-matrix"
+  | "ip-data-room-checklist";
 
 export type MagnetMode = "founder" | "investor";
 
@@ -54,6 +58,7 @@ type BaseMagnetConfig = {
   statusLegend: string;
   statusOptions: string[];
   kind: "assessment" | "download";
+  requirePhone?: boolean;
 };
 
 export type AssessmentMagnetConfig = BaseMagnetConfig & {
@@ -737,6 +742,655 @@ export const magnetConfigs = {
       "I'm comparing legal support models for a technology company.",
       "We are preparing for financing, diligence, customer growth, or an exit.",
       "I want the playbook for planning.",
+    ],
+  },
+  "disclosure-self-audit": {
+    slug: "disclosure-self-audit",
+    kind: "assessment",
+    title: "The Disclosure Self-Audit",
+    formTitle: "Run the Disclosure Self-Audit",
+    formDescription:
+      "Answer nine categorical questions about what you have shown, sold, and filed. Every launch, demo, and sale starts a patent clock - this audit shows which clocks are running.",
+    buttonLabel: "Audit my disclosures",
+    statusLegend: "Where is your company right now?",
+    statusOptions: [
+      "Idea / prototype",
+      "MVP in market",
+      "Fundraising or diligence",
+      "Enterprise/customer rollout",
+    ],
+    requirePhone: true,
+    scoreMax: 22,
+    areas: [
+      {
+        key: "public_disclosure",
+        label: "Public disclosure",
+        maxScore: 8,
+        action: "Institute the one-question launch rule before anything else ships.",
+      },
+      {
+        key: "on_sale",
+        label: "Sales and offers",
+        maxScore: 3,
+        action: "Pull every pilot, LOI, and pre-order - confidential sales count (Helsinn v. Teva). Review with counsel.",
+      },
+      {
+        key: "filing",
+        label: "Filing posture",
+        maxScore: 6,
+        action: "File a provisional before your next trigger event - the 12-month U.S. window is statutory, and foreign rights die at disclosure.",
+      },
+      {
+        key: "process",
+        label: "Disclosure discipline",
+        maxScore: 5,
+        action: "Close the NDA gap and add the disclosure check to your launch checklist.",
+      },
+    ],
+    questions: [
+      {
+        id: "q1",
+        areaKey: "public_disclosure",
+        label: "Have you publicly described HOW your invention works (blog, video, talk, paper, listing)?",
+        options: [
+          { label: "No", score: 3 },
+          { label: "Not sure", score: 1 },
+          { label: "Yes", score: 0 },
+        ],
+      },
+      {
+        id: "q2",
+        areaKey: "public_disclosure",
+        label: "Have you demonstrated it publicly (demo day, trade show, pitch event)?",
+        options: [
+          { label: "No", score: 3 },
+          { label: "Not sure", score: 1 },
+          { label: "Yes", score: 0 },
+        ],
+      },
+      {
+        id: "q3",
+        areaKey: "public_disclosure",
+        label: "Has it appeared on a crowdfunding page?",
+        options: [
+          { label: "No", score: 2 },
+          { label: "Yes", score: 0 },
+        ],
+      },
+      {
+        id: "q4",
+        areaKey: "on_sale",
+        label: "Have you sold it, offered it for sale, or signed a pilot/pre-order - including confidentially?",
+        options: [
+          { label: "No", score: 3 },
+          { label: "Not sure", score: 1 },
+          { label: "Yes", score: 0 },
+        ],
+      },
+      {
+        id: "q5",
+        areaKey: "filing",
+        label: "When was your earliest public disclosure or sale?",
+        options: [
+          { label: "Nothing disclosed or sold yet", score: 3 },
+          { label: "Less than 6 months ago", score: 2 },
+          { label: "6-12 months ago", score: 1 },
+          { label: "More than 12 months ago", score: 0 },
+          { label: "Not sure", score: 0 },
+        ],
+      },
+      {
+        id: "q6",
+        areaKey: "filing",
+        label: "Did you file a patent application BEFORE your earliest disclosure or sale?",
+        options: [
+          { label: "Filed before any disclosure", score: 3 },
+          { label: "Filed, but after disclosing", score: 1 },
+          { label: "Nothing filed", score: 0 },
+          { label: "Not sure", score: 0 },
+        ],
+      },
+      {
+        id: "q7",
+        areaKey: "process",
+        label: "Is a launch, demo day, pilot, or conference coming in the next 90 days?",
+        options: [
+          { label: "No", score: 1 },
+          { label: "Yes - and we plan to file first", score: 2 },
+          { label: "Yes - no filing planned", score: 0 },
+        ],
+      },
+      {
+        id: "q8",
+        areaKey: "process",
+        label: "Do partners/contractors who have seen the mechanism have signed NDAs?",
+        options: [
+          { label: "Yes", score: 2 },
+          { label: "No one outside has seen it", score: 2 },
+          { label: "Some", score: 1 },
+          { label: "No", score: 0 },
+        ],
+      },
+      {
+        id: "q9",
+        areaKey: "process",
+        label: "Does your launch checklist ask: does this reveal how it works, or only what it does?",
+        options: [
+          { label: "Yes", score: 1 },
+          { label: "No", score: 0 },
+        ],
+      },
+    ],
+    tiers: [
+      {
+        min: 17,
+        max: 22,
+        key: "clocks-stopped",
+        label: "Clocks stopped",
+        tag: "disclosure-green",
+        headline: "Your disclosure posture is protecting your rights - keep filing before every trigger event.",
+      },
+      {
+        min: 9,
+        max: 16,
+        key: "clock-running",
+        label: "A clock is running",
+        tag: "disclosure-orange",
+        headline: "Rights are still salvageable, but at least one clock is running - act this quarter.",
+      },
+      {
+        min: 0,
+        max: 8,
+        key: "window-at-risk",
+        label: "Window at risk",
+        tag: "disclosure-red",
+        headline: "Disclosed-material rights may already be barred - get a counsel review of what remains protectable this month.",
+      },
+    ],
+  },
+  "chain-of-title-audit": {
+    slug: "chain-of-title-audit",
+    kind: "assessment",
+    title: "The Chain-of-Title Audit",
+    formTitle: "Run the Chain-of-Title Audit",
+    formDescription:
+      "Answer ten categorical questions. Inventions start out owned by the human inventor - the company owns only what was assigned. This audit checks every link.",
+    buttonLabel: "Audit my chain of title",
+    statusLegend: "Where is your company right now?",
+    statusOptions: [
+      "Idea / prototype",
+      "MVP in market",
+      "Fundraising or diligence",
+      "Enterprise/customer rollout",
+    ],
+    requirePhone: true,
+    scoreMax: 24,
+    areas: [
+      {
+        key: "founders",
+        label: "Founder assignments",
+        maxScore: 8,
+        action: "Fix templates to present-tense 'hereby assigns' and sweep pre-incorporation work in (Stanford v. Roche turned on those two words).",
+      },
+      {
+        key: "contributors",
+        label: "Contributors and contractors",
+        maxScore: 6,
+        action: "Get confirmatory assignments from departed contributors and paper every contractor - there is no work-for-hire for patents.",
+      },
+      {
+        key: "institutions",
+        label: "Employers and institutions",
+        maxScore: 4,
+        action: "Pull the actual prior employment agreements and answer the tech-transfer question - before diligence does.",
+      },
+      {
+        key: "records",
+        label: "Records and inventorship",
+        maxScore: 6,
+        action: "Record assignments with the USPTO and correct the owning entity.",
+      },
+    ],
+    questions: [
+      {
+        id: "q1",
+        areaKey: "founders",
+        label: "Has every founder signed a written IP assignment to the company?",
+        options: [
+          { label: "Yes", score: 3 },
+          { label: "Not sure", score: 1 },
+          { label: "No", score: 0 },
+        ],
+      },
+      {
+        id: "q2",
+        areaKey: "founders",
+        label: "Does your assignment language say 'hereby assigns' (present tense), not just 'agrees to assign'?",
+        options: [
+          { label: "Yes", score: 3 },
+          { label: "Not sure", score: 1 },
+          { label: "No", score: 0 },
+        ],
+      },
+      {
+        id: "q3",
+        areaKey: "founders",
+        label: "Were pre-incorporation inventions explicitly assigned INTO the company?",
+        options: [
+          { label: "Yes", score: 2 },
+          { label: "Not sure", score: 1 },
+          { label: "No", score: 0 },
+        ],
+      },
+      {
+        id: "q4",
+        areaKey: "contributors",
+        label: "Did every departed contributor sign an assignment before or at departure?",
+        options: [
+          { label: "Yes", score: 3 },
+          { label: "No one has left", score: 3 },
+          { label: "Not sure", score: 1 },
+          { label: "No", score: 0 },
+        ],
+      },
+      {
+        id: "q5",
+        areaKey: "contributors",
+        label: "Did every contractor and dev shop sign an IP assignment BEFORE work began?",
+        options: [
+          { label: "Yes", score: 3 },
+          { label: "No contractors used", score: 3 },
+          { label: "Some", score: 1 },
+          { label: "No", score: 0 },
+        ],
+      },
+      {
+        id: "q6",
+        areaKey: "institutions",
+        label: "Has each founder mapped their prior employers' invention-assignment agreements against this company's tech?",
+        options: [
+          { label: "Yes", score: 2 },
+          { label: "Not sure", score: 1 },
+          { label: "No", score: 0 },
+        ],
+      },
+      {
+        id: "q7",
+        areaKey: "institutions",
+        label: "Did any founder invent anything while at a university, hospital, or lab?",
+        options: [
+          { label: "No", score: 2 },
+          { label: "Yes - resolved with the institution", score: 2 },
+          { label: "Not sure", score: 1 },
+          { label: "Yes - unresolved", score: 0 },
+        ],
+      },
+      {
+        id: "q8",
+        areaKey: "records",
+        label: "Are assignments for filed applications recorded with the USPTO?",
+        options: [
+          { label: "Yes", score: 2 },
+          { label: "Nothing filed yet", score: 2 },
+          { label: "Not sure", score: 1 },
+          { label: "No", score: 0 },
+        ],
+      },
+      {
+        id: "q9",
+        areaKey: "records",
+        label: "Is the owning entity the correct current company (not a dead LLC or a founder personally)?",
+        options: [
+          { label: "Yes", score: 2 },
+          { label: "Not sure", score: 1 },
+          { label: "No", score: 0 },
+        ],
+      },
+      {
+        id: "q10",
+        areaKey: "records",
+        label: "Are named inventors accurate - everyone who contributed to conception, no one who didn't?",
+        options: [
+          { label: "Yes", score: 2 },
+          { label: "Nothing filed yet", score: 2 },
+          { label: "Not sure", score: 1 },
+          { label: "No", score: 0 },
+        ],
+      },
+    ],
+    tiers: [
+      {
+        min: 18,
+        max: 24,
+        key: "chain-intact",
+        label: "Chain intact",
+        tag: "title-green",
+        headline: "Every link holds - re-run this audit at every hire, departure, and contractor engagement.",
+      },
+      {
+        min: 10,
+        max: 17,
+        key: "links-need-reinforcement",
+        label: "Links need reinforcement",
+        tag: "title-orange",
+        headline: "Fixable cheaply today; the same items found in diligence become escrows and haircuts.",
+      },
+      {
+        min: 0,
+        max: 9,
+        key: "broken-links",
+        label: "Broken links",
+        tag: "title-red",
+        headline: "Multiple gaps - any unassigned co-inventor can license your patent to a competitor. Start fixes now.",
+      },
+    ],
+  },
+  "routing-matrix": {
+    slug: "routing-matrix",
+    kind: "assessment",
+    title: "The Routing Matrix",
+    formTitle: "Run the Routing Matrix",
+    formDescription:
+      "Answer six categorical questions. Patent, trade secret, publish, or nothing - two questions route every piece of what you have built.",
+    buttonLabel: "Route my stack",
+    statusLegend: "Where is your company right now?",
+    statusOptions: [
+      "Idea / prototype",
+      "MVP in market",
+      "Fundraising or diligence",
+      "Enterprise/customer rollout",
+    ],
+    requirePhone: true,
+    scoreMax: 10,
+    areas: [
+      {
+        key: "core",
+        label: "Your core piece",
+        maxScore: 5,
+        action: "Detectable + durable routes to PATENT - file before the next trigger event. Invisible + durable routes to TRADE SECRET - but reverse-engineerable secrets are temporary; lean patent.",
+      },
+      {
+        key: "secrecy",
+        label: "Trade-secret practice",
+        maxScore: 2,
+        action: "A trade secret without secrecy practices is fiction - stand up access controls, NDAs, and marking this month.",
+      },
+      {
+        key: "discipline",
+        label: "Routing discipline",
+        maxScore: 3,
+        action: "Write the one-sentence routing decision per piece; spoken aloud it becomes your ninety-second IP-position answer.",
+      },
+    ],
+    questions: [
+      {
+        id: "q1",
+        areaKey: "core",
+        label: "Your core invented piece: could you DETECT copying from outside a competitor's product?",
+        options: [
+          { label: "Yes", score: 2 },
+          { label: "Not sure", score: 1 },
+          { label: "No", score: 0 },
+        ],
+      },
+      {
+        id: "q2",
+        areaKey: "core",
+        label: "Will that core piece still matter in 5+ years?",
+        options: [
+          { label: "Yes", score: 2 },
+          { label: "Not sure", score: 1 },
+          { label: "No", score: 0 },
+        ],
+      },
+      {
+        id: "q3",
+        areaKey: "core",
+        label: "Does it ship inside your product where engineers could extract it?",
+        options: [
+          { label: "No", score: 1 },
+          { label: "Not sure", score: 0 },
+          { label: "Yes", score: 0 },
+        ],
+      },
+      {
+        id: "q4",
+        areaKey: "secrecy",
+        label: "For pieces you keep secret: are real secrecy practices in place (access controls, NDAs, marked documents)?",
+        options: [
+          { label: "Yes", score: 2 },
+          { label: "Partially", score: 1 },
+          { label: "No", score: 0 },
+          { label: "Nothing routed to secret", score: 2 },
+        ],
+      },
+      {
+        id: "q5",
+        areaKey: "discipline",
+        label: "Do short-lived features get consciously shipped without patent spend (or defensively published)?",
+        options: [
+          { label: "Yes", score: 1 },
+          { label: "No", score: 0 },
+        ],
+      },
+      {
+        id: "q6",
+        areaKey: "discipline",
+        label: "Do you have a written routing decision (patent/secret/publish/nothing) for each major piece?",
+        options: [
+          { label: "Yes, for every piece", score: 2 },
+          { label: "For some pieces", score: 1 },
+          { label: "No", score: 0 },
+        ],
+      },
+    ],
+    tiers: [
+      {
+        min: 8,
+        max: 10,
+        key: "routed",
+        label: "Routed",
+        tag: "routing-green",
+        headline: "Your stack is consciously routed - rehearse the ninety-second answer for your next pitch.",
+      },
+      {
+        min: 4,
+        max: 7,
+        key: "partially-routed",
+        label: "Partially routed",
+        tag: "routing-orange",
+        headline: "The core piece needs a decision - fence the valuable twenty feet before the next launch.",
+      },
+      {
+        min: 0,
+        max: 3,
+        key: "unrouted",
+        label: "Unrouted",
+        tag: "routing-red",
+        headline: "Protection is currently accidental - run the decomposition this week.",
+      },
+    ],
+  },
+  "ip-data-room-checklist": {
+    slug: "ip-data-room-checklist",
+    kind: "assessment",
+    title: "The IP Data Room Checklist",
+    formTitle: "Run the IP Data Room Checklist",
+    formDescription:
+      "Answer ten categorical questions. The diligence checklist is not a secret - this tool scores how ready you are to pass the exam in advance.",
+    buttonLabel: "Score my data room",
+    statusLegend: "Where is your company right now?",
+    statusOptions: [
+      "Idea / prototype",
+      "MVP in market",
+      "Fundraising or diligence",
+      "Enterprise/customer rollout",
+    ],
+    requirePhone: true,
+    scoreMax: 20,
+    areas: [
+      {
+        key: "title",
+        label: "Chain of title",
+        maxScore: 4,
+        action: "Confirmatory assignments and USPTO recording - cheapest fix on the list.",
+      },
+      {
+        key: "scope",
+        label: "Status and scope",
+        maxScore: 4,
+        action: "Build the IP schedule and claim-to-product map - it converts your IP section from inventory to argument.",
+      },
+      {
+        key: "fto",
+        label: "Freedom to operate",
+        maxScore: 4,
+        action: "Commission the landscape memo; never improvise FTO answers.",
+      },
+      {
+        key: "hygiene",
+        label: "Code and secrecy hygiene",
+        maxScore: 4,
+        action: "Run the license scanner before anyone else can; make secrecy practices real.",
+      },
+      {
+        key: "encumbrances",
+        label: "Encumbrances and skeletons",
+        maxScore: 4,
+        action: "Inventory every granted license and reconstruct the disclosure timeline - they will rebuild it from YouTube either way.",
+      },
+    ],
+    questions: [
+      {
+        id: "q1",
+        areaKey: "title",
+        label: "Signed present-tense assignments exist for every contributor, including departed ones.",
+        options: [
+          { label: "Done", score: 2 },
+          { label: "Partial", score: 1 },
+          { label: "Not yet", score: 0 },
+        ],
+      },
+      {
+        id: "q2",
+        areaKey: "title",
+        label: "USPTO assignment records are current and name the correct entity.",
+        options: [
+          { label: "Done", score: 2 },
+          { label: "Partial", score: 1 },
+          { label: "Not yet", score: 0 },
+          { label: "N/A - nothing filed", score: 2 },
+        ],
+      },
+      {
+        id: "q3",
+        areaKey: "scope",
+        label: "An IP schedule lists every asset with status and geography.",
+        options: [
+          { label: "Done", score: 2 },
+          { label: "Partial", score: 1 },
+          { label: "Not yet", score: 0 },
+        ],
+      },
+      {
+        id: "q4",
+        areaKey: "scope",
+        label: "A one-line claim-to-product map exists for every filing.",
+        options: [
+          { label: "Done", score: 2 },
+          { label: "Partial", score: 1 },
+          { label: "Not yet", score: 0 },
+          { label: "N/A - nothing filed", score: 2 },
+        ],
+      },
+      {
+        id: "q5",
+        areaKey: "fto",
+        label: "A landscape memo exists - who patents in your space, which families are scary.",
+        options: [
+          { label: "Done", score: 2 },
+          { label: "Partial", score: 1 },
+          { label: "Not yet", score: 0 },
+        ],
+      },
+      {
+        id: "q6",
+        areaKey: "fto",
+        label: "Every threat letter ever received has a documented, counsel-reviewed story.",
+        options: [
+          { label: "Done", score: 2 },
+          { label: "Partial", score: 1 },
+          { label: "Not yet", score: 0 },
+          { label: "N/A - never received one", score: 2 },
+        ],
+      },
+      {
+        id: "q7",
+        areaKey: "hygiene",
+        label: "A dependency inventory with licenses exists - you ran the scanner first.",
+        options: [
+          { label: "Done", score: 2 },
+          { label: "Partial", score: 1 },
+          { label: "Not yet", score: 0 },
+        ],
+      },
+      {
+        id: "q8",
+        areaKey: "hygiene",
+        label: "Everything routed trade-secret has real secrecy practices.",
+        options: [
+          { label: "Done", score: 2 },
+          { label: "Partial", score: 1 },
+          { label: "Not yet", score: 0 },
+        ],
+      },
+      {
+        id: "q9",
+        areaKey: "encumbrances",
+        label: "Every license ever granted is inventoried with scope and exclusivity terms.",
+        options: [
+          { label: "Done", score: 2 },
+          { label: "Partial", score: 1 },
+          { label: "Not yet", score: 0 },
+          { label: "N/A - none granted", score: 2 },
+        ],
+      },
+      {
+        id: "q10",
+        areaKey: "encumbrances",
+        label: "Your public disclosure timeline is reconstructed and documented.",
+        options: [
+          { label: "Done", score: 2 },
+          { label: "Partial", score: 1 },
+          { label: "Not yet", score: 0 },
+        ],
+      },
+    ],
+    tiers: [
+      {
+        min: 15,
+        max: 20,
+        key: "ready",
+        label: "48 hours from ready",
+        tag: "dataroom-green",
+        headline: "Offer the data room index before anyone asks - it deletes the slowest workstream from your close.",
+      },
+      {
+        min: 8,
+        max: 14,
+        key: "known-gaps",
+        label: "Solid spine, known gaps",
+        tag: "dataroom-orange",
+        headline: "Each gap is hours of work now versus weeks of deal momentum later.",
+      },
+      {
+        min: 0,
+        max: 7,
+        key: "surprises",
+        label: "The X-ray would find surprises",
+        tag: "dataroom-red",
+        headline: "What reprices deals is the discovery that the founder didn't know - work the list top-down.",
+      },
     ],
   },
 } satisfies Record<MagnetSlug, MagnetConfig>;
