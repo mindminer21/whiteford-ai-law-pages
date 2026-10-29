@@ -1,3 +1,4 @@
+import Link from "next/link";
 import type { Metadata } from "next";
 import { FoundersShell } from "@/components/founders/chrome";
 import { glossary } from "@/lib/founders/glossary";
@@ -38,8 +39,8 @@ export default function FoundersHome() {
             <a href="#raise">Raising money</a>
             <a href="#start">Just starting</a>
             <a href="#sell">Thinking about a sale</a>
-            <a href="/founders/financing-documents">Financing documents</a>
-            <a href="/founders/glossary">Glossary</a>
+            <Link href="/founders/financing-documents">Financing documents</Link>
+            <Link href="/founders/glossary">Glossary</Link>
           </div>
         </div>
       </section>
@@ -114,9 +115,9 @@ export default function FoundersHome() {
               financings. We explain what each one does and link you to the publisher&apos;s current version.
             </p>
           </div>
-          <a className="learn-report-submit fl-button" href="/founders/financing-documents">
+          <Link className="learn-report-submit fl-button" href="/founders/financing-documents">
             Browse financing documents
-          </a>
+          </Link>
         </div>
       </section>
     </FoundersShell>

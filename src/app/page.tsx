@@ -1,3 +1,4 @@
+import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -239,9 +240,9 @@ export default function Home() {
               diligence list, with a report emailed to you.
             </p>
           </div>
-          <a className="learn-report-submit fl-button" href="/founders">
+          <Link className="learn-report-submit fl-button" href="/founders">
             Open the Founder Library
-          </a>
+          </Link>
         </div>
       </section>
 
@@ -299,9 +300,9 @@ export default function Home() {
               <p className="footer-meta">LEARN.SCHELLIP.COM</p>
               <p className="footer-meta">DENVER · WASHINGTON · MOUNTAIN WEST</p>
               <p>
-                <a className="footer-meta" href="/legacy">
+                <Link className="footer-meta" href="/legacy">
                   LEGACY CAMPAIGN HUB
-                </a>
+                </Link>
               </p>
             </div>
           </div>

@@ -1829,6 +1829,7 @@ select.fl-input {
 
 .fl-glossary {
   display: grid;
+  grid-template-columns: minmax(0, 1fr);
   gap: 52px;
   max-width: 900px;
 }
@@ -1884,6 +1885,7 @@ select.fl-input {
 
 .fl-docs {
   display: grid;
+  grid-template-columns: minmax(0, 1fr);
   gap: 56px;
 }
 

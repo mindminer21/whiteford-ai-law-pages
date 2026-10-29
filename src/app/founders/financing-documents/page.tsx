@@ -1,3 +1,4 @@
+import Link from "next/link";
 import type { Metadata } from "next";
 import { Breadcrumbs, FoundersShell } from "@/components/founders/chrome";
 
@@ -159,12 +160,12 @@ export default function FinancingDocumentsPage() {
                 <p>Filings founders most often miss around a financing or founder stock issuance.</p>
               </div>
               <div className="fl-doc-actions">
-                <a className="fl-button-secondary" href="/founders/exempt-offering-checklist">
+                <Link className="fl-button-secondary" href="/founders/exempt-offering-checklist">
                   Build your filing checklist &rarr;
-                </a>
-                <a className="fl-button-secondary" href="/founders/83b-election">
+                </Link>
+                <Link className="fl-button-secondary" href="/founders/83b-election">
                   Prepare your 83(b) &rarr;
-                </a>
+                </Link>
               </div>
             </div>
             <div className="fl-table-scroll">

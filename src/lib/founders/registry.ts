@@ -1,4 +1,14 @@
+import { eightyThreeBElection } from "./tools/83b-election";
+import { advisorEquityCalculator } from "./tools/advisor-equity-calculator";
+import { coloradoNoncompeteChecker } from "./tools/colorado-noncompete-checker";
+import { diligenceListBuilder } from "./tools/diligence-list-builder";
+import { entityChooser } from "./tools/entity-chooser";
+import { exemptOfferingChecklist } from "./tools/exempt-offering-checklist";
+import { founderEquityPlanner } from "./tools/founder-equity-planner";
+import { ipOwnershipAudit } from "./tools/ip-ownership-audit";
+import { optionPoolSizer } from "./tools/option-pool-sizer";
 import { safeCalculator } from "./tools/safe-calculator";
+import { termSheetDecoder } from "./tools/term-sheet-decoder";
 import type { StageKey, ToolSpec } from "./types";
 
 export const stages: { key: StageKey; number: string; title: string; blurb: string }[] = [
@@ -10,7 +20,20 @@ export const stages: { key: StageKey; number: string; title: string; blurb: stri
   { key: "sell", number: "06", title: "Sell", blurb: "Get diligence-ready long before a buyer's request list arrives." },
 ];
 
-export const tools: ToolSpec[] = [safeCalculator];
+/** Ordered by stage, then by how often founders need them. */
+export const tools: ToolSpec[] = [
+  entityChooser,
+  founderEquityPlanner,
+  eightyThreeBElection,
+  ipOwnershipAudit,
+  optionPoolSizer,
+  coloradoNoncompeteChecker,
+  safeCalculator,
+  termSheetDecoder,
+  exemptOfferingChecklist,
+  advisorEquityCalculator,
+  diligenceListBuilder,
+];
 
 export const toolsBySlug: Record<string, ToolSpec> = Object.fromEntries(tools.map((tool) => [tool.slug, tool]));
 

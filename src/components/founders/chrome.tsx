@@ -1,3 +1,4 @@
+import Link from "next/link";
 import type { ReactNode } from "react";
 import { BOOKING_URL } from "@/lib/founders/registry";
 
@@ -5,11 +6,11 @@ export function BrandBar() {
   return (
     <div className="brand-bar">
       <div className="container">
-        <a className="brand-lockup" href="/founders" aria-label="Founder Library home">
+        <Link className="brand-lockup" href="/founders" aria-label="Founder Library home">
           <img className="brand-logo-whiteford" src="/logos/whiteford-navy-on-light.png" alt="Whiteford Taylor Preston" width={886} height={205} />
           <span className="brand-divider" aria-hidden="true" />
           <img className="brand-logo-schellip" src="/logos/schellip-color.png" alt="Schell IP" width={982} height={149} />
-        </a>
+        </Link>
         <a className="brand-bar-cta" href={BOOKING_URL}>
           <span className="brand-bar-cta-lead">Book a</span>Free Consultation
         </a>
@@ -54,19 +55,19 @@ export function SiteFooter() {
             <p className="footer-meta">LEARN.SCHELLIP.COM/FOUNDERS</p>
             <p className="footer-meta">DENVER · MOUNTAIN WEST</p>
             <p>
-              <a className="footer-meta" href="/founders/glossary">
+              <Link className="footer-meta" href="/founders/glossary">
                 GLOSSARY
-              </a>
+              </Link>
             </p>
             <p>
-              <a className="footer-meta" href="/founders/financing-documents">
+              <Link className="footer-meta" href="/founders/financing-documents">
                 FINANCING DOCUMENTS
-              </a>
+              </Link>
             </p>
             <p>
-              <a className="footer-meta" href="/">
+              <Link className="footer-meta" href="/">
                 ALL LEGAL READINESS TOOLS
-              </a>
+              </Link>
             </p>
           </div>
         </div>
