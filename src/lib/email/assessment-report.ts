@@ -110,9 +110,9 @@ export function buildAssessmentReportEmail({
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:${SNOW}"><tr><td align="center" style="padding:28px 12px">
 <table role="presentation" width="600" cellpadding="0" cellspacing="0" style="max-width:600px;width:100%;background:#FFFFFF;border:1px solid ${RULE}">
   <tr><td style="background:${NAVY};padding:22px 32px">
-    <img src="${site}/logos/whiteford-white-on-navy.png" alt="Whiteford" height="24" style="height:24px;vertical-align:middle;border:0">
+    <img src="${site}/logos/whiteford-white-on-navy.png" alt="Whiteford" height="28" style="height:28px;vertical-align:middle;border:0">
     <span style="display:inline-block;width:1px;height:22px;background:rgba(255,255,255,.3);margin:0 14px;vertical-align:middle"></span>
-    <img src="${site}/logos/schellip-white.png" alt="Schell IP" height="16" style="height:16px;vertical-align:middle;border:0">
+    <img src="${site}/logos/schellip-white.png" alt="Schell IP" height="11" style="height:11px;vertical-align:middle;border:0">
   </td></tr>
   <tr><td style="padding:32px 32px 8px">
     <div style="font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:${VIOLET};font-weight:600">${esc(config.title)}</div>

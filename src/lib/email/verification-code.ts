@@ -47,9 +47,9 @@ export function buildVerificationEmail({
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:${SNOW}"><tr><td align="center" style="padding:28px 12px">
 <table role="presentation" width="520" cellpadding="0" cellspacing="0" style="max-width:520px;width:100%;background:#FFFFFF;border:1px solid ${RULE}">
   <tr><td style="background:${NAVY};padding:20px 28px">
-    <img src="${site}/logos/whiteford-white-on-navy.png" alt="Whiteford" height="22" style="height:22px;vertical-align:middle;border:0">
+    <img src="${site}/logos/whiteford-white-on-navy.png" alt="Whiteford" height="28" style="height:28px;vertical-align:middle;border:0">
     <span style="display:inline-block;width:1px;height:20px;background:rgba(255,255,255,.3);margin:0 12px;vertical-align:middle"></span>
-    <img src="${site}/logos/schellip-white.png" alt="Schell IP" height="15" style="height:15px;vertical-align:middle;border:0">
+    <img src="${site}/logos/schellip-white.png" alt="Schell IP" height="11" style="height:11px;vertical-align:middle;border:0">
   </td></tr>
   <tr><td style="padding:30px 28px 8px">
     <div style="font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:${VIOLET};font-weight:600">${esc(toolTitle)}</div>

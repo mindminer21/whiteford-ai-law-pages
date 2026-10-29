@@ -109,7 +109,8 @@ textarea {
 }
 
 .brand-logo-schellip {
-  height: 22px;
+  /* letters match WHITEFORD's: the Whiteford file's letters fill 46% of its height, Schell IP's fill 100% */
+  height: 13px;
 }
 
 .brand-divider {
@@ -319,11 +320,11 @@ textarea {
 }
 
 .directory-footer .footer-lockup img {
-  height: 22px;
+  height: 28px;
 }
 
 .directory-footer .footer-lockup .footer-logo-schellip {
-  height: 17px;
+  height: 11px;
 }
 
 .footer-divider {
@@ -498,15 +499,17 @@ textarea {
 
 .learn-question legend {
   color: var(--ink);
-  font-size: 15px;
-  line-height: 1.45;
-  margin-bottom: 12px;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.4;
+  margin-bottom: 14px;
 }
 
 .learn-question legend span {
   color: var(--accent);
   display: block;
-  margin-bottom: 5px;
+  font-weight: 400;
+  margin-bottom: 6px;
 }
 
 .learn-answer-options {
@@ -524,6 +527,9 @@ textarea {
   grid-template-columns: 20px 1fr;
   gap: 10px;
   padding: 11px 12px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.45;
 }
 
 .learn-answer-option input {
@@ -894,7 +900,7 @@ textarea {
   }
 
   .brand-logo-schellip {
-    height: 17px;
+    height: 10px;
   }
 
   .brand-divider {

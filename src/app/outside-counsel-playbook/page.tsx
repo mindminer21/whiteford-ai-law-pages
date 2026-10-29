@@ -60,7 +60,7 @@ const pageStyles = `
 .outside-counsel-page .brand-lockup { display: flex; align-items: center; gap: 20px; min-width: 0; }
 .outside-counsel-page .brand-lockup img { display: block; width: auto; object-fit: contain; }
 .outside-counsel-page .brand-logo-whiteford { height: 28px; }
-.outside-counsel-page .brand-logo-schellip { height: 22px; }
+.outside-counsel-page .brand-logo-schellip { height: 13px; }
 .outside-counsel-page .brand-divider { width: 1px; height: 28px; background: var(--line-strong); flex: 0 0 auto; }
 .outside-counsel-page .brand-bar-meta {
   font-family: var(--font-mono), "IBM Plex Mono", ui-monospace, monospace;
@@ -396,8 +396,8 @@ const pageStyles = `
   margin: 0;
 }
 .outside-counsel-page .footer-lockup { display: flex; align-items: center; gap: 20px; margin-bottom: 16px; }
-.outside-counsel-page .footer-lockup img { height: 22px; width: auto; display: block; object-fit: contain; }
-.outside-counsel-page .footer-lockup .footer-logo-schellip { height: 17px; }
+.outside-counsel-page .footer-lockup img { height: 28px; width: auto; display: block; object-fit: contain; }
+.outside-counsel-page .footer-lockup .footer-logo-schellip { height: 11px; }
 .outside-counsel-page .footer-divider { width: 1px; height: 22px; background: rgba(255,255,255,0.2); }
 @media (max-width: 900px) {
   .outside-counsel-page .hero { padding: 60px 0 80px; }
@@ -421,7 +421,7 @@ const pageStyles = `
   .outside-counsel-page section { padding: 70px 0; }
   .outside-counsel-page .container { padding: 0 20px; }
   .outside-counsel-page .brand-logo-whiteford { height: 22px; }
-  .outside-counsel-page .brand-logo-schellip { height: 17px; }
+  .outside-counsel-page .brand-logo-schellip { height: 10px; }
   .outside-counsel-page .brand-divider { height: 22px; }
   .outside-counsel-page .brand-bar .container { align-items: flex-start; flex-direction: column; gap: 8px; }
   .outside-counsel-page .brand-bar-meta { font-size: 10px; }

@@ -93,7 +93,7 @@ export default function LegacyPage() {
               <span className="h-8 w-px bg-[#d8d0c3]" aria-hidden="true" />
               <img
                 alt="Schell IP"
-                className="h-5 w-auto"
+                className="h-[13px] w-auto"
                 height="149"
                 src="/logos/schellip-color.png"
                 width="982"

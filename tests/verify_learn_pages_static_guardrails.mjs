@@ -223,9 +223,9 @@ for (const source of [
   read("src/app/outside-counsel-playbook/page.tsx"),
 ]) {
   assert.match(source, /\.brand-logo-whiteford\s*\{\s*height:\s*28px;/, "Desktop Whiteford logo height must be 28px");
-  assert.match(source, /\.brand-logo-schellip\s*\{\s*height:\s*22px;/, "Desktop Schell IP logo height must be 22px");
+  assert.match(source, /\.brand-logo-schellip\s*\{[^}]*height:\s*13px;/, "Desktop Schell IP logo height must be 13px so its letters match WHITEFORD");
   assert.match(source, /\.brand-logo-whiteford\s*\{\s*height:\s*22px;/, "Mobile Whiteford logo height must be 22px");
-  assert.match(source, /\.brand-logo-schellip\s*\{\s*height:\s*17px;/, "Mobile Schell IP logo height must be 17px");
+  assert.match(source, /\.brand-logo-schellip\s*\{[^}]*height:\s*10px;/, "Mobile Schell IP logo height must be 10px so its letters match WHITEFORD");
 }
 
 for (const source of pages.map((page) => page.source)) {

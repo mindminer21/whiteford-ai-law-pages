@@ -39,7 +39,7 @@ body {
 .brand-lockup { display: flex; align-items: center; gap: 20px; }
 .brand-lockup img { display: block; width: auto; }
 .brand-logo-whiteford { height: 28px; }
-.brand-logo-schellip { height: 22px; }
+.brand-logo-schellip { height: 13px; }
 .brand-divider { width: 1px; height: 28px; background: var(--line-strong); }
 .brand-bar-meta {
   font-family: var(--mono); font-size: 11px;
@@ -267,8 +267,8 @@ footer { background: var(--ink-deep); color: rgba(255,255,255,0.6); padding: 60p
 .footer-disclaimer { font-family: var(--display); font-style: italic; font-weight: 300; font-size: 14px; }
 .footer-meta { font-family: var(--mono); font-size: 11px; letter-spacing: 0.08em; }
 .footer-lockup { display: flex; align-items: center; gap: 20px; margin-bottom: 16px; }
-.footer-lockup img { height: 22px; width: auto; display: block; }
-.footer-lockup .footer-logo-schellip { height: 17px; }
+.footer-lockup img { height: 28px; width: auto; display: block; }
+.footer-lockup .footer-logo-schellip { height: 11px; }
 .footer-divider { width: 1px; height: 22px; background: rgba(255,255,255,0.2); }
 
 @keyframes fade-in { to { opacity: 1; transform: translateY(0); } }
@@ -288,7 +288,7 @@ footer { background: var(--ink-deep); color: rgba(255,255,255,0.6); padding: 60p
   .container { padding: 0 20px; }
   .score-big { font-size: 64px; }
   .brand-logo-whiteford { height: 22px; }
-  .brand-logo-schellip { height: 17px; }
+  .brand-logo-schellip { height: 10px; }
   .brand-divider { height: 22px; }
 }
 .launch-note { color: rgba(255,255,255,0.78); font-size: 16px; line-height: 1.6; max-width: 620px; margin: 36px 0 22px; }
