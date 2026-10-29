@@ -42,6 +42,7 @@ fs.writeFileSync(tempRoutePath, routeSource);
 delete process.env.GHL_PRIVATE_INTEGRATION_TOKEN;
 delete process.env.GHL_LOCATION_ID;
 delete process.env.AGENTMAIL_API_KEY;
+delete process.env.RESOURCE_AGENTMAIL_API_KEY;
 delete process.env.AGENTMAIL_INBOX_ID;
 
 const { POST } = await import(pathToFileURL(tempRoutePath).href);

@@ -2,7 +2,8 @@
  * Minimal AgentMail sender (https://agentmail.to), used instead of a bulk email service.
  *
  * Env:
- *   AGENTMAIL_API_KEY   API key for the AgentMail organization (required to send)
+ *   AGENTMAIL_API_KEY   API key for the AgentMail organization (required to send). Falls back to the
+ *                       project's existing RESOURCE_AGENTMAIL_API_KEY when not set.
  *   AGENTMAIL_INBOX_ID  Sending inbox address: jeff@mail.schellip.com (required to send)
  *   AGENTMAIL_REPLY_TO  Optional reply-to address (defaults to the sending inbox, so replies reach Jeff)
  *   AGENTMAIL_BCC       Optional internal copy of every report, comma-separated
@@ -33,7 +34,7 @@ function splitList(value: string | undefined) {
 }
 
 export async function sendViaAgentMail(email: OutboundEmail): Promise<EmailDelivery> {
-  const apiKey = process.env.AGENTMAIL_API_KEY;
+  const apiKey = process.env.AGENTMAIL_API_KEY || process.env.RESOURCE_AGENTMAIL_API_KEY;
   const inboxId = process.env.AGENTMAIL_INBOX_ID;
 
   if (!apiKey || !inboxId) {
