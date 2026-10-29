@@ -369,16 +369,31 @@ function VerifiedAssessmentFlow({ config }: { config: AssessmentMagnetConfig }) 
   const nameRef = useRef<HTMLInputElement>(null);
   const codeRef = useRef<HTMLInputElement>(null);
 
-  // The page's "Score my sale readiness" buttons link to #start; land the cursor in the first field.
+  // The audit section (#start) is hidden until a "Score my sale readiness" button is clicked.
+  // Reveal it, scroll to it and put the cursor in the first field. A verified visitor returning in
+  // the same tab sees it straight away.
   useEffect(() => {
+    const section = document.getElementById("start");
+    if (!section) return;
+    const reveal = (focus: boolean) => {
+      section.hidden = false;
+      window.requestAnimationFrame(() => {
+        section.scrollIntoView({ behavior: "smooth", block: "start" });
+        if (focus) {
+          window.setTimeout(() => (stage === "code" ? codeRef.current : nameRef.current)?.focus({ preventScroll: true }), 450);
+        }
+      });
+    };
+    if (identity && section.hidden) section.hidden = false;
     function onClick(event: MouseEvent) {
       const link = (event.target as Element | null)?.closest?.('a[href="#start"]');
       if (!link) return;
-      window.setTimeout(() => (stage === "code" ? codeRef.current : nameRef.current)?.focus({ preventScroll: true }), 450);
+      event.preventDefault();
+      reveal(true);
     }
     document.addEventListener("click", onClick);
     return () => document.removeEventListener("click", onClick);
-  }, [stage]);
+  }, [stage, identity]);
 
   useEffect(() => {
     if (stage === "code") codeRef.current?.focus();

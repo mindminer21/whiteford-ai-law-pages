@@ -310,6 +310,11 @@ img, svg { max-width: 100%; }
   .radar-card, .scorecard-mock, .matrix-card { max-width: min(350px, calc(100vw - 40px)); }
 }
 
+/* The audit section stays hidden until a "Score my sale readiness" button is clicked. */
+.audit-start[hidden] { display: none !important; }
+.audit-start { padding: 64px 0; scroll-margin-top: 72px; }
+.audit-start .learn-report-card { margin-top: 0; }
+
 /* Sale readiness: sample risk map */
 .riskmap { margin-top: 6px; }
 .riskmap-row { display: grid; grid-template-columns: 132px 1fr 92px; gap: 12px; align-items: center; padding: 9px 0; border-top: 1px solid var(--line); }
@@ -466,9 +471,8 @@ img, svg { max-width: 100%; }
   </div>
 </section>
 
-<section class="cta-banner" id="start">
+<section class="cta-banner audit-start" id="start" hidden>
   <div class="container">
-    <h2>Run the audit. <em>Get the report in your inbox.</em></h2>
     <div data-learn-report-slot="sale-readiness-audit"></div>
   </div>
 </section>
