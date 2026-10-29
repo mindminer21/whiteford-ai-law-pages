@@ -22,7 +22,7 @@ export type OutboundEmail = {
 };
 
 export type EmailDelivery =
-  | { mode: "sent"; messageId?: string }
+  | { mode: "sent"; messageId?: string; threadId?: string }
   | { mode: "preview"; message: OutboundEmail & { from: string | null } }
   | { mode: "failed"; detail: string };
 
@@ -68,11 +68,33 @@ export async function sendViaAgentMail(email: OutboundEmail): Promise<EmailDeliv
       return { mode: "failed", detail: `AgentMail ${response.status}` };
     }
 
-    const data = (await response.json().catch(() => ({}))) as { message_id?: string };
-    return { mode: "sent", messageId: data.message_id };
+    const data = (await response.json().catch(() => ({}))) as { message_id?: string; thread_id?: string };
+    return { mode: "sent", messageId: data.message_id, threadId: data.thread_id };
   } catch (error) {
     const detail = error instanceof Error ? error.message : "Unknown AgentMail error";
     console.error("AgentMail send failed", { detail });
     return { mode: "failed", detail };
+  }
+}
+
+/**
+ * True when anyone other than the sending inbox has written in the thread (i.e. the recipient
+ * replied). Returns null when the thread can't be read, so callers can skip rather than guess.
+ */
+export async function threadHasReplyFrom(threadId: string, address: string): Promise<boolean | null> {
+  const apiKey = process.env.AGENTMAIL_API_KEY || process.env.RESOURCE_AGENTMAIL_API_KEY;
+  const inboxId = process.env.AGENTMAIL_INBOX_ID;
+  if (!apiKey || !inboxId) return null;
+  try {
+    const response = await fetch(
+      `${AGENTMAIL_API}/inboxes/${encodeURIComponent(inboxId)}/threads/${encodeURIComponent(threadId)}`,
+      { headers: { Authorization: `Bearer ${apiKey}` }, cache: "no-store" },
+    );
+    if (!response.ok) return null;
+    const thread = (await response.json()) as { messages?: { from?: string }[] };
+    const target = address.trim().toLowerCase();
+    return (thread.messages ?? []).some((message) => (message.from ?? "").toLowerCase().includes(target));
+  } catch {
+    return null;
   }
 }

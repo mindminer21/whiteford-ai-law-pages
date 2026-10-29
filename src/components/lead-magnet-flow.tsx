@@ -825,8 +825,9 @@ function VerifiedAssessmentFlow({ config }: { config: AssessmentMagnetConfig }) 
           onChange={(event) => setDetails((current) => ({ ...current, consent: event.target.checked }))}
         />
         <span>
-          I agree that Whiteford/Schell IP may email me a verification code, my report and related educational
-          communications, and may keep my answers, company details and stated plans in its contact records.{" "}
+          I agree that Whiteford/Schell IP may email me a verification code, my report, related educational
+          communications and occasional follow-up emails about related legal needs (I can stop them at any time), and
+          may keep my answers, company details and stated plans in its contact records.{" "}
           {permissionText}
         </span>
       </label>

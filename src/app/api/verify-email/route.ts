@@ -12,6 +12,9 @@ type Payload = {
   code?: unknown;
 };
 
+/** Scope shared by every Founder Library tool (matches FOUNDERS_VERIFY_SCOPE in lib/founders/registry). */
+const FOUNDERS_VERIFY_SCOPE = "founders";
+
 const RESEND_WAIT_MS = 30 * 1000;
 const lastSentAt = new Map<string, number>(); // best effort, per server instance
 
@@ -34,10 +37,20 @@ export async function POST(request: Request) {
   }
 
   const slug = payload.magnet_slug;
-  if (!isMagnetSlug(slug)) return Response.json({ error: "Unknown tool." }, { status: 400 });
-  const config = magnetConfigs[slug];
-  if (!("emailVerification" in config) || !config.emailVerification) {
-    return Response.json({ error: "This tool does not use email verification." }, { status: 400 });
+  let scope: string;
+  let toolTitle: string;
+  if (slug === FOUNDERS_VERIFY_SCOPE) {
+    // One verification unlocks every tool in the Founder Library.
+    scope = FOUNDERS_VERIFY_SCOPE;
+    toolTitle = "Founder Library";
+  } else {
+    if (!isMagnetSlug(slug)) return Response.json({ error: "Unknown tool." }, { status: 400 });
+    const config = magnetConfigs[slug];
+    if (!("emailVerification" in config) || !config.emailVerification) {
+      return Response.json({ error: "This tool does not use email verification." }, { status: 400 });
+    }
+    scope = slug;
+    toolTitle = config.title;
   }
 
   if (payload.action === "start") {
@@ -52,9 +65,9 @@ export async function POST(request: Request) {
       return Response.json({ error: "A code was just sent. Wait a few seconds before requesting another." }, { status: 429 });
     }
 
-    const { code, challenge, expiresAt } = createChallenge(normalized, slug);
+    const { code, challenge, expiresAt } = createChallenge(normalized, scope);
     const delivery = await sendViaAgentMail(
-      buildVerificationEmail({ email: normalized, name, code, toolTitle: config.title }),
+      buildVerificationEmail({ email: normalized, name, code, toolTitle }),
     );
 
     if (delivery.mode === "failed") {

@@ -1,6 +1,7 @@
 import { campaigns, getCampaign } from "@/lib/campaigns";
 import { sendViaAgentMail, type EmailDelivery } from "@/lib/email/agentmail";
 import { buildAssessmentReportEmail } from "@/lib/email/assessment-report";
+import { enrollFollowUps } from "@/lib/founders/store";
 import { verifyToken } from "@/lib/verify/email-code";
 import {
   companyProfileOptions,
@@ -732,8 +733,25 @@ async function handleFinalMagnetSubmission(payload: FinalLeadPayload) {
     opportunity = await createSaleOpportunity({ contactId, company, interestLabel: saleInterest.label });
   }
 
+  // Audit takers join the Founder Library follow-up sequence (they consented on the gate page).
+  let followUps: Awaited<ReturnType<typeof enrollFollowUps>> | undefined;
+  if (isSaleAudit && result.magnet_slug !== "outside-counsel-playbook") {
+    followUps = await enrollFollowUps({
+      email,
+      name,
+      company,
+      website: profile?.website ?? null,
+      toolSlug: config.slug,
+      toolTitle: config.title,
+      headline: `${company} scored ${result.score}/${result.score_max} (${result.tier.label}).`,
+      signals: [...(saleInterest ? [`sale-interest:${saleInterest.code}`] : []), `tier:${result.tier.key}`],
+      threadId: emailDelivery?.mode === "sent" ? emailDelivery.threadId ?? null : null,
+    });
+  }
+
   return Response.json({
     ...result,
+    ...(followUps ? { follow_ups: followUps.mode } : {}),
     crm_mode: highLevel.mode,
     highlevel: highLevel.mode,
     ...(emailDelivery ? { email_delivery: emailDelivery.mode } : {}),

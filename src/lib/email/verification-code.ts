@@ -34,7 +34,7 @@ export function buildVerificationEmail({
     "",
     `Your verification code for the ${toolTitle} is: ${code}`,
     "",
-    "Enter it on the page to start the audit. The code expires in 15 minutes.",
+    "Enter it on the page to continue. The code expires in 15 minutes.",
     "",
     "If you didn't request this, you can ignore this email.",
     "",
@@ -59,7 +59,7 @@ export function buildVerificationEmail({
     <div style="font-family:'Courier New',monospace;font-size:38px;letter-spacing:.18em;font-weight:700;color:${NAVY};background:${SNOW};border:1px solid ${RULE};text-align:center;padding:18px 0">${spaced}</div>
   </td></tr>
   <tr><td style="padding:8px 28px 28px">
-    <p style="font-size:15px;line-height:1.55;margin:0;color:${NAVY}">Enter it on the page to start the audit. The code expires in 15 minutes.</p>
+    <p style="font-size:15px;line-height:1.55;margin:0;color:${NAVY}">Enter it on the page to continue. The code expires in 15 minutes.</p>
     <p style="font-size:13px;line-height:1.55;margin:14px 0 0;color:${GRANITE}">If you didn't request this at ${esc(site.replace(/^https?:\/\//, ""))}, you can ignore this email. It was sent to ${esc(email)}.</p>
   </td></tr>
 </table>

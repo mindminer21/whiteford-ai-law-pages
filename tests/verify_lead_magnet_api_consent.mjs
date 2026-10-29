@@ -39,6 +39,7 @@ const routeSource = fs
   )
   .replace('from "@/lib/email/agentmail";', `from ${JSON.stringify(pathToFileURL(agentmailPath).href)};`)
   .replace('from "@/lib/email/assessment-report";', `from ${JSON.stringify(pathToFileURL(tempReportEmailPath).href)};`)
+  .replace('from "@/lib/founders/store";', `from ${JSON.stringify(pathToFileURL(path.join(root, "src/lib/founders/store.ts")).href)};`)
   .replace('from "@/lib/verify/email-code";', `from ${JSON.stringify(pathToFileURL(emailCodePath).href)};`);
 
 const tempVerifyRoutePath = path.join(os.tmpdir(), `whiteford-verify-route-${process.pid}.ts`);

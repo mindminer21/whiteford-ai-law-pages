@@ -227,6 +227,24 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="fl-home-band">
+        <div className="container fl-home-band-inner">
+          <div>
+            <div className="directory-eyebrow">New · The Founder Library</div>
+            <h2>
+              Free legal tools for founders, <em>from formation to exit.</em>
+            </h2>
+            <p>
+              Model your SAFEs, prepare an 83(b), check a Colorado non-compete, size your option pool and build a
+              diligence list, with a report emailed to you.
+            </p>
+          </div>
+          <a className="learn-report-submit fl-button" href="/founders">
+            Open the Founder Library
+          </a>
+        </div>
+      </section>
+
       <section className="directory-grid-section">
         <div className="container">
           <div className="directory-grid">
