@@ -832,7 +832,7 @@ function VerifiedAssessmentFlow({ config }: { config: AssessmentMagnetConfig }) 
         </span>
       </label>
       <button className="learn-report-submit" type="submit" disabled={busy || !detailsComplete}>
-        {busy ? "Sending code..." : "Email me a code"}
+        {busy ? "Sending code..." : "Get Started"}
       </button>
       {message ? <p className={isError ? "learn-report-message is-error" : "learn-report-message"}>{message}</p> : null}
     </form>

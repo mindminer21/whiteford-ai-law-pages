@@ -55,6 +55,16 @@ export function SiteFooter() {
             <p className="footer-meta">LEARN.SCHELLIP.COM/FOUNDERS</p>
             <p className="footer-meta">DENVER · MOUNTAIN WEST</p>
             <p>
+              <Link className="footer-meta" href="/founders/about">
+                ABOUT WHITEFORD | SCHELL IP
+              </Link>
+            </p>
+            <p>
+              <Link className="footer-meta" href="/founders/mountain-west">
+                STARTING A BUSINESS IN THE MOUNTAIN WEST
+              </Link>
+            </p>
+            <p>
               <Link className="footer-meta" href="/founders/glossary">
                 GLOSSARY
               </Link>

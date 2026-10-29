@@ -246,7 +246,7 @@ function Gate({ tool, onVerified }: { tool: ToolSpec; onVerified: (identity: Ide
         <span>{consentText}</span>
       </label>
       <button className="learn-report-submit" type="submit" disabled={busy || !complete}>
-        {busy ? "Sending code..." : "Email me a code"}
+        {busy ? "Sending code..." : "Get Started"}
       </button>
       {message ? <p className={message.error ? "learn-report-message is-error" : "learn-report-message"}>{message.text}</p> : null}
     </form>

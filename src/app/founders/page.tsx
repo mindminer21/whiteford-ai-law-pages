@@ -39,8 +39,10 @@ export default function FoundersHome() {
             <a href="#raise">Raising money</a>
             <a href="#start">Just starting</a>
             <a href="#sell">Thinking about a sale</a>
+            <Link href="/founders/mountain-west">Starting a business in the Mountain West</Link>
             <Link href="/founders/financing-documents">Financing documents</Link>
             <Link href="/founders/glossary">Glossary</Link>
+            <Link href="/founders/about">About Whiteford | Schell IP</Link>
           </div>
         </div>
       </section>
@@ -102,6 +104,50 @@ export default function FoundersHome() {
           </section>
         );
       })}
+
+      <section className="fl-stage" id="mountain-west">
+        <div className="container">
+          <div className="fl-stage-head">
+            <span className="fl-stage-number">MW</span>
+            <div>
+              <h2>Building in the Mountain West</h2>
+              <p>Where to register, where to find free help and capital, and who we are.</p>
+            </div>
+          </div>
+          <div className="directory-grid fl-tool-grid fl-pair-grid">
+            <Link className="directory-card fl-tool-card" href="/founders/mountain-west">
+              <div className="directory-card-content">
+                <div className="directory-meta">Guide · Colorado &amp; Utah</div>
+                <h3>
+                  Starting a business in <em>the Mountain West</em>
+                </h3>
+                <p>
+                  The state filings, free counseling, university programs, accelerators, IP resources and funding programs for
+                  founders in Colorado and Utah, with notes for Wyoming and Idaho.
+                </p>
+                <div className="directory-card-action">
+                  Read the guide <span><Arrow /></span>
+                </div>
+              </div>
+            </Link>
+            <Link className="directory-card fl-tool-card" href="/founders/about">
+              <div className="directory-card-content">
+                <div className="directory-meta">About</div>
+                <h3>
+                  Whiteford <em>| Schell IP</em>
+                </h3>
+                <p>
+                  Whiteford, Taylor &amp; Preston&apos;s Denver practice for founders: patents and IP strategy, AI counsel, outside
+                  general counsel, financings and sell-side M&amp;A.
+                </p>
+                <div className="directory-card-action">
+                  About us <span><Arrow /></span>
+                </div>
+              </div>
+            </Link>
+          </div>
+        </div>
+      </section>
 
       <section className="fl-band">
         <div className="container fl-band-grid">
