@@ -2337,3 +2337,39 @@ select.fl-input {
     grid-template-columns: 1fr;
   }
 }
+
+.fl-about-contact > * {
+  min-width: 0;
+}
+
+@media (max-width: 900px) {
+  .fl-about-contact {
+    padding: 24px;
+  }
+
+  .fl-about-contact .fl-button,
+  .fl-about-contact .fl-button-secondary {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    white-space: normal;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}
+
+.fl-about-copy p {
+  margin: 0 0 16px;
+}
+
+@media (min-width: 901px) {
+  .fl-about-service:last-child:nth-child(3n + 2) {
+    grid-column: span 2;
+  }
+}
+
+@media (min-width: 901px) {
+  .fl-mw-list li:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+  }
+}
