@@ -85,11 +85,6 @@ export default function AboutPage() {
                 <li>Former President, TiE Denver</li>
                 <li>Lecturer at the University of Colorado; mentor at Techstars and Boomtown</li>
               </ul>
-              <p className="fl-about-edu">
-                J.D., DePaul University College of Law · M.S., Medical Informatics, and B.E., Industrial Engineering &amp;
-                Management, Northwestern University · Admitted in Colorado and Michigan and before the U.S. Patent and Trademark
-                Office
-              </p>
               <a className="fl-about-bio" href="https://www.whitefordlaw.com/professionals/jeffrey-r-schell" target="_blank" rel="noopener noreferrer">
                 Full bio on whitefordlaw.com &rarr;
               </a>
