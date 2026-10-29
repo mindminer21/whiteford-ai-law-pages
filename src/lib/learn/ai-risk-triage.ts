@@ -295,7 +295,7 @@ img, svg { max-width: 100%; }
       <span class="brand-divider"></span>
       <img class="brand-logo-schellip" src="/logos/schellip-color.png" alt="Schell IP" width="982" height="149">
     </div>
-    <span class="brand-bar-meta">learn.schellip.com</span>
+    <a class="brand-bar-cta" href="https://schellip.com/book-a-consultation"><span class="brand-bar-cta-lead">Book a</span>Free Consultation</a>
   </div>
 </div>
 

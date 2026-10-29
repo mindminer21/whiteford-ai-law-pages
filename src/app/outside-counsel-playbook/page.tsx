@@ -423,8 +423,8 @@ const pageStyles = `
   .outside-counsel-page .brand-logo-whiteford { height: 22px; }
   .outside-counsel-page .brand-logo-schellip { height: 10px; }
   .outside-counsel-page .brand-divider { height: 22px; }
-  .outside-counsel-page .brand-bar .container { align-items: flex-start; flex-direction: column; gap: 8px; }
-  .outside-counsel-page .brand-bar-meta { font-size: 10px; }
+  .outside-counsel-page .brand-bar .container { gap: 12px; }
+  .outside-counsel-page .brand-lockup { gap: 12px; }
 }
 `;
 
@@ -465,7 +465,9 @@ export default function OutsideCounselPlaybookPage() {
               height={149}
             />
           </div>
-          <span className="brand-bar-meta">Attorney advertising · learn.schellip.com</span>
+          <a className="brand-bar-cta" href="https://schellip.com/book-a-consultation">
+            <span className="brand-bar-cta-lead">Book a</span>Free Consultation
+          </a>
         </div>
       </div>
 

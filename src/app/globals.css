@@ -1123,3 +1123,52 @@ textarea {
     flex: 1;
   }
 }
+
+/* Header call to action (replaces the learn.schellip.com label) */
+.brand-bar-cta {
+  display: inline-flex;
+  align-items: center;
+  min-height: 40px;
+  padding: 0 18px;
+  background: var(--accent);
+  border: 1px solid var(--accent);
+  color: #ffffff !important;
+  font-family: var(--display), system-ui, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  text-decoration: none !important;
+  white-space: nowrap;
+  gap: 0.3em;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.brand-bar-cta:hover,
+.brand-bar-cta:focus-visible {
+  background: var(--ink);
+  border-color: var(--ink);
+}
+
+@media (max-width: 640px) {
+  .brand-bar-cta {
+    min-height: 34px;
+    padding: 0 12px;
+    font-size: 12.5px;
+  }
+}
+
+/* Narrow phones: keep the logo lockup clear of the button */
+@media (max-width: 480px) {
+  .brand-bar .brand-lockup {
+    gap: 12px;
+  }
+
+  .brand-bar .brand-bar-cta {
+    padding: 0 10px;
+    font-size: 12px;
+  }
+
+  .brand-bar-cta-lead {
+    display: none;
+  }
+}

@@ -207,7 +207,9 @@ export default function Home() {
               height={149}
             />
           </div>
-          <span className="brand-bar-meta">Attorney advertising · learn.schellip.com</span>
+          <a className="brand-bar-cta" href="https://schellip.com/book-a-consultation">
+            <span className="brand-bar-cta-lead">Book a</span>Free Consultation
+          </a>
         </div>
       </div>
 
