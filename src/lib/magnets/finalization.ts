@@ -114,6 +114,13 @@ type BaseMagnetConfig = {
   emailVerification?: boolean;
 };
 
+/** Presentation grouping for paged assessments (scoring areas are unchanged). */
+export type QuestionPage = {
+  title: string;
+  intro: string;
+  questionIds: string[];
+};
+
 export type AssessmentMagnetConfig = BaseMagnetConfig & {
   kind: "assessment";
   scoreMax: number;
@@ -121,6 +128,8 @@ export type AssessmentMagnetConfig = BaseMagnetConfig & {
   questions: MagnetQuestion[];
   areas: MagnetArea[];
   tiers: TierRule[];
+  /** When set, the verified flow shows these pages one at a time with a progress bar. */
+  questionPages?: QuestionPage[];
 };
 
 export type DownloadMagnetConfig = BaseMagnetConfig & {
@@ -817,6 +826,23 @@ export const magnetConfigs = {
     emailDelivery: "agentmail",
     followUpOption: "I'd like Jeff to follow up about my result and timeline.",
     scoreMax: 45,
+    questionPages: [
+      {
+        title: "IP ownership & protection",
+        intro: "Who owns the technology and the brand, and how well it is protected.",
+        questionIds: ["q1", "q2", "q3", "q4", "q6"],
+      },
+      {
+        title: "Know-how, software & data",
+        intro: "Trade secrets, the licenses and code the product depends on, and the data behind it.",
+        questionIds: ["q5", "q8", "q10", "q11", "q12"],
+      },
+      {
+        title: "Contracts, records & disputes",
+        intro: "What a buyer will ask to see before signing.",
+        questionIds: ["q7", "q9", "q13", "q14", "q15"],
+      },
+    ],
     areas: [
       {
         key: "ownership",

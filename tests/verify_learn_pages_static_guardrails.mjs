@@ -69,6 +69,13 @@ const pages = [
     needsReportSlot: true,
   },
   {
+    name: "Sale & Investor Readiness Audit begin page",
+    source: read("src/app/sale-readiness-audit/begin/page.tsx") + read("src/lib/learn/sale-readiness-audit.ts"),
+    brandMarker: '<div class="brand-lockup">',
+    footerMarker: '<div class="footer-lockup">',
+    needsReportSlot: false,
+  },
+  {
     name: "Outside Counsel Playbook",
     source: read("src/app/outside-counsel-playbook/page.tsx"),
     brandMarker: 'className="brand-lockup"',
@@ -113,6 +120,8 @@ assert.ok(rootPage.includes('href: "/governance-plan"'), "Directory must link to
 assert.ok(rootPage.includes('href: "/outside-counsel-playbook"'), "Directory must link to /outside-counsel-playbook");
 assert.ok(rootPage.includes('href: "/sale-readiness-audit"'), "Directory must link to /sale-readiness-audit");
 assert.ok(magnetConfig.includes("Score my sale readiness"), "Sale readiness route must use its finalized button");
+assert.ok(read("src/lib/learn/sale-readiness-audit.ts").includes('href="/sale-readiness-audit/begin"'), "Sale readiness landing must link to the audit page");
+assert.ok(read("src/app/sale-readiness-audit/begin/page.tsx").includes('magnetConfigs["sale-readiness-audit"]'), "Audit page must mount the sale readiness flow");
 assert.ok(rootPage.includes("PDF · 5 pages"), "Directory must show the outside counsel PDF meta line");
 assert.ok(rootPage.includes('href="/legacy"'), "Directory root must link to the moved legacy campaign hub");
 assert.doesNotMatch(rootPage, /governance-matrix/, "Directory must not use old governance-matrix slug");

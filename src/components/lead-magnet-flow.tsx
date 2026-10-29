@@ -309,6 +309,257 @@ function AssessmentFlow({
   );
 }
 
+/**
+ * Verified, paged assessment: one group of questions per page, auto-advancing when a page is
+ * completed, then a final "About your company" page with the submit button.
+ */
+function PagedAssessmentFlow({
+  config,
+  verified,
+  onChangeIdentity,
+  onTokenRejected,
+}: {
+  config: AssessmentMagnetConfig;
+  verified: VerifiedIdentity;
+  onChangeIdentity: () => void;
+  onTokenRejected: (message: string) => void;
+}) {
+  const pages = config.questionPages ?? [];
+  const companyPage = pages.length;
+  const totalPages = pages.length + 1;
+  const [pageIndex, setPageIndex] = useState(0);
+  const [answers, setAnswers] = useState<Record<string, number | undefined>>(() => initialAnswers(config));
+  const [contact, setContact] = useState<ContactState>(() => ({
+    ...initialContact(config),
+    name: verified.name,
+    email: verified.email,
+    company: verified.company,
+    website: verified.website,
+    permissionAcknowledged: true,
+  }));
+  const [status, setStatus] = useState<SubmitStatus>("idle");
+  const [message, setMessage] = useState("");
+  const [result, setResult] = useState<(AssessmentResult & { email_delivery?: string }) | null>(null);
+  const cardRef = useRef<HTMLFormElement>(null);
+  const resultRef = useRef<HTMLDivElement>(null);
+  const advanceTimer = useRef<number | null>(null);
+
+  const questionsById = useMemo(
+    () => Object.fromEntries(config.questions.map((question) => [question.id, question])),
+    [config.questions],
+  );
+  const answeredCount = config.questions.filter((question) => answers[question.id] !== undefined).length;
+  const profileFilled = profileKeys.filter((key) => Boolean(contact.profile[key])).length;
+  const progress = Math.round(
+    ((answeredCount + (pageIndex === companyPage ? profileFilled / profileKeys.length : 0)) /
+      (config.questions.length + 1)) *
+      100,
+  );
+
+  const pageComplete = (index: number, current = answers) =>
+    (pages[index]?.questionIds ?? []).every((id) => current[id] !== undefined);
+
+  useEffect(() => () => {
+    if (advanceTimer.current) window.clearTimeout(advanceTimer.current);
+  }, []);
+
+  function goTo(index: number) {
+    if (advanceTimer.current) window.clearTimeout(advanceTimer.current);
+    setPageIndex(index);
+    setMessage("");
+    window.requestAnimationFrame(() => cardRef.current?.scrollIntoView({ behavior: "smooth", block: "start" }));
+  }
+
+  function answer(questionId: string, optionIndex: number) {
+    const before = pageComplete(pageIndex);
+    const next = { ...answers, [questionId]: optionIndex };
+    setAnswers(next);
+    // Move on only when this answer completes the page, not when revisiting a finished page.
+    if (!before && pageComplete(pageIndex, next)) {
+      const target = pageIndex + 1;
+      advanceTimer.current = window.setTimeout(() => goTo(target), 420);
+    }
+  }
+
+  const canSubmit =
+    answeredCount === config.questions.length &&
+    profileComplete(config, contact) &&
+    Boolean(contact.qualifyingStatus) &&
+    status !== "submitting";
+
+  async function submit(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    if (pageIndex !== companyPage) {
+      if (pageComplete(pageIndex)) goTo(pageIndex + 1);
+      return;
+    }
+    if (!canSubmit) {
+      const firstOpen = pages.findIndex((_, index) => !pageComplete(index));
+      if (firstOpen >= 0) {
+        goTo(firstOpen);
+        setMessage("A few questions on this page still need an answer.");
+      } else {
+        setMessage("Choose an option for each company detail before submitting.");
+      }
+      setStatus("error");
+      return;
+    }
+
+    const compactAnswers = Object.fromEntries(
+      config.questions.map((question) => [question.id, question.options[Number(answers[question.id])]?.score]),
+    );
+    setStatus("submitting");
+    setMessage("");
+
+    try {
+      const response = await fetch("/api/leads", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: contact.name,
+          email: contact.email,
+          company: contact.company,
+          qualifying_status: contact.qualifyingStatus,
+          permission_acknowledged: true,
+          magnet_slug: config.slug,
+          answers: compactAnswers,
+          ...profilePayload(config, contact),
+          verification_token: verified.token,
+        }),
+      });
+      const data = (await response.json()) as (AssessmentResult & { email_delivery?: string }) | { error?: string };
+      if (!response.ok && "error" in data && /verify your email/i.test(data.error ?? "")) {
+        onTokenRejected(data.error ?? "Please verify your email again.");
+        return;
+      }
+      if (!response.ok || !("ok" in data)) {
+        throw new Error("error" in data ? data.error : "Submission failed");
+      }
+      setResult(data);
+      setStatus("done");
+      window.requestAnimationFrame(() => resultRef.current?.scrollIntoView({ behavior: "smooth", block: "start" }));
+    } catch (error) {
+      setStatus("error");
+      setMessage(error instanceof Error ? error.message : "The assessment could not be submitted.");
+    }
+  }
+
+  if (result) {
+    return <AssessmentResultView config={config} result={result} resultRef={resultRef} email={contact.email} />;
+  }
+
+  const page = pages[pageIndex];
+  const onCompanyPage = pageIndex === companyPage;
+
+  return (
+    <form
+      ref={cardRef}
+      className="learn-report-card learn-assessment-form learn-paged-form"
+      data-learn-magnet-form={config.slug}
+      data-page={pageIndex + 1}
+      onSubmit={submit}
+    >
+      <StepIndicator step={3} />
+      <div className="learn-verified-identity">
+        <span>
+          <strong>{verified.name}</strong> · {verified.email} · {verified.company}
+        </span>
+        <button type="button" className="learn-link-button" onClick={onChangeIdentity}>
+          Change
+        </button>
+      </div>
+
+      <div className="learn-progress" aria-label="Audit progress">
+        <div className="learn-progress-meta">
+          <span>
+            Page {pageIndex + 1} of {totalPages}
+          </span>
+          <span>
+            {answeredCount} of {config.questions.length} questions answered
+          </span>
+        </div>
+        <div
+          className="learn-progress-track"
+          role="progressbar"
+          aria-valuemin={0}
+          aria-valuemax={100}
+          aria-valuenow={progress}
+        >
+          <div className="learn-progress-fill" style={{ width: `${progress}%` }} />
+        </div>
+      </div>
+
+      {onCompanyPage ? (
+        <>
+          <h3>About your company</h3>
+          <p className="learn-report-copy">Last step. These details shape the report and stay in our contact records.</p>
+          <CompanyDetailsBlock config={config} contact={contact} setContact={setContact} />
+        </>
+      ) : (
+        <>
+          <h3>{page.title}</h3>
+          <p className="learn-report-copy">{page.intro}</p>
+          <p className="learn-compliance-note">{noConfidentialInfoText}</p>
+          <div className="learn-question-groups">
+            <div className="learn-question-group" role="group" aria-label={page.title}>
+              {page.questionIds.map((id, position) => {
+                const question = questionsById[id];
+                if (!question) return null;
+                return (
+                  <fieldset key={id} className="learn-question" data-assessment-question={id}>
+                    <legend>
+                      <span>
+                        {pages.slice(0, pageIndex).reduce((sum, item) => sum + item.questionIds.length, 0) + position + 1} of{" "}
+                        {config.questions.length}
+                      </span>
+                      {question.label}
+                    </legend>
+                    <div className="learn-answer-options">
+                      {question.options.map((option, optionIndex) => (
+                        <label key={`${id}-${option.label}`} className="learn-answer-option">
+                          <input
+                            type="radio"
+                            name={`${config.slug}-${id}`}
+                            value={optionIndex}
+                            checked={answers[id] === optionIndex}
+                            onChange={() => answer(id, optionIndex)}
+                          />
+                          <span>{option.label}</span>
+                        </label>
+                      ))}
+                    </div>
+                  </fieldset>
+                );
+              })}
+            </div>
+          </div>
+        </>
+      )}
+
+      <div className="learn-page-nav">
+        {pageIndex > 0 ? (
+          <button type="button" className="learn-page-back" onClick={() => goTo(pageIndex - 1)}>
+            Back
+          </button>
+        ) : (
+          <span />
+        )}
+        {onCompanyPage ? (
+          <button className="learn-report-submit" type="submit" disabled={!canSubmit}>
+            {status === "submitting" ? "Preparing your result..." : config.buttonLabel}
+          </button>
+        ) : (
+          <button className="learn-report-submit" type="submit" disabled={!pageComplete(pageIndex)}>
+            Next
+          </button>
+        )}
+      </div>
+
+      {message ? <p className={status === "error" ? "learn-report-message is-error" : "learn-report-message"}>{message}</p> : null}
+    </form>
+  );
+}
+
 type GateStage = "details" | "code" | "questions";
 
 function storageKey(slug: string) {
@@ -369,31 +620,10 @@ function VerifiedAssessmentFlow({ config }: { config: AssessmentMagnetConfig }) 
   const nameRef = useRef<HTMLInputElement>(null);
   const codeRef = useRef<HTMLInputElement>(null);
 
-  // The audit section (#start) is hidden until a "Score my sale readiness" button is clicked.
-  // Reveal it, scroll to it and put the cursor in the first field. A verified visitor returning in
-  // the same tab sees it straight away.
+  // The gate has its own page: put the cursor in the first field when it opens.
   useEffect(() => {
-    const section = document.getElementById("start");
-    if (!section) return;
-    const reveal = (focus: boolean) => {
-      section.hidden = false;
-      window.requestAnimationFrame(() => {
-        section.scrollIntoView({ behavior: "smooth", block: "start" });
-        if (focus) {
-          window.setTimeout(() => (stage === "code" ? codeRef.current : nameRef.current)?.focus({ preventScroll: true }), 450);
-        }
-      });
-    };
-    if (identity && section.hidden) section.hidden = false;
-    function onClick(event: MouseEvent) {
-      const link = (event.target as Element | null)?.closest?.('a[href="#start"]');
-      if (!link) return;
-      event.preventDefault();
-      reveal(true);
-    }
-    document.addEventListener("click", onClick);
-    return () => document.removeEventListener("click", onClick);
-  }, [stage, identity]);
+    if (stage === "details") nameRef.current?.focus();
+  }, [stage]);
 
   useEffect(() => {
     if (stage === "code") codeRef.current?.focus();
@@ -487,6 +717,21 @@ function VerifiedAssessmentFlow({ config }: { config: AssessmentMagnetConfig }) 
     setCode("");
     setStage("details");
     say(text, Boolean(text));
+  }
+
+  if (stage === "questions" && identity && config.questionPages?.length) {
+    return (
+      <PagedAssessmentFlow
+        key={identity.token}
+        config={config}
+        verified={identity}
+        onChangeIdentity={() => {
+          setDetails((current) => ({ ...current, name: identity.name, email: identity.email, company: identity.company, website: identity.website }));
+          restart();
+        }}
+        onTokenRejected={(text) => restart(text)}
+      />
+    );
   }
 
   if (stage === "questions" && identity) {

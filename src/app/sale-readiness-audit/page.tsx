@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { LearnHtmlPage } from "@/components/learn-html-page";
 import { saleReadinessAuditContent } from "@/lib/learn/sale-readiness-audit";
-import { magnetConfigs } from "@/lib/magnets/finalization";
 
 export const metadata: Metadata = {
   title: "Sale & Investor Readiness Audit",
@@ -15,5 +14,5 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  return <LearnHtmlPage content={saleReadinessAuditContent} magnet={magnetConfigs["sale-readiness-audit"]} />;
+  return <LearnHtmlPage content={saleReadinessAuditContent} />;
 }

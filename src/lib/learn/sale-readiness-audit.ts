@@ -1,9 +1,6 @@
 import type { LearnPageContent } from "./types";
 
-export const saleReadinessAuditContent: LearnPageContent = {
-  title: "Sale & Investor Readiness Audit",
-  description: "A 15-question audit scores the five areas buyers and investors diligence first and emails a buyer-diligence risk map with a 60-day cleanup plan.",
-  style: String.raw`:root {
+const saleReadinessAuditStyle = String.raw`:root {
   --ink: #003756;
   --ink-hover: #154E73;
   --ink-deep: #002B45;
@@ -310,11 +307,6 @@ img, svg { max-width: 100%; }
   .radar-card, .scorecard-mock, .matrix-card { max-width: min(350px, calc(100vw - 40px)); }
 }
 
-/* The audit section stays hidden until a "Score my sale readiness" button is clicked. */
-.audit-start[hidden] { display: none !important; }
-.audit-start { padding: 64px 0; scroll-margin-top: 72px; }
-.audit-start .learn-report-card { margin-top: 0; }
-
 /* Sale readiness: sample risk map */
 .riskmap { margin-top: 6px; }
 .riskmap-row { display: grid; grid-template-columns: 132px 1fr 92px; gap: 12px; align-items: center; padding: 9px 0; border-top: 1px solid var(--line); }
@@ -336,7 +328,20 @@ img, svg { max-width: 100%; }
   .riskmap-row { grid-template-columns: 96px 1fr 78px; gap: 8px; }
   .cost-list li, .cost-head { grid-template-columns: 1fr; gap: 6px; }
 }
-`,
+
+/* Audit page (/sale-readiness-audit/begin) */
+.begin-shell { background: var(--paper-soft); padding: 48px 0 90px; min-height: 70vh; }
+.begin-shell .container { max-width: 880px; }
+.begin-shell .hero-eyebrow { margin: 18px 0 18px; }
+.begin-back { font-family: var(--mono); font-size: 12px; letter-spacing: 0.06em; color: var(--ink-hover); text-decoration: none; }
+.begin-back:hover { color: var(--accent); }
+.begin-shell .learn-report-card { margin-top: 0; }
+`;
+
+export const saleReadinessAuditContent: LearnPageContent = {
+  title: "Sale & Investor Readiness Audit",
+  description: "A 15-question audit scores the five areas buyers and investors diligence first and emails a buyer-diligence risk map with a 60-day cleanup plan.",
+  style: saleReadinessAuditStyle,
   markup: String.raw`<div class="brand-bar">
   <div class="container">
     <div class="brand-lockup">
@@ -355,7 +360,7 @@ img, svg { max-width: 100%; }
       <h1>See your company the way a <em>buyer&rsquo;s diligence team</em> will.</h1>
       <p class="hero-sub">Fifteen categorical questions cover the five areas buyers and investors check first: who owns the IP, how it is protected, whether key contracts survive a sale, software and data rights, and corporate records. Get a score, a buyer-diligence risk map and a 60-day cleanup plan, on screen and in your inbox.</p>
       <div class="hero-cta-row">
-        <a href="#start" class="btn-primary">
+        <a href="/sale-readiness-audit/begin" class="btn-primary">
           Score my sale readiness
           <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3 9h12M10 4l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/></svg>
         </a>
@@ -470,13 +475,6 @@ img, svg { max-width: 100%; }
     </div>
   </div>
 </section>
-
-<section class="cta-banner audit-start" id="start" hidden>
-  <div class="container">
-    <div data-learn-report-slot="sale-readiness-audit"></div>
-  </div>
-</section>
-
 <section class="bio">
   <div class="container">
     <div class="bio-grid">
@@ -497,6 +495,51 @@ img, svg { max-width: 100%; }
         </div>
       </div>
     </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-lockup">
+          <img class="footer-logo-whiteford" src="/logos/whiteford-white-on-navy.png" alt="Whiteford Taylor Preston" width="900" height="270">
+          <span class="footer-divider"></span>
+          <img class="footer-logo-schellip" src="/logos/schellip-white.png" alt="Schell IP" width="982" height="149">
+        </div>
+        <p class="footer-disclaimer">This tool is for general informational purposes only and is not legal advice. Use of this tool does not create an attorney-client relationship between you, your company, and Whiteford Taylor &amp; Preston LLP or Schell IP. Do not submit confidential, privileged, or trade-secret information through this tool. Any engagement is subject to a conflicts check and a written engagement letter. Attorney advertising. Prior results do not guarantee a similar outcome.</p>
+      </div>
+      <div>
+        <p class="footer-meta">LEARN.SCHELLIP.COM</p>
+        <p class="footer-meta" style="margin-top: 8px;">DENVER · WASHINGTON · MOUNTAIN WEST</p>
+      </div>
+    </div>
+    <p class="footer-meta">© 2026 Whiteford Taylor &amp; Preston LLP · All rights reserved · Attorney advertising</p>
+  </div>
+</footer>`,
+};
+
+/** The audit itself: details, email verification, then the paged questions. */
+export const saleReadinessAuditBeginContent: LearnPageContent = {
+  title: "Sale & Investor Readiness Audit",
+  description: "Start the Sale & Investor Readiness Audit.",
+  style: saleReadinessAuditStyle,
+  markup: String.raw`<div class="brand-bar">
+  <div class="container">
+    <div class="brand-lockup">
+      <img class="brand-logo-whiteford" src="/logos/whiteford-navy-on-light.png" alt="Whiteford Taylor Preston" width="886" height="205">
+      <span class="brand-divider"></span>
+      <img class="brand-logo-schellip" src="/logos/schellip-color.png" alt="Schell IP" width="982" height="149">
+    </div>
+    <span class="brand-bar-meta">learn.schellip.com</span>
+  </div>
+</div>
+
+<section class="begin-shell">
+  <div class="container">
+    <a class="begin-back" href="/sale-readiness-audit">&larr; About the audit</a>
+    <div class="hero-eyebrow">Sale &amp; Investor Readiness Audit</div>
+    <div data-learn-report-slot="sale-readiness-audit"></div>
   </div>
 </section>
 

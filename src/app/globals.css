@@ -1047,3 +1047,73 @@ textarea {
 .learn-gate-form .learn-report-fields {
   margin-top: 18px;
 }
+
+/* Paged assessment */
+.learn-progress {
+  margin: 4px 0 26px;
+}
+
+.learn-progress-meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-hover);
+  margin-bottom: 8px;
+}
+
+.learn-progress-track {
+  height: 8px;
+  background: var(--paper-deep);
+  overflow: hidden;
+}
+
+.learn-progress-fill {
+  height: 100%;
+  background: var(--accent);
+  transition: width 0.35s ease;
+}
+
+.learn-page-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.learn-page-nav .learn-report-submit {
+  width: auto;
+  min-width: 220px;
+  margin-top: 0;
+  padding: 0 28px;
+}
+
+.learn-page-back {
+  background: none;
+  border: 1px solid var(--line-strong);
+  color: var(--ink);
+  min-height: 52px;
+  padding: 0 24px;
+  font: inherit;
+  cursor: pointer;
+}
+
+.learn-page-back:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.learn-paged-form {
+  scroll-margin-top: 90px;
+}
+
+@media (max-width: 640px) {
+  .learn-page-nav .learn-report-submit {
+    min-width: 0;
+    flex: 1;
+  }
+}
