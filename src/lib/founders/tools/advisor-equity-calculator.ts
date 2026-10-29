@@ -81,12 +81,12 @@ function compute(values: Values): ToolReport {
     title: "How we got the range",
     tone: "info",
     items: [
-      `${stageLabels[stage] ?? "Seed"} companies commonly grant advisors roughly ${stageRanges[stage]?.[0] ?? 0.1}% to ${stageRanges[stage]?.[1] ?? 0.5}% for a hands-on, two-year role; we scaled that for the involvement and term you chose. These are rough illustrative figures, not survey data, and the right grant depends on what the advisor actually brings.`,
+      `As a rough starting point, this tool uses ${stageRanges[stage]?.[0] ?? 0.1}% to ${stageRanges[stage]?.[1] ?? 0.5}% for a hands-on, two-year advisor at the ${(stageLabels[stage] ?? "Seed").toLowerCase()} stage, scaled for the involvement and term you chose. These are illustrative figures, not survey or market data, and the right grant depends on what the advisor actually brings.`,
     ],
   });
 
   return {
-    headline: `A ${engagement === "standard" ? "light-touch" : engagement === "intensive" ? "high-involvement" : "hands-on"} advisor at your stage typically gets roughly ${low}% to ${high}% over ${term} months.`,
+    headline: `A rough starting range for a ${engagement === "standard" ? "light-touch" : engagement === "intensive" ? "high-involvement" : "hands-on"} advisor at your stage: ${low}% to ${high}% over ${term} months.`,
     summary: `That is about ${int(lowShares)} to ${int(highShares)} shares of your ${int(shares)} fully diluted. ${price ? `At today's 409A price that's roughly ${usd(lowShares * price, { compact: true })} to ${usd(highShares * price, { compact: true })} of value.` : ""}`.trim(),
     metrics,
     tables: [

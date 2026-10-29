@@ -322,6 +322,7 @@ export const coloradoNoncompeteChecker: ToolSpec = {
   related: ["option-pool-sizer", "ip-ownership-audit", "advisor-equity-calculator"],
   sources: [
     { label: "Colorado SB25-083 (2025 amendments to C.R.S. 8-2-113)", url: "https://content.leg.colorado.gov/sites/default/files/documents/2025A/bills/sl/2025a_sl_366.pdf" },
+    { label: "Colorado Dept. of Labor and Employment: 2026 PAY CALC Order, Rule 1.2.1(G) ($130,014)", url: "https://cdle.colorado.gov/sites/cdle/files/adopted_2026_temporary_pay_calc_order_7_ccr_1103-14_12.12.2025.pdf" },
     { label: "Epstein Becker Green: 2026 state non-compete salary thresholds", url: "https://www.ebglaw.com/trade-secrets-employee-mobility/raising-the-cost-of-noncompetes-2026-state-noncompete-salary-threshold-changes" },
   ],
 };
