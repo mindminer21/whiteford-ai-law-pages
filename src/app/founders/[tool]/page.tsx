@@ -58,6 +58,7 @@ export default async function ToolPage({ params }: { params: Promise<{ tool: str
                 ))}
               </ul>
             </div>
+            {tool.sources.length ? (
             <div className="fl-aside-block fl-sources">
               <h3>Sources</h3>
               <ul>
@@ -70,6 +71,7 @@ export default async function ToolPage({ params }: { params: Promise<{ tool: str
                 ))}
               </ul>
             </div>
+            ) : null}
           </aside>
         </div>
       </section>
