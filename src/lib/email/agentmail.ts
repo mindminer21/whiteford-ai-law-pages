@@ -3,8 +3,8 @@
  *
  * Env:
  *   AGENTMAIL_API_KEY   API key for the AgentMail organization (required to send)
- *   AGENTMAIL_INBOX_ID  Sending inbox address, e.g. reports@mail.schellip.com (required to send)
- *   AGENTMAIL_REPLY_TO  Optional reply-to address (defaults to the sending inbox)
+ *   AGENTMAIL_INBOX_ID  Sending inbox address: jeff@mail.schellip.com (required to send)
+ *   AGENTMAIL_REPLY_TO  Optional reply-to address (defaults to the sending inbox, so replies reach Jeff)
  *   AGENTMAIL_BCC       Optional internal copy of every report, comma-separated
  *
  * Without the key and inbox the sender runs in preview mode and returns the message it would have sent.

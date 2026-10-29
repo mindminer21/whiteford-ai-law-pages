@@ -157,5 +157,5 @@ export function buildAssessmentReportEmail({
 </td></tr></table>
 </body></html>`;
 
-  return { to: email, subject, text, html, labels: [`magnet:${config.slug}`, `tier:${result.tier.key}`] };
+  return { to: email, subject, text, html, labels: ["lead-magnet-report", `magnet:${config.slug}`, `tier:${result.tier.key}`] };
 }
