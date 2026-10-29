@@ -11,6 +11,17 @@ const root = path.resolve(__dirname, "..");
 const routePath = path.join(root, "src/app/api/leads/route.ts");
 const campaignsPath = path.join(root, "src/lib/campaigns.ts");
 const magnetsPath = path.join(root, "src/lib/magnets/finalization.ts");
+const agentmailPath = path.join(root, "src/lib/email/agentmail.ts");
+const reportEmailPath = path.join(root, "src/lib/email/assessment-report.ts");
+
+// The report-email module imports finalization via the "@/" alias; point it at the real file.
+const tempReportEmailPath = path.join(os.tmpdir(), `whiteford-report-email-${process.pid}.ts`);
+fs.writeFileSync(
+  tempReportEmailPath,
+  fs
+    .readFileSync(reportEmailPath, "utf8")
+    .replace('from "@/lib/magnets/finalization";', `from ${JSON.stringify(pathToFileURL(magnetsPath).href)};`),
+);
 
 const routeSource = fs
   .readFileSync(routePath, "utf8")
@@ -21,17 +32,22 @@ const routeSource = fs
   .replace(
     'from "@/lib/magnets/finalization";',
     `from ${JSON.stringify(pathToFileURL(magnetsPath).href)};`,
-  );
+  )
+  .replace('from "@/lib/email/agentmail";', `from ${JSON.stringify(pathToFileURL(agentmailPath).href)};`)
+  .replace('from "@/lib/email/assessment-report";', `from ${JSON.stringify(pathToFileURL(tempReportEmailPath).href)};`);
 
 const tempRoutePath = path.join(os.tmpdir(), `whiteford-leads-route-${process.pid}.ts`);
 fs.writeFileSync(tempRoutePath, routeSource);
 
 delete process.env.GHL_PRIVATE_INTEGRATION_TOKEN;
 delete process.env.GHL_LOCATION_ID;
+delete process.env.AGENTMAIL_API_KEY;
+delete process.env.AGENTMAIL_INBOX_ID;
 
 const { POST } = await import(pathToFileURL(tempRoutePath).href);
 
 fs.unlinkSync(tempRoutePath);
+fs.unlinkSync(tempReportEmailPath);
 
 const APPROVED_GUARDRAIL_VERSION = "lead-magnet-guardrail-v2";
 
@@ -400,6 +416,88 @@ const governanceAnswers = {
   assert.equal(fieldValue(data, "last_magnet_score"), null);
   assert.equal(fieldValue(data, "last_magnet_pdf_url"), "https://learn.schellip.com/pdfs/outside-counsel-playbook.pdf");
 }
+
+const saleAnswers = {
+  q1: 1, q2: 3, q3: 2, q4: 2, q5: 2, q6: 1, q7: 1, q8: 2, q9: 2, q10: 2, q11: 3, q12: 1, q13: 2, q14: 3, q15: 1,
+};
+const saleProfile = {
+  role: "Founder / CEO",
+  industry: "Software / SaaS",
+  revenue: "$5M to $20M",
+  employees: "11 to 50",
+  hq: "Colorado",
+  phone: "303-555-0100",
+  website: "example.test",
+};
+
+{
+  const data = await postLead({
+    ...buildFinalPayload("sale-readiness-audit", saleAnswers),
+    qualifying_status: "Exploring a sale in the next 12 months.",
+    profile: saleProfile,
+    follow_up_requested: true,
+  });
+  assert.equal(data.ok, true);
+  assert.equal(data.magnet_slug, "sale-readiness-audit");
+  assert.equal(data.score, 28);
+  assert.equal(data.score_max, 45);
+  assert.equal(data.tier.tag, "sale-tier-fixable-gaps");
+  assert.equal(data.email_delivery, "preview");
+  assert.equal(data.email_preview.to, "final-sale-readiness-audit@test.invalid");
+  assert.match(data.email_preview.subject, /28\/45/);
+  assert.equal(data.sale_opportunity, "preview");
+  assert.equal(data.payload.phone, "303-555-0100");
+  assert.equal(data.payload.website, "https://example.test");
+  for (const tag of [
+    "magnet-sale-readiness-audit",
+    "sale-tier-fixable-gaps",
+    "interest:ma-readiness",
+    "sale-interest:sale-0-12-months",
+    "follow-up-requested",
+    "newsletter:colorado-deal-report",
+  ]) {
+    assert.equal(data.payload.tags.includes(tag), true, `missing tag ${tag}`);
+  }
+  assert.equal(data.payload.tags.includes("newsletter:ai"), false);
+  assert.equal(fieldValue(data, "sale_interest_code"), "sale-0-12-months");
+  assert.equal(fieldValue(data, "company_revenue_band"), "$5M to $20M");
+  assert.equal(fieldValue(data, "company_hq_region"), "Colorado");
+  assert.equal(fieldValue(data, "sale_ready_ip_ownership"), 6);
+  assert.equal(fieldValue(data, "last_magnet_email_status"), "agentmail:preview");
+}
+
+{
+  const data = await postLead({
+    ...buildFinalPayload("sale-readiness-audit", saleAnswers),
+    qualifying_status: "No sale planned; I want to know where we stand.",
+    profile: { ...saleProfile, phone: "", website: "" },
+  });
+  assert.equal(data.sale_opportunity, undefined);
+  assert.equal(data.payload.tags.includes("sale-interest:no-sale-planned"), true);
+  assert.equal(data.payload.tags.includes("follow-up-requested"), false);
+}
+
+await rejectLead(
+  {
+    ...buildFinalPayload("sale-readiness-audit", saleAnswers),
+    qualifying_status: "Exploring a sale in the next 12 months.",
+  },
+  /Company profile must use the approved fields/,
+);
+
+await rejectLead(
+  {
+    ...buildFinalPayload("sale-readiness-audit", saleAnswers),
+    qualifying_status: "Exploring a sale in the next 12 months.",
+    profile: { ...saleProfile, revenue: "$3 billion" },
+  },
+  /approved option/,
+);
+
+await rejectLead(
+  { ...buildFinalPayload("ai-risk-triage", riskAnswers), profile: saleProfile },
+  /does not accept a company profile/,
+);
 
 await rejectLead(
   buildFinalPayload("outside-counsel-playbook", { q1: 1 }),

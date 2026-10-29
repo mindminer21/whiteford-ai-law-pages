@@ -3,12 +3,15 @@
 import type { Dispatch, FormEvent, RefObject, SetStateAction } from "react";
 import { useMemo, useRef, useState } from "react";
 import {
+  companyProfileLabels,
+  companyProfileOptions,
   complianceText,
   isAssessmentConfig,
   noConfidentialInfoText,
   permissionText,
   type AssessmentMagnetConfig,
   type AssessmentResult,
+  type CompanyProfileKey,
   type DownloadMagnetConfig,
   type DownloadResult,
   type MagnetConfig,
@@ -21,7 +24,43 @@ type ContactState = {
   company: string;
   qualifyingStatus: string;
   permissionAcknowledged: boolean;
+  phone: string;
+  website: string;
+  profile: Partial<Record<CompanyProfileKey, string>>;
+  followUpRequested: boolean;
 };
+
+const profileKeys = Object.keys(companyProfileOptions) as CompanyProfileKey[];
+
+function initialContact(config: MagnetConfig): ContactState {
+  return {
+    name: "",
+    email: "",
+    company: "",
+    qualifyingStatus: config.statusOptions[0] ?? "",
+    permissionAcknowledged: false,
+    phone: "",
+    website: "",
+    profile: {},
+    followUpRequested: false,
+  };
+}
+
+function profileComplete(config: MagnetConfig, contact: ContactState) {
+  return !config.companyProfile || profileKeys.every((key) => Boolean(contact.profile[key]));
+}
+
+function profilePayload(config: MagnetConfig, contact: ContactState) {
+  if (!config.companyProfile) return {};
+  return {
+    profile: {
+      ...contact.profile,
+      ...(contact.phone.trim() ? { phone: contact.phone.trim() } : {}),
+      ...(contact.website.trim() ? { website: contact.website.trim() } : {}),
+    },
+    ...(config.followUpOption ? { follow_up_requested: contact.followUpRequested } : {}),
+  };
+}
 
 type SubmitStatus = "idle" | "submitting" | "done" | "error";
 
@@ -42,18 +81,13 @@ export function LeadMagnetFlow({ config }: { config: MagnetConfig }) {
 }
 
 function AssessmentFlow({ config }: { config: AssessmentMagnetConfig }) {
-  const [contact, setContact] = useState<ContactState>({
-    name: "",
-    email: "",
-    company: "",
-    qualifyingStatus: config.statusOptions[0] ?? "",
-    permissionAcknowledged: false,
-  });
+  const [contact, setContact] = useState<ContactState>(() => initialContact(config));
+  // Stores the chosen option index per question; several options can share a score.
   const [answers, setAnswers] = useState<Record<string, number | undefined>>(() => initialAnswers(config));
   const [mode, setMode] = useState<MagnetMode>("founder");
   const [status, setStatus] = useState<SubmitStatus>("idle");
   const [message, setMessage] = useState("");
-  const [result, setResult] = useState<AssessmentResult | null>(null);
+  const [result, setResult] = useState<(AssessmentResult & { email_delivery?: string }) | null>(null);
   const resultRef = useRef<HTMLDivElement>(null);
 
   const answeredCount = useMemo(
@@ -67,6 +101,7 @@ function AssessmentFlow({ config }: { config: AssessmentMagnetConfig }) {
     Boolean(contact.company.trim()) &&
     Boolean(contact.qualifyingStatus) &&
     contact.permissionAcknowledged &&
+    profileComplete(config, contact) &&
     answeredCount === config.questions.length &&
     status !== "submitting";
 
@@ -80,7 +115,7 @@ function AssessmentFlow({ config }: { config: AssessmentMagnetConfig }) {
     }
 
     const compactAnswers = Object.fromEntries(
-      Object.entries(answers).map(([key, value]) => [key, Number(value)]),
+      config.questions.map((question) => [question.id, question.options[Number(answers[question.id])]?.score]),
     );
 
     setStatus("submitting");
@@ -99,9 +134,10 @@ function AssessmentFlow({ config }: { config: AssessmentMagnetConfig }) {
           magnet_slug: config.slug,
           mode: config.modeToggle ? mode : undefined,
           answers: compactAnswers,
+          ...profilePayload(config, contact),
         }),
       });
-      const data = (await response.json()) as AssessmentResult | { error?: string };
+      const data = (await response.json()) as (AssessmentResult & { email_delivery?: string }) | { error?: string };
 
       if (!response.ok || !("ok" in data)) {
         throw new Error("error" in data ? data.error : "Submission failed");
@@ -124,6 +160,7 @@ function AssessmentFlow({ config }: { config: AssessmentMagnetConfig }) {
         config={config}
         result={result}
         resultRef={resultRef}
+        email={contact.email.trim()}
       />
     );
   }
@@ -171,14 +208,14 @@ function AssessmentFlow({ config }: { config: AssessmentMagnetConfig }) {
                     {question.label}
                   </legend>
                   <div className="learn-answer-options">
-                    {question.options.map((option) => (
+                    {question.options.map((option, optionIndex) => (
                       <label key={`${question.id}-${option.label}`} className="learn-answer-option">
                         <input
                           type="radio"
                           name={`${config.slug}-${question.id}`}
-                          value={option.score}
-                          checked={answers[question.id] === option.score}
-                          onChange={() => setAnswers((current) => ({ ...current, [question.id]: option.score }))}
+                          value={optionIndex}
+                          checked={answers[question.id] === optionIndex}
+                          onChange={() => setAnswers((current) => ({ ...current, [question.id]: optionIndex }))}
                           required
                         />
                         <span>{option.label}</span>
@@ -211,13 +248,7 @@ function AssessmentFlow({ config }: { config: AssessmentMagnetConfig }) {
 }
 
 function DownloadFlow({ config }: { config: DownloadMagnetConfig }) {
-  const [contact, setContact] = useState<ContactState>({
-    name: "",
-    email: "",
-    company: "",
-    qualifyingStatus: config.statusOptions[0] ?? "",
-    permissionAcknowledged: false,
-  });
+  const [contact, setContact] = useState<ContactState>(() => initialContact(config));
   const [status, setStatus] = useState<SubmitStatus>("idle");
   const [message, setMessage] = useState("");
   const [result, setResult] = useState<DownloadResult | null>(null);
@@ -342,6 +373,48 @@ function ContactPermissionBlock({
           value={contact.company}
           onChange={(company) => setContact((current) => ({ ...current, company }))}
         />
+        {config.companyProfile ? (
+          <>
+            <TextField
+              label="Phone (optional)"
+              type="tel"
+              required={false}
+              value={contact.phone}
+              onChange={(phone) => setContact((current) => ({ ...current, phone }))}
+            />
+            <TextField
+              label="Company website (optional)"
+              inputMode="url"
+              required={false}
+              value={contact.website}
+              onChange={(website) => setContact((current) => ({ ...current, website }))}
+            />
+            {profileKeys.map((key) => (
+              <label key={key} className="learn-report-field">
+                <span>{companyProfileLabels[key]}</span>
+                <select
+                  value={contact.profile[key] ?? ""}
+                  required
+                  onChange={(event) =>
+                    setContact((current) => ({
+                      ...current,
+                      profile: { ...current.profile, [key]: event.target.value },
+                    }))
+                  }
+                >
+                  <option value="" disabled>
+                    Select one
+                  </option>
+                  {companyProfileOptions[key].map((option) => (
+                    <option key={option} value={option}>
+                      {option}
+                    </option>
+                  ))}
+                </select>
+              </label>
+            ))}
+          </>
+        ) : null}
       </div>
 
       <fieldset className="learn-report-status">
@@ -376,9 +449,22 @@ function ContactPermissionBlock({
           }
         />
         <span>
-          I agree that Whiteford/Schell IP may send me the requested report or playbook and related educational communications. {permissionText}
+          I agree that Whiteford/Schell IP may send me the requested report or playbook and related educational communications{config.companyProfile ? ", and may keep my answers, company details and stated plans in its contact records" : ""}. {permissionText}
         </span>
       </label>
+
+      {config.followUpOption ? (
+        <label className="learn-report-consent">
+          <input
+            type="checkbox"
+            checked={contact.followUpRequested}
+            onChange={(event) =>
+              setContact((current) => ({ ...current, followUpRequested: event.target.checked }))
+            }
+          />
+          <span>{config.followUpOption}</span>
+        </label>
+      ) : null}
     </div>
   );
 }
@@ -389,12 +475,14 @@ function TextField({
   onChange,
   type = "text",
   inputMode,
+  required = true,
 }: {
   label: string;
   value: string;
   onChange: (value: string) => void;
-  type?: "text" | "email";
-  inputMode?: "email";
+  type?: "text" | "email" | "tel";
+  inputMode?: "email" | "url";
+  required?: boolean;
 }) {
   return (
     <label className="learn-report-field">
@@ -403,9 +491,11 @@ function TextField({
         type={type}
         value={value}
         onChange={(event) => onChange(event.target.value)}
-        required
+        required={required}
         inputMode={inputMode}
-        autoComplete={inputMode === "email" ? "email" : label === "Name" ? "name" : "organization"}
+        autoComplete={
+          inputMode === "email" ? "email" : type === "tel" ? "tel" : inputMode === "url" ? "url" : label === "Name" ? "name" : "organization"
+        }
       />
     </label>
   );
@@ -415,10 +505,12 @@ function AssessmentResultView({
   config,
   result,
   resultRef,
+  email,
 }: {
   config: AssessmentMagnetConfig;
-  result: AssessmentResult;
+  result: AssessmentResult & { email_delivery?: string };
   resultRef: RefObject<HTMLDivElement | null>;
+  email: string;
 }) {
   return (
     <div className="learn-report-card learn-result-card" ref={resultRef} tabIndex={-1}>
@@ -427,6 +519,11 @@ function AssessmentResultView({
         Your score: <strong>{result.score} / {result.score_max}</strong>. Tier: <strong>{result.tier.label}</strong>.
       </h3>
       <p className="learn-result-headline">{result.tier.headline}</p>
+      {result.email_delivery === "sent" ? (
+        <p className="learn-report-message">
+          A copy of this report is on its way to <strong>{email}</strong>.
+        </p>
+      ) : null}
 
       {config.slug === "governance-plan" ? (
         <GovernanceMatrix config={config} result={result} />
@@ -476,7 +573,7 @@ function RadarResult({ config, result }: { config: AssessmentMagnetConfig; resul
 
   return (
     <div className="learn-result-visual" aria-label={`${config.title} score visualization`}>
-      <svg viewBox="0 0 264 264" role="img">
+      <svg viewBox="-48 0 360 264" role="img">
         <polygon points={gridPoints} fill="none" stroke="rgba(0,55,86,0.18)" />
         {config.slug === "patent-moat-scorecard" ? (
           <>

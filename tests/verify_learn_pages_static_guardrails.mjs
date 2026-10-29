@@ -62,6 +62,13 @@ const pages = [
     needsReportSlot: true,
   },
   {
+    name: "Sale & Investor Readiness Audit",
+    source: read("src/lib/learn/sale-readiness-audit.ts"),
+    brandMarker: '<div class="brand-lockup">',
+    footerMarker: '<div class="footer-lockup">',
+    needsReportSlot: true,
+  },
+  {
     name: "Outside Counsel Playbook",
     source: read("src/app/outside-counsel-playbook/page.tsx"),
     brandMarker: 'className="brand-lockup"',
@@ -104,6 +111,8 @@ assert.match(globals, /--font-sans:\s*"DM Sans"/, "Tailwind font-sans should use
 assert.match(globals, /--font-mono:\s*"IBM Plex Mono"/, "Tailwind font-mono should use IBM Plex Mono");
 assert.ok(rootPage.includes('href: "/governance-plan"'), "Directory must link to /governance-plan");
 assert.ok(rootPage.includes('href: "/outside-counsel-playbook"'), "Directory must link to /outside-counsel-playbook");
+assert.ok(rootPage.includes('href: "/sale-readiness-audit"'), "Directory must link to /sale-readiness-audit");
+assert.ok(magnetConfig.includes("Score my sale readiness"), "Sale readiness route must use its finalized button");
 assert.ok(rootPage.includes("PDF · 5 pages"), "Directory must show the outside counsel PDF meta line");
 assert.ok(rootPage.includes('href="/legacy"'), "Directory root must link to the moved legacy campaign hub");
 assert.doesNotMatch(rootPage, /governance-matrix/, "Directory must not use old governance-matrix slug");
@@ -201,6 +210,7 @@ for (const source of [
   read("src/lib/learn/ai-risk-triage.ts"),
   read("src/lib/learn/patent-moat-scorecard.ts"),
   read("src/lib/learn/governance-plan.ts"),
+  read("src/lib/learn/sale-readiness-audit.ts"),
   read("src/app/outside-counsel-playbook/page.tsx"),
 ]) {
   assert.match(source, /\.brand-logo-whiteford\s*\{\s*height:\s*28px;/, "Desktop Whiteford logo height must be 28px");

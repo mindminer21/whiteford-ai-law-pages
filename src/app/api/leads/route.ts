@@ -1,12 +1,19 @@
 import { campaigns, getCampaign } from "@/lib/campaigns";
+import { sendViaAgentMail, type EmailDelivery } from "@/lib/email/agentmail";
+import { buildAssessmentReportEmail } from "@/lib/email/assessment-report";
 import {
+  companyProfileOptions,
   getMagnetHistoryEntry,
   getQuestionScoreMap,
+  isAssessmentConfig,
   isMagnetSlug,
   magnetConfigs,
   outsideCounselPdfUrl,
   scoreAssessment,
   type AssessmentResult,
+  saleInterestByStatus,
+  type CompanyProfile,
+  type CompanyProfileKey,
   type DownloadResult,
   type MagnetMode,
   type MagnetSlug,
@@ -145,6 +152,8 @@ type FinalLeadPayload = {
   magnet_slug?: unknown;
   mode?: unknown;
   answers?: unknown;
+  profile?: unknown;
+  follow_up_requested?: unknown;
 };
 
 type HighLevelPayload = {
@@ -153,6 +162,8 @@ type HighLevelPayload = {
   lastName: string;
   email: string;
   companyName: string | undefined;
+  phone?: string;
+  website?: string;
   tags: string[];
   customFields: { key: string; field_value: unknown }[];
 };
@@ -162,6 +173,7 @@ const finalMagnetTags: Record<MagnetSlug, string> = {
   "patent-moat-scorecard": "magnet-patent-moat-scorecard",
   "governance-plan": "magnet-governance-plan",
   "outside-counsel-playbook": "magnet-outside-counsel-playbook",
+  "sale-readiness-audit": "magnet-sale-readiness-audit",
 };
 
 const subScoreFieldKeys: Record<Exclude<MagnetSlug, "outside-counsel-playbook">, Record<string, string>> = {
@@ -179,7 +191,47 @@ const subScoreFieldKeys: Record<Exclude<MagnetSlug, "outside-counsel-playbook">,
     exit_fit: "moat_exit_fit",
   },
   "governance-plan": {},
+  "sale-readiness-audit": {
+    ownership: "sale_ready_ip_ownership",
+    protection: "sale_ready_ip_protection",
+    contracts: "sale_ready_contracts",
+    tech_data: "sale_ready_software_data_ai",
+    records: "sale_ready_records_disputes",
+  },
 };
+
+const requiredProfileKeys: CompanyProfileKey[] = ["role", "industry", "revenue", "employees", "hq"];
+const allowedProfileKeys = new Set<string>([...requiredProfileKeys, "phone", "website"]);
+
+/** Validates the optional company profile; every categorical value must come from the approved lists. */
+function validateProfile(value: unknown): { profile: CompanyProfile } | { error: string } {
+  if (!isPlainObject(value) || !Object.keys(value).every((key) => allowedProfileKeys.has(key))) {
+    return { error: "Company profile must use the approved fields." };
+  }
+  const profile: CompanyProfile = {};
+  for (const key of requiredProfileKeys) {
+    const item = value[key];
+    const options: readonly string[] = companyProfileOptions[key];
+    if (typeof item !== "string" || !options.includes(item)) {
+      return { error: `Company profile field "${key}" must use an approved option.` };
+    }
+    profile[key] = item;
+  }
+  if (value.phone !== undefined && value.phone !== "") {
+    if (typeof value.phone !== "string" || !/^[0-9+().\-\s]{7,24}$/.test(value.phone.trim())) {
+      return { error: "Phone must be a valid phone number." };
+    }
+    profile.phone = value.phone.trim();
+  }
+  if (value.website !== undefined && value.website !== "") {
+    const site = typeof value.website === "string" ? value.website.trim() : "";
+    if (!isCompactString(site, 120) || !/^(https?:\/\/)?[a-z0-9-]+(\.[a-z0-9-]+)*\.[a-z]{2,}(\/[^\s<>"]*)?$/i.test(site)) {
+      return { error: "Website must be a valid web address." };
+    }
+    profile.website = /^https?:\/\//i.test(site) ? site : `https://${site}`;
+  }
+  return { profile };
+}
 
 function splitName(name = "") {
   const parts = name.trim().split(/\s+/).filter(Boolean);
@@ -378,11 +430,26 @@ function validateFinalPayload(payload: FinalLeadPayload) {
     return { error: "Permission acknowledgment is required." };
   }
 
+  let profile: CompanyProfile | undefined;
+  if ("companyProfile" in config && config.companyProfile) {
+    const checked = validateProfile(payload.profile);
+    if ("error" in checked) return { error: checked.error };
+    profile = checked.profile;
+  } else if (payload.profile !== undefined) {
+    return { error: "This magnet does not accept a company profile." };
+  }
+
+  const followUpAllowed = "followUpOption" in config && Boolean(config.followUpOption);
+  if (payload.follow_up_requested !== undefined && (!followUpAllowed || typeof payload.follow_up_requested !== "boolean")) {
+    return { error: "follow_up_requested is not accepted for this magnet." };
+  }
+  const followUpRequested = payload.follow_up_requested === true;
+
   if (config.kind === "download") {
     if (payload.answers !== undefined || payload.mode !== undefined) {
       return { error: "The outside counsel playbook does not accept assessment answers." };
     }
-    return { config, name, email, company, qualifyingStatus };
+    return { config, name, email, company, qualifyingStatus, profile, followUpRequested };
   }
 
   if (!isAnswerRecord(payload.answers)) {
@@ -405,7 +472,7 @@ function validateFinalPayload(payload: FinalLeadPayload) {
         : "founder"
       : undefined;
 
-  return { config, name, email, company, qualifyingStatus, answers: payload.answers, mode };
+  return { config, name, email, company, qualifyingStatus, answers: payload.answers, mode, profile, followUpRequested };
 }
 
 function finalCustomFields({
@@ -501,6 +568,59 @@ async function upsertHighLevel(payload: HighLevelPayload) {
   }
 }
 
+/**
+ * Records a sale-interest opportunity in a HighLevel pipeline when the respondent says a sale
+ * is on the horizon. Runs only when GHL_SALE_PIPELINE_ID and GHL_SALE_STAGE_ID are set.
+ */
+async function createSaleOpportunity({
+  contactId,
+  company,
+  interestLabel,
+}: {
+  contactId: string | undefined;
+  company: string;
+  interestLabel: string;
+}) {
+  const token = process.env.GHL_PRIVATE_INTEGRATION_TOKEN;
+  const locationId = process.env.GHL_LOCATION_ID;
+  const pipelineId = process.env.GHL_SALE_PIPELINE_ID;
+  const pipelineStageId = process.env.GHL_SALE_STAGE_ID;
+  const opportunity = {
+    locationId,
+    pipelineId,
+    pipelineStageId,
+    contactId,
+    name: `${company}: ${interestLabel}`,
+    status: "open",
+    source: "Sale & Investor Readiness Audit",
+  };
+
+  if (!token || !locationId || !pipelineId || !pipelineStageId || !contactId) {
+    return { mode: "preview" as const, payload: opportunity };
+  }
+
+  try {
+    const response = await fetch("https://services.leadconnectorhq.com/opportunities/", {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${token}`,
+        "Content-Type": "application/json",
+        Version: "2021-07-28",
+      },
+      body: JSON.stringify(opportunity),
+    });
+    if (!response.ok) {
+      const detail = await response.text();
+      console.error("HighLevel opportunity failed", { status: response.status, detail });
+      return { mode: "failed" as const };
+    }
+    return { mode: "live" as const };
+  } catch (error) {
+    console.error("HighLevel opportunity failed", { detail: error instanceof Error ? error.message : error });
+    return { mode: "failed" as const };
+  }
+}
+
 async function handleFinalMagnetSubmission(payload: FinalLeadPayload) {
   const validation = validateFinalPayload(payload);
 
@@ -509,7 +629,7 @@ async function handleFinalMagnetSubmission(payload: FinalLeadPayload) {
   }
 
   const completedAt = new Date().toISOString();
-  const { config, name, email, company, qualifyingStatus } = validation;
+  const { config, name, email, company, qualifyingStatus, profile, followUpRequested } = validation;
   const { firstName, lastName } = splitName(name);
   const answers = "answers" in validation ? validation.answers : undefined;
   let result: AssessmentResult | DownloadResult;
@@ -524,34 +644,92 @@ async function handleFinalMagnetSubmission(payload: FinalLeadPayload) {
       { status: 400 },
     );
   }
+
+  // Email the scored report through AgentMail when the magnet opts in.
+  let emailDelivery: EmailDelivery | undefined;
+  if (isAssessmentConfig(config) && "emailDelivery" in config && config.emailDelivery === "agentmail" && result.magnet_slug !== "outside-counsel-playbook") {
+    emailDelivery = await sendViaAgentMail(
+      buildAssessmentReportEmail({ config, result, name, company, email }),
+    );
+  }
+
+  const isSaleAudit = config.slug === "sale-readiness-audit";
+  const saleInterest = isSaleAudit ? saleInterestByStatus[qualifyingStatus] : undefined;
+
   const tags = [
     "whiteford-mountain-west",
     finalMagnetTags[config.slug],
     ...(result.magnet_slug === "outside-counsel-playbook" ? [] : [result.tier.tag]),
     ...(result.magnet_slug === "patent-moat-scorecard" ? [`moat-mode-${result.mode ?? "founder"}`] : []),
-    "newsletter:ai",
+    ...(saleInterest ? ["interest:ma-readiness", `sale-interest:${saleInterest.code}`] : []),
+    ...(followUpRequested ? ["follow-up-requested"] : []),
+    isSaleAudit ? "newsletter:colorado-deal-report" : "newsletter:ai",
   ];
+
+  const profileFields: { key: string; field_value: unknown }[] = profile
+    ? [
+        { key: "role", field_value: profile.role },
+        { key: "company_industry", field_value: profile.industry },
+        { key: "company_revenue_band", field_value: profile.revenue },
+        { key: "company_employee_band", field_value: profile.employees },
+        { key: "company_hq_region", field_value: profile.hq },
+        { key: "company_website", field_value: profile.website },
+      ]
+    : [];
+  const saleFields: { key: string; field_value: unknown }[] = saleInterest
+    ? [
+        { key: "sale_interest", field_value: saleInterest.label },
+        { key: "sale_interest_code", field_value: saleInterest.code },
+        { key: "sale_interest_recorded_at", field_value: completedAt },
+        { key: "sale_interest_source", field_value: config.title },
+      ]
+    : [];
+  const deliveryFields: { key: string; field_value: unknown }[] = [
+    ...(followUpRequested ? [{ key: "follow_up_requested", field_value: "true" }] : []),
+    ...(emailDelivery ? [{ key: "last_magnet_email_status", field_value: `agentmail:${emailDelivery.mode}` }] : []),
+  ];
+
   const highLevelPayload: HighLevelPayload = {
     locationId: process.env.GHL_LOCATION_ID,
     firstName,
     lastName,
     email,
     companyName: company,
+    ...(profile?.phone ? { phone: profile.phone } : {}),
+    ...(profile?.website ? { website: profile.website } : {}),
     tags,
-    customFields: finalCustomFields({
-      result,
-      completedAt,
-      qualifyingStatus,
-      answers,
-    }).filter((field) => field.field_value !== undefined && field.field_value !== ""),
+    customFields: [
+      ...finalCustomFields({
+        result,
+        completedAt,
+        qualifyingStatus,
+        answers,
+      }),
+      ...profileFields,
+      ...saleFields,
+      ...deliveryFields,
+    ].filter((field) => field.field_value !== undefined && field.field_value !== ""),
   };
   const highLevel = await upsertHighLevel(highLevelPayload);
+
+  // Track a future sale as an open opportunity so it can be followed up later.
+  let opportunity: Awaited<ReturnType<typeof createSaleOpportunity>> | undefined;
+  if (saleInterest && (saleInterest.code === "sale-0-12-months" || saleInterest.code === "sale-1-3-years")) {
+    const contactId =
+      highLevel.mode === "live"
+        ? (highLevel.result as { contact?: { id?: string } } | undefined)?.contact?.id
+        : undefined;
+    opportunity = await createSaleOpportunity({ contactId, company, interestLabel: saleInterest.label });
+  }
 
   return Response.json({
     ...result,
     crm_mode: highLevel.mode,
     highlevel: highLevel.mode,
+    ...(emailDelivery ? { email_delivery: emailDelivery.mode } : {}),
+    ...(opportunity ? { sale_opportunity: opportunity.mode } : {}),
     ...(highLevel.mode === "preview" ? { payload: highLevel.payload } : {}),
+    ...(emailDelivery?.mode === "preview" ? { email_preview: { to: emailDelivery.message.to, subject: emailDelivery.message.subject } } : {}),
   });
 }
 

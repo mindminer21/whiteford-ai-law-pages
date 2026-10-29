@@ -909,3 +909,33 @@ textarea {
     padding: 22px;
   }
 }
+
+.learn-report-field select {
+  width: 100%;
+  min-height: 46px;
+  border: 1px solid var(--line-strong);
+  background: var(--paper);
+  color: var(--ink);
+  font: inherit;
+  padding: 0 13px;
+  outline: none;
+}
+
+.learn-report-field select:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(99, 45, 221, 0.12);
+}
+
+/* The tool pages style ".cta-banner p" as light text on navy. The report card is white, so re-assert
+   readable paragraph styles inside it (tool description, tier headline, messages, disclaimer). */
+.cta-banner .learn-report-card p {
+  color: var(--ink-hover);
+  max-width: none;
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+}
+
+.cta-banner .learn-report-card p.learn-report-message.is-error {
+  color: var(--risk-high);
+}

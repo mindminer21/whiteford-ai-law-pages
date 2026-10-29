@@ -13,7 +13,54 @@ export type MagnetSlug =
   | "ai-risk-triage"
   | "patent-moat-scorecard"
   | "governance-plan"
-  | "outside-counsel-playbook";
+  | "outside-counsel-playbook"
+  | "sale-readiness-audit";
+
+/**
+ * Optional company-profile fields a magnet may collect alongside name, email and company.
+ * Everything except phone and website is categorical so no confidential detail is captured.
+ */
+export const companyProfileOptions = {
+  role: ["Founder / CEO", "Owner", "Executive team", "Board member or investor", "Advisor"],
+  industry: [
+    "Software / SaaS",
+    "AI / data",
+    "Hardware / devices",
+    "Life sciences / medtech",
+    "Energy / cleantech",
+    "Aerospace / defense",
+    "Consumer products",
+    "Business / professional services",
+    "Manufacturing / industrial",
+    "Other",
+  ],
+  revenue: ["Pre-revenue", "Under $1M", "$1M to $5M", "$5M to $20M", "$20M to $50M", "Over $50M", "Prefer not to say"],
+  employees: ["1 to 10", "11 to 50", "51 to 200", "201 to 500", "Over 500"],
+  hq: ["Colorado", "Another Mountain West state", "Elsewhere in the U.S.", "Outside the U.S."],
+} as const;
+
+export type CompanyProfileKey = keyof typeof companyProfileOptions;
+
+export const companyProfileLabels: Record<CompanyProfileKey, string> = {
+  role: "Your role",
+  industry: "Industry",
+  revenue: "Annual revenue",
+  employees: "Employees",
+  hq: "Company headquarters",
+};
+
+export type CompanyProfile = Partial<Record<CompanyProfileKey, string>> & {
+  phone?: string;
+  website?: string;
+};
+
+/** Sale-interest code recorded in HighLevel for each sale-readiness status option. */
+export const saleInterestByStatus: Record<string, { code: string; label: string }> = {
+  "Exploring a sale in the next 12 months.": { code: "sale-0-12-months", label: "Exploring a sale within 12 months" },
+  "Considering a sale in one to three years.": { code: "sale-1-3-years", label: "Considering a sale in 1 to 3 years" },
+  "Raising capital or preparing for investor diligence.": { code: "raise-capital", label: "Raising capital / investor diligence" },
+  "No sale planned; I want to know where we stand.": { code: "no-sale-planned", label: "No sale planned (benchmarking)" },
+};
 
 export type MagnetMode = "founder" | "investor";
 
@@ -54,6 +101,12 @@ type BaseMagnetConfig = {
   statusLegend: string;
   statusOptions: string[];
   kind: "assessment" | "download";
+  /** Collect role, phone, website and categorical company details with the contact block. */
+  companyProfile?: boolean;
+  /** Email the scored report to the respondent through AgentMail. */
+  emailDelivery?: "agentmail";
+  /** Offer an optional "have Jeff follow up" checkbox. */
+  followUpOption?: string;
 };
 
 export type AssessmentMagnetConfig = BaseMagnetConfig & {
@@ -737,6 +790,264 @@ export const magnetConfigs = {
       "I'm comparing legal support models for a technology company.",
       "We are preparing for financing, diligence, customer growth, or an exit.",
       "I want the playbook for planning.",
+    ],
+  },
+  "sale-readiness-audit": {
+    slug: "sale-readiness-audit",
+    kind: "assessment",
+    title: "Sale & Investor Readiness Audit",
+    formTitle: "Run the Sale & Investor Readiness Audit",
+    formDescription:
+      "Answer fifteen categorical questions about the issues buyers and investors diligence first. Your score, buyer-diligence risk map and 60-day cleanup priorities appear here and arrive in your inbox.",
+    buttonLabel: "Score my sale readiness",
+    statusLegend: "Where is the company on a sale or capital raise?",
+    statusOptions: [
+      "Exploring a sale in the next 12 months.",
+      "Considering a sale in one to three years.",
+      "Raising capital or preparing for investor diligence.",
+      "No sale planned; I want to know where we stand.",
+    ],
+    companyProfile: true,
+    emailDelivery: "agentmail",
+    followUpOption: "I'd like Jeff to follow up about my result and timeline.",
+    scoreMax: 45,
+    areas: [
+      {
+        key: "ownership",
+        label: "Ownership",
+        maxScore: 9,
+        action: "Collect signed, present-tense invention assignments from every founder, employee and contractor who built core technology, and record any missing assignments with the patent and trademark offices.",
+      },
+      {
+        key: "protection",
+        label: "Protection",
+        maxScore: 9,
+        action: "Map patents, trade secrets and trademarks to the products that generate revenue, and close the gaps a buyer will see first: unfiled core inventions, unregistered brand names and undocumented trade secrets.",
+      },
+      {
+        key: "contracts",
+        label: "Contracts",
+        maxScore: 9,
+        action: "Pull every key customer, supplier and inbound license, flag change-of-control and anti-assignment clauses, and line up the consents a buyer will require before signing.",
+      },
+      {
+        key: "tech_data",
+        label: "Software & Data",
+        maxScore: 9,
+        action: "Inventory open-source components and AI tools, confirm license obligations are met, and document the rights you hold in the customer and training data the business relies on.",
+      },
+      {
+        key: "records",
+        label: "Records",
+        maxScore: 9,
+        action: "Reconcile the cap table to signed equity documents, log any IP claims or demand letters with their status, and stage the core documents in a data room before a buyer asks.",
+      },
+    ],
+    questions: [
+      {
+        id: "q1",
+        areaKey: "ownership",
+        label: "Have all founders and employees who built core technology signed invention assignment agreements?",
+        options: [
+          { label: "Yes, all signed with present-tense assignment language", score: 3 },
+          { label: "Most have signed", score: 2 },
+          { label: "Some have, or the language is unclear", score: 1 },
+          { label: "No, or we are not sure", score: 0 },
+        ],
+      },
+      {
+        id: "q2",
+        areaKey: "ownership",
+        label: "Do contractors, agencies and offshore developers who wrote code or designs assign their IP to the company?",
+        options: [
+          { label: "Yes, every engagement has a written assignment", score: 3 },
+          { label: "Most engagements do", score: 2 },
+          { label: "Only some, or the terms are unclear", score: 1 },
+          { label: "No, or we are not sure", score: 0 },
+          { label: "We have not used outside developers", score: 3 },
+        ],
+      },
+      {
+        id: "q3",
+        areaKey: "ownership",
+        label: "Are patents, trademarks and domain names held in the company's name with current records?",
+        options: [
+          { label: "Yes, all held by the company and recorded", score: 3 },
+          { label: "Mostly, with a few to transfer", score: 2 },
+          { label: "Some sit with a founder or a prior entity", score: 1 },
+          { label: "Not sure where title sits", score: 0 },
+        ],
+      },
+      {
+        id: "q4",
+        areaKey: "protection",
+        label: "How well do patent filings cover the products that generate revenue?",
+        options: [
+          { label: "Filed and mapped to current products", score: 3 },
+          { label: "Some filings, not mapped to products", score: 2 },
+          { label: "Considered, but nothing filed", score: 1 },
+          { label: "Not considered", score: 0 },
+          { label: "Patents are not relevant to our business", score: 3 },
+        ],
+      },
+      {
+        id: "q5",
+        areaKey: "protection",
+        label: "How are trade secrets and confidential know-how protected?",
+        options: [
+          { label: "Documented program with access controls and NDAs", score: 3 },
+          { label: "NDAs and some access controls", score: 2 },
+          { label: "Informal practices only", score: 1 },
+          { label: "No program", score: 0 },
+        ],
+      },
+      {
+        id: "q6",
+        areaKey: "protection",
+        label: "Are the company and product names registered as trademarks in your key markets?",
+        options: [
+          { label: "Yes, registered in our key markets", score: 3 },
+          { label: "Applications pending", score: 2 },
+          { label: "Some names registered, others not", score: 1 },
+          { label: "No registrations", score: 0 },
+        ],
+      },
+      {
+        id: "q7",
+        areaKey: "contracts",
+        label: "Have key customer and supplier contracts been reviewed for change-of-control or anti-assignment terms?",
+        options: [
+          { label: "Yes, reviewed and the consents needed are known", score: 3 },
+          { label: "Partially reviewed", score: 2 },
+          { label: "Not reviewed", score: 1 },
+          { label: "Not sure which contracts matter", score: 0 },
+        ],
+      },
+      {
+        id: "q8",
+        areaKey: "contracts",
+        label: "Can the software, technology and data licenses the business depends on transfer to a buyer?",
+        options: [
+          { label: "Yes, confirmed transferable", score: 3 },
+          { label: "Most are, a few need consent", score: 2 },
+          { label: "Not reviewed", score: 1 },
+          { label: "Key licenses are personal to a founder or not transferable", score: 0 },
+        ],
+      },
+      {
+        id: "q9",
+        areaKey: "contracts",
+        label: "How organized are signed contracts?",
+        options: [
+          { label: "Central repository with signed copies", score: 3 },
+          { label: "Mostly organized", score: 2 },
+          { label: "Scattered across email and drives", score: 1 },
+          { label: "Some signed copies are missing", score: 0 },
+        ],
+      },
+      {
+        id: "q10",
+        areaKey: "tech_data",
+        label: "Do you track open-source components and their license obligations?",
+        options: [
+          { label: "Yes, current inventory and policy", score: 3 },
+          { label: "Partial inventory", score: 2 },
+          { label: "Developers decide case by case", score: 1 },
+          { label: "Not tracked", score: 0 },
+          { label: "We do not ship software", score: 3 },
+        ],
+      },
+      {
+        id: "q11",
+        areaKey: "tech_data",
+        label: "Are your rights to use customer data documented in contracts and a current privacy policy?",
+        options: [
+          { label: "Yes, documented and current", score: 3 },
+          { label: "Mostly documented", score: 2 },
+          { label: "Gaps between practice and policy", score: 1 },
+          { label: "Not documented", score: 0 },
+          { label: "We do not handle customer data", score: 3 },
+        ],
+      },
+      {
+        id: "q12",
+        areaKey: "tech_data",
+        label: "Is AI use in the product and in development documented, including ownership of AI-assisted output?",
+        options: [
+          { label: "Yes, documented policy and records", score: 3 },
+          { label: "Partially documented", score: 2 },
+          { label: "Used, but not documented", score: 1 },
+          { label: "Not sure how AI is used", score: 0 },
+          { label: "We do not use AI tools", score: 3 },
+        ],
+      },
+      {
+        id: "q13",
+        areaKey: "records",
+        label: "Is the cap table reconciled to signed stock, option and SAFE or note documents?",
+        options: [
+          { label: "Yes, fully reconciled", score: 3 },
+          { label: "Minor gaps", score: 2 },
+          { label: "Significant gaps", score: 1 },
+          { label: "Not reconciled", score: 0 },
+        ],
+      },
+      {
+        id: "q14",
+        areaKey: "records",
+        label: "Are any IP claims, demand letters or disputes documented, with their status known?",
+        options: [
+          { label: "None received", score: 3 },
+          { label: "Received, resolved and documented", score: 3 },
+          { label: "Received, still open but documented", score: 1 },
+          { label: "Received, not documented or not sure", score: 0 },
+        ],
+      },
+      {
+        id: "q15",
+        areaKey: "records",
+        label: "How quickly could you produce your core IP and contract documents for a buyer?",
+        options: [
+          { label: "Within days: a data room is ready", score: 3 },
+          { label: "Within a few weeks", score: 2 },
+          { label: "It would take significant work", score: 1 },
+          { label: "Not sure", score: 0 },
+        ],
+      },
+    ],
+    tiers: [
+      {
+        min: 36,
+        max: 45,
+        key: "diligence-ready",
+        label: "Diligence-ready",
+        tag: "sale-tier-diligence-ready",
+        headline: "Buyers should find what they expect. The work now is keeping records current and presenting the IP story well.",
+      },
+      {
+        min: 24,
+        max: 35,
+        key: "fixable-gaps",
+        label: "Close, with fixable gaps",
+        tag: "sale-tier-fixable-gaps",
+        headline: "The foundation is there, but a buyer will find gaps worth closing before a process starts, while you still control the timeline.",
+      },
+      {
+        min: 14,
+        max: 23,
+        key: "value-at-risk",
+        label: "Value at risk",
+        tag: "sale-tier-value-at-risk",
+        headline: "Gaps like these tend to surface in diligence as escrows, holdbacks, special indemnities or delay. Most can be fixed in advance.",
+      },
+      {
+        min: 0,
+        max: 13,
+        key: "not-yet-ready",
+        label: "Not yet sale-ready",
+        tag: "sale-tier-not-yet-ready",
+        headline: "Ownership and records questions would likely stall a deal today. Start with who owns the IP, then build out from there.",
+      },
     ],
   },
 } satisfies Record<MagnetSlug, MagnetConfig>;

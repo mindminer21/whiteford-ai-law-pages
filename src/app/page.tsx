@@ -3,17 +3,30 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Interactive Legal Readiness Tools",
   description:
-    "Four marketing-only lead magnet previews from Schell IP and Whiteford for AI risk, patent moat, AI governance readiness, and patent-forward outside counsel.",
+    "Five marketing-only lead magnet tools from Schell IP and Whiteford for sale readiness, AI risk, patent moat, AI governance readiness, and patent-forward outside counsel.",
   openGraph: {
     title: "Interactive Legal Readiness Tools",
     description:
-      "Four marketing-only lead magnet previews from Schell IP and Whiteford for AI risk, patent moat, AI governance readiness, and patent-forward outside counsel.",
+      "Five marketing-only lead magnet tools from Schell IP and Whiteford for sale readiness, AI risk, patent moat, AI governance readiness, and patent-forward outside counsel.",
     url: "/",
     images: ["/logos/whiteford-white-on-navy-full.png"],
   },
 };
 
 const tools = [
+  {
+    href: "/sale-readiness-audit",
+    meta: "15 questions · emailed report",
+    title: (
+      <>
+        Sale &amp; Investor <em>Readiness Audit</em>
+      </>
+    ),
+    description:
+      "Score the five areas buyers and investors diligence first, then get a buyer-diligence risk map and a 60-day cleanup plan by email.",
+    visual: "sale",
+    action: "Open the audit",
+  },
   {
     href: "/ai-risk-triage",
     meta: "5-minute · 12 questions",
@@ -93,6 +106,29 @@ function PreviewVisual({ type }: { type: (typeof tools)[number]["visual"] }) {
           aria-hidden="true"
         />
       </div>
+    );
+  }
+
+  if (type === "sale") {
+    const bars = [
+      { label: "OWNERSHIP", width: 120, color: "#b14b3d" },
+      { label: "PROTECTION", width: 212, color: "#632DDD" },
+      { label: "CONTRACTS", width: 152, color: "#c99334" },
+      { label: "SOFTWARE & DATA", width: 182, color: "#c99334" },
+      { label: "RECORDS", width: 152, color: "#c99334" },
+    ];
+    return (
+      <svg viewBox="0 0 320 132" role="img" aria-label="Sale readiness risk map preview">
+        {bars.map((bar, index) => (
+          <g key={bar.label}>
+            <text x="12" y={20 + index * 24} fill="#154E73" fontSize="9" fontFamily="var(--mono)">
+              {bar.label}
+            </text>
+            <rect x="96" y={12 + index * 24} width="212" height="8" fill="rgba(0,55,86,0.08)" />
+            <rect x="96" y={12 + index * 24} width={bar.width * 0.95} height="8" fill={bar.color} />
+          </g>
+        ))}
+      </svg>
     );
   }
 
@@ -179,11 +215,11 @@ export default function Home() {
         <div className="container">
           <div className="directory-eyebrow">Whiteford · Schell IP learning tools</div>
           <h1>
-            Four practical legal readiness tools for <em>AI-era technology companies.</em>
+            Five practical legal readiness tools for <em>AI-era technology companies.</em>
           </h1>
           <p>
-            Preview the marketing surface for the AI risk, patent moat, governance, and outside
-            counsel lead magnets. The approved tools now render inline results and route follow-up
+            Preview the marketing surface for the sale readiness, AI risk, patent moat, governance,
+            and outside counsel lead magnets. The approved tools now render inline results and route follow-up
             through HighLevel.
           </p>
         </div>
