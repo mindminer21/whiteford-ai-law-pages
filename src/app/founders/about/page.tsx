@@ -35,7 +35,6 @@ const services = [
   },
 ];
 
-const footprint = ["Colorado", "Delaware", "District of Columbia", "Florida", "Kentucky", "Maryland", "New Jersey", "New York", "North Carolina", "Virginia"];
 
 export default function AboutPage() {
   return (
@@ -65,14 +64,9 @@ export default function AboutPage() {
                 joined Whiteford to open and lead the firm&apos;s Denver office.
               </p>
               <p>
-                Whiteford was founded in 1933 and is a full-service firm providing business law and litigation services to clients
-                from start-ups to Fortune 100 companies. Its offices span ten jurisdictions:
+                Whiteford was founded in 1933 and is a full-service firm with a national footprint, providing business law and
+                litigation services to clients from start-ups to Fortune 100 companies.
               </p>
-              <ul className="fl-about-footprint">
-                {footprint.map((place) => (
-                  <li key={place}>{place}</li>
-                ))}
-              </ul>
               <p>
                 For founders, that combination means one team can handle the patent strategy, the financing documents and, later,
                 the sale, with the firm&apos;s litigation, transactional and outside general counsel capabilities behind it when a
