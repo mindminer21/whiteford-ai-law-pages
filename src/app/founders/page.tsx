@@ -123,7 +123,7 @@ export default function FoundersHome() {
                 </h3>
                 <p>
                   The state filings, free counseling, university programs, accelerators, IP resources and funding programs for
-                  founders in Colorado and Utah, with notes for Wyoming and Idaho.
+                  founders in Colorado and Utah.
                 </p>
                 <div className="directory-card-action">
                   Read the guide <span><Arrow /></span>

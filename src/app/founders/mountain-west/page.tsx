@@ -5,7 +5,7 @@ import { mountainWestSteps, mountainWestStates } from "@/lib/founders/mountain-w
 import { BOOKING_URL } from "@/lib/founders/registry";
 
 const description =
-  "Where Colorado and Utah founders register a business, find free counseling, university programs, accelerators, IP help and non-dilutive funding, with notes for Wyoming and Idaho.";
+  "Where Colorado and Utah founders register a business, find free counseling, university programs, accelerators, IP help and non-dilutive funding.";
 
 export const metadata: Metadata = {
   title: "Starting a Business in the Mountain West",
