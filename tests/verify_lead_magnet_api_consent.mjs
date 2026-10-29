@@ -13,6 +13,10 @@ const campaignsPath = path.join(root, "src/lib/campaigns.ts");
 const magnetsPath = path.join(root, "src/lib/magnets/finalization.ts");
 const agentmailPath = path.join(root, "src/lib/email/agentmail.ts");
 const reportEmailPath = path.join(root, "src/lib/email/assessment-report.ts");
+const emailCodePath = path.join(root, "src/lib/verify/email-code.ts");
+const verificationEmailPath = path.join(root, "src/lib/email/verification-code.ts");
+const verifyRoutePath = path.join(root, "src/app/api/verify-email/route.ts");
+process.env.LEAD_VERIFY_SECRET = "test-secret-for-guardrail-tests";
 
 // The report-email module imports finalization via the "@/" alias; point it at the real file.
 const tempReportEmailPath = path.join(os.tmpdir(), `whiteford-report-email-${process.pid}.ts`);
@@ -34,7 +38,19 @@ const routeSource = fs
     `from ${JSON.stringify(pathToFileURL(magnetsPath).href)};`,
   )
   .replace('from "@/lib/email/agentmail";', `from ${JSON.stringify(pathToFileURL(agentmailPath).href)};`)
-  .replace('from "@/lib/email/assessment-report";', `from ${JSON.stringify(pathToFileURL(tempReportEmailPath).href)};`);
+  .replace('from "@/lib/email/assessment-report";', `from ${JSON.stringify(pathToFileURL(tempReportEmailPath).href)};`)
+  .replace('from "@/lib/verify/email-code";', `from ${JSON.stringify(pathToFileURL(emailCodePath).href)};`);
+
+const tempVerifyRoutePath = path.join(os.tmpdir(), `whiteford-verify-route-${process.pid}.ts`);
+fs.writeFileSync(
+  tempVerifyRoutePath,
+  fs
+    .readFileSync(verifyRoutePath, "utf8")
+    .replace('from "@/lib/email/agentmail";', `from ${JSON.stringify(pathToFileURL(agentmailPath).href)};`)
+    .replace('from "@/lib/email/verification-code";', `from ${JSON.stringify(pathToFileURL(verificationEmailPath).href)};`)
+    .replace('from "@/lib/magnets/finalization";', `from ${JSON.stringify(pathToFileURL(magnetsPath).href)};`)
+    .replace('from "@/lib/verify/email-code";', `from ${JSON.stringify(pathToFileURL(emailCodePath).href)};`),
+);
 
 const tempRoutePath = path.join(os.tmpdir(), `whiteford-leads-route-${process.pid}.ts`);
 fs.writeFileSync(tempRoutePath, routeSource);
@@ -46,9 +62,24 @@ delete process.env.RESOURCE_AGENTMAIL_API_KEY;
 delete process.env.AGENTMAIL_INBOX_ID;
 
 const { POST } = await import(pathToFileURL(tempRoutePath).href);
+const { POST: VERIFY_POST } = await import(pathToFileURL(tempVerifyRoutePath).href);
+const { createChallenge, checkCode } = await import(pathToFileURL(emailCodePath).href);
 
 fs.unlinkSync(tempRoutePath);
 fs.unlinkSync(tempReportEmailPath);
+fs.unlinkSync(tempVerifyRoutePath);
+
+async function verify(body) {
+  const response = await VERIFY_POST(new Request("http://localhost/api/verify-email", { method: "POST", body: JSON.stringify(body) }));
+  return { status: response.status, data: await response.json() };
+}
+
+function tokenFor(email, slug = "sale-readiness-audit") {
+  const { code, challenge } = createChallenge(email, slug);
+  const result = checkCode(challenge, code);
+  assert.equal(result.ok, true);
+  return result.token;
+}
 
 const APPROVED_GUARDRAIL_VERSION = "lead-magnet-guardrail-v2";
 
@@ -437,6 +468,7 @@ const saleProfile = {
     qualifying_status: "Exploring a sale in the next 12 months.",
     profile: saleProfile,
     follow_up_requested: true,
+    verification_token: tokenFor("final-sale-readiness-audit@test.invalid"),
   });
   assert.equal(data.ok, true);
   assert.equal(data.magnet_slug, "sale-readiness-audit");
@@ -471,7 +503,8 @@ const saleProfile = {
   const data = await postLead({
     ...buildFinalPayload("sale-readiness-audit", saleAnswers),
     qualifying_status: "No sale planned; I want to know where we stand.",
-    profile: { ...saleProfile, phone: "", website: "" },
+    profile: { ...saleProfile, phone: "" },
+    verification_token: tokenFor("final-sale-readiness-audit@test.invalid"),
   });
   assert.equal(data.sale_opportunity, undefined);
   assert.equal(data.payload.tags.includes("sale-interest:no-sale-planned"), true);
@@ -482,15 +515,89 @@ await rejectLead(
   {
     ...buildFinalPayload("sale-readiness-audit", saleAnswers),
     qualifying_status: "Exploring a sale in the next 12 months.",
+    profile: saleProfile,
   },
-  /Company profile must use the approved fields/,
+  /verify your email/,
 );
 
 await rejectLead(
   {
     ...buildFinalPayload("sale-readiness-audit", saleAnswers),
     qualifying_status: "Exploring a sale in the next 12 months.",
+    profile: saleProfile,
+    verification_token: tokenFor("someone-else@test.invalid"),
+  },
+  /verify your email/,
+);
+
+await rejectLead(
+  {
+    ...buildFinalPayload("sale-readiness-audit", saleAnswers),
+    qualifying_status: "Exploring a sale in the next 12 months.",
+    profile: { ...saleProfile, website: "" },
+    verification_token: tokenFor("final-sale-readiness-audit@test.invalid"),
+  },
+  /Company website is required/,
+);
+
+await rejectLead(
+  {
+    ...buildFinalPayload("sale-readiness-audit", saleAnswers),
+    qualifying_status: "Exploring a sale in the next 12 months.",
+    verification_token: tokenFor("final-sale-readiness-audit@test.invalid"),
+  },
+  /Company profile must use the approved fields/,
+);
+
+// Email verification round trip through /api/verify-email (preview mode: no AgentMail key).
+{
+  const start = await verify({ action: "start", magnet_slug: "sale-readiness-audit", email: "Gate@Test.invalid", name: "Ada" });
+  assert.equal(start.status, 200);
+  assert.equal(start.data.delivery, "preview");
+  assert.match(start.data.dev_code, /^\d{6}$/);
+
+  const again = await verify({ action: "start", magnet_slug: "sale-readiness-audit", email: "gate@test.invalid", name: "Ada" });
+  assert.equal(again.status, 429, "a second code within 30 seconds is refused");
+
+  const wrong = await verify({ action: "check", magnet_slug: "sale-readiness-audit", challenge: start.data.challenge, code: start.data.dev_code === "000000" ? "111111" : "000000" });
+  assert.equal(wrong.status, 400);
+
+  const right = await verify({ action: "check", magnet_slug: "sale-readiness-audit", challenge: start.data.challenge, code: start.data.dev_code });
+  assert.equal(right.status, 200);
+  assert.equal(right.data.email, "gate@test.invalid");
+
+  const data = await postLead({
+    ...buildFinalPayload("sale-readiness-audit", saleAnswers),
+    email: "gate@test.invalid",
+    qualifying_status: "Raising capital or preparing for investor diligence.",
+    profile: saleProfile,
+    verification_token: right.data.token,
+  });
+  assert.equal(data.ok, true);
+
+  const tampered = await verify({ action: "check", magnet_slug: "sale-readiness-audit", challenge: start.data.challenge.replace(/^./, "x"), code: start.data.dev_code });
+  assert.equal(tampered.status, 400);
+
+  const notGated = await verify({ action: "start", magnet_slug: "ai-risk-triage", email: "a@test.invalid", name: "Ada" });
+  assert.equal(notGated.status, 400);
+}
+
+// Five wrong codes lock the challenge.
+{
+  const { challenge, code } = createChallenge("lock@test.invalid", "sale-readiness-audit");
+  const bad = code === "000000" ? "111111" : "000000";
+  for (let i = 0; i < 5; i += 1) assert.equal(checkCode(challenge, bad).ok, false);
+  const locked = checkCode(challenge, code);
+  assert.equal(locked.ok, false);
+  assert.match(locked.error, /Too many attempts/);
+}
+
+await rejectLead(
+  {
+    ...buildFinalPayload("sale-readiness-audit", saleAnswers),
+    qualifying_status: "Exploring a sale in the next 12 months.",
     profile: { ...saleProfile, revenue: "$3 billion" },
+    verification_token: tokenFor("final-sale-readiness-audit@test.invalid"),
   },
   /approved option/,
 );

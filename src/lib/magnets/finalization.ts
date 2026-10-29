@@ -107,6 +107,11 @@ type BaseMagnetConfig = {
   emailDelivery?: "agentmail";
   /** Offer an optional "have Jeff follow up" checkbox. */
   followUpOption?: string;
+  /**
+   * Gate the tool: collect name, email, company and website first, email a 6-digit code, and
+   * unlock the questions only after the code is verified. /api/leads enforces it server-side.
+   */
+  emailVerification?: boolean;
 };
 
 export type AssessmentMagnetConfig = BaseMagnetConfig & {
@@ -808,6 +813,7 @@ export const magnetConfigs = {
       "No sale planned; I want to know where we stand.",
     ],
     companyProfile: true,
+    emailVerification: true,
     emailDelivery: "agentmail",
     followUpOption: "I'd like Jeff to follow up about my result and timeline.",
     scoreMax: 45,

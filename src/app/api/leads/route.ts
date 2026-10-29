@@ -1,6 +1,7 @@
 import { campaigns, getCampaign } from "@/lib/campaigns";
 import { sendViaAgentMail, type EmailDelivery } from "@/lib/email/agentmail";
 import { buildAssessmentReportEmail } from "@/lib/email/assessment-report";
+import { verifyToken } from "@/lib/verify/email-code";
 import {
   companyProfileOptions,
   getMagnetHistoryEntry,
@@ -154,6 +155,7 @@ type FinalLeadPayload = {
   answers?: unknown;
   profile?: unknown;
   follow_up_requested?: unknown;
+  verification_token?: unknown;
 };
 
 type HighLevelPayload = {
@@ -204,7 +206,7 @@ const requiredProfileKeys: CompanyProfileKey[] = ["role", "industry", "revenue",
 const allowedProfileKeys = new Set<string>([...requiredProfileKeys, "phone", "website"]);
 
 /** Validates the optional company profile; every categorical value must come from the approved lists. */
-function validateProfile(value: unknown): { profile: CompanyProfile } | { error: string } {
+function validateProfile(value: unknown, requireWebsite = false): { profile: CompanyProfile } | { error: string } {
   if (!isPlainObject(value) || !Object.keys(value).every((key) => allowedProfileKeys.has(key))) {
     return { error: "Company profile must use the approved fields." };
   }
@@ -222,6 +224,9 @@ function validateProfile(value: unknown): { profile: CompanyProfile } | { error:
       return { error: "Phone must be a valid phone number." };
     }
     profile.phone = value.phone.trim();
+  }
+  if (requireWebsite && (typeof value.website !== "string" || !value.website.trim())) {
+    return { error: "Company website is required." };
   }
   if (value.website !== undefined && value.website !== "") {
     const site = typeof value.website === "string" ? value.website.trim() : "";
@@ -430,9 +435,14 @@ function validateFinalPayload(payload: FinalLeadPayload) {
     return { error: "Permission acknowledgment is required." };
   }
 
+  const gated = "emailVerification" in config && Boolean(config.emailVerification);
+  if (gated && !verifyToken(payload.verification_token, email, config.slug)) {
+    return { error: "Please verify your email before submitting the audit." };
+  }
+
   let profile: CompanyProfile | undefined;
   if ("companyProfile" in config && config.companyProfile) {
-    const checked = validateProfile(payload.profile);
+    const checked = validateProfile(payload.profile, gated);
     if ("error" in checked) return { error: checked.error };
     profile = checked.profile;
   } else if (payload.profile !== undefined) {

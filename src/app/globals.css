@@ -939,3 +939,111 @@ textarea {
 .cta-banner .learn-report-card p.learn-report-message.is-error {
   color: var(--risk-high);
 }
+
+/* Gated (email-verified) lead magnet flow */
+.learn-steps {
+  display: flex;
+  gap: 18px;
+  list-style: none;
+  margin: 0 0 22px;
+  padding: 0 0 16px;
+  border-bottom: 1px solid var(--line);
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-hover);
+  flex-wrap: wrap;
+}
+
+.learn-steps li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  opacity: 0.55;
+}
+
+.learn-steps li span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  border: 1px solid var(--line-strong);
+  font-size: 11px;
+}
+
+.learn-steps li.is-current {
+  opacity: 1;
+  color: var(--accent);
+}
+
+.learn-steps li.is-current span {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--paper);
+}
+
+.learn-steps li.is-done {
+  opacity: 0.9;
+}
+
+.learn-steps li.is-done span {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: var(--paper);
+}
+
+.learn-verified-identity {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  background: var(--paper-soft);
+  border: 1px solid var(--line);
+  padding: 10px 14px;
+  margin-bottom: 18px;
+  font-size: 14px;
+  color: var(--ink-hover);
+}
+
+.learn-verified-identity strong {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.learn-link-button {
+  background: none;
+  border: 0;
+  padding: 0;
+  color: var(--accent);
+  font: inherit;
+  font-size: 14px;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
+}
+
+.learn-link-button:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.learn-gate-links {
+  display: flex;
+  gap: 22px;
+  margin-top: 14px;
+}
+
+.learn-code-field input {
+  font-family: var(--mono);
+  font-size: 26px;
+  letter-spacing: 0.3em;
+  text-align: center;
+  min-height: 58px;
+  max-width: 260px;
+}
+
+.learn-gate-form .learn-report-fields {
+  margin-top: 18px;
+}
