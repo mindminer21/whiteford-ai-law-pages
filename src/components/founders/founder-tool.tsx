@@ -477,7 +477,9 @@ function FieldShell({ label, help, children, as = "label" }: { label: string; he
 
 function formatNumber(value: FieldValue | undefined, field: NumberField) {
   if (typeof value !== "number" || !Number.isFinite(value)) return "";
-  const digits = field.step && field.step < 1 ? 2 : 0;
+  // Show as many decimals as the field's step allows (a $0.0001 founder price must not read as 0).
+  const stepText = field.step && field.step < 1 ? String(field.step) : "";
+  const digits = stepText.includes(".") ? Math.min(stepText.split(".")[1].length, 6) : stepText.includes("e-") ? Math.min(Number(stepText.split("e-")[1]), 6) : 0;
   return value.toLocaleString("en-US", { maximumFractionDigits: digits });
 }
 

@@ -11,7 +11,7 @@ export function usd(value: number, opts: { compact?: boolean; cents?: boolean } 
     style: "currency",
     currency: "USD",
     minimumFractionDigits: opts.cents ? 2 : 0,
-    maximumFractionDigits: opts.cents ? 4 : 0,
+    maximumFractionDigits: opts.cents ? (Math.abs(value) > 0 && Math.abs(value) < 0.01 ? 6 : 4) : 0,
   });
 }
 
